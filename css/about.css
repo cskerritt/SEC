@@ -55,9 +55,9 @@
 
 .professional-photo {
     width: 280px;
-    height: 420px;
-    object-fit: cover;
-    object-position: center 15%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
@@ -452,7 +452,8 @@
     
     .professional-photo {
         width: 240px;
-        height: 320px;
+        height: auto;
+        max-height: 320px;
     }
 
     .hero-text h1 {
