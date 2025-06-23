@@ -1,36 +1,5 @@
 /* Practice Areas Specific Styles */
 
-/* Breadcrumb Navigation */
-.breadcrumb {
-    background: var(--light-bg);
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.breadcrumb ol {
-    display: flex;
-    list-style: none;
-    font-size: 0.875rem;
-    gap: 0.5rem;
-}
-
-.breadcrumb li:not(:last-child)::after {
-    content: "›";
-    margin-left: 0.5rem;
-    color: var(--light-text);
-}
-
-.breadcrumb a {
-    color: var(--light-text);
-}
-
-.breadcrumb a:hover {
-    color: var(--primary-color);
-}
-
-.breadcrumb .active {
-    color: var(--dark-text);
-}
 
 /* Page Header */
 .page-header {
