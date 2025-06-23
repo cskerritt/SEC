@@ -6,7 +6,7 @@ Your contact form is now configured to work with GitHub Pages using **Formspree*
 
 ### 1. Create Formspree Account
 1. Go to [formspree.io](https://formspree.io)
-2. Sign up for a free account using **christophertskerritt@gmail.com**
+2. Sign up for a free account using **chris@skerritteconomics.com**
 3. Create a new form and get your unique form ID
 
 ### 2. Update Form ID
@@ -83,7 +83,7 @@ Since GitHub Pages doesn't support PHP, you can remove these files:
 
 ## 📞 Contact Form Emails
 
-Emails will be sent to: **christophertskerritt@gmail.com**
+Emails will be sent to: **chris@skerritteconomics.com**
 
 Email format includes:
 - Contact information
