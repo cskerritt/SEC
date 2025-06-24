@@ -806,6 +806,13 @@ a:hover {
     color: var(--secondary-color);
 }
 
+.reviewed-date {
+    font-size: 0.875rem;
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 /* External Resources Section */
 .external-resources {
     background: var(--light-bg);
