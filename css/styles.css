@@ -489,6 +489,320 @@ a:hover {
     color: #9ca3af;
 }
 
+/* Resources Page Styles */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-header .lead {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.resources-content {
+    padding: 4rem 0;
+}
+
+.resources-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.resources-intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.resources-intro p {
+    font-size: 1.125rem;
+    color: var(--light-text);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Featured Article */
+.featured-article {
+    margin-bottom: 4rem;
+}
+
+.featured-article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark-text);
+}
+
+.article-card {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.article-card.featured {
+    background: white;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.article-card h4,
+.article-card h5 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.article-card h4 {
+    font-size: 1.5rem;
+}
+
+.article-card h5 {
+    font-size: 1.125rem;
+}
+
+.article-meta {
+    font-size: 0.875rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.article-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.read-more {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Resource Categories */
+.resource-categories {
+    margin-bottom: 4rem;
+}
+
+.resource-categories h3 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--dark-text);
+}
+
+.category-section {
+    margin-bottom: 3rem;
+}
+
+.category-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Useful Resources */
+.useful-resources {
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.useful-resources h3 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: var(--dark-text);
+}
+
+.resource-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.resource-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.resource-item h4 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.resource-item p {
+    font-size: 0.925rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.resource-link {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Newsletter Signup */
+.newsletter-signup {
+    background: var(--primary-color);
+    color: white;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.newsletter-signup h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-signup p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input[type="email"] {
+    flex: 1;
+    padding: 0.875rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.newsletter-form .btn {
+    background: white;
+    color: var(--primary-color);
+}
+
+.newsletter-form .btn:hover {
+    background: var(--light-bg);
+}
+
+/* Resources CTA */
+.resources-cta {
+    background: var(--light-bg);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.resources-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.resources-cta p {
+    font-size: 1.125rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+/* External Resources Section */
+.external-resources {
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.external-resources h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.external-resources > p {
+    font-size: 1.125rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.external-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.external-resource {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.external-resource h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.external-resource ul {
+    list-style: none;
+}
+
+.external-resource li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.external-resource li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.external-resource a {
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.external-resource a::after {
+    content: "↗";
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+.external-resource p {
+    font-size: 0.875rem;
+    color: var(--light-text);
+    margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -547,7 +861,37 @@ a:hover {
 
     .services-grid,
     .credentials-grid,
-    .locations-grid {
+    .locations-grid,
+    .external-links-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .external-resources {
+        padding: 2rem 1rem;
+    }
+    
+    .external-resource {
+        padding: 1.5rem;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input[type="email"] {
+        width: 100%;
+    }
+    
+    .articles-grid,
+    .resource-links {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header .lead {
+        font-size: 1.125rem;
     }
 }
