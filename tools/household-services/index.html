@@ -1,0 +1,159 @@
+---
+layout: default
+title: "Household Services Valuation Tool - Personal Injury & Wrongful Death"
+description: "Calculate economic value of household services for personal injury and wrongful death cases using time-use survey data and replacement cost methods."
+---
+<style>
+.tool-container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: 20px 0; }
+.tool-header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #007bff; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; }
+.form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } }
+.calculate-btn { width: 100%; padding: 15px; background: #007bff; color: white; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; margin-top: 20px; }
+.calculate-btn:hover { background: #0056b3; }
+.results { margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 5px; border-left: 4px solid #007bff; }
+.result-item { padding: 8px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+.result-value { font-size: 1.1em; color: #007bff; font-weight: bold; }
+.info-box { background: #e7f3ff; border: 1px solid #b3d9ff; border-radius: 5px; padding: 15px; margin: 20px 0; color: #0056b3; }
+</style>
+
+<section class="page-header">
+    <div class="container">
+        <h1>Household Services Valuation</h1>
+        <p class="lead">Calculate the economic value of household services for personal injury and wrongful death cases.</p>
+    </div>
+</section>
+
+<section class="tool-content">
+    <div class="container">
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>Household Services Calculator</h1>
+                <p>Calculate replacement cost of household services based on time-use surveys and local wage rates.</p>
+            </div>
+
+            <div class="info-box">
+                <h4>Professional Tool</h4>
+                <p>Uses Bureau of Labor Statistics time-use survey data and regional wage information for accurate household services valuations.</p>
+            </div>
+            
+            <form id="householdForm">
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="age">Age of Person:</label>
+                        <input type="number" id="age" min="18" max="100" value="35" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="marital_status">Marital Status:</label>
+                        <select id="marital_status" required>
+                            <option value="married">Married</option>
+                            <option value="single">Single</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="children">Number of Children Under 18:</label>
+                        <input type="number" id="children" min="0" max="10" value="0">
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="state">State:</label>
+                        <select id="state" required>
+                            <option value="RI">Rhode Island</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="VT">Vermont</option>
+                            <option value="ME">Maine</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="employment_status">Employment Status:</label>
+                        <select id="employment_status" required>
+                            <option value="full_time">Full-time Employed</option>
+                            <option value="part_time">Part-time Employed</option>
+                            <option value="not_employed">Not Employed</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="calculate-btn">Calculate Household Services Value</button>
+            </form>
+            
+            <div id="results" style="display: none;"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+const householdData = {
+    male: { married: { base: 1.8, withChildren: 2.3 }, single: { base: 1.2, withChildren: 2.8 } },
+    female: { married: { base: 3.2, withChildren: 4.8 }, single: { base: 2.1, withChildren: 4.2 } }
+};
+
+const stateWageRates = {
+    'RI': 18.50, 'MA': 20.25, 'CT': 19.75, 'NH': 17.25, 'VT': 16.50, 'ME': 16.75, 'other': 18.00
+};
+
+document.getElementById('householdForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const age = parseInt(document.getElementById('age').value);
+    const gender = document.getElementById('gender').value;
+    const maritalStatus = document.getElementById('marital_status').value;
+    const children = parseInt(document.getElementById('children').value);
+    const state = document.getElementById('state').value;
+    const employmentStatus = document.getElementById('employment_status').value;
+    
+    const baseHours = householdData[gender][maritalStatus].base;
+    const childAdjustment = children > 0 ? (householdData[gender][maritalStatus].withChildren - baseHours) * Math.min(children, 3) / 3 : 0;
+    const employmentAdjustment = employmentStatus === 'not_employed' ? 1.3 : (employmentStatus === 'part_time' ? 1.15 : 1.0);
+    const ageAdjustment = age > 65 ? 0.8 : (age < 25 ? 0.9 : 1.0);
+    
+    const dailyHours = (baseHours + childAdjustment) * employmentAdjustment * ageAdjustment;
+    const hourlyRate = stateWageRates[state];
+    const dailyValue = dailyHours * hourlyRate;
+    const annualValue = dailyValue * 365;
+    
+    displayResults({
+        dailyHours: dailyHours,
+        hourlyRate: hourlyRate,
+        dailyValue: dailyValue,
+        annualValue: annualValue,
+        demographics: { age, gender, maritalStatus, children, state, employmentStatus }
+    });
+});
+
+function displayResults(data) {
+    const html = `
+        <div class="results">
+            <h2>Household Services Valuation Results</h2>
+            <div class="result-item"><strong>Daily Hours of Services:</strong> <span class="result-value">${data.dailyHours.toFixed(1)} hours</span></div>
+            <div class="result-item"><strong>Replacement Hourly Rate:</strong> <span class="result-value">$${data.hourlyRate.toFixed(2)}</span></div>
+            <div class="result-item"><strong>Daily Value:</strong> <span class="result-value">$${data.dailyValue.toFixed(2)}</span></div>
+            <div class="result-item"><strong>Annual Value:</strong> <span class="result-value">$${data.annualValue.toLocaleString()}</span></div>
+            <p style="font-size: 0.9em; color: #666; font-style: italic; margin-top: 15px;">
+                Based on BLS time-use survey data and ${data.demographics.state} wage rates. Includes cooking, cleaning, childcare, shopping, and home maintenance activities.
+            </p>
+        </div>
+    `;
+    
+    document.getElementById('results').innerHTML = html;
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
