@@ -728,6 +728,84 @@ a:hover {
     margin-bottom: 2rem;
 }
 
+/* Peer-Reviewed Journals Section */
+.peer-reviewed-journals {
+    background: white;
+    padding: 3rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border: 2px solid var(--primary-color);
+}
+
+.peer-reviewed-journals h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.peer-reviewed-journals > p {
+    font-size: 1.125rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.journals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.journal-category {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.journal-category h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.journal-category ul {
+    list-style: none;
+}
+
+.journal-category li {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.journal-category li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.journal-category a {
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.journal-publisher {
+    font-size: 0.875rem;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+.article-meta a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.article-meta a:hover {
+    color: var(--secondary-color);
+}
+
 /* External Resources Section */
 .external-resources {
     background: var(--light-bg);
@@ -884,8 +962,17 @@ a:hover {
     }
     
     .articles-grid,
-    .resource-links {
+    .resource-links,
+    .journals-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .peer-reviewed-journals {
+        padding: 2rem 1rem;
+    }
+    
+    .journal-category {
+        padding: 1.5rem;
     }
     
     .page-header h1 {
