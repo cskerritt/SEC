@@ -49,6 +49,28 @@ sitemap:
             </div>
         </div>
 
+        <!-- Professional Tools -->
+        <div class="professional-tools">
+            <h3>Professional Calculation Tools</h3>
+            <p>Interactive tools designed for attorneys and legal professionals to assist with economic damage calculations and analysis.</p>
+            
+            <div class="tools-grid">
+                <div class="tool-item">
+                    <h4>Life Expectancy Lookup Tool</h4>
+                    <p>Comprehensive tool for calculating life expectancy, work life expectancy, and years to final separation based on demographic data. Enter birth date and injury date once to get all calculations automatically.</p>
+                    <div class="tool-features">
+                        <ul>
+                            <li>Life Expectancy (LE) based on gender, race, and age</li>
+                            <li>Work Life Expectancy (WLE) based on education and activity status</li>
+                            <li>Years to Final Separation (YFS) calculations</li>
+                            <li>Flexible date input formats</li>
+                        </ul>
+                    </div>
+                    <a href="{{ '/tools/life-expectancy/' | relative_url }}" class="btn btn-primary">Access Tool</a>
+                </div>
+            </div>
+        </div>
+
         <!-- External Resources -->
         <div class="external-resources">
             <h3>External Professional Resources</h3>

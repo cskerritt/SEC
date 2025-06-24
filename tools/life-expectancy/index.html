@@ -1,0 +1,372 @@
+---
+layout: default
+title: "Life Expectancy Lookup Tool - Economic Damage Calculations"
+description: "Professional life expectancy calculator for forensic economists and attorneys. Calculate LE, WLE, and YFS values for economic damage analysis."
+sitemap:
+  priority: 0.8
+  changefreq: monthly
+---
+
+<style>
+    .tool-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin: 20px 0;
+    }
+    .tool-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #007bff;
+    }
+    .tool-header h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .tool-description {
+        color: #666;
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    .form-group select {
+        height: 40px;
+    }
+    .date-help {
+        font-size: 12px;
+        color: #666;
+        margin-top: 3px;
+    }
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    @media (max-width: 600px) {
+        .two-column {
+            grid-template-columns: 1fr;
+        }
+    }
+    .lookup-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+    .lookup-btn:hover {
+        background-color: #0056b3;
+    }
+    .lookup-btn:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    .results {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        border-left: 4px solid #007bff;
+    }
+    .results h2 {
+        color: #333;
+        margin-top: 0;
+    }
+    .input-section, .output-section {
+        margin-bottom: 20px;
+    }
+    .input-section h3, .output-section h3 {
+        color: #555;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 5px;
+    }
+    .result-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+    .result-item:last-child {
+        border-bottom: none;
+    }
+    .error {
+        color: #dc3545;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .warning {
+        background-color: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px 0;
+        color: #856404;
+    }
+    .warning h4 {
+        margin-top: 0;
+        color: #856404;
+    }
+</style>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Life Expectancy Lookup Tool</h1>
+        <p class="lead">Professional calculator for life expectancy, work life expectancy, and years to final separation analysis.</p>
+    </div>
+</section>
+
+<!-- Tool Content -->
+<section class="tool-content">
+    <div class="container">
+        <div class="tool-container">
+            <div class="tool-header">
+                <h1>Expectancy Calculator</h1>
+                <p class="tool-description">
+                    Enter demographic information to calculate life expectancy (LE), work life expectancy (WLE), and years to final separation (YFS) 
+                    for economic damage analysis. This tool is designed for forensic economists and attorneys.
+                </p>
+            </div>
+
+            <div class="warning">
+                <h4>Important Notice</h4>
+                <p>This tool requires access to actuarial data files that are not publicly available through this web interface. 
+                For full functionality, please contact us to discuss data licensing and implementation options for your firm.</p>
+            </div>
+            
+            <form id="lookupForm">
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="birth_date">Date of Birth:</label>
+                        <input type="date" id="birth_date" name="birth_date" required>
+                        <div class="date-help">Enter date of birth</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="injury_date">Date of Injury:</label>
+                        <input type="date" id="injury_date" name="injury_date" required>
+                        <div class="date-help">Enter date of injury</div>
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="gender_le">Gender (for Life Expectancy):</label>
+                        <select id="gender_le" name="gender_le" required>
+                            <option value="">Select Gender...</option>
+                            <option value="Males">Males</option>
+                            <option value="Females">Females</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="race">Race:</label>
+                        <select id="race" name="race" required>
+                            <option value="">Select Race...</option>
+                            <option value="General Population">General Population</option>
+                            <option value="White">White</option>
+                            <option value="Black">Black</option>
+                            <option value="Hispanic">Hispanic</option>
+                            <option value="Asian">Asian</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="gender_wle">Gender (for Work Life Expectancy):</label>
+                        <select id="gender_wle" name="gender_wle" required>
+                            <option value="">Select Gender...</option>
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Education Level:</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select Education Level...</option>
+                            <option value="All Education Levels">All Education Levels</option>
+                            <option value="Less than high school">Less than high school</option>
+                            <option value="High school graduates">High school graduates</option>
+                            <option value="Some college or associates degree">Some college or associates degree</option>
+                            <option value="Bachelor's degree and higher">Bachelor's degree and higher</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="active_status">Work Status:</label>
+                    <select id="active_status" name="active_status">
+                        <option value="Initially Active">Initially Active</option>
+                        <option value="Initially Inactive">Initially Inactive</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="lookup-btn" id="lookupBtn">Calculate Expectancy Values</button>
+            </form>
+            
+            <div id="results" style="display: none;"></div>
+            <div id="error" style="display: none;"></div>
+        </div>
+
+        <!-- Tool Information -->
+        <div class="tool-info" style="margin-top: 30px;">
+            <h3>About This Tool</h3>
+            <div class="two-column">
+                <div>
+                    <h4>Calculations Provided</h4>
+                    <ul>
+                        <li><strong>Life Expectancy (LE):</strong> Based on gender, race, and current age</li>
+                        <li><strong>Work Life Expectancy (WLE):</strong> Expected years of work based on demographics and education</li>
+                        <li><strong>Years to Final Separation (YFS):</strong> Expected years until final workforce departure</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Data Sources</h4>
+                    <ul>
+                        <li>Life expectancy tables from actuarial databases</li>
+                        <li>Work life expectancy data by demographic factors</li>
+                        <li>Years to final separation statistical models</li>
+                        <li>Bureau of Labor Statistics employment data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.getElementById('lookupForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btn = document.getElementById('lookupBtn');
+    const resultsDiv = document.getElementById('results');
+    const errorDiv = document.getElementById('error');
+    
+    // Hide previous results/errors
+    resultsDiv.style.display = 'none';
+    errorDiv.style.display = 'none';
+    
+    // Show loading state
+    btn.disabled = true;
+    btn.textContent = 'Calculating...';
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Calculate age at injury
+    const birthDate = new Date(data.birth_date);
+    const injuryDate = new Date(data.injury_date);
+    const ageAtInjury = injuryDate.getFullYear() - birthDate.getFullYear() - 
+                       ((injuryDate.getMonth() < birthDate.getMonth() || 
+                        (injuryDate.getMonth() === birthDate.getMonth() && injuryDate.getDate() < birthDate.getDate())) ? 1 : 0);
+    
+    // Simulate lookup results (in a real implementation, this would call the backend)
+    setTimeout(() => {
+        const results = {
+            input_data: {
+                birth_date: data.birth_date,
+                injury_date: data.injury_date,
+                age_at_injury: ageAtInjury,
+                gender_le: data.gender_le,
+                race: data.race,
+                gender_wle: data.gender_wle,
+                education: data.education,
+                active_status: data.active_status
+            },
+            results: {
+                life_expectancy: null, // Would be calculated from actual data
+                work_life_expectancy: null, // Would be calculated from actual data
+                years_to_final_separation: null // Would be calculated from actual data
+            }
+        };
+        
+        displayDemoResults(results);
+        
+        btn.disabled = false;
+        btn.textContent = 'Calculate Expectancy Values';
+    }, 1000);
+});
+
+function displayDemoResults(data) {
+    const resultsDiv = document.getElementById('results');
+    const input = data.input_data;
+    
+    let html = `
+        <div class="results">
+            <h2>Expectancy Calculation Results</h2>
+            
+            <div class="input-section">
+                <h3>Input Information</h3>
+                <div class="result-item"><strong>Date of Birth:</strong> ${input.birth_date}</div>
+                <div class="result-item"><strong>Date of Injury:</strong> ${input.injury_date}</div>
+                <div class="result-item"><strong>Age at Injury:</strong> ${input.age_at_injury} years</div>
+                <div class="result-item"><strong>Gender (LE):</strong> ${input.gender_le}</div>
+                <div class="result-item"><strong>Race:</strong> ${input.race}</div>
+                <div class="result-item"><strong>Gender (WLE/YFS):</strong> ${input.gender_wle}</div>
+                <div class="result-item"><strong>Education:</strong> ${input.education}</div>
+                <div class="result-item"><strong>Work Status:</strong> ${input.active_status}</div>
+            </div>
+            
+            <div class="output-section">
+                <h3>Results</h3>
+                <div class="warning">
+                    <h4>Demo Mode</h4>
+                    <p>This is a demonstration interface. Actual calculations require licensed actuarial data files. 
+                    Contact us to discuss implementation with your proprietary data sources.</p>
+                </div>
+                <div class="result-item">
+                    <strong>Life Expectancy:</strong> Contact for calculation
+                </div>
+                <div class="result-item">
+                    <strong>Work Life Expectancy (Median):</strong> Contact for calculation
+                </div>
+                <div class="result-item">
+                    <strong>Years to Final Separation (Median):</strong> Contact for calculation
+                </div>
+            </div>
+        </div>
+    `;
+    
+    resultsDiv.innerHTML = html;
+    resultsDiv.style.display = 'block';
+}
+</script>
+
+<!-- CTA Section -->
+<section class="tool-cta" style="background-color: #f8f9fa; padding: 40px 0; margin-top: 40px;">
+    <div class="container">
+        <div class="text-center">
+            <h2>Need Access to Full Functionality?</h2>
+            <p>Contact us to discuss licensing actuarial data and implementing this tool with full calculation capabilities for your practice.</p>
+            <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">Contact Us</a>
+        </div>
+    </div>
+</section>
