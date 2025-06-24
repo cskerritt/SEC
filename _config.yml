@@ -42,11 +42,8 @@ defaults:
     values:
       layout: "practice-area"
 
-# Plugins
+# Plugins (GitHub Pages includes these by default)
 plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
 
 # Exclude from processing
 exclude:
