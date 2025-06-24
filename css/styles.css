@@ -661,6 +661,7 @@ a:hover {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    margin-right: 1rem;
 }
 
 /* Newsletter Signup */
