@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location  
-Sitemap: https://cskerritt.github.io/SEC/sitemap.xml
+Sitemap: https://skerritteconomics.com/sitemap.xml
 
 # Block access to system files
 Disallow: /.git/
