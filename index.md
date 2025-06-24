@@ -2,6 +2,9 @@
 layout: default
 title: "Forensic Economist & Business Valuation Expert"
 description: "Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review."
+sitemap:
+  priority: 1.0
+  changefreq: weekly
 ---
 
 <!-- Hero Section -->

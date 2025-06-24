@@ -31,6 +31,7 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+      image: "/Christopher-Skerritt-1-636x960-1.jpg"
   - scope:
       path: ""
       type: "services"
@@ -44,6 +45,9 @@ defaults:
 
 # Plugins (GitHub Pages includes these by default)
 plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing
 exclude:
@@ -62,3 +66,7 @@ exclude:
 # Include hidden files
 include:
   - .htaccess
+
+# Sitemap settings
+sitemap:
+  file: "/sitemap.xml"

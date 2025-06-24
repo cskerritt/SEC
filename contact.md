@@ -2,6 +2,9 @@
 layout: default
 title: "Contact Skerritt Economics - Free Case Consultation"
 description: "Contact Chris Skerritt for expert economic analysis and business valuation. Free initial consultation for legal professionals throughout New England."
+sitemap:
+  priority: 0.8
+  changefreq: monthly
 ---
 
 <link rel="stylesheet" href="{{ '/css/contact.css' | relative_url }}">

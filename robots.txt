@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/sitemap.xml
+# Sitemap location  
+Sitemap: https://cskerritt.github.io/SEC/sitemap.xml
 
 # Block access to system files
 Disallow: /.git/
 Disallow: /README.md
 Disallow: /GITHUB_PAGES_SETUP.md
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /_site/
+Disallow: /*.sh

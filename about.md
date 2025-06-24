@@ -2,6 +2,9 @@
 layout: default
 title: "About Christopher Skerritt - Forensic Economist & Business Valuation Expert"
 description: "Meet Christopher T. Skerritt, CRC, CLCP - Expert forensic economist and business valuator serving legal professionals throughout New England."
+sitemap:
+  priority: 0.9
+  changefreq: monthly
 ---
 
 <link rel="stylesheet" href="{{ '/css/about.css' | relative_url }}">
