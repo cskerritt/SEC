@@ -1,0 +1,67 @@
+# Site settings
+title: "Skerritt Economics & Consulting"
+email: "chris@skerritteconomics.com"
+description: >-
+  Expert forensic economics and business valuation services for legal professionals 
+  throughout New England. Specializing in personal injury, employment litigation, 
+  and commercial disputes.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://cskerritt.github.io/SEC" # the base hostname & protocol for your site
+phone: "(203) 605-2814"
+address: "400 Putnam Pike Ste J, Smithfield, RI 02917"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  services:
+    output: true
+    permalink: /services/:name/
+  practice-areas:
+    output: true
+    permalink: /practice-areas/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "practice-areas"
+    values:
+      layout: "practice-area"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - GITHUB_PAGES_SETUP.md
+  - "*.sh"
+  - server.log
+
+# Include hidden files
+include:
+  - .htaccess
