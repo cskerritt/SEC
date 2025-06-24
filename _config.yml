@@ -70,3 +70,6 @@ include:
 # Sitemap settings
 sitemap:
   file: "/sitemap.xml"
+
+# Force GitHub Pages to use correct repository settings
+repository: cskerritt/SEC
