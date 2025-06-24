@@ -1,11 +1,15 @@
----
-layout: default
-title: "Wage Growth Projector - Employment Litigation Tool"
-description: "Professional wage growth calculator for employment litigation and personal injury cases. Project future earnings with inflation, merit increases, and promotion modeling."
-sitemap:
-  priority: 0.8
-  changefreq: monthly
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wage Growth Projector - Employment Litigation Tool | Skerritt Economics</title>
+    <meta name="description" content="Professional wage growth calculator for employment litigation and personal injury cases. Project future earnings with inflation, merit increases, and promotion modeling.">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
     .tool-container {
@@ -211,211 +215,314 @@ sitemap:
         display: block;
     }
 </style>
-
-<!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <h1>Wage Growth Projector</h1>
-        <p class="lead">Project future earnings with inflation adjustments, merit increases, and promotion modeling for employment litigation and personal injury cases.</p>
-    </div>
-</section>
-
-<!-- Tool Content -->
-<section class="tool-content">
-    <div class="container">
-        <div class="tool-container">
-            <div class="tool-header">
-                <h1>Wage Growth Projector</h1>
-                <p class="tool-description">
-                    Calculate projected earnings growth incorporating base wage inflation, individual merit increases, 
-                    promotion opportunities, and fringe benefits. Essential for employment litigation and personal injury economic damage analysis.
-                </p>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../../services/business-valuation/">Business Valuation</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../case-studies/">Case Studies</a></li>
+                    <li><a href="../../about/">About</a></li>
+                    <li><a href="../../resources/">Resources</a></li>
+                    <li><a href="../../tools/">Tools</a></li>
+                    <li><a href="../../contact/" class="nav-cta">Contact</a></li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-            <div class="info-box">
-                <h4>Professional Tool</h4>
-                <p>This calculator uses standard economic methodologies for wage growth projection. Results incorporate BLS data patterns and are suitable for litigation support analysis.</p>
-            </div>
-            
-            <form id="wageForm">
-                <!-- Basic Information -->
-                <h3>Basic Employment Information</h3>
-                <div class="three-column">
-                    <div class="form-group">
-                        <label for="current_salary">Current Annual Salary ($):</label>
-                        <input type="number" id="current_salary" name="current_salary" step="0.01" required>
-                        <div class="input-help">Current base annual salary</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="current_age">Current Age:</label>
-                        <input type="number" id="current_age" name="current_age" min="16" max="100" required>
-                        <div class="input-help">Employee's current age</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="retirement_age">Retirement Age:</label>
-                        <input type="number" id="retirement_age" name="retirement_age" min="50" max="80" value="65">
-                        <div class="input-help">Expected retirement age</div>
-                    </div>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Wage Growth Projector</h1>
+            <p class="lead">Project future earnings with inflation adjustments, merit increases, and promotion modeling for employment litigation and personal injury cases.</p>
+        </div>
+    </section>
+
+    <!-- Tool Content -->
+    <section class="tool-content">
+        <div class="container">
+            <div class="tool-container">
+                <div class="tool-header">
+                    <h1>Wage Growth Projector</h1>
+                    <p class="tool-description">
+                        Calculate projected earnings growth incorporating base wage inflation, individual merit increases, 
+                        promotion opportunities, and fringe benefits. Essential for employment litigation and personal injury economic damage analysis.
+                    </p>
                 </div>
 
-                <!-- Growth Rates -->
-                <h3>Growth Rate Assumptions</h3>
-                <div class="three-column">
-                    <div class="form-group">
-                        <label for="inflation_rate">General Wage Inflation (%):</label>
-                        <input type="number" id="inflation_rate" name="inflation_rate" step="0.01" value="2.5" min="0" max="10">
-                        <div class="input-help">Annual wage inflation rate</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="merit_increase_rate">Merit Increase Rate (%):</label>
-                        <input type="number" id="merit_increase_rate" name="merit_increase_rate" step="0.01" value="1.0" min="0" max="10">
-                        <div class="input-help">Annual merit/performance increases</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="productivity_growth">Productivity Growth (%):</label>
-                        <input type="number" id="productivity_growth" name="productivity_growth" step="0.01" value="0.5" min="0" max="5">
-                        <div class="input-help">Additional productivity-based growth</div>
-                    </div>
-                </div>
-
-                <!-- Industry and Position -->
-                <h3>Industry and Position Details</h3>
-                <div class="two-column">
-                    <div class="form-group">
-                        <label for="industry">Industry:</label>
-                        <select id="industry" name="industry" required>
-                            <option value="">Select Industry...</option>
-                            <option value="technology">Technology</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="finance">Finance/Banking</option>
-                            <option value="education">Education</option>
-                            <option value="manufacturing">Manufacturing</option>
-                            <option value="retail">Retail/Hospitality</option>
-                            <option value="construction">Construction</option>
-                            <option value="government">Government</option>
-                            <option value="professional_services">Professional Services</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="education_level">Education Level:</label>
-                        <select id="education_level" name="education_level" required>
-                            <option value="">Select Education...</option>
-                            <option value="high_school">High School</option>
-                            <option value="some_college">Some College</option>
-                            <option value="associates">Associate's Degree</option>
-                            <option value="bachelors">Bachelor's Degree</option>
-                            <option value="masters">Master's Degree</option>
-                            <option value="doctorate">Doctorate/Professional</option>
-                        </select>
-                    </div>
-                </div>
-
-                <!-- Promotion Modeling -->
-                <h3>Promotion and Career Advancement</h3>
-                <div class="three-column">
-                    <div class="form-group">
-                        <label for="promotion_frequency">Promotion Frequency (years):</label>
-                        <input type="number" id="promotion_frequency" name="promotion_frequency" step="0.5" value="5" min="0" max="20">
-                        <div class="input-help">Average years between promotions (0 = no promotions)</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="promotion_increase">Promotion Salary Increase (%):</label>
-                        <input type="number" id="promotion_increase" name="promotion_increase" step="0.1" value="15" min="0" max="100">
-                        <div class="input-help">Average salary increase per promotion</div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="max_promotions">Maximum Promotions:</label>
-                        <input type="number" id="max_promotions" name="max_promotions" value="3" min="0" max="10">
-                        <div class="input-help">Total promotions over career</div>
-                    </div>
-                </div>
-
-                <!-- Fringe Benefits -->
-                <div class="benefits-section">
-                    <div class="benefits-toggle" onclick="toggleBenefits()">
-                        <strong>⚙️ Fringe Benefits Calculation (Click to expand)</strong>
-                    </div>
-                    <div class="benefits-details" id="benefitsDetails">
-                        <div class="two-column">
-                            <div class="form-group">
-                                <label for="health_insurance">Health Insurance (% of salary):</label>
-                                <input type="number" id="health_insurance" name="health_insurance" step="0.1" value="8" min="0" max="30">
-                                <div class="input-help">Employer contribution as % of salary</div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="retirement_contribution">Retirement Contribution (%):</label>
-                                <input type="number" id="retirement_contribution" name="retirement_contribution" step="0.1" value="6" min="0" max="25">
-                                <div class="input-help">401k/pension employer contribution</div>
-                            </div>
-                        </div>
-                        
-                        <div class="three-column">
-                            <div class="form-group">
-                                <label for="social_security">Social Security (%):</label>
-                                <input type="number" id="social_security" name="social_security" step="0.01" value="6.2" min="0" max="10" readonly>
-                                <div class="input-help">Employer portion (current rate)</div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="medicare">Medicare (%):</label>
-                                <input type="number" id="medicare" name="medicare" step="0.01" value="1.45" min="0" max="5" readonly>
-                                <div class="input-help">Employer portion (current rate)</div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="other_benefits">Other Benefits (%):</label>
-                                <input type="number" id="other_benefits" name="other_benefits" step="0.1" value="3" min="0" max="20">
-                                <div class="input-help">Vacation, training, other benefits</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="info-box">
+                    <h4>Professional Tool</h4>
+                    <p>This calculator uses standard economic methodologies for wage growth projection. Results incorporate BLS data patterns and are suitable for litigation support analysis.</p>
                 </div>
                 
-                <button type="submit" class="calculate-btn">Calculate Wage Projections</button>
-            </form>
-            
-            <div id="results" style="display: none;"></div>
-            <div id="error" style="display: none;"></div>
-        </div>
+                <form id="wageForm">
+                    <!-- Basic Information -->
+                    <h3>Basic Employment Information</h3>
+                    <div class="three-column">
+                        <div class="form-group">
+                            <label for="current_salary">Current Annual Salary ($):</label>
+                            <input type="number" id="current_salary" name="current_salary" step="0.01" required>
+                            <div class="input-help">Current base annual salary</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="current_age">Current Age:</label>
+                            <input type="number" id="current_age" name="current_age" min="16" max="100" required>
+                            <div class="input-help">Employee's current age</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="retirement_age">Retirement Age:</label>
+                            <input type="number" id="retirement_age" name="retirement_age" min="50" max="80" value="65">
+                            <div class="input-help">Expected retirement age</div>
+                        </div>
+                    </div>
 
-        <!-- Tool Information -->
-        <div class="tool-info" style="margin-top: 30px;">
-            <h3>About This Tool</h3>
-            <div class="two-column">
-                <div>
-                    <h4>Calculation Components</h4>
-                    <ul>
-                        <li><strong>Base Inflation:</strong> General wage growth from economic inflation</li>
-                        <li><strong>Merit Increases:</strong> Individual performance-based raises</li>
-                        <li><strong>Promotions:</strong> Career advancement salary increases</li>
-                        <li><strong>Fringe Benefits:</strong> Non-wage compensation calculations</li>
-                    </ul>
-                    <p class="methodology-note">Based on BLS wage growth patterns and industry standards.</p>
-                </div>
-                <div>
-                    <h4>Applications</h4>
-                    <ul>
-                        <li>Employment litigation back/front pay</li>
-                        <li>Personal injury lost earning capacity</li>
-                        <li>Wrongful termination damages</li>
-                        <li>Discrimination case analysis</li>
-                        <li>Career development planning</li>
-                    </ul>
-                    <p class="methodology-note">Results suitable for expert testimony and settlement analysis.</p>
+                    <!-- Growth Rates -->
+                    <h3>Growth Rate Assumptions</h3>
+                    <div class="three-column">
+                        <div class="form-group">
+                            <label for="inflation_rate">General Wage Inflation (%):</label>
+                            <input type="number" id="inflation_rate" name="inflation_rate" step="0.01" value="2.5" min="0" max="10">
+                            <div class="input-help">Annual wage inflation rate</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="merit_increase_rate">Merit Increase Rate (%):</label>
+                            <input type="number" id="merit_increase_rate" name="merit_increase_rate" step="0.01" value="1.0" min="0" max="10">
+                            <div class="input-help">Annual merit/performance increases</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="productivity_growth">Productivity Growth (%):</label>
+                            <input type="number" id="productivity_growth" name="productivity_growth" step="0.01" value="0.5" min="0" max="5">
+                            <div class="input-help">Additional productivity-based growth</div>
+                        </div>
+                    </div>
+
+                    <!-- Industry and Position -->
+                    <h3>Industry and Position Details</h3>
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="industry">Industry:</label>
+                            <select id="industry" name="industry" required>
+                                <option value="">Select Industry...</option>
+                                <option value="technology">Technology</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="finance">Finance/Banking</option>
+                                <option value="education">Education</option>
+                                <option value="manufacturing">Manufacturing</option>
+                                <option value="retail">Retail/Hospitality</option>
+                                <option value="construction">Construction</option>
+                                <option value="government">Government</option>
+                                <option value="professional_services">Professional Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="education_level">Education Level:</label>
+                            <select id="education_level" name="education_level" required>
+                                <option value="">Select Education...</option>
+                                <option value="high_school">High School</option>
+                                <option value="some_college">Some College</option>
+                                <option value="associates">Associate's Degree</option>
+                                <option value="bachelors">Bachelor's Degree</option>
+                                <option value="masters">Master's Degree</option>
+                                <option value="doctorate">Doctorate/Professional</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Promotion Modeling -->
+                    <h3>Promotion and Career Advancement</h3>
+                    <div class="three-column">
+                        <div class="form-group">
+                            <label for="promotion_frequency">Promotion Frequency (years):</label>
+                            <input type="number" id="promotion_frequency" name="promotion_frequency" step="0.5" value="5" min="0" max="20">
+                            <div class="input-help">Average years between promotions (0 = no promotions)</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="promotion_increase">Promotion Salary Increase (%):</label>
+                            <input type="number" id="promotion_increase" name="promotion_increase" step="0.1" value="15" min="0" max="100">
+                            <div class="input-help">Average salary increase per promotion</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="max_promotions">Maximum Promotions:</label>
+                            <input type="number" id="max_promotions" name="max_promotions" value="3" min="0" max="10">
+                            <div class="input-help">Total promotions over career</div>
+                        </div>
+                    </div>
+
+                    <!-- Fringe Benefits -->
+                    <div class="benefits-section">
+                        <div class="benefits-toggle" onclick="toggleBenefits()">
+                            <strong>⚙️ Fringe Benefits Calculation (Click to expand)</strong>
+                        </div>
+                        <div class="benefits-details" id="benefitsDetails">
+                            <div class="two-column">
+                                <div class="form-group">
+                                    <label for="health_insurance">Health Insurance (% of salary):</label>
+                                    <input type="number" id="health_insurance" name="health_insurance" step="0.1" value="8" min="0" max="30">
+                                    <div class="input-help">Employer contribution as % of salary</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="retirement_contribution">Retirement Contribution (%):</label>
+                                    <input type="number" id="retirement_contribution" name="retirement_contribution" step="0.1" value="6" min="0" max="25">
+                                    <div class="input-help">401k/pension employer contribution</div>
+                                </div>
+                            </div>
+                            
+                            <div class="three-column">
+                                <div class="form-group">
+                                    <label for="social_security">Social Security (%):</label>
+                                    <input type="number" id="social_security" name="social_security" step="0.01" value="6.2" min="0" max="10" readonly>
+                                    <div class="input-help">Employer portion (current rate)</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="medicare">Medicare (%):</label>
+                                    <input type="number" id="medicare" name="medicare" step="0.01" value="1.45" min="0" max="5" readonly>
+                                    <div class="input-help">Employer portion (current rate)</div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="other_benefits">Other Benefits (%):</label>
+                                    <input type="number" id="other_benefits" name="other_benefits" step="0.1" value="3" min="0" max="20">
+                                    <div class="input-help">Vacation, training, other benefits</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="calculate-btn">Calculate Wage Projections</button>
+                </form>
+                
+                <div id="results" style="display: none;"></div>
+                <div id="error" style="display: none;"></div>
+            </div>
+
+            <!-- Tool Information -->
+            <div class="tool-info" style="margin-top: 30px;">
+                <h3>About This Tool</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Calculation Components</h4>
+                        <ul>
+                            <li><strong>Base Inflation:</strong> General wage growth from economic inflation</li>
+                            <li><strong>Merit Increases:</strong> Individual performance-based raises</li>
+                            <li><strong>Promotions:</strong> Career advancement salary increases</li>
+                            <li><strong>Fringe Benefits:</strong> Non-wage compensation calculations</li>
+                        </ul>
+                        <p class="methodology-note">Based on BLS wage growth patterns and industry standards.</p>
+                    </div>
+                    <div>
+                        <h4>Applications</h4>
+                        <ul>
+                            <li>Employment litigation back/front pay</li>
+                            <li>Personal injury lost earning capacity</li>
+                            <li>Wrongful termination damages</li>
+                            <li>Discrimination case analysis</li>
+                            <li>Career development planning</li>
+                        </ul>
+                        <p class="methodology-note">Results suitable for expert testimony and settlement analysis.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="tool-cta" style="background-color: #f8f9fa; padding: 40px 0; margin-top: 40px;">
+        <div class="container">
+            <div class="text-center">
+                <h2>Need Detailed Employment Analysis?</h2>
+                <p>While this tool provides comprehensive wage projections, complex employment cases often require industry-specific analysis and expert testimony on career progression patterns.</p>
+                <a href="../../contact/" class="btn btn-primary btn-large">Discuss Your Case</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Skerritt Economics & Consulting</h4>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout New England.</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../../services/#life-care-planning">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../../case-studies/">Case Studies</a></li>
+                        <li><a href="../../resources/">Articles & Insights</a></li>
+                        <li><a href="../../tools/">Professional Tools</a></li>
+                        <li><a href="../../about/">About Chris Skerritt</a></li>
+                        <li><a href="../../contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
 
 <script>
 // Industry growth multipliers (based on BLS data patterns)
@@ -716,14 +823,5 @@ function formatCurrency(amount) {
     });
 }
 </script>
-
-<!-- CTA Section -->
-<section class="tool-cta" style="background-color: #f8f9fa; padding: 40px 0; margin-top: 40px;">
-    <div class="container">
-        <div class="text-center">
-            <h2>Need Detailed Employment Analysis?</h2>
-            <p>While this tool provides comprehensive wage projections, complex employment cases often require industry-specific analysis and expert testimony on career progression patterns.</p>
-            <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">Discuss Your Case</a>
-        </div>
-    </div>
-</section>
+</body>
+</html>

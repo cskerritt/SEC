@@ -1,11 +1,15 @@
----
-layout: default
-title: "Present Value Calculator - Economic Damage Analysis Tool"
-description: "Professional present value calculator for forensic economists and attorneys. Calculate PV of future economic losses with appropriate discount rates for litigation support."
-sitemap:
-  priority: 0.8
-  changefreq: monthly
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Value Calculator - Economic Damage Analysis Tool | Skerritt Economics</title>
+    <meta name="description" content="Professional present value calculator for forensic economists and attorneys. Calculate PV of future economic losses with appropriate discount rates for litigation support.">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
     .tool-container {
@@ -203,200 +207,303 @@ sitemap:
         display: block;
     }
 </style>
-
-<!-- Page Header -->
-<section class="page-header">
-    <div class="container">
-        <h1>Present Value Calculator</h1>
-        <p class="lead">Calculate the present value of future economic losses using appropriate discount rates for litigation support.</p>
-    </div>
-</section>
-
-<!-- Tool Content -->
-<section class="tool-content">
-    <div class="container">
-        <div class="tool-container">
-            <div class="tool-header">
-                <h1>Present Value Calculator</h1>
-                <p class="tool-description">
-                    Calculate the present value of future economic losses for personal injury, wrongful death, and commercial damages. 
-                    This tool supports single payments, periodic payments, and growing payments.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h4>Professional Tool</h4>
-                <p>This calculator uses standard financial methodologies for present value calculations. Results are suitable for economic damage analysis in litigation support.</p>
-            </div>
-
-            <!-- Scenario Tabs -->
-            <div class="scenario-tabs">
-                <button class="scenario-tab active" onclick="switchScenario('single')">Single Payment</button>
-                <button class="scenario-tab" onclick="switchScenario('periodic')">Periodic Payments</button>
-                <button class="scenario-tab" onclick="switchScenario('growing')">Growing Payments</button>
-            </div>
-            
-            <!-- Single Payment Scenario -->
-            <div id="single-scenario" class="scenario-content active">
-                <form id="singleForm">
-                    <h3>Single Future Payment</h3>
-                    <div class="two-column">
-                        <div class="form-group">
-                            <label for="single_amount">Future Payment Amount ($):</label>
-                            <input type="number" id="single_amount" name="single_amount" step="0.01" required>
-                            <div class="input-help">Enter the total future payment amount</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="single_years">Years Until Payment:</label>
-                            <input type="number" id="single_years" name="single_years" step="0.1" min="0" required>
-                            <div class="input-help">Number of years from today</div>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="single_discount_rate">Discount Rate (%):</label>
-                        <input type="number" id="single_discount_rate" name="single_discount_rate" step="0.01" min="0" max="20" value="3.5">
-                        <div class="input-help">Annual discount rate (e.g., 3.5 for 3.5%)</div>
-                    </div>
-                    
-                    <button type="submit" class="calculate-btn">Calculate Present Value</button>
-                </form>
-            </div>
-
-            <!-- Periodic Payments Scenario -->
-            <div id="periodic-scenario" class="scenario-content">
-                <form id="periodicForm">
-                    <h3>Periodic Payments (Annuity)</h3>
-                    <div class="three-column">
-                        <div class="form-group">
-                            <label for="periodic_payment">Payment Amount ($):</label>
-                            <input type="number" id="periodic_payment" name="periodic_payment" step="0.01" required>
-                            <div class="input-help">Amount of each payment</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="periodic_frequency">Payment Frequency:</label>
-                            <select id="periodic_frequency" name="periodic_frequency" required>
-                                <option value="1">Annual</option>
-                                <option value="12">Monthly</option>
-                                <option value="52">Weekly</option>
-                                <option value="365">Daily</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="periodic_years">Number of Years:</label>
-                            <input type="number" id="periodic_years" name="periodic_years" step="0.1" min="0" required>
-                            <div class="input-help">Duration of payments</div>
-                        </div>
-                    </div>
-                    
-                    <div class="two-column">
-                        <div class="form-group">
-                            <label for="periodic_discount_rate">Discount Rate (%):</label>
-                            <input type="number" id="periodic_discount_rate" name="periodic_discount_rate" step="0.01" min="0" max="20" value="3.5">
-                            <div class="input-help">Annual discount rate</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="periodic_timing">Payment Timing:</label>
-                            <select id="periodic_timing" name="periodic_timing">
-                                <option value="end">End of Period</option>
-                                <option value="beginning">Beginning of Period</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="calculate-btn">Calculate Present Value</button>
-                </form>
-            </div>
-
-            <!-- Growing Payments Scenario -->
-            <div id="growing-scenario" class="scenario-content">
-                <form id="growingForm">
-                    <h3>Growing Payments (with Inflation/Growth)</h3>
-                    <div class="three-column">
-                        <div class="form-group">
-                            <label for="growing_initial_payment">Initial Payment ($):</label>
-                            <input type="number" id="growing_initial_payment" name="growing_initial_payment" step="0.01" required>
-                            <div class="input-help">First payment amount</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="growing_frequency">Payment Frequency:</label>
-                            <select id="growing_frequency" name="growing_frequency" required>
-                                <option value="1">Annual</option>
-                                <option value="12">Monthly</option>
-                                <option value="52">Weekly</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="growing_years">Number of Years:</label>
-                            <input type="number" id="growing_years" name="growing_years" step="0.1" min="0" required>
-                            <div class="input-help">Duration of payments</div>
-                        </div>
-                    </div>
-                    
-                    <div class="three-column">
-                        <div class="form-group">
-                            <label for="growing_growth_rate">Growth Rate (%):</label>
-                            <input type="number" id="growing_growth_rate" name="growing_growth_rate" step="0.01" min="-10" max="20" value="2.5">
-                            <div class="input-help">Annual growth/inflation rate</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="growing_discount_rate">Discount Rate (%):</label>
-                            <input type="number" id="growing_discount_rate" name="growing_discount_rate" step="0.01" min="0" max="20" value="3.5">
-                            <div class="input-help">Annual discount rate</div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="growing_timing">Payment Timing:</label>
-                            <select id="growing_timing" name="growing_timing">
-                                <option value="end">End of Period</option>
-                                <option value="beginning">Beginning of Period</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="calculate-btn">Calculate Present Value</button>
-                </form>
-            </div>
-            
-            <div id="results" style="display: none;"></div>
-            <div id="error" style="display: none;"></div>
-        </div>
-
-        <!-- Tool Information -->
-        <div class="tool-info" style="margin-top: 30px;">
-            <h3>About This Tool</h3>
-            <div class="two-column">
-                <div>
-                    <h4>Calculation Types</h4>
-                    <ul>
-                        <li><strong>Single Payment:</strong> Present value of one future lump sum</li>
-                        <li><strong>Periodic Payments:</strong> Present value of regular payments (annuities)</li>
-                        <li><strong>Growing Payments:</strong> Present value of payments that increase over time</li>
-                    </ul>
-                    <p class="methodology-note">Uses standard time value of money principles.</p>
-                </div>
-                <div>
-                    <h4>Applications</h4>
-                    <ul>
-                        <li>Personal injury economic damages</li>
-                        <li>Wrongful death calculations</li>
-                        <li>Lost profits analysis</li>
-                        <li>Structured settlement valuations</li>
-                        <li>Commercial damages assessment</li>
-                    </ul>
-                    <p class="methodology-note">Results suitable for litigation support and expert testimony.</p>
-                </div>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../../services/business-valuation/">Business Valuation</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../case-studies/">Case Studies</a></li>
+                    <li><a href="../../about/">About</a></li>
+                    <li><a href="../../resources/">Resources</a></li>
+                    <li><a href="../../tools/">Tools</a></li>
+                    <li><a href="../../contact/" class="nav-cta">Contact</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Present Value Calculator</h1>
+            <p class="lead">Calculate the present value of future economic losses using appropriate discount rates for litigation support.</p>
+        </div>
+    </section>
+
+    <!-- Tool Content -->
+    <section class="tool-content">
+        <div class="container">
+            <div class="tool-container">
+                <div class="tool-header">
+                    <h1>Present Value Calculator</h1>
+                    <p class="tool-description">
+                        Calculate the present value of future economic losses for personal injury, wrongful death, and commercial damages. 
+                        This tool supports single payments, periodic payments, and growing payments.
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <h4>Professional Tool</h4>
+                    <p>This calculator uses standard financial methodologies for present value calculations. Results are suitable for economic damage analysis in litigation support.</p>
+                </div>
+
+                <!-- Scenario Tabs -->
+                <div class="scenario-tabs">
+                    <button class="scenario-tab active" onclick="switchScenario('single')">Single Payment</button>
+                    <button class="scenario-tab" onclick="switchScenario('periodic')">Periodic Payments</button>
+                    <button class="scenario-tab" onclick="switchScenario('growing')">Growing Payments</button>
+                </div>
+                
+                <!-- Single Payment Scenario -->
+                <div id="single-scenario" class="scenario-content active">
+                    <form id="singleForm">
+                        <h3>Single Future Payment</h3>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="single_amount">Future Payment Amount ($):</label>
+                                <input type="number" id="single_amount" name="single_amount" step="0.01" required>
+                                <div class="input-help">Enter the total future payment amount</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="single_years">Years Until Payment:</label>
+                                <input type="number" id="single_years" name="single_years" step="0.1" min="0" required>
+                                <div class="input-help">Number of years from today</div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="single_discount_rate">Discount Rate (%):</label>
+                            <input type="number" id="single_discount_rate" name="single_discount_rate" step="0.01" min="0" max="20" value="3.5">
+                            <div class="input-help">Annual discount rate (e.g., 3.5 for 3.5%)</div>
+                        </div>
+                        
+                        <button type="submit" class="calculate-btn">Calculate Present Value</button>
+                    </form>
+                </div>
+
+                <!-- Periodic Payments Scenario -->
+                <div id="periodic-scenario" class="scenario-content">
+                    <form id="periodicForm">
+                        <h3>Periodic Payments (Annuity)</h3>
+                        <div class="three-column">
+                            <div class="form-group">
+                                <label for="periodic_payment">Payment Amount ($):</label>
+                                <input type="number" id="periodic_payment" name="periodic_payment" step="0.01" required>
+                                <div class="input-help">Amount of each payment</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="periodic_frequency">Payment Frequency:</label>
+                                <select id="periodic_frequency" name="periodic_frequency" required>
+                                    <option value="1">Annual</option>
+                                    <option value="12">Monthly</option>
+                                    <option value="52">Weekly</option>
+                                    <option value="365">Daily</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="periodic_years">Number of Years:</label>
+                                <input type="number" id="periodic_years" name="periodic_years" step="0.1" min="0" required>
+                                <div class="input-help">Duration of payments</div>
+                            </div>
+                        </div>
+                        
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="periodic_discount_rate">Discount Rate (%):</label>
+                                <input type="number" id="periodic_discount_rate" name="periodic_discount_rate" step="0.01" min="0" max="20" value="3.5">
+                                <div class="input-help">Annual discount rate</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="periodic_timing">Payment Timing:</label>
+                                <select id="periodic_timing" name="periodic_timing">
+                                    <option value="end">End of Period</option>
+                                    <option value="beginning">Beginning of Period</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calculate-btn">Calculate Present Value</button>
+                    </form>
+                </div>
+
+                <!-- Growing Payments Scenario -->
+                <div id="growing-scenario" class="scenario-content">
+                    <form id="growingForm">
+                        <h3>Growing Payments (with Inflation/Growth)</h3>
+                        <div class="three-column">
+                            <div class="form-group">
+                                <label for="growing_initial_payment">Initial Payment ($):</label>
+                                <input type="number" id="growing_initial_payment" name="growing_initial_payment" step="0.01" required>
+                                <div class="input-help">First payment amount</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="growing_frequency">Payment Frequency:</label>
+                                <select id="growing_frequency" name="growing_frequency" required>
+                                    <option value="1">Annual</option>
+                                    <option value="12">Monthly</option>
+                                    <option value="52">Weekly</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="growing_years">Number of Years:</label>
+                                <input type="number" id="growing_years" name="growing_years" step="0.1" min="0" required>
+                                <div class="input-help">Duration of payments</div>
+                            </div>
+                        </div>
+                        
+                        <div class="three-column">
+                            <div class="form-group">
+                                <label for="growing_growth_rate">Growth Rate (%):</label>
+                                <input type="number" id="growing_growth_rate" name="growing_growth_rate" step="0.01" min="-10" max="20" value="2.5">
+                                <div class="input-help">Annual growth/inflation rate</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="growing_discount_rate">Discount Rate (%):</label>
+                                <input type="number" id="growing_discount_rate" name="growing_discount_rate" step="0.01" min="0" max="20" value="3.5">
+                                <div class="input-help">Annual discount rate</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="growing_timing">Payment Timing:</label>
+                                <select id="growing_timing" name="growing_timing">
+                                    <option value="end">End of Period</option>
+                                    <option value="beginning">Beginning of Period</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="calculate-btn">Calculate Present Value</button>
+                    </form>
+                </div>
+                
+                <div id="results" style="display: none;"></div>
+                <div id="error" style="display: none;"></div>
+            </div>
+
+            <!-- Tool Information -->
+            <div class="tool-info" style="margin-top: 30px;">
+                <h3>About This Tool</h3>
+                <div class="two-column">
+                    <div>
+                        <h4>Calculation Types</h4>
+                        <ul>
+                            <li><strong>Single Payment:</strong> Present value of one future lump sum</li>
+                            <li><strong>Periodic Payments:</strong> Present value of regular payments (annuities)</li>
+                            <li><strong>Growing Payments:</strong> Present value of payments that increase over time</li>
+                        </ul>
+                        <p class="methodology-note">Uses standard time value of money principles.</p>
+                    </div>
+                    <div>
+                        <h4>Applications</h4>
+                        <ul>
+                            <li>Personal injury economic damages</li>
+                            <li>Wrongful death calculations</li>
+                            <li>Lost profits analysis</li>
+                            <li>Structured settlement valuations</li>
+                            <li>Commercial damages assessment</li>
+                        </ul>
+                        <p class="methodology-note">Results suitable for litigation support and expert testimony.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="tool-cta" style="background-color: #f8f9fa; padding: 40px 0; margin-top: 40px;">
+        <div class="container">
+            <div class="text-center">
+                <h2>Need Complex Economic Analysis?</h2>
+                <p>While this tool handles standard present value calculations, complex litigation often requires detailed analysis with case-specific factors and expert testimony.</p>
+                <a href="../../contact/" class="btn btn-primary btn-large">Discuss Your Case</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Skerritt Economics & Consulting</h4>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout New England.</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../../services/#life-care-planning">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../../case-studies/">Case Studies</a></li>
+                        <li><a href="../../resources/">Articles & Insights</a></li>
+                        <li><a href="../../tools/">Professional Tools</a></li>
+                        <li><a href="../../about/">About Chris Skerritt</a></li>
+                        <li><a href="../../contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
 
 <script>
 function switchScenario(scenario) {
@@ -781,14 +888,5 @@ function formatCurrency(amount) {
     });
 }
 </script>
-
-<!-- CTA Section -->
-<section class="tool-cta" style="background-color: #f8f9fa; padding: 40px 0; margin-top: 40px;">
-    <div class="container">
-        <div class="text-center">
-            <h2>Need Complex Economic Analysis?</h2>
-            <p>While this tool handles standard present value calculations, complex litigation often requires detailed analysis with case-specific factors and expert testimony.</p>
-            <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">Discuss Your Case</a>
-        </div>
-    </div>
-</section>
+</body>
+</html>
