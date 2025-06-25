@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quick Business Valuation Tool - Commercial Litigation Support | Skerritt Economics</title>
     <meta name="description" content="Preliminary business valuation using income, market, and asset approaches for commercial disputes and litigation support.">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/services.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -155,6 +156,87 @@
         border-bottom: 1px solid #eee;
         padding-bottom: 5px;
     }
+    .email-collection {
+        background: #f8f9fa;
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .email-collection h3 {
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+    .email-form {
+        display: grid;
+        gap: 15px;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    .email-form input {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .email-form input:required {
+        border-left: 3px solid #007bff;
+    }
+    .get-results-btn {
+        background: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .get-results-btn:hover {
+        background: #218838;
+    }
+    .disclaimer-box {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px 0;
+        color: #856404;
+    }
+    .disclaimer-box h4 {
+        color: #856404;
+        margin-bottom: 10px;
+    }
+    .consultation-cta {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .consultation-cta h3 {
+        margin-bottom: 15px;
+    }
+    .consultation-btn {
+        background: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+    .consultation-btn:hover {
+        background: #218838;
+        color: white;
+        text-decoration: none;
+    }
 </style>
 </head>
 <body>
@@ -294,6 +376,50 @@
                     
                     <button type="submit" class="calculate-btn">Calculate Business Valuation</button>
                 </form>
+
+                <!-- Professional Disclaimer -->
+                <div class="disclaimer-box">
+                    <h4>⚠️ Professional Review Required</h4>
+                    <p><strong>Important:</strong> This information is intended for informational purposes only and should be reviewed by a qualified forensic economist, vocational expert, or life care planner to ensure accuracy and appropriateness of the results for your specific case requirements.</p>
+                    <p>These calculations provide preliminary estimates based on standard valuation methodology and should not be used as final expert opinions without professional verification.</p>
+                </div>
+
+                <!-- Email Collection Form -->
+                <div id="emailCollection" class="email-collection" style="display: none;">
+                    <h3>📊 Get Your Professional Results</h3>
+                    <p>Please provide your contact information to receive your detailed business valuation analysis. This helps us provide you with relevant updates and resources for your practice.</p>
+                    
+                    <form id="emailForm" class="email-form">
+                        <input type="text" id="fullName" placeholder="Full Name *" required>
+                        <input type="email" id="email" placeholder="Email Address *" required>
+                        <input type="text" id="firm" placeholder="Law Firm / Organization">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <select id="role" required>
+                            <option value="">Your Role *</option>
+                            <option value="attorney">Attorney</option>
+                            <option value="paralegal">Paralegal</option>
+                            <option value="economist">Forensic Economist</option>
+                            <option value="expert">Expert Witness</option>
+                            <option value="other">Other Professional</option>
+                        </select>
+                        <button type="submit" class="get-results-btn">📋 Get My Results</button>
+                    </form>
+                    
+                    <p style="font-size: 12px; color: #6c757d; margin-top: 15px;">
+                        By providing your information, you agree to receive occasional updates about our services. 
+                        We respect your privacy and will never share your information.
+                    </p>
+                </div>
+
+                <!-- Free Consultation CTA -->
+                <div class="consultation-cta">
+                    <h3>🤝 Need Expert Analysis for Your Case?</h3>
+                    <p>Get professional forensic economic analysis from a qualified expert. Our team provides comprehensive economic damage calculations, expert testimony, and litigation support services.</p>
+                    <a href="../../contact/" class="consultation-btn">Schedule Free Consultation</a>
+                    <p style="font-size: 14px; margin-top: 15px; opacity: 0.9;">
+                        ✓ 30+ years of experience &nbsp;&nbsp; ✓ Court-qualified expert &nbsp;&nbsp; ✓ Fast turnaround
+                    </p>
+                </div>
                 
                 <div id="results" style="display: none;"></div>
             </div>
@@ -351,6 +477,9 @@
     <script src="../../js/main.js"></script>
 
 <script>
+// Store for calculation data
+let calculationData = null;
+
 const industryMultiples = {
     technology: { revenue: 3.5, ebitda: 8.0, assets: 1.2 },
     manufacturing: { revenue: 0.8, ebitda: 5.5, assets: 1.1 },
@@ -383,10 +512,19 @@ document.getElementById('valuationForm').addEventListener('submit', function(e) 
         data.ebitda = data.grossProfit - data.operatingExpenses;
     }
     
-    calculateValuation(data);
+    // Store data for later display
+    calculationData = data;
+    
+    // Calculate but don't display results yet
+    const results = calculateValuation(data, false);
+    calculationData.results = results;
+    
+    // Show email collection form
+    document.getElementById('emailCollection').style.display = 'block';
+    document.getElementById('emailCollection').scrollIntoView({ behavior: 'smooth' });
 });
 
-function calculateValuation(data) {
+function calculateValuation(data, shouldDisplay = true) {
     const multiples = industryMultiples[data.industry];
     
     // Revenue Multiple Approach
@@ -413,7 +551,7 @@ function calculateValuation(data) {
     // Apply ownership interest
     const ownershipValue = weightedValuation * data.ownershipInterest;
     
-    displayValuationResults({
+    const results = {
         ...data,
         revenueValuation,
         ebitdaValuation,
@@ -421,7 +559,13 @@ function calculateValuation(data) {
         dcfValuation,
         weightedValuation,
         ownershipValue
-    });
+    };
+    
+    if (shouldDisplay) {
+        displayValuationResults(results);
+    }
+    
+    return results;
 }
 
 function displayValuationResults(data) {
@@ -495,6 +639,53 @@ function displayValuationResults(data) {
 function formatCurrency(amount) {
     return amount.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 }
+
+// Email form submission handler
+document.getElementById('emailForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = e.target.querySelector('.get-results-btn');
+    const originalText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = '📧 Sending...';
+    
+    // Get form data
+    const formData = new FormData(this);
+    const emailData = Object.fromEntries(formData);
+    
+    // Simulate sending data (in production, this would send to your marketing platform)
+    setTimeout(() => {
+        // Hide email collection form
+        document.getElementById('emailCollection').style.display = 'none';
+        
+        // Show results with stored calculation data
+        if (calculationData && calculationData.results) {
+            displayValuationResults(calculationData.results);
+        }
+        
+        // Add professional disclaimer to results
+        const resultsDiv = document.getElementById('results');
+        if (resultsDiv) {
+            const disclaimerHtml = `
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 15px; margin-top: 20px; color: #856404;">
+                    <p><strong>Thank you, ${emailData.fullName}!</strong> Your detailed analysis is displayed above.</p>
+                    <p><em>Professional Note:</em> These results are for informational purposes and should be reviewed by a qualified forensic economist or business valuation expert for case-specific accuracy.</p>
+                </div>
+            `;
+            resultsDiv.innerHTML += disclaimerHtml;
+        }
+        
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        
+        // Optional: Track conversion for analytics
+        console.log('Lead captured:', emailData);
+        
+    }, 1500);
+});
 </script>
 </body>
 </html>
