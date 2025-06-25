@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newark Forensic Economist | Economic Damage Expert | Skerritt Economics</title>
-    <meta name="description" content="Trusted forensic economist serving Newark attorneys with expert economic damage calculations, business valuations, and litigation support. Court-qualified expert witness.">
+    <meta name="description" content="Premier forensic economist serving Newark attorneys with expert economic damage calculations, business valuations, and litigation support. Court-qualified expert witness.">
+    <meta name="keywords" content="forensic economist Newark, economic damages New Jersey, expert witness Newark NJ, business valuation Essex County, lost earnings analysis, Newark litigation economist">
+    <meta name="geo.region" content="US-NJ">
+    <meta name="geo.placename" content="Newark, New Jersey">
+    <meta name="geo.position" content="40.735657;-74.172363">
+    <meta name="ICBM" content="40.735657, -74.172363">
+    <link rel="canonical" href="https://www.skerritteconomics.com/locations/cities/newark-nj-forensic-economist">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/locations.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Skerritt Economics - Newark Forensic Economist",
+        "url": "https://www.skerritteconomics.com/locations/cities/newark-nj-forensic-economist",
+        "telephone": "+1-203-605-2814",
+        "email": "chris@skerritteconomics.com",
+        "areaServed": {"@type": "City", "name": "Newark", "containedInPlace": {"@type": "State", "name": "New Jersey"}},
+        "geo": {"@type": "GeoCoordinates", "latitude": 40.735657, "longitude": -74.172363},
+        "serviceType": ["Forensic Economics", "Economic Damage Analysis", "Business Valuation", "Expert Witness Testimony"],
+        "hasCredential": "Court-Qualified Expert Witness",
+        "areaServed": [
+            {"@type": "City", "name": "Newark", "containedInPlace": {"@type": "State", "name": "New Jersey"}},
+            {"@type": "City", "name": "Jersey City", "containedInPlace": {"@type": "State", "name": "New Jersey"}},
+            {"@type": "City", "name": "Elizabeth", "containedInPlace": {"@type": "State", "name": "New Jersey"}},
+            {"@type": "City", "name": "Paterson", "containedInPlace": {"@type": "State", "name": "New Jersey"}}
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -110,24 +138,115 @@
             line-height: 1.6;
         }
         
-        .courts-section {
+        .specialization-section {
             background: #f8fafc;
-            padding: 60px 0;
+            padding: 80px 0;
+        }
+        
+        .specialization-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .specialization-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #10b981;
+        }
+        
+        .specialization-card h3 {
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        
+        .specialization-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .specialization-card li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            color: #4b5563;
+        }
+        
+        .specialization-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .courts-section {
+            padding: 80px 0;
         }
         
         .courts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
         
         .court-item {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 3px solid #10b981;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .court-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .court-item h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .court-item p {
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        .services-section {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        
+        .service-card h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .service-card p {
+            color: #6b7280;
+            line-height: 1.6;
         }
         
         .industries-section {
@@ -375,10 +494,10 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Newark Forensic Economist</h1>
-                <p>Trusted expert economic analysis and litigation support for Newark's leading law firms. Providing comprehensive forensic economics services with precision, integrity, and courtroom-tested expertise.</p>
+                <p>Expert economic damage analysis and litigation support for Newark's premier law firms. Delivering comprehensive forensic economics services with precision and authority in the heart of the New York metropolitan area.</p>
                 <div class="location-badges">
                     <span class="badge">Court-Qualified Expert</span>
-                    <span class="badge">Newark Metro Area</span>
+                    <span class="badge">NY-NJ Metro Area</span>
                     <span class="badge">Fast Turnaround</span>
                     <span class="badge">Detailed Reports</span>
                 </div>
@@ -392,30 +511,31 @@
             <div class="content-grid">
                 <div class="main-content">
                     <div class="intro-text">
-                        <p>Newark's legal community deserves forensic economic analysis that stands up to the most rigorous courtroom scrutiny. At Skerritt Economics, we provide comprehensive economic damage calculations, business valuations, and expert testimony services specifically tailored for the unique demands of New Jersey litigation.</p>
+                        <p>Newark's legal professionals require forensic economic analysis that meets the highest standards of the tri-state area's most sophisticated litigation. At Skerritt Economics, we provide comprehensive economic damage calculations, business valuations, and expert testimony services tailored for the complex, high-stakes environment of New Jersey's largest city.</p>
                         
-                        <p>Our practice serves attorneys throughout the Newark area with meticulous attention to detail, industry-leading methodologies, and clear, compelling expert reports that help you build winning cases for your clients.</p>
+                        <p>Our practice serves the Newark legal community with deep understanding of the region's unique economic landscape, from transportation and finance to manufacturing and healthcare, delivering precise analysis that strengthens your cases and supports successful outcomes.</p>
                     </div>
 
+                    <!-- Why Choose Section -->
                     <div class="feature-grid">
                         <div class="feature-card">
-                            <h3>Personal Injury & Wrongful Death</h3>
-                            <p>Comprehensive lost earnings analysis, life care planning, and household services valuations. Our calculations incorporate Newark's specific wage patterns, cost of living adjustments, and career trajectory modeling for accurate damage assessments.</p>
+                            <h3>Metropolitan Market Expertise</h3>
+                            <p>Comprehensive understanding of Newark's position in the New York metropolitan economy, including transportation hubs, financial services, and global commerce. Our analysis reflects the unique wage patterns and career opportunities of this major urban center.</p>
                         </div>
                         
                         <div class="feature-card">
-                            <h3>Medical Malpractice</h3>
-                            <p>Expert life care planning and medical cost projections for catastrophic injury cases. We work closely with Newark's premier medical institutions to provide detailed, defensible economic analysis for complex malpractice litigation.</p>
+                            <h3>High-Stakes Litigation Experience</h3>
+                            <p>Extensive experience in complex, high-value cases throughout New Jersey federal and state courts. Our methodologies are proven in the most demanding litigation environments with rigorous peer review and cross-examination.</p>
                         </div>
                         
                         <div class="feature-card">
-                            <h3>Employment Litigation</h3>
-                            <p>Precise wage loss calculations, discrimination damage analysis, and career impact assessments. Our expertise covers Newark's diverse employment landscape from pharmaceutical & life sciences and financial services to manufacturing and technology & software.</p>
+                            <h3>Rapid Response for Urgent Matters</h3>
+                            <p>Understanding the fast-paced nature of Newark litigation, we provide expedited analysis without compromising quality. Emergency consultations and accelerated reporting available for time-sensitive matters.</p>
                         </div>
                         
                         <div class="feature-card">
-                            <h3>Business Valuation</h3>
-                            <p>Professional business valuations for commercial disputes, partnership dissolutions, and divorce proceedings. We understand Newark's dynamic business environment and provide valuations that reflect current market realities.</p>
+                            <h3>Institutional-Quality Analysis</h3>
+                            <p>Professional-grade economic analysis with detailed methodology documentation, supporting data, and clear presentation materials. All work product designed to meet the scrutiny of sophisticated opposing counsel and expert witnesses.</p>
                         </div>
                     </div>
                 </div>
@@ -447,28 +567,142 @@
         </div>
     </section>
 
+    <!-- Specialized Analysis Section -->
+    <section class="specialization-section">
+        <div class="container">
+            <h2>Specialized Economic Analysis for Newark Cases</h2>
+            <p>Comprehensive forensic economics services designed for the sophisticated litigation environment of Newark and the greater New York metropolitan area.</p>
+            
+            <div class="specialization-cards">
+                <div class="specialization-card">
+                    <h3>Personal Injury & Wrongful Death</h3>
+                    <ul>
+                        <li>Metropolitan wage and benefits analysis</li>
+                        <li>Life care planning for catastrophic injuries</li>
+                        <li>Household services valuations</li>
+                        <li>Present value calculations with inflation adjustments</li>
+                        <li>Vocational rehabilitation assessments</li>
+                        <li>Quality of life economic impact analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="specialization-card">
+                    <h3>Employment Litigation</h3>
+                    <ul>
+                        <li>Executive compensation analysis</li>
+                        <li>Discrimination and harassment damages</li>
+                        <li>Wrongful termination economic impact</li>
+                        <li>Career trajectory modeling</li>
+                        <li>Stock option and equity compensation losses</li>
+                        <li>Non-compete agreement economic analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="specialization-card">
+                    <h3>Commercial Disputes</h3>
+                    <ul>
+                        <li>Business interruption and lost profits</li>
+                        <li>Contract breach economic damages</li>
+                        <li>Partnership and shareholder disputes</li>
+                        <li>Intellectual property valuation</li>
+                        <li>Market manipulation analysis</li>
+                        <li>Antitrust and competition damages</li>
+                    </ul>
+                </div>
+                
+                <div class="specialization-card">
+                    <h3>Complex Financial Litigation</h3>
+                    <ul>
+                        <li>Securities fraud damage analysis</li>
+                        <li>Financial institution disputes</li>
+                        <li>Investment loss calculations</li>
+                        <li>Derivative and structured product analysis</li>
+                        <li>Market efficiency testing</li>
+                        <li>Regulatory compliance cost analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Courts Section -->
     <section class="courts-section">
         <div class="container">
             <h2>Newark Area Court Experience</h2>
-            <p>Extensive experience providing expert testimony and economic analysis in Newark's federal, state, and local court systems.</p>
+            <p>Extensive experience providing expert testimony and economic analysis in Newark's federal, state, and local court systems throughout Essex County and the broader metropolitan area.</p>
             
             <div class="courts-grid">
-                                <div class="court-item">
+                <div class="court-item">
                     <h4>U.S. District Court</h4>
-                    <p>District of New Jersey</p>
+                    <p>District of New Jersey (Newark Division)</p>
                 </div>
                 <div class="court-item">
                     <h4>Essex County Superior Court</h4>
                     <p>Civil and criminal matters</p>
                 </div>
                 <div class="court-item">
-                    <h4>New Jersey Superior Court Appellate Division</h4>
-                    <p>Appellate proceedings</p>
-                </div>
-                <div class="court-item">
                     <h4>Newark Municipal Court</h4>
                     <p>Local jurisdiction matters</p>
+                </div>
+                <div class="court-item">
+                    <h4>New Jersey Appellate Division</h4>
+                    <p>Appeals and discretionary review</p>
+                </div>
+                <div class="court-item">
+                    <h4>U.S. Bankruptcy Court</h4>
+                    <p>District of New Jersey</p>
+                </div>
+                <div class="court-item">
+                    <h4>Tax Court of New Jersey</h4>
+                    <p>State tax disputes</p>
+                </div>
+                <div class="court-item">
+                    <h4>Family Court of New Jersey</h4>
+                    <p>Essex County division</p>
+                </div>
+                <div class="court-item">
+                    <h4>Workers' Compensation Court</h4>
+                    <p>Newark regional office</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Comprehensive Economic Services</h2>
+            <p>Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Newark's legal community.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Economic Damage Analysis</h4>
+                    <p>Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with detailed supporting documentation and peer-reviewed methodologies.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Business Valuation</h4>
+                    <p>Professional business appraisals for litigation, divorce, partnership disputes, and commercial transactions using recognized valuation standards and market-based approaches.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Financial Analysis</h4>
+                    <p>Complex financial modeling and analysis for securities litigation, fraud cases, and investment disputes with sophisticated econometric and statistical techniques.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Expert Witness Testimony</h4>
+                    <p>Clear, compelling courtroom testimony with comprehensive preparation and professional exhibits designed to effectively communicate complex economic concepts to judges and juries.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Settlement Support</h4>
+                    <p>Economic analysis and documentation to support settlement negotiations with detailed present value calculations, risk assessments, and alternative scenario modeling.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Litigation Consulting</h4>
+                    <p>Strategic consulting on economic issues throughout the litigation process, from case evaluation and discovery through trial preparation and post-judgment enforcement.</p>
                 </div>
             </div>
         </div>
@@ -478,19 +712,47 @@
     <section class="industries-section">
         <div class="container">
             <h2>Newark Economic Expertise</h2>
-            <p>Our forensic economic analysis covers Newark's diverse and dynamic economy, from traditional industries to emerging sectors.</p>
+            <p>Our forensic economic analysis covers Newark's diverse metropolitan economy, from traditional transportation and manufacturing to financial services, healthcare, and emerging technology sectors.</p>
             
             <div class="industry-tags">
-                                <span class="industry-tag">Pharmaceutical & Life Sciences</span>
-                <span class="industry-tag">Financial Services</span>
-                <span class="industry-tag">Manufacturing</span>
-                <span class="industry-tag">Technology & Software</span>
                 <span class="industry-tag">Transportation & Logistics</span>
-                <span class="industry-tag">Professional Services</span>
+                <span class="industry-tag">Financial Services</span>
                 <span class="industry-tag">Healthcare</span>
+                <span class="industry-tag">Manufacturing</span>
+                <span class="industry-tag">Education</span>
+                <span class="industry-tag">Professional Services</span>
+                <span class="industry-tag">Technology</span>
+                <span class="industry-tag">Government</span>
+                <span class="industry-tag">Real Estate</span>
+                <span class="industry-tag">Insurance</span>
                 <span class="industry-tag">Construction</span>
+                <span class="industry-tag">Aviation</span>
+                <span class="industry-tag">Port Operations</span>
                 <span class="industry-tag">Energy & Utilities</span>
-                <span class="industry-tag">Agriculture</span>
+                <span class="industry-tag">Retail Trade</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Greater Newark Service Area</h2>
+            <p>Serving attorneys and their clients throughout the Newark metropolitan area and broader New York-New Jersey region with comprehensive forensic economics services.</p>
+            
+            <div class="industry-tags">
+                <span class="industry-tag">Newark</span>
+                <span class="industry-tag">Jersey City</span>
+                <span class="industry-tag">Elizabeth</span>
+                <span class="industry-tag">Paterson</span>
+                <span class="industry-tag">East Orange</span>
+                <span class="industry-tag">Irvington</span>
+                <span class="industry-tag">Orange</span>
+                <span class="industry-tag">Bloomfield</span>
+                <span class="industry-tag">Montclair</span>
+                <span class="industry-tag">West Orange</span>
+                <span class="industry-tag">Belleville</span>
+                <span class="industry-tag">Nutley</span>
             </div>
         </div>
     </section>
@@ -499,31 +761,43 @@
     <section class="tools-showcase">
         <div class="container">
             <h2>Professional Calculation Tools</h2>
-            <p>Access our suite of professional tools designed specifically for Newark legal professionals.</p>
+            <p>Access our suite of professional tools designed specifically for Newark legal professionals and their complex economic analysis needs.</p>
             
             <div class="tools-grid">
                 <div class="tool-card">
                     <h4>Life Expectancy Calculator</h4>
-                    <p>Professional actuarial calculations for personal injury and wrongful death cases</p>
+                    <p>Professional actuarial calculations for personal injury and wrongful death cases in New Jersey</p>
                     <a href="../../tools/life-expectancy/" class="tool-btn">Access Tool</a>
                 </div>
                 
                 <div class="tool-card">
                     <h4>Present Value Calculator</h4>
-                    <p>Comprehensive present value analysis for economic damage calculations</p>
+                    <p>Comprehensive present value analysis for economic damage calculations with New Jersey-specific considerations</p>
                     <a href="../../tools/present-value/" class="tool-btn">Access Tool</a>
                 </div>
                 
                 <div class="tool-card">
                     <h4>Wage Growth Projector</h4>
-                    <p>Advanced wage growth modeling for employment litigation matters</p>
+                    <p>Advanced wage growth modeling for employment litigation matters reflecting Newark metropolitan market conditions</p>
                     <a href="../../tools/wage-growth/" class="tool-btn">Access Tool</a>
                 </div>
                 
                 <div class="tool-card">
                     <h4>Business Valuation Tool</h4>
-                    <p>Preliminary business valuation for commercial disputes and transactions</p>
+                    <p>Preliminary business valuation for commercial disputes and transactions in the New York-New Jersey metropolitan area</p>
                     <a href="../../tools/business-valuation/" class="tool-btn">Access Tool</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Executive Compensation Analyzer</h4>
+                    <p>Comprehensive executive compensation analysis for employment litigation and corporate disputes</p>
+                    <a href="../../tools/executive-compensation/" class="tool-btn">Access Tool</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Investment Loss Calculator</h4>
+                    <p>Securities fraud and investment loss calculations for financial litigation matters</p>
+                    <a href="../../tools/investment-loss/" class="tool-btn">Access Tool</a>
                 </div>
             </div>
         </div>
@@ -533,7 +807,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Strengthen Your Newark Case?</h2>
-            <p>Partner with Newark's trusted forensic economist for expert analysis and compelling courtroom testimony.</p>
+            <p>Partner with the tri-state area's trusted forensic economist for expert analysis and compelling courtroom testimony.</p>
             <a href="../../contact/" class="cta-btn">Get Started Today</a>
         </div>
     </section>
@@ -544,7 +818,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Skerritt Economics & Consulting</h4>
-                    <p>Expert forensic economics and business valuation services for legal professionals throughout the Northeast.</p>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout the Northeast and beyond.</p>
                     <p class="footer-contact">
                         400 Putnam Pike Ste J<br>
                         Smithfield, RI 02917<br>

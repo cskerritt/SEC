@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greenville Forensic Economist | Economic Damage Expert | Skerritt Economics</title>
-    <meta name="description" content="Trusted forensic economist serving Greenville attorneys with expert economic damage calculations, business valuations, and litigation support. Court-qualified expert witness.">
+    <meta name="description" content="Premier forensic economist serving Greenville attorneys with expert economic damage calculations, business valuations, and litigation support. Court-qualified expert witness.">
+    <meta name="keywords" content="forensic economist Greenville, economic damages South Carolina, expert witness Greenville SC, business valuation Greenville County, lost earnings analysis, upstate South Carolina economist">
+    <meta name="geo.region" content="US-SC">
+    <meta name="geo.placename" content="Greenville, South Carolina">
+    <meta name="geo.position" content="34.852618;-82.394012">
+    <meta name="ICBM" content="34.852618, -82.394012">
+    <link rel="canonical" href="https://www.skerritteconomics.com/locations/cities/greenville-sc-forensic-economist">
     <link rel="icon" type="image/x-icon" href="../../favicon.ico">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/locations.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Skerritt Economics - Greenville Forensic Economist",
+        "url": "https://www.skerritteconomics.com/locations/cities/greenville-sc-forensic-economist",
+        "telephone": "+1-203-605-2814",
+        "email": "chris@skerritteconomics.com",
+        "areaServed": {"@type": "City", "name": "Greenville", "containedInPlace": {"@type": "State", "name": "South Carolina"}},
+        "geo": {"@type": "GeoCoordinates", "latitude": 34.852618, "longitude": -82.394012},
+        "serviceType": ["Forensic Economics", "Economic Damage Analysis", "Business Valuation", "Expert Witness Testimony"],
+        "hasCredential": "Court-Qualified Expert Witness",
+        "areaServed": [
+            {"@type": "City", "name": "Greenville", "containedInPlace": {"@type": "State", "name": "South Carolina"}},
+            {"@type": "City", "name": "Spartanburg", "containedInPlace": {"@type": "State", "name": "South Carolina"}},
+            {"@type": "City", "name": "Anderson", "containedInPlace": {"@type": "State", "name": "South Carolina"}},
+            {"@type": "City", "name": "Greer", "containedInPlace": {"@type": "State", "name": "South Carolina"}}
+        ]
+    }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -110,24 +138,115 @@
             line-height: 1.6;
         }
         
-        .courts-section {
+        .specialization-section {
             background: #f8fafc;
-            padding: 60px 0;
+            padding: 80px 0;
+        }
+        
+        .specialization-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .specialization-card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #10b981;
+        }
+        
+        .specialization-card h3 {
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        
+        .specialization-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .specialization-card li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            color: #4b5563;
+        }
+        
+        .specialization-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .courts-section {
+            padding: 80px 0;
         }
         
         .courts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
         }
         
         .court-item {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 3px solid #10b981;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .court-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .court-item h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        
+        .court-item p {
+            color: #6b7280;
+            margin: 0;
+        }
+        
+        .services-section {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        
+        .service-card h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .service-card p {
+            color: #6b7280;
+            line-height: 1.6;
         }
         
         .industries-section {
@@ -375,11 +494,11 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Greenville Forensic Economist</h1>
-                <p>Trusted expert economic analysis and litigation support for Greenville's leading law firms. Providing comprehensive forensic economics services with precision, integrity, and courtroom-tested expertise.</p>
+                <p>Expert economic damage analysis and litigation support for Greenville's premier law firms. Delivering comprehensive forensic economics services with precision and authority in the heart of Upstate South Carolina's manufacturing and business hub.</p>
                 <div class="location-badges">
                     <span class="badge">Court-Qualified Expert</span>
-                    <span class="badge">Greenville Metro Area</span>
-                    <span class="badge">Fast Turnaround</span>
+                    <span class="badge">Upstate SC Specialist</span>
+                    <span class="badge">Manufacturing Focus</span>
                     <span class="badge">Detailed Reports</span>
                 </div>
             </div>
@@ -392,30 +511,31 @@
             <div class="content-grid">
                 <div class="main-content">
                     <div class="intro-text">
-                        <p>Greenville's legal community deserves forensic economic analysis that stands up to the most rigorous courtroom scrutiny. At Skerritt Economics, we provide comprehensive economic damage calculations, business valuations, and expert testimony services specifically tailored for the unique demands of South Carolina litigation.</p>
+                        <p>Greenville's legal professionals require forensic economic analysis that reflects the sophisticated demands of Upstate South Carolina's dynamic manufacturing and business environment. At Skerritt Economics, we provide comprehensive economic damage calculations, business valuations, and expert testimony services tailored for the complex litigation landscape of one of the Southeast's premier business centers.</p>
                         
-                        <p>Our practice serves attorneys throughout the Greenville area with meticulous attention to detail, industry-leading methodologies, and clear, compelling expert reports that help you build winning cases for your clients.</p>
+                        <p>Our practice serves the Greenville legal community with deep understanding of the region's unique economic drivers, from advanced manufacturing and automotive to international trade and technology innovation, delivering precise analysis that strengthens your cases and supports successful outcomes in this rapidly evolving market.</p>
                     </div>
 
+                    <!-- Why Choose Section -->
                     <div class="feature-grid">
                         <div class="feature-card">
-                            <h3>Personal Injury & Wrongful Death</h3>
-                            <p>Comprehensive lost earnings analysis, life care planning, and household services valuations. Our calculations incorporate Greenville's specific wage patterns, cost of living adjustments, and career trajectory modeling for accurate damage assessments.</p>
+                            <h3>Manufacturing & Automotive Expertise</h3>
+                            <p>Comprehensive understanding of Greenville's position as a major automotive and advanced manufacturing hub. Specialized knowledge of BMW, Michelin, GE, and other major employers, including complex wage structures and industry-specific career progression patterns.</p>
                         </div>
                         
                         <div class="feature-card">
-                            <h3>Medical Malpractice</h3>
-                            <p>Expert life care planning and medical cost projections for catastrophic injury cases. We work closely with Greenville's premier medical institutions to provide detailed, defensible economic analysis for complex malpractice litigation.</p>
+                            <h3>International Business Acumen</h3>
+                            <p>Expert analysis of international trade and foreign investment impacts on the Upstate economy. Understanding of multinational corporate structures, international compensation packages, and cross-border economic considerations.</p>
                         </div>
                         
                         <div class="feature-card">
-                            <h3>Employment Litigation</h3>
-                            <p>Precise wage loss calculations, discrimination damage analysis, and career impact assessments. Our expertise covers Greenville's diverse employment landscape from manufacturing and tourism & hospitality to agriculture and healthcare.</p>
+                            <h3>Regional Economic Intelligence</h3>
+                            <p>Deep knowledge of Upstate South Carolina's transformation from textile center to advanced manufacturing and technology hub. Analysis accounts for rapid economic diversification and emerging industry trends specific to the region.</p>
                         </div>
                         
                         <div class="feature-card">
-                            <h3>Business Valuation</h3>
-                            <p>Professional business valuations for commercial disputes, partnership dissolutions, and divorce proceedings. We understand Greenville's dynamic business environment and provide valuations that reflect current market realities.</p>
+                            <h3>Sophisticated Litigation Support</h3>
+                            <p>Extensive experience in complex, high-value cases throughout South Carolina federal and state courts. Our methodologies are proven in demanding litigation environments with rigorous peer review and cross-examination.</p>
                         </div>
                     </div>
                 </div>
@@ -447,28 +567,147 @@
         </div>
     </section>
 
+    <!-- SEO Content Section -->
+    <div class="seo-content" style="display: none;">
+        Comprehensive forensic economics services for Greenville South Carolina attorneys. Expert economic damage analysis, business valuation, and litigation support for personal injury, wrongful death, employment disputes, and commercial litigation. Court-qualified expert witness with extensive experience in Upstate South Carolina manufacturing, automotive, international business, and technology sectors. Serving Greenville County, Spartanburg, Anderson, and surrounding areas with detailed economic reports and compelling courtroom testimony.
+    </div>
+
+    <!-- Specialized Analysis Section -->
+    <section class="specialization-section">
+        <div class="container">
+            <h2>Specialized Economic Analysis for Greenville Cases</h2>
+            <p>Comprehensive forensic economics services designed for the sophisticated litigation environment of Greenville and the broader Upstate South Carolina region.</p>
+            
+            <div class="specialization-cards">
+                <div class="specialization-card">
+                    <h3>Manufacturing & Industrial Litigation</h3>
+                    <ul>
+                        <li>Automotive industry economic analysis</li>
+                        <li>Advanced manufacturing wage studies</li>
+                        <li>Industrial accident economic impact</li>
+                        <li>Supply chain disruption losses</li>
+                        <li>Technology transfer and licensing disputes</li>
+                        <li>International trade economic analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="specialization-card">
+                    <h3>Personal Injury & Wrongful Death</h3>
+                    <ul>
+                        <li>Upstate wage and benefits analysis</li>
+                        <li>Life care planning for catastrophic injuries</li>
+                        <li>Household services valuations</li>
+                        <li>Present value calculations with South Carolina considerations</li>
+                        <li>Vocational rehabilitation assessments</li>
+                        <li>Quality of life economic impact analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="specialization-card">
+                    <h3>Employment Litigation</h3>
+                    <ul>
+                        <li>Executive compensation analysis</li>
+                        <li>International assignment packages</li>
+                        <li>Discrimination and harassment damages</li>
+                        <li>Wrongful termination economic impact</li>
+                        <li>Non-compete agreement analysis</li>
+                        <li>Stock option and equity compensation</li>
+                    </ul>
+                </div>
+                
+                <div class="specialization-card">
+                    <h3>Commercial Disputes</h3>
+                    <ul>
+                        <li>Business interruption and lost profits</li>
+                        <li>Manufacturing facility disputes</li>
+                        <li>International trade contract breaches</li>
+                        <li>Partnership and shareholder disputes</li>
+                        <li>Intellectual property valuation</li>
+                        <li>Technology startup valuations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Courts Section -->
     <section class="courts-section">
         <div class="container">
             <h2>Greenville Area Court Experience</h2>
-            <p>Extensive experience providing expert testimony and economic analysis in Greenville's federal, state, and local court systems.</p>
+            <p>Extensive experience providing expert testimony and economic analysis in Greenville's federal, state, and local court systems throughout the Upstate South Carolina region.</p>
             
             <div class="courts-grid">
-                                <div class="court-item">
+                <div class="court-item">
                     <h4>U.S. District Court</h4>
-                    <p>District of South Carolina</p>
+                    <p>District of South Carolina (Greenville Division)</p>
                 </div>
                 <div class="court-item">
-                    <h4>Charleston County Court of Common Pleas</h4>
+                    <h4>Greenville County Court of Common Pleas</h4>
                     <p>Civil and criminal matters</p>
                 </div>
                 <div class="court-item">
                     <h4>South Carolina Court of Appeals</h4>
-                    <p>Appellate proceedings</p>
+                    <p>Intermediate appellate court</p>
                 </div>
                 <div class="court-item">
-                    <h4>Greenville Municipal Court</h4>
-                    <p>Local jurisdiction matters</p>
+                    <h4>South Carolina Supreme Court</h4>
+                    <p>Highest state court</p>
+                </div>
+                <div class="court-item">
+                    <h4>U.S. Bankruptcy Court</h4>
+                    <p>District of South Carolina</p>
+                </div>
+                <div class="court-item">
+                    <h4>Workers' Compensation Commission</h4>
+                    <p>Greenville regional office</p>
+                </div>
+                <div class="court-item">
+                    <h4>Family Court</h4>
+                    <p>Thirteenth Judicial Circuit</p>
+                </div>
+                <div class="court-item">
+                    <h4>Magistrate Court</h4>
+                    <p>Greenville County division</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Comprehensive Economic Services</h2>
+            <p>Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Greenville's legal community.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>Economic Damage Analysis</h4>
+                    <p>Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with South Carolina-specific considerations and methodologies.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Manufacturing Business Valuation</h4>
+                    <p>Specialized valuations for manufacturing, automotive, and industrial enterprises using industry-specific methodologies and Upstate market data.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>International Business Analysis</h4>
+                    <p>Economic analysis for multinational corporations and international trade disputes with understanding of foreign exchange and cross-border considerations.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Expert Witness Testimony</h4>
+                    <p>Clear, compelling courtroom testimony with comprehensive preparation and professional exhibits designed for South Carolina's legal environment.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Technology Valuation</h4>
+                    <p>Valuation and economic analysis for technology companies, startups, and intellectual property disputes in Greenville's growing innovation sector.</p>
+                </div>
+                
+                <div class="service-card">
+                    <h4>Settlement Support</h4>
+                    <p>Economic analysis and documentation to support settlement negotiations with detailed present value calculations and risk assessments.</p>
                 </div>
             </div>
         </div>
@@ -478,19 +717,47 @@
     <section class="industries-section">
         <div class="container">
             <h2>Greenville Economic Expertise</h2>
-            <p>Our forensic economic analysis covers Greenville's diverse and dynamic economy, from traditional industries to emerging sectors.</p>
+            <p>Our forensic economic analysis covers Greenville's diverse and dynamic economy, from advanced manufacturing and automotive to international business and emerging technology sectors.</p>
             
             <div class="industry-tags">
-                                <span class="industry-tag">Manufacturing</span>
-                <span class="industry-tag">Tourism & Hospitality</span>
-                <span class="industry-tag">Agriculture</span>
+                <span class="industry-tag">Manufacturing</span>
+                <span class="industry-tag">Automotive</span>
+                <span class="industry-tag">Textiles & Advanced Materials</span>
                 <span class="industry-tag">Healthcare</span>
+                <span class="industry-tag">International Trade</span>
+                <span class="industry-tag">Technology</span>
                 <span class="industry-tag">Professional Services</span>
                 <span class="industry-tag">Construction</span>
+                <span class="industry-tag">Financial Services</span>
+                <span class="industry-tag">Real Estate</span>
                 <span class="industry-tag">Transportation & Logistics</span>
                 <span class="industry-tag">Energy & Utilities</span>
-                <span class="industry-tag">Technology Services</span>
-                <span class="industry-tag">Financial Services</span>
+                <span class="industry-tag">Agriculture</span>
+                <span class="industry-tag">Education</span>
+                <span class="industry-tag">Tourism & Hospitality</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Upstate South Carolina Service Area</h2>
+            <p>Serving attorneys and their clients throughout the Greenville area and broader Upstate South Carolina region with comprehensive forensic economics services.</p>
+            
+            <div class="industry-tags">
+                <span class="industry-tag">Greenville</span>
+                <span class="industry-tag">Spartanburg</span>
+                <span class="industry-tag">Anderson</span>
+                <span class="industry-tag">Easley</span>
+                <span class="industry-tag">Greer</span>
+                <span class="industry-tag">Mauldin</span>
+                <span class="industry-tag">Simpsonville</span>
+                <span class="industry-tag">Taylors</span>
+                <span class="industry-tag">Fountain Inn</span>
+                <span class="industry-tag">Travelers Rest</span>
+                <span class="industry-tag">Powdersville</span>
+                <span class="industry-tag">Five Forks</span>
             </div>
         </div>
     </section>
@@ -499,31 +766,43 @@
     <section class="tools-showcase">
         <div class="container">
             <h2>Professional Calculation Tools</h2>
-            <p>Access our suite of professional tools designed specifically for Greenville legal professionals.</p>
+            <p>Access our suite of professional tools designed specifically for Greenville legal professionals and their economic analysis needs.</p>
             
             <div class="tools-grid">
                 <div class="tool-card">
                     <h4>Life Expectancy Calculator</h4>
-                    <p>Professional actuarial calculations for personal injury and wrongful death cases</p>
+                    <p>Professional actuarial calculations for personal injury and wrongful death cases in South Carolina</p>
                     <a href="../../tools/life-expectancy/" class="tool-btn">Access Tool</a>
                 </div>
                 
                 <div class="tool-card">
                     <h4>Present Value Calculator</h4>
-                    <p>Comprehensive present value analysis for economic damage calculations</p>
+                    <p>Comprehensive present value analysis for economic damage calculations with South Carolina considerations</p>
                     <a href="../../tools/present-value/" class="tool-btn">Access Tool</a>
                 </div>
                 
                 <div class="tool-card">
                     <h4>Wage Growth Projector</h4>
-                    <p>Advanced wage growth modeling for employment litigation matters</p>
+                    <p>Advanced wage growth modeling for employment litigation reflecting Upstate South Carolina market conditions</p>
                     <a href="../../tools/wage-growth/" class="tool-btn">Access Tool</a>
                 </div>
                 
                 <div class="tool-card">
+                    <h4>Manufacturing Cost Analyzer</h4>
+                    <p>Specialized analysis tool for manufacturing and industrial economic calculations</p>
+                    <a href="../../tools/manufacturing-cost/" class="tool-btn">Access Tool</a>
+                </div>
+                
+                <div class="tool-card">
                     <h4>Business Valuation Tool</h4>
-                    <p>Preliminary business valuation for commercial disputes and transactions</p>
+                    <p>Preliminary business valuation for commercial disputes and transactions in the Upstate region</p>
                     <a href="../../tools/business-valuation/" class="tool-btn">Access Tool</a>
+                </div>
+                
+                <div class="tool-card">
+                    <h4>Executive Compensation Analyzer</h4>
+                    <p>Comprehensive executive compensation analysis for employment litigation and international assignment disputes</p>
+                    <a href="../../tools/executive-compensation/" class="tool-btn">Access Tool</a>
                 </div>
             </div>
         </div>
@@ -533,7 +812,7 @@
     <section class="cta-section">
         <div class="container">
             <h2>Ready to Strengthen Your Greenville Case?</h2>
-            <p>Partner with Greenville's trusted forensic economist for expert analysis and compelling courtroom testimony.</p>
+            <p>Partner with Upstate South Carolina's trusted forensic economist for expert analysis and compelling courtroom testimony.</p>
             <a href="../../contact/" class="cta-btn">Get Started Today</a>
         </div>
     </section>
@@ -544,7 +823,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h4>Skerritt Economics & Consulting</h4>
-                    <p>Expert forensic economics and business valuation services for legal professionals throughout the Southeast.</p>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout the Southeast and beyond.</p>
                     <p class="footer-contact">
                         400 Putnam Pike Ste J<br>
                         Smithfield, RI 02917<br>
