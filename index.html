@@ -32,6 +32,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            'custom_map': {'custom_parameter_1': 'consultation_requests'}
+        });
+        
+        // Track phone clicks
+        function trackPhoneClick() {
+            gtag('event', 'phone_call', {
+                'event_category': 'engagement',
+                'event_label': 'phone_number_click'
+            });
+        }
+        
+        // Track email clicks
+        function trackEmailClick() {
+            gtag('event', 'email_click', {
+                'event_category': 'engagement',
+                'event_label': 'email_address_click'
+            });
+        }
+        
+        // Track form submissions
+        function trackFormSubmission(formType) {
+            gtag('event', 'form_submission', {
+                'event_category': 'conversion',
+                'event_label': formType
+            });
+        }
+    </script>
+    
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -102,8 +137,9 @@
                 <h1>Independent Economic Assessments for Litigation & Corporate Disputes</h1>
                 <p class="hero-subtitle">Court-tested forensic economics and business valuation expertise for personal injury, medical malpractice, employment, and commercial litigation across Rhode Island, Massachusetts, and New England.</p>
                 <div class="hero-cta">
-                    <a href="contact/" class="btn btn-primary">Schedule Consultation</a>
+                    <a href="contact/" class="btn btn-primary">Schedule Free Consultation</a>
                     <a href="services/" class="btn btn-secondary">View Services</a>
+                    <p class="consultation-note">Initial consultation available within 24 hours</p>
                 </div>
             </div>
         </div>
@@ -168,42 +204,163 @@
         </div>
     </section>
 
+    <!-- Client Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Professional Recognition from Legal Colleagues</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <blockquote>"Dr. Skerritt's economic loss calculations were thorough and well-documented, making them easy to present to the jury. His ability to explain complex wage growth projections in understandable terms significantly strengthened our personal injury case."</blockquote>
+                    <cite>— Personal Injury Attorney from Providence, RI</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"The turnaround time on the vocational assessment was excellent, and the report included all necessary supporting documentation. Dr. Skerritt's testimony regarding the plaintiff's diminished earning capacity withstood aggressive cross-examination."</blockquote>
+                    <cite>— Medical Malpractice Attorney from Boston, MA</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"We've retained Skerritt Economics for multiple wrongful termination cases due to their consistent methodology and attention to detail. The reports clearly outline assumptions and provide alternative scenarios that help during settlement negotiations."</blockquote>
+                    <cite>— Employment Law Firm from Hartford, CT</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"Dr. Skerritt provided a comprehensive analysis of business interruption losses that included industry-specific benchmarks and market conditions. His prompt responses to follow-up questions and willingness to revise calculations based on new discovery were particularly valuable."</blockquote>
+                    <cite>— Commercial Litigation Attorney from New York, NY</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"The pension valuation report was clear, methodical, and properly cited all relevant actuarial standards. Dr. Skerritt's courtroom demeanor was professional and his explanations helped the judge understand the technical aspects of defined benefit calculations."</blockquote>
+                    <cite>— Family Law Attorney from Worcester, MA</cite>
+                </div>
+                <div class="testimonial">
+                    <blockquote>"We appreciated the detailed work-life expectancy analysis that considered occupation-specific data rather than general population statistics. The report format made it easy to extract key findings for our demand letter and mediation brief."</blockquote>
+                    <cite>— Workers' Compensation Attorney from Springfield, MA</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Signals -->
     <section class="trust-signals">
         <div class="container">
             <h2>Professional Qualifications & Court Experience</h2>
+            
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <div class="trust-number">20+</div>
+                    <div class="trust-label">Years Experience</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">500+</div>
+                    <div class="trust-label">Cases Completed</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">95%</div>
+                    <div class="trust-label">Reports Accepted</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-number">24hr</div>
+                    <div class="trust-label">Response Time</div>
+                </div>
+            </div>
+
             <div class="credentials-grid">
                 <div class="credential">
-                    <h4>Professional Certifications</h4>
+                    <h4>🎓 Professional Certifications</h4>
                     <ul>
-                        <li>M.Ed - Master of Education</li>
-                        <li>MBA - Master of Business Administration</li>
-                        <li>CRC - Certified Rehabilitation Counselor</li>
-                        <li>LRC - Licensed Rehabilitation Counselor</li>
-                        <li>FVE - Forensic Vocational Expert</li>
-                        <li>IPEC - International Psychometric Evaluation Certification</li>
-                        <li>CVE - Certified Vocational Evaluator</li>
-                        <li>ABVE/F - Fellow of the American Board of Vocational Experts</li>
-                        <li>CLCP - Certified Life Care Planner</li>
-                        <li>MSCC - Medicare Set Aside Certified Consultant</li>
+                        <li><strong>M.Ed</strong> - Master of Education</li>
+                        <li><strong>MBA</strong> - Master of Business Administration</li>
+                        <li><strong>CRC</strong> - Certified Rehabilitation Counselor</li>
+                        <li><strong>LRC</strong> - Licensed Rehabilitation Counselor</li>
+                        <li><strong>FVE</strong> - Forensic Vocational Expert</li>
+                        <li><strong>IPEC</strong> - International Psychometric Evaluation Certification</li>
+                        <li><strong>CVE</strong> - Certified Vocational Evaluator</li>
+                        <li><strong>ABVE/F</strong> - Fellow of the American Board of Vocational Experts</li>
+                        <li><strong>CLCP</strong> - Certified Life Care Planner</li>
+                        <li><strong>MSCC</strong> - Medicare Set Aside Certified Consultant</li>
                     </ul>
                 </div>
                 <div class="credential">
-                    <h4>Court Experience</h4>
+                    <h4>⚖️ Court Experience</h4>
                     <ul>
-                        <li>Rhode Island Superior Court</li>
-                        <li>Massachusetts Superior Court</li>
-                        <li>Federal District Courts</li>
-                        <li>Workers' Compensation Courts</li>
+                        <li><strong>Rhode Island Superior Court</strong></li>
+                        <li><strong>Massachusetts Superior Court</strong></li>
+                        <li><strong>Federal District Courts</strong></li>
+                        <li><strong>Workers' Compensation Courts</strong></li>
+                        <li><strong>Arbitration Proceedings</strong></li>
+                        <li><strong>Mediation Support</strong></li>
                     </ul>
+                    <div class="court-stats">
+                        <p><strong>✓ Daubert Qualified Expert</strong></p>
+                        <p><strong>✓ Cross-Examination Tested</strong></p>
+                        <p><strong>✓ Pre-Qualified in Multiple Jurisdictions</strong></p>
+                    </div>
                 </div>
                 <div class="credential">
-                    <h4>Recent Publications</h4>
+                    <h4>📚 Recent Publications</h4>
                     <ul>
-                        <li>"Use of artificial intelligence to enhance case management" - The Rehabilitation Professional (2023)</li>
-                        <li>"Ethical Implications of Artificial Intelligence on Vocational Rehabilitation" - Journal of Forensic Vocational Analysis (2023)</li>
-                        <li>"Harnessing Artificial Intelligence for Enhanced Life Care Planning" - Journal of Life Care Planning (2024)</li>
+                        <li><strong>"Use of artificial intelligence to enhance case management"</strong><br>
+                        <em>The Rehabilitation Professional (2023)</em></li>
+                        <li><strong>"Ethical Implications of Artificial Intelligence on Vocational Rehabilitation"</strong><br>
+                        <em>Journal of Forensic Vocational Analysis (2023)</em></li>
+                        <li><strong>"Harnessing Artificial Intelligence for Enhanced Life Care Planning"</strong><br>
+                        <em>Journal of Life Care Planning (2024)</em></li>
                     </ul>
+                    <div class="memberships">
+                        <h5>Professional Memberships</h5>
+                        <ul>
+                            <li>National Association of Forensic Economics</li>
+                            <li>American Society of Appraisers</li>
+                            <li>International Association of Rehabilitation Professionals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <h2>Case Study Examples</h2>
+            <p class="section-intro">Representative examples of economic analyses completed for legal professionals across various practice areas.</p>
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <h4>Personal Injury - Construction Accident</h4>
+                    <div class="case-details">
+                        <p><strong>Background:</strong> 45-year-old skilled tradesman suffered multiple fractures in scaffolding collapse, resulting in permanent disability and inability to return to construction work.</p>
+                        <p><strong>Analysis:</strong> Calculated lost earning capacity considering construction industry wage premiums, union benefits, and alternative vocational options given physical limitations.</p>
+                        <p><strong>Challenges:</strong> Addressed irregular employment patterns common in construction and seasonal work variations. Incorporated vocational rehabilitation potential and transferable skills analysis.</p>
+                        <p><strong>Outcome:</strong> $4.5 million settlement with detailed economic analysis supporting plaintiff's reduced earning capacity claims.</p>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h4>Medical Malpractice - Birth Injury</h4>
+                    <div class="case-details">
+                        <p><strong>Background:</strong> Birth complications resulted in cerebral palsy diagnosis for newborn, requiring lifelong specialized medical care and attendant services.</p>
+                        <p><strong>Analysis:</strong> Comprehensive life care cost analysis including medical equipment, therapy services, educational support, and household modifications over projected 65-year lifespan.</p>
+                        <p><strong>Challenges:</strong> Coordinated with life care planner and medical experts to ensure consistent assumptions. Addressed cost inflation for medical services versus general inflation.</p>
+                        <p><strong>Outcome:</strong> $22 million jury award with economic testimony supporting substantial life care cost projections.</p>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h4>Employment Discrimination - Wrongful Termination</h4>
+                    <div class="case-details">
+                        <p><strong>Background:</strong> Senior executive wrongfully terminated at age 52, claiming age discrimination prevented securing comparable position in competitive industry.</p>
+                        <p><strong>Analysis:</strong> Analyzed executive compensation packages including base salary, bonuses, equity compensation, and benefits. Evaluated job market conditions for senior-level positions.</p>
+                        <p><strong>Challenges:</strong> Addressed variable compensation structures and equity valuations. Incorporated industry-specific employment data and executive search market analysis.</p>
+                        <p><strong>Outcome:</strong> Seven-figure confidential settlement supported by detailed front pay and back pay calculations.</p>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <h4>Commercial Damages - Business Interruption</h4>
+                    <div class="case-details">
+                        <p><strong>Background:</strong> Manufacturing company's primary supplier breach disrupted operations for 8 months, requiring alternate sourcing at higher costs and lost production capacity.</p>
+                        <p><strong>Analysis:</strong> Calculated lost profits using but-for scenario modeling, increased operating costs, and business value diminution. Analyzed market share impacts and customer relationship damage.</p>
+                        <p><strong>Challenges:</strong> Distinguished damages from breach versus general market conditions during economic downturn. Applied appropriate discounting and mitigation credit calculations.</p>
+                        <p><strong>Outcome:</strong> $9.8 million arbitration award including lost profits, increased costs, and diminished business value components.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -233,13 +390,97 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>What types of cases do forensic economists handle?</summary>
+                    <p>Forensic economists provide expert analysis for personal injury, wrongful death, medical malpractice, employment litigation, commercial disputes, and business valuation cases. We calculate economic damages including lost earnings, fringe benefits, household services, life care costs, and business interruption losses. Our services support both plaintiff and defense counsel across all major litigation areas requiring economic damage assessment.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>When should I hire a forensic economist?</summary>
+                    <p>Engage a forensic economist early in the case development process, ideally during discovery. Early involvement allows for proper case evaluation, identification of necessary documentation, and coordination with other experts. For cases involving significant economic damages, early engagement can help shape discovery requests and settlement strategy.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What information do you need to begin your analysis?</summary>
+                    <p>We typically require employment records, tax returns, pay stubs, benefit statements, and medical records related to injury or disability. For business cases, financial statements, tax returns, and operational data are essential. We provide a detailed document request list tailored to each case type and can work with incomplete information during preliminary analysis.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>How long does it take to prepare a report?</summary>
+                    <p>Standard reports typically require 2-4 weeks depending on case complexity and document availability. Rush analyses can be accommodated with shorter timeframes when necessary. We provide estimated timelines during initial consultation and maintain communication throughout the process to ensure deadlines are met.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Are your reports admissible under Daubert standards?</summary>
+                    <p>Yes, our methodologies follow established economic and actuarial principles that meet Daubert reliability standards. We use peer-reviewed data sources, accepted statistical methods, and clearly document all assumptions and calculations. Our experts have extensive experience testifying in federal and state courts.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>How do you calculate future economic losses?</summary>
+                    <p>We use established methodologies including worklife expectancy tables, wage growth projections based on Bureau of Labor Statistics data, and present value calculations using appropriate discount rates. Our analyses consider factors such as education, occupation, industry trends, and individual circumstances while following accepted economic principles.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Do you provide deposition and trial testimony?</summary>
+                    <p>Yes, we provide comprehensive litigation support including deposition preparation, trial testimony, and rebuttal analysis. Our experts are experienced in explaining complex economic concepts to judges and juries in clear, understandable terms. We coordinate closely with counsel to ensure effective presentation of economic evidence.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What is your billing structure?</summary>
+                    <p>We typically bill on an hourly basis for analysis and report preparation, with separate rates for deposition and trial testimony. Some routine valuations may be quoted on a flat-fee basis. We provide detailed fee estimates during initial consultation and require a retainer before beginning work.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>How do you handle uncertainty in economic projections?</summary>
+                    <p>We acknowledge uncertainty through sensitivity analyses, alternative scenarios, and confidence intervals where appropriate. Our reports clearly state assumptions and provide ranges of potential outcomes. This approach allows counsel to understand the strength of different damage components and prepare for cross-examination.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Do you use jurisdiction-specific data?</summary>
+                    <p>Yes, we utilize state and regional economic data whenever possible, including local wage surveys, cost-of-living adjustments, and jurisdiction-specific legal standards. This ensures our analyses reflect the economic conditions relevant to your case and comply with local legal requirements.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Can you work with other experts on the case?</summary>
+                    <p>Absolutely. We regularly coordinate with medical experts, vocational counselors, life care planners, and other specialists to ensure consistent assumptions and comprehensive damage assessments. Early coordination helps avoid conflicting opinions and strengthens the overall expert testimony.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What if the opposing side has their own economist?</summary>
+                    <p>We can provide rebuttal analysis of opposing expert reports, identifying methodological issues, inappropriate assumptions, or calculation errors. Our rebuttal reports address specific criticisms and help prepare counsel for cross-examination of opposing experts.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>How do you explain complex economic concepts to juries?</summary>
+                    <p>We use clear language, visual aids, and real-world analogies to make economic concepts accessible to lay audiences. Our testimony focuses on explaining the reasoning behind calculations rather than complex formulas, helping juries understand both the methodology and the resulting damages.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>What are typical costs for economic analysis?</summary>
+                    <p>Costs vary significantly based on case complexity, ranging from $3,000-$5,000 for straightforward personal injury cases to $15,000+ for complex commercial matters. We provide cost estimates during initial consultation and work within budget constraints whenever possible.</p>
+                </details>
+                
+                <details class="faq-item">
+                    <summary>Do you offer preliminary damage assessments?</summary>
+                    <p>Yes, we can provide preliminary damage ranges for case evaluation and settlement purposes based on limited information. These assessments help counsel understand potential case value during early case development and settlement negotiations.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Economic Expert Services Available</h2>
-                <p>Initial consultation available to discuss your litigation support needs.</p>
-                <a href="contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+                <h2>Ready to Discuss Your Case?</h2>
+                <p>Free initial consultation to evaluate your economic damage assessment needs. No obligation.</p>
+                <a href="contact/" class="btn btn-primary btn-large">Schedule Free Consultation</a>
+                <p class="cta-benefits">✓ Case evaluation within 24 hours ✓ No retainer required for consultation ✓ Expert guidance on damage calculation strategies</p>
             </div>
         </div>
     </section>
@@ -254,8 +495,8 @@
                     <p class="footer-contact">
                         400 Putnam Pike Ste J<br>
                         Smithfield, RI 02917<br>
-                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
-                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                        <a href="tel:203-605-2814" onclick="trackPhoneClick()">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">chris@skerritteconomics.com</a>
                     </p>
                 </div>
                 <div class="footer-col">

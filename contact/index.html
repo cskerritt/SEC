@@ -94,10 +94,17 @@
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-section">
-                    <h2>Free Case Consultation</h2>
-                    <p>Complete this form to get started with your economic analysis needs. We'll respond within 24 hours with a preliminary assessment.</p>
+                    <div class="form-header">
+                        <h2>Free Case Consultation</h2>
+                        <div class="value-props">
+                            <span class="value-prop">✓ No Cost Consultation</span>
+                            <span class="value-prop">✓ 24 Hour Response</span>
+                            <span class="value-prop">✓ No Obligation</span>
+                        </div>
+                    </div>
+                    <p>Complete this form to get started with your economic analysis needs. We'll respond within 24 hours with a preliminary assessment and case evaluation.</p>
                     
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnvgzgd" method="POST">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnvgzgd" method="POST" onsubmit="trackFormSubmission('consultation_request')"
                         <!-- Hidden input for Formspree -->
                         <input type="hidden" name="_subject" value="New Case Consultation Request">
                         <input type="hidden" name="_next" value="https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/contact/">
@@ -165,7 +172,21 @@
                             <textarea id="message" name="message" rows="6" required placeholder="Please provide a brief description of your case and the economic analysis needed. Include any relevant details about injuries, damages, or business valuation requirements."></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary btn-large">Send Consultation Request</button>
+                        <div class="form-benefits">
+                            <p><strong>What happens next?</strong></p>
+                            <ul>
+                                <li>We'll review your case details within 24 hours</li>
+                                <li>You'll receive a preliminary assessment via email or phone</li>
+                                <li>We'll discuss timeline, scope, and next steps</li>
+                                <li>No commitment required - consultation is completely free</li>
+                            </ul>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">Get Free Case Assessment →</button>
+                        
+                        <div class="security-note">
+                            <small>🔒 Your information is secure and confidential. We never share client details.</small>
+                        </div>
                     </form>
                 </div>
                 
@@ -180,12 +201,14 @@
                         
                         <div class="contact-item">
                             <strong>Phone:</strong>
-                            <a href="tel:203-605-2814">(203) 605-2814</a>
+                            <a href="tel:203-605-2814" onclick="trackPhoneClick()">(203) 605-2814</a>
+                            <small>Available 8 AM - 6 PM ET</small>
                         </div>
                         
                         <div class="contact-item">
                             <strong>Email:</strong>
-                            <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                            <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">chris@skerritteconomics.com</a>
+                            <small>Responses within 24 hours</small>
                         </div>
                         
                         <div class="contact-item">
