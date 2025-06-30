@@ -105,10 +105,10 @@
                     </div>
                     <p>Complete this form to get started with your economic analysis needs. We'll respond within 24 hours with a preliminary assessment and case evaluation.</p>
                     
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnvgzgd" method="POST" onsubmit="trackFormSubmission('consultation_request')"
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnvgzgd" method="POST" onsubmit="trackFormSubmission('consultation_request')">
                         <!-- Hidden input for Formspree -->
                         <input type="hidden" name="_subject" value="New Case Consultation Request">
-                        <input type="hidden" name="_next" value="https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/contact/">
+                        <input type="hidden" name="_next" value="https://skerritteconomics.com/contact/">
                         <input type="hidden" name="_cc" value="chris@skerritteconomics.com">
                         <div class="form-group">
                             <label for="name">Full Name *</label>
@@ -148,10 +148,57 @@
                             <label for="jurisdiction">Jurisdiction</label>
                             <select id="jurisdiction" name="jurisdiction">
                                 <option value="">Select Jurisdiction</option>
-                                <option value="rhode-island">Rhode Island</option>
-                                <option value="massachusetts">Massachusetts</option>
+                                <option value="alabama">Alabama</option>
+                                <option value="alaska">Alaska</option>
+                                <option value="arizona">Arizona</option>
+                                <option value="arkansas">Arkansas</option>
+                                <option value="california">California</option>
+                                <option value="colorado">Colorado</option>
                                 <option value="connecticut">Connecticut</option>
+                                <option value="delaware">Delaware</option>
+                                <option value="florida">Florida</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="hawaii">Hawaii</option>
+                                <option value="idaho">Idaho</option>
+                                <option value="illinois">Illinois</option>
+                                <option value="indiana">Indiana</option>
+                                <option value="iowa">Iowa</option>
+                                <option value="kansas">Kansas</option>
+                                <option value="kentucky">Kentucky</option>
+                                <option value="louisiana">Louisiana</option>
+                                <option value="maine">Maine</option>
+                                <option value="maryland">Maryland</option>
+                                <option value="massachusetts">Massachusetts</option>
+                                <option value="michigan">Michigan</option>
+                                <option value="minnesota">Minnesota</option>
+                                <option value="mississippi">Mississippi</option>
+                                <option value="missouri">Missouri</option>
+                                <option value="montana">Montana</option>
+                                <option value="nebraska">Nebraska</option>
+                                <option value="nevada">Nevada</option>
                                 <option value="new-hampshire">New Hampshire</option>
+                                <option value="new-jersey">New Jersey</option>
+                                <option value="new-mexico">New Mexico</option>
+                                <option value="new-york">New York</option>
+                                <option value="north-carolina">North Carolina</option>
+                                <option value="north-dakota">North Dakota</option>
+                                <option value="ohio">Ohio</option>
+                                <option value="oklahoma">Oklahoma</option>
+                                <option value="oregon">Oregon</option>
+                                <option value="pennsylvania">Pennsylvania</option>
+                                <option value="rhode-island">Rhode Island</option>
+                                <option value="south-carolina">South Carolina</option>
+                                <option value="south-dakota">South Dakota</option>
+                                <option value="tennessee">Tennessee</option>
+                                <option value="texas">Texas</option>
+                                <option value="utah">Utah</option>
+                                <option value="vermont">Vermont</option>
+                                <option value="virginia">Virginia</option>
+                                <option value="washington">Washington</option>
+                                <option value="west-virginia">West Virginia</option>
+                                <option value="wisconsin">Wisconsin</option>
+                                <option value="wyoming">Wyoming</option>
+                                <option value="washington-dc">Washington D.C.</option>
                                 <option value="federal">Federal Court</option>
                                 <option value="other">Other</option>
                             </select>
@@ -346,5 +393,29 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/contact.js"></script>
+    
+    <!-- Tracking Functions -->
+    <script>
+        // Track phone clicks
+        function trackPhoneClick() {
+            console.log('Phone click tracked');
+            // Add your analytics code here
+            // Example: gtag('event', 'phone_call', { 'event_category': 'engagement' });
+        }
+        
+        // Track email clicks
+        function trackEmailClick() {
+            console.log('Email click tracked');
+            // Add your analytics code here
+            // Example: gtag('event', 'email_click', { 'event_category': 'engagement' });
+        }
+        
+        // Track form submissions
+        function trackFormSubmission(formType) {
+            console.log('Form submission tracked:', formType);
+            // Add your analytics code here
+            // Example: gtag('event', 'form_submission', { 'event_category': 'conversion', 'event_label': formType });
+        }
+    </script>
 </body>
 </html>
