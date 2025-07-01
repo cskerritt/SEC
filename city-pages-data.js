@@ -1,3642 +1,4496 @@
-const allPages = [
+window.cityData = [
   {
-    "name": "Aberdeen, SD",
-    "file": "locations/cities/aberdeen-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Auburn",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "auburn-al"
   },
   {
-    "name": "Aiken, SC",
-    "file": "locations/cities/aiken-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Birmingham",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "birmingham-al"
   },
   {
-    "name": "Akron, OH",
-    "file": "locations/cities/akron-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Decatur",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "decatur-al"
   },
   {
-    "name": "Alamogordo, NM",
-    "file": "locations/cities/alamogordo-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Dothan",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "dothan-al"
   },
   {
-    "name": "Albany, GA",
-    "file": "locations/cities/albany-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Florence",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "florence-al"
   },
   {
-    "name": "Albany, NY",
-    "file": "locations/cities/albany-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Gadsden",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "gadsden-al"
   },
   {
-    "name": "Albany, OR",
-    "file": "locations/cities/albany-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Hoover",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "hoover-al"
   },
   {
-    "name": "Albuquerque, NM",
-    "file": "locations/cities/albuquerque-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Huntsville",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "huntsville-al"
   },
   {
-    "name": "Alexandria, LA",
-    "file": "locations/cities/alexandria-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Madison",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "madison-al"
   },
   {
-    "name": "Alexandria, VA",
-    "file": "locations/cities/alexandria-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Mobile",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "mobile-al"
   },
   {
-    "name": "Allentown, PA",
-    "file": "locations/cities/allentown-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Montgomery",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "montgomery-al"
   },
   {
-    "name": "Alpharetta, GA",
-    "file": "locations/cities/alpharetta-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Phenix City",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "phenix-city-al"
   },
   {
-    "name": "Altoona, PA",
-    "file": "locations/cities/altoona-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Prattville",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "prattville-al"
   },
   {
-    "name": "Amarillo, TX",
-    "file": "locations/cities/amarillo-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Tuscaloosa",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "tuscaloosa-al"
   },
   {
-    "name": "Ames, IA",
-    "file": "locations/cities/ames-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Vestavia Hills",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "slug": "vestavia-hills-al"
   },
   {
-    "name": "Ammon, ID",
-    "file": "locations/cities/ammon-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Anchorage",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "anchorage-ak"
   },
   {
-    "name": "Anaconda, MT",
-    "file": "locations/cities/anaconda-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Bethel",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "bethel-ak"
   },
   {
-    "name": "Anaheim, CA",
-    "file": "locations/cities/anaheim-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Fairbanks",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "fairbanks-ak"
   },
   {
-    "name": "Anchorage, AK",
-    "file": "locations/cities/anchorage-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Homer",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "homer-ak"
   },
   {
-    "name": "Anderson, IN",
-    "file": "locations/cities/anderson-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Juneau",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "juneau-ak"
   },
   {
-    "name": "Anderson, SC",
-    "file": "locations/cities/anderson-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Kenai",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "kenai-ak"
   },
   {
-    "name": "Ankeny, IA",
-    "file": "locations/cities/ankeny-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Ketchikan",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "ketchikan-ak"
   },
   {
-    "name": "Ann Arbor, MI",
-    "file": "locations/cities/ann-arbor-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Kodiak",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "kodiak-ak"
   },
   {
-    "name": "Annapolis, MD",
-    "file": "locations/cities/annapolis-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Nome",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "nome-ak"
   },
   {
-    "name": "Appleton, WI",
-    "file": "locations/cities/appleton-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Palmer",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "palmer-ak"
   },
   {
-    "name": "Arlington Heights, IL",
-    "file": "locations/cities/arlington-heights-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Sitka",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "sitka-ak"
   },
   {
-    "name": "Arlington, TX",
-    "file": "locations/cities/arlington-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Soldotna",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "soldotna-ak"
   },
   {
-    "name": "Arvada, CO",
-    "file": "locations/cities/arvada-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Unalaska",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "unalaska-ak"
   },
   {
-    "name": "Asheville, NC",
-    "file": "locations/cities/asheville-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Valdez",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "valdez-ak"
   },
   {
-    "name": "Athens, GA",
-    "file": "locations/cities/athens-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Wasilla",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "slug": "wasilla-ak"
   },
   {
-    "name": ", ATLANTA",
-    "file": "locations/cities/atlanta-forensic-economist.html",
-    "state": "ATLANTA"
+    "city": "Avondale",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "avondale-az"
   },
   {
-    "name": "Atlanta, GA",
-    "file": "locations/cities/atlanta-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Buckeye",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "buckeye-az"
   },
   {
-    "name": "Auburn, AL",
-    "file": "locations/cities/auburn-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Chandler",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "chandler-az"
   },
   {
-    "name": "Auburn, ME",
-    "file": "locations/cities/auburn-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Flagstaff",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "flagstaff-az"
   },
   {
-    "name": "Auburn, WA",
-    "file": "locations/cities/auburn-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Gilbert",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "gilbert-az"
   },
   {
-    "name": "Augusta, GA",
-    "file": "locations/cities/augusta-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Glendale",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "glendale-az"
   },
   {
-    "name": "Augusta, ME",
-    "file": "locations/cities/augusta-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Goodyear",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "goodyear-az"
   },
   {
-    "name": "Aurora, CO",
-    "file": "locations/cities/aurora-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Mesa",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "mesa-az"
   },
   {
-    "name": "Aurora, IL",
-    "file": "locations/cities/aurora-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Peoria",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "peoria-az"
   },
   {
-    "name": "Austin, TX",
-    "file": "locations/cities/austin-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Phoenix",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "phoenix-az"
   },
   {
-    "name": "Avondale, AZ",
-    "file": "locations/cities/avondale-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Scottsdale",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "scottsdale-az"
   },
   {
-    "name": "Bakersfield, CA",
-    "file": "locations/cities/bakersfield-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Surprise",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "surprise-az"
   },
   {
-    "name": "Baltimore, MD",
-    "file": "locations/cities/baltimore-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Tempe",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "tempe-az"
   },
   {
-    "name": "Bangor, ME",
-    "file": "locations/cities/bangor-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Tucson",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "tucson-az"
   },
   {
-    "name": "Barre, VT",
-    "file": "locations/cities/barre-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Yuma",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "slug": "yuma-az"
   },
   {
-    "name": "Bartlesville, OK",
-    "file": "locations/cities/bartlesville-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Benton",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "benton-ar"
   },
   {
-    "name": "Bartlett, TN",
-    "file": "locations/cities/bartlett-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Bentonville",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "bentonville-ar"
   },
   {
-    "name": "Baton Rouge, LA",
-    "file": "locations/cities/baton-rouge-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Conway",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "conway-ar"
   },
   {
-    "name": "Beatrice, NE",
-    "file": "locations/cities/beatrice-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Fayetteville",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "fayetteville-ar"
   },
   {
-    "name": "Beaverton, OR",
-    "file": "locations/cities/beaverton-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Fort Smith",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "fort-smith-ar"
   },
   {
-    "name": "Beckley, WV",
-    "file": "locations/cities/beckley-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Hot Springs",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "hot-springs-ar"
   },
   {
-    "name": "Bedford, NH",
-    "file": "locations/cities/bedford-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Jacksonville",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "jacksonville-ar"
   },
   {
-    "name": "Belgrade, MT",
-    "file": "locations/cities/belgrade-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Jonesboro",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "jonesboro-ar"
   },
   {
-    "name": "Bellevue, NE",
-    "file": "locations/cities/bellevue-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Little Rock",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "little-rock-ar"
   },
   {
-    "name": "Bellevue, WA",
-    "file": "locations/cities/bellevue-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "North Little Rock",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "north-little-rock-ar"
   },
   {
-    "name": "Bellingham, WA",
-    "file": "locations/cities/bellingham-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Pine Bluff",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "pine-bluff-ar"
   },
   {
-    "name": "Bend, OR",
-    "file": "locations/cities/bend-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Rogers",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "rogers-ar"
   },
   {
-    "name": "Bennington, VT",
-    "file": "locations/cities/bennington-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Sherwood",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "sherwood-ar"
   },
   {
-    "name": "Benton, AR",
-    "file": "locations/cities/benton-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Springdale",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "springdale-ar"
   },
   {
-    "name": "Bentonville, AR",
-    "file": "locations/cities/bentonville-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Texarkana",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "slug": "texarkana-ar"
   },
   {
-    "name": "Bethel, AK",
-    "file": "locations/cities/bethel-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Anaheim",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "anaheim-ca"
   },
   {
-    "name": "Bethlehem, PA",
-    "file": "locations/cities/bethlehem-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Bakersfield",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "bakersfield-ca"
   },
   {
-    "name": "Bettendorf, IA",
-    "file": "locations/cities/bettendorf-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Chula Vista",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "chula-vista-ca"
   },
   {
-    "name": "Beulah, ND",
-    "file": "locations/cities/beulah-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Fresno",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "fresno-ca"
   },
   {
-    "name": "Biddeford, ME",
-    "file": "locations/cities/biddeford-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Irvine",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "irvine-ca"
   },
   {
-    "name": "Billings, MT",
-    "file": "locations/cities/billings-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Long Beach",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "long-beach-ca"
   },
   {
-    "name": "Biloxi, MS",
-    "file": "locations/cities/biloxi-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Los Angeles",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "los-angeles-ca"
   },
   {
-    "name": "Binghamton, NY",
-    "file": "locations/cities/binghamton-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Oakland",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "oakland-ca"
   },
   {
-    "name": "Birmingham, AL",
-    "file": "locations/cities/birmingham-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Riverside",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "riverside-ca"
   },
   {
-    "name": "Bismarck, ND",
-    "file": "locations/cities/bismarck-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Sacramento",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "sacramento-ca"
   },
   {
-    "name": "Blaine, MN",
-    "file": "locations/cities/blaine-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "San Diego",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "san-diego-ca"
   },
   {
-    "name": "Bloomington, IL",
-    "file": "locations/cities/bloomington-il-forensic-economist.html",
-    "state": "IL"
+    "city": "San Francisco",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "san-francisco-ca"
   },
   {
-    "name": "Bloomington, IN",
-    "file": "locations/cities/bloomington-in-forensic-economist.html",
-    "state": "IN"
+    "city": "San Jose",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "san-jose-ca"
   },
   {
-    "name": "Bloomington, MN",
-    "file": "locations/cities/bloomington-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Santa Ana",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "santa-ana-ca"
   },
   {
-    "name": "Blue Springs, MO",
-    "file": "locations/cities/blue-springs-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Stockton",
+    "state": "California",
+    "stateAbbr": "CA",
+    "slug": "stockton-ca"
   },
   {
-    "name": "Boise, ID",
-    "file": "locations/cities/boise-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Arvada",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "arvada-co"
   },
   {
-    "name": "Bossier City, LA",
-    "file": "locations/cities/bossier-city-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Aurora",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "aurora-co"
   },
   {
-    "name": "Boston, MA",
-    "file": "locations/cities/boston-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Boulder",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "boulder-co"
   },
   {
-    "name": "Boulder City, NV",
-    "file": "locations/cities/boulder-city-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Centennial",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "centennial-co"
   },
   {
-    "name": "Boulder, CO",
-    "file": "locations/cities/boulder-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Colorado Springs",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "colorado-springs-co"
   },
   {
-    "name": "Bowie, MD",
-    "file": "locations/cities/bowie-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Denver",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "denver-co"
   },
   {
-    "name": "Bowling Green, KY",
-    "file": "locations/cities/bowling-green-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Fort Collins",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "fort-collins-co"
   },
   {
-    "name": "Box Elder, SD",
-    "file": "locations/cities/box-elder-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Greeley",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "greeley-co"
   },
   {
-    "name": "Bozeman, MT",
-    "file": "locations/cities/bozeman-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Lakewood",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "lakewood-co"
   },
   {
-    "name": "Brandon, SD",
-    "file": "locations/cities/brandon-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Longmont",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "longmont-co"
   },
   {
-    "name": "Brattleboro, VT",
-    "file": "locations/cities/brattleboro-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Loveland",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "loveland-co"
   },
   {
-    "name": "Brentwood, TN",
-    "file": "locations/cities/brentwood-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Pueblo",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "pueblo-co"
   },
   {
-    "name": "Brick, NJ",
-    "file": "locations/cities/brick-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Thornton",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "thornton-co"
   },
   {
-    "name": "Bridgeport, CT",
-    "file": "locations/cities/bridgeport-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Westminster",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "slug": "westminster-co"
   },
   {
-    "name": "Bristol, CT",
-    "file": "locations/cities/bristol-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Bridgeport",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "bridgeport-ct"
   },
   {
-    "name": "Bristol, RI",
-    "file": "locations/cities/bristol-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Bristol",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "bristol-ct"
   },
   {
-    "name": "Brockton, MA",
-    "file": "locations/cities/brockton-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Danbury",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "danbury-ct"
   },
   {
-    "name": "Broken Arrow, OK",
-    "file": "locations/cities/broken-arrow-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Hartford",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "hartford-ct"
   },
   {
-    "name": "Brookings, SD",
-    "file": "locations/cities/brookings-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Meriden",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "meriden-ct"
   },
   {
-    "name": "Brooklyn Park, MN",
-    "file": "locations/cities/brooklyn-park-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Middletown",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "middletown-ct"
   },
   {
-    "name": "Buckeye, AZ",
-    "file": "locations/cities/buckeye-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Milford",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "milford-ct"
   },
   {
-    "name": "Buckhannon, WV",
-    "file": "locations/cities/buckhannon-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "New Britain",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "new-britain-ct"
   },
   {
-    "name": "Buffalo, NY",
-    "file": "locations/cities/buffalo-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "New Haven",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "new-haven-ct"
   },
   {
-    "name": "Burlington, VT",
-    "file": "locations/cities/burlington-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Norwalk",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "norwalk-ct"
   },
   {
-    "name": "Burnsville, MN",
-    "file": "locations/cities/burnsville-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Norwich",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "norwich-ct"
   },
   {
-    "name": "Butte, MT",
-    "file": "locations/cities/butte-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Shelton",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "shelton-ct"
   },
   {
-    "name": "Caldwell, ID",
-    "file": "locations/cities/caldwell-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Stamford",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "stamford-ct"
   },
   {
-    "name": "Cambridge, MA",
-    "file": "locations/cities/cambridge-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Waterbury",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "waterbury-ct"
   },
   {
-    "name": "Camden, DE",
-    "file": "locations/cities/camden-de-forensic-economist.html",
-    "state": "DE"
+    "city": "West Haven",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "slug": "west-haven-ct"
   },
   {
-    "name": "Camden, NJ",
-    "file": "locations/cities/camden-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Camden",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "camden-de"
   },
   {
-    "name": "Canton, OH",
-    "file": "locations/cities/canton-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Clayton",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "clayton-de"
   },
   {
-    "name": "Cape Coral, FL",
-    "file": "locations/cities/cape-coral-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Dover",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "dover-de"
   },
   {
-    "name": "Caribou, ME",
-    "file": "locations/cities/caribou-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Elsmere",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "elsmere-de"
   },
   {
-    "name": "Carlsbad, NM",
-    "file": "locations/cities/carlsbad-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Georgetown",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "georgetown-de"
   },
   {
-    "name": "Carmel, IN",
-    "file": "locations/cities/carmel-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Harrington",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "harrington-de"
   },
   {
-    "name": "Carson City, NV",
-    "file": "locations/cities/carson-city-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Laurel",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "laurel-de"
   },
   {
-    "name": "Cary, NC",
-    "file": "locations/cities/cary-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Middletown",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "middletown-de"
   },
   {
-    "name": "Casper, WY",
-    "file": "locations/cities/casper-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Milford",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "milford-de"
   },
   {
-    "name": "Cedar Falls, IA",
-    "file": "locations/cities/cedar-falls-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Millsboro",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "millsboro-de"
   },
   {
-    "name": "Cedar Rapids, IA",
-    "file": "locations/cities/cedar-rapids-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "New Castle",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "new-castle-de"
   },
   {
-    "name": "Centennial, CO",
-    "file": "locations/cities/centennial-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Newark",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "newark-de"
   },
   {
-    "name": "Central Falls, RI",
-    "file": "locations/cities/central-falls-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Seaford",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "seaford-de"
   },
   {
-    "name": "Champaign, IL",
-    "file": "locations/cities/champaign-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Smyrna",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "smyrna-de"
   },
   {
-    "name": "Chandler, AZ",
-    "file": "locations/cities/chandler-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Wilmington",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "slug": "wilmington-de"
   },
   {
-    "name": "Chaparral, NM",
-    "file": "locations/cities/chaparral-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Cape Coral",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "cape-coral-fl"
   },
   {
-    "name": "Chapel Hill, NC",
-    "file": "locations/cities/chapel-hill-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Coral Springs",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "coral-springs-fl"
   },
   {
-    "name": "Charles Town, WV",
-    "file": "locations/cities/charles-town-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Fort Lauderdale",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "fort-lauderdale-fl"
   },
   {
-    "name": "Charleston, SC",
-    "file": "locations/cities/charleston-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Gainesville",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "gainesville-fl"
   },
   {
-    "name": "Charleston, WV",
-    "file": "locations/cities/charleston-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Hialeah",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "hialeah-fl"
   },
   {
-    "name": "Charlotte, NC",
-    "file": "locations/cities/charlotte-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Hollywood",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "hollywood-fl"
   },
   {
-    "name": "Charlottesville, VA",
-    "file": "locations/cities/charlottesville-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Jacksonville",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "jacksonville-fl"
   },
   {
-    "name": "Chattanooga, TN",
-    "file": "locations/cities/chattanooga-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Miami",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "miami-fl"
   },
   {
-    "name": "Cherry Hill, NJ",
-    "file": "locations/cities/cherry-hill-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Miramar",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "miramar-fl"
   },
   {
-    "name": "Chesapeake, VA",
-    "file": "locations/cities/chesapeake-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Orlando",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "orlando-fl"
   },
   {
-    "name": "Chester, PA",
-    "file": "locations/cities/chester-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Pembroke Pines",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "pembroke-pines-fl"
   },
   {
-    "name": "Chesterfield, MO",
-    "file": "locations/cities/chesterfield-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Port St Lucie",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "port-st-lucie-fl"
   },
   {
-    "name": "Cheyenne, WY",
-    "file": "locations/cities/cheyenne-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "St Petersburg",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "st-petersburg-fl"
   },
   {
-    "name": ", CHICAGO",
-    "file": "locations/cities/chicago-forensic-economist.html",
-    "state": "CHICAGO"
+    "city": "Tallahassee",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "tallahassee-fl"
   },
   {
-    "name": "Chicago, IL",
-    "file": "locations/cities/chicago-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Tampa",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "slug": "tampa-fl"
   },
   {
-    "name": "Chula Vista, CA",
-    "file": "locations/cities/chula-vista-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Albany",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "albany-ga"
   },
   {
-    "name": "Cicero, IL",
-    "file": "locations/cities/cicero-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Alpharetta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "alpharetta-ga"
   },
   {
-    "name": "Cincinnati, OH",
-    "file": "locations/cities/cincinnati-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Athens",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "athens-ga"
   },
   {
-    "name": "Clarksburg, WV",
-    "file": "locations/cities/clarksburg-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Atlanta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "atlanta-ga"
   },
   {
-    "name": "Clarksville, TN",
-    "file": "locations/cities/clarksville-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Augusta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "augusta-ga"
   },
   {
-    "name": "Clayton, DE",
-    "file": "locations/cities/clayton-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Columbus",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "columbus-ga"
   },
   {
-    "name": "Cleveland, OH",
-    "file": "locations/cities/cleveland-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Johns Creek",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "johns-creek-ga"
   },
   {
-    "name": "Cleveland, TN",
-    "file": "locations/cities/cleveland-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Macon",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "macon-ga"
   },
   {
-    "name": "Clifton, NJ",
-    "file": "locations/cities/clifton-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Marietta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "marietta-ga"
   },
   {
-    "name": "Clinton, MS",
-    "file": "locations/cities/clinton-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Roswell",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "roswell-ga"
   },
   {
-    "name": "Clovis, NM",
-    "file": "locations/cities/clovis-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Sandy Springs",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "sandy-springs-ga"
   },
   {
-    "name": "Cody, WY",
-    "file": "locations/cities/cody-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Savannah",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "savannah-ga"
   },
   {
-    "name": "Coeur Dalene, ID",
-    "file": "locations/cities/coeur-dalene-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Smyrna",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "smyrna-ga"
   },
   {
-    "name": "Colchester, VT",
-    "file": "locations/cities/colchester-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Valdosta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "valdosta-ga"
   },
   {
-    "name": "College Park, MD",
-    "file": "locations/cities/college-park-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Warner Robins",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "slug": "warner-robins-ga"
   },
   {
-    "name": "Collierville, TN",
-    "file": "locations/cities/collierville-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "East Honolulu",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "east-honolulu-hi"
   },
   {
-    "name": "Colorado Springs, CO",
-    "file": "locations/cities/colorado-springs-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Ewa Beach",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "ewa-beach-hi"
   },
   {
-    "name": "Columbia, MO",
-    "file": "locations/cities/columbia-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Ewa Gentry",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "ewa-gentry-hi"
   },
   {
-    "name": "Columbia, SC",
-    "file": "locations/cities/columbia-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Hilo",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "hilo-hi"
   },
   {
-    "name": "Columbus, GA",
-    "file": "locations/cities/columbus-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Honolulu",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "honolulu-hi"
   },
   {
-    "name": "Columbus, MS",
-    "file": "locations/cities/columbus-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Kahului",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "kahului-hi"
   },
   {
-    "name": "Columbus, NE",
-    "file": "locations/cities/columbus-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Kailua",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "kailua-hi"
   },
   {
-    "name": "Columbus, OH",
-    "file": "locations/cities/columbus-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Kailua Kona",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "kailua-kona-hi"
   },
   {
-    "name": "Concord, NC",
-    "file": "locations/cities/concord-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Kaneohe",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "kaneohe-hi"
   },
   {
-    "name": "Concord, NH",
-    "file": "locations/cities/concord-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Mililani",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "mililani-hi"
   },
   {
-    "name": "Conway, AR",
-    "file": "locations/cities/conway-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Mililani Town",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "mililani-town-hi"
   },
   {
-    "name": "Coon Rapids, MN",
-    "file": "locations/cities/coon-rapids-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Pearl City",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "pearl-city-hi"
   },
   {
-    "name": "Coral Springs, FL",
-    "file": "locations/cities/coral-springs-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Schofield Barracks",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "schofield-barracks-hi"
   },
   {
-    "name": "Corpus Christi, TX",
-    "file": "locations/cities/corpus-christi-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Wahiawa",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "wahiawa-hi"
   },
   {
-    "name": "Corvallis, OR",
-    "file": "locations/cities/corvallis-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Waipahu",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "slug": "waipahu-hi"
   },
   {
-    "name": "Council Bluffs, IA",
-    "file": "locations/cities/council-bluffs-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Ammon",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "ammon-id"
   },
   {
-    "name": "Coventry, RI",
-    "file": "locations/cities/coventry-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Boise",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "boise-id"
   },
   {
-    "name": "Covington, KY",
-    "file": "locations/cities/covington-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Caldwell",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "caldwell-id"
   },
   {
-    "name": "Cranston, RI",
-    "file": "locations/cities/cranston-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Coeur Dalene",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "coeur-dalene-id"
   },
   {
-    "name": "Cumberland, MD",
-    "file": "locations/cities/cumberland-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Eagle",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "eagle-id"
   },
   {
-    "name": "Dallas, TX",
-    "file": "locations/cities/dallas-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Idaho Falls",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "idaho-falls-id"
   },
   {
-    "name": "Danbury, CT",
-    "file": "locations/cities/danbury-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Kuna",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "kuna-id"
   },
   {
-    "name": "Danville, VA",
-    "file": "locations/cities/danville-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Lewiston",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "lewiston-id"
   },
   {
-    "name": "Davenport, IA",
-    "file": "locations/cities/davenport-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Meridian",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "meridian-id"
   },
   {
-    "name": "Dayton, OH",
-    "file": "locations/cities/dayton-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Moscow",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "moscow-id"
   },
   {
-    "name": "Dearborn, MI",
-    "file": "locations/cities/dearborn-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Nampa",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "nampa-id"
   },
   {
-    "name": "Decatur, AL",
-    "file": "locations/cities/decatur-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Pocatello",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "pocatello-id"
   },
   {
-    "name": "Decatur, IL",
-    "file": "locations/cities/decatur-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Post Falls",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "post-falls-id"
   },
   {
-    "name": "Deming, NM",
-    "file": "locations/cities/deming-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Rexburg",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "rexburg-id"
   },
   {
-    "name": "Denver, CO",
-    "file": "locations/cities/denver-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Twin Falls",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "slug": "twin-falls-id"
   },
   {
-    "name": "Derry, NH",
-    "file": "locations/cities/derry-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Arlington Heights",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "arlington-heights-il"
   },
   {
-    "name": "Des Moines, IA",
-    "file": "locations/cities/des-moines-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Aurora",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "aurora-il"
   },
   {
-    "name": "Detroit, MI",
-    "file": "locations/cities/detroit-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Bloomington",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "bloomington-il"
   },
   {
-    "name": "Devils Lake, ND",
-    "file": "locations/cities/devils-lake-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Champaign",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "champaign-il"
   },
   {
-    "name": "Dickinson, ND",
-    "file": "locations/cities/dickinson-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Chicago",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "chicago-il"
   },
   {
-    "name": "Dodge City, KS",
-    "file": "locations/cities/dodge-city-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Cicero",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "cicero-il"
   },
   {
-    "name": "Dothan, AL",
-    "file": "locations/cities/dothan-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Decatur",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "decatur-il"
   },
   {
-    "name": "Dover, DE",
-    "file": "locations/cities/dover-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Elgin",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "elgin-il"
   },
   {
-    "name": "Dover, NH",
-    "file": "locations/cities/dover-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Evanston",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "evanston-il"
   },
   {
-    "name": "Draper, UT",
-    "file": "locations/cities/draper-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Joliet",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "joliet-il"
   },
   {
-    "name": "Dubuque, IA",
-    "file": "locations/cities/dubuque-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Naperville",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "naperville-il"
   },
   {
-    "name": "Duluth, MN",
-    "file": "locations/cities/duluth-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Peoria",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "peoria-il"
   },
   {
-    "name": "Durham, NC",
-    "file": "locations/cities/durham-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Rockford",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "rockford-il"
   },
   {
-    "name": "Eagan, MN",
-    "file": "locations/cities/eagan-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Schaumburg",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "schaumburg-il"
   },
   {
-    "name": "Eagle, ID",
-    "file": "locations/cities/eagle-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Waukegan",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "slug": "waukegan-il"
   },
   {
-    "name": "East Honolulu, HI",
-    "file": "locations/cities/east-honolulu-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Anderson",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "anderson-in"
   },
   {
-    "name": "East Providence, RI",
-    "file": "locations/cities/east-providence-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Bloomington",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "bloomington-in"
   },
   {
-    "name": "Easton, PA",
-    "file": "locations/cities/easton-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Carmel",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "carmel-in"
   },
   {
-    "name": "Eau Claire, WI",
-    "file": "locations/cities/eau-claire-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Evansville",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "evansville-in"
   },
   {
-    "name": "Eden Prairie, MN",
-    "file": "locations/cities/eden-prairie-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Fishers",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "fishers-in"
   },
   {
-    "name": "Edison, NJ",
-    "file": "locations/cities/edison-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Fort Wayne",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "fort-wayne-in"
   },
   {
-    "name": "Edmond, OK",
-    "file": "locations/cities/edmond-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Gary",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "gary-in"
   },
   {
-    "name": "El Paso, TX",
-    "file": "locations/cities/el-paso-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Hammond",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "hammond-in"
   },
   {
-    "name": "Elgin, IL",
-    "file": "locations/cities/elgin-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "indianapolis-in"
   },
   {
-    "name": "Elizabeth, NJ",
-    "file": "locations/cities/elizabeth-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Kokomo",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "kokomo-in"
   },
   {
-    "name": "Elizabethtown, KY",
-    "file": "locations/cities/elizabethtown-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Lafayette",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "lafayette-in"
   },
   {
-    "name": "Elsmere, DE",
-    "file": "locations/cities/elsmere-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Muncie",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "muncie-in"
   },
   {
-    "name": "Elyria, OH",
-    "file": "locations/cities/elyria-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Noblesville",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "noblesville-in"
   },
   {
-    "name": "Enid, OK",
-    "file": "locations/cities/enid-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "South Bend",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "south-bend-in"
   },
   {
-    "name": "Enterprise, NV",
-    "file": "locations/cities/enterprise-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Terre Haute",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "slug": "terre-haute-in"
   },
   {
-    "name": "Erie, PA",
-    "file": "locations/cities/erie-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Ames",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "ames-ia"
   },
   {
-    "name": "Essex, VT",
-    "file": "locations/cities/essex-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Ankeny",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "ankeny-ia"
   },
   {
-    "name": "Eugene, OR",
-    "file": "locations/cities/eugene-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Bettendorf",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "bettendorf-ia"
   },
   {
-    "name": "Evanston, IL",
-    "file": "locations/cities/evanston-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Cedar Falls",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "cedar-falls-ia"
   },
   {
-    "name": "Evanston, WY",
-    "file": "locations/cities/evanston-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Cedar Rapids",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "cedar-rapids-ia"
   },
   {
-    "name": "Evansville, IN",
-    "file": "locations/cities/evansville-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Council Bluffs",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "council-bluffs-ia"
   },
   {
-    "name": "Everett, WA",
-    "file": "locations/cities/everett-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Davenport",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "davenport-ia"
   },
   {
-    "name": "Ewa Beach, HI",
-    "file": "locations/cities/ewa-beach-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Des Moines",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "des-moines-ia"
   },
   {
-    "name": "Ewa Gentry, HI",
-    "file": "locations/cities/ewa-gentry-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Dubuque",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "dubuque-ia"
   },
   {
-    "name": "Fairbanks, AK",
-    "file": "locations/cities/fairbanks-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Iowa City",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "iowa-city-ia"
   },
   {
-    "name": "Fairmont, WV",
-    "file": "locations/cities/fairmont-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Marion",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "marion-ia"
   },
   {
-    "name": "Fall River, MA",
-    "file": "locations/cities/fall-river-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Sioux City",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "sioux-city-ia"
   },
   {
-    "name": "Fallon, NV",
-    "file": "locations/cities/fallon-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Urbandale",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "urbandale-ia"
   },
   {
-    "name": "Fargo, ND",
-    "file": "locations/cities/fargo-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Waterloo",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "waterloo-ia"
   },
   {
-    "name": "Farmington Hills, MI",
-    "file": "locations/cities/farmington-hills-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "West Des Moines",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "slug": "west-des-moines-ia"
   },
   {
-    "name": "Farmington, NM",
-    "file": "locations/cities/farmington-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Dodge City",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "dodge-city-ks"
   },
   {
-    "name": "Fayetteville, AR",
-    "file": "locations/cities/fayetteville-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Garden City",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "garden-city-ks"
   },
   {
-    "name": "Fayetteville, NC",
-    "file": "locations/cities/fayetteville-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Hutchinson",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "hutchinson-ks"
   },
   {
-    "name": "Federal Way, WA",
-    "file": "locations/cities/federal-way-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Kansas City",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "kansas-city-ks"
   },
   {
-    "name": "Fernley, NV",
-    "file": "locations/cities/fernley-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Lawrence",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "lawrence-ks"
   },
   {
-    "name": "Fishers, IN",
-    "file": "locations/cities/fishers-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Leavenworth",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "leavenworth-ks"
   },
   {
-    "name": "Flagstaff, AZ",
-    "file": "locations/cities/flagstaff-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Leawood",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "leawood-ks"
   },
   {
-    "name": "Flint, MI",
-    "file": "locations/cities/flint-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Lenexa",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "lenexa-ks"
   },
   {
-    "name": "Florence, AL",
-    "file": "locations/cities/florence-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Manhattan",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "manhattan-ks"
   },
   {
-    "name": "Florence, KY",
-    "file": "locations/cities/florence-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Olathe",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "olathe-ks"
   },
   {
-    "name": "Florence, SC",
-    "file": "locations/cities/florence-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Overland Park",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "overland-park-ks"
   },
   {
-    "name": "Florissant, MO",
-    "file": "locations/cities/florissant-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Salina",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "salina-ks"
   },
   {
-    "name": "Fond Du Lac, WI",
-    "file": "locations/cities/fond-du-lac-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Shawnee",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "shawnee-ks"
   },
   {
-    "name": "Fort Collins, CO",
-    "file": "locations/cities/fort-collins-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Topeka",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "topeka-ks"
   },
   {
-    "name": "Fort Lauderdale, FL",
-    "file": "locations/cities/fort-lauderdale-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Wichita",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "slug": "wichita-ks"
   },
   {
-    "name": "Fort Smith, AR",
-    "file": "locations/cities/fort-smith-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Bowling Green",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "bowling-green-ky"
   },
   {
-    "name": "Fort Wayne, IN",
-    "file": "locations/cities/fort-wayne-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Covington",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "covington-ky"
   },
   {
-    "name": "Fort Worth, TX",
-    "file": "locations/cities/fort-worth-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Elizabethtown",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "elizabethtown-ky"
   },
   {
-    "name": "Framingham, MA",
-    "file": "locations/cities/framingham-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Florence",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "florence-ky"
   },
   {
-    "name": "Frankfort, KY",
-    "file": "locations/cities/frankfort-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Frankfort",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "frankfort-ky"
   },
   {
-    "name": "Franklin, TN",
-    "file": "locations/cities/franklin-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Georgetown",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "georgetown-ky"
   },
   {
-    "name": "Frederick, MD",
-    "file": "locations/cities/frederick-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Henderson",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "henderson-ky"
   },
   {
-    "name": "Fremont, NE",
-    "file": "locations/cities/fremont-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Hopkinsville",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "hopkinsville-ky"
   },
   {
-    "name": "Fresno, CA",
-    "file": "locations/cities/fresno-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Jeffersontown",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "jeffersontown-ky"
   },
   {
-    "name": "Gadsden, AL",
-    "file": "locations/cities/gadsden-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Lexington",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "lexington-ky"
   },
   {
-    "name": "Gainesville, FL",
-    "file": "locations/cities/gainesville-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Louisville",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "louisville-ky"
   },
   {
-    "name": "Gaithersburg, MD",
-    "file": "locations/cities/gaithersburg-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Nicholasville",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "nicholasville-ky"
   },
   {
-    "name": "Gallup, NM",
-    "file": "locations/cities/gallup-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Owensboro",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "owensboro-ky"
   },
   {
-    "name": "Garden City, KS",
-    "file": "locations/cities/garden-city-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Paducah",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "paducah-ky"
   },
   {
-    "name": "Garland, TX",
-    "file": "locations/cities/garland-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Richmond",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "slug": "richmond-ky"
   },
   {
-    "name": "Gary, IN",
-    "file": "locations/cities/gary-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Alexandria",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "alexandria-la"
   },
   {
-    "name": "Gastonia, NC",
-    "file": "locations/cities/gastonia-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Baton Rouge",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "baton-rouge-la"
   },
   {
-    "name": "Georgetown, DE",
-    "file": "locations/cities/georgetown-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Bossier City",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "bossier-city-la"
   },
   {
-    "name": "Georgetown, KY",
-    "file": "locations/cities/georgetown-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Houma",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "houma-la"
   },
   {
-    "name": "Gilbert, AZ",
-    "file": "locations/cities/gilbert-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Kenner",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "kenner-la"
   },
   {
-    "name": "Gillette, WY",
-    "file": "locations/cities/gillette-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Lafayette",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "lafayette-la"
   },
   {
-    "name": "Glendale, AZ",
-    "file": "locations/cities/glendale-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Lake Charles",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "lake-charles-la"
   },
   {
-    "name": "Goffstown, NH",
-    "file": "locations/cities/goffstown-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Laplace",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "laplace-la"
   },
   {
-    "name": "Goodyear, AZ",
-    "file": "locations/cities/goodyear-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Marrero",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "marrero-la"
   },
   {
-    "name": "Goose Creek, SC",
-    "file": "locations/cities/goose-creek-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Monroe",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "monroe-la"
   },
   {
-    "name": "Grafton, ND",
-    "file": "locations/cities/grafton-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "New Iberia",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "new-iberia-la"
   },
   {
-    "name": "Grand Forks, ND",
-    "file": "locations/cities/grand-forks-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "New Orleans",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "new-orleans-la"
   },
   {
-    "name": "Grand Island, NE",
-    "file": "locations/cities/grand-island-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Prairieville",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "prairieville-la"
   },
   {
-    "name": "Grand Prairie, TX",
-    "file": "locations/cities/grand-prairie-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Shreveport",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "shreveport-la"
   },
   {
-    "name": "Grand Rapids, MI",
-    "file": "locations/cities/grand-rapids-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Slidell",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "slug": "slidell-la"
   },
   {
-    "name": "Grants Pass, OR",
-    "file": "locations/cities/grants-pass-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Auburn",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "auburn-me"
   },
   {
-    "name": "Great Falls, MT",
-    "file": "locations/cities/great-falls-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Augusta",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "augusta-me"
   },
   {
-    "name": "Greeley, CO",
-    "file": "locations/cities/greeley-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Bangor",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "bangor-me"
   },
   {
-    "name": "Green Bay, WI",
-    "file": "locations/cities/green-bay-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Biddeford",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "biddeford-me"
   },
   {
-    "name": "Green River, WY",
-    "file": "locations/cities/green-river-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Caribou",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "caribou-me"
   },
   {
-    "name": "Greenbelt, MD",
-    "file": "locations/cities/greenbelt-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Lewiston",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "lewiston-me"
   },
   {
-    "name": "Greensboro, NC",
-    "file": "locations/cities/greensboro-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Orono",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "orono-me"
   },
   {
-    "name": "Greenville, MS",
-    "file": "locations/cities/greenville-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Portland",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "portland-me"
   },
   {
-    "name": "Greenville, SC",
-    "file": "locations/cities/greenville-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Presque Isle",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "presque-isle-me"
   },
   {
-    "name": "Gresham, OR",
-    "file": "locations/cities/gresham-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Saco",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "saco-me"
   },
   {
-    "name": "Gulfport, MS",
-    "file": "locations/cities/gulfport-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Sanford",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "sanford-me"
   },
   {
-    "name": "Hagerstown, MD",
-    "file": "locations/cities/hagerstown-md-forensic-economist.html",
-    "state": "MD"
+    "city": "South Portland",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "south-portland-me"
   },
   {
-    "name": "Hamilton, NJ",
-    "file": "locations/cities/hamilton-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Waterville",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "waterville-me"
   },
   {
-    "name": "Hamilton, OH",
-    "file": "locations/cities/hamilton-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Westbrook",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "westbrook-me"
   },
   {
-    "name": "Hammond, IN",
-    "file": "locations/cities/hammond-in-forensic-economist.html",
-    "state": "IN"
+    "city": "York",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "slug": "york-me"
   },
   {
-    "name": "Hampton, VA",
-    "file": "locations/cities/hampton-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Annapolis",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "annapolis-md"
   },
   {
-    "name": "Harrington, DE",
-    "file": "locations/cities/harrington-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Baltimore",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "baltimore-md"
   },
   {
-    "name": "Harrisburg, PA",
-    "file": "locations/cities/harrisburg-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Bowie",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "bowie-md"
   },
   {
-    "name": "Harrisonburg, VA",
-    "file": "locations/cities/harrisonburg-va-forensic-economist.html",
-    "state": "VA"
+    "city": "College Park",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "college-park-md"
   },
   {
-    "name": "Hartford, CT",
-    "file": "locations/cities/hartford-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Cumberland",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "cumberland-md"
   },
   {
-    "name": "Hartford, VT",
-    "file": "locations/cities/hartford-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Frederick",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "frederick-md"
   },
   {
-    "name": "Hastings, NE",
-    "file": "locations/cities/hastings-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Gaithersburg",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "gaithersburg-md"
   },
   {
-    "name": "Hattiesburg, MS",
-    "file": "locations/cities/hattiesburg-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Greenbelt",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "greenbelt-md"
   },
   {
-    "name": "Haverhill, MA",
-    "file": "locations/cities/haverhill-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Hagerstown",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "hagerstown-md"
   },
   {
-    "name": "Havre, MT",
-    "file": "locations/cities/havre-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Hyattsville",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "hyattsville-md"
   },
   {
-    "name": "Helena, MT",
-    "file": "locations/cities/helena-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Laurel",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "laurel-md"
   },
   {
-    "name": "Hempstead, NY",
-    "file": "locations/cities/hempstead-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Rockville",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "rockville-md"
   },
   {
-    "name": "Henderson, KY",
-    "file": "locations/cities/henderson-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Salisbury",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "salisbury-md"
   },
   {
-    "name": "Henderson, NV",
-    "file": "locations/cities/henderson-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Takoma Park",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "takoma-park-md"
   },
   {
-    "name": "Hendersonville, TN",
-    "file": "locations/cities/hendersonville-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Westminster",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "slug": "westminster-md"
   },
   {
-    "name": "Hialeah, FL",
-    "file": "locations/cities/hialeah-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Boston",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "boston-ma"
   },
   {
-    "name": "High Point, NC",
-    "file": "locations/cities/high-point-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Brockton",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "brockton-ma"
   },
   {
-    "name": "Hillsboro, OR",
-    "file": "locations/cities/hillsboro-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Cambridge",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "cambridge-ma"
   },
   {
-    "name": "Hilo, HI",
-    "file": "locations/cities/hilo-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Fall River",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "fall-river-ma"
   },
   {
-    "name": "Hilton Head Island, SC",
-    "file": "locations/cities/hilton-head-island-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Framingham",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "framingham-ma"
   },
   {
-    "name": "Hobbs, NM",
-    "file": "locations/cities/hobbs-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Haverhill",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "haverhill-ma"
   },
   {
-    "name": "Hollywood, FL",
-    "file": "locations/cities/hollywood-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Lawrence",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "lawrence-ma"
   },
   {
-    "name": "Homer, AK",
-    "file": "locations/cities/homer-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Lowell",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "lowell-ma"
   },
   {
-    "name": "Honolulu, HI",
-    "file": "locations/cities/honolulu-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Lynn",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "lynn-ma"
   },
   {
-    "name": "Hoover, AL",
-    "file": "locations/cities/hoover-al-forensic-economist.html",
-    "state": "AL"
+    "city": "New Bedford",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "new-bedford-ma"
   },
   {
-    "name": "Hopkinsville, KY",
-    "file": "locations/cities/hopkinsville-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Newton",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "newton-ma"
   },
   {
-    "name": "Horn Lake, MS",
-    "file": "locations/cities/horn-lake-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Quincy",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "quincy-ma"
   },
   {
-    "name": "Hot Springs, AR",
-    "file": "locations/cities/hot-springs-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Somerville",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "somerville-ma"
   },
   {
-    "name": "Houma, LA",
-    "file": "locations/cities/houma-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Springfield",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "springfield-ma"
   },
   {
-    "name": "Houston, TX",
-    "file": "locations/cities/houston-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Worcester",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "slug": "worcester-ma"
   },
   {
-    "name": "Hudson, NH",
-    "file": "locations/cities/hudson-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Ann Arbor",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "ann-arbor-mi"
   },
   {
-    "name": "Huntington, WV",
-    "file": "locations/cities/huntington-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Dearborn",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "dearborn-mi"
   },
   {
-    "name": "Huntsville, AL",
-    "file": "locations/cities/huntsville-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Detroit",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "detroit-mi"
   },
   {
-    "name": "Huron, SD",
-    "file": "locations/cities/huron-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Farmington Hills",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "farmington-hills-mi"
   },
   {
-    "name": "Hurricane, WV",
-    "file": "locations/cities/hurricane-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Flint",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "flint-mi"
   },
   {
-    "name": "Hutchinson, KS",
-    "file": "locations/cities/hutchinson-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Grand Rapids",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "grand-rapids-mi"
   },
   {
-    "name": "Hyattsville, MD",
-    "file": "locations/cities/hyattsville-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Kalamazoo",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "kalamazoo-mi"
   },
   {
-    "name": "Idaho Falls, ID",
-    "file": "locations/cities/idaho-falls-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Lansing",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "lansing-mi"
   },
   {
-    "name": "Independence, MO",
-    "file": "locations/cities/independence-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Livonia",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "livonia-mi"
   },
   {
-    "name": "Indianapolis, IN",
-    "file": "locations/cities/indianapolis-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Southfield",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "southfield-mi"
   },
   {
-    "name": "Iowa City, IA",
-    "file": "locations/cities/iowa-city-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Sterling Heights",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "sterling-heights-mi"
   },
   {
-    "name": "Irvine, CA",
-    "file": "locations/cities/irvine-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Troy",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "troy-mi"
   },
   {
-    "name": "Irving, TX",
-    "file": "locations/cities/irving-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Warren",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "warren-mi"
   },
   {
-    "name": "Jackson, MS",
-    "file": "locations/cities/jackson-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Westland",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "westland-mi"
   },
   {
-    "name": "Jackson, WY",
-    "file": "locations/cities/jackson-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Wyoming",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "slug": "wyoming-mi"
   },
   {
-    "name": "Jacksonville, AR",
-    "file": "locations/cities/jacksonville-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Blaine",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "blaine-mn"
   },
   {
-    "name": "Jacksonville, FL",
-    "file": "locations/cities/jacksonville-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Bloomington",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "bloomington-mn"
   },
   {
-    "name": "Jacksonville, NC",
-    "file": "locations/cities/jacksonville-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Brooklyn Park",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "brooklyn-park-mn"
   },
   {
-    "name": "Jamestown, ND",
-    "file": "locations/cities/jamestown-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Burnsville",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "burnsville-mn"
   },
   {
-    "name": "Janesville, WI",
-    "file": "locations/cities/janesville-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Coon Rapids",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "coon-rapids-mn"
   },
   {
-    "name": "Jefferson City, MO",
-    "file": "locations/cities/jefferson-city-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Duluth",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "duluth-mn"
   },
   {
-    "name": "Jeffersontown, KY",
-    "file": "locations/cities/jeffersontown-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Eagan",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "eagan-mn"
   },
   {
-    "name": "Jersey City, NJ",
-    "file": "locations/cities/jersey-city-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Eden Prairie",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "eden-prairie-mn"
   },
   {
-    "name": "Johns Creek, GA",
-    "file": "locations/cities/johns-creek-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Maple Grove",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "maple-grove-mn"
   },
   {
-    "name": "Johnson City, TN",
-    "file": "locations/cities/johnson-city-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "minneapolis-mn"
   },
   {
-    "name": "Johnston, RI",
-    "file": "locations/cities/johnston-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Plymouth",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "plymouth-mn"
   },
   {
-    "name": "Joliet, IL",
-    "file": "locations/cities/joliet-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Rochester",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "rochester-mn"
   },
   {
-    "name": "Jonesboro, AR",
-    "file": "locations/cities/jonesboro-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Saint Cloud",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "saint-cloud-mn"
   },
   {
-    "name": "Joplin, MO",
-    "file": "locations/cities/joplin-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Saint Paul",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "saint-paul-mn"
   },
   {
-    "name": "Juneau, AK",
-    "file": "locations/cities/juneau-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Woodbury",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "slug": "woodbury-mn"
   },
   {
-    "name": "Kahului, HI",
-    "file": "locations/cities/kahului-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Biloxi",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "biloxi-ms"
   },
   {
-    "name": "Kailua, HI",
-    "file": "locations/cities/kailua-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Clinton",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "clinton-ms"
   },
   {
-    "name": "Kailua Kona, HI",
-    "file": "locations/cities/kailua-kona-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Columbus",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "columbus-ms"
   },
   {
-    "name": "Kalamazoo, MI",
-    "file": "locations/cities/kalamazoo-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Greenville",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "greenville-ms"
   },
   {
-    "name": "Kalispell, MT",
-    "file": "locations/cities/kalispell-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Gulfport",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "gulfport-ms"
   },
   {
-    "name": "Kaneohe, HI",
-    "file": "locations/cities/kaneohe-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Hattiesburg",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "hattiesburg-ms"
   },
   {
-    "name": "Kansas City, KS",
-    "file": "locations/cities/kansas-city-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Horn Lake",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "horn-lake-ms"
   },
   {
-    "name": "Kansas City, MO",
-    "file": "locations/cities/kansas-city-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Jackson",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "jackson-ms"
   },
   {
-    "name": "Kearney, NE",
-    "file": "locations/cities/kearney-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Meridian",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "meridian-ms"
   },
   {
-    "name": "Keene, NH",
-    "file": "locations/cities/keene-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Olive Branch",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "olive-branch-ms"
   },
   {
-    "name": "Keizer, OR",
-    "file": "locations/cities/keizer-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Pearl",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "pearl-ms"
   },
   {
-    "name": "Kenai, AK",
-    "file": "locations/cities/kenai-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Ridgeland",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "ridgeland-ms"
   },
   {
-    "name": "Kenner, LA",
-    "file": "locations/cities/kenner-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Southaven",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "southaven-ms"
   },
   {
-    "name": "Kennewick, WA",
-    "file": "locations/cities/kennewick-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Starkville",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "starkville-ms"
   },
   {
-    "name": "Kenosha, WI",
-    "file": "locations/cities/kenosha-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Tupelo",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "slug": "tupelo-ms"
   },
   {
-    "name": "Kent, WA",
-    "file": "locations/cities/kent-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Blue Springs",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "blue-springs-mo"
   },
   {
-    "name": "Ketchikan, AK",
-    "file": "locations/cities/ketchikan-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Chesterfield",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "chesterfield-mo"
   },
   {
-    "name": "Kettering, OH",
-    "file": "locations/cities/kettering-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Columbia",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "columbia-mo"
   },
   {
-    "name": "Kingsport, TN",
-    "file": "locations/cities/kingsport-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Florissant",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "florissant-mo"
   },
   {
-    "name": "Knoxville, TN",
-    "file": "locations/cities/knoxville-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Independence",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "independence-mo"
   },
   {
-    "name": "Kodiak, AK",
-    "file": "locations/cities/kodiak-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Jefferson City",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "jefferson-city-mo"
   },
   {
-    "name": "Kokomo, IN",
-    "file": "locations/cities/kokomo-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Joplin",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "joplin-mo"
   },
   {
-    "name": "Kuna, ID",
-    "file": "locations/cities/kuna-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Kansas City",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "kansas-city-mo"
   },
   {
-    "name": "La Crosse, WI",
-    "file": "locations/cities/la-crosse-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Lees Summit",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "lees-summit-mo"
   },
   {
-    "name": "La Vista, NE",
-    "file": "locations/cities/la-vista-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Ofallon",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "ofallon-mo"
   },
   {
-    "name": "Laconia, NH",
-    "file": "locations/cities/laconia-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Saint Charles",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "saint-charles-mo"
   },
   {
-    "name": "Lafayette, IN",
-    "file": "locations/cities/lafayette-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Saint Joseph",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "saint-joseph-mo"
   },
   {
-    "name": "Lafayette, LA",
-    "file": "locations/cities/lafayette-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Saint Louis",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "saint-louis-mo"
   },
   {
-    "name": "Lake Charles, LA",
-    "file": "locations/cities/lake-charles-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Saint Peters",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "saint-peters-mo"
   },
   {
-    "name": "Lake Oswego, OR",
-    "file": "locations/cities/lake-oswego-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Springfield",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "slug": "springfield-mo"
   },
   {
-    "name": "Lakewood, CO",
-    "file": "locations/cities/lakewood-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Anaconda",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "anaconda-mt"
   },
   {
-    "name": "Lakewood, NJ",
-    "file": "locations/cities/lakewood-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Belgrade",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "belgrade-mt"
   },
   {
-    "name": "Lakewood, OH",
-    "file": "locations/cities/lakewood-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Billings",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "billings-mt"
   },
   {
-    "name": "Lancaster, PA",
-    "file": "locations/cities/lancaster-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Bozeman",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "bozeman-mt"
   },
   {
-    "name": "Lander, WY",
-    "file": "locations/cities/lander-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Butte",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "butte-mt"
   },
   {
-    "name": "Lansing, MI",
-    "file": "locations/cities/lansing-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Great Falls",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "great-falls-mt"
   },
   {
-    "name": "Laplace, LA",
-    "file": "locations/cities/laplace-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Havre",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "havre-mt"
   },
   {
-    "name": "Laramie, WY",
-    "file": "locations/cities/laramie-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Helena",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "helena-mt"
   },
   {
-    "name": "Laredo, TX",
-    "file": "locations/cities/laredo-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Kalispell",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "kalispell-mt"
   },
   {
-    "name": "Las Cruces, NM",
-    "file": "locations/cities/las-cruces-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Laurel",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "laurel-mt"
   },
   {
-    "name": "Las Vegas, NV",
-    "file": "locations/cities/las-vegas-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Lewistown",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "lewistown-mt"
   },
   {
-    "name": "Laurel, DE",
-    "file": "locations/cities/laurel-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Livingston",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "livingston-mt"
   },
   {
-    "name": "Laurel, MD",
-    "file": "locations/cities/laurel-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Miles City",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "miles-city-mt"
   },
   {
-    "name": "Laurel, MT",
-    "file": "locations/cities/laurel-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Missoula",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "missoula-mt"
   },
   {
-    "name": "Lawrence, KS",
-    "file": "locations/cities/lawrence-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Whitefish",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "slug": "whitefish-mt"
   },
   {
-    "name": "Lawrence, MA",
-    "file": "locations/cities/lawrence-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Beatrice",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "beatrice-ne"
   },
   {
-    "name": "Lawton, OK",
-    "file": "locations/cities/lawton-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Bellevue",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "bellevue-ne"
   },
   {
-    "name": "Layton, UT",
-    "file": "locations/cities/layton-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Columbus",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "columbus-ne"
   },
   {
-    "name": "Leavenworth, KS",
-    "file": "locations/cities/leavenworth-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Fremont",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "fremont-ne"
   },
   {
-    "name": "Leawood, KS",
-    "file": "locations/cities/leawood-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Grand Island",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "grand-island-ne"
   },
   {
-    "name": "Lees Summit, MO",
-    "file": "locations/cities/lees-summit-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Hastings",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "hastings-ne"
   },
   {
-    "name": "Leesburg, VA",
-    "file": "locations/cities/leesburg-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Kearney",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "kearney-ne"
   },
   {
-    "name": "Lehi, UT",
-    "file": "locations/cities/lehi-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "La Vista",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "la-vista-ne"
   },
   {
-    "name": "Lenexa, KS",
-    "file": "locations/cities/lenexa-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Lincoln",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "lincoln-ne"
   },
   {
-    "name": "Lewisburg, WV",
-    "file": "locations/cities/lewisburg-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Norfolk",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "norfolk-ne"
   },
   {
-    "name": "Lewiston, ID",
-    "file": "locations/cities/lewiston-id-forensic-economist.html",
-    "state": "ID"
+    "city": "North Platte",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "north-platte-ne"
   },
   {
-    "name": "Lewiston, ME",
-    "file": "locations/cities/lewiston-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Omaha",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "omaha-ne"
   },
   {
-    "name": "Lewistown, MT",
-    "file": "locations/cities/lewistown-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Papillion",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "papillion-ne"
   },
   {
-    "name": "Lexington, KY",
-    "file": "locations/cities/lexington-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Scottsbluff",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "scottsbluff-ne"
   },
   {
-    "name": "Lincoln, NE",
-    "file": "locations/cities/lincoln-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "South Sioux City",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "slug": "south-sioux-city-ne"
   },
   {
-    "name": "Little Rock, AR",
-    "file": "locations/cities/little-rock-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Boulder City",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "boulder-city-nv"
   },
   {
-    "name": "Livingston, MT",
-    "file": "locations/cities/livingston-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Carson City",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "carson-city-nv"
   },
   {
-    "name": "Livonia, MI",
-    "file": "locations/cities/livonia-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Enterprise",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "enterprise-nv"
   },
   {
-    "name": "Logan, UT",
-    "file": "locations/cities/logan-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Fallon",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "fallon-nv"
   },
   {
-    "name": "Londonderry, NH",
-    "file": "locations/cities/londonderry-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Fernley",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "fernley-nv"
   },
   {
-    "name": "Long Beach, CA",
-    "file": "locations/cities/long-beach-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Henderson",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "henderson-nv"
   },
   {
-    "name": "Longmont, CO",
-    "file": "locations/cities/longmont-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "las-vegas-nv"
   },
   {
-    "name": "Lorain, OH",
-    "file": "locations/cities/lorain-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Mesquite",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "mesquite-nv"
   },
   {
-    "name": "Los Alamos, NM",
-    "file": "locations/cities/los-alamos-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "North Las Vegas",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "north-las-vegas-nv"
   },
   {
-    "name": "Los Angeles, CA",
-    "file": "locations/cities/los-angeles-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Paradise",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "paradise-nv"
   },
   {
-    "name": "Los, ANGELES",
-    "file": "locations/cities/los-angeles-forensic-economist.html",
-    "state": "ANGELES"
+    "city": "Reno",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "reno-nv"
   },
   {
-    "name": "Louisville, KY",
-    "file": "locations/cities/louisville-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Sparks",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "sparks-nv"
   },
   {
-    "name": "Loveland, CO",
-    "file": "locations/cities/loveland-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Spring Valley",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "spring-valley-nv"
   },
   {
-    "name": "Lowell, MA",
-    "file": "locations/cities/lowell-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Sunrise Manor",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "sunrise-manor-nv"
   },
   {
-    "name": "Lubbock, TX",
-    "file": "locations/cities/lubbock-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Winnemucca",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "slug": "winnemucca-nv"
   },
   {
-    "name": "Lynchburg, VA",
-    "file": "locations/cities/lynchburg-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Bedford",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "bedford-nh"
   },
   {
-    "name": "Lynn, MA",
-    "file": "locations/cities/lynn-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Concord",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "concord-nh"
   },
   {
-    "name": "Macon, GA",
-    "file": "locations/cities/macon-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Derry",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "derry-nh"
   },
   {
-    "name": "Madison, AL",
-    "file": "locations/cities/madison-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Dover",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "dover-nh"
   },
   {
-    "name": "Madison, SD",
-    "file": "locations/cities/madison-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Goffstown",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "goffstown-nh"
   },
   {
-    "name": "Madison, WI",
-    "file": "locations/cities/madison-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Hudson",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "hudson-nh"
   },
   {
-    "name": "Manchester, NH",
-    "file": "locations/cities/manchester-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Keene",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "keene-nh"
   },
   {
-    "name": "Mandan, ND",
-    "file": "locations/cities/mandan-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Laconia",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "laconia-nh"
   },
   {
-    "name": "Manhattan, KS",
-    "file": "locations/cities/manhattan-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Londonderry",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "londonderry-nh"
   },
   {
-    "name": "Maple Grove, MN",
-    "file": "locations/cities/maple-grove-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Manchester",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "manchester-nh"
   },
   {
-    "name": "Marietta, GA",
-    "file": "locations/cities/marietta-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Merrimack",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "merrimack-nh"
   },
   {
-    "name": "Marion, IA",
-    "file": "locations/cities/marion-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Nashua",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "nashua-nh"
   },
   {
-    "name": "Marrero, LA",
-    "file": "locations/cities/marrero-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Portsmouth",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "portsmouth-nh"
   },
   {
-    "name": "Martinsburg, WV",
-    "file": "locations/cities/martinsburg-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Rochester",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "rochester-nh"
   },
   {
-    "name": "Medford, OR",
-    "file": "locations/cities/medford-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Salem",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "slug": "salem-nh"
   },
   {
-    "name": "Memphis, TN",
-    "file": "locations/cities/memphis-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Brick",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "brick-nj"
   },
   {
-    "name": "Meriden, CT",
-    "file": "locations/cities/meriden-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Camden",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "camden-nj"
   },
   {
-    "name": "Meridian, ID",
-    "file": "locations/cities/meridian-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Cherry Hill",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "cherry-hill-nj"
   },
   {
-    "name": "Meridian, MS",
-    "file": "locations/cities/meridian-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Clifton",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "clifton-nj"
   },
   {
-    "name": "Merrimack, NH",
-    "file": "locations/cities/merrimack-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Edison",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "edison-nj"
   },
   {
-    "name": "Mesa, AZ",
-    "file": "locations/cities/mesa-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Elizabeth",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "elizabeth-nj"
   },
   {
-    "name": "Mesquite, NV",
-    "file": "locations/cities/mesquite-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Hamilton",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "hamilton-nj"
   },
   {
-    "name": "Miami, FL",
-    "file": "locations/cities/miami-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Jersey City",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "jersey-city-nj"
   },
   {
-    "name": ", MIAMI",
-    "file": "locations/cities/miami-forensic-economist.html",
-    "state": "MIAMI"
+    "city": "Lakewood",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "lakewood-nj"
   },
   {
-    "name": "Middlebury, VT",
-    "file": "locations/cities/middlebury-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Newark",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "newark-nj"
   },
   {
-    "name": "Middletown, CT",
-    "file": "locations/cities/middletown-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Passaic",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "passaic-nj"
   },
   {
-    "name": "Middletown, DE",
-    "file": "locations/cities/middletown-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Paterson",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "paterson-nj"
   },
   {
-    "name": "Midwest City, OK",
-    "file": "locations/cities/midwest-city-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Toms River",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "toms-river-nj"
   },
   {
-    "name": "Miles City, MT",
-    "file": "locations/cities/miles-city-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Trenton",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "trenton-nj"
   },
   {
-    "name": "Milford, CT",
-    "file": "locations/cities/milford-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Woodbridge",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "slug": "woodbridge-nj"
   },
   {
-    "name": "Milford, DE",
-    "file": "locations/cities/milford-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Alamogordo",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "alamogordo-nm"
   },
   {
-    "name": "Mililani, HI",
-    "file": "locations/cities/mililani-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "albuquerque-nm"
   },
   {
-    "name": "Mililani Town, HI",
-    "file": "locations/cities/mililani-town-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Carlsbad",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "carlsbad-nm"
   },
   {
-    "name": "Millsboro, DE",
-    "file": "locations/cities/millsboro-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Chaparral",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "chaparral-nm"
   },
   {
-    "name": "Milton, VT",
-    "file": "locations/cities/milton-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Clovis",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "clovis-nm"
   },
   {
-    "name": "Milwaukee, WI",
-    "file": "locations/cities/milwaukee-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Deming",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "deming-nm"
   },
   {
-    "name": "Minneapolis, MN",
-    "file": "locations/cities/minneapolis-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Farmington",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "farmington-nm"
   },
   {
-    "name": "Minot, ND",
-    "file": "locations/cities/minot-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Gallup",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "gallup-nm"
   },
   {
-    "name": "Miramar, FL",
-    "file": "locations/cities/miramar-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Hobbs",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "hobbs-nm"
   },
   {
-    "name": "Missoula, MT",
-    "file": "locations/cities/missoula-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "Las Cruces",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "las-cruces-nm"
   },
   {
-    "name": "Mitchell, SD",
-    "file": "locations/cities/mitchell-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Los Alamos",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "los-alamos-nm"
   },
   {
-    "name": "Mobile, AL",
-    "file": "locations/cities/mobile-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Rio Rancho",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "rio-rancho-nm"
   },
   {
-    "name": "Monroe, LA",
-    "file": "locations/cities/monroe-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Roswell",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "roswell-nm"
   },
   {
-    "name": "Montgomery, AL",
-    "file": "locations/cities/montgomery-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Santa Fe",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "santa-fe-nm"
   },
   {
-    "name": "Montpelier, VT",
-    "file": "locations/cities/montpelier-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Sunland Park",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "slug": "sunland-park-nm"
   },
   {
-    "name": "Moore, OK",
-    "file": "locations/cities/moore-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Albany",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "albany-ny"
   },
   {
-    "name": "Morgantown, WV",
-    "file": "locations/cities/morgantown-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Binghamton",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "binghamton-ny"
   },
   {
-    "name": "Moscow, ID",
-    "file": "locations/cities/moscow-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Buffalo",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "buffalo-ny"
   },
   {
-    "name": "Mount Pleasant, SC",
-    "file": "locations/cities/mount-pleasant-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Hempstead",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "hempstead-ny"
   },
   {
-    "name": "Mount Vernon, NY",
-    "file": "locations/cities/mount-vernon-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Mount Vernon",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "mount-vernon-ny"
   },
   {
-    "name": "Muncie, IN",
-    "file": "locations/cities/muncie-in-forensic-economist.html",
-    "state": "IN"
+    "city": "New Rochelle",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "new-rochelle-ny"
   },
   {
-    "name": "Murfreesboro, TN",
-    "file": "locations/cities/murfreesboro-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "New York",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "new-york-ny"
   },
   {
-    "name": "Murray, UT",
-    "file": "locations/cities/murray-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Niagara Falls",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "niagara-falls-ny"
   },
   {
-    "name": "Muskogee, OK",
-    "file": "locations/cities/muskogee-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Rochester",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "rochester-ny"
   },
   {
-    "name": "Myrtle Beach, SC",
-    "file": "locations/cities/myrtle-beach-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Schenectady",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "schenectady-ny"
   },
   {
-    "name": "Nampa, ID",
-    "file": "locations/cities/nampa-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Syracuse",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "syracuse-ny"
   },
   {
-    "name": "Naperville, IL",
-    "file": "locations/cities/naperville-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Troy",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "troy-ny"
   },
   {
-    "name": "Nashua, NH",
-    "file": "locations/cities/nashua-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Utica",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "utica-ny"
   },
   {
-    "name": "Nashville, TN",
-    "file": "locations/cities/nashville-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "White Plains",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "white-plains-ny"
   },
   {
-    "name": "New Bedford, MA",
-    "file": "locations/cities/new-bedford-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Yonkers",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "slug": "yonkers-ny"
   },
   {
-    "name": "New Britain, CT",
-    "file": "locations/cities/new-britain-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Asheville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "asheville-nc"
   },
   {
-    "name": "New Castle, DE",
-    "file": "locations/cities/new-castle-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Cary",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "cary-nc"
   },
   {
-    "name": "New Haven, CT",
-    "file": "locations/cities/new-haven-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Chapel Hill",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "chapel-hill-nc"
   },
   {
-    "name": "New Iberia, LA",
-    "file": "locations/cities/new-iberia-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "charlotte-nc"
   },
   {
-    "name": "New Orleans, LA",
-    "file": "locations/cities/new-orleans-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Concord",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "concord-nc"
   },
   {
-    "name": "New Rochelle, NY",
-    "file": "locations/cities/new-rochelle-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Durham",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "durham-nc"
   },
   {
-    "name": "New, YORK",
-    "file": "locations/cities/new-york-forensic-economist.html",
-    "state": "YORK"
+    "city": "Fayetteville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "fayetteville-nc"
   },
   {
-    "name": "New York, NY",
-    "file": "locations/cities/new-york-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Gastonia",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "gastonia-nc"
   },
   {
-    "name": "Newark, DE",
-    "file": "locations/cities/newark-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Greensboro",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "greensboro-nc"
   },
   {
-    "name": "Newark, NJ",
-    "file": "locations/cities/newark-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "High Point",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "high-point-nc"
   },
   {
-    "name": "Newport News, VA",
-    "file": "locations/cities/newport-news-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Jacksonville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "jacksonville-nc"
   },
   {
-    "name": "Newport, RI",
-    "file": "locations/cities/newport-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Raleigh",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "raleigh-nc"
   },
   {
-    "name": "Newton, MA",
-    "file": "locations/cities/newton-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Rocky Mount",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "rocky-mount-nc"
   },
   {
-    "name": "Niagara Falls, NY",
-    "file": "locations/cities/niagara-falls-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Wilmington",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "wilmington-nc"
   },
   {
-    "name": "Nicholasville, KY",
-    "file": "locations/cities/nicholasville-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Winston Salem",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "slug": "winston-salem-nc"
   },
   {
-    "name": "Noblesville, IN",
-    "file": "locations/cities/noblesville-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Beulah",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "beulah-nd"
   },
   {
-    "name": "Nome, AK",
-    "file": "locations/cities/nome-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Bismarck",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "bismarck-nd"
   },
   {
-    "name": "Norfolk, NE",
-    "file": "locations/cities/norfolk-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Devils Lake",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "devils-lake-nd"
   },
   {
-    "name": "Norfolk, VA",
-    "file": "locations/cities/norfolk-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Dickinson",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "dickinson-nd"
   },
   {
-    "name": "Norman, OK",
-    "file": "locations/cities/norman-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Fargo",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "fargo-nd"
   },
   {
-    "name": "North Charleston, SC",
-    "file": "locations/cities/north-charleston-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Grafton",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "grafton-nd"
   },
   {
-    "name": "North Kingstown, RI",
-    "file": "locations/cities/north-kingstown-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Grand Forks",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "grand-forks-nd"
   },
   {
-    "name": "North Las Vegas, NV",
-    "file": "locations/cities/north-las-vegas-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Jamestown",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "jamestown-nd"
   },
   {
-    "name": "North Little Rock, AR",
-    "file": "locations/cities/north-little-rock-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Mandan",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "mandan-nd"
   },
   {
-    "name": "North Platte, NE",
-    "file": "locations/cities/north-platte-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Minot",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "minot-nd"
   },
   {
-    "name": "North Providence, RI",
-    "file": "locations/cities/north-providence-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Valley City",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "valley-city-nd"
   },
   {
-    "name": "Norwalk, CT",
-    "file": "locations/cities/norwalk-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Wahpeton",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "wahpeton-nd"
   },
   {
-    "name": "Norwich, CT",
-    "file": "locations/cities/norwich-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Watford City",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "watford-city-nd"
   },
   {
-    "name": "Oakland, CA",
-    "file": "locations/cities/oakland-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "West Fargo",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "west-fargo-nd"
   },
   {
-    "name": "Ofallon, MO",
-    "file": "locations/cities/ofallon-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Williston",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "slug": "williston-nd"
   },
   {
-    "name": "Ogden, UT",
-    "file": "locations/cities/ogden-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Akron",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "akron-oh"
   },
   {
-    "name": "Oklahoma City, OK",
-    "file": "locations/cities/oklahoma-city-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Canton",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "canton-oh"
   },
   {
-    "name": "Olathe, KS",
-    "file": "locations/cities/olathe-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "cincinnati-oh"
   },
   {
-    "name": "Olive Branch, MS",
-    "file": "locations/cities/olive-branch-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Cleveland",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "cleveland-oh"
   },
   {
-    "name": "Omaha, NE",
-    "file": "locations/cities/omaha-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Columbus",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "columbus-oh"
   },
   {
-    "name": "Orem, UT",
-    "file": "locations/cities/orem-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Dayton",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "dayton-oh"
   },
   {
-    "name": "Orlando, FL",
-    "file": "locations/cities/orlando-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Elyria",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "elyria-oh"
   },
   {
-    "name": "Orono, ME",
-    "file": "locations/cities/orono-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Hamilton",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "hamilton-oh"
   },
   {
-    "name": "Oshkosh, WI",
-    "file": "locations/cities/oshkosh-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Kettering",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "kettering-oh"
   },
   {
-    "name": "Overland Park, KS",
-    "file": "locations/cities/overland-park-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Lakewood",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "lakewood-oh"
   },
   {
-    "name": "Owasso, OK",
-    "file": "locations/cities/owasso-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Lorain",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "lorain-oh"
   },
   {
-    "name": "Owensboro, KY",
-    "file": "locations/cities/owensboro-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Parma",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "parma-oh"
   },
   {
-    "name": "Paducah, KY",
-    "file": "locations/cities/paducah-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "Springfield",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "springfield-oh"
   },
   {
-    "name": "Palmer, AK",
-    "file": "locations/cities/palmer-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Toledo",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "toledo-oh"
   },
   {
-    "name": "Papillion, NE",
-    "file": "locations/cities/papillion-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Youngstown",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "slug": "youngstown-oh"
   },
   {
-    "name": "Paradise, NV",
-    "file": "locations/cities/paradise-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Bartlesville",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "bartlesville-ok"
   },
   {
-    "name": "Parkersburg, WV",
-    "file": "locations/cities/parkersburg-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Broken Arrow",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "broken-arrow-ok"
   },
   {
-    "name": "Parma, OH",
-    "file": "locations/cities/parma-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Edmond",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "edmond-ok"
   },
   {
-    "name": "Pasco, WA",
-    "file": "locations/cities/pasco-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Enid",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "enid-ok"
   },
   {
-    "name": "Passaic, NJ",
-    "file": "locations/cities/passaic-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Lawton",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "lawton-ok"
   },
   {
-    "name": "Paterson, NJ",
-    "file": "locations/cities/paterson-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Midwest City",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "midwest-city-ok"
   },
   {
-    "name": "Pawtucket, RI",
-    "file": "locations/cities/pawtucket-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Moore",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "moore-ok"
   },
   {
-    "name": "Pearl City, HI",
-    "file": "locations/cities/pearl-city-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Muskogee",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "muskogee-ok"
   },
   {
-    "name": "Pearl, MS",
-    "file": "locations/cities/pearl-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Norman",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "norman-ok"
   },
   {
-    "name": "Pembroke Pines, FL",
-    "file": "locations/cities/pembroke-pines-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Oklahoma City",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "oklahoma-city-ok"
   },
   {
-    "name": "Peoria, AZ",
-    "file": "locations/cities/peoria-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Owasso",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "owasso-ok"
   },
   {
-    "name": "Peoria, IL",
-    "file": "locations/cities/peoria-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Ponca City",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "ponca-city-ok"
   },
   {
-    "name": "Phenix City, AL",
-    "file": "locations/cities/phenix-city-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Shawnee",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "shawnee-ok"
   },
   {
-    "name": "Philadelphia, PA",
-    "file": "locations/cities/philadelphia-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Stillwater",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "stillwater-ok"
   },
   {
-    "name": "Phoenix, AZ",
-    "file": "locations/cities/phoenix-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Tulsa",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "slug": "tulsa-ok"
   },
   {
-    "name": "Pierre, SD",
-    "file": "locations/cities/pierre-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Albany",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "albany-or"
   },
   {
-    "name": "Pine Bluff, AR",
-    "file": "locations/cities/pine-bluff-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Beaverton",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "beaverton-or"
   },
   {
-    "name": "Pittsburgh, PA",
-    "file": "locations/cities/pittsburgh-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Bend",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "bend-or"
   },
   {
-    "name": "Plano, TX",
-    "file": "locations/cities/plano-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Corvallis",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "corvallis-or"
   },
   {
-    "name": "Plymouth, MN",
-    "file": "locations/cities/plymouth-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Eugene",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "eugene-or"
   },
   {
-    "name": "Pocatello, ID",
-    "file": "locations/cities/pocatello-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Grants Pass",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "grants-pass-or"
   },
   {
-    "name": "Ponca City, OK",
-    "file": "locations/cities/ponca-city-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Gresham",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "gresham-or"
   },
   {
-    "name": "Port St Lucie, FL",
-    "file": "locations/cities/port-st-lucie-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Hillsboro",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "hillsboro-or"
   },
   {
-    "name": "Portland, ME",
-    "file": "locations/cities/portland-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Keizer",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "keizer-or"
   },
   {
-    "name": "Portland, OR",
-    "file": "locations/cities/portland-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Lake Oswego",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "lake-oswego-or"
   },
   {
-    "name": "Portsmouth, NH",
-    "file": "locations/cities/portsmouth-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Medford",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "medford-or"
   },
   {
-    "name": "Portsmouth, VA",
-    "file": "locations/cities/portsmouth-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Portland",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "portland-or"
   },
   {
-    "name": "Post Falls, ID",
-    "file": "locations/cities/post-falls-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Salem",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "salem-or"
   },
   {
-    "name": "Powell, WY",
-    "file": "locations/cities/powell-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Springfield",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "springfield-or"
   },
   {
-    "name": "Prairieville, LA",
-    "file": "locations/cities/prairieville-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Tigard",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "slug": "tigard-or"
   },
   {
-    "name": "Prattville, AL",
-    "file": "locations/cities/prattville-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Allentown",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "allentown-pa"
   },
   {
-    "name": "Presque Isle, ME",
-    "file": "locations/cities/presque-isle-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Altoona",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "altoona-pa"
   },
   {
-    "name": "Providence, RI",
-    "file": "locations/cities/providence-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Bethlehem",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "bethlehem-pa"
   },
   {
-    "name": "Provo, UT",
-    "file": "locations/cities/provo-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Chester",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "chester-pa"
   },
   {
-    "name": "Pueblo, CO",
-    "file": "locations/cities/pueblo-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Easton",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "easton-pa"
   },
   {
-    "name": "Quincy, MA",
-    "file": "locations/cities/quincy-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Erie",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "erie-pa"
   },
   {
-    "name": "Racine, WI",
-    "file": "locations/cities/racine-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Harrisburg",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "harrisburg-pa"
   },
   {
-    "name": "Raleigh, NC",
-    "file": "locations/cities/raleigh-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Lancaster",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "lancaster-pa"
   },
   {
-    "name": "Rapid City, SD",
-    "file": "locations/cities/rapid-city-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "philadelphia-pa"
   },
   {
-    "name": "Rawlins, WY",
-    "file": "locations/cities/rawlins-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "pittsburgh-pa"
   },
   {
-    "name": "Reading, PA",
-    "file": "locations/cities/reading-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Reading",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "reading-pa"
   },
   {
-    "name": "Reno, NV",
-    "file": "locations/cities/reno-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Scranton",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "scranton-pa"
   },
   {
-    "name": "Renton, WA",
-    "file": "locations/cities/renton-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "State College",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "state-college-pa"
   },
   {
-    "name": "Rexburg, ID",
-    "file": "locations/cities/rexburg-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Wilkes Barre",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "wilkes-barre-pa"
   },
   {
-    "name": "Richmond, KY",
-    "file": "locations/cities/richmond-ky-forensic-economist.html",
-    "state": "KY"
+    "city": "York",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "slug": "york-pa"
   },
   {
-    "name": "Richmond, VA",
-    "file": "locations/cities/richmond-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Bristol",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "bristol-ri"
   },
   {
-    "name": "Ridgeland, MS",
-    "file": "locations/cities/ridgeland-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Central Falls",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "central-falls-ri"
   },
   {
-    "name": "Rio Rancho, NM",
-    "file": "locations/cities/rio-rancho-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Coventry",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "coventry-ri"
   },
   {
-    "name": "Riverside, CA",
-    "file": "locations/cities/riverside-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Cranston",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "cranston-ri"
   },
   {
-    "name": "Riverton, WY",
-    "file": "locations/cities/riverton-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "East Providence",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "east-providence-ri"
   },
   {
-    "name": "Roanoke, VA",
-    "file": "locations/cities/roanoke-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Johnston",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "johnston-ri"
   },
   {
-    "name": "Rochester, MN",
-    "file": "locations/cities/rochester-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Newport",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "newport-ri"
   },
   {
-    "name": "Rochester, NH",
-    "file": "locations/cities/rochester-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "North Kingstown",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "north-kingstown-ri"
   },
   {
-    "name": "Rochester, NY",
-    "file": "locations/cities/rochester-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "North Providence",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "north-providence-ri"
   },
   {
-    "name": "Rock Hill, SC",
-    "file": "locations/cities/rock-hill-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Pawtucket",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "pawtucket-ri"
   },
   {
-    "name": "Rock Springs, WY",
-    "file": "locations/cities/rock-springs-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Providence",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "providence-ri"
   },
   {
-    "name": "Rockford, IL",
-    "file": "locations/cities/rockford-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Warwick",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "warwick-ri"
   },
   {
-    "name": "Rockville, MD",
-    "file": "locations/cities/rockville-md-forensic-economist.html",
-    "state": "MD"
+    "city": "West Warwick",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "west-warwick-ri"
   },
   {
-    "name": "Rocky Mount, NC",
-    "file": "locations/cities/rocky-mount-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Westerly",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "westerly-ri"
   },
   {
-    "name": "Rogers, AR",
-    "file": "locations/cities/rogers-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Woonsocket",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "slug": "woonsocket-ri"
   },
   {
-    "name": "Roswell, GA",
-    "file": "locations/cities/roswell-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Aiken",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "aiken-sc"
   },
   {
-    "name": "Roswell, NM",
-    "file": "locations/cities/roswell-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Anderson",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "anderson-sc"
   },
   {
-    "name": "Rutland, VT",
-    "file": "locations/cities/rutland-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Charleston",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "charleston-sc"
   },
   {
-    "name": "Saco, ME",
-    "file": "locations/cities/saco-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Columbia",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "columbia-sc"
   },
   {
-    "name": "Sacramento, CA",
-    "file": "locations/cities/sacramento-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Florence",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "florence-sc"
   },
   {
-    "name": "Saint Charles, MO",
-    "file": "locations/cities/saint-charles-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Goose Creek",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "goose-creek-sc"
   },
   {
-    "name": "Saint Cloud, MN",
-    "file": "locations/cities/saint-cloud-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Greenville",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "greenville-sc"
   },
   {
-    "name": "Saint Joseph, MO",
-    "file": "locations/cities/saint-joseph-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Hilton Head Island",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "hilton-head-island-sc"
   },
   {
-    "name": "Saint Louis, MO",
-    "file": "locations/cities/saint-louis-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Mount Pleasant",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "mount-pleasant-sc"
   },
   {
-    "name": "Saint Paul, MN",
-    "file": "locations/cities/saint-paul-mn-forensic-economist.html",
-    "state": "MN"
+    "city": "Myrtle Beach",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "myrtle-beach-sc"
   },
   {
-    "name": "Saint Peters, MO",
-    "file": "locations/cities/saint-peters-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "North Charleston",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "north-charleston-sc"
   },
   {
-    "name": "Salem, NH",
-    "file": "locations/cities/salem-nh-forensic-economist.html",
-    "state": "NH"
+    "city": "Rock Hill",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "rock-hill-sc"
   },
   {
-    "name": "Salem, OR",
-    "file": "locations/cities/salem-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Spartanburg",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "spartanburg-sc"
   },
   {
-    "name": "Salina, KS",
-    "file": "locations/cities/salina-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Summerville",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "summerville-sc"
   },
   {
-    "name": "Salisbury, MD",
-    "file": "locations/cities/salisbury-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Sumter",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "slug": "sumter-sc"
   },
   {
-    "name": "Salt Lake City, UT",
-    "file": "locations/cities/salt-lake-city-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Aberdeen",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "aberdeen-sd"
   },
   {
-    "name": "San Antonio, TX",
-    "file": "locations/cities/san-antonio-tx-forensic-economist.html",
-    "state": "TX"
+    "city": "Box Elder",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "box-elder-sd"
   },
   {
-    "name": "San Diego, CA",
-    "file": "locations/cities/san-diego-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Brandon",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "brandon-sd"
   },
   {
-    "name": "San Francisco, CA",
-    "file": "locations/cities/san-francisco-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Brookings",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "brookings-sd"
   },
   {
-    "name": "San Jose, CA",
-    "file": "locations/cities/san-jose-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Huron",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "huron-sd"
   },
   {
-    "name": "Sandy Springs, GA",
-    "file": "locations/cities/sandy-springs-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Madison",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "madison-sd"
   },
   {
-    "name": "Sandy, UT",
-    "file": "locations/cities/sandy-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Mitchell",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "mitchell-sd"
   },
   {
-    "name": "Sanford, ME",
-    "file": "locations/cities/sanford-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Pierre",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "pierre-sd"
   },
   {
-    "name": "Santa Ana, CA",
-    "file": "locations/cities/santa-ana-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Rapid City",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "rapid-city-sd"
   },
   {
-    "name": "Santa Fe, NM",
-    "file": "locations/cities/santa-fe-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Sioux Falls",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "sioux-falls-sd"
   },
   {
-    "name": "Savannah, GA",
-    "file": "locations/cities/savannah-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Spearfish",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "spearfish-sd"
   },
   {
-    "name": "Schaumburg, IL",
-    "file": "locations/cities/schaumburg-il-forensic-economist.html",
-    "state": "IL"
+    "city": "Sturgis",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "sturgis-sd"
   },
   {
-    "name": "Schenectady, NY",
-    "file": "locations/cities/schenectady-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Vermillion",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "vermillion-sd"
   },
   {
-    "name": "Schofield Barracks, HI",
-    "file": "locations/cities/schofield-barracks-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Watertown",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "watertown-sd"
   },
   {
-    "name": "Scottsbluff, NE",
-    "file": "locations/cities/scottsbluff-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Yankton",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "slug": "yankton-sd"
   },
   {
-    "name": "Scottsdale, AZ",
-    "file": "locations/cities/scottsdale-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Bartlett",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "bartlett-tn"
   },
   {
-    "name": "Scranton, PA",
-    "file": "locations/cities/scranton-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Brentwood",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "brentwood-tn"
   },
   {
-    "name": "Seaford, DE",
-    "file": "locations/cities/seaford-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Chattanooga",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "chattanooga-tn"
   },
   {
-    "name": "Seattle, WA",
-    "file": "locations/cities/seattle-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Clarksville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "clarksville-tn"
   },
   {
-    "name": "Shawnee, KS",
-    "file": "locations/cities/shawnee-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Cleveland",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "cleveland-tn"
   },
   {
-    "name": "Shawnee, OK",
-    "file": "locations/cities/shawnee-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Collierville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "collierville-tn"
   },
   {
-    "name": "Sheboygan, WI",
-    "file": "locations/cities/sheboygan-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Franklin",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "franklin-tn"
   },
   {
-    "name": "Shelton, CT",
-    "file": "locations/cities/shelton-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Hendersonville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "hendersonville-tn"
   },
   {
-    "name": "Sheridan, WY",
-    "file": "locations/cities/sheridan-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Johnson City",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "johnson-city-tn"
   },
   {
-    "name": "Sherwood, AR",
-    "file": "locations/cities/sherwood-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Kingsport",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "kingsport-tn"
   },
   {
-    "name": "Shreveport, LA",
-    "file": "locations/cities/shreveport-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "knoxville-tn"
   },
   {
-    "name": "Sioux City, IA",
-    "file": "locations/cities/sioux-city-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Memphis",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "memphis-tn"
   },
   {
-    "name": "Sioux Falls, SD",
-    "file": "locations/cities/sioux-falls-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Murfreesboro",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "murfreesboro-tn"
   },
   {
-    "name": "Sitka, AK",
-    "file": "locations/cities/sitka-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Nashville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "nashville-tn"
   },
   {
-    "name": "Slidell, LA",
-    "file": "locations/cities/slidell-la-forensic-economist.html",
-    "state": "LA"
+    "city": "Smyrna",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "slug": "smyrna-tn"
   },
   {
-    "name": "Smyrna, DE",
-    "file": "locations/cities/smyrna-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Amarillo",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "amarillo-tx"
   },
   {
-    "name": "Smyrna, GA",
-    "file": "locations/cities/smyrna-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Arlington",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "arlington-tx"
   },
   {
-    "name": "Smyrna, TN",
-    "file": "locations/cities/smyrna-tn-forensic-economist.html",
-    "state": "TN"
+    "city": "Austin",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "austin-tx"
   },
   {
-    "name": "Soldotna, AK",
-    "file": "locations/cities/soldotna-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Corpus Christi",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "corpus-christi-tx"
   },
   {
-    "name": "Somerville, MA",
-    "file": "locations/cities/somerville-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Dallas",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "dallas-tx"
   },
   {
-    "name": "South Bend, IN",
-    "file": "locations/cities/south-bend-in-forensic-economist.html",
-    "state": "IN"
+    "city": "El Paso",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "el-paso-tx"
   },
   {
-    "name": "South Burlington, VT",
-    "file": "locations/cities/south-burlington-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Fort Worth",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "fort-worth-tx"
   },
   {
-    "name": "South Charleston, WV",
-    "file": "locations/cities/south-charleston-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "Garland",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "garland-tx"
   },
   {
-    "name": "South Jordan, UT",
-    "file": "locations/cities/south-jordan-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Grand Prairie",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "grand-prairie-tx"
   },
   {
-    "name": "South Portland, ME",
-    "file": "locations/cities/south-portland-me-forensic-economist.html",
-    "state": "ME"
+    "city": "Houston",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "houston-tx"
   },
   {
-    "name": "South Sioux City, NE",
-    "file": "locations/cities/south-sioux-city-ne-forensic-economist.html",
-    "state": "NE"
+    "city": "Irving",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "irving-tx"
   },
   {
-    "name": "Southaven, MS",
-    "file": "locations/cities/southaven-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Laredo",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "laredo-tx"
   },
   {
-    "name": "Southfield, MI",
-    "file": "locations/cities/southfield-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Lubbock",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "lubbock-tx"
   },
   {
-    "name": "Sparks, NV",
-    "file": "locations/cities/sparks-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Plano",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "plano-tx"
   },
   {
-    "name": "Spartanburg, SC",
-    "file": "locations/cities/spartanburg-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "San Antonio",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "slug": "san-antonio-tx"
   },
   {
-    "name": "Spearfish, SD",
-    "file": "locations/cities/spearfish-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Draper",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "draper-ut"
   },
   {
-    "name": "Spokane Valley, WA",
-    "file": "locations/cities/spokane-valley-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Layton",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "layton-ut"
   },
   {
-    "name": "Spokane, WA",
-    "file": "locations/cities/spokane-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Lehi",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "lehi-ut"
   },
   {
-    "name": "Spring Valley, NV",
-    "file": "locations/cities/spring-valley-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Logan",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "logan-ut"
   },
   {
-    "name": "Springdale, AR",
-    "file": "locations/cities/springdale-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Murray",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "murray-ut"
   },
   {
-    "name": "Springfield, MA",
-    "file": "locations/cities/springfield-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Ogden",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "ogden-ut"
   },
   {
-    "name": "Springfield, MO",
-    "file": "locations/cities/springfield-mo-forensic-economist.html",
-    "state": "MO"
+    "city": "Orem",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "orem-ut"
   },
   {
-    "name": "Springfield, OH",
-    "file": "locations/cities/springfield-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Provo",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "provo-ut"
   },
   {
-    "name": "Springfield, OR",
-    "file": "locations/cities/springfield-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "salt-lake-city-ut"
   },
   {
-    "name": "St Albans, VT",
-    "file": "locations/cities/st-albans-vt-forensic-economist.html",
-    "state": "VT"
+    "city": "Sandy",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "sandy-ut"
   },
   {
-    "name": "St Albans, WV",
-    "file": "locations/cities/st-albans-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "South Jordan",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "south-jordan-ut"
   },
   {
-    "name": "St George, UT",
-    "file": "locations/cities/st-george-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "St George",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "st-george-ut"
   },
   {
-    "name": "St Petersburg, FL",
-    "file": "locations/cities/st-petersburg-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Taylorsville",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "taylorsville-ut"
   },
   {
-    "name": "Stamford, CT",
-    "file": "locations/cities/stamford-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "West Jordan",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "west-jordan-ut"
   },
   {
-    "name": "Starkville, MS",
-    "file": "locations/cities/starkville-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "West Valley City",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "slug": "west-valley-city-ut"
   },
   {
-    "name": "State College, PA",
-    "file": "locations/cities/state-college-pa-forensic-economist.html",
-    "state": "PA"
+    "city": "Barre",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "barre-vt"
   },
   {
-    "name": "Sterling Heights, MI",
-    "file": "locations/cities/sterling-heights-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Bennington",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "bennington-vt"
   },
   {
-    "name": "Stillwater, OK",
-    "file": "locations/cities/stillwater-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Brattleboro",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "brattleboro-vt"
   },
   {
-    "name": "Stockton, CA",
-    "file": "locations/cities/stockton-ca-forensic-economist.html",
-    "state": "CA"
+    "city": "Burlington",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "burlington-vt"
   },
   {
-    "name": "Sturgis, SD",
-    "file": "locations/cities/sturgis-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Colchester",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "colchester-vt"
   },
   {
-    "name": "Suffolk, VA",
-    "file": "locations/cities/suffolk-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Essex",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "essex-vt"
   },
   {
-    "name": "Summerville, SC",
-    "file": "locations/cities/summerville-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Hartford",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "hartford-vt"
   },
   {
-    "name": "Sumter, SC",
-    "file": "locations/cities/sumter-sc-forensic-economist.html",
-    "state": "SC"
+    "city": "Middlebury",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "middlebury-vt"
   },
   {
-    "name": "Sunland Park, NM",
-    "file": "locations/cities/sunland-park-nm-forensic-economist.html",
-    "state": "NM"
+    "city": "Milton",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "milton-vt"
   },
   {
-    "name": "Sunrise Manor, NV",
-    "file": "locations/cities/sunrise-manor-nv-forensic-economist.html",
-    "state": "NV"
+    "city": "Montpelier",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "montpelier-vt"
   },
   {
-    "name": "Surprise, AZ",
-    "file": "locations/cities/surprise-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Rutland",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "rutland-vt"
   },
   {
-    "name": "Syracuse, NY",
-    "file": "locations/cities/syracuse-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "South Burlington",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "south-burlington-vt"
   },
   {
-    "name": "Tacoma, WA",
-    "file": "locations/cities/tacoma-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "St Albans",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "st-albans-vt"
   },
   {
-    "name": "Takoma Park, MD",
-    "file": "locations/cities/takoma-park-md-forensic-economist.html",
-    "state": "MD"
+    "city": "Williston",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "williston-vt"
   },
   {
-    "name": "Tallahassee, FL",
-    "file": "locations/cities/tallahassee-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Winooski",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "slug": "winooski-vt"
   },
   {
-    "name": "Tampa, FL",
-    "file": "locations/cities/tampa-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Alexandria",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "alexandria-va"
   },
   {
-    "name": "Taylorsville, UT",
-    "file": "locations/cities/taylorsville-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Charlottesville",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "charlottesville-va"
   },
   {
-    "name": "Tempe, AZ",
-    "file": "locations/cities/tempe-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Chesapeake",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "chesapeake-va"
   },
   {
-    "name": "Terre Haute, IN",
-    "file": "locations/cities/terre-haute-in-forensic-economist.html",
-    "state": "IN"
+    "city": "Danville",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "danville-va"
   },
   {
-    "name": "Texarkana, AR",
-    "file": "locations/cities/texarkana-ar-forensic-economist.html",
-    "state": "AR"
+    "city": "Hampton",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "hampton-va"
   },
   {
-    "name": "Thornton, CO",
-    "file": "locations/cities/thornton-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Harrisonburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "harrisonburg-va"
   },
   {
-    "name": "Tigard, OR",
-    "file": "locations/cities/tigard-or-forensic-economist.html",
-    "state": "OR"
+    "city": "Leesburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "leesburg-va"
   },
   {
-    "name": "Toledo, OH",
-    "file": "locations/cities/toledo-oh-forensic-economist.html",
-    "state": "OH"
+    "city": "Lynchburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "lynchburg-va"
   },
   {
-    "name": "Toms River, NJ",
-    "file": "locations/cities/toms-river-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Newport News",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "newport-news-va"
   },
   {
-    "name": "Topeka, KS",
-    "file": "locations/cities/topeka-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Norfolk",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "norfolk-va"
   },
   {
-    "name": "Torrington, WY",
-    "file": "locations/cities/torrington-wy-forensic-economist.html",
-    "state": "WY"
+    "city": "Portsmouth",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "portsmouth-va"
   },
   {
-    "name": "Trenton, NJ",
-    "file": "locations/cities/trenton-nj-forensic-economist.html",
-    "state": "NJ"
+    "city": "Richmond",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "richmond-va"
   },
   {
-    "name": "Troy, MI",
-    "file": "locations/cities/troy-mi-forensic-economist.html",
-    "state": "MI"
+    "city": "Roanoke",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "roanoke-va"
   },
   {
-    "name": "Troy, NY",
-    "file": "locations/cities/troy-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Suffolk",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "suffolk-va"
   },
   {
-    "name": "Tucson, AZ",
-    "file": "locations/cities/tucson-az-forensic-economist.html",
-    "state": "AZ"
+    "city": "Virginia Beach",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "slug": "virginia-beach-va"
   },
   {
-    "name": "Tulsa, OK",
-    "file": "locations/cities/tulsa-ok-forensic-economist.html",
-    "state": "OK"
+    "city": "Auburn",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "auburn-wa"
   },
   {
-    "name": "Tupelo, MS",
-    "file": "locations/cities/tupelo-ms-forensic-economist.html",
-    "state": "MS"
+    "city": "Bellevue",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "bellevue-wa"
   },
   {
-    "name": "Tuscaloosa, AL",
-    "file": "locations/cities/tuscaloosa-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Bellingham",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "bellingham-wa"
   },
   {
-    "name": "Twin Falls, ID",
-    "file": "locations/cities/twin-falls-id-forensic-economist.html",
-    "state": "ID"
+    "city": "Everett",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "everett-wa"
   },
   {
-    "name": "Unalaska, AK",
-    "file": "locations/cities/unalaska-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Federal Way",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "federal-way-wa"
   },
   {
-    "name": "Urbandale, IA",
-    "file": "locations/cities/urbandale-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Kennewick",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "kennewick-wa"
   },
   {
-    "name": "Utica, NY",
-    "file": "locations/cities/utica-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Kent",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "kent-wa"
   },
   {
-    "name": "Valdez, AK",
-    "file": "locations/cities/valdez-ak-forensic-economist.html",
-    "state": "AK"
+    "city": "Pasco",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "pasco-wa"
   },
   {
-    "name": "Valdosta, GA",
-    "file": "locations/cities/valdosta-ga-forensic-economist.html",
-    "state": "GA"
+    "city": "Renton",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "renton-wa"
   },
   {
-    "name": "Valley City, ND",
-    "file": "locations/cities/valley-city-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Seattle",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "seattle-wa"
   },
   {
-    "name": "Vancouver, WA",
-    "file": "locations/cities/vancouver-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "Spokane",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "spokane-wa"
   },
   {
-    "name": "Vermillion, SD",
-    "file": "locations/cities/vermillion-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Spokane Valley",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "spokane-valley-wa"
   },
   {
-    "name": "Vestavia Hills, AL",
-    "file": "locations/cities/vestavia-hills-al-forensic-economist.html",
-    "state": "AL"
+    "city": "Tacoma",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "tacoma-wa"
   },
   {
-    "name": "Virginia Beach, VA",
-    "file": "locations/cities/virginia-beach-va-forensic-economist.html",
-    "state": "VA"
+    "city": "Vancouver",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "vancouver-wa"
   },
   {
-    "name": "Wahiawa, HI",
-    "file": "locations/cities/wahiawa-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Yakima",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "slug": "yakima-wa"
   },
   {
-    "name": "Wahpeton, ND",
-    "file": "locations/cities/wahpeton-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Beckley",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "beckley-wv"
   },
   {
-    "name": "Waipahu, HI",
-    "file": "locations/cities/waipahu-hi-forensic-economist.html",
-    "state": "HI"
+    "city": "Buckhannon",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "buckhannon-wv"
   },
   {
-    "name": "Warwick, RI",
-    "file": "locations/cities/warwick-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Charles Town",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "charles-town-wv"
   },
   {
-    "name": "Waterbury, CT",
-    "file": "locations/cities/waterbury-ct-forensic-economist.html",
-    "state": "CT"
+    "city": "Charleston",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "charleston-wv"
   },
   {
-    "name": "Waterloo, IA",
-    "file": "locations/cities/waterloo-ia-forensic-economist.html",
-    "state": "IA"
+    "city": "Clarksburg",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "clarksburg-wv"
   },
   {
-    "name": "Watertown, SD",
-    "file": "locations/cities/watertown-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Fairmont",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "fairmont-wv"
   },
   {
-    "name": "Watford City, ND",
-    "file": "locations/cities/watford-city-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Huntington",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "huntington-wv"
   },
   {
-    "name": "Waukesha, WI",
-    "file": "locations/cities/waukesha-wi-forensic-economist.html",
-    "state": "WI"
+    "city": "Hurricane",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "hurricane-wv"
   },
   {
-    "name": "West Fargo, ND",
-    "file": "locations/cities/west-fargo-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Lewisburg",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "lewisburg-wv"
   },
   {
-    "name": "West Palm Beach, FL",
-    "file": "locations/cities/west-palm-beach-fl-forensic-economist.html",
-    "state": "FL"
+    "city": "Martinsburg",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "martinsburg-wv"
   },
   {
-    "name": "West Valley City, UT",
-    "file": "locations/cities/west-valley-city-ut-forensic-economist.html",
-    "state": "UT"
+    "city": "Morgantown",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "morgantown-wv"
   },
   {
-    "name": "Westminster, CO",
-    "file": "locations/cities/westminster-co-forensic-economist.html",
-    "state": "CO"
+    "city": "Parkersburg",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "parkersburg-wv"
   },
   {
-    "name": "Wheeling, WV",
-    "file": "locations/cities/wheeling-wv-forensic-economist.html",
-    "state": "WV"
+    "city": "South Charleston",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "south-charleston-wv"
   },
   {
-    "name": "Whitefish, MT",
-    "file": "locations/cities/whitefish-mt-forensic-economist.html",
-    "state": "MT"
+    "city": "St Albans",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "st-albans-wv"
   },
   {
-    "name": "Wichita, KS",
-    "file": "locations/cities/wichita-ks-forensic-economist.html",
-    "state": "KS"
+    "city": "Wheeling",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "slug": "wheeling-wv"
   },
   {
-    "name": "Williston, ND",
-    "file": "locations/cities/williston-nd-forensic-economist.html",
-    "state": "ND"
+    "city": "Appleton",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "appleton-wi"
   },
   {
-    "name": "Wilmington, DE",
-    "file": "locations/cities/wilmington-de-forensic-economist.html",
-    "state": "DE"
+    "city": "Eau Claire",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "eau-claire-wi"
   },
   {
-    "name": "Wilmington, NC",
-    "file": "locations/cities/wilmington-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Fond Du Lac",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "fond-du-lac-wi"
   },
   {
-    "name": "Winston Salem, NC",
-    "file": "locations/cities/winston-salem-nc-forensic-economist.html",
-    "state": "NC"
+    "city": "Green Bay",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "green-bay-wi"
   },
   {
-    "name": "Woonsocket, RI",
-    "file": "locations/cities/woonsocket-ri-forensic-economist.html",
-    "state": "RI"
+    "city": "Janesville",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "janesville-wi"
   },
   {
-    "name": "Worcester, MA",
-    "file": "locations/cities/worcester-ma-forensic-economist.html",
-    "state": "MA"
+    "city": "Kenosha",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "kenosha-wi"
   },
   {
-    "name": "Yakima, WA",
-    "file": "locations/cities/yakima-wa-forensic-economist.html",
-    "state": "WA"
+    "city": "La Crosse",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "la-crosse-wi"
   },
   {
-    "name": "Yankton, SD",
-    "file": "locations/cities/yankton-sd-forensic-economist.html",
-    "state": "SD"
+    "city": "Madison",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "madison-wi"
   },
   {
-    "name": "Yonkers, NY",
-    "file": "locations/cities/yonkers-ny-forensic-economist.html",
-    "state": "NY"
+    "city": "Milwaukee",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "milwaukee-wi"
+  },
+  {
+    "city": "Oshkosh",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "oshkosh-wi"
+  },
+  {
+    "city": "Racine",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "racine-wi"
+  },
+  {
+    "city": "Sheboygan",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "sheboygan-wi"
+  },
+  {
+    "city": "Waukesha",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "waukesha-wi"
+  },
+  {
+    "city": "Wauwatosa",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "wauwatosa-wi"
+  },
+  {
+    "city": "West Allis",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "slug": "west-allis-wi"
+  },
+  {
+    "city": "Casper",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "casper-wy"
+  },
+  {
+    "city": "Cheyenne",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "cheyenne-wy"
+  },
+  {
+    "city": "Cody",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "cody-wy"
+  },
+  {
+    "city": "Evanston",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "evanston-wy"
+  },
+  {
+    "city": "Gillette",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "gillette-wy"
+  },
+  {
+    "city": "Green River",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "green-river-wy"
+  },
+  {
+    "city": "Jackson",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "jackson-wy"
+  },
+  {
+    "city": "Lander",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "lander-wy"
+  },
+  {
+    "city": "Laramie",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "laramie-wy"
+  },
+  {
+    "city": "Powell",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "powell-wy"
+  },
+  {
+    "city": "Rawlins",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "rawlins-wy"
+  },
+  {
+    "city": "Riverton",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "riverton-wy"
+  },
+  {
+    "city": "Rock Springs",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "rock-springs-wy"
+  },
+  {
+    "city": "Sheridan",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "sheridan-wy"
+  },
+  {
+    "city": "Torrington",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "slug": "torrington-wy"
   }
 ];
