@@ -104,24 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Observe all cards and sections
     const elementsToAnimate = document.querySelectorAll('.service-card, .benefit-card, .testimonial, .case-study, .publication-card, .location-card');
-    console.log('Elements found for animation:', elementsToAnimate.length);
     
+    // Don't hide any elements - let CSS handle initial state
     elementsToAnimate.forEach(el => {
-        // Only hide elements that are below the fold
-        const rect = el.getBoundingClientRect();
-        const isVisible = rect.top <= window.innerHeight;
-        
-        if (!isVisible) {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            observer.observe(el);
-        } else {
-            // Ensure visible elements are shown immediately
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-            // Remove any conflicting classes
-            el.classList.remove('fade-in-up');
-        }
+        observer.observe(el);
     });
     
     window.addEventListener('scroll', function() {
@@ -628,27 +614,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Progressive loading states for images and content
+    // Progressive loading states for images only
     function addProgressiveLoading() {
-        const images = document.querySelectorAll('img:not([data-src])');
+        const images = document.querySelectorAll('img[data-src]');
         images.forEach(img => {
-            if (!img.complete) {
-                img.style.opacity = '0';
-                img.style.transition = 'opacity 0.3s ease';
-                img.addEventListener('load', () => {
-                    img.style.opacity = '1';
+            // Only handle lazy-loaded images with data-src
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
                 });
-            }
-        });
-
-        // Add skeleton loading for cards that take time to load
-        const cards = document.querySelectorAll('.service-card, .benefit-card');
-        cards.forEach(card => {
-            // Temporarily add skeleton class, remove after short delay
-            card.classList.add('skeleton');
-            setTimeout(() => {
-                card.classList.remove('skeleton');
-            }, Math.random() * 300 + 100);
+            });
+            imageObserver.observe(img);
         });
     }
 

@@ -2740,6 +2740,23 @@ img:hover {
     transform: translateY(0) !important;
 }
 
+/* Ensure all content is visible by default */
+.service-card,
+.benefit-card,
+.testimonial,
+.case-study,
+.publication-card,
+.location-card,
+.hero,
+.hero-content,
+.services-grid,
+.trust-indicators,
+.main-nav {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
 /* Pulse Animation for CTAs */
 @keyframes pulse {
     0% {
