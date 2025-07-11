@@ -113,6 +113,12 @@ body * {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
     padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
@@ -126,6 +132,19 @@ body * {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.95;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Buttons */
@@ -151,6 +170,29 @@ body * {
     background: var(--light-bg);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    font-size: 1.2em;
 }
 
 /* Typography */
@@ -263,7 +305,8 @@ a:hover {
 
 /* Grid Layouts */
 .services-grid,
-.benefits-grid {
+.benefits-grid,
+.credentials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -271,7 +314,8 @@ a:hover {
 }
 
 .service-card,
-.benefit-card {
+.benefit-card,
+.credential {
     background: var(--light-bg);
     padding: 2rem;
     border-radius: 8px;
@@ -284,6 +328,48 @@ a:hover {
     box-shadow: var(--shadow-md);
 }
 
+.service-card h3,
+.benefit-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--dark-text);
+}
+
+.service-icon,
+.benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Trust Signals Section */
+.trust-signals {
+    background: white;
+    padding: 4rem 0;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--light-text);
+    margin-bottom: 3rem;
+}
+
+.credential h4 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+.credential ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.credential ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
 /* Sections */
 section {
     padding: 4rem 0;
@@ -292,6 +378,104 @@ section {
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+}
+
+.section-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Practice Areas Section */
+.practice-areas {
+    background: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.practice-areas-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.practice-areas-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.practice-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    color: var(--dark-text);
+    transition: all var(--transition-normal);
+}
+
+.practice-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+}
+
+.practice-chip .icon {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.main-footer {
+    background: var(--dark-text);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Mobile Styles */
@@ -731,8 +915,8 @@ section {
 <section class="hero" id="main-content">
 <div class="container">
 <div class="hero-content">
-<h1>Forensic Economist &amp; Business Valuation Expert</h1>
-<p class="hero-subtitle">Court-qualified expert providing <a href="services/forensic-economics/">economic damage assessments</a> and <a href="services/business-valuation/">business valuations</a> for attorneys throughout <a href="locations/rhode-island-forensic-economist/">Rhode Island</a> and nationwide. Specializing in <a href="practice-areas/personal-injury/">personal injury</a>, <a href="practice-areas/personal-injury/">wrongful death</a>, <a href="practice-areas/medical-malpractice/">medical malpractice</a>, and <a href="practice-areas/employment/">employment litigation</a>.</p>
+<h1>Forensic Economist & Business Valuation Expert</h1>
+<p class="hero-subtitle">Court-qualified expert providing economic damage assessments and business valuations for attorneys throughout Rhode Island and nationwide. Specializing in personal injury, wrongful death, medical malpractice, and employment litigation.</p>
 <div class="hero-cta">
 <a class="btn btn-primary btn-with-icon" href="contact/">
 <span>Schedule Free Consultation</span>
