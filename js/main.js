@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileNavOverlay.className = 'mobile-nav-overlay';
     document.body.appendChild(mobileNavOverlay);
     
-    if (mobileMenuToggle) {
+    if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
             mobileNavOverlay.classList.toggle('active');
@@ -21,18 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            mobileNavOverlay.classList.remove('active');
-            mobileMenuToggle.classList.remove('active');
+            if (navMenu) navMenu.classList.remove('active');
+            if (mobileNavOverlay) mobileNavOverlay.classList.remove('active');
+            if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
             document.body.classList.remove('menu-open');
         });
     });
 
     // Close mobile menu when clicking on overlay
     mobileNavOverlay.addEventListener('click', function() {
-        navMenu.classList.remove('active');
-        mobileNavOverlay.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
+        if (navMenu) navMenu.classList.remove('active');
+        if (mobileNavOverlay) mobileNavOverlay.classList.remove('active');
+        if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
         document.body.classList.remove('menu-open');
     });
 
@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let ticking = false;
     
     function updateNavOnScroll() {
+        if (!nav) return;
+        
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
         if (scrollTop > lastScrollTop && scrollTop > 100) {
@@ -205,25 +207,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const summary = item.querySelector('summary');
-        summary.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Close other FAQ items on mobile for better UX
-            if (window.innerWidth <= 768) {
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item && otherItem.hasAttribute('open')) {
-                        otherItem.removeAttribute('open');
-                    }
-                });
-            }
-            
-            // Toggle current item
-            if (item.hasAttribute('open')) {
-                item.removeAttribute('open');
-            } else {
-                item.setAttribute('open', '');
-            }
-        });
+        if (summary) {
+            summary.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close other FAQ items on mobile for better UX
+                if (window.innerWidth <= 768) {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.hasAttribute('open')) {
+                            otherItem.removeAttribute('open');
+                        }
+                    });
+                }
+                
+                // Toggle current item
+                if (item.hasAttribute('open')) {
+                    item.removeAttribute('open');
+                } else {
+                    item.setAttribute('open', '');
+                }
+            });
+        }
     });
 
     // Mobile Table of Contents Generator

@@ -2757,10 +2757,32 @@ img:hover {
     transform: none !important;
 }
 
-/* Allow dropdowns and overlays to be hidden */
-.dropdown,
+/* Ensure dropdowns are properly hidden by default */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.has-dropdown:hover .dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 .mobile-nav-overlay {
-    /* These should use their normal visibility states */
+    /* Mobile nav overlay should use normal visibility states */
     opacity: initial;
     visibility: initial;
 }
