@@ -61,7 +61,7 @@
 
 .case-studies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
@@ -265,21 +265,21 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .case-studies-header h1 {
-        font-size: 2rem;
-    }
-
-    .case-studies-header .lead {
-        font-size: 1.125rem;
-    }
-
     .case-studies-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     .case-study-card {
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+}
+    .case-studies-header h1 {
+        font-size: 2rem;
+    }
+
+    .case-studies-header .lead {
+        font-size: 1.125rem;
     }
 
     .case-header {

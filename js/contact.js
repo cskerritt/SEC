@@ -3,7 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
+        // Only prevent default if we're handling the submission via JavaScript
+        // Otherwise let Formspree handle it naturally
+        const useJavaScriptSubmission = false; // Set to true to use AJAX submission
+        
         contactForm.addEventListener('submit', function(e) {
+            if (!useJavaScriptSubmission) {
+                // Let the form submit naturally to Formspree
+                // Just track the submission
+                if (typeof trackFormSubmission === 'function') {
+                    trackFormSubmission('consultation_request');
+                }
+                return true;
+            }
+            
             e.preventDefault();
             
             // Get form data
