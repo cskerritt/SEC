@@ -104,13 +104,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Observe all cards and sections
     const elementsToAnimate = document.querySelectorAll('.service-card, .benefit-card, .testimonial, .case-study, .publication-card, .location-card');
+    console.log('Elements found for animation:', elementsToAnimate.length);
+    
     elementsToAnimate.forEach(el => {
         // Only hide elements that are below the fold
         const rect = el.getBoundingClientRect();
-        if (rect.top > window.innerHeight) {
+        const isVisible = rect.top <= window.innerHeight;
+        
+        if (!isVisible) {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             observer.observe(el);
+        } else {
+            // Ensure visible elements are shown immediately
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+            // Remove any conflicting classes
+            el.classList.remove('fade-in-up');
         }
     });
     
@@ -582,6 +592,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize visual enhancements
     initializeIconEnhancements();
+    
+    // Failsafe: Ensure all main content is visible after page load
+    window.addEventListener('load', function() {
+        // Make sure hero and above-the-fold content is visible
+        const criticalElements = document.querySelectorAll('.hero, .hero h1, .hero p, .hero .btn, .trust-indicators, .services-grid, .main-nav');
+        criticalElements.forEach(el => {
+            if (el) {
+                el.style.opacity = '1';
+                el.style.visibility = 'visible';
+                el.style.transform = 'none';
+            }
+        });
+        
+        // Log any elements that might still be hidden
+        const allElements = document.querySelectorAll('*');
+        const hiddenElements = [];
+        allElements.forEach(el => {
+            const style = window.getComputedStyle(el);
+            if (style.opacity === '0' || style.visibility === 'hidden' || style.display === 'none') {
+                const rect = el.getBoundingClientRect();
+                if (rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight) {
+                    hiddenElements.push({
+                        element: el,
+                        className: el.className,
+                        id: el.id,
+                        tagName: el.tagName.toLowerCase()
+                    });
+                }
+            }
+        });
+        
+        if (hiddenElements.length > 0) {
+            console.warn('Hidden elements found:', hiddenElements);
+        }
+    });
 
     // Progressive loading states for images and content
     function addProgressiveLoading() {
