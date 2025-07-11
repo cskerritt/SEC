@@ -67,6 +67,39 @@
         }
     }
   </script>
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://skerritteconomics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Locations",
+            "item": "https://skerritteconomics.com/locations/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CA",
+            "item": "https://skerritteconomics.com/locations/states/ca/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Los Angeles Business Valuation Analyst",
+            "item": "https://skerritteconomics.com/locations/cities/los-angeles-ca-business-valuation-analyst.html"
+        }
+    ]
+}
+</script>
   <style>
    .comprehensive-services {
             background: #f8fafc;
@@ -136,6 +169,78 @@
         
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
+        }
+
+        .local-market-expertise {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+        
+        .local-market-expertise h2 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .local-market-expertise > .container > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #4b5563;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-item {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #1e40af;
+        }
+        
+        .feature-item h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        
+        .feature-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .economic-factors h3 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .factor {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .factor strong {
+            color: #1e40af;
         }
   </style>
  </head>
@@ -412,6 +517,74 @@
        <p>
         Discounted cash flow and capitalization methods based on earning potential.
        </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Los Angeles Local Market Section -->
+  <section class="local-market-expertise">
+   <div class="container">
+    <h2>
+     Los Angeles Business Valuation Expertise
+    </h2>
+    <p>
+     Los Angeles County's diverse economy and unique business landscape requires specialized knowledge of entertainment industry dynamics, technology sector growth, and California's complex regulatory environment.
+    </p>
+    <div class="local-features">
+     <div class="feature-grid">
+      <div class="feature-item">
+       <h4>🎬 Entertainment Industry</h4>
+       <p>
+        Specialized expertise in valuing film studios, production companies, talent agencies, and streaming platforms with deep knowledge of Hollywood business models and revenue structures.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🏛️ California Court System</h4>
+       <p>
+        Extensive experience with Los Angeles County Superior Court, Central District of California, and specialized business courts, including compliance with California Evidence Code requirements.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>💻 Tech & Innovation</h4>
+       <p>
+        Comprehensive understanding of Silicon Beach startups, aerospace companies, and emerging technology sectors in Santa Monica, Venice, and Playa Vista innovation corridors.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🌴 Regional Business Districts</h4>
+       <p>
+        Knowledge of distinct LA market areas including Downtown financial district, Century City, Beverly Hills, and emerging markets in Arts District and Culver City.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🚢 International Trade</h4>
+       <p>
+        Understanding of Port of Los Angeles impact on logistics, import/export businesses, and international trade companies affecting regional business valuations.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>⚖️ California Legal Framework</h4>
+       <p>
+        Familiarity with California Corporations Code, LLC statutes, and state-specific regulations including environmental compliance and labor law impacts on business values.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="economic-factors">
+     <h3>Los Angeles Economic Factors</h3>
+     <div class="factors-grid">
+      <div class="factor">
+       <strong>Entertainment Economics:</strong> Unique revenue recognition patterns, talent contracts, and intellectual property considerations specific to entertainment industry valuations.
+      </div>
+      <div class="factor">
+       <strong>California Regulations:</strong> State-specific employment laws, environmental regulations, and business compliance requirements affecting operational costs and risk assessments.
+      </div>
+      <div class="factor">
+       <strong>Real Estate Premiums:</strong> Location-specific commercial real estate values and lease considerations in premium areas like Beverly Hills, Century City, and Santa Monica.
+      </div>
+      <div class="factor">
+       <strong>Wage & Benefit Costs:</strong> California's high minimum wage requirements, mandatory benefits, and above-average compensation levels impacting financial projections.
       </div>
      </div>
     </div>

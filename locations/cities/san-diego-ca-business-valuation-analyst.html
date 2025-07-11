@@ -67,6 +67,39 @@
         }
     }
   </script>
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://skerritteconomics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Locations",
+            "item": "https://skerritteconomics.com/locations/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "CA",
+            "item": "https://skerritteconomics.com/locations/states/ca/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "San Diego Business Valuation Analyst",
+            "item": "https://skerritteconomics.com/locations/cities/san-diego-ca-business-valuation-analyst.html"
+        }
+    ]
+}
+</script>
   <style>
    .comprehensive-services {
             background: #f8fafc;
@@ -136,6 +169,78 @@
         
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
+        }
+
+        .local-market-expertise {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+        
+        .local-market-expertise h2 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .local-market-expertise > .container > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #4b5563;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-item {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #1e40af;
+        }
+        
+        .feature-item h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        
+        .feature-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .economic-factors h3 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .factor {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .factor strong {
+            color: #1e40af;
         }
   </style>
  </head>
@@ -412,6 +517,73 @@
        <p>
         Discounted cash flow and capitalization methods based on earning potential.
        </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- San Diego Local Market Section -->
+  <section class="local-market-expertise">
+   <div class="container">
+    <h2>
+     San Diego Business Valuation Expertise
+    </h2>
+    <p>
+     San Diego's diverse economy spanning biotechnology, defense, telecommunications, and tourism requires specialized knowledge of these key sectors and California's regulatory landscape.
+    </p>
+    <div class="local-features">
+     <div class="feature-grid">
+      <div class="feature-item">
+       <h4>🧬 Biotech & Life Sciences</h4>
+       <p>
+        Specialized expertise in valuing biotechnology companies, pharmaceutical firms, medical device manufacturers, and research institutions concentrated in San Diego's biotech corridor.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🏛️ California Court System</h4>
+       <p>
+        Extensive experience with San Diego County Superior Court, Southern District of California, and specialized business courts with knowledge of California procedural rules.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>⚓ Defense & Aerospace</h4>
+       <p>
+        Deep understanding of defense contractors, military technology companies, and aerospace firms leveraging San Diego's strategic military presence and naval facilities.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🏖️ Tourism & Hospitality</h4>
+       <p>
+        Knowledge of hotels, resorts, restaurants, and entertainment venues serving San Diego's year-round tourism market and convention business.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>📡 Telecommunications</h4>
+       <p>
+        Expertise in valuing telecom companies, wireless technology firms, and communication infrastructure businesses in San Diego's tech sector.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>⚖️ California Compliance</h4>
+       <p>
+        Comprehensive understanding of California's complex business regulations, environmental compliance, and labor laws affecting business operations and valuations.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="economic-factors">
+     <h3>San Diego Economic Factors</h3>
+     <div class="factors-grid">
+      <div class="factor">
+       <strong>Innovation Clusters:</strong> Biotech and tech concentration creating specialized talent pools, research partnerships, and unique intellectual property considerations.
+      </div>
+      <div class="factor">
+       <strong>Military Economy:</strong> Significant defense spending and military presence affecting government contracting businesses and regional economic stability.
+      </div>
+      <div class="factor">
+       <strong>Cross-Border Trade:</strong> Proximity to Mexico affecting international business, manufacturing, and trade considerations in business valuations.
+      </div>
+      <div class="factor">        <strong>Climate Advantages:</strong> Year-round favorable weather supporting tourism, outdoor industries, and business relocation decisions affecting market premiums.
       </div>
      </div>
     </div>

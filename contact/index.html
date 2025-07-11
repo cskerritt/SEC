@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Contact Forensic Economist Rhode Island | Free Consultation</title>
-<meta content="Contact forensic economist in Rhode Island for free consultation. Expert economic analysis &amp; trusted testimony. 24-hour response. Call (203) 605-2814." name="description"/>
+<meta content="Contact Rhode Island forensic economist Chris Skerritt. Expert economic analysis for New England attorneys. 24-hour response. Free consultation 203-605-2814" name="description"/>
 <link href="../css/styles.css" rel="stylesheet"/>
 <link href="../css/contact.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -143,6 +143,19 @@
 <li><a class="nav-cta active" href="index.html">Contact</a></li>
 </ul>
 </div>
+</div>
+</nav>
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<div class="breadcrumb-container">
+<ol class="breadcrumb-list">
+<li class="breadcrumb-item">
+<a class="breadcrumb-link" href="../index.html">Home</a>
+</li>
+<li class="breadcrumb-item">
+<span class="breadcrumb-current">Contact</span>
+</li>
+</ol>
 </div>
 </nav>
 <!-- Contact Header -->
@@ -522,27 +535,57 @@
 </footer>
 <script src="../js/main.js"></script>
 <script src="../js/contact.js"></script>
+<!-- Google Analytics 4 -->
+<!-- TODO: Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID (format: G-XXXXXXXXXX) -->
+<!-- To get your measurement ID: 
+     1. Go to https://analytics.google.com/
+     2. Create a GA4 property if you haven't already
+     3. Go to Admin > Data Streams > Your Website
+     4. Copy the Measurement ID (starts with "G-")
+     5. Replace GA_MEASUREMENT_ID below with your actual ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            'custom_map': {'custom_parameter_1': 'consultation_requests'}
+        });
+</script>
+
 <!-- Tracking Functions -->
 <script>
         // Track phone clicks
         function trackPhoneClick() {
             console.log('Phone click tracked');
-            // Add your analytics code here
-            // Example: gtag('event', 'phone_call', { 'event_category': 'engagement' });
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_call', { 
+                    'event_category': 'engagement',
+                    'event_label': 'phone_number_click'
+                });
+            }
         }
         
         // Track email clicks
         function trackEmailClick() {
             console.log('Email click tracked');
-            // Add your analytics code here
-            // Example: gtag('event', 'email_click', { 'event_category': 'engagement' });
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'email_click', { 
+                    'event_category': 'engagement',
+                    'event_label': 'email_address_click'
+                });
+            }
         }
         
         // Track form submissions
         function trackFormSubmission(formType) {
             console.log('Form submission tracked:', formType);
-            // Add your analytics code here
-            // Example: gtag('event', 'form_submission', { 'event_category': 'conversion', 'event_label': formType });
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submission', { 
+                    'event_category': 'conversion', 
+                    'event_label': formType 
+                });
+            }
         }
     </script>
 </body>

@@ -67,6 +67,39 @@
         }
     }
   </script>
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://skerritteconomics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Locations",
+            "item": "https://skerritteconomics.com/locations/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "TX",
+            "item": "https://skerritteconomics.com/locations/states/tx/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Houston Business Valuation Analyst",
+            "item": "https://skerritteconomics.com/locations/cities/houston-tx-business-valuation-analyst.html"
+        }
+    ]
+}
+</script>
   <style>
    .comprehensive-services {
             background: #f8fafc;
@@ -136,6 +169,78 @@
         
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
+        }
+
+        .local-market-expertise {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+        
+        .local-market-expertise h2 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .local-market-expertise > .container > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #4b5563;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-item {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #1e40af;
+        }
+        
+        .feature-item h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        
+        .feature-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .economic-factors h3 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .factor {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .factor strong {
+            color: #1e40af;
         }
   </style>
  </head>
@@ -412,6 +517,74 @@
        <p>
         Discounted cash flow and capitalization methods based on earning potential.
        </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Houston Local Market Section -->
+  <section class="local-market-expertise">
+   <div class="container">
+    <h2>
+     Houston Business Valuation Expertise
+    </h2>
+    <p>
+     Houston's position as America's energy capital and major international port requires specialized knowledge of energy markets, petrochemical industries, and international trade dynamics.
+    </p>
+    <div class="local-features">
+     <div class="feature-grid">
+      <div class="feature-item">
+       <h4>⚡ Energy & Petrochemicals</h4>
+       <p>
+        Specialized expertise in valuing oil & gas companies, refineries, petrochemical plants, and renewable energy projects with deep understanding of commodity price impacts.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🏛️ Texas Court System</h4>
+       <p>
+        Extensive experience with Harris County District Courts, Southern District of Texas, and specialized business courts with knowledge of Texas Rules of Evidence.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🚢 Port & International Trade</h4>
+       <p>
+        Understanding of Port of Houston operations, international shipping companies, and import/export businesses affecting regional commerce and valuations.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🏙️ Business Corridors</h4>
+       <p>
+        Knowledge of Energy Corridor, Galleria area, Downtown financial district, and emerging markets in The Woodlands and Sugar Land business centers.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🚀 Aerospace & Technology</h4>
+       <p>
+        Expertise in valuing aerospace companies, NASA contractors, and emerging technology sectors in Houston's growing innovation ecosystem.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>⚖️ Texas Legal Framework</h4>
+       <p>
+        Familiarity with Texas Business Organizations Code, partnership statutes, and state-specific regulations including energy sector compliance requirements.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="economic-factors">
+     <h3>Houston Economic Factors</h3>
+     <div class="factors-grid">
+      <div class="factor">
+       <strong>Energy Market Volatility:</strong> Commodity price fluctuations requiring sophisticated risk assessment and sensitivity analysis in energy sector valuations.
+      </div>
+      <div class="factor">
+       <strong>International Business:</strong> Global trade connections affecting foreign exchange considerations, international contract valuations, and cross-border transactions.
+      </div>
+      <div class="factor">
+       <strong>No State Income Tax:</strong> Texas tax advantages affecting business location decisions, after-tax cash flows, and comparative valuation multiples.
+      </div>
+      <div class="factor">
+       <strong>Industrial Infrastructure:</strong> Extensive refining and petrochemical infrastructure creating specialized asset valuation requirements and environmental considerations.
       </div>
      </div>
     </div>

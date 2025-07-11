@@ -8,6 +8,54 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 {% seo %}
 
+<!-- Google Analytics 4 -->
+<!-- TODO: Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID (format: G-XXXXXXXXXX) -->
+<!-- To get your measurement ID: 
+     1. Go to https://analytics.google.com/
+     2. Create a GA4 property if you haven't already
+     3. Go to Admin > Data Streams > Your Website
+     4. Copy the Measurement ID (starts with "G-")
+     5. Replace GA_MEASUREMENT_ID below with your actual ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            'custom_map': {'custom_parameter_1': 'consultation_requests'}
+        });
+        
+        // Track phone clicks
+        function trackPhoneClick() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'phone_call', {
+                    'event_category': 'engagement',
+                    'event_label': 'phone_number_click'
+                });
+            }
+        }
+        
+        // Track email clicks
+        function trackEmailClick() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'email_click', {
+                    'event_category': 'engagement',
+                    'event_label': 'email_address_click'
+                });
+            }
+        }
+        
+        // Track form submissions
+        function trackFormSubmission(formType) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submission', {
+                    'event_category': 'conversion',
+                    'event_label': formType
+                });
+            }
+        }
+</script>
+
 <!-- Structured Data -->
 <script type="application/ld+json">
 {

@@ -146,6 +146,17 @@ document.addEventListener('DOMContentLoaded', function() {
             if (submitBtn) {
                 submitBtn.classList.add('loading');
                 submitBtn.disabled = true;
+                
+                // Add loading spinner to button
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span class="loading-dots"><span></span><span></span><span></span></span> Processing...';
+                
+                // Restore button after timeout (in case of errors)
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 10000);
             }
         });
         
@@ -464,4 +475,170 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('menu-open');
         }
     }
+
+    // Icon and Visual Enhancement Interactions
+    function initializeIconEnhancements() {
+        // Animate service icons on hover
+        const serviceCards = document.querySelectorAll('.service-card');
+        serviceCards.forEach(card => {
+            const icon = card.querySelector('.service-icon');
+            if (icon) {
+                card.addEventListener('mouseenter', () => {
+                    icon.classList.add('icon-pulse');
+                });
+                card.addEventListener('mouseleave', () => {
+                    icon.classList.remove('icon-pulse');
+                });
+            }
+        });
+
+        // Animate benefit icons on scroll into view
+        const benefitIcons = document.querySelectorAll('.benefit-icon');
+        const iconObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('icon-bounce');
+                        setTimeout(() => {
+                            entry.target.classList.remove('icon-bounce');
+                        }, 1000);
+                    }, index * 200); // Stagger the animations
+                    iconObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        benefitIcons.forEach(icon => iconObserver.observe(icon));
+
+        // Practice chip hover effects
+        const practiceChips = document.querySelectorAll('.practice-chip');
+        practiceChips.forEach(chip => {
+            const icon = chip.querySelector('.icon');
+            if (icon) {
+                chip.addEventListener('mouseenter', () => {
+                    icon.style.transform = 'scale(1.2) rotate(5deg)';
+                });
+                chip.addEventListener('mouseleave', () => {
+                    icon.style.transform = 'scale(1) rotate(0deg)';
+                });
+            }
+        });
+
+        // Floating Action Button (FAB) animations
+        const fab = document.querySelector('.fab');
+        if (fab) {
+            // Add hover effects
+            fab.addEventListener('mouseenter', () => {
+                fab.style.transform = 'scale(1.1) translateY(-4px)';
+            });
+            fab.addEventListener('mouseleave', () => {
+                fab.style.transform = 'scale(1) translateY(0)';
+            });
+
+            // Add click feedback
+            fab.addEventListener('click', () => {
+                fab.style.transform = 'scale(0.95) translateY(2px)';
+                setTimeout(() => {
+                    fab.style.transform = 'scale(1.1) translateY(-4px)';
+                }, 150);
+            });
+
+            // Stop pulsing on interaction
+            fab.addEventListener('mouseenter', () => {
+                fab.classList.remove('fab-pulse');
+            });
+        }
+
+        // Contact icon interactions
+        const contactIcons = document.querySelectorAll('.contact-icon');
+        contactIcons.forEach(icon => {
+            const parentLink = icon.closest('a') || icon.nextElementSibling;
+            if (parentLink) {
+                parentLink.addEventListener('mouseenter', () => {
+                    icon.style.transform = 'scale(1.2)';
+                    icon.style.background = 'rgba(255,255,255,0.4)';
+                });
+                parentLink.addEventListener('mouseleave', () => {
+                    icon.style.transform = 'scale(1)';
+                    icon.style.background = 'rgba(255,255,255,0.2)';
+                });
+            }
+        });
+
+        // Enhanced button icon interactions
+        const buttonsWithIcons = document.querySelectorAll('.btn-with-icon');
+        buttonsWithIcons.forEach(button => {
+            const icon = button.querySelector('.btn-icon');
+            if (icon) {
+                button.addEventListener('mouseenter', () => {
+                    icon.style.transform = 'translateX(4px) scale(1.1)';
+                });
+                button.addEventListener('mouseleave', () => {
+                    icon.style.transform = 'translateX(0) scale(1)';
+                });
+            }
+        });
+    }
+
+    // Initialize visual enhancements
+    initializeIconEnhancements();
+
+    // Progressive loading states for images and content
+    function addProgressiveLoading() {
+        const images = document.querySelectorAll('img:not([data-src])');
+        images.forEach(img => {
+            if (!img.complete) {
+                img.style.opacity = '0';
+                img.style.transition = 'opacity 0.3s ease';
+                img.addEventListener('load', () => {
+                    img.style.opacity = '1';
+                });
+            }
+        });
+
+        // Add skeleton loading for cards that take time to load
+        const cards = document.querySelectorAll('.service-card, .benefit-card');
+        cards.forEach(card => {
+            // Temporarily add skeleton class, remove after short delay
+            card.classList.add('skeleton');
+            setTimeout(() => {
+                card.classList.remove('skeleton');
+            }, Math.random() * 300 + 100);
+        });
+    }
+
+    // Initialize progressive loading
+    addProgressiveLoading();
+
+    // Enhanced visual feedback for form interactions
+    function enhanceFormVisuals() {
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            // Add visual feedback on focus
+            input.addEventListener('focus', () => {
+                input.style.transform = 'scale(1.02)';
+                input.style.boxShadow = '0 4px 12px rgba(30, 58, 138, 0.15)';
+            });
+
+            input.addEventListener('blur', () => {
+                input.style.transform = 'scale(1)';
+                input.style.boxShadow = '';
+            });
+
+            // Add success state for valid inputs
+            input.addEventListener('input', () => {
+                if (input.checkValidity()) {
+                    input.classList.remove('error');
+                    input.classList.add('success');
+                } else {
+                    input.classList.remove('success');
+                    if (input.value.length > 0) {
+                        input.classList.add('error');
+                    }
+                }
+            });
+        });
+    }
+
+    enhanceFormVisuals();
 });

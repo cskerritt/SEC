@@ -67,6 +67,39 @@
         }
     }
   </script>
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://skerritteconomics.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Locations",
+            "item": "https://skerritteconomics.com/locations/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IL",
+            "item": "https://skerritteconomics.com/locations/states/il/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Chicago Business Valuation Analyst",
+            "item": "https://skerritteconomics.com/locations/cities/chicago-il-business-valuation-analyst.html"
+        }
+    ]
+}
+</script>
   <style>
    .comprehensive-services {
             background: #f8fafc;
@@ -136,6 +169,78 @@
         
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
+        }
+
+        .local-market-expertise {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+        
+        .local-market-expertise h2 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .local-market-expertise > .container > p {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            color: #4b5563;
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .feature-item {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #1e40af;
+        }
+        
+        .feature-item h4 {
+            color: #1e40af;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        
+        .feature-item p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .economic-factors h3 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .factor {
+            background: #f1f5f9;
+            padding: 25px;
+            border-radius: 8px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .factor strong {
+            color: #1e40af;
         }
   </style>
  </head>
@@ -412,6 +517,74 @@
        <p>
         Discounted cash flow and capitalization methods based on earning potential.
        </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Chicago Local Market Section -->
+  <section class="local-market-expertise">
+   <div class="container">
+    <h2>
+     Chicago Business Valuation Expertise
+    </h2>
+    <p>
+     Chicago's position as America's transportation hub and financial center requires deep understanding of commodity markets, manufacturing logistics, and Midwest economic dynamics.
+    </p>
+    <div class="local-features">
+     <div class="feature-grid">
+      <div class="feature-item">
+       <h4>🏗️ Manufacturing & Industrial</h4>
+       <p>
+        Specialized expertise in valuing heavy manufacturing, industrial equipment companies, and supply chain businesses leveraging Chicago's central logistics position.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🏛️ Illinois Court System</h4>
+       <p>
+        Extensive experience with Cook County Circuit Court, Northern District of Illinois, and Chicago's specialized business courts with knowledge of Illinois Evidence Rules.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>📈 Commodities & Trading</h4>
+       <p>
+        Deep understanding of Chicago Mercantile Exchange, Chicago Board of Trade operations, and commodity trading firms' unique valuation considerations.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🌆 Business Districts</h4>
+       <p>
+        Knowledge of Loop financial district, River North, Millennium Park area, and emerging markets in Fulton Market and West Loop commercial developments.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>🚛 Transportation Hub</h4>
+       <p>
+        Understanding of logistics, shipping, and transportation companies benefiting from Chicago's strategic location and multimodal transportation infrastructure.
+       </p>
+      </div>
+      <div class="feature-item">
+       <h4>⚖️ Illinois Legal Framework</h4>
+       <p>
+        Familiarity with Illinois Business Corporation Act, partnership statutes, and state-specific regulations affecting business operations and valuations.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="economic-factors">
+     <h3>Chicago Economic Factors</h3>
+     <div class="factors-grid">
+      <div class="factor">
+       <strong>Manufacturing Base:</strong> Strong industrial foundation requiring asset-heavy valuation approaches and consideration of equipment, inventory, and operational capacity.
+      </div>
+      <div class="factor">
+       <strong>Transportation Advantages:</strong> Central location benefits affecting logistics costs, supply chain efficiency, and market access premiums for regional businesses.
+      </div>
+      <div class="factor">
+       <strong>Financial Services:</strong> Major banking and financial services presence influencing local business financing options and cost of capital considerations.
+      </div>
+      <div class="factor">
+       <strong>Regulatory Environment:</strong> Illinois state regulations, Cook County business requirements, and municipal compliance factors affecting operational costs.
       </div>
      </div>
     </div>
