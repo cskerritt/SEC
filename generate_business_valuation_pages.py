@@ -947,12 +947,12 @@ def generate_page_content(city_name, state, lat, lng):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{city_name} Business Valuation Analyst | {state_name} Certified Business Appraiser | Skerritt Economics</title>
-    <meta name="description" content="Expert business valuation analyst in {city_name}. Certified business appraiser providing comprehensive valuations, financial analysis, and litigation support for {state_name} attorneys and businesses.">
-    <meta name="keywords" content="business valuation analyst {city_name}, business appraiser {state_name}, business valuation {city_name}, certified business appraiser, company valuation, asset valuation, business worth, business appraisal {state}">
+    <title>{city_name} Business Valuation Analyst | {state_name} Business Valuation Expert | Skerritt Economics</title>
+    <meta name="description" content="Expert business valuation analyst in {city_name}. Certified valuation expert providing comprehensive valuations, financial analysis, and litigation support for {state_name} attorneys and businesses.">
+    <meta name="keywords" content="business valuation analyst {city_name}, business valuation expert {state_name}, business valuation {city_name}, certified valuation analyst, company valuation, asset valuation, business worth, business evaluation {state}">
     <link rel="canonical" href="https://skerritteconomics.com/locations/cities/{page_slug}.html">
-    <meta property="og:title" content="{city_name} Business Valuation Analyst | {state_name} Certified Business Appraiser | Skerritt Economics">
-    <meta property="og:description" content="Expert business valuation analyst in {city_name}. Certified business appraiser providing comprehensive valuations and litigation support.">
+    <meta property="og:title" content="{city_name} Business Valuation Analyst | {state_name} Business Valuation Expert | Skerritt Economics">
+    <meta property="og:description" content="Expert business valuation analyst in {city_name}. Certified valuation expert providing comprehensive valuations and litigation support.">
     <meta property="og:url" content="https://skerritteconomics.com/locations/cities/{page_slug}.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
@@ -974,7 +974,7 @@ def generate_page_content(city_name, state, lat, lng):
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Skerritt Economics & Consulting - {city_name} Business Valuation Analyst",
-        "description": "Expert business valuation analyst serving {city_name} attorneys and businesses with certified business appraisals, company valuations, and litigation support.",
+        "description": "Expert business valuation analyst serving {city_name} attorneys and businesses with certified business valuations, company evaluations, and litigation support.",
         "url": "https://skerritteconomics.com/locations/cities/{page_slug}.html",
         "telephone": "+12036052814",
         "email": "chris@skerritteconomics.com",
@@ -1006,7 +1006,7 @@ def generate_page_content(city_name, state, lat, lng):
         }},
         "offers": {{
             "@type": "Offer",
-            "description": "Professional business valuation services including company appraisals, asset valuations, and expert witness testimony."
+            "description": "Professional business valuation services including company evaluations, asset valuations, and expert witness testimony."
         }}
     }}
     </script>
@@ -1057,11 +1057,11 @@ def generate_page_content(city_name, state, lat, lng):
         <div class="container">
             <div class="hero-content">
                 <h1>Expert Business Valuation Analyst in {city_name}, {state_name}</h1>
-                <p class="lead">Certified business appraiser providing comprehensive company valuations, asset appraisals, and expert witness testimony for {city_name} attorneys, businesses, and financial institutions.</p>
+                <p class="lead">Certified business valuation expert providing comprehensive company valuations, asset evaluations, and expert witness testimony for {city_name} attorneys, businesses, and financial institutions.</p>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">ASA</span>
-                        <span class="stat-label">Certified Appraiser</span>
+                        <span class="stat-number">CVA</span>
+                        <span class="stat-label">Valuation Expert</span>
                     </div>
                     <div class="stat">
                         <span class="stat-number">500+</span>
@@ -1084,18 +1084,18 @@ def generate_page_content(city_name, state, lat, lng):
     <section class="services-overview">
         <div class="container">
             <h2>Business Valuation Services in {city_name}</h2>
-            <p>As a certified business valuation analyst serving the {city_name} market, I provide comprehensive appraisal services for various purposes and industries throughout {state_name}.</p>
+            <p>As a certified business valuation analyst serving the {city_name} market, I provide comprehensive valuation services for various purposes and industries throughout {state_name}.</p>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>Company Valuations</h3>
-                    <p>Complete business appraisals for merger & acquisition, litigation support, tax planning, and strategic decision-making purposes.</p>
+                    <p>Complete business valuations for merger & acquisition, litigation support, tax planning, and strategic decision-making purposes.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🏭</div>
                     <h3>Asset Valuations</h3>
-                    <p>Tangible and intangible asset appraisals including equipment, intellectual property, real estate, and inventory assessments.</p>
+                    <p>Tangible and intangible asset valuations including equipment, intellectual property, real estate, and inventory assessments.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">⚖️</div>
@@ -1149,9 +1149,9 @@ def generate_page_content(city_name, state, lat, lng):
                     <h2>Why Choose Our Business Valuation Services in {city_name}?</h2>
                     
                     <div class="credential">
-                        <h4>🎯 Certified Business Appraiser</h4>
+                        <h4>🎯 Certified Business Valuation Expert</h4>
                         <ul>
-                            <li><strong>ASA Accreditation</strong> - American Society of Appraisers certified</li>
+                            <li><strong>Professional Certification</strong> - Advanced valuation credentials</li>
                             <li><strong>USPAP Compliance</strong> - Uniform Standards adherence</li>
                             <li><strong>Continuing Education</strong> - Current on valuation standards</li>
                             <li><strong>Professional Ethics</strong> - Independent and objective analysis</li>
@@ -1234,7 +1234,7 @@ def generate_page_content(city_name, state, lat, lng):
         <div class="container">
             <div class="cta-content">
                 <h2>Need a Business Valuation in {city_name}?</h2>
-                <p>Contact Skerritt Economics & Consulting for professional business appraisal services. Free initial consultation for attorneys and qualified businesses.</p>
+                <p>Contact Skerritt Economics & Consulting for professional business valuation services. Free initial consultation for attorneys and qualified businesses.</p>
                 <div class="cta-buttons">
                     <a href="../../contact/" class="btn btn-primary">Free Consultation</a>
                     <a href="tel:+12036052814" class="btn btn-secondary">Call Now</a>
