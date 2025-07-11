@@ -78,14 +78,19 @@ body * {
 }
 
 /* But allow specific elements to be hidden */
-.dropdown,
+.dropdown {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    display: none !important;
+}
+
 .mobile-nav-overlay:not(.active) {
     opacity: 0 !important;
     visibility: hidden !important;
 }
 
-.has-dropdown:hover .dropdown,
-.dropdown:hover {
+.has-dropdown:hover .dropdown {
+    display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
@@ -313,9 +318,15 @@ a:hover {
     transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 100;
+    display: none;
+}
+
+.has-dropdown {
+    position: relative;
 }
 
 .has-dropdown:hover .dropdown {
+    display: block;
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -1123,7 +1134,7 @@ a:hover {
 <section class="hero" id="main-content">
 <div class="container">
 <div class="hero-content">
-<h1>Forensic Economist & Business Valuation Expert</h1>
+<h1>Rhode Island Forensic Economist</h1>
 <p class="hero-subtitle">Court-qualified expert providing economic damage assessments and business valuations for attorneys throughout Rhode Island and nationwide. Specializing in personal injury, wrongful death, medical malpractice, and employment litigation.</p>
 <div class="hero-cta">
 <a class="btn btn-primary btn-with-icon" href="contact/">
