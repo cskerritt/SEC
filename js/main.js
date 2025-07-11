@@ -591,20 +591,30 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Log any elements that might still be hidden
+        // Log any elements that might still be hidden (excluding intentionally hidden elements)
         const allElements = document.querySelectorAll('*');
         const hiddenElements = [];
+        const intentionallyHidden = ['dropdown', 'mobile-nav-overlay', 'mobile-menu-toggle'];
+        
         allElements.forEach(el => {
-            const style = window.getComputedStyle(el);
-            if (style.opacity === '0' || style.visibility === 'hidden' || style.display === 'none') {
-                const rect = el.getBoundingClientRect();
-                if (rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight) {
-                    hiddenElements.push({
-                        element: el,
-                        className: el.className,
-                        id: el.id,
-                        tagName: el.tagName.toLowerCase()
-                    });
+            // Skip elements that should be hidden
+            const shouldSkip = intentionallyHidden.some(className => 
+                el.classList.contains(className) || 
+                el.closest(`.${className}`)
+            );
+            
+            if (!shouldSkip) {
+                const style = window.getComputedStyle(el);
+                if (style.opacity === '0' || style.visibility === 'hidden' || style.display === 'none') {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.width > 0 && rect.height > 0 && rect.top < window.innerHeight) {
+                        hiddenElements.push({
+                            element: el,
+                            className: el.className,
+                            id: el.id,
+                            tagName: el.tagName.toLowerCase()
+                        });
+                    }
                 }
             }
         });

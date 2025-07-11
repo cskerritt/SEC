@@ -2740,7 +2740,7 @@ img:hover {
     transform: translateY(0) !important;
 }
 
-/* Ensure all content is visible by default */
+/* Ensure main content is visible by default */
 .service-card,
 .benefit-card,
 .testimonial,
@@ -2755,6 +2755,14 @@ img:hover {
     opacity: 1 !important;
     visibility: visible !important;
     transform: none !important;
+}
+
+/* Allow dropdowns and overlays to be hidden */
+.dropdown,
+.mobile-nav-overlay {
+    /* These should use their normal visibility states */
+    opacity: initial;
+    visibility: initial;
 }
 
 /* Pulse Animation for CTAs */
