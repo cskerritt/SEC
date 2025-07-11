@@ -3,9 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" name="viewport"/>
 <title>Rhode Island Forensic Economist | Chris Skerritt | Business Valuation Expert</title>
-<meta content="Chris Skerritt, Rhode Island's leading forensic economist. Expert economic damage assessments &amp; business valuations for litigation. 500+ cases, court-tested, Daubert qualified. 24-hour response." name="description"/>
+<meta content="Rhode Island forensic economist Chris Skerritt. Expert economic damage analysis &amp; business valuations. 500+ cases in New England. Free consultation 203-605-2814" name="description"/>
 <!-- Open Graph / Facebook -->
 <meta content="website" property="og:type"/>
 <meta content="https://skerritteconomics.com/" property="og:url"/>
@@ -24,15 +24,32 @@
 <link href="sec-logo.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="sec-logo.png" rel="apple-touch-icon" sizes="180x180"/>
 <meta content="sec-logo.png" name="msapplication-TileImage"/>
-<link href="css/styles.css" rel="stylesheet"/>
+<!-- Performance Optimizations -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://skerritteconomics.com/" rel="canonical"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Performance Optimizations -->
-<link as="style" href="css/styles.css" rel="preload"/>
 <link href="//www.google-analytics.com" rel="dns-prefetch"/>
 <link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+
+<!-- Critical CSS (minified) -->
+<link as="style" href="css/styles.min.css" rel="preload" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="css/styles.min.css" rel="stylesheet"/></noscript>
+
+<!-- Preload critical scripts -->
+<link as="script" href="js/main.min.js" rel="preload"/>
+<link as="script" href="js/performance-init.min.js" rel="preload"/>
+
+<!-- Critical inline styles for immediate rendering -->
+<style>
+/* Critical above-the-fold CSS */
+:root{--primary-color:#1e3a8a;--secondary-color:#3730a3;--accent-color:#dc2626;--dark-text:#1f2937;--light-text:#6b7280;--background:#ffffff;--light-bg:#f9fafb;--border-color:#e5e7eb;--success:#059669;--max-width:1200px;--transition-fast:0.2s ease;--transition-normal:0.3s ease;--shadow-sm:0 1px 2px rgba(0,0,0,0.05);--shadow-md:0 4px 6px rgba(0,0,0,0.1);--focus-outline:2px solid var(--primary-color);--focus-outline-offset:2px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:var(--dark-text);background-color:var(--background)}.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}.main-nav{background:var(--background);box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;z-index:1000}.nav-wrapper{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}.logo{font-size:1.25rem;color:var(--dark-text);display:flex;flex-direction:column;line-height:1.2}.hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:white;padding:5rem 0}.hero h1{font-size:2.5rem;font-weight:700;margin-bottom:1.5rem;line-height:1.2}.btn{display:inline-block;padding:0.875rem 1.75rem;border-radius:6px;font-weight:600;text-align:center;transition:all var(--transition-normal);font-size:1rem;cursor:pointer}.btn-primary{background:white;color:var(--primary-color)}
+</style>
+
+<!-- Canonical URL -->
+<link href="https://skerritteconomics.com/" rel="canonical"/>
+
+<!-- Web Fonts with display=swap for performance -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/></noscript>
 <!-- Breadcrumb Structured Data -->
 <script type="application/ld+json">
 {
@@ -108,8 +125,60 @@
         "telephone": "+1-203-605-2814",
         "email": "chris@skerritteconomics.com",
         "openingHours": "Mo-Fr 08:00-18:00",
-        "areaServed": ["United States", "Rhode Island", "Massachusetts", "Connecticut", "New Hampshire", "Vermont", "Maine", "New York", "Pennsylvania", "California", "Texas", "Florida", "Illinois"],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+            }
+        ],
+        "areaServed": [
+            {
+                "@type": "State",
+                "name": "Rhode Island"
+            },
+            {
+                "@type": "State",
+                "name": "Massachusetts"
+            },
+            {
+                "@type": "State",
+                "name": "Connecticut"
+            },
+            {
+                "@type": "State",
+                "name": "New Hampshire"
+            },
+            {
+                "@type": "State",
+                "name": "Vermont"
+            },
+            {
+                "@type": "State",
+                "name": "Maine"
+            }
+        ],
         "priceRange": "$$$$",
+        "paymentAccepted": ["Cash", "Check", "Wire Transfer", "ACH"],
+        "currenciesAccepted": "USD",
+        "founder": {
+            "@type": "Person",
+            "name": "Christopher T. Skerritt",
+            "jobTitle": "Principal Forensic Economist",
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "certificate",
+                    "name": "CRC - Certified Rehabilitation Counselor"
+                },
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "certificate",
+                    "name": "CLCP - Certified Life Care Planner"
+                }
+            ]
+        },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Forensic Economics Services",
@@ -119,7 +188,11 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Forensic Economics Analysis",
-                        "description": "Economic damage calculations for personal injury, wrongful death, and employment litigation"
+                        "description": "Economic damage calculations for personal injury, wrongful death, and employment litigation",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Skerritt Economics & Consulting"
+                        }
                     }
                 },
                 {
@@ -127,11 +200,69 @@
                     "itemOffered": {
                         "@type": "Service",
                         "name": "Business Valuation",
-                        "description": "Expert business valuations for litigation support, divorce proceedings, and shareholder disputes"
+                        "description": "Expert business valuations for litigation support, divorce proceedings, and shareholder disputes",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Skerritt Economics & Consulting"
+                        }
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Life Care Planning",
+                        "description": "Comprehensive life care plans and future medical cost projections for catastrophic injury cases",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Skerritt Economics & Consulting"
+                        }
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Vocational Assessment",
+                        "description": "Employability assessments and earning capacity evaluations for disability and injury cases",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "Skerritt Economics & Consulting"
+                        }
                     }
                 }
             ]
-        }
+        },
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certificate",
+                "name": "CRC - Certified Rehabilitation Counselor",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "Commission on Rehabilitation Counselor Certification"
+                }
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certificate",
+                "name": "CLCP - Certified Life Care Planner",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "International Commission on Health Care Certification"
+                }
+            }
+        ],
+        "memberOf": [
+            {
+                "@type": "Organization",
+                "name": "National Association of Forensic Economics"
+            },
+            {
+                "@type": "Organization",
+                "name": "International Association of Rehabilitation Professionals"
+            }
+        ]
     }
     </script>
 <!-- FAQ Structured Data -->
@@ -298,7 +429,7 @@
 <div class="container">
 <div class="hero-content">
 <h1>Forensic Economist &amp; Business Valuation Expert</h1>
-<p class="hero-subtitle">Court-qualified expert providing economic damage assessments and business valuations for attorneys throughout Rhode Island and nationwide. Specializing in personal injury, wrongful death, medical malpractice, and employment litigation.</p>
+<p class="hero-subtitle">Court-qualified expert providing <a href="services/forensic-economics/">economic damage assessments</a> and <a href="services/business-valuation/">business valuations</a> for attorneys throughout <a href="locations/rhode-island-forensic-economist/">Rhode Island</a> and nationwide. Specializing in <a href="practice-areas/personal-injury/">personal injury</a>, <a href="practice-areas/personal-injury/">wrongful death</a>, <a href="practice-areas/medical-malpractice/">medical malpractice</a>, and <a href="practice-areas/employment/">employment litigation</a>.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="contact/">Schedule Free Consultation</a>
 <a class="btn btn-secondary" href="services/">View Services</a>
@@ -338,7 +469,7 @@
 <section class="services-overview" itemscope itemtype="https://schema.org/Service">
 <div class="container">
 <h2>Professional Economic Analysis Services</h2>
-<p class="section-intro">Comprehensive forensic economics, business valuation, vocational expert, and life care planning services delivered by a court-qualified expert with extensive litigation support experience.</p>
+<p class="section-intro">Comprehensive <a href="services/forensic-economics/">forensic economics</a>, <a href="services/business-valuation/">business valuation</a>, <a href="services/#vocational-assessment">vocational expert</a>, and <a href="services/#life-care-planning">life care planning</a> services delivered by a court-qualified expert with extensive litigation support experience.</p>
 <div class="services-grid">
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
 <h3 itemprop="name">Forensic Economics</h3>
@@ -353,7 +484,7 @@
 </div>
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
 <h3 itemprop="name">Business Valuation</h3>
-<p itemprop="description">Expert business valuations and economic damage quantification for litigation support, divorce proceedings, <a href="practice-areas/commercial-disputes/">shareholder disputes</a>, business interruption claims, and estate planning. Certified valuations that meet court standards throughout Rhode Island, Massachusetts, Connecticut, and nationwide.</p>
+<p itemprop="description">Expert <a href="services/business-valuation/">business valuations</a> and economic damage quantification for litigation support, divorce proceedings, <a href="practice-areas/commercial-disputes/">shareholder disputes</a>, business interruption claims, and estate planning. Certified valuations that meet court standards throughout <a href="locations/rhode-island-forensic-economist/">Rhode Island</a>, <a href="locations/massachusetts-forensic-economist/">Massachusetts</a>, Connecticut, and nationwide.</p>
 <ul>
 <li>Fair market value assessments</li>
 <li>Shareholder dispute valuations</li>
@@ -364,7 +495,7 @@
 </div>
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
 <h3 itemprop="name">Vocational Expert</h3>
-<p itemprop="description">Comprehensive vocational assessments and earning capacity evaluations for personal injury, workers' compensation, and disability cases. Expert analysis of vocational rehabilitation potential and labor market conditions throughout New England.</p>
+<p itemprop="description">Comprehensive <a href="services/#vocational-assessment">vocational assessments</a> and earning capacity evaluations for <a href="practice-areas/personal-injury/">personal injury</a>, workers' compensation, and disability cases. Expert analysis of vocational rehabilitation potential and labor market conditions throughout <a href="locations/new-england-economic-expert/">New England</a>.</p>
 <ul>
 <li>Earning capacity assessments</li>
 <li>Vocational rehabilitation planning</li>
@@ -375,7 +506,7 @@
 </div>
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
 <h3 itemprop="name">Life Care Planning</h3>
-<p itemprop="description">Certified life care planning services providing comprehensive future medical care cost projections for catastrophic injury cases. Detailed assessments of lifetime medical needs, assistive technology, and care requirements.</p>
+<p itemprop="description">Certified <a href="services/#life-care-planning">life care planning</a> services providing comprehensive future medical care cost projections for catastrophic injury cases. Detailed assessments of lifetime medical needs, assistive technology, and care requirements.</p>
 <ul>
 <li>Future medical cost projections</li>
 <li>Assistive technology needs</li>
@@ -526,35 +657,35 @@
 <p class="section-intro">Representative examples of economic analyses I've completed for attorneys across various <a href="practice-areas/">practice areas</a>. These demonstrate my approach to calculating damages in <a href="practice-areas/personal-injury/">personal injury</a>, <a href="practice-areas/medical-malpractice/">medical malpractice</a>, <a href="practice-areas/employment/">employment</a>, and <a href="practice-areas/commercial-disputes/">commercial litigation</a>. View more detailed <a href="case-studies/">case studies</a>.</p>
 <div class="case-studies-grid">
 <div class="case-study">
-<h4>Personal Injury - Construction Accident</h4>
+<h4><a href="practice-areas/personal-injury/">Personal Injury</a> - Construction Accident</h4>
 <div class="case-details">
 <p><strong>Background:</strong> 45-year-old skilled tradesman suffered multiple fractures in scaffolding collapse with permanent disability preventing return to construction work.</p>
-<p><strong>Analysis:</strong> Calculated lost earning capacity considering construction industry wage premiums, union benefits, and alternative vocational options given physical limitations.</p>
-<p><strong>Challenges:</strong> Addressed irregular employment patterns common in construction and seasonal work variations. Incorporated vocational rehabilitation potential and transferable skills analysis.</p>
+<p><strong>Analysis:</strong> Calculated lost earning capacity considering construction industry wage premiums, union benefits, and alternative <a href="services/#vocational-assessment">vocational options</a> given physical limitations.</p>
+<p><strong>Challenges:</strong> Addressed irregular employment patterns common in construction and seasonal work variations. Incorporated <a href="services/#vocational-assessment">vocational rehabilitation</a> potential and transferable skills analysis.</p>
 </div>
 </div>
 <div class="case-study">
-<h4>Medical Malpractice - Birth Injury</h4>
+<h4><a href="practice-areas/medical-malpractice/">Medical Malpractice</a> - Birth Injury</h4>
 <div class="case-details">
 <p><strong>Background:</strong> Birth complications led to cerebral palsy diagnosis for newborn, requiring lifelong specialized medical care and attendant services.</p>
-<p><strong>Analysis:</strong> Comprehensive life care cost analysis including medical equipment, therapy services, educational support, and household modifications over projected 65-year lifespan.</p>
-<p><strong>Challenges:</strong> Coordinated with life care planner and medical experts to ensure consistent assumptions. Addressed cost inflation for medical services versus general inflation.</p>
+<p><strong>Analysis:</strong> Comprehensive <a href="services/#life-care-planning">life care cost analysis</a> including medical equipment, therapy services, educational support, and household modifications over projected 65-year lifespan.</p>
+<p><strong>Challenges:</strong> Coordinated with <a href="services/#life-care-planning">life care planner</a> and medical experts to ensure consistent assumptions. Addressed cost inflation for medical services versus general inflation.</p>
 </div>
 </div>
 <div class="case-study">
-<h4>Employment Discrimination - Wrongful Termination</h4>
+<h4><a href="practice-areas/employment/">Employment Discrimination</a> - Wrongful Termination</h4>
 <div class="case-details">
 <p><strong>Background:</strong> Senior executive wrongfully terminated at age 52, claiming age discrimination prevented securing comparable position in competitive industry.</p>
-<p><strong>Analysis:</strong> Analyzed executive compensation packages including base salary, bonuses, equity compensation, and benefits. Evaluated job market conditions for senior-level positions.</p>
+<p><strong>Analysis:</strong> Analyzed executive compensation packages including base salary, bonuses, equity compensation, and benefits. Evaluated job market conditions for senior-level positions using <a href="services/forensic-economics/">forensic economic analysis</a>.</p>
 <p><strong>Challenges:</strong> Addressed variable compensation structures and equity valuations. Incorporated industry-specific employment data and executive search market analysis.</p>
 </div>
 </div>
 <div class="case-study">
-<h4>Commercial Damages - Business Interruption</h4>
+<h4><a href="practice-areas/commercial-disputes/">Commercial Damages</a> - Business Interruption</h4>
 <div class="case-details">
 <p><strong>Background:</strong> Manufacturing company's primary supplier breach disrupted operations for 8 months, requiring alternate sourcing at higher costs and lost production capacity.</p>
-<p><strong>Analysis:</strong> Calculated lost profits using but-for scenario modeling, increased operating costs, and business value diminution. Analyzed market share impacts and customer relationship damage.</p>
-<p><strong>Challenges:</strong> Distinguished damages from breach versus general market conditions during economic downturn. Applied appropriate discounting and mitigation credit calculations.</p>
+<p><strong>Analysis:</strong> Calculated lost profits using but-for scenario modeling, increased operating costs, and <a href="services/business-valuation/">business value diminution</a>. Analyzed market share impacts and customer relationship damage.</p>
+<p><strong>Challenges:</strong> Distinguished damages from breach versus general market conditions during economic downturn. Applied appropriate discounting and mitigation credit calculations using <a href="services/forensic-economics/">forensic economic methods</a>.</p>
 </div>
 </div>
 </div>
@@ -669,18 +800,21 @@
 <div class="footer-col">
 <h4>Services</h4>
 <ul>
+<li><a href="services/">All Services</a></li>
 <li><a href="services/forensic-economics/">Forensic Economics</a></li>
 <li><a href="services/business-valuation/">Business Valuation</a></li>
 <li><a href="services/#life-care-planning">Life Care Planning</a></li>
-<li><a href="services/#vocational-assessment">Vocational Assessment</a></li>
+<li><a href="services/#vocational-assessment">Vocational Expert</a></li>
 </ul>
 </div>
 <div class="footer-col">
 <h4>Practice Areas</h4>
 <ul>
+<li><a href="practice-areas/">All Practice Areas</a></li>
 <li><a href="practice-areas/personal-injury/">Personal Injury</a></li>
+<li><a href="practice-areas/personal-injury/">Wrongful Death</a></li>
 <li><a href="practice-areas/medical-malpractice/">Medical Malpractice</a></li>
-<li><a href="practice-areas/employment/">Employment Litigation</a></li>
+<li><a href="practice-areas/employment/">Employment Law</a></li>
 <li><a href="practice-areas/commercial-disputes/">Commercial Disputes</a></li>
 </ul>
 </div>
@@ -689,8 +823,8 @@
 <ul>
 <li><a href="case-studies/">Case Studies</a></li>
 <li><a href="resources/">Articles &amp; Insights</a></li>
-<li><a href="about/">About Chris Skerritt</a></li>
 <li><a href="tools/">Economic Calculators</a></li>
+<li><a href="about/">About Chris Skerritt</a></li>
 <li><a href="contact/">Contact</a></li>
 <li><a href="sitemap.html">Site Map</a></li>
 </ul>
@@ -712,6 +846,8 @@
 </div>
 </div>
 </footer>
-<script src="js/main.js"></script>
+<!-- Performance and optimization scripts -->
+<script src="js/performance-init.min.js" async></script>
+<script src="js/main.min.js" defer></script>
 </body>
 </html>

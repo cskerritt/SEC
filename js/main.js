@@ -1,11 +1,17 @@
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle with Overlay
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
+    // Create mobile navigation overlay
+    const mobileNavOverlay = document.createElement('div');
+    mobileNavOverlay.className = 'mobile-nav-overlay';
+    document.body.appendChild(mobileNavOverlay);
+    
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
+            mobileNavOverlay.classList.toggle('active');
             this.classList.toggle('active');
             document.body.classList.toggle('menu-open');
         });
@@ -16,15 +22,25 @@ document.addEventListener('DOMContentLoaded', function() {
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             navMenu.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
             mobileMenuToggle.classList.remove('active');
             document.body.classList.remove('menu-open');
         });
     });
 
-    // Close mobile menu when clicking outside
+    // Close mobile menu when clicking on overlay
+    mobileNavOverlay.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        mobileNavOverlay.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    });
+
+    // Close mobile menu when clicking outside navigation area
     document.addEventListener('click', function(event) {
-        if (!event.target.closest('.nav-wrapper')) {
+        if (!event.target.closest('.nav-wrapper') && !event.target.closest('.nav-menu')) {
             navMenu.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
             mobileMenuToggle.classList.remove('active');
             document.body.classList.remove('menu-open');
         }
@@ -178,19 +194,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Enhance FAQ interaction
+    // Enhanced FAQ interaction with mobile optimization
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const summary = item.querySelector('summary');
         summary.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Close other FAQ items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.hasAttribute('open')) {
-                    otherItem.removeAttribute('open');
-                }
-            });
+            // Close other FAQ items on mobile for better UX
+            if (window.innerWidth <= 768) {
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.hasAttribute('open')) {
+                        otherItem.removeAttribute('open');
+                    }
+                });
+            }
             
             // Toggle current item
             if (item.hasAttribute('open')) {
@@ -200,4 +218,250 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Mobile Table of Contents Generator
+    function generateMobileTOC() {
+        const headings = document.querySelectorAll('h2, h3, h4');
+        if (headings.length < 3) return; // Only show TOC if there are enough headings
+
+        const tocContainer = document.createElement('div');
+        tocContainer.className = 'mobile-toc collapsed';
+        
+        const tocHeader = document.createElement('div');
+        tocHeader.className = 'mobile-toc-header';
+        tocHeader.textContent = 'Table of Contents';
+        
+        const tocContent = document.createElement('div');
+        tocContent.className = 'mobile-toc-content';
+        
+        const tocList = document.createElement('ul');
+        
+        headings.forEach((heading, index) => {
+            // Create ID if it doesn't exist
+            if (!heading.id) {
+                heading.id = 'heading-' + index;
+            }
+            
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = '#' + heading.id;
+            link.textContent = heading.textContent;
+            link.className = heading.tagName.toLowerCase() === 'h2' ? 'toc-h2' : 
+                             heading.tagName.toLowerCase() === 'h3' ? 'toc-h3' : 'toc-h4';
+            
+            listItem.appendChild(link);
+            tocList.appendChild(listItem);
+        });
+        
+        tocContent.appendChild(tocList);
+        tocContainer.appendChild(tocHeader);
+        tocContainer.appendChild(tocContent);
+        
+        // Insert TOC after first paragraph or at beginning of main content
+        const mainContent = document.querySelector('main') || document.querySelector('.container');
+        const firstP = mainContent?.querySelector('p');
+        if (firstP) {
+            firstP.parentNode.insertBefore(tocContainer, firstP.nextSibling);
+        } else if (mainContent) {
+            mainContent.insertBefore(tocContainer, mainContent.firstChild);
+        }
+        
+        // Toggle functionality
+        tocHeader.addEventListener('click', function() {
+            tocContainer.classList.toggle('collapsed');
+        });
+        
+        // Highlight active section
+        const updateActiveTOC = () => {
+            const scrollPosition = window.scrollY + 100;
+            let activeHeading = null;
+            
+            headings.forEach(heading => {
+                if (heading.offsetTop <= scrollPosition) {
+                    activeHeading = heading;
+                }
+            });
+            
+            // Remove all active classes
+            tocList.querySelectorAll('a').forEach(link => link.classList.remove('active'));
+            
+            // Add active class to current section
+            if (activeHeading) {
+                const activeLink = tocList.querySelector(`a[href="#${activeHeading.id}"]`);
+                if (activeLink) activeLink.classList.add('active');
+            }
+        };
+        
+        window.addEventListener('scroll', updateActiveTOC);
+        updateActiveTOC();
+    }
+
+    // Back to Top Button
+    function createBackToTopButton() {
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.className = 'back-to-top';
+        backToTopBtn.innerHTML = '↑';
+        backToTopBtn.setAttribute('aria-label', 'Back to top');
+        backToTopBtn.setAttribute('title', 'Back to top');
+        
+        document.body.appendChild(backToTopBtn);
+        
+        // Show/hide based on scroll position
+        const toggleBackToTop = () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        };
+        
+        // Smooth scroll to top
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        window.addEventListener('scroll', toggleBackToTop);
+        toggleBackToTop();
+    }
+
+    // Accordion Functionality
+    function initializeAccordions() {
+        const accordions = document.querySelectorAll('.accordion');
+        accordions.forEach(accordion => {
+            const header = accordion.querySelector('.accordion-header');
+            if (header) {
+                header.addEventListener('click', function() {
+                    accordion.classList.toggle('open');
+                    
+                    // Close other accordions in the same group (optional)
+                    const group = accordion.closest('.accordion-group');
+                    if (group) {
+                        const siblings = group.querySelectorAll('.accordion');
+                        siblings.forEach(sibling => {
+                            if (sibling !== accordion) {
+                                sibling.classList.remove('open');
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    }
+
+    // Mobile Form Enhancements
+    function enhanceMobileForms() {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            // Convert regular form groups to mobile-optimized ones
+            const formGroups = form.querySelectorAll('.form-group');
+            formGroups.forEach(group => {
+                if (window.innerWidth <= 768) {
+                    group.classList.add('mobile-form-group');
+                }
+            });
+            
+            // Enhanced input focus for mobile
+            const inputs = form.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    // Scroll input into view on mobile
+                    if (window.innerWidth <= 768) {
+                        setTimeout(() => {
+                            this.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center'
+                            });
+                        }, 300);
+                    }
+                });
+            });
+        });
+    }
+
+    // Touch Target Enhancement
+    function enhanceTouchTargets() {
+        const clickableElements = document.querySelectorAll('a, button, .clickable, .btn');
+        clickableElements.forEach(element => {
+            element.classList.add('touch-target');
+        });
+    }
+
+    // Viewport Meta Tag Optimization
+    function optimizeViewport() {
+        let viewportMeta = document.querySelector('meta[name="viewport"]');
+        if (viewportMeta) {
+            // Enhance existing viewport meta tag
+            viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover');
+        } else {
+            // Create viewport meta tag if it doesn't exist
+            viewportMeta = document.createElement('meta');
+            viewportMeta.name = 'viewport';
+            viewportMeta.content = 'width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover';
+            document.head.appendChild(viewportMeta);
+        }
+    }
+
+    // Initialize all mobile features
+    if (window.innerWidth <= 768) {
+        generateMobileTOC();
+    }
+    createBackToTopButton();
+    initializeAccordions();
+    enhanceMobileForms();
+    enhanceTouchTargets();
+    optimizeViewport();
+
+    // Responsive handler for window resize
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(function() {
+            // Re-initialize mobile features if switching to mobile view
+            if (window.innerWidth <= 768) {
+                enhanceMobileForms();
+                if (!document.querySelector('.mobile-toc')) {
+                    generateMobileTOC();
+                }
+            }
+        }, 250);
+    });
+
+    // Improved swipe gesture for mobile navigation
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    document.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    document.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+        
+        // Swipe right to open menu (only if menu is closed)
+        if (swipeDistance > swipeThreshold && !navMenu.classList.contains('active')) {
+            if (touchStartX < 50) { // Only if swipe starts from left edge
+                navMenu.classList.add('active');
+                mobileNavOverlay.classList.add('active');
+                mobileMenuToggle.classList.add('active');
+                document.body.classList.add('menu-open');
+            }
+        }
+        
+        // Swipe left to close menu (only if menu is open)
+        if (swipeDistance < -swipeThreshold && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            mobileNavOverlay.classList.remove('active');
+            mobileMenuToggle.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    }
 });
