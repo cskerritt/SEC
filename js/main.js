@@ -89,9 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Observe all cards and sections
     const elementsToAnimate = document.querySelectorAll('.service-card, .benefit-card, .testimonial, .case-study, .publication-card, .location-card');
     elementsToAnimate.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        observer.observe(el);
+        // Only hide elements that are below the fold
+        const rect = el.getBoundingClientRect();
+        if (rect.top > window.innerHeight) {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        }
     });
     
     window.addEventListener('scroll', function() {

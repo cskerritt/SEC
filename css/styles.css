@@ -1965,7 +1965,9 @@ img:hover {
 }
 
 .fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
 
 /* Pulse Animation for CTAs */
