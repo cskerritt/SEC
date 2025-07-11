@@ -73,8 +73,30 @@ body {
 
 /* Ensure visibility */
 body * {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* But allow specific elements to be hidden */
+.dropdown:not(:hover),
+.mobile-nav-overlay:not(.active) {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Ensure all sections are visible */
+section,
+.container,
+.hero,
+.hero-content,
+.services,
+.practice-areas,
+.trust-signals,
+.main-footer,
+main {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .container {
@@ -111,14 +133,19 @@ body * {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
+    color: white !important;
     padding: 5rem 0;
     text-align: center;
+}
+
+.hero * {
+    color: white !important;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    color: white !important;
 }
 
 .hero h1 {
@@ -126,18 +153,32 @@ body * {
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
+    color: white !important;
 }
 
 .hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    opacity: 0.95;
+    color: white !important;
+    opacity: 1 !important;
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     line-height: 1.6;
     margin-bottom: 2rem;
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.hero a {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.hero a:hover {
+    color: white !important;
+    opacity: 0.9;
 }
 
 .hero-cta {
@@ -193,6 +234,13 @@ body * {
 
 .btn-icon {
     font-size: 1.2em;
+}
+
+.consultation-note {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    font-style: italic;
 }
 
 /* Typography */
@@ -353,6 +401,40 @@ a:hover {
     font-size: 1.125rem;
     color: var(--light-text);
     margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Services Overview Section */
+.services-overview {
+    background: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.service-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.service-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-card ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: bold;
 }
 
 .credential h4 {
@@ -476,6 +558,74 @@ section {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* Testimonials */
+.testimonials {
+    background: white;
+    padding: 4rem 0;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    color: var(--dark-text);
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+.testimonial cite {
+    display: block;
+    text-align: right;
+    color: var(--light-text);
+    font-size: 0.875rem;
+}
+
+/* Case Studies */
+.case-studies-section {
+    background: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.case-study {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.case-study h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.case-details p {
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+.case-details strong {
+    color: var(--dark-text);
 }
 
 /* Mobile Styles */
