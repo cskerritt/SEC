@@ -1464,20 +1464,22 @@ a:hover {
     min-width: 250px;
     box-shadow: var(--shadow-lg);
     border-radius: 8px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
     transform: translateY(-10px);
     transition: all var(--transition-normal);
     list-style: none;
     padding: 0.5rem 0;
     border: 1px solid var(--border-color);
     margin-top: 0.5rem;
+    display: none !important;
 }
 
 .has-dropdown:hover .dropdown {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
     transform: translateY(0);
+    display: block !important;
 }
 
 .dropdown li {
@@ -2772,6 +2774,7 @@ img:hover {
     transition: all 0.3s ease;
     z-index: 100;
     pointer-events: none;
+    display: none !important;
 }
 
 .has-dropdown:hover .dropdown {
@@ -2779,6 +2782,7 @@ img:hover {
     visibility: visible !important;
     transform: translateY(0);
     pointer-events: auto;
+    display: block !important;
 }
 
 .mobile-nav-overlay {
