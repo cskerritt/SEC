@@ -78,10 +78,16 @@ body * {
 }
 
 /* But allow specific elements to be hidden */
-.dropdown:not(:hover),
+.dropdown,
 .mobile-nav-overlay:not(.active) {
     opacity: 0 !important;
     visibility: hidden !important;
+}
+
+.has-dropdown:hover .dropdown,
+.dropdown:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Ensure all sections are visible */
@@ -626,6 +632,55 @@ section {
 
 .case-details strong {
     color: var(--dark-text);
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--primary-color);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 4rem 0;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+}
+
+.faq-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure proper link styling in content */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Hero links should stay white */
+.hero a {
+    color: white !important;
 }
 
 /* Mobile Styles */
