@@ -2759,8 +2759,10 @@ img:hover {
     transform: none !important;
 }
 
-/* Ensure dropdowns are properly hidden by default */
-.dropdown {
+/* Ensure dropdowns are properly hidden by default - CRITICAL FIX */
+.nav-menu .dropdown,
+.main-nav .dropdown,
+ul.dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -2777,7 +2779,8 @@ img:hover {
     display: none !important;
 }
 
-.has-dropdown:hover .dropdown {
+.nav-menu .has-dropdown:hover .dropdown,
+.main-nav .has-dropdown:hover .dropdown {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0);

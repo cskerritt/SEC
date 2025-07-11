@@ -313,12 +313,12 @@ a:hover {
     min-width: 200px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0 !important;
+    visibility: hidden !important;
     transform: translateY(-10px);
     transition: all 0.3s ease;
     z-index: 100;
-    display: none;
+    display: none !important;
 }
 
 .has-dropdown {
@@ -326,9 +326,9 @@ a:hover {
 }
 
 .has-dropdown:hover .dropdown {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
     transform: translateY(0);
 }
 
