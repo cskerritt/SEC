@@ -765,15 +765,24 @@ a:hover {
 }
 </script>
 <!-- Google Analytics 4 -->
-<!-- ⚠️ IMPORTANT: Google Analytics Setup Required ⚠️
-     TODO: Replace GA_MEASUREMENT_ID with your actual Google Analytics 4 measurement ID
-     Steps to get your measurement ID:
+<!-- ⚠️ CRITICAL: Google Analytics NOT CONFIGURED ⚠️
+     
+     YOUR WEBSITE IS NOT TRACKING ANY VISITOR DATA!
+     
+     IMMEDIATE ACTION REQUIRED:
      1. Go to https://analytics.google.com/
-     2. Create a GA4 property if you haven't already
-     3. Go to Admin > Data Streams > Your Website
-     4. Copy the Measurement ID (starts with "G-XXXXXXXXXX")
-     5. Replace ALL instances of GA_MEASUREMENT_ID below with your actual ID
-     6. Test to ensure tracking is working properly -->
+     2. Create a GA4 property for skerritteconomics.com
+     3. Go to Admin > Data Streams > Add Stream > Web
+     4. Enter your website URL: https://skerritteconomics.com
+     5. Copy the Measurement ID (starts with "G-")
+     6. Replace ALL instances of GA_MEASUREMENT_ID below
+     7. Test using Google Analytics Debugger Chrome extension
+     
+     Without this, you cannot track:
+     - How attorneys find your website
+     - Which pages generate consultations
+     - ROI on any marketing efforts
+     - Contact form conversion rates -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
 <script>
         window.dataLayer = window.dataLayer || [];
@@ -832,7 +841,7 @@ a:hover {
         },
         "telephone": "+1-203-605-2814",
         "email": "chris@skerritteconomics.com",
-        "openingHours": "Mo-Fr 08:00-18:00",
+        "openingHours": "Mo-Fr 08:00-18:00 by appointment",
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -1147,7 +1156,7 @@ a:hover {
 <span>View Services</span>
 <span class="btn-icon">📋</span>
 </a>
-<p class="consultation-note">Initial consultation available within 24 hours</p>
+<p class="consultation-note">Initial consultation typically available within 1 business day</p>
 </div>
 </div>
 </div>
@@ -1282,7 +1291,7 @@ a:hover {
 <div class="benefit-card">
 <div class="benefit-icon"><span>⚡</span></div>
 <h3>Rapid Response</h3>
-<p>Quick case evaluation and preliminary damage estimates to meet your urgent litigation needs.</p>
+<p>Quick case evaluation and preliminary damage estimates typically within 1 business day to meet your urgent litigation needs.</p>
 </div>
 <div class="benefit-card">
 <div class="benefit-icon"><span>📊</span></div>
@@ -1462,7 +1471,7 @@ a:hover {
 </details>
 <details class="faq-item">
 <summary>How long does it take to prepare a forensic economics report?</summary>
-<p>Standard reports typically require 2-4 weeks depending on case complexity and document availability. Rush analyses can be accommodated with shorter timeframes when necessary. We provide estimated timelines during initial consultation and maintain communication throughout the process to ensure deadlines are met.</p>
+<p>Standard reports typically require 2-4 weeks depending on case complexity, document availability, and current caseload. Rush analyses can often be accommodated with shorter timeframes when necessary. We provide realistic timeline estimates during initial consultation and maintain regular communication throughout the process to ensure deadlines are met.</p>
 </details>
 <details class="faq-item">
 <summary>Are your reports admissible in court?</summary>
@@ -1470,7 +1479,7 @@ a:hover {
 </details>
 <details class="faq-item">
 <summary>What are typical costs for forensic economic analysis?</summary>
-<p>Costs vary significantly based on case complexity, ranging from $3,000-$5,000 for straightforward <a href="practice-areas/personal-injury/">personal injury</a> cases to $15,000+ for complex <a href="practice-areas/commercial-disputes/">commercial matters</a>. We provide cost estimates during initial consultation and work within budget constraints whenever possible. <a href="contact/">Contact us</a> for a personalized quote based on your specific case needs.</p>
+<p>Costs vary significantly based on case complexity. Typical ranges start from $3,000-$5,000 for straightforward <a href="practice-areas/personal-injury/">personal injury</a> cases to $15,000+ for complex <a href="practice-areas/commercial-disputes/">commercial matters</a>. We provide detailed cost estimates during initial consultation and work within budget constraints whenever possible. <a href="contact/">Contact us</a> for a personalized quote based on your specific case needs.</p>
 </details>
 </div>
 <p class="faq-footer">Have additional questions? <a href="contact/">Contact us</a> for a free consultation to discuss your specific case needs.</p>
@@ -1492,7 +1501,7 @@ a:hover {
 <span>Schedule Free Consultation</span>
 <span class="btn-icon">📅</span>
 </a>
-<p class="cta-benefits">✓ Case evaluation within 24 hours ✓ No retainer required for consultation ✓ Expert guidance on damage calculation strategies</p>
+<p class="cta-benefits">✓ Case evaluation typically within 1 business day ✓ No retainer required for consultation ✓ Expert guidance on damage calculation strategies</p>
 <div class="cta-contact-info">
 <p>
 <span class="contact-icon phone-icon"></span>
@@ -1516,7 +1525,7 @@ Email: <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">
 <p class="footer-contact">
                         400 Putnam Pike Ste J<br/>
                         Smithfield, RI 02917<br/>
-<a href="tel:203-605-2814" onclick="trackPhoneClick()">(203) 605-2814</a><br/>
+<a href="tel:203-605-2814" onclick="trackPhoneClick()">(203) 605-2814</a> <span style="font-size: 0.9em;">(Direct)</span><br/>
 <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">chris@skerritteconomics.com</a>
 </p>
 </div>
