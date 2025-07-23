@@ -782,7 +782,12 @@
 
 /* FAQ Styles */
 .faq {
-    padding: 4rem 0;
+    padding: 5rem 0;
+    background: var(--background);
+}
+
+.faq-section {
+    padding: 5rem 0;
     background: var(--background);
 }
 
@@ -794,8 +799,8 @@
 
 .faq-grid {
     display: grid;
-    gap: 1rem;
-    max-width: 800px;
+    gap: 1.5rem;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -814,7 +819,7 @@
 }
 
 .faq-item summary {
-    padding: 1.5rem;
+    padding: 1.75rem;
     background: var(--light-bg);
     cursor: pointer;
     font-weight: 600;
@@ -829,6 +834,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    font-size: 1.125rem;
 }
 
 .faq-item summary::before {
@@ -881,11 +887,12 @@
 }
 
 .faq-item p {
-    padding: 1.5rem;
+    padding: 1.75rem;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--dark-text);
     background: var(--background);
+    font-size: 1.05rem;
 }
 
 .faq-item[open] summary {
