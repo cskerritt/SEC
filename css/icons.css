@@ -46,10 +46,26 @@
 
 /* Service card icons need proper sizing */
 .service-icon .icon {
-    font-size: 1.5rem;
+    font-size: 3rem;
     width: auto;
     height: auto;
     line-height: 1;
+    display: inline-block;
+}
+
+/* Hero section icon fixes */
+.hero .icon {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+/* Practice chip icon fixes */
+.practice-chip .icon {
+    display: inline-block;
+    font-size: 1.5rem;
+    width: auto;
+    height: auto;
+    line-height: normal;
 }
 
 /* Practice Area Icons */
