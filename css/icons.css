@@ -16,22 +16,22 @@
 }
 
 /* Service Icons */
-.icon-forensic-economics::before {
+.icon-forensic-economics:empty::before {
     content: "📊";
     font-size: 1em;
 }
 
-.icon-business-valuation::before {
+.icon-business-valuation:empty::before {
     content: "🏢";
     font-size: 1em;
 }
 
-.icon-vocational::before {
+.icon-vocational:empty::before {
     content: "🎯";
     font-size: 1em;
 }
 
-.icon-life-care::before {
+.icon-life-care:empty::before {
     content: "🏥";
     font-size: 1em;
 }
@@ -239,23 +239,19 @@
 }
 
 /* Service card icon styling */
-.service-icon .icon {
-    font-size: 3rem;
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 0 auto 1rem;
-    text-align: center;
-}
-
-/* Ensure service icons are visible */
-.service-card .service-icon {
+.service-icon {
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 3rem;
 }
 
-.service-card .service-icon .icon::before {
+.service-icon .icon {
+    font-size: inherit;
+    width: auto;
+    height: auto;
     display: inline-block;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
 }
 
 /* Section icon styling */
