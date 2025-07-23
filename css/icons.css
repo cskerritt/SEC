@@ -16,22 +16,22 @@
 }
 
 /* Service Icons */
-.icon-forensic-economics:empty::before {
+.icon-forensic-economics::before {
     content: "📊";
     font-size: 1em;
 }
 
-.icon-business-valuation:empty::before {
+.icon-business-valuation::before {
     content: "🏢";
     font-size: 1em;
 }
 
-.icon-vocational:empty::before {
+.icon-vocational::before {
     content: "🎯";
     font-size: 1em;
 }
 
-.icon-life-care:empty::before {
+.icon-life-care::before {
     content: "🏥";
     font-size: 1em;
 }
@@ -65,6 +65,11 @@
 
 .icon-email::before {
     content: "✉️";
+    font-size: 1em;
+}
+
+.icon-location::before {
+    content: "📍";
     font-size: 1em;
 }
 
