@@ -44,6 +44,14 @@
 
 /* For icons with content, we'll use the content directly */
 
+/* Service card icons need proper sizing */
+.service-icon .icon {
+    font-size: 1.5rem;
+    width: auto;
+    height: auto;
+    line-height: 1;
+}
+
 /* Practice Area Icons */
 .icon-personal-injury::before {
     content: "⚖️";
