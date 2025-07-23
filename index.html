@@ -32,717 +32,8 @@
 
 <!-- Main Stylesheet -->
 <link href="css/styles.css" rel="stylesheet"/>
-
-
-<!-- Critical inline styles for immediate rendering -->
-<style>
-/* Critical CSS Reset and Variables */
-:root {
-    --primary-color: #1e3a8a;
-    --secondary-color: #3730a3;
-    --accent-color: #dc2626;
-    --dark-text: #1f2937;
-    --light-text: #6b7280;
-    --background: #ffffff;
-    --light-bg: #f9fafb;
-    --border-color: #e5e7eb;
-    --success: #059669;
-    --max-width: 1200px;
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Base Styles */
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: var(--dark-text);
-    background-color: var(--background);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Ensure visibility */
-body * {
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* But allow specific elements to be hidden */
-.dropdown {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    display: none !important;
-}
-
-.mobile-nav-overlay:not(.active) {
-    opacity: 0 !important;
-    visibility: hidden !important;
-}
-
-.has-dropdown:hover .dropdown {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-/* Ensure all sections are visible */
-section,
-.container,
-.hero,
-.hero-content,
-.services,
-.practice-areas,
-.trust-signals,
-.main-footer,
-main {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navigation */
-.main-nav {
-    background: var(--background);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-}
-
-.logo {
-    font-size: 1.25rem;
-    color: var(--dark-text);
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white !important;
-    padding: 5rem 0;
-    text-align: center;
-}
-
-.hero * {
-    color: white !important;
-}
-
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    color: white !important;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-    color: white !important;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    color: white !important;
-    opacity: 1 !important;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    color: white !important;
-    opacity: 1 !important;
-}
-
-.hero a {
-    color: white !important;
-    text-decoration: underline;
-}
-
-.hero a:hover {
-    color: white !important;
-    opacity: 0.9;
-}
-
-.hero-cta {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.875rem 1.75rem;
-    border-radius: 6px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    transition: all var(--transition-normal);
-    font-size: 1rem;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-primary {
-    background: var(--dark-text);
-    color: white;
-    border: 2px solid var(--dark-text);
-}
-
-.btn-primary:hover {
-    background: transparent;
-    color: white;
-    border-color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-}
-
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-
-.btn-with-icon {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.btn-icon {
-    font-size: 1.2em;
-}
-
-.consultation-note {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    opacity: 0.9;
-    font-style: italic;
-}
-
-/* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* Links */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation Menu */
-.nav-menu {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-menu li {
-    position: relative;
-}
-
-.nav-menu a {
-    color: var(--dark-text);
-    font-weight: 500;
-    font-size: 0.925rem;
-    padding: 0.5rem 0;
-}
-
-.nav-menu a:hover {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-/* Dropdown Menus */
-.dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    min-width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    z-index: 100;
-    display: none !important;
-}
-
-.has-dropdown {
-    position: relative;
-}
-
-.has-dropdown:hover .dropdown {
-    display: block !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0);
-}
-
-.dropdown li {
-    list-style: none;
-}
-
-.dropdown a {
-    display: block;
-    padding: 0.75rem 1.25rem;
-    color: var(--dark-text);
-    white-space: nowrap;
-}
-
-.dropdown a:hover {
-    background: var(--light-bg);
-    color: var(--primary-color);
-}
-
-.mobile-menu-toggle {
-    display: none;
-}
-
-/* Mobile Navigation Overlay */
-.mobile-nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-}
-
-.mobile-nav-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Grid Layouts */
-.services-grid,
-.benefits-grid,
-.credentials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.service-card,
-.benefit-card,
-.credential {
-    background: var(--light-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    transition: transform var(--transition-normal);
-}
-
-.service-card:hover,
-.benefit-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-}
-
-.service-card h3,
-.benefit-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: var(--dark-text);
-}
-
-.service-icon,
-.benefit-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-
-/* Trust Signals Section */
-.trust-signals {
-    background: white;
-    padding: 4rem 0;
-}
-
-.section-intro {
-    text-align: center;
-    font-size: 1.125rem;
-    color: var(--light-text);
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Services Overview Section */
-.services-overview {
-    background: var(--light-bg);
-    padding: 4rem 0;
-}
-
-.service-card p {
-    color: var(--light-text);
-    line-height: 1.6;
-}
-
-.service-card ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 1rem;
-}
-
-.service-card ul li {
-    padding: 0.5rem 0;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.service-card ul li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--success);
-    font-weight: bold;
-}
-
-.credential h4 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-}
-
-.credential ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.credential ul li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-/* Sections */
-section {
-    padding: 4rem 0;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header h2 {
-    font-size: 2rem;
-    color: var(--dark-text);
-    margin-bottom: 1rem;
-}
-
-.section-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Practice Areas Section */
-.practice-areas {
-    background: var(--light-bg);
-    padding: 4rem 0;
-}
-
-.practice-areas-intro {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.practice-areas-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 3rem;
-}
-
-.practice-chip {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background: white;
-    border-radius: 50px;
-    box-shadow: var(--shadow-sm);
-    text-decoration: none;
-    color: var(--dark-text);
-    transition: all var(--transition-normal);
-}
-
-.practice-chip:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-    text-decoration: none;
-}
-
-.practice-chip .icon {
-    font-size: 1.5rem;
-}
-
-/* Footer */
-.main-footer {
-    background: var(--dark-text);
-    color: white;
-    padding: 3rem 0 1rem;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer-col h4 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-col a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-}
-
-.footer-col a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.6);
-}
-
-/* Testimonials */
-.testimonials {
-    background: white;
-    padding: 4rem 0;
-}
-
-.testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.testimonial {
-    background: var(--light-bg);
-    padding: 2rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.testimonial blockquote {
-    font-style: italic;
-    color: var(--dark-text);
-    margin: 0 0 1rem 0;
-    line-height: 1.6;
-}
-
-.testimonial cite {
-    display: block;
-    text-align: right;
-    color: var(--light-text);
-    font-size: 0.875rem;
-}
-
-/* Case Studies */
-.case-studies-section {
-    background: var(--light-bg);
-    padding: 4rem 0;
-}
-
-.case-studies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.case-study {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: var(--shadow-sm);
-}
-
-.case-study h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.case-details p {
-    margin-bottom: 1rem;
-    color: var(--light-text);
-}
-
-.case-details strong {
-    color: var(--dark-text);
-}
-
-/* CTA Section */
-.cta-section {
-    background: var(--primary-color);
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-}
-
-.cta-section h2 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.cta-section p {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-}
-
-/* FAQ Section */
-.faq-section {
-    padding: 4rem 0;
-}
-
-.faq-item {
-    margin-bottom: 1.5rem;
-}
-
-.faq-item h4 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-/* Ensure proper link styling in content */
-a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-}
-
-a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
-}
-
-/* Hero links should stay white */
-.hero a {
-    color: white !important;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 0.5rem;
-    }
-    
-    .mobile-menu-toggle span {
-        width: 24px;
-        height: 2px;
-        background: var(--dark-text);
-        transition: all var(--transition-normal);
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        background-color: white;
-        width: 250px;
-        height: 100vh;
-        padding: 2rem;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-        transition: left var(--transition-normal);
-        z-index: 1001;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .hero h1 {
-        font-size: 1.75rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-}
-</style>
+<link href="css/homepage.css" rel="stylesheet"/>
+<link href="css/icons.css" rel="stylesheet"/>
 
 <!-- Canonical URL -->
 <link href="https://skerritteconomics.com/" rel="canonical"/>
@@ -1118,8 +409,8 @@ a:hover {
 <ul class="dropdown">
 <li><a href="services/forensic-economics/">Forensic Economics</a></li>
 <li><a href="services/business-valuation/">Business Valuation</a></li>
-<li><a href="services/#vocational-assessment">Vocational Expert</a></li>
-<li><a href="services/#life-care-planning">Life Care Planning</a></li>
+<li><a href="services/vocational-expert/">Vocational Expert</a></li>
+<li><a href="services/life-care-planning/">Life Care Planning</a></li>
 </ul>
 </li>
 <li class="has-dropdown">
@@ -1132,10 +423,8 @@ a:hover {
 </ul>
 </li>
 <li><a href="case-studies/">Case Studies</a></li>
-<li><a href="locations/">Locations</a></li>
 <li><a href="about/">About</a></li>
 <li><a href="resources/">Resources</a></li>
-<li><a href="tools/">Tools</a></li>
 <li><a class="nav-cta" href="contact/">Contact</a></li>
 </ul>
 </div>
@@ -1150,11 +439,11 @@ a:hover {
 <div class="hero-cta">
 <a class="btn btn-primary btn-with-icon" href="contact/">
 <span>Schedule Free Consultation</span>
-<span class="btn-icon">📅</span>
+<i class="icon icon-calendar" aria-label="Calendar"></i>
 </a>
 <a class="btn btn-secondary btn-with-icon" href="services/">
 <span>View Services</span>
-<span class="btn-icon">📋</span>
+<i class="icon icon-document" aria-label="Document"></i>
 </a>
 <p class="consultation-note">Initial consultation typically available within 1 business day</p>
 </div>
@@ -1166,23 +455,23 @@ a:hover {
 <div class="container">
 <div class="practice-areas-chips">
 <a class="practice-chip" href="practice-areas/personal-injury/">
-<span class="icon">⚖️</span>
+<i class="icon icon-personal-injury" aria-label="Personal Injury"></i>
                     Personal Injury
                 </a>
 <a class="practice-chip" href="practice-areas/personal-injury/">
-<span class="icon">🏛️</span>
+<i class="icon icon-court" aria-label="Wrongful Death"></i>
                     Wrongful Death
                 </a>
 <a class="practice-chip" href="practice-areas/medical-malpractice/">
-<span class="icon">🏥</span>
+<i class="icon icon-medical-malpractice" aria-label="Medical Malpractice"></i>
                     Medical Malpractice
                 </a>
 <a class="practice-chip" href="practice-areas/employment/">
-<span class="icon">💼</span>
+<i class="icon icon-employment" aria-label="Employment Litigation"></i>
                     Employment Litigation
                 </a>
 <a class="practice-chip" href="practice-areas/commercial-disputes/">
-<span class="icon">📊</span>
+<i class="icon icon-commercial" aria-label="Business Disputes"></i>
                     Business &amp; Shareholder Disputes
                 </a>
 </div>
@@ -1192,13 +481,13 @@ a:hover {
 <section class="services-overview" itemscope itemtype="https://schema.org/Service">
 <div class="container">
 <div class="section-header">
-<div class="section-icon">⚖️</div>
+<div class="section-icon"><i class="icon icon-court icon-xl" aria-label="Legal Services"></i></div>
 <h2>Professional Economic Analysis Services</h2>
 </div>
 <p class="section-intro">Comprehensive <a href="services/forensic-economics/">forensic economics</a>, <a href="services/business-valuation/">business valuation</a>, <a href="services/#vocational-assessment">vocational expert</a>, and <a href="services/#life-care-planning">life care planning</a> services delivered by a court-qualified expert with extensive litigation support experience.</p>
 <div class="services-grid">
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
-<div class="service-icon">📊</div>
+<div class="service-icon"><i class="icon icon-forensic-economics" aria-label="Forensic Economics"></i></div>
 <h3 itemprop="name">Forensic Economics</h3>
 <p itemprop="description">Comprehensive economic loss analysis including lost earnings, fringe benefits, household services, and life care cost projections for <a href="practice-areas/personal-injury/">personal injury</a>, <a href="practice-areas/personal-injury/">wrongful death</a>, and <a href="practice-areas/medical-malpractice/">medical malpractice</a> cases throughout Rhode Island and New England.</p>
 <ul>
@@ -1207,10 +496,10 @@ a:hover {
 <li>Life care cost analysis</li>
 <li>Present value determinations</li>
 </ul>
-<a class="learn-more" href="services/forensic-economics/">Learn More →</a>
+<a class="learn-more" href="services/forensic-economics/">Learn More <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
-<div class="service-icon">🏢</div>
+<div class="service-icon"><i class="icon icon-business-valuation" aria-label="Business Valuation"></i></div>
 <h3 itemprop="name">Business Valuation</h3>
 <p itemprop="description">Expert <a href="services/business-valuation/">business valuations</a> and economic damage quantification for litigation support, divorce proceedings, <a href="practice-areas/commercial-disputes/">shareholder disputes</a>, business interruption claims, and estate planning. Certified valuations that meet court standards throughout <a href="locations/rhode-island-forensic-economist/">Rhode Island</a>, <a href="locations/massachusetts-forensic-economist/">Massachusetts</a>, Connecticut, and nationwide.</p>
 <ul>
@@ -1219,10 +508,10 @@ a:hover {
 <li>Divorce &amp; marital asset valuation</li>
 <li>Business damage quantification</li>
 </ul>
-<a class="learn-more" href="services/business-valuation/">Learn More →</a>
+<a class="learn-more" href="services/business-valuation/">Learn More <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
-<div class="service-icon">🎯</div>
+<div class="service-icon"><i class="icon icon-vocational" aria-label="Vocational Assessment"></i></div>
 <h3 itemprop="name">Vocational Expert</h3>
 <p itemprop="description">Comprehensive <a href="services/#vocational-assessment">vocational assessments</a> and earning capacity evaluations for <a href="practice-areas/personal-injury/">personal injury</a>, workers' compensation, and disability cases. Expert analysis of vocational rehabilitation potential and labor market conditions throughout <a href="locations/new-england-economic-expert/">New England</a>.</p>
 <ul>
@@ -1231,10 +520,10 @@ a:hover {
 <li>Transferable skills analysis</li>
 <li>Labor market surveys</li>
 </ul>
-<a class="learn-more" href="services/#vocational-assessment">Learn More →</a>
+<a class="learn-more" href="services/#vocational-assessment">Learn More <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 <div class="service-card" itemprop="hasOfferCatalog" itemscope itemtype="https://schema.org/Service">
-<div class="service-icon">🏥</div>
+<div class="service-icon"><i class="icon icon-life-care" aria-label="Life Care Planning"></i></div>
 <h3 itemprop="name">Life Care Planning</h3>
 <p itemprop="description">Certified <a href="services/#life-care-planning">life care planning</a> services providing comprehensive future medical care cost projections for catastrophic injury cases. Detailed assessments of lifetime medical needs, assistive technology, and care requirements.</p>
 <ul>
@@ -1243,7 +532,7 @@ a:hover {
 <li>Home modification assessments</li>
 <li>Long-term care planning</li>
 </ul>
-<a class="learn-more" href="services/#life-care-planning">Learn More →</a>
+<a class="learn-more" href="services/#life-care-planning">Learn More <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 </div>
 </div>
@@ -1284,7 +573,7 @@ a:hover {
 <section class="why-choose">
 <div class="container">
 <div class="section-header">
-<div class="section-icon">🏆</div>
+<div class="section-icon"><i class="icon icon-trophy icon-xl" aria-label="Awards"></i></div>
 <h2>Why Rhode Island Attorneys Choose Chris Skerritt</h2>
 </div>
 <div class="benefits-grid">
@@ -1318,7 +607,7 @@ a:hover {
 <p class="section-intro">Extensive credentials and proven track record in forensic economics and business valuation.</p>
 <div class="credentials-grid">
 <div class="credential">
-<h4>🎓 Professional Certifications</h4>
+<h4><i class="icon icon-graduation" aria-label="Certifications"></i> Professional Certifications</h4>
 <ul>
 <li><strong>M.Ed</strong> - Master of Education</li>
 <li><strong>MBA</strong> - Master of Business Administration</li>
@@ -1438,17 +727,17 @@ a:hover {
 <div class="location-card">
 <h3>New England Base</h3>
 <p>Headquartered at 400 Putnam Pike Ste J, Smithfield, RI 02917. Regular appearances throughout <a href="locations/states/rhode-island/">Rhode Island</a>, <a href="locations/states/massachusetts/">Massachusetts</a>, <a href="locations/states/connecticut/">Connecticut</a>, <a href="locations/states/new-hampshire/">New Hampshire</a>, <a href="locations/states/vermont/">Vermont</a>, and <a href="locations/states/maine/">Maine</a>. Learn more <a href="about/">about Chris Skerritt</a> and professional credentials.</p>
-<a href="locations/new-england-economic-expert/">New England Details →</a>
+<a href="locations/new-england-economic-expert/">New England Details <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 <div class="location-card">
 <h3>National Coverage</h3>
 <p>Available for cases nationwide including federal courts, state courts, and arbitration proceedings. Remote testimony and virtual depositions available. Browse our <a href="services/">forensic economics services</a> for more details.</p>
-<a href="contact/">Discuss Your Case →</a>
+<a href="contact/">Discuss Your Case <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 <div class="location-card">
 <h3>Major Markets</h3>
 <p>Regular work in <a href="locations/states/new-york/">New York</a>, <a href="locations/states/pennsylvania/">Pennsylvania</a>, <a href="locations/states/california/">California</a>, <a href="locations/states/texas/">Texas</a>, <a href="locations/states/florida/">Florida</a>, and other major litigation markets nationwide. Extensive experience with complex multi-state litigation.</p>
-<a href="case-studies/">View Case Examples →</a>
+<a href="case-studies/">View Case Examples <i class="icon icon-arrow-right" aria-label="Arrow"></i></a>
 </div>
 </div>
 </div>
@@ -1488,7 +777,7 @@ a:hover {
 
 <!-- Visual Separator -->
 <div class="visual-separator">
-<div class="visual-separator-icon">⭐</div>
+<div class="visual-separator-icon"><i class="icon icon-star icon-xl" aria-label="Separator"></i></div>
 </div>
 
 <!-- CTA Section -->
@@ -1499,9 +788,9 @@ a:hover {
 <p>Free initial consultation to evaluate your economic damage assessment needs. No obligation case review for attorneys throughout Rhode Island and nationwide.</p>
 <a class="btn btn-primary btn-large btn-with-icon" href="contact/">
 <span>Schedule Free Consultation</span>
-<span class="btn-icon">📅</span>
+<i class="icon icon-calendar" aria-label="Calendar"></i>
 </a>
-<p class="cta-benefits">✓ Case evaluation typically within 1 business day ✓ No retainer required for consultation ✓ Expert guidance on damage calculation strategies</p>
+<p class="cta-benefits"><i class="icon icon-checkmark" aria-label="Check"></i> Case evaluation typically within 1 business day <i class="icon icon-checkmark" aria-label="Check"></i> No retainer required for consultation <i class="icon icon-checkmark" aria-label="Check"></i> Expert guidance on damage calculation strategies</p>
 <div class="cta-contact-info">
 <p>
 <span class="contact-icon phone-icon"></span>
@@ -1580,7 +869,7 @@ Email: <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">
 </footer>
 <!-- Floating Action Button for Quick Contact -->
 <a href="contact/" class="fab fab-pulse" title="Schedule Free Consultation" aria-label="Schedule Free Consultation">
-📞
+<i class="icon icon-phone icon-lg"></i>
 </a>
 
 <script src="js/main.js"></script>
