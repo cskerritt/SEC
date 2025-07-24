@@ -309,7 +309,7 @@ def generate_city_page(city):
 <span>Court-Qualified Expert</span>
 <span>Serving {city['name']} Area</span>
 </div>
-<p class="lead">Expert vocational evaluations and earning capacity assessments for {city['name']} attorneys. As a CRC-certified vocational expert based in Rhode Island, I provide comprehensive vocational assessments for personal injury, workers' compensation, and disability cases throughout {city['name']} and {city['state']}.</p>
+<p class="lead">Expert vocational evaluations and earning capacity assessments for {city['name']} attorneys. As CRC-certified vocational experts based in Rhode Island, we provide comprehensive vocational assessments for personal injury, workers' compensation, and disability cases throughout {city['name']} and {city['state']}.</p>
 </div>
 </section>
 <!-- Local Service Content -->
@@ -319,13 +319,13 @@ def generate_city_page(city):
 <!-- City Overview -->
 <div class="service-section">
 <h2>Vocational Expert Services in {city['name']}</h2>
-<p>Serving {city['name']}'s legal community with expert vocational evaluations, I understand the unique employment landscape of this {city['state']} city. With a population of {city['population']}, {city['name']} features major employers including {city['major_employers']}. My vocational assessments reflect deep knowledge of the local labor market and employment opportunities specific to {city['name']}.</p>
-<p>{city['economy']}. Located {city['distance']}, I provide timely and responsive vocational expert services to {city['name']} attorneys handling personal injury, workers' compensation, and disability cases.</p>
+<p>Serving {city['name']}'s legal community with expert vocational evaluations, we understand the unique employment landscape of this {city['state']} city. With a population of {city['population']}, {city['name']} features major employers including {city['major_employers']}. Our vocational assessments reflect deep knowledge of the local labor market and employment opportunities specific to {city['name']}.</p>
+<p>{city['economy']}. Located {city['distance']}, we provide timely and responsive vocational expert services to {city['name']} attorneys handling personal injury, workers' compensation, and disability cases.</p>
 </div>
 <!-- Services for City Attorneys -->
 <div class="service-section">
 <h2>Vocational Evaluations for {city['name']} Attorneys</h2>
-<p>{city['name']} law firms rely on comprehensive vocational assessments to support their cases in {city['court_info']}. My services include:</p>
+<p>{city['name']} law firms rely on comprehensive vocational assessments to support their cases in {city['court_info']}. Our services include:</p>
 <ul>
 <li><strong>Earning Capacity Evaluations:</strong> Detailed analysis of pre-injury and post-injury earning potential specific to the {city['name']} job market</li>
 <li><strong>Transferable Skills Analysis:</strong> Assessment of skills that transfer to available positions in the {city['name']} metropolitan area</li>
@@ -371,7 +371,7 @@ def generate_city_page(city):
 <h2>Why {city['name']} Attorneys Choose Skerritt Economics</h2>
 <ul>
 <li><strong>Regional Expertise:</strong> Extensive knowledge of {city['state']}'s employment landscape and labor market conditions</li>
-<li><strong>Court Experience:</strong> Proven track record testifying in {city['state']} courts</li>
+<li><strong>Court Experience:</strong> Our firm has extensive experience testifying in {city['state']} courts</li>
 <li><strong>Comprehensive Approach:</strong> Integration with economic loss calculations for complete damage assessments</li>
 <li><strong>Timely Service:</strong> Located {city['distance']}, providing responsive service to {city['name']} attorneys</li>
 <li><strong>Professional Credentials:</strong> CRC certified with extensive vocational evaluation experience</li>
