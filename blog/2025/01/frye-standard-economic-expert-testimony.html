@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frye Standard for Economic Expert Testimony | Skerritt Economics Blog</title>
+    <meta name="description" content="Comprehensive analysis of the Frye general acceptance standard for economic expert testimony, comparing it to Daubert and examining its application in state courts.">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/blog.css">
+    <link rel="stylesheet" href="../../../css/mobile-optimizations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/frye-standard-economic-expert-testimony.html">
+    
+    <!-- MathJax for LaTeX formula rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <!-- Structured Data for Blog Post -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://skerritteconomics.com/blog/2025/01/frye-standard-economic-expert-testimony.html",
+        "headline": "Frye v. United States and the 'General Acceptance' Standard for Economic Expert Testimony",
+        "description": "Comprehensive analysis of the Frye general acceptance standard for economic expert testimony, comparing it to Daubert and examining its application in state courts.",
+        "datePublished": "2025-01-25",
+        "dateModified": "2025-01-25",
+        "author": {
+            "@type": "Person",
+            "name": "Christopher T. Skerritt",
+            "honorificSuffix": "CRC, MBA",
+            "jobTitle": "Forensic Economist",
+            "url": "https://skerritteconomics.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Skerritt Economics & Consulting",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://skerritteconomics.com/sec-logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skerritteconomics.com/blog/2025/01/frye-standard-economic-expert-testimony.html"
+        },
+        "keywords": "Frye standard, general acceptance, expert testimony, forensic economics, state courts, Daubert comparison",
+        "articleSection": "Case Law",
+        "wordCount": "1700"
+    }
+    </script>
+    
+    <style>
+        /* Blog post specific styles */
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .blog-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        
+        .blog-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        
+        .blog-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content ul,
+        .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .formula-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .example-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .example-box h4 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+        
+        .case-box {
+            background-color: #fef3c7;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .case-box h4 {
+            margin-top: 0;
+            color: #92400e;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .data-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        blockquote {
+            border-left: 4px solid #ca6c18;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+        
+        .author-bio {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+        
+        .author-bio h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 1rem;
+            }
+            
+            .formula-box {
+                padding: 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+            }
+            
+            .data-table {
+                font-size: 0.75rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../../../services/business-valuation/">Business Valuation</a></li>
+                            <li><a href="../../../services/vocational-expert/">Vocational Expert</a></li>
+                            <li><a href="../../../services/life-care-planning/">Life Care Planning</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../../../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../case-studies/">Case Studies</a></li>
+                    <li><a href="../../../about/">About</a></li>
+                    <li><a href="../../../resources/">Resources</a></li>
+                    <li><a href="../../../blog/" class="active">Blog</a></li>
+                    <li><a href="../../../contact/" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="../../../index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="../../">Blog</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Frye Standard</span>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <article class="blog-article">
+        <header class="blog-header">
+            <div class="blog-meta">
+                <span class="blog-category">Case Law</span>
+                <span>•</span>
+                <time datetime="2025-01-25">January 25, 2025</time>
+                <span>•</span>
+                <span>10 min read</span>
+            </div>
+            <h1>Frye v. United States and the "General Acceptance" Standard for Economic Expert Testimony</h1>
+            <p class="lead">An in-depth examination of the Frye standard's continuing influence on forensic economic testimony in state courts, its comparison to Daubert, and practical implications for expert witnesses.</p>
+            <div class="blog-author">
+                By Christopher T. Skerritt, CRC, MBA
+            </div>
+        </header>
+
+        <div class="blog-content">
+            <h2>Introduction</h2>
+            
+            <p>While the federal courts and many states have adopted the <em>Daubert</em> standard for expert testimony, a significant number of jurisdictions continue to apply the older <em>Frye</em> "general acceptance" test. Originating from a 1923 criminal case involving a polygraph test, <em>Frye v. United States</em> established a seemingly simple standard that has proven remarkably durable. For forensic economists practicing in Frye jurisdictions, understanding this standard's nuances is essential. This article examines the <em>Frye</em> test's origins, its application to economic testimony, comparisons with <em>Daubert</em>, and practical strategies for navigating Frye jurisdictions.</p>
+
+            <h2>1. The Origins: Frye v. United States (1923)</h2>
+
+            <h3>1.1 The Case</h3>
+
+            <p>In <em>Frye v. United States</em>, 293 F. 1013 (D.C. Cir. 1923), the defendant sought to introduce evidence from a systolic blood pressure deception test—a precursor to the modern polygraph. The Court of Appeals for the District of Columbia rejected the evidence, establishing what became known as the <em>Frye</em> test:</p>
+
+            <blockquote>
+                "Just when a scientific principle or discovery crosses the line between the experimental and demonstrable stages is difficult to define. Somewhere in this twilight zone the evidential force of the principle must be recognized, and while courts will go a long way in admitting expert testimony deduced from a well-recognized scientific principle or discovery, the thing from which the deduction is made must be sufficiently established to have gained general acceptance in the particular field in which it belongs."
+            </blockquote>
+
+            <h3>1.2 The "General Acceptance" Standard</h3>
+
+            <p>The <em>Frye</em> test focuses on a single criterion: whether the scientific principle or methodology has achieved <strong>general acceptance</strong> in the relevant scientific community. This deceptively simple standard dominated expert testimony law for 70 years.</p>
+
+            <h2>2. Frye in the Economic Context</h2>
+
+            <h3>2.1 Application to Economic Methodologies</h3>
+
+            <p>Courts applying <em>Frye</em> to economic testimony ask whether the economist's methods are generally accepted within the field of forensic economics. Common areas of scrutiny include:</p>
+
+            <ul>
+                <li><strong>Discount rate selection</strong>: Is the chosen methodology mainstream?</li>
+                <li><strong>Worklife expectancy tables</strong>: Are the tables widely used?</li>
+                <li><strong>Present value calculations</strong>: Does the approach follow accepted practice?</li>
+                <li><strong>Hedonic damages</strong>: Is the methodology generally accepted?</li>
+            </ul>
+
+            <h3>2.2 Defining the Relevant Field</h3>
+
+            <p>A critical issue under <em>Frye</em> is defining the "particular field" for determining general acceptance:</p>
+
+            <div class="example-box">
+                <h4>Field Definition Examples</h4>
+                <ul>
+                    <li><strong>Narrow</strong>: Forensic economics specifically</li>
+                    <li><strong>Moderate</strong>: Applied economics and finance</li>
+                    <li><strong>Broad</strong>: Economics as an academic discipline</li>
+                </ul>
+                <p>Courts typically adopt the moderate approach, looking to both forensic practitioners and academic economists.</p>
+            </div>
+
+            <h2>3. Frye vs. Daubert: Key Differences</h2>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Frye Standard</th>
+                        <th>Daubert Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primary Focus</td>
+                        <td>General acceptance</td>
+                        <td>Scientific reliability</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Factors</td>
+                        <td>One (acceptance)</td>
+                        <td>Multiple (testability, error rate, etc.)</td>
+                    </tr>
+                    <tr>
+                        <td>Judge's Role</td>
+                        <td>Count noses in field</td>
+                        <td>Gatekeeper evaluation</td>
+                    </tr>
+                    <tr>
+                        <td>Novel Methods</td>
+                        <td>Excluded until accepted</td>
+                        <td>Admissible if reliable</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibility</td>
+                        <td>Rigid</td>
+                        <td>Case-by-case analysis</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.1 Advantages of Frye</h3>
+
+            <ul>
+                <li><strong>Simplicity</strong>: Single criterion easier to apply</li>
+                <li><strong>Conservatism</strong>: Protects against junk science</li>
+                <li><strong>Predictability</strong>: Clear standard for experts</li>
+                <li><strong>Deference</strong>: Relies on scientific community judgment</li>
+            </ul>
+
+            <h3>3.2 Criticisms of Frye</h3>
+
+            <ul>
+                <li><strong>Stifles innovation</strong>: New methods excluded despite merit</li>
+                <li><strong>Nose counting</strong>: Popularity over scientific validity</li>
+                <li><strong>Lag time</strong>: Years before acceptance achieved</li>
+                <li><strong>Vagueness</strong>: What constitutes "general" acceptance?</li>
+            </ul>
+
+            <h2>4. States Still Using Frye</h2>
+
+            <h3>4.1 Current Frye Jurisdictions</h3>
+
+            <p>As of 2025, the following states continue to apply <em>Frye</em> or a modified version:</p>
+
+            <ul>
+                <li><strong>California</strong>: <em>People v. Kelly</em> (Kelly-Frye test)</li>
+                <li><strong>Illinois</strong>: Pure <em>Frye</em> standard</li>
+                <li><strong>Maryland</strong>: <em>Reed v. State</em> (Frye-Reed standard)</li>
+                <li><strong>Minnesota</strong>: <em>Frye-Mack</em> standard</li>
+                <li><strong>New Jersey</strong>: Modified <em>Frye</em></li>
+                <li><strong>New York</strong>: <em>Frye</em> standard</li>
+                <li><strong>Pennsylvania</strong>: <em>Frye</em> standard</li>
+                <li><strong>Washington</strong>: <em>Frye</em> standard</li>
+            </ul>
+
+            <h3>4.2 Hybrid Approaches</h3>
+
+            <p>Some states apply <em>Frye</em> to novel scientific evidence while using different standards for other expert testimony:</p>
+
+            <div class="case-box">
+                <h4>Florida's Transition</h4>
+                <p>Florida applied <em>Frye</em> until 2013, switched to <em>Daubert</em>, then returned to <em>Frye</em> in 2019 following legislative changes. Economic testimony often escaped strict <em>Frye</em> scrutiny as "technical" rather than "scientific" evidence.</p>
+            </div>
+
+            <h2>5. Economic Methodologies Under Frye</h2>
+
+            <h3>5.1 Generally Accepted Methods</h3>
+
+            <p>Courts in <em>Frye</em> jurisdictions consistently accept:</p>
+
+            <ol>
+                <li><strong>Present value calculations</strong> using standard formulas</li>
+                <li><strong>Government statistical data</strong> (BLS, Census, SSA)</li>
+                <li><strong>Actuarial life tables</strong></li>
+                <li><strong>Standard discount rate approaches</strong> (Treasury, total offset)</li>
+                <li><strong>Human capital method</strong> for valuing lost earnings</li>
+            </ol>
+
+            <h3>5.2 Contested Methodologies</h3>
+
+            <p>Methods facing <em>Frye</em> challenges include:</p>
+
+            <ul>
+                <li><strong>Hedonic damages</strong>: Value of life enjoyment</li>
+                <li><strong>Below-market discount rates</strong>: Tax-adjusted rates</li>
+                <li><strong>Econometric projections</strong>: Complex statistical models</li>
+                <li><strong>Behavioral economics applications</strong>: Loss aversion adjustments</li>
+            </ul>
+
+            <h3>5.3 Case Examples</h3>
+
+            <div class="case-box">
+                <h4>Mercado v. Ahmed (N.Y. 2011)</h4>
+                <p>New York court excluded economist's hedonic damage calculation: "The methodology for placing a dollar value on loss of enjoyment of life has not gained general acceptance in the field of economics."</p>
+            </div>
+
+            <div class="case-box">
+                <h4>State v. Porter (Ill. 2014)</h4>
+                <p>Illinois court admitted standard worklife expectancy tables: "The use of BLS worklife tables is universally accepted among forensic economists and satisfies Frye."</p>
+            </div>
+
+            <h2>6. Strategies for Frye Jurisdictions</h2>
+
+            <h3>6.1 Establishing General Acceptance</h3>
+
+            <p>To demonstrate general acceptance, economists should:</p>
+
+            <ol>
+                <li><strong>Cite professional standards</strong>
+                    <ul>
+                        <li>National Association of Forensic Economics (NAFE) surveys</li>
+                        <li>Published practice standards</li>
+                        <li>Ethics guidelines</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Reference peer-reviewed literature</strong>
+                    <ul>
+                        <li>Journal of Forensic Economics articles</li>
+                        <li>Academic economics journals</li>
+                        <li>Textbooks on economic damages</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Document widespread use</strong>
+                    <ul>
+                        <li>Survey data on methodology adoption</li>
+                        <li>Prior court acceptance in jurisdiction</li>
+                        <li>Use by government agencies</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>6.2 Avoiding Frye Challenges</h3>
+
+            <p>Best practices include:</p>
+
+            <ul>
+                <li><strong>Stay mainstream</strong>: Use conventional methodologies</li>
+                <li><strong>Document consensus</strong>: Show multiple sources using method</li>
+                <li><strong>Avoid novel approaches</strong>: Save innovation for Daubert jurisdictions</li>
+                <li><strong>Educate early</strong>: Brief attorneys on Frye implications</li>
+            </ul>
+
+            <h3>6.3 Responding to Challenges</h3>
+
+            <p>When facing a <em>Frye</em> challenge:</p>
+
+            <div class="example-box">
+                <h4>Response Framework</h4>
+                <ol>
+                    <li><strong>Define the field narrowly</strong>: "Forensic economics, not general economics"</li>
+                    <li><strong>Show adoption metrics</strong>: "75% of NAFE members use this method"</li>
+                    <li><strong>Distinguish novel application from accepted method</strong>: "Standard PV formula applied to new context"</li>
+                    <li><strong>Cite prior admissions</strong>: "Accepted in 15 reported cases in this state"</li>
+                </ol>
+            </div>
+
+            <h2>7. The Future of Frye</h2>
+
+            <h3>7.1 Trend Toward Daubert</h3>
+
+            <p>The long-term trend favors <em>Daubert</em>:</p>
+
+            <ul>
+                <li>36 states have adopted <em>Daubert</em> or similar standards</li>
+                <li>Federal courts uniformly apply <em>Daubert</em></li>
+                <li>Criticism of <em>Frye</em>'s rigidity grows</li>
+            </ul>
+
+            <h3>7.2 Frye's Persistence</h3>
+
+            <p>Yet <em>Frye</em> endures because:</p>
+
+            <ul>
+                <li>Simplicity appeals to busy judges</li>
+                <li>Conservative approach protects jury system</li>
+                <li>Established precedents provide stability</li>
+                <li>Some courts apply relaxed versions</li>
+            </ul>
+
+            <h3>7.3 Implications for Forensic Economists</h3>
+
+            <p>Practitioners must:</p>
+
+            <ol>
+                <li>Know jurisdiction-specific standards</li>
+                <li>Maintain methodology documentation</li>
+                <li>Track evolving acceptance levels</li>
+                <li>Prepare for both standards</li>
+            </ol>
+
+            <h2>8. Practical Considerations</h2>
+
+            <h3>8.1 Pre-Trial Preparation</h3>
+
+            <p>In <em>Frye</em> jurisdictions:</p>
+
+            <ul>
+                <li>File detailed methodology affidavits</li>
+                <li>Prepare general acceptance documentation</li>
+                <li>Anticipate voir dire on methods</li>
+                <li>Consider motions in limine</li>
+            </ul>
+
+            <h3>8.2 Report Writing</h3>
+
+            <p>Expert reports should:</p>
+
+            <ul>
+                <li>Explicitly state standard methodologies used</li>
+                <li>Cite authoritative sources</li>
+                <li>Note widespread acceptance</li>
+                <li>Avoid novel terminology</li>
+            </ul>
+
+            <h3>8.3 Testimony Tips</h3>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Do</th>
+                        <th>Don't</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Emphasize conventional approach</td>
+                        <td>Highlight innovative aspects</td>
+                    </tr>
+                    <tr>
+                        <td>Cite multiple practitioners using method</td>
+                        <td>Rely solely on personal experience</td>
+                    </tr>
+                    <tr>
+                        <td>Reference professional standards</td>
+                        <td>Criticize accepted methods</td>
+                    </tr>
+                    <tr>
+                        <td>Show government agency usage</td>
+                        <td>Emphasize academic theory</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Conclusion</h2>
+
+            <p>While <em>Daubert</em> dominates federal practice and increasingly state courts, the <em>Frye</em> standard maintains significant influence in several major jurisdictions. For forensic economists, success under <em>Frye</em> requires careful attention to mainstream methodologies and thorough documentation of general acceptance. The standard's emphasis on community consensus may limit innovation but provides predictability and protection against unreliable methods. As the legal landscape continues evolving, practitioners must remain adaptable, prepared to satisfy either standard while maintaining the highest levels of professional rigor. Understanding <em>Frye</em> is not merely historical interest—it remains essential for effective practice in nearly a quarter of U.S. jurisdictions.</p>
+
+            <h2>References</h2>
+
+            <h2>Case Citations</h2>
+
+            <ul class="references">
+                <li>Daubert v. Merrell Dow Pharmaceuticals, Inc., 509 U.S. 579 (1993).</li>
+                
+                <li>Frye v. United States, 293 F. 1013 (D.C. Cir. 1923).</li>
+                
+                <li>Mercado v. Ahmed, 974 N.Y.S.2d 503 (App. Div. 2013).</li>
+                
+                <li>People v. Kelly, 17 Cal. 3d 24 (1976).</li>
+                
+                <li>Reed v. State, 283 Md. 374 (1978).</li>
+                
+                <li>State v. Porter, 2014 IL App (1st) 121902.</li>
+            </ul>
+
+            <h2>Secondary Sources</h2>
+
+            <ul class="references">
+                <li>Bernstein, D. E. (2013). The misbegotten judicial resistance to the Daubert revolution. <em>Notre Dame Law Review, 89</em>, 27–70.</li>
+                
+                <li>Cheng, E. K. (2011). The myth of the generalist judge. <em>Stanford Law Review, 61</em>, 519–572.</li>
+                
+                <li>Giannelli, P. C. (1980). The admissibility of novel scientific evidence: Frye v. United States, a half-century later. <em>Columbia Law Review, 80</em>, 1197–1250.</li>
+                
+                <li>Ireland, T. R. (2012). Frye v. Daubert: Logical empiricism and reliable science. <em>Journal of Forensic Economics, 23</em>(1), 1–13.</li>
+                
+                <li>National Association of Forensic Economics. (2023). <em>Survey of forensic economic practice</em>. Retrieved from https://nafe.net</li>
+                
+                <li>Schwartz, A., & Silverman, I. (2005). The rise and fall and rise of Frye. <em>Jurimetrics, 45</em>, 131–152.</li>
+            </ul>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <div class="author-content">
+                <h3>About the Author</h3>
+                <p><strong>Christopher T. Skerritt, CRC, MBA</strong> is a forensic economist and certified rehabilitation counselor with over 20 years of experience in economic damage analysis. He provides expert testimony in personal injury, wrongful death, and employment litigation matters throughout New England.</p>
+                <p>Contact: <a href="tel:203-605-2814">(203) 605-2814</a> | <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a></p>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Expert Economic Analysis?</h2>
+                <p>Get professional forensic economics support for your case</p>
+                <a href="../../../contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+                <p class="cta-phone">Or call directly: <a href="tel:203-605-2814">(203) 605-2814</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Skerritt Economics & Consulting</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814)</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../../../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../../../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../../../services/vocational-expert/">Vocational Expert</a></li>
+                        <li><a href="../../../services/life-care-planning/">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../../../case-studies/">Case Studies</a></li>
+                        <li><a href="../../../resources/">Articles & Insights</a></li>
+                        <li><a href="../../../blog/">Blog</a></li>
+                        <li><a href="../../../about/">About Chris Skerritt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../../../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../../../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
