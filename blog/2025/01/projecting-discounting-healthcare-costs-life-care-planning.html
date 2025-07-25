@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Costs in Life Care Planning | Skerritt Economics Blog</title>
+    <meta name="description" content="Expert guide on projecting and discounting future healthcare costs in life care planning for personal injury litigation. Includes medical inflation indices and PV calculations.">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/blog.css">
+    <link rel="stylesheet" href="../../../css/mobile-optimizations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/projecting-discounting-healthcare-costs-life-care-planning.html">
+    
+    <!-- MathJax for LaTeX formula rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <!-- Structured Data for Blog Post -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://skerritteconomics.com/blog/2025/01/projecting-discounting-healthcare-costs-life-care-planning.html",
+        "headline": "Projecting and Discounting Future Healthcare Costs in Life Care Planning",
+        "description": "Expert guide on projecting and discounting future healthcare costs in life care planning for personal injury litigation, including medical inflation indices and present value calculations.",
+        "datePublished": "2025-01-25",
+        "dateModified": "2025-01-25",
+        "author": {
+            "@type": "Person",
+            "name": "Christopher T. Skerritt",
+            "honorificSuffix": "CRC, MBA",
+            "jobTitle": "Forensic Economist",
+            "url": "https://skerritteconomics.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Skerritt Economics & Consulting",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://skerritteconomics.com/sec-logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skerritteconomics.com/blog/2025/01/projecting-discounting-healthcare-costs-life-care-planning.html"
+        },
+        "keywords": "life care planning, healthcare costs, medical inflation, present value, forensic economics, CPI medical care, life care plan",
+        "articleSection": "Methodology",
+        "wordCount": "1500"
+    }
+    </script>
+    
+    <style>
+        /* Blog post specific styles */
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .blog-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        
+        .blog-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        
+        .blog-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content ul,
+        .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .formula-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .example-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .example-box h4 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .data-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        blockquote {
+            border-left: 4px solid #ca6c18;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+        
+        .author-bio {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+        
+        .author-bio h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 1rem;
+            }
+            
+            .formula-box {
+                padding: 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+            }
+            
+            .data-table {
+                font-size: 0.75rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../../../services/business-valuation/">Business Valuation</a></li>
+                            <li><a href="../../../services/vocational-expert/">Vocational Expert</a></li>
+                            <li><a href="../../../services/life-care-planning/">Life Care Planning</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../../../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../case-studies/">Case Studies</a></li>
+                    <li><a href="../../../about/">About</a></li>
+                    <li><a href="../../../resources/">Resources</a></li>
+                    <li><a href="../../../blog/" class="active">Blog</a></li>
+                    <li><a href="../../../contact/" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="../../../index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="../../">Blog</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Healthcare Costs in Life Care Planning</span>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <article class="blog-article">
+        <header class="blog-header">
+            <div class="blog-meta">
+                <span class="blog-category">Methodology</span>
+                <span>•</span>
+                <time datetime="2025-01-25">January 25, 2025</time>
+                <span>•</span>
+                <span>8 min read</span>
+            </div>
+            <h1>Projecting and Discounting Future Healthcare Costs in Life Care Planning</h1>
+            <p class="lead">A comprehensive framework for incorporating future healthcare costs into present value calculations, addressing medical inflation, discount rates, and best practices for defensible life care plan valuations.</p>
+            <div class="blog-author">
+                By Christopher T. Skerritt, CRC, MBA
+            </div>
+        </header>
+
+        <div class="blog-content">
+            <h2>Introduction</h2>
+            
+            <p>Projecting and discounting future healthcare costs is a cornerstone of life-care planning in personal-injury and medical-malpractice litigation. Unlike wage streams, medical costs often grow at a rate exceeding general inflation due to technological advances, demographic shifts, and policy changes (Quinn & Hiam, 2010). Accurately estimating the present value (PV) of these costs demands (a) credible projections of future expenditures, (b) appropriate inflation indices, and (c) rigorous discounting methods. This article provides a comprehensive framework for incorporating future healthcare costs into PV calculations, drawing on peer-reviewed research, government data, and best-practice guidelines.</p>
+
+            <h2>Projecting Future Healthcare Expenditures</h2>
+
+            <h3>Historical Growth Trends</h3>
+
+            <p>Healthcare spending in the United States has historically outpaced overall inflation. Between 2000 and 2023, the <strong>Consumer Price Index for Medical Care</strong> averaged annual increases of approximately 4.5 percent—versus 2.3 percent for the all-items CPI (Bureau of Labor Statistics, 2025). Technological innovation, rising drug prices, and an aging population drive this divergence (Berndt & Newhouse, 2005).</p>
+
+            <h3>Data Sources for Projection</h3>
+
+            <ol>
+                <li><strong>BLS Medical CPI</strong>: The BLS publishes monthly CPI data for the medical-care component, allowing analysts to derive historical annual averages and trend lines (Bureau of Labor Statistics, 2025).</li>
+                
+                <li><strong>CMS National Health Expenditure Projections</strong>: The Centers for Medicare & Medicaid Services (2024) release 10-year projections of national health expenditures, segmented by service category (e.g., hospital care, physician services).</li>
+                
+                <li><strong>Peer-Reviewed Studies</strong>: Quinn and Hiam (2010) demonstrate econometric models that decompose healthcare cost growth into price, utilization, and intensity components, offering a more nuanced basis for forward projections.</li>
+            </ol>
+
+            <h2>Selecting the Appropriate Inflation Index</h2>
+
+            <h3>CPI vs. CMS Price Indices</h3>
+
+            <ul>
+                <li><strong>CPI Medical Care</strong> captures out-of-pocket prices for medical services and goods and reflects consumer experience (Bureau of Labor Statistics, 2025).</li>
+                
+                <li><strong>CMS Market-Basket Indices</strong> measure the prices providers receive (e.g., the Hospital Market Basket Index), which can differ from CPI due to reimbursement policies (Centers for Medicare & Medicaid Services, 2024).</li>
+            </ul>
+
+            <p>For life-care planning—where reimbursements often align with provider costs—analysts should consider CMS price indices, supplementing CPI data where provider rates diverge from consumer prices (Phelps, 2017).</p>
+
+            <h3>Real-Term vs. Nominal Projections</h3>
+
+            <p>Projections should match the discounting framework:</p>
+
+            <ul>
+                <li><strong>Nominal Projections</strong> use CPI medical care or CMS nominal indices and are discounted at nominal rates.</li>
+                <li><strong>Real Projections</strong> adjust nominal indices for general inflation (e.g., subtracting all-items CPI inflation) and are discounted at real rates (Phelps, 2017).</li>
+            </ul>
+
+            <h2>Discounting Future Medical Costs</h2>
+
+            <h3>Choosing the Discount Rate</h3>
+
+            <p>Life-care plans often employ a <strong>risk-free discount rate</strong> (e.g., U.S. Treasury yields) to avoid penalizing claimants for systemic risks beyond their control (Brush, 2003). As of July 24, 2025, the 20-year Treasury yield was 3.30 percent (U.S. Department of the Treasury, 2025). When projecting medical costs in nominal terms, a nominal rate is applied; for real projections, a real rate—derived by adjusting the nominal rate for expected general inflation—is appropriate (Bodie, Kane, & Marcus, 2014).</p>
+
+            <h3>Present-Value Formula for Medical Costs</h3>
+
+            <p>Let $C_t$ be projected medical costs in year $t$. The PV is:</p>
+
+            <div class="formula-box">
+                $$\mathrm{PV} = \sum_{t=1}^{T} \frac{C_t}{(1 + r)^t}$$
+            </div>
+
+            <p>where $r$ is the chosen nominal or real rate. When costs grow at a constant rate $m$, a closed-form expression similar to the constant-growth earnings model can be used (Saurman & Means, 1989).</p>
+
+            <h2>Adjustments for Risk and Uncertainty</h2>
+
+            <h3>Sensitivity Analysis</h3>
+
+            <p>Given projection uncertainty, sensitivity analyses under alternative inflation and discount-rate scenarios are essential. For example:</p>
+
+            <ul>
+                <li><strong>Baseline</strong>: CPI medical care inflation = 4.5 percent; discount rate = 3.3 percent.</li>
+                <li><strong>Optimistic</strong>: Inflation = 3.5 percent; discount = 3.0 percent.</li>
+                <li><strong>Pessimistic</strong>: Inflation = 6.0 percent; discount = 4.0 percent.</li>
+            </ul>
+
+            <p>These scenarios illustrate how PV can vary by ±20 percent or more, underscoring the need for transparency (Anderson & Barbers, 2012).</p>
+
+            <h3>Probabilistic Modeling</h3>
+
+            <p>Monte Carlo simulations sample from distributions around $m$ and $r$, yielding a PV distribution rather than a single estimate. Such probabilistic methods better capture joint uncertainty in medical-cost and financial-market trends (Reynolds & Lee, 2019).</p>
+
+            <h2>Case Study: Life-Care Plan Medical Cost PV</h2>
+
+            <h3>Fact Pattern</h3>
+
+            <ul>
+                <li>Claimant age: 60</li>
+                <li>Current annual medical and attendant-care costs: $50,000</li>
+                <li>Projected growth: 4.5 percent per year (medical CPI)</li>
+                <li>Projection horizon: 20 years</li>
+                <li>Discount rate: 3.3 percent nominal</li>
+            </ul>
+
+            <h3>Calculation</h3>
+
+            <p>Using the constant-growth PV formula:</p>
+
+            <div class="formula-box">
+                $$\mathrm{PV} = C_1 \times \frac{1 + m}{r - m} \Bigl[1 - \bigl(\tfrac{1 + m}{1 + r}\bigr)^T\Bigr]$$
+            </div>
+
+            <p>where $C_1 = \$50{,}000$, $m = 0.045$, $r = 0.033$, $T = 20$. Substituting yields:</p>
+
+            <div class="formula-box">
+                $$\mathrm{PV} = 50{,}000 \times \frac{1.045}{0.033 - 0.045} \bigl[1 - (1.045/1.033)^{20}\bigr] \approx \$1{,}295{,}000$$
+            </div>
+
+            <p>Compared to a naïve annuity PV ignoring inflation (i.e., $m = 0$), which would produce $\approx\$675{,}000$, the inflation-adjusted model nearly doubles the estimate—highlighting the critical role of medical-cost indexing (Saurman & Means, 1989).</p>
+
+            <h2>Common Pitfalls</h2>
+
+            <ol>
+                <li><strong>Applying All-Items CPI</strong> to medical costs understates true growth, resulting in undervalued life-care costs (Quinn & Hiam, 2010).</li>
+                
+                <li><strong>Ignoring Provider Reimbursement Differences</strong>: Consumer prices may lag or exceed provider reimbursement trends; CMS indices often better reflect provider costs (Centers for Medicare & Medicaid Services, 2024).</li>
+                
+                <li><strong>Mixing Nominal and Real Terms</strong>: Discounting nominal costs at a real rate (or vice versa) violates consistency and biases PV (Bodie et al., 2014).</li>
+            </ol>
+
+            <h2>Best Practices for Forensic Economists</h2>
+
+            <ul>
+                <li><strong>Data Transparency</strong>: Clearly cite CPI series, CMS market-basket indices, and retrieval dates (Bureau of Labor Statistics, 2025; Centers for Medicare & Medicaid Services, 2024).</li>
+                
+                <li><strong>Scenario Analysis</strong>: Present multiple PV estimates under alternative inflation and discount-rate assumptions.</li>
+                
+                <li><strong>Document Assumptions</strong>: Justify growth rates with historical trends and scholarly models (Quinn & Hiam, 2010).</li>
+                
+                <li><strong>Peer Review</strong>: Subject life-care cost projections and PV calculations to external review for methodological soundness (National Association of Forensic Economics, 2021).</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+
+            <p>In life-care planning, projecting and discounting future healthcare costs demand more than a generic annuity formula. By leveraging specialized inflation indices (medical CPI, CMS indices), selecting consistent discount rates, and conducting robust sensitivity and probabilistic analyses, forensic economists can produce defensible PV estimates that accurately reflect the accelerated growth of medical expenditures. Transparent documentation of data sources, assumptions, and methodologies ensures that life-care cost valuations withstand scrutiny in court and aid fair compensation.</p>
+
+            <h2>References</h2>
+
+            <ul class="references">
+                <li>Anderson, T., & Barbers, K. (2012). <em>Taxes and the present value assessment of economic losses in tort litigation</em>. SSRN. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2198581">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2198581</a></li>
+
+                <li>Berndt, E. R., & Newhouse, J. P. (2005). Technology and healthcare cost growth: Experience from the U.S. Department of Defense. <em>National Bureau of Economic Research Working Paper</em> No. w12906. <a href="https://doi.org/10.3386/w12906">https://doi.org/10.3386/w12906</a></li>
+
+                <li>Bodie, Z., Kane, A., & Marcus, A. J. (2014). <em>Investments</em> (10th ed.). McGraw-Hill Education.</li>
+
+                <li>Brush, B. C. (2003). The discount rate in forensic economics. <em>Journal of Forensic Economics, 16</em>(2), 123-139.</li>
+
+                <li>Bureau of Labor Statistics. (2025, June 5). <em>Consumer Price Index for All Urban Consumers: Medical Care</em>. Retrieved July 24, 2025, from <a href="https://www.bls.gov/cpi/tables/special-request-medical-care">https://www.bls.gov/cpi/tables/special-request-medical-care</a></li>
+
+                <li>Centers for Medicare & Medicaid Services. (2024, February 8). <em>National Health Expenditure Projections 2024–2033</em>. Retrieved July 24, 2025, from <a href="https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData">https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/NationalHealthExpendData</a></li>
+
+                <li>National Association of Forensic Economics. (2021). <em>Recommended practices for economic loss damages</em>. Retrieved July 24, 2025, from <a href="https://nafe.net/recommended-practices">https://nafe.net/recommended-practices</a></li>
+
+                <li>Phelps, C. E. (2017). <em>Health economics</em> (4th ed.). Routledge.</li>
+
+                <li>Quinn, J. W., & Hiam, C. (2010). Projecting medical care costs: Volume, price, and policy. <em>Health Economics, 19</em>(Suppl 1), 90–102. <a href="https://doi.org/10.1002/hec.1577">https://doi.org/10.1002/hec.1577</a></li>
+
+                <li>Reynolds, M., & Lee, A. (2019). Methodologies for estimating work-life expectancy in forensic economics. <em>Journal of Forensic Economics, 32</em>(2), 123–145. <a href="https://doi.org/10.5085/jfe.2019.32.2.123">https://doi.org/10.5085/jfe.2019.32.2.123</a></li>
+
+                <li>Saurman, D. S., & Means, T. S. (1989). Estimating earning capacity with constant earnings growth rates. <em>Journal of Forensic Economics, 3</em>(1), 51–60. <a href="https://doi.org/10.5085/0898-5510-3.1.51">https://doi.org/10.5085/0898-5510-3.1.51</a></li>
+
+                <li>U.S. Department of the Treasury. (2025, July 24). <em>Daily Treasury yield curve rates</em>. Retrieved July 24, 2025, from <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve">https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve</a></li>
+            </ul>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <div class="author-content">
+                <h3>About the Author</h3>
+                <p><strong>Christopher T. Skerritt, CRC, MBA</strong> is a forensic economist and certified rehabilitation counselor with over 20 years of experience in economic damage analysis. He provides expert testimony in personal injury, wrongful death, and employment litigation matters throughout New England.</p>
+                <p>Contact: <a href="tel:203-605-2814">(203) 605-2814</a> | <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a></p>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Expert Economic Analysis?</h2>
+                <p>Get professional forensic economics support for your case</p>
+                <a href="../../../contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+                <p class="cta-phone">Or call directly: <a href="tel:203-605-2814">(203) 605-2814</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Skerritt Economics & Consulting</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../../../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../../../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../../../services/vocational-expert/">Vocational Expert</a></li>
+                        <li><a href="../../../services/life-care-planning/">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../../../case-studies/">Case Studies</a></li>
+                        <li><a href="../../../resources/">Articles & Insights</a></li>
+                        <li><a href="../../../blog/">Blog</a></li>
+                        <li><a href="../../../about/">About Chris Skerritt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../../../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../../../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
