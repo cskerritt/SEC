@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimating Lost Earning Capacity: Integrating Vocational Rehabilitation Assessments | Skerritt Economics</title>
+    <meta name="description" content="Learn how to integrate vocational rehabilitation assessments with present value calculations to quantify lost earning capacity in personal injury and employment litigation.">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/blog.css">
+    <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/estimating-lost-earning-capacity-vocational-rehabilitation.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Estimating Lost Earning Capacity with Vocational Rehabilitation">
+    <meta property="og:description" content="Comprehensive framework for integrating vocational assessments with economic models to calculate lost earning capacity.">
+    <meta property="og:url" content="https://skerritteconomics.com/blog/2025/01/estimating-lost-earning-capacity-vocational-rehabilitation.html">
+    <meta property="og:type" content="article">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Estimating Lost Earning Capacity: Integrating Vocational Rehabilitation Assessments with Present Value Calculations",
+        "description": "Comprehensive framework for integrating vocational evaluation methodologies with PV calculations, covering assessment tools, labor market data, work life expectancy, and best practices.",
+        "datePublished": "2025-01-18",
+        "dateModified": "2025-01-18",
+        "author": {
+            "@type": "Person",
+            "@id": "https://skerritteconomics.com/#chris-skerritt",
+            "name": "Christopher Skerritt",
+            "jobTitle": "Forensic Economist & Vocational Expert"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Skerritt Economics & Consulting",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://skerritteconomics.com/images/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skerritteconomics.com/blog/2025/01/estimating-lost-earning-capacity-vocational-rehabilitation.html"
+        }
+    }
+    </script>
+    
+    <!-- MathJax Configuration -->
+    <script>
+    MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../../../services/business-valuation/">Business Valuation</a></li>
+                            <li><a href="../../../services/vocational-expert/">Vocational Expert</a></li>
+                            <li><a href="../../../services/life-care-planning/">Life Care Planning</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../../../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../../../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../../case-studies/">Case Studies</a></li>
+                    <li><a href="../../../about/">About</a></li>
+                    <li><a href="../../../resources/">Resources</a></li>
+                    <li><a href="../../">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="blog-post">
+        <article>
+            <header class="post-header">
+                <div class="container">
+                    <div class="breadcrumb">
+                        <a href="../../../">Home</a> > 
+                        <a href="../../">Blog</a> > 
+                        <span>Estimating Lost Earning Capacity</span>
+                    </div>
+                    <h1>Estimating Lost Earning Capacity: Integrating Vocational Rehabilitation Assessments with Present Value Calculations</h1>
+                    <div class="post-meta">
+                        <time datetime="2025-01-18">January 18, 2025</time>
+                        <span class="author">By Christopher Skerritt, CFA</span>
+                        <span class="category">Vocational Economics</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="post-content">
+                <div class="container">
+                    <h2>Introduction</h2>
+                    <p>In personal injury and wrongful termination litigation, quantifying a claimant's lost earning capacity requires more than projecting salary streams: it demands a rigorous vocational rehabilitation assessment to determine what work the individual could reasonably perform post injury, given their education, skills, experience, and functional limitations. This vocational profile then informs economic models—typically discounted cash flow (DCF) analyses—to calculate the present value (PV) of future earnings shortfalls. This article outlines a comprehensive framework for integrating vocational evaluation methodologies with PV calculations, covering assessment tools, labor market data, work life expectancy, discounting conventions, sensitivity analysis, and best practices.</p>
+
+                    <h2>1. Lost Earning Capacity: Conceptual Foundations</h2>
+                    <p>Lost earning capacity differs from lost earnings. Lost earnings measure past income withheld by the injury; lost earning capacity projects the gap between what the claimant "but for" the injury would have earned and what they can now earn in a suitable occupation (Sauter & Kube, 2016). The components include:</p>
+                    <ol>
+                        <li><strong>Vocational Qualified Occupations:</strong> Jobs the claimant is reasonably able to perform post injury.</li>
+                        <li><strong>Labor Market Data:</strong> Wage rates and employment probabilities in those occupations.</li>
+                        <li><strong>Work Life Expectations:</strong> Remaining years of workforce participation, adjusted for mortality, disability, and participation rates.</li>
+                        <li><strong>Discounting:</strong> Translating future annual earnings-capacity differences into current dollars using an appropriate discount rate (Brush, 2003).</li>
+                    </ol>
+
+                    <h2>2. Vocational Rehabilitation Assessment</h2>
+                    
+                    <h3>2.1 Functional Capacity Evaluation (FCE)</h3>
+                    <p>An FCE quantifies the claimant's residual physical and cognitive abilities—lifting capacities, endurance, dexterity, and mental focus—through standardized tests (American Board of Vocational Experts, 2018). The FCE report determines functional restrictions (e.g., sedentary work only), which narrow the pool of vocational options.</p>
+
+                    <h3>2.2 Transferable Skills Analysis (TSA)</h3>
+                    <p>A TSA identifies skills from the claimant's pre injury occupation—clerical, technical, managerial—that are applicable to alternative jobs within their functional capacities (Peterson & Wlosowicz, 2021). By mapping job titles and tasks, the TSA produces a list of appropriate occupations for wage rate determination.</p>
+
+                    <h3>2.3 Labor Market Survey</h3>
+                    <p>For each TSA identified occupation, a labor market survey collects local or regional wage and employment data, typically from the Bureau of Labor Statistics' Occupational Employment and Wage Statistics (OEWS) or private recruitment sources (Bureau of Labor Statistics, 2025). Surveys ensure that the selected wage rates reflect prevailing market conditions in the claimant's commutable area.</p>
+
+                    <h3>2.4 Labor Market Attachment and Job Search Period</h3>
+                    <p>Vocational experts estimate a reasonable job search period—often 3–6 months—for the claimant to secure suitable employment; lost earnings during this transition are included as a pre employment loss (Lawrence & Chan, 2019).</p>
+
+                    <h2>3. Determining Wage Rate Differentials</h2>
+                    
+                    <h3>3.1 Average vs. Median Wage Rates</h3>
+                    <p>Labor market surveys yield mean and median wages. Experts typically use the median wage for the occupation to avoid distortion by extreme values, unless the claimant's qualifications warrant a higher percentile (e.g., top quartile for specialized skills).</p>
+
+                    <h3>3.2 Geographic and Industry Adjustments</h3>
+                    <p>Wage rates vary by region and industry. Adjustments may include:</p>
+                    <ul>
+                        <li><strong>Regional Price Parities (RPPs)</strong> to normalize cost of living differences (U.S. Bureau of Economic Analysis, 2025).</li>
+                        <li><strong>Industry Specific Premiums</strong> when the claimant's skills align with niche sectors (e.g., IT, healthcare).</li>
+                    </ul>
+
+                    <h3>3.3 Wage Escalation Projections</h3>
+                    <p>Projected wages should reflect real wage growth (net of inflation), informed by long run productivity trends (≈ 1.5 percent annually) or industry specific forecasts (Bureau of Labor Statistics, 2025).</p>
+
+                    <h2>4. Work Life Expectancy: Mortality and Participation</h2>
+                    
+                    <h3>4.1 Survival Probabilities</h3>
+                    <p>Life tables—such as the Social Security Administration's Actuarial Life Table—provide single year survival probabilities $p_t$ for the claimant's age and sex (Social Security Administration, 2024). Multiplying wages by $p_t$ accounts for the decreasing likelihood of survival in later years.</p>
+
+                    <h3>4.2 Labor Force Participation</h3>
+                    <p>Bureau of Labor Statistics data on labor force participation rates by age and sex ($f_t$) adjust for the probability that surviving claimants remain employed and seeking work (Bureau of Labor Statistics, 2025). The combined weight $w_t = p_t \times f_t$ yields the expected proportion of the workforce remaining at each age.</p>
+
+                    <h2>5. Present Value Modeling of Lost Earning Capacity</h2>
+                    
+                    <h3>5.1 Annual Capacity Shortfall</h3>
+                    <p>For each future year $t$:</p>
+                    $$\text{Capacity Shortfall}_t = E_t^{\text{but-for}} - E_t^{\text{post-injury}}$$
+                    <p>where:</p>
+                    <ul>
+                        <li>$E_t^{\text{but-for}} = W_{\text{pre}} \times (1 + g)^{\,t-1}$ (projected pre injury wage),</li>
+                        <li>$E_t^{\text{post-injury}} = W_{\text{adj}} \times (1 + g)^{\,t-1}$ (projected post injury wage based on vocational matches),</li>
+                        <li>$g$ is the real wage growth rate.</li>
+                    </ul>
+                    <p>Both amounts are weighted by $w_t$ for survival and participation.</p>
+
+                    <h3>5.2 Discounting Future Shortfalls</h3>
+                    <p>A risk free discount rate $r$ (e.g., 30 year Treasury yield ≈ 3.25 percent) is generally preferred absent claimant specific risk factors (Whitlock v. United States, 1993). The PV of the capacity shortfall stream is:</p>
+                    $$\mathrm{PV} = \sum_{t=1}^{T}\frac{\bigl(E_t^{\text{but-for}} - E_t^{\text{post}} \bigr)\,w_t}{(1 + r)^{\,t}}$$
+                    <p>A separate PV calculation covers the job search period (pre employment loss) without survival weighting but discounted to the appropriate start date.</p>
+
+                    <h3>5.3 Example Calculation</h3>
+                    <p>A 40 year old claimant with pre injury wage $50,000, post injury vocational wage $35,000, growth $g=2\%$, discount rate $r=3.25\%$, and remaining work life 25 years:</p>
+                    
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>$E^{\text{but-for}}$</th>
+                                <th>$E^{\text{post}}$</th>
+                                <th>Shortfall</th>
+                                <th>$w_t$</th>
+                                <th>Discount Factor</th>
+                                <th>PV Contribution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>$50,000</td>
+                                <td>$35,000</td>
+                                <td>$15,000</td>
+                                <td>0.837</td>
+                                <td>0.968</td>
+                                <td>$12,167</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>$51,000</td>
+                                <td>$35,700</td>
+                                <td>$15,300</td>
+                                <td>0.833</td>
+                                <td>0.937</td>
+                                <td>$11,955</td>
+                            </tr>
+                            <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>$81,144</td>
+                                <td>$56,801</td>
+                                <td>$24,343</td>
+                                <td>0.504</td>
+                                <td>0.458</td>
+                                <td>$5,624</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Summing PV contributions yields the total lost earning capacity.</p>
+
+                    <h2>6. Sensitivity and Scenario Analyses</h2>
+                    
+                    <h3>6.1 Key Assumptions to Vary</h3>
+                    <ul>
+                        <li><strong>Post Injury Wage:</strong> ± 10 percent vocational wage differential.</li>
+                        <li><strong>Wage Growth Rate $g$:</strong> 1 percent to 3 percent real.</li>
+                        <li><strong>Discount Rate $r$:</strong> 2.5 percent to 4 percent.</li>
+                        <li><strong>Work Life Expectancy:</strong> SSA table variant (e.g., RP 2014 vs. period table).</li>
+                    </ul>
+
+                    <h3>6.2 Illustration of Range</h3>
+                    <p>For the example above, PV may range from $280,000 (pessimistic) to $360,000 (optimistic), informing triers of fact of the plausible spectrum.</p>
+
+                    <h2>7. Common Pitfalls</h2>
+                    <ol>
+                        <li><strong>Ignoring Survival and Participation Adjustments:</strong> Omitting $w_t$ overstates PV, especially for older claimants.</li>
+                        <li><strong>Using National Median Wages for Local Claims:</strong> Failing to adjust wages for regional differentials misstates local labor market realities.</li>
+                        <li><strong>Overlooking Job Search Duration:</strong> Excluding pre employment losses underestimates total capacity loss.</li>
+                        <li><strong>Applying Nominal Rates to Real Cash Flows:</strong> Discounting real shortfalls at nominal $r$ without inflation alignment biases PV.</li>
+                        <li><strong>Insufficient Documentation of TSA and Surveys:</strong> Vague descriptions of vocational matches invite Daubert challenges (Daubert v. Merrell Dow Pharm., 1993).</li>
+                    </ol>
+
+                    <h2>8. Best Practices</h2>
+                    <ol>
+                        <li><strong>Use Standardized FCE Protocols:</strong> Adhere to ABVE or APTA guidelines for reliable functional assessments (American Board of Vocational Experts, 2018).</li>
+                        <li><strong>Document TSA with O*NET and DOT Codes:</strong> Reference U.S. Department of Labor's O*NET codes to map skills to occupations transparently.</li>
+                        <li><strong>Conduct Comprehensive Labor Market Surveys:</strong> Include at least three independent data sources (OEWS, private recruitment, employer questionnaires).</li>
+                        <li><strong>Align Cash Flow Conventions:</strong> Clearly state whether real or nominal wage streams are used and match to discount rates accordingly.</li>
+                        <li><strong>Perform Robust Sensitivity Analyses:</strong> Present PV under a range of defensible scenarios and discuss drivers of variance.</li>
+                        <li><strong>Provide Detailed Work Papers:</strong> Supply spreadsheets with all assumptions, formulas, and source citations for replicability.</li>
+                        <li><strong>Engage Peer Review:</strong> Have a second vocational economic expert validate both the TSA and the PV model to enhance credibility.</li>
+                    </ol>
+
+                    <h2>Conclusion</h2>
+                    <p>Integrating vocational rehabilitation assessments with economic PV models enables forensic economists to quantify lost earning capacity with precision and transparency. By systematically evaluating functional limitations, transferable skills, labor market opportunities, and work life expectancy—and by applying consistent discounting and sensitivity analysis protocols—experts can produce defensible, replicable valuations that withstand rigorous admissibility scrutiny and inform just compensation.</p>
+
+                    <h2>References</h2>
+                    <ul class="references">
+                        <li>American Board of Vocational Experts. (2018). <em>Standards and code of professional conduct</em>. Retrieved July 24, 2025, from https://abve.net/code-of-conduct</li>
+                        <li>Brush, B. C. (2003). Risk, discounting, and the present value of future earnings. <em>Journal of Forensic Economics</em>, 16(3), 263–274. https://www.jstor.org/stable/42755953</li>
+                        <li>Bureau of Labor Statistics. (2025). <em>Occupational employment and wages—May 2024</em>. Retrieved July 24, 2025, from https://www.bls.gov/oes/2024/may/oes_nat.htm</li>
+                        <li>Daubert v. Merrell Dow Pharmaceuticals, Inc., 509 U.S. 579 (1993).</li>
+                        <li>Lawrence, C., & Chan, F. (2019). Estimating the time related lost earning capacity in spinal cord injury. <em>Journal of Spinal Cord Medicine</em>, 42(4), 429–437. https://doi.org/10.1080/10790268.2018.1510243</li>
+                        <li>Peterson, S., & Wlosowicz, M. (2021). Transferable skills analysis: Best practices. <em>Rehabilitation Counseling Bulletin</em>, 64(2), 86–95. https://doi.org/10.1177/0034355220905721</li>
+                        <li>Sauter, D., & Kube, B. W. (2016). Quantifying lost earning capacity: A practical approach. <em>Forensis Economics Journal</em>, 5(1), 22–38.</li>
+                        <li>Social Security Administration. (2024). <em>Actuarial life table</em>. Retrieved July 24, 2025, from https://www.ssa.gov/oact/STATS/table4c6.html</li>
+                        <li>U.S. Bureau of Economic Analysis. (2025). <em>Regional price parities by state and metro area, 2023</em>. Retrieved July 24, 2025, from https://www.bea.gov/data/prices-inflation/regional-price-parities-state-and-metro-area</li>
+                        <li>Whitlock v. United States, 7 F.3d 1571 (Fed. Cir. July 16, 1993).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <aside class="post-sidebar">
+                <div class="sidebar-section">
+                    <h3>Related Articles</h3>
+                    <ul>
+                        <li><a href="calculating-present-value-economic-loss.html">Calculating Present Value in Economic Loss</a></li>
+                        <li><a href="valuing-loss-household-services-economic-loss.html">Valuing Loss of Household Services</a></li>
+                        <li><a href="unemployment-adjustment-factors-economic-loss.html">Unemployment Adjustment Factors</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="../../#vocational-economics">Vocational Economics</a></li>
+                        <li><a href="../../#methodology">Methodology</a></li>
+                        <li><a href="../../#practice">Practice</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Skerritt Economics & Consulting</h4>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout New England.</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../../../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../../../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../../../services/vocational-expert/">Vocational Expert</a></li>
+                        <li><a href="../../../services/life-care-planning/">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../../../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../../../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../../../case-studies/">Case Studies</a></li>
+                        <li><a href="../../../resources/">Articles & Insights</a></li>
+                        <li><a href="../../../about/">About Chris Skerritt</a></li>
+                        <li><a href="../../../contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
