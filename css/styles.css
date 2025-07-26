@@ -3698,4 +3698,289 @@ textarea.success {
         width: 50%;
         max-width: 300px;
     }
+}/* Mobile Navigation Improvements */
+
+/* Add this to the end of styles.css */
+
+/* Mobile Navigation Fixes - Better UX on small screens */
+@media (max-width: 768px) {
+    /* Fix sticky nav blocking content on mobile */
+    .main-nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: var(--background);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        height: auto;
+        min-height: 60px;
+    }
+    
+    /* Add padding to body to account for fixed nav */
+    body {
+        padding-top: 60px;
+    }
+    
+    /* Ensure nav wrapper has proper height */
+    .nav-wrapper {
+        min-height: 60px;
+        padding: 0.75rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Improve mobile menu toggle button */
+    .mobile-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-tap-highlight-color: transparent;
+        background: transparent;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        transition: all var(--transition-fast);
+    }
+    
+    .mobile-menu-toggle:active {
+        background: var(--light-bg);
+        border-color: var(--border-color);
+    }
+    
+    /* Improve mobile menu overlay */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px; /* Start below fixed header */
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        max-width: 100%;
+        height: calc(100vh - 60px);
+        text-align: left;
+        transition: left var(--transition-normal);
+        box-shadow: 0 10px 27px rgba(0,0,0,0.15);
+        padding: 0;
+        gap: 0;
+        overflow-y: auto;
+        z-index: 999;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    /* Add overlay background when menu is open */
+    body.menu-open::before {
+        content: '';
+        position: fixed;
+        top: 60px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+    }
+    
+    body.menu-open::before {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Improve menu item styling */
+    .nav-menu li {
+        margin: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-menu > li > a {
+        display: block;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--dark-text);
+        min-height: 54px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-menu > li > a:active {
+        background: var(--light-bg);
+    }
+    
+    /* Style dropdown items */
+    .dropdown {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        box-shadow: none !important;
+        background: var(--light-bg);
+        margin: 0;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid var(--border-color);
+        display: block !important;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-normal);
+    }
+    
+    .has-dropdown.active .dropdown {
+        max-height: 400px;
+    }
+    
+    .dropdown a {
+        padding: 0.875rem 2.5rem;
+        font-size: 0.925rem;
+        color: var(--light-text);
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .dropdown a:active {
+        background: var(--background);
+    }
+    
+    /* Add dropdown indicator */
+    .has-dropdown > a::after {
+        content: '▼';
+        margin-left: auto;
+        font-size: 0.75rem;
+        transition: transform var(--transition-normal);
+    }
+    
+    .has-dropdown.active > a::after {
+        transform: rotate(180deg);
+    }
+    
+    /* Fix hero and page headers to account for fixed nav */
+    .hero,
+    .page-header,
+    .practice-hero,
+    .service-hero {
+        margin-top: -60px;
+        padding-top: calc(60px + 3rem);
+    }
+    
+    /* Fix breadcrumb positioning */
+    .breadcrumb {
+        margin-top: -60px;
+        padding-top: calc(60px + 0.75rem);
+    }
+    
+    /* Improve scrolling performance */
+    .nav-menu {
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior: contain;
+    }
+    
+    /* Add safe area padding for newer iPhones */
+    .main-nav {
+        padding-top: env(safe-area-inset-top);
+    }
+    
+    .nav-menu {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    /* Prevent horizontal scrolling when menu is open */
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+    }
+    
+    /* Smooth scrolling fix for iOS */
+    .nav-menu::-webkit-scrollbar {
+        width: 0;
+        display: none;
+    }
+    
+    /* Active states for better feedback */
+    .nav-menu a:active {
+        opacity: 0.7;
+    }
+    
+    /* Fix CTA button in mobile menu */
+    .nav-cta {
+        margin: 1rem 1.5rem;
+        display: block;
+        text-align: center;
+        padding: 0.875rem 1.5rem !important;
+    }
+}
+
+/* Landscape mobile adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-nav {
+        min-height: 50px;
+    }
+    
+    body {
+        padding-top: 50px;
+    }
+    
+    .nav-wrapper {
+        min-height: 50px;
+        padding: 0.5rem 1rem;
+    }
+    
+    .nav-menu {
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    
+    body.menu-open::before {
+        top: 50px;
+    }
+    
+    .hero,
+    .page-header,
+    .practice-hero,
+    .service-hero {
+        margin-top: -50px;
+        padding-top: calc(50px + 2rem);
+    }
+    
+    .breadcrumb {
+        margin-top: -50px;
+        padding-top: calc(50px + 0.5rem);
+    }
+}
+
+/* Additional touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch targets */
+    .nav-menu a {
+        min-height: 48px;
+    }
+    
+    .mobile-menu-toggle {
+        min-width: 48px;
+        min-height: 48px;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .nav-menu a:hover {
+        background: transparent;
+    }
+    
+    /* Add touch feedback */
+    .nav-menu a:active,
+    .dropdown a:active {
+        background: var(--light-bg);
+        transition: none;
+    }
 }

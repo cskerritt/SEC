@@ -17,14 +17,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Close mobile menu when clicking on a link
+    // Handle mobile dropdown menus
+    const dropdowns = document.querySelectorAll('.has-dropdown');
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('a');
+        if (link && window.innerWidth <= 768) {
+            link.addEventListener('click', function(e) {
+                // Prevent navigation on dropdown parent links
+                if (dropdown.querySelector('.dropdown')) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+
+    // Close mobile menu when clicking on a non-dropdown link
     const navLinks = document.querySelectorAll('.nav-menu a');
     navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navMenu) navMenu.classList.remove('active');
-            if (mobileNavOverlay) mobileNavOverlay.classList.remove('active');
-            if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
-            document.body.classList.remove('menu-open');
+        link.addEventListener('click', function(e) {
+            // Only close menu if it's not a dropdown parent link
+            if (!this.parentElement.classList.contains('has-dropdown') || 
+                !this.parentElement.querySelector('.dropdown')) {
+                if (navMenu) navMenu.classList.remove('active');
+                if (mobileNavOverlay) mobileNavOverlay.classList.remove('active');
+                if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
         });
     });
 
@@ -70,12 +89,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            nav.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            nav.style.transform = 'translateY(0)';
+        // Don't hide navigation on mobile
+        if (window.innerWidth > 768) {
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                nav.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                nav.style.transform = 'translateY(0)';
+            }
         }
         
         // Add shadow when scrolled
