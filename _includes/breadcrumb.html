@@ -1,0 +1,103 @@
+<!-- Breadcrumb Navigation -->
+{% if page.url != '/' and page.url != '/index.html' %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-container">
+        <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+                <a class="breadcrumb-link" href="{{ '/' | relative_url }}">Home</a>
+            </li>
+            
+            {% assign url_parts = page.url | split: '/' %}
+            {% assign current_url = '' %}
+            
+            {% for part in url_parts %}
+                {% if part != '' and part != 'index.html' %}
+                    {% assign current_url = current_url | append: '/' | append: part %}
+                    
+                    {% if forloop.last %}
+                        <li class="breadcrumb-item">
+                            <span class="breadcrumb-current">{{ page.title | default: part | replace: '-', ' ' | capitalize }}</span>
+                        </li>
+                    {% else %}
+                        <li class="breadcrumb-item">
+                            {% assign part_title = part | replace: '-', ' ' | capitalize %}
+                            {% if part == 'services' %}
+                                {% assign part_title = 'Services' %}
+                            {% elsif part == 'practice-areas' %}
+                                {% assign part_title = 'Practice Areas' %}
+                            {% elsif part == 'case-studies' %}
+                                {% assign part_title = 'Case Studies' %}
+                            {% elsif part == 'locations' %}
+                                {% assign part_title = 'Locations' %}
+                            {% elsif part == 'business-valuation' %}
+                                {% assign part_title = 'Business Valuation' %}
+                            {% elsif part == 'forensic-economics' %}
+                                {% assign part_title = 'Forensic Economics' %}
+                            {% elsif part == 'vocational-expert' %}
+                                {% assign part_title = 'Vocational Expert' %}
+                            {% elsif part == 'life-care-planning' %}
+                                {% assign part_title = 'Life Care Planning' %}
+                            {% endif %}
+                            <a class="breadcrumb-link" href="{{ current_url | relative_url }}/">{{ part_title }}</a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+</nav>
+
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ site.url }}{{ '/' | relative_url }}"
+        }
+        {% assign position = 2 %}
+        {% assign url_parts = page.url | split: '/' %}
+        {% assign current_url = site.url %}
+        
+        {% for part in url_parts %}
+            {% if part != '' and part != 'index.html' %}
+                {% assign current_url = current_url | append: '/' | append: part %}
+                ,{
+                    "@type": "ListItem",
+                    "position": {{ position }},
+                    {% if forloop.last %}
+                        "name": "{{ page.title | default: part | replace: '-', ' ' | capitalize }}"
+                    {% else %}
+                        {% assign part_title = part | replace: '-', ' ' | capitalize %}
+                        {% if part == 'services' %}
+                            {% assign part_title = 'Services' %}
+                        {% elsif part == 'practice-areas' %}
+                            {% assign part_title = 'Practice Areas' %}
+                        {% elsif part == 'case-studies' %}
+                            {% assign part_title = 'Case Studies' %}
+                        {% elsif part == 'locations' %}
+                            {% assign part_title = 'Locations' %}
+                        {% elsif part == 'business-valuation' %}
+                            {% assign part_title = 'Business Valuation' %}
+                        {% elsif part == 'forensic-economics' %}
+                            {% assign part_title = 'Forensic Economics' %}
+                        {% elsif part == 'vocational-expert' %}
+                            {% assign part_title = 'Vocational Expert' %}
+                        {% elsif part == 'life-care-planning' %}
+                            {% assign part_title = 'Life Care Planning' %}
+                        {% endif %}
+                        "name": "{{ part_title }}",
+                        "item": "{{ current_url }}/"
+                    {% endif %}
+                }
+                {% assign position = position | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+    ]
+}
+</script>
+{% endif %}

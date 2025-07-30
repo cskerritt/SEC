@@ -296,3 +296,136 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Topic Clusters Styles */
+.topic-clusters {
+    padding: 4rem 0;
+}
+
+.topic-cluster {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.topic-cluster:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.topic-cluster h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.topic-cluster > p {
+    color: var(--light-text);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.cluster-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.cluster-card {
+    background: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.cluster-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.cluster-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+}
+
+.cluster-card h3 a {
+    color: var(--dark-text);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.cluster-card h3 a:hover {
+    color: var(--primary-color);
+}
+
+.cluster-card p {
+    color: var(--light-text);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.article-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Related Resources */
+.related-resources {
+    background: var(--light-bg);
+    padding: 4rem 0;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.resource-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.resource-card p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile Styles for Topic Clusters */
+@media (max-width: 768px) {
+    .topic-clusters {
+        padding: 3rem 0;
+    }
+    
+    .topic-cluster {
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+    }
+    
+    .cluster-articles {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}

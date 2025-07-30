@@ -3984,3 +3984,72 @@ textarea.success {
         transition: none;
     }
 }
+
+/* ========================================
+   BREADCRUMB NAVIGATION
+======================================== */
+
+.breadcrumb {
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 0;
+    font-size: 0.875rem;
+}
+
+.breadcrumb-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+    content: '/';
+    margin: 0 0.5rem;
+    color: var(--light-text);
+}
+
+.breadcrumb-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb-link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.breadcrumb-current {
+    color: var(--dark-text);
+    font-weight: 500;
+}
+
+/* Mobile Breadcrumb Styles */
+@media (max-width: 768px) {
+    .breadcrumb-container {
+        padding: 0 1rem;
+    }
+    
+    .breadcrumb {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0;
+    }
+    
+    .breadcrumb-item:not(:last-child)::after {
+        margin: 0 0.375rem;
+    }
+}

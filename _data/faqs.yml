@@ -1,0 +1,58 @@
+# Frequently Asked Questions Data
+# Used to generate FAQ schema markup across the site
+
+general:
+  - question: "What is a forensic economist?"
+    answer: "A forensic economist is a financial expert who calculates economic damages for legal cases. They analyze lost earnings, medical costs, business valuations, and other financial losses to provide expert testimony in court proceedings."
+
+  - question: "How much does a forensic economics expert cost?"
+    answer: "Forensic economics expert fees typically range from $3,500 to $15,000 depending on case complexity and scope. We provide free initial consultations and detailed fee quotes. Many cases can be handled within a $5,000-$7,500 budget."
+
+  - question: "What types of cases require a forensic economist?"
+    answer: "Forensic economists are essential for personal injury, wrongful death, medical malpractice, employment litigation, business disputes, and divorce cases. Any case involving economic damages or business valuation benefits from expert analysis."
+
+  - question: "How long does an economic damage assessment take?"
+    answer: "Most economic damage reports are completed within 2-3 weeks. Expedited services are available for urgent matters, with preliminary reports possible within 48-72 hours for court deadlines."
+
+  - question: "Are your reports admissible in court?"
+    answer: "Yes, our reports meet all Daubert and Frye standards for expert testimony. Chris Skerritt has extensive court experience and his methodologies are widely accepted in state and federal courts throughout New England."
+
+business-valuation:
+  - question: "When is a business valuation needed?"
+    answer: "Business valuations are required for divorce proceedings, buy-sell agreements, shareholder disputes, estate planning, tax matters, and strategic planning. Courts often require independent valuations for asset division."
+
+  - question: "What business valuation methods do you use?"
+    answer: "We utilize three primary approaches: Income Approach (DCF), Market Approach (comparable sales), and Asset Approach. The method selection depends on business type, available data, and valuation purpose."
+
+  - question: "How much does a business valuation cost?"
+    answer: "Business valuation fees typically range from $3,500 for simple valuations to $15,000+ for complex businesses. Factors include business size, complexity, number of locations, and litigation requirements."
+
+personal-injury:
+  - question: "What economic damages are calculated in personal injury cases?"
+    answer: "We calculate lost wages, lost earning capacity, fringe benefits, household services value, and future medical costs. Our comprehensive approach ensures all economic losses are properly documented."
+
+  - question: "How do you calculate future lost earnings?"
+    answer: "Future earnings calculations consider age, education, work-life expectancy, earnings history, promotion potential, and inflation. We use government data and accepted methodologies to project losses to retirement or life expectancy."
+
+  - question: "What is household services valuation?"
+    answer: "Household services valuation quantifies the economic value of cooking, cleaning, childcare, maintenance, and other unpaid work. We use time-use surveys and replacement cost methods accepted by courts."
+
+employment:
+  - question: "What damages are calculated in wrongful termination cases?"
+    answer: "We calculate back pay, front pay, lost benefits, pension losses, stock options, bonuses, and mitigation earnings. Our analysis considers job search efforts, comparable positions, and realistic replacement timelines."
+
+  - question: "How do you calculate front pay damages?"
+    answer: "Front pay calculations project lost earnings from trial date until the plaintiff finds comparable employment. We analyze local job markets, industry conditions, and the plaintiff's qualifications to estimate replacement time."
+
+  - question: "What is mitigation of damages in employment cases?"
+    answer: "Mitigation requires terminated employees to seek comparable employment. We analyze job search efforts, applications submitted, interviews attended, and earnings from replacement employment to calculate net losses."
+
+medical-malpractice:
+  - question: "What role does a forensic economist play in medical malpractice cases?"
+    answer: "We calculate economic losses from medical errors including lost earnings, increased medical costs, life care expenses, and household services. Our reports help attorneys and juries understand the full financial impact."
+
+  - question: "How are future medical costs calculated?"
+    answer: "Future medical costs are projected using life care plans, medical inflation rates, and life expectancy. We work with life care planners to ensure all necessary treatments, medications, and equipment are included."
+
+  - question: "What is a life care plan?"
+    answer: "A life care plan is a comprehensive document outlining all future medical needs, treatments, medications, equipment, and care requirements. We provide the economic analysis to convert these needs into present value costs."
