@@ -66,3 +66,5 @@ See `GITHUB_PAGES_SETUP.md` for complete deployment instructions.
 - CPRW - Certified Professional Resume Writer
 - QRC - Qualified Rehabilitation Counselor
 - PCEP - Certified Entry-Level Python Programmer
+## License
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.

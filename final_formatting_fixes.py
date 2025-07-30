@@ -3,6 +3,7 @@
 import os
 import re
 import glob
+from pathlib import Path
 
 def get_custom_css():
     """Return the complete custom CSS styling block"""
@@ -788,7 +789,7 @@ def get_location_badges_html(city, state):
 
 def process_files():
     """Process all business valuation analyst pages 601-750"""
-    base_dir = "/Users/chrisskerritt/SEC/locations/cities"
+    base_dir = Path(__file__).resolve().parent / 'locations' / 'cities'
     pattern = os.path.join(base_dir, "*business-valuation-analyst*.html")
     all_files = sorted(glob.glob(pattern))
     

@@ -5,6 +5,7 @@ Script to fix NYC template content on non-NYC city pages
 import os
 import re
 import glob
+from pathlib import Path
 
 def get_state_info(filename):
     """Extract state info from filename"""
@@ -164,7 +165,7 @@ def fix_city_file(filepath):
 
 def main():
     """Main function"""
-    cities_dir = "/Users/chrisskerritt/SEC/locations/cities"
+    cities_dir = Path(__file__).resolve().parent / 'locations' / 'cities'
     
     # Get all HTML files
     html_files = glob.glob(os.path.join(cities_dir, "*.html"))

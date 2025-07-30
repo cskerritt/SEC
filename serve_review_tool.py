@@ -5,9 +5,10 @@ import webbrowser
 import os
 import threading
 import time
+from pathlib import Path
 
 def start_server():
-    os.chdir('/Users/chrisskerritt/SEC')
+    os.chdir(Path(__file__).resolve().parent)
     PORT = 8000
     
     class CustomHandler(http.server.SimpleHTTPRequestHandler):

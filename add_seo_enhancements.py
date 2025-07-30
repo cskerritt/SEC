@@ -7,10 +7,13 @@ import os
 import re
 from bs4 import BeautifulSoup
 import json
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 def get_breadcrumb_path(file_path):
     """Generate breadcrumb path based on file location"""
-    rel_path = os.path.relpath(file_path, '/Users/chrisskerritt/SEC')
+    rel_path = os.path.relpath(file_path, BASE_DIR)
     parts = rel_path.split('/')
     
     breadcrumbs = [{"name": "Home", "url": "/"}]
@@ -131,7 +134,7 @@ def add_breadcrumb_schema(file_path):
 
 def enhance_seo_for_all_pages():
     """Add SEO enhancements to all HTML pages"""
-    base_dir = '/Users/chrisskerritt/SEC'
+    base_dir = BASE_DIR
     updated_count = 0
     
     # Process all HTML files
@@ -151,7 +154,7 @@ def enhance_seo_for_all_pages():
 def create_state_hub_pages():
     """Create state-level hub pages that link to all cities in that state"""
     states_data = {}
-    cities_dir = '/Users/chrisskerritt/SEC/locations/cities'
+    cities_dir = BASE_DIR / 'locations' / 'cities'
     
     # Collect cities by state
     for filename in os.listdir(cities_dir):
@@ -170,7 +173,7 @@ def create_state_hub_pages():
                 })
     
     # Create state directory if it doesn't exist
-    states_dir = '/Users/chrisskerritt/SEC/locations/states'
+    states_dir = BASE_DIR / 'locations' / 'states'
     os.makedirs(states_dir, exist_ok=True)
     
     # State names mapping
