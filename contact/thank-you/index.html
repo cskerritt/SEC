@@ -108,19 +108,23 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="main-nav">
+<!-- Skip Navigation Links -->
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<a href="#main-navigation" class="skip-nav">Skip to navigation</a>
+<a href="#footer" class="skip-nav">Skip to footer</a>
+    <nav class="main-nav" id="main-navigation" role="navigation" aria-label="Primary">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="../../index.html" class="logo">
                     <strong>Skerritt Economics</strong>
                     <span>& Consulting</span>
                 </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-controls="primary-navigation" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="primary-navigation">
                     <li><a href="../../index.html">Home</a></li>
                     <li class="has-dropdown">
                         <a href="../../services/">Services</a>
@@ -146,7 +150,7 @@
             </div>
         </div>
     </nav>
-
+<main id="main-content" tabindex="-1">
     <!-- Thank You Section -->
     <section class="thank-you-section">
         <div class="container">
@@ -174,7 +178,7 @@
             </div>
         </div>
     </section>
-
+</main>
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">

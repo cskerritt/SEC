@@ -441,19 +441,19 @@
 <a href="#main-navigation" class="skip-nav">Skip to navigation</a>
 <a href="#footer" class="skip-nav">Skip to footer</a>
 <!-- Navigation -->
-<nav class="main-nav" id="main-navigation">
+<nav class="main-nav" id="main-navigation" role="navigation" aria-label="Primary">
 <div class="container">
 <div class="nav-wrapper">
 <a class="logo" href="index.html">
 <strong>Skerritt Economics</strong>
 <span>&amp; Consulting</span>
 </a>
-<button aria-label="Toggle menu" class="mobile-menu-toggle">
+<button aria-label="Toggle menu" class="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
 <span></span>
 <span></span>
 <span></span>
 </button>
-<ul class="nav-menu">
+<ul class="nav-menu" id="primary-navigation">
 <li><a href="index.html">Home</a></li>
 <li class="has-dropdown">
 <a href="services/">Services</a>
@@ -483,7 +483,8 @@
 </div>
 </nav>
 <!-- Hero Section -->
-<section class="hero" id="main-content">
+<main id="main-content" tabindex="-1">
+<section class="hero">
 <div class="container">
 <div class="hero-content">
 <h1>Forensic Economics and Business Valuations</h1>
@@ -853,6 +854,7 @@ Email: <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">
 </div>
 </div>
 </section>
+</main>
 <!-- Footer -->
 <footer class="main-footer" id="footer">
 <div class="container">
