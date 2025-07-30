@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-# Sitemap location  
+# Sitemap locations  
 Sitemap: https://skerritteconomics.com/sitemap.xml
+Sitemap: https://skerritteconomics.com/blog/sitemap.xml
 
 # Block access to system files
 Disallow: /.git/
