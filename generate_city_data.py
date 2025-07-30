@@ -6,6 +6,7 @@ Generate city-pages-data.js with comprehensive city data for the sitemap
 import os
 import re
 import json
+from pathlib import Path
 
 def extract_city_state_from_filename(filename):
     """Extract city and state from filename like 'albany-ny-forensic-economist.html'"""
@@ -51,9 +52,11 @@ def get_state_name(abbr):
     }
     return states.get(abbr, abbr)
 
+BASE_DIR = Path(__file__).resolve().parent
+
 def generate_city_data():
     """Generate comprehensive city data"""
-    cities_dir = '/Users/chrisskerritt/SEC/locations/cities'
+    cities_dir = BASE_DIR / 'locations' / 'cities'
     city_data = {}
     
     # Get all HTML files in cities directory
@@ -78,8 +81,8 @@ def generate_city_data():
     
     # Generate JavaScript file
     js_content = 'window.cityData = ' + json.dumps(city_list, indent=2) + ';'
-    
-    output_path = '/Users/chrisskerritt/SEC/city-pages-data.js'
+
+    output_path = BASE_DIR / 'city-pages-data.js'
     with open(output_path, 'w') as f:
         f.write(js_content)
     

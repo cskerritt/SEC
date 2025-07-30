@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 
 # Base configuration
-BASE_DIR = "/Users/chrisskerritt/SEC"
+BASE_DIR = Path(__file__).resolve().parent
 BASE_URL = "https://skerritteconomics.com"
 TODAY = datetime.now().strftime("%Y-%m-%d")
 

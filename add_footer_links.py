@@ -6,6 +6,7 @@ Add footer links to major city pages across all HTML files
 import os
 import re
 from bs4 import BeautifulSoup
+from pathlib import Path
 
 # Major cities to include in footer
 MAJOR_CITIES = [
@@ -118,7 +119,7 @@ def should_add_footer_links(file_path):
 
 def update_all_footers():
     """Update footers on all appropriate pages"""
-    base_dir = '/Users/chrisskerritt/SEC'
+    base_dir = Path(__file__).resolve().parent
     updated_count = 0
     
     # Key pages to update
