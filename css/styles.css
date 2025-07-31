@@ -2207,7 +2207,7 @@ a:hover {
     margin-bottom: 2rem;
 }
 
-.footer-col h4 {
+.footer-col h3 {
     font-size: 1.125rem;
     margin-bottom: 1rem;
 }
@@ -3071,7 +3071,7 @@ textarea.success {
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    color: var(--dark-text); /* Changed from primary-color for better contrast */
+    color: var(--primary-color); /* Changed to primary-color for better contrast */
 }
 
 .mobile-toc-header::after {

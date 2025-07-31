@@ -2,7 +2,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
+<!-- Inline Critical CSS -->
+<style>
+{% include_relative ../css/critical.css %}
+</style>
+
+<!-- Load full CSS asynchronously -->
+<link rel="preload" href="{{ '/css/styles.min.css?v=8' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/css/styles.min.css?v=8' | relative_url }}"></noscript>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -13,7 +20,7 @@
         font-style: normal;
         font-weight: 300 700;
         font-display: swap;
-        src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeMZhrib2Bg-4.ttf) format('truetype');
+        src: local('Inter'), local('Inter-Regular');
     }
     
     /* Fallback font stack while Inter loads */
@@ -22,21 +29,38 @@
     }
 </style>
 
-<!-- Async font loading -->
+<!-- Optimized font loading with fallback -->
 <script>
     (function() {
-        // Create link element
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-        link.media = 'print';
-        link.onload = function() { this.media = 'all'; };
-        
-        // Insert before first script or at end of head
-        var ref = document.querySelector('script');
-        if (ref && ref.parentNode) {
-            ref.parentNode.insertBefore(link, ref);
+        // Web Font Loader approach
+        if ('fonts' in document) {
+            // Modern browsers - use CSS Font Loading API
+            var font = new FontFace('Inter', 'url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2) format("woff2")', {
+                weight: '300 700',
+                display: 'swap'
+            });
+            
+            font.load().then(function(loadedFont) {
+                document.fonts.add(loadedFont);
+                document.documentElement.classList.add('fonts-loaded');
+            }).catch(function() {
+                // Fallback to link element
+                loadFontsViaLink();
+            });
         } else {
+            // Older browsers - use link element
+            loadFontsViaLink();
+        }
+        
+        function loadFontsViaLink() {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+            link.media = 'print';
+            link.onload = function() { 
+                this.media = 'all'; 
+                document.documentElement.classList.add('fonts-loaded');
+            };
             document.head.appendChild(link);
         }
     })();
