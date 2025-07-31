@@ -174,7 +174,23 @@ ErrorDocument 500 /500.html
     FileETag None
     
     # Enable HTTP/2 Server Push for critical resources
-    Header add Link "</css/styles.min.css?v=7>; rel=preload; as=style"
-    Header add Link "</css/homepage.min.css?v=2>; rel=preload; as=style"
-    Header add Link "</js/main.min.js?v=2>; rel=preload; as=script"
+    Header add Link "</css/styles.min.css?v=9>; rel=preload; as=style"
+    Header add Link "</css/mobile-optimized.min.css?v=3>; rel=preload; as=style"
+    Header add Link "</js/mobile-performance.js>; rel=preload; as=script"
 </IfModule>
+
+# Mobile-specific optimizations
+<IfModule mod_headers.c>
+    # Vary by User-Agent for mobile caching
+    Header append Vary User-Agent
+    
+    # Add resource hints for mobile performance
+    Header add Link "<https://fonts.googleapis.com>; rel=preconnect"
+    Header add Link "<https://fonts.gstatic.com>; rel=preconnect; crossorigin"
+    Header add Link "<https://www.googletagmanager.com>; rel=dns-prefetch"
+</IfModule>
+
+# Specific rules for mobile assets
+<FilesMatch "mobile-.*\.(css|js)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>

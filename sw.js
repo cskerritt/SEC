@@ -6,11 +6,12 @@ const DYNAMIC_CACHE = 'dynamic-v1.0';
 const STATIC_ASSETS = [
     '/',
     '/css/styles.min.css',
-    '/css/critical.min.css',
+    '/css/mobile-optimized.min.css',
+    '/js/mobile-performance.js',
     '/js/main.min.js',
-    '/js/lazy-loading.min.js',
     '/sec-logo.png',
-    '/favicon.ico'
+    '/favicon.ico',
+    '/offline.html'
 ];
 
 const CACHE_STRATEGIES = {
