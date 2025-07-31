@@ -27,15 +27,27 @@
 <!-- Performance Optimizations -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="//www.google-analytics.com" rel="dns-prefetch"/>
-<link href="//fonts.googleapis.com" rel="dns-prefetch"/>
+<link href="https://www.google-analytics.com" rel="preconnect"/>
+<link href="https://www.googletagmanager.com" rel="dns-prefetch"/>
 
-<!-- Main Stylesheet -->
-<link href="css/styles.css?v=6" rel="stylesheet"/>
-<link href="css/homepage.css" rel="stylesheet"/>
-<link href="css/icons.css?v=4" rel="stylesheet"/>
-<link href="css/faq-redesign.css?v=4" rel="stylesheet"/>
-<link href="css/mobile-fixes.css?v=1" rel="stylesheet"/>
+<!-- Critical CSS inline -->
+<style>
+:root{--primary-color:#1e3a8a;--secondary-color:#3730a3;--accent-color:#dc2626;--dark-text:#1f2937;--light-text:#6b7280;--background:#ffffff;--light-bg:#f9fafb;--border-color:#e5e7eb;--success:#059669;--max-width:1200px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:var(--dark-text);background:var(--background)}.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}.main-nav{background:var(--background);position:sticky;top:0;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,0.1)}.nav-wrapper{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}.hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:white;padding:4rem 0;text-align:center}
+</style>
+
+<!-- Main Stylesheets - Preload and async load -->
+<link rel="preload" href="css/styles.min.css?v=7" as="style">
+<link rel="preload" href="css/homepage.min.css?v=2" as="style">
+<link href="css/styles.min.css?v=7" rel="stylesheet"/>
+<link href="css/homepage.min.css?v=2" rel="stylesheet"/>
+<link href="css/icons.min.css?v=5" rel="stylesheet" media="print" onload="this.media='all'"/>
+<link href="css/faq-redesign.min.css?v=5" rel="stylesheet" media="print" onload="this.media='all'"/>
+<link href="css/mobile-fixes.min.css?v=2" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript>
+<link href="css/icons.min.css?v=5" rel="stylesheet"/>
+<link href="css/faq-redesign.min.css?v=5" rel="stylesheet"/>
+<link href="css/mobile-fixes.min.css?v=2" rel="stylesheet"/>
+</noscript>
 
 <!-- Canonical URL -->
 <link href="https://skerritteconomics.com/" rel="canonical"/>
@@ -43,8 +55,9 @@
 <!-- Web App Manifest -->
 <link rel="manifest" href="/manifest.json">
 
-<!-- Web Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<!-- Web Fonts - Load with font-display swap -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
 <!-- Organization Schema -->
 <script type="application/ld+json">
 {
@@ -426,14 +439,22 @@
 <meta name="geo.position" content="41.9208;-71.5495">
 <meta name="ICBM" content="41.9208, -71.5495">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNK2QCYSC7"></script>
+<!-- Google tag (gtag.js) - Delayed loading -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-JNK2QCYSC7');
+  // Delay Google Analytics to improve performance
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-JNK2QCYSC7';
+      document.head.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JNK2QCYSC7');
+    }, 3000); // Load after 3 seconds
+  });
 </script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
@@ -661,7 +682,7 @@
 <p class="section-intro">Extensive credentials and proven track record in forensic economics and business valuation.</p>
 <div class="credentials-grid">
 <div class="credential">
-<h4><i class="icon icon-graduation" aria-label="Certifications">🎓</i> Professional Certifications</h4>
+<h3><i class="icon icon-graduation" aria-label="Certifications">🎓</i> Professional Certifications</h3>
 <ul>
 <li><strong>M.Ed</strong> - Master of Education</li>
 <li><strong>MBA</strong> - Master of Business Administration</li>
@@ -676,7 +697,7 @@
 </ul>
 </div>
 <div class="credential">
-<h4>⚖️ Court Experience</h4>
+<h3>⚖️ Court Experience</h3>
 <ul>
 <li><strong>Rhode Island Superior Court</strong></li>
 <li><strong>Massachusetts Superior Court</strong></li>
@@ -687,7 +708,7 @@
 </ul>
 </div>
 <div class="credential">
-<h4>📚 Recent Publications</h4>
+<h3>📚 Recent Publications</h3>
 <ul>
 <li><strong>"Use of artificial intelligence to enhance case management"</strong><br/>
 <em>The Rehabilitation Professional (2023)</em></li>
@@ -697,7 +718,7 @@
 <em>Journal of Life Care Planning (2024)</em></li>
 </ul>
 <div class="memberships">
-<h5>Professional Memberships</h5>
+<h4>Professional Memberships</h4>
 <ul>
 <li>National Association of Forensic Economics</li>
 <li>International Association of Rehabilitation Professionals</li>
@@ -714,7 +735,7 @@
 <p class="section-intro">Representative examples of economic analyses I've completed for attorneys across various <a href="practice-areas/">practice areas</a>. These demonstrate my approach to calculating damages in <a href="practice-areas/personal-injury/">personal injury</a>, <a href="practice-areas/medical-malpractice/">medical malpractice</a>, <a href="practice-areas/employment/">employment</a>, and <a href="practice-areas/commercial-disputes/">commercial litigation</a>. View more detailed <a href="case-studies/">case studies</a>.</p>
 <div class="case-studies-grid">
 <div class="case-study">
-<h4><a href="practice-areas/personal-injury/">Personal Injury</a> - Construction Accident</h4>
+<h3><a href="practice-areas/personal-injury/">Personal Injury</a> - Construction Accident</h3>
 <div class="case-details">
 <p><strong>Background:</strong> 45-year-old skilled tradesman suffered multiple fractures in scaffolding collapse with permanent disability preventing return to construction work.</p>
 <p><strong>Analysis:</strong> Calculated lost earning capacity considering construction industry wage premiums, union benefits, and alternative <a href="services/#vocational-assessment">vocational options</a> given physical limitations.</p>
@@ -722,7 +743,7 @@
 </div>
 </div>
 <div class="case-study">
-<h4><a href="practice-areas/medical-malpractice/">Medical Malpractice</a> - Birth Injury</h4>
+<h3><a href="practice-areas/medical-malpractice/">Medical Malpractice</a> - Birth Injury</h3>
 <div class="case-details">
 <p><strong>Background:</strong> Birth complications led to cerebral palsy diagnosis for newborn, requiring lifelong specialized medical care and attendant services.</p>
 <p><strong>Analysis:</strong> Comprehensive <a href="services/#life-care-planning">life care cost analysis</a> including medical equipment, therapy services, educational support, and household modifications over projected 65-year lifespan.</p>
@@ -730,7 +751,7 @@
 </div>
 </div>
 <div class="case-study">
-<h4><a href="practice-areas/employment/">Employment Discrimination</a> - Wrongful Termination</h4>
+<h3><a href="practice-areas/employment/">Employment Discrimination</a> - Wrongful Termination</h3>
 <div class="case-details">
 <p><strong>Background:</strong> Senior executive wrongfully terminated at age 52, claiming age discrimination prevented securing comparable position in competitive industry.</p>
 <p><strong>Analysis:</strong> Analyzed executive compensation packages including base salary, bonuses, equity compensation, and benefits. Evaluated job market conditions for senior-level positions using <a href="services/forensic-economics/">forensic economic analysis</a>.</p>
@@ -738,7 +759,7 @@
 </div>
 </div>
 <div class="case-study">
-<h4><a href="practice-areas/commercial-disputes/">Commercial Damages</a> - Business Interruption</h4>
+<h3><a href="practice-areas/commercial-disputes/">Commercial Damages</a> - Business Interruption</h3>
 <div class="case-details">
 <p><strong>Background:</strong> Manufacturing company's primary supplier breach disrupted operations for 8 months, requiring alternate sourcing at higher costs and lost production capacity.</p>
 <p><strong>Analysis:</strong> Calculated lost profits using but-for scenario modeling, increased operating costs, and <a href="services/business-valuation/">business value diminution</a>. Analyzed market share impacts and customer relationship damage.</p>
@@ -924,7 +945,7 @@ Email: <a href="mailto:chris@skerritteconomics.com" onclick="trackEmailClick()">
 <i class="icon icon-phone icon-lg"></i>
 </a>
 
-<script src="js/main.js"></script>
-<script src="js/mobile-select-fix.js"></script>
+<script src="js/main.min.js?v=2" defer></script>
+<script src="js/mobile-select-fix.min.js?v=2" defer></script>
 </body>
 </html>

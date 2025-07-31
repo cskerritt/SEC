@@ -3071,7 +3071,7 @@ textarea.success {
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--dark-text); /* Changed from primary-color for better contrast */
 }
 
 .mobile-toc-header::after {
