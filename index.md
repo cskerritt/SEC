@@ -7,8 +7,9 @@ sitemap:
   changefreq: weekly
 ---
 
+<main>
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" role="region" aria-label="Hero">
     <div class="container">
         <div class="hero-content">
             <h1>Independent Economic Assessments for Litigation & Corporate Disputes</h1>
@@ -22,39 +23,39 @@ sitemap:
 </section>
 
 <!-- Practice Areas Strip -->
-<section class="practice-areas-strip">
+<section class="practice-areas-strip" role="region" aria-label="Practice Areas">
     <div class="container">
-        <div class="practice-areas-chips">
+        <nav class="practice-areas-chips" aria-label="Practice area quick links">
             <a href="{{ '/practice-areas/personal-injury/' | relative_url }}" class="practice-chip">
-                <span class="icon">⚖️</span>
+                <span class="icon" aria-hidden="true">⚖️</span>
                 Personal Injury
             </a>
             <a href="{{ '/practice-areas/personal-injury/' | relative_url }}" class="practice-chip">
-                <span class="icon">🏛️</span>
+                <span class="icon" aria-hidden="true">🏛️</span>
                 Wrongful Death
             </a>
             <a href="{{ '/practice-areas/medical-malpractice/' | relative_url }}" class="practice-chip">
-                <span class="icon">🏥</span>
+                <span class="icon" aria-hidden="true">🏥</span>
                 Medical Malpractice
             </a>
             <a href="{{ '/practice-areas/employment/' | relative_url }}" class="practice-chip">
-                <span class="icon">💼</span>
+                <span class="icon" aria-hidden="true">💼</span>
                 Employment Litigation
             </a>
             <a href="{{ '/practice-areas/commercial-disputes/' | relative_url }}" class="practice-chip">
-                <span class="icon">📊</span>
+                <span class="icon" aria-hidden="true">📊</span>
                 Business & Shareholder Disputes
             </a>
-        </div>
+        </nav>
     </div>
 </section>
 
 <!-- Service Snapshot -->
-<section class="services-overview">
+<section class="services-overview" role="region" aria-labelledby="services-heading">
     <div class="container">
-        <h2>Professional Economic Analysis</h2>
+        <h2 id="services-heading">Professional Economic Analysis</h2>
         <div class="services-grid">
-            <div class="service-card">
+            <article class="service-card">
                 <h3>Forensic Economics</h3>
                 <p>Comprehensive economic loss analysis including lost earnings, fringe benefits, household services, and life care cost projections.</p>
                 <ul>
@@ -64,8 +65,8 @@ sitemap:
                     <li>Present value determinations</li>
                 </ul>
                 <a href="{{ '/services/forensic-economics/' | relative_url }}" class="learn-more">Learn More →</a>
-            </div>
-            <div class="service-card">
+            </article>
+            <article class="service-card">
                 <h3>Business Valuation</h3>
                 <p>Expert business appraisals for litigation support, divorce proceedings, shareholder disputes, and estate planning.</p>
                 <ul>
@@ -75,18 +76,18 @@ sitemap:
                     <li>Business damage quantification</li>
                 </ul>
                 <a href="{{ '/services/business-valuation/' | relative_url }}" class="learn-more">Learn More →</a>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- Trust Signals -->
-<section class="trust-signals">
+<section class="trust-signals" role="region" aria-labelledby="qualifications-heading">
     <div class="container">
-        <h2>Professional Qualifications & Court Experience</h2>
+        <h2 id="qualifications-heading">Professional Qualifications & Court Experience</h2>
         <div class="credentials-grid">
             <div class="credential">
-                <h4>Professional Certifications</h4>
+                <h3>Professional Certifications</h3>
                 <ul>
                     <li>M.Ed - Master of Education</li>
                     <li>MBA - Master of Business Administration</li>
@@ -101,7 +102,7 @@ sitemap:
                 </ul>
             </div>
             <div class="credential">
-                <h4>Court Experience</h4>
+                <h3>Court Experience</h3>
                 <ul>
                     <li>Rhode Island Superior Court</li>
                     <li>Massachusetts Superior Court</li>
@@ -110,7 +111,7 @@ sitemap:
                 </ul>
             </div>
             <div class="credential">
-                <h4>Recent Publications</h4>
+                <h3>Recent Publications</h3>
                 <ul>
                     <li>"Use of artificial intelligence to enhance case management" - The Rehabilitation Professional (2023)</li>
                     <li>"Ethical Implications of Artificial Intelligence on Vocational Rehabilitation" - Journal of Forensic Vocational Analysis (2023)</li>
@@ -122,36 +123,37 @@ sitemap:
 </section>
 
 <!-- Geographic Coverage -->
-<section class="geographic-coverage">
+<section class="geographic-coverage" role="region" aria-labelledby="coverage-heading">
     <div class="container">
-        <h2>Serving All of New England</h2>
+        <h2 id="coverage-heading">Serving All of New England</h2>
         <div class="locations-grid">
-            <div class="location-card">
+            <article class="location-card">
                 <h3>Rhode Island</h3>
                 <p>Based at 400 Putnam Pike Ste J, Smithfield, RI 02917, serving Providence, Newport, Warwick, and all RI jurisdictions.</p>
                 <a href="{{ '/locations/rhode-island-forensic-economist/' | relative_url }}">Rhode Island Details →</a>
-            </div>
-            <div class="location-card">
+            </article>
+            <article class="location-card">
                 <h3>Massachusetts</h3>
                 <p>Regular appearances in Boston, Worcester, Springfield, and throughout MA courts.</p>
                 <a href="{{ '/locations/massachusetts-forensic-economist/' | relative_url }}">Massachusetts Details →</a>
-            </div>
-            <div class="location-card">
+            </article>
+            <article class="location-card">
                 <h3>New England Region</h3>
                 <p>Available for cases in Connecticut, New Hampshire, Vermont, and Maine.</p>
                 <a href="{{ '/locations/new-england-economic-expert/' | relative_url }}">Regional Coverage →</a>
-            </div>
+            </article>
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section class="cta-section">
+<section class="cta-section" role="region" aria-labelledby="cta-heading">
     <div class="container">
         <div class="cta-content">
-            <h2>Economic Expert Services Available</h2>
+            <h2 id="cta-heading">Economic Expert Services Available</h2>
             <p>Initial consultation available to discuss your litigation support needs.</p>
             <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-large">Schedule Consultation</a>
         </div>
     </div>
 </section>
+</main>
