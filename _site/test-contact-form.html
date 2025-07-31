@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>Contact Form Testing Tool</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Contact Form Testing Tool</title>
+  <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             max-width: 1200px;
@@ -98,195 +98,195 @@
         .status-pass { background-color: #28a745; }
         .status-fail { background-color: #dc3545; }
         .status-warning { background-color: #ffc107; }
-    </style>
+  </style>
 </head>
 <body>
-    <h1>Skerritt Economics Contact Form - Test Results</h1>
-    
-    <div class="test-section success">
-        <h2><span class="status-indicator status-pass"></span>Form Configuration Analysis</h2>
-        <h3>✅ Form Action & Method</h3>
-        <ul>
-            <li><strong>Action URL:</strong> https://formspree.io/f/mnnvgzgd</li>
-            <li><strong>Method:</strong> POST</li>
-            <li><strong>Service:</strong> Formspree (confirmed)</li>
-        </ul>
-        
-        <h3>✅ Email Configuration</h3>
-        <ul>
-            <li><strong>CC Field:</strong> chris@skerritteconomics.com (correctly configured)</li>
-            <li><strong>Subject:</strong> "New Case Consultation Request"</li>
-            <li><strong>Next URL:</strong> https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/contact/</li>
-        </ul>
-        
-        <h3>✅ Form Fields</h3>
-        <ul>
-            <li>Full Name (required)</li>
-            <li>Email Address (required)</li>
-            <li>Phone Number (optional)</li>
-            <li>Law Firm / Organization (optional)</li>
-            <li>Case Type (required) - dropdown with 7 options</li>
-            <li>Jurisdiction (optional) - dropdown with 6 options</li>
-            <li>Timeline for Analysis (optional) - dropdown with 4 options</li>
-            <li>Case Details (required) - textarea</li>
-        </ul>
-    </div>
+  <h1>Skerritt Economics Contact Form - Test Results</h1>
 
-    <div class="test-section issue">
-        <h2><span class="status-indicator status-warning"></span>Issues Found</h2>
-        
-        <h3>⚠️ Missing Tracking Functions</h3>
-        <p>The contact form references tracking functions that are not defined in the contact page:</p>
-        <div class="code-block">
+  <div class="test-section success">
+  <h2><span class="status-indicator status-pass"></span>Form Configuration Analysis</h2>
+  <h3>✅ Form Action & Method</h3>
+  <ul>
+  <li><strong>Action URL:</strong> https://formspree.io/f/mnnvgzgd</li>
+  <li><strong>Method:</strong> POST</li>
+  <li><strong>Service:</strong> Formspree (confirmed)</li>
+  </ul>
+
+  <h3>✅ Email Configuration</h3>
+  <ul>
+  <li><strong>CC Field:</strong> chris@skerritteconomics.com (correctly configured)</li>
+  <li><strong>Subject:</strong> "New Case Consultation Request"</li>
+  <li><strong>Next URL:</strong> https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/contact/</li>
+  </ul>
+
+  <h3>✅ Form Fields</h3>
+  <ul>
+  <li>Full Name (required)</li>
+  <li>Email Address (required)</li>
+  <li>Phone Number (optional)</li>
+  <li>Law Firm / Organization (optional)</li>
+  <li>Case Type (required) - dropdown with 7 options</li>
+  <li>Jurisdiction (optional) - dropdown with 6 options</li>
+  <li>Timeline for Analysis (optional) - dropdown with 4 options</li>
+  <li>Case Details (required) - textarea</li>
+  </ul>
+  </div>
+
+  <div class="test-section issue">
+  <h2><span class="status-indicator status-warning"></span>Issues Found</h2>
+
+  <h3>⚠️ Missing Tracking Functions</h3>
+  <p>The contact form references tracking functions that are not defined in the contact page:</p>
+  <div class="code-block">
 onsubmit="trackFormSubmission('consultation_request')"
 onclick="trackPhoneClick()"
 onclick="trackEmailClick()"
-        </div>
-        <p><strong>Impact:</strong> JavaScript errors in console, but form submission still works.</p>
-        
-        <h3>⚠️ Form HTML Structure Issue</h3>
-        <p>Line 108 has a syntax error - missing closing tag:</p>
-        <div class="code-block">
+  </div>
+  <p><strong>Impact:</strong> JavaScript errors in console, but form submission still works.</p>
+
+  <h3>⚠️ Form HTML Structure Issue</h3>
+  <p>Line 108 has a syntax error - missing closing tag:</p>
+  <div class="code-block">
 &lt;form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnvgzgd" method="POST" onsubmit="trackFormSubmission('consultation_request')"
-        </div>
-        <p><strong>Should be:</strong></p>
-        <div class="code-block">
+  </div>
+  <p><strong>Should be:</strong></p>
+  <div class="code-block">
 &lt;form class="contact-form" id="contactForm" action="https://formspree.io/f/mnnvgzgd" method="POST" onsubmit="trackFormSubmission('consultation_request')"&gt;
-        </div>
-    </div>
+  </div>
+  </div>
 
-    <div class="test-section success">
-        <h2><span class="status-indicator status-pass"></span>JavaScript Validation</h2>
-        <p>The contact.js file provides comprehensive client-side validation:</p>
-        <ul>
-            <li>✅ Required field validation</li>
-            <li>✅ Email format validation</li>
-            <li>✅ Phone number validation (optional)</li>
-            <li>✅ Real-time validation on blur/input</li>
-            <li>✅ Form submission via Fetch API</li>
-            <li>✅ Success/error message handling</li>
-            <li>✅ Loading states</li>
-        </ul>
-    </div>
+  <div class="test-section success">
+  <h2><span class="status-indicator status-pass"></span>JavaScript Validation</h2>
+  <p>The contact.js file provides comprehensive client-side validation:</p>
+  <ul>
+  <li>✅ Required field validation</li>
+  <li>✅ Email format validation</li>
+  <li>✅ Phone number validation (optional)</li>
+  <li>✅ Real-time validation on blur/input</li>
+  <li>✅ Form submission via Fetch API</li>
+  <li>✅ Success/error message handling</li>
+  <li>✅ Loading states</li>
+  </ul>
+  </div>
 
-    <div class="form-test">
-        <h2>Test Form Submission</h2>
-        <p>Use this form to test the actual submission process:</p>
-        
-        <form id="testForm">
-            <div class="form-group">
-                <label for="test-name">Full Name *</label>
-                <input type="text" id="test-name" name="name" value="Test User" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="test-email">Email Address *</label>
-                <input type="email" id="test-email" name="email" value="test@example.com" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="test-phone">Phone Number</label>
-                <input type="tel" id="test-phone" name="phone" value="(555) 123-4567">
-            </div>
-            
-            <div class="form-group">
-                <label for="test-firm">Law Firm / Organization</label>
-                <input type="text" id="test-firm" name="firm" value="Test Law Firm">
-            </div>
-            
-            <div class="form-group">
-                <label for="test-case-type">Case Type *</label>
-                <select id="test-case-type" name="case-type" required>
-                    <option value="">Select Case Type</option>
-                    <option value="personal-injury" selected>Personal Injury</option>
-                    <option value="wrongful-death">Wrongful Death</option>
-                    <option value="medical-malpractice">Medical Malpractice</option>
-                    <option value="employment">Employment Litigation</option>
-                    <option value="commercial-disputes">Commercial/Shareholder Disputes</option>
-                    <option value="business-valuation">Business Valuation</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="test-jurisdiction">Jurisdiction</label>
-                <select id="test-jurisdiction" name="jurisdiction">
-                    <option value="">Select Jurisdiction</option>
-                    <option value="rhode-island" selected>Rhode Island</option>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="new-hampshire">New Hampshire</option>
-                    <option value="federal">Federal Court</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="test-timeline">Timeline for Analysis</label>
-                <select id="test-timeline" name="timeline">
-                    <option value="">Select Timeline</option>
-                    <option value="immediate">Immediate (Rush)</option>
-                    <option value="1-2-weeks" selected>1-2 Weeks</option>
-                    <option value="3-4-weeks">3-4 Weeks</option>
-                    <option value="flexible">Flexible</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="test-message">Case Details *</label>
-                <textarea id="test-message" name="message" rows="4" required>This is a test submission for the contact form functionality. Please ignore this message.</textarea>
-            </div>
-            
-            <input type="hidden" name="_subject" value="TEST - New Case Consultation Request">
-            <input type="hidden" name="_next" value="https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/contact/">
-            <input type="hidden" name="_cc" value="chris@skerritteconomics.com">
-            
-            <button type="submit">Test Form Submission</button>
-        </form>
-        
-        <div id="testResults" class="test-results" style="display: none;">
-            <h3>Test Results:</h3>
-            <div id="resultContent"></div>
-        </div>
-    </div>
+  <div class="form-test">
+  <h2>Test Form Submission</h2>
+  <p>Use this form to test the actual submission process:</p>
 
-    <div class="test-section">
-        <h2>Manual Testing Instructions</h2>
-        <ol>
-            <li><strong>Open the actual contact page:</strong> /Users/chrisskerritt/SEC/contact/index.html</li>
-            <li><strong>Fill out the form</strong> with test data</li>
-            <li><strong>Check browser console</strong> for JavaScript errors</li>
-            <li><strong>Submit the form</strong> and verify:
-                <ul>
-                    <li>Form submits without errors</li>
-                    <li>Success message appears</li>
-                    <li>Email is received at chris@skerritteconomics.com</li>
-                    <li>CC email is sent to the specified address</li>
-                </ul>
-            </li>
-        </ol>
-    </div>
+  <form id="testForm">
+  <div class="form-group">
+  <label for="test-name">Full Name *</label>
+  <input type="text" id="test-name" name="name" value="Test User" required>
+  </div>
 
-    <div class="test-section">
-        <h2>Recommended Fixes</h2>
-        <ol>
-            <li><strong>Fix HTML syntax error on line 108</strong> - add closing &gt; to form tag</li>
-            <li><strong>Add tracking functions</strong> to contact page or remove tracking calls</li>
-            <li><strong>Test Formspree endpoint</strong> to ensure it's active and configured correctly</li>
-            <li><strong>Verify redirect URL</strong> works correctly after submission</li>
-        </ol>
-    </div>
+  <div class="form-group">
+  <label for="test-email">Email Address *</label>
+  <input type="email" id="test-email" name="email" value="test@example.com" required>
+  </div>
 
-    <script>
+  <div class="form-group">
+  <label for="test-phone">Phone Number</label>
+  <input type="tel" id="test-phone" name="phone" value="(555) 123-4567">
+  </div>
+
+  <div class="form-group">
+  <label for="test-firm">Law Firm / Organization</label>
+  <input type="text" id="test-firm" name="firm" value="Test Law Firm">
+  </div>
+
+  <div class="form-group">
+  <label for="test-case-type">Case Type *</label>
+  <select id="test-case-type" name="case-type" required>
+  <option value="">Select Case Type</option>
+  <option value="personal-injury" selected>Personal Injury</option>
+  <option value="wrongful-death">Wrongful Death</option>
+  <option value="medical-malpractice">Medical Malpractice</option>
+  <option value="employment">Employment Litigation</option>
+  <option value="commercial-disputes">Commercial/Shareholder Disputes</option>
+  <option value="business-valuation">Business Valuation</option>
+  <option value="other">Other</option>
+  </select>
+  </div>
+
+  <div class="form-group">
+  <label for="test-jurisdiction">Jurisdiction</label>
+  <select id="test-jurisdiction" name="jurisdiction">
+  <option value="">Select Jurisdiction</option>
+  <option value="rhode-island" selected>Rhode Island</option>
+  <option value="massachusetts">Massachusetts</option>
+  <option value="connecticut">Connecticut</option>
+  <option value="new-hampshire">New Hampshire</option>
+  <option value="federal">Federal Court</option>
+  <option value="other">Other</option>
+  </select>
+  </div>
+
+  <div class="form-group">
+  <label for="test-timeline">Timeline for Analysis</label>
+  <select id="test-timeline" name="timeline">
+  <option value="">Select Timeline</option>
+  <option value="immediate">Immediate (Rush)</option>
+  <option value="1-2-weeks" selected>1-2 Weeks</option>
+  <option value="3-4-weeks">3-4 Weeks</option>
+  <option value="flexible">Flexible</option>
+  </select>
+  </div>
+
+  <div class="form-group">
+  <label for="test-message">Case Details *</label>
+  <textarea id="test-message" name="message" rows="4" required>This is a test submission for the contact form functionality. Please ignore this message.</textarea>
+  </div>
+
+  <input type="hidden" name="_subject" value="TEST - New Case Consultation Request">
+  <input type="hidden" name="_next" value="https://cskerritt.github.io/SkerrittEconomicandConsultingWebsite/contact/">
+  <input type="hidden" name="_cc" value="chris@skerritteconomics.com">
+
+  <button type="submit">Test Form Submission</button>
+  </form>
+
+  <div id="testResults" class="test-results" style="display: none;">
+  <h3>Test Results:</h3>
+  <div id="resultContent"></div>
+  </div>
+  </div>
+
+  <div class="test-section">
+  <h2>Manual Testing Instructions</h2>
+  <ol>
+  <li><strong>Open the actual contact page:</strong> /Users/chrisskerritt/SEC/contact/index.html</li>
+  <li><strong>Fill out the form</strong> with test data</li>
+  <li><strong>Check browser console</strong> for JavaScript errors</li>
+  <li><strong>Submit the form</strong> and verify:
+  <ul>
+  <li>Form submits without errors</li>
+  <li>Success message appears</li>
+  <li>Email is received at chris@skerritteconomics.com</li>
+  <li>CC email is sent to the specified address</li>
+  </ul>
+  </li>
+  </ol>
+  </div>
+
+  <div class="test-section">
+  <h2>Recommended Fixes</h2>
+  <ol>
+  <li><strong>Fix HTML syntax error on line 108</strong> - add closing &gt; to form tag</li>
+  <li><strong>Add tracking functions</strong> to contact page or remove tracking calls</li>
+  <li><strong>Test Formspree endpoint</strong> to ensure it's active and configured correctly</li>
+  <li><strong>Verify redirect URL</strong> works correctly after submission</li>
+  </ol>
+  </div>
+
+  <script>
         // Add tracking function stubs to prevent errors
         function trackFormSubmission(type) {
             console.log('Form submission tracked:', type);
         }
-        
+
         function trackPhoneClick() {
             console.log('Phone click tracked');
         }
-        
+
         function trackEmailClick() {
             console.log('Email click tracked');
         }
@@ -294,15 +294,15 @@ onclick="trackEmailClick()"
         // Test form submission
         document.getElementById('testForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const formData = new FormData(this);
             const button = this.querySelector('button');
             const results = document.getElementById('testResults');
             const resultContent = document.getElementById('resultContent');
-            
+
             button.textContent = 'Testing...';
             button.disabled = true;
-            
+
             // Test submission to Formspree
             fetch('https://formspree.io/f/mnnvgzgd', {
                 method: 'POST',
@@ -315,32 +315,32 @@ onclick="trackEmailClick()"
                 button.textContent = 'Test Form Submission';
                 button.disabled = false;
                 results.style.display = 'block';
-                
+
                 if (response.ok) {
                     resultContent.innerHTML = `
-                        <div style="color: #28a745;">
-                            <strong>✅ SUCCESS!</strong><br>
+  <div style="color: #28a745;">
+  <strong>✅ SUCCESS!</strong><br>
                             Form submitted successfully to Formspree.<br>
                             Status: ${response.status}<br>
                             Check chris@skerritteconomics.com for the test email.
-                        </div>
+  </div>
                     `;
                 } else {
                     response.json().then(data => {
                         resultContent.innerHTML = `
-                            <div style="color: #dc3545;">
-                                <strong>❌ ERROR!</strong><br>
+  <div style="color: #dc3545;">
+  <strong>❌ ERROR!</strong><br>
                                 Status: ${response.status}<br>
                                 Response: ${JSON.stringify(data, null, 2)}
-                            </div>
+  </div>
                         `;
                     }).catch(() => {
                         resultContent.innerHTML = `
-                            <div style="color: #dc3545;">
-                                <strong>❌ ERROR!</strong><br>
+  <div style="color: #dc3545;">
+  <strong>❌ ERROR!</strong><br>
                                 Status: ${response.status}<br>
                                 Unable to parse error response.
-                            </div>
+  </div>
                         `;
                     });
                 }
@@ -349,16 +349,16 @@ onclick="trackEmailClick()"
                 button.textContent = 'Test Form Submission';
                 button.disabled = false;
                 results.style.display = 'block';
-                
+
                 resultContent.innerHTML = `
-                    <div style="color: #dc3545;">
-                        <strong>❌ NETWORK ERROR!</strong><br>
+  <div style="color: #dc3545;">
+  <strong>❌ NETWORK ERROR!</strong><br>
                         ${error.message}<br>
                         Check internet connection and CORS settings.
-                    </div>
+  </div>
                 `;
             });
         });
-    </script>
+  </script>
 </body>
 </html>

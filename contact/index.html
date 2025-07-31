@@ -37,7 +37,7 @@
             }
         }
     }
-    </script>
+  </script>
 <!-- FAQ Structured Data -->
 <script type="application/ld+json">
     {
@@ -86,7 +86,7 @@
             }
         ]
     }
-    </script><script type="application/ld+json">{
+  </script><script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
@@ -496,34 +496,34 @@
         function trackPhoneClick() {
             console.log('Phone click tracked');
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'phone_call', { 
+                gtag('event', 'phone_call', {
                     'event_category': 'engagement',
                     'event_label': 'phone_number_click'
                 });
             }
         }
-        
+
         // Track email clicks
         function trackEmailClick() {
             console.log('Email click tracked');
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'email_click', { 
+                gtag('event', 'email_click', {
                     'event_category': 'engagement',
                     'event_label': 'email_address_click'
                 });
             }
         }
-        
+
         // Track form submissions
         function trackFormSubmission(formType) {
             console.log('Form submission tracked:', formType);
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submission', { 
-                    'event_category': 'conversion', 
-                    'event_label': formType 
+                gtag('event', 'form_submission', {
+                    'event_category': 'conversion',
+                    'event_label': formType
                 });
             }
         }
-    </script>
+  </script>
 </body>
 </html>

@@ -1,25 +1,25 @@
 <!-- Breadcrumb Navigation -->
 {% if page.url != '/' and page.url != '/index.html' %}
 <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="breadcrumb-container">
-        <ol class="breadcrumb-list">
-            <li class="breadcrumb-item">
-                <a class="breadcrumb-link" href="{{ '/' | relative_url }}">Home</a>
-            </li>
-            
+  <div class="breadcrumb-container">
+  <ol class="breadcrumb-list">
+  <li class="breadcrumb-item">
+  <a class="breadcrumb-link" href="{{ '/' | relative_url }}">Home</a>
+  </li>
+
             {% assign url_parts = page.url | split: '/' %}
             {% assign current_url = '' %}
-            
+
             {% for part in url_parts %}
                 {% if part != '' and part != 'index.html' %}
                     {% assign current_url = current_url | append: '/' | append: part %}
-                    
+
                     {% if forloop.last %}
-                        <li class="breadcrumb-item">
-                            <span class="breadcrumb-current">{{ page.title | default: part | replace: '-', ' ' | capitalize }}</span>
-                        </li>
+  <li class="breadcrumb-item">
+  <span class="breadcrumb-current">{{ page.title | default: part | replace: '-', ' ' | capitalize }}</span>
+  </li>
                     {% else %}
-                        <li class="breadcrumb-item">
+  <li class="breadcrumb-item">
                             {% assign part_title = part | replace: '-', ' ' | capitalize %}
                             {% if part == 'services' %}
                                 {% assign part_title = 'Services' %}
@@ -38,13 +38,13 @@
                             {% elsif part == 'life-care-planning' %}
                                 {% assign part_title = 'Life Care Planning' %}
                             {% endif %}
-                            <a class="breadcrumb-link" href="{{ current_url | relative_url }}/">{{ part_title }}</a>
-                        </li>
+  <a class="breadcrumb-link" href="{{ current_url | relative_url }}/">{{ part_title }}</a>
+  </li>
                     {% endif %}
                 {% endif %}
             {% endfor %}
-        </ol>
-    </div>
+  </ol>
+  </div>
 </nav>
 
 <!-- Breadcrumb Structured Data -->
@@ -62,7 +62,7 @@
         {% assign position = 2 %}
         {% assign url_parts = page.url | split: '/' %}
         {% assign current_url = site.url %}
-        
+
         {% for part in url_parts %}
             {% if part != '' and part != 'index.html' %}
                 {% assign current_url = current_url | append: '/' | append: part %}

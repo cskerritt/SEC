@@ -16,8 +16,12 @@
   <link href="../../favicon.ico" rel="icon" type="image/x-icon"/>
   <link href="../../css/styles.css" rel="stylesheet"/>
   <link href="../../css/locations.css" rel="stylesheet"/>
-    <link href="../../css/city-pages.css" rel="stylesheet"/>
-  <!-- JSON-LD Structured Data -->
+  <link href="../../css/city-pages.css" rel="stylesheet"/>
+
+  <link href="../../css/city-pages-enhanced.css" rel="stylesheet"/>
+  <link href="../../css/city-footer-sections.css" rel="stylesheet"/>
+  <link href="../../css/mobile-optimized.css" rel="stylesheet"/>
+<!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
    {
         "@context": "https://schema.org",
@@ -75,7 +79,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -86,33 +90,33 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
+
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
-        
+
         .hero-content p {
             font-size: 1.25rem;
             opacity: 0.95;
             max-width: 600px;
             line-height: 1.6;
         }
-        
+
         .location-badges {
             display: flex;
             gap: 15px;
             margin-experienced: 30px;
             flex-wrap: wrap;
         }
-        
+
         .badge {
             background: rgba(255, 255, 255, 0.2);
             padding: 8px 16px;
@@ -121,25 +125,25 @@
             font-weight: 500;
             backdrop-filter: blur(10px);
         }
-        
+
         .content-section {
             padding: 80px 0;
         }
-        
+
         .intro-text {
             font-size: 1.125rem;
             color: #4b5563;
             line-height: 1.8;
             margin-bottom: 40px;
         }
-        
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin: 60px 0;
         }
-        
+
         .feature-card {
             background: white;
             padding: 30px;
@@ -148,35 +152,35 @@
             border-left: 4px solid #1e40af;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .feature-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.25rem;
         }
-        
+
         .feature-card p {
             color: #6b7280;
             line-height: 1.6;
         }
-        
+
         .specialization-section {
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .specialization-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .specialization-card {
             background: white;
             padding: 35px;
@@ -184,25 +188,25 @@
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
             border-experienced: 4px solid #10b981;
         }
-        
+
         .specialization-card h3 {
             color: #1e40af;
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
-        
+
         .specialization-card ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .specialization-card li {
             padding: 8px 0;
             position: relative;
             padding-left: 25px;
             color: #4b5563;
         }
-        
+
         .specialization-card li:before {
             content: "✓";
             position: absolute;
@@ -210,18 +214,18 @@
             color: #10b981;
             font-weight: bold;
         }
-        
+
         .courts-section {
             padding: 80px 0;
         }
-        
+
         .courts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-experienced: 40px;
         }
-        
+
         .court-item {
             background: white;
             padding: 25px;
@@ -230,33 +234,33 @@
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
-        
+
         .court-item:hover {
             transform: translateY(-3px);
         }
-        
+
         .court-item h4 {
             color: #1e40af;
             margin-bottom: 10px;
         }
-        
+
         .court-item p {
             color: #6b7280;
             margin: 0;
         }
-        
+
         .services-section {
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .service-card {
             background: white;
             padding: 30px;
@@ -264,29 +268,29 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
         }
-        
+
         .service-card h4 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.2rem;
         }
-        
+
         .service-card p {
             color: #6b7280;
             line-height: 1.6;
         }
-        
+
         .industries-section {
             padding: 80px 0;
         }
-        
+
         .industry-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-experienced: 30px;
         }
-        
+
         .industry-tag {
             background: #e0f2fe;
             color: #0f172a;
@@ -297,24 +301,24 @@
             border: 1px solid #0ea5e9;
             transition: all 0.3s ease;
         }
-        
+
         .industry-tag:hover {
             background: #0ea5e9;
             color: white;
         }
-        
+
         .tools-showcase {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 80px 0;
         }
-        
+
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .tool-card {
             background: white;
             padding: 25px;
@@ -323,22 +327,22 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        
+
         .tool-card:hover {
             transform: translateY(-3px);
         }
-        
+
         .tool-card h4 {
             color: #1e40af;
             margin-bottom: 10px;
         }
-        
+
         .tool-card p {
             color: #6b7280;
             font-size: 14px;
             margin-bottom: 20px;
         }
-        
+
         .tool-btn {
             background: #1e40af;
             color: white;
@@ -348,31 +352,31 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        
+
         .tool-btn:hover {
             background: #1e3a8a;
             color: white;
             text-decoration: none;
         }
-        
+
         .cta-section {
             background: #1e40af;
             color: white;
             padding: 80px 0;
             text-align: center;
         }
-        
+
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .cta-section p {
             font-size: 1.125rem;
             opacity: 0.9;
             margin-bottom: 30px;
         }
-        
+
         .cta-btn {
             background: #10b981;
             color: white;
@@ -383,19 +387,19 @@
             font-size: 1.125rem;
             transition: all 0.3s ease;
         }
-        
+
         .cta-btn:hover {
             background: #059669;
             color: white;
             text-decoration: none;
             transform: translateY(-2px);
         }
-        
+
         .sidebar {
             position: sticky;
             experienced: 100px;
         }
-        
+
         .contact-card {
             background: white;
             padding: 30px;
@@ -404,44 +408,44 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        
+
         .contact-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
         }
-        
+
         .contact-info {
             margin: 20px 0;
         }
-        
+
         .contact-info p {
             margin: 8px 0;
         }
-        
+
         .credentials-card {
             background: #f8fafc;
             padding: 25px;
             border-radius: 10px;
             border: 1px solid #e2e8f0;
         }
-        
+
         .credentials-card h4 {
             color: #1e40af;
             margin-bottom: 15px;
         }
-        
+
         .credentials-list {
             list-style: none;
             padding: 0;
         }
-        
+
         .credentials-list li {
             padding: 8px 0;
             border-bottom: 1px solid #e2e8f0;
             position: relative;
             padding-left: 20px;
         }
-        
+
         .credentials-list li:before {
             content: "✓";
             position: absolute;
@@ -449,24 +453,24 @@
             color: #10b981;
             font-weight: bold;
         }
-        
+
         .content-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 60px;
             align-items: start;
         }
-        
+
         @media (max-width: 968px) {
             .content-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-            
+
             .sidebar {
                 position: relative;
                 experienced: auto;
@@ -478,14 +482,14 @@
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .comprehensive-services h2 {
             text-align: center;
             color: #1e40af;
             margin-bottom: 20px;
             font-size: 2.5rem;
         }
-        
+
         .comprehensive-services > .container > p {
             text-align: center;
             max-width: 800px;
@@ -494,14 +498,14 @@
             font-size: 1.125rem;
             line-height: 1.8;
         }
-        
+
         .comprehensive-services .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .comprehensive-services .service-card {
             background: white;
             padding: 30px;
@@ -510,36 +514,36 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-        
+
         .comprehensive-services .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .comprehensive-services .service-icon {
             font-size: 3rem;
             margin-bottom: 20px;
         }
-        
+
         .comprehensive-services .service-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
-        
+
         .comprehensive-services .service-card p {
             color: #6b7280;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        
+
         .comprehensive-services .service-link {
             color: #1e40af;
             font-weight: 600;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
         }
@@ -548,885 +552,885 @@
  <body>
   <!-- Navigation -->
   <nav class="main-nav">
-   <div class="container">
-    <div class="nav-wrapper">
-     <a class="logo" href="../../index.html">
-      <strong>
+  <div class="container">
+  <div class="nav-wrapper">
+  <a class="logo" href="../../index.html">
+  <strong>
        Skerritt Economics
-      </strong>
-      <span>
+  </strong>
+  <span>
        &amp; Consulting
-      </span>
-     </a>
-     <button aria-label="Toggle menu" class="mobile-menu-toggle">
-      <span>
-      </span>
-      <span>
-      </span>
-      <span>
-      </span>
-     </button>
-     <ul class="nav-menu">
-      <li>
-       <a href="../../index.html">
+  </span>
+  </a>
+  <button aria-label="Toggle menu" class="mobile-menu-toggle">
+  <span>
+  </span>
+  <span>
+  </span>
+  <span>
+  </span>
+  </button>
+  <ul class="nav-menu">
+  <li>
+  <a href="../../index.html">
         Home
-       </a>
-      </li>
-      <li class="has-dropdown">
-       <a href="../../services/">
+  </a>
+  </li>
+  <li class="has-dropdown">
+  <a href="../../services/">
         Services
-       </a>
-       <ul class="dropdown">
-        <li>
-         <a href="../../services/forensic-economics/">
+  </a>
+  <ul class="dropdown">
+  <li>
+  <a href="../../services/forensic-economics/">
           Forensic Economics
-         </a>
-        </li>
-        <li>
-         <a href="../../services/business-valuation/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/business-valuation/">
           Business Valuation
-         </a>
-        </li>
-        <li>
-         <a href="../../services/vocational-expert/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/vocational-expert/">
           Vocational Expert
-         </a>
-        </li>
-        <li>
-         <a href="../../services/life-care-planning/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/life-care-planning/">
           Life Care Planning
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li class="has-dropdown">
-       <a href="../../practice-areas/">
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li class="has-dropdown">
+  <a href="../../practice-areas/">
         Practice Areas
-       </a>
-       <ul class="dropdown">
-        <li>
-         <a href="../../practice-areas/personal-injury/">
+  </a>
+  <ul class="dropdown">
+  <li>
+  <a href="../../practice-areas/personal-injury/">
           Personal Injury &amp; Wrongful Death
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/medical-malpractice/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/medical-malpractice/">
           Medical Malpractice
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/employment/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/employment/">
           Employment Litigation
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/commercial-disputes/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/commercial-disputes/">
           Commercial Disputes
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li>
-       <a href="../../case-studies/">
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li>
+  <a href="../../case-studies/">
         Case Studies
-       </a>
-      </li>
-      <li>
-       <a href="../../about/">
+  </a>
+  </li>
+  <li>
+  <a href="../../about/">
         About
-       </a>
-      </li>
-      <li>
-       <a href="../../resources/">
+  </a>
+  </li>
+  <li>
+  <a href="../../resources/">
         Resources
-       </a>
-      </li>
-      <li>
-       <a href="../../tools/">
+  </a>
+  </li>
+  <li>
+  <a href="../../tools/">
         Tools
-       </a>
-      </li>
-      <li>
-       <a class="nav-cta" href="../../contact/">
+  </a>
+  </li>
+  <li>
+  <a class="nav-cta" href="../../contact/">
         Contact
-       </a>
-      </li>
-     </ul>
-    </div>
-   </div>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
   </nav>
   <!-- Hero Section -->
   <section class="hero-section">
-   <div class="container">
-    <div class="hero-content">
-     <h1>
+  <div class="container">
+  <div class="hero-content">
+  <h1>
       Henderson Forensic Economist
-     </h1>
-     <p>
+  </h1>
+  <p>
       Expert economic damage analysis and litigation support for Henderson's comprehensive law firms. Delivering comprehensive forensic economics services with precision and authority in Nevada's fastest-growing city and the Las Vegas metropolitan area.
-     </p>
-     <div class="location-badges">
-      <span class="badge">
+  </p>
+  <div class="location-badges">
+  <span class="badge">
        Court-Qualified Expert
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Las Vegas Metro Area
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Fast Turnaround
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Detailed Reports
-      </span>
-     </div>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Main Content -->
   <section class="content-section">
-   <div class="container">
-    <div class="content-grid">
-     <div class="main-content">
-      <div class="intro-text">
-       <p>
+  <div class="container">
+  <div class="content-grid">
+  <div class="main-content">
+  <div class="intro-text">
+  <p>
         Henderson's legal professionals require forensic economic analysis that meets the sophisticated demands of Nevada's most dynamic business environment. At Skerritt Economics, we provide comprehensive economic damage calculations, business valuations, and expert testimony services tailored for the complex litigation landscape of the Las Vegas metropolitan area.
-       </p>
-       <p>
+  </p>
+  <p>
         Our practice serves the Henderson legal community with understanding of Nevada's unique economic drivers, from gaming and hospitality to technology and renewable energy, delivering precise analysis that strengthens your cases and supports successful outcomes in this rapidly evolving market.
-       </p>
-      </div>
-      <!-- Why Choose Section -->
-      <div class="feature-grid">
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <!-- Why Choose Section -->
+  <div class="feature-grid">
+  <div class="feature-card">
+  <h3>
          Nevada Market Specialization
-        </h3>
-        <p>
+  </h3>
+  <p>
          Comprehensive understanding of Henderson's position in the Las Vegas economy, including gaming, hospitality, technology, and renewable energy sectors. Our analysis reflects the unique wage patterns and growth opportunities of this dynamic metropolitan area.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Gaming &amp; Hospitality Expertise
-        </h3>
-        <p>
+  </h3>
+  <p>
          Specialized knowledge of Nevada's signature industries with extensive experience in gaming economics, hospitality valuation, and entertainment industry litigation. Understanding of complex compensation structures and seasonal economic patterns.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Rapid Growth Market Analysis
-        </h3>
-        <p>
+  </h3>
+  <p>
          Expert analysis of economic trends in one of America's fastest-growing metropolitan areas. Our projections account for demographic shifts, infrastructure development, and emerging industry patterns specific to Southern Nevada.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Tax-Advantaged State Considerations
-        </h3>
-        <p>
+  </h3>
+  <p>
          Sophisticated understanding of Nevada's unique tax environment and its impact on economic calculations. Specialized analysis for high-net-worth individuals and businesses benefiting from Nevada's favorable tax structure.
-        </p>
-       </div>
-      </div>
-     </div>
-     <div class="sidebar">
-      <div class="contact-card">
-       <h3>
+  </p>
+  </div>
+  </div>
+  </div>
+  <div class="sidebar">
+  <div class="contact-card">
+  <h3>
         Request Consultation
-       </h3>
-       <p>
+  </h3>
+  <p>
         Get expert economic analysis for your case. Free initial consultation available for qualifying matters.
-       </p>
-       <div class="contact-info">
-        <p>
-         <strong>
+  </p>
+  <div class="contact-info">
+  <p>
+  <strong>
           Phone:
-         </strong>
-         <a href="tel:203-605-2814">
+  </strong>
+  <a href="tel:203-605-2814">
           (203) 605-2814
-         </a>
-        </p>
-        <p>
-         <strong>
+  </a>
+  </p>
+  <p>
+  <strong>
           Email:
-         </strong>
-         <a href="mailto:chris@skerritteconomics.com">
+  </strong>
+  <a href="mailto:chris@skerritteconomics.com">
           chris@skerritteconomics.com
-         </a>
-        </p>
-       </div>
-       <a class="btn btn-primary" href="../../contact/">
+  </a>
+  </p>
+  </div>
+  <a class="btn btn-primary" href="../../contact/">
         Request Consultation
-       </a>
-      </div>
-      <div class="credentials-card">
-       <h4>
+  </a>
+  </div>
+  <div class="credentials-card">
+  <h4>
         Professional Qualifications
-       </h4>
-       <ul class="credentials-list">
-        <li>
+  </h4>
+  <ul class="credentials-list">
+  <li>
          Court-qualified expert witness
-        </li>
-        <li>
+  </li>
+  <li>
          Extensive economics experience
-        </li>
-        <li>
+  </li>
+  <li>
          Hundreds of cases completed
-        </li>
-        <li>
+  </li>
+  <li>
          Detailed written reports
-        </li>
-        <li>
+  </li>
+  <li>
          Expert trial testimony
-        </li>
-        <li>
+  </li>
+  <li>
          Nevada court experience
-        </li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
   </section>
   <section class="comprehensive-services">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Comprehensive Expert Services in Henderson
-    </h2>
-    <p>
+  </h2>
+  <p>
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Henderson and NV. Our integrated approach ensures comprehensive support for all your litigation and business needs.
-    </p>
-    <div class="services-grid">
-     <div class="service-card">
-      <div class="service-icon">
+  </p>
+  <div class="services-grid">
+  <div class="service-card">
+  <div class="service-icon">
        📊
-      </div>
-      <h3>
+  </div>
+  <h3>
        Forensic Economics
-      </h3>
-      <p>
+  </h3>
+  <p>
        Expert economic damage analysis for personal injury, wrongful death, employment litigation, and commercial disputes in Henderson. Court-qualified expert witness with extensive federal and state court experience.
-      </p>
-      <a class="service-link" href="../../services/forensic-economics/">
+  </p>
+  <a class="service-link" href="../../services/forensic-economics/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        💼
-      </div>
-      <h3>
+  </div>
+  <h3>
        Business Valuation
-      </h3>
-      <p>
+  </h3>
+  <p>
        Certified business valuation analyst providing comprehensive valuations for litigation, M&amp;A, divorce, and tax purposes. Expert knowledge of NV's business environment and market conditions.
-      </p>
-      <a class="service-link" href="../../services/business-valuation/">
+  </p>
+  <a class="service-link" href="../../services/business-valuation/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        👔
-      </div>
-      <h3>
+  </div>
+  <h3>
        Vocational Expert Services
-      </h3>
-      <p>
+  </h3>
+  <p>
        Professional vocational assessments, employability analysis, and labor market evaluations for disability and personal injury cases. Understanding of Henderson's employment landscape and opportunities.
-      </p>
-      <a class="service-link" href="../../services/vocational-expert/">
+  </p>
+  <a class="service-link" href="../../services/vocational-expert/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        🏥
-      </div>
-      <h3>
+  </div>
+  <h3>
        Life Care Planning
-      </h3>
-      <p>
+  </h3>
+  <p>
        Comprehensive life care plans and future medical cost projections for catastrophic injury cases. Collaboration with Henderson's medical providers for accurate cost assessments.
-      </p>
-      <a class="service-link" href="../../services/life-care-planning/">
+  </p>
+  <a class="service-link" href="../../services/life-care-planning/">
        Learn More →
-      </a>
-     </div>
-    </div>
-   </div>
+  </a>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Specialized Analysis Section -->
   <section class="specialization-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Specialized Economic Analysis for Henderson Cases
-    </h2>
-    <p>
+  </h2>
+  <p>
      Comprehensive forensic economics services designed for the unique litigation environment of Henderson and the greater Las Vegas metropolitan area.
-    </p>
-    <div class="specialization-cards">
-     <div class="specialization-card">
-      <h3>
+  </p>
+  <div class="specialization-cards">
+  <div class="specialization-card">
+  <h3>
        Gaming &amp; Hospitality Litigation
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Gaming revenue and profit analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Hospitality business interruption losses
-       </li>
-       <li>
+  </li>
+  <li>
         Entertainment industry employment disputes
-       </li>
-       <li>
+  </li>
+  <li>
         Commission and tip-based compensation analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Seasonal employment pattern modeling
-       </li>
-       <li>
+  </li>
+  <li>
         Convention and event economic impact
-       </li>
-      </ul>
-     </div>
-     <div class="specialization-card">
-      <h3>
+  </li>
+  </ul>
+  </div>
+  <div class="specialization-card">
+  <h3>
        Personal Injury &amp; Wrongful Death
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Las Vegas metro wage and benefits analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Life care planning for catastrophic injuries
-       </li>
-       <li>
+  </li>
+  <li>
         Household services valuations
-       </li>
-       <li>
+  </li>
+  <li>
         Present value calculations with Nevada considerations
-       </li>
-       <li>
+  </li>
+  <li>
         Vocational rehabilitation assessments
-       </li>
-       <li>
+  </li>
+  <li>
         Quality of life economic impact analysis
-       </li>
-      </ul>
-     </div>
-     <div class="specialization-card">
-      <h3>
+  </li>
+  </ul>
+  </div>
+  <div class="specialization-card">
+  <h3>
        Commercial Disputes
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Business interruption and lost profits
-       </li>
-       <li>
+  </li>
+  <li>
         Real estate development disputes
-       </li>
-       <li>
+  </li>
+  <li>
         Construction and infrastructure projects
-       </li>
-       <li>
+  </li>
+  <li>
         Franchise and licensing agreements
-       </li>
-       <li>
+  </li>
+  <li>
         Technology startup valuations
-       </li>
-       <li>
+  </li>
+  <li>
         Renewable energy project analysis
-       </li>
-      </ul>
-     </div>
-     <div class="specialization-card">
-      <h3>
+  </li>
+  </ul>
+  </div>
+  <div class="specialization-card">
+  <h3>
        Employment &amp; Executive Compensation
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         High-level executive compensation analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Stock option and equity compensation
-       </li>
-       <li>
+  </li>
+  <li>
         Non-compete agreement economic impact
-       </li>
-       <li>
+  </li>
+  <li>
         Discrimination and harassment damages
-       </li>
-       <li>
+  </li>
+  <li>
         Wrongful termination calculations
-       </li>
-       <li>
+  </li>
+  <li>
         Relocation and retention incentives
-       </li>
-      </ul>
-     </div>
-    </div>
-   </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Courts Section -->
   <section class="courts-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Henderson Area Court Experience
-    </h2>
-    <p>
+  </h2>
+  <p>
      Extensive experience providing expert testimony and economic analysis in Henderson's federal, state, and local court systems throughout Clark County and Southern Nevada.
-    </p>
-    <div class="courts-grid">
-     <div class="court-item">
-      <h4>
+  </p>
+  <div class="courts-grid">
+  <div class="court-item">
+  <h4>
        U.S. District Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        District of Nevada (Las Vegas Division)
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Clark County District Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Civil and family court matters
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Henderson Municipal Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Local jurisdiction matters
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Nevada Supreme Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Appeals and discretionary review
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        U.S. Bankruptcy Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        District of Nevada
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Nevada Gaming Commission
-      </h4>
-      <p>
+  </h4>
+  <p>
        Gaming-related proceedings
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Workers' Compensation Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Southern Nevada division
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Nevada Court of Appeals
-      </h4>
-      <p>
+  </h4>
+  <p>
        Intermediate appellate court
-      </p>
-     </div>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Services Section -->
   <section class="services-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Comprehensive Economic Services
-    </h2>
-    <p>
+  </h2>
+  <p>
      Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Henderson's legal community.
-    </p>
-    <div class="services-grid">
-     <div class="service-card">
-      <h4>
+  </p>
+  <div class="services-grid">
+  <div class="service-card">
+  <h4>
        Economic Damage Analysis
-      </h4>
-      <p>
+  </h4>
+  <p>
        Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with Nevada-specific considerations and tax implications.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Gaming &amp; Hospitality Valuation
-      </h4>
-      <p>
+  </h4>
+  <p>
        Specialized business valuations for gaming, hospitality, and entertainment enterprises using industry-specific methodologies and market data.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Technology Startup Analysis
-      </h4>
-      <p>
+  </h4>
+  <p>
        Valuation and economic analysis for technology companies, startups, and intellectual property disputes in Nevada's growing tech sector.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Expert Witness Testimony
-      </h4>
-      <p>
+  </h4>
+  <p>
        Clear, courtroom testimony with comprehensive preparation and professional exhibits designed for Nevada's legal environment.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Real Estate Development Analysis
-      </h4>
-      <p>
+  </h4>
+  <p>
        Economic analysis for real estate disputes, development projects, and construction litigation in the rapidly growing Henderson market.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Settlement Support
-      </h4>
-      <p>
+  </h4>
+  <p>
        Economic analysis and documentation to support settlement negotiations with detailed present value calculations and risk assessments.
-      </p>
-     </div>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Industries Section -->
   <section class="industries-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Henderson Economic Expertise
-    </h2>
-    <p>
+  </h2>
+  <p>
      Our forensic economic analysis covers Henderson's diverse and dynamic economy, from traditional gaming and hospitality to emerging technology and renewable energy sectors.
-    </p>
-    <div class="industry-tags">
-     <span class="industry-tag">
+  </p>
+  <div class="industry-tags">
+  <span class="industry-tag">
       Gaming &amp; Casinos
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Hospitality &amp; Tourism
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Technology
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Renewable Energy
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Real Estate Development
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Construction
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Healthcare
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Professional Services
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Manufacturing
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Transportation &amp; Logistics
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Entertainment
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Financial Services
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Retail Trade
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Mining
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Aviation
-     </span>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
   </section>
   <!-- Service Areas -->
   <section class="content-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Las Vegas Metropolitan Service Area
-    </h2>
-    <p>
+  </h2>
+  <p>
      Serving attorneys and their clients throughout the Henderson area and broader Las Vegas metropolitan region with comprehensive forensic economics services.
-    </p>
-    <div class="industry-tags">
-     <span class="industry-tag">
+  </p>
+  <div class="industry-tags">
+  <span class="industry-tag">
       Henderson
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Las Vegas
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       North Las Vegas
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Boulder City
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Paradise
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Enterprise
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Spring Valley
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Summerlin
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Sunrise Manor
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Whitney
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Winchester
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Green Valley
-     </span>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
   </section>
   <!-- Tools Section -->
   <section class="tools-showcase">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Professional Calculation Tools
-    </h2>
-    <p>
+  </h2>
+  <p>
      Access our suite of professional tools designed specifically for Henderson legal professionals and their economic analysis needs.
-    </p>
-    <div class="tools-grid">
-     <div class="tool-card">
-      <h4>
+  </p>
+  <div class="tools-grid">
+  <div class="tool-card">
+  <h4>
        Life Expectancy Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Professional actuarial calculations for personal injury and wrongful death cases in Nevada
-      </p>
-      <a class="tool-btn" href="../../tools/life-expectancy/">
+  </p>
+  <a class="tool-btn" href="../../tools/life-expectancy/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Present Value Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Comprehensive present value analysis for economic damage calculations with Nevada tax considerations
-      </p>
-      <a class="tool-btn" href="../../tools/present-value/">
+  </p>
+  <a class="tool-btn" href="../../tools/present-value/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Wage Growth Projector
-      </h4>
-      <p>
+  </h4>
+  <p>
        Advanced wage growth modeling for employment litigation reflecting Las Vegas metropolitan market conditions
-      </p>
-      <a class="tool-btn" href="../../tools/wage-growth/">
+  </p>
+  <a class="tool-btn" href="../../tools/wage-growth/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Gaming Revenue Analyzer
-      </h4>
-      <p>
+  </h4>
+  <p>
        Specialized analysis tool for gaming and hospitality industry economic calculations
-      </p>
-      <a class="tool-btn" href="../../tools/gaming-revenue/">
+  </p>
+  <a class="tool-btn" href="../../tools/gaming-revenue/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Business Valuation Tool
-      </h4>
-      <p>
+  </h4>
+  <p>
        Preliminary business valuation for commercial disputes and transactions in the Las Vegas area
-      </p>
-      <a class="tool-btn" href="../../tools/business-valuation/">
+  </p>
+  <a class="tool-btn" href="../../tools/business-valuation/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Real Estate Development Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Economic analysis for real estate development and construction disputes
-      </p>
-      <a class="tool-btn" href="../../tools/real-estate-development/">
+  </p>
+  <a class="tool-btn" href="../../tools/real-estate-development/">
        Access Tool
-      </a>
-     </div>
-    </div>
-   </div>
+  </a>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- CTA Section -->
   <section class="cta-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Ready to Strengthen Your Henderson Case?
-    </h2>
-    <p>
+  </h2>
+  <p>
      Partner with Southern Nevada's trusted forensic economist for expert analysis and courtroom testimony.
-    </p>
-    <a class="cta-btn" href="../../contact/">
+  </p>
+  <a class="cta-btn" href="../../contact/">
      Contact Information
-    </a>
-   </div>
+  </a>
+  </div>
   </section>
   <!-- Footer -->
   <footer class="main-footer">
-   <div class="container">
-    <div class="footer-grid">
-     <div class="footer-col">
-      <h4>
+  <div class="container">
+  <div class="footer-grid">
+  <div class="footer-col">
+  <h4>
        Skerritt Economics &amp; Consulting
-      </h4>
-      <p>
+  </h4>
+  <p>
        Expert forensic economics and business valuation services for legal professionals throughout the Southwest and beyond.
-      </p>
-      <p class="footer-contact">
+  </p>
+  <p class="footer-contact">
        400 Putnam Pike Ste J
-       <br/>
+  <br/>
        Smithfield, RI 02917
-       <br/>
-       <a href="tel:203-605-2814">
+  <br/>
+  <a href="tel:203-605-2814">
         (203) 605-2814
-       </a>
-       <br/>
-       <a href="mailto:chris@skerritteconomics.com">
+  </a>
+  <br/>
+  <a href="mailto:chris@skerritteconomics.com">
         chris@skerritteconomics.com
-       </a>
-      </p>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </p>
+  </div>
+  <div class="footer-col">
+  <h4>
        Services
-      </h4>
-      <ul>
-       <li>
-        <a href="../../services/forensic-economics/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../services/forensic-economics/">
          Forensic Economics
-        </a>
-       </li>
-       <li>
-        <a href="../../services/business-valuation/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/business-valuation/">
          Business Valuation
-        </a>
-       </li>
-       <li>
-        <a href="../../services/vocational-expert/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/vocational-expert/">
          Vocational Expert
-        </a>
-       </li>
-       <li>
-        <a href="../../services/life-care-planning/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/life-care-planning/">
          Life Care Planning
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>
        Practice Areas
-      </h4>
-      <ul>
-       <li>
-        <a href="../../practice-areas/personal-injury/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../practice-areas/personal-injury/">
          Personal Injury
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/medical-malpractice/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/medical-malpractice/">
          Medical Malpractice
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/employment/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/employment/">
          Employment Litigation
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/commercial-disputes/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/commercial-disputes/">
          Commercial Disputes
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>
        Resources
-      </h4>
-      <ul>
-       <li>
-        <a href="../../case-studies/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../case-studies/">
          Case Studies
-        </a>
-       </li>
-       <li>
-        <a href="../../resources/">
+  </a>
+  </li>
+  <li>
+  <a href="../../resources/">
          Articles &amp; Insights
-        </a>
-       </li>
-       <li>
-        <a href="../../tools/">
+  </a>
+  </li>
+  <li>
+  <a href="../../tools/">
          Professional Tools
-        </a>
-       </li>
-       <li>
-        <a href="../../about/">
+  </a>
+  </li>
+  <li>
+  <a href="../../about/">
          About Chris Skerritt
-        </a>
-       </li>
-       <li>
-        <a href="../../contact/">
+  </a>
+  </li>
+  <li>
+  <a href="../../contact/">
          Contact
-        </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer-bottom">
-     <p>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+  <p>
       © 2025 Skerritt Economics &amp; Consulting. All rights reserved.
-     </p>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
   </footer>
   <script src="../../js/main.js">
   </script>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>City Pages Review Tool - Complete</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>City Pages Review Tool - Complete</title>
+  <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -174,86 +174,86 @@
             background: linear-gradient(90deg, #28a745, #20c997);
             transition: width 0.3s ease;
         }
-    </style>
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>City Pages Review Tool</h1>
-            <p>Review and navigate through all 751 forensic economist city pages</p>
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-            <div class="stats">
-                <div class="stat-item">Total: <span id="totalPages">751</span></div>
-                <div class="stat-item">Reviewed: <span id="reviewedPages">0</span></div>
-                <div class="stat-item">Approved: <span id="approvedPages">0</span></div>
-                <div class="stat-item">Needs Fix: <span id="needsFixPages">0</span></div>
-            </div>
-        </div>
+  <div class="container">
+  <div class="header">
+  <h1>City Pages Review Tool</h1>
+  <p>Review and navigate through all 751 forensic economist city pages</p>
+  <div class="progress-bar">
+  <div class="progress-fill" id="progressFill"></div>
+  </div>
+  <div class="stats">
+  <div class="stat-item">Total: <span id="totalPages">751</span></div>
+  <div class="stat-item">Reviewed: <span id="reviewedPages">0</span></div>
+  <div class="stat-item">Approved: <span id="approvedPages">0</span></div>
+  <div class="stat-item">Needs Fix: <span id="needsFixPages">0</span></div>
+  </div>
+  </div>
 
-        <div class="filter-controls">
-            <label>Filter by State:</label>
-            <select id="stateFilter">
-                <option value="">All States</option>
-            </select>
-            
-            <label>Search:</label>
-            <input type="text" id="searchBox" class="search-box" placeholder="Search city names...">
-            
-            <label>Status:</label>
-            <select id="statusFilter">
-                <option value="">All Statuses</option>
-                <option value="reviewing">Reviewing</option>
-                <option value="approved">Approved</option>
-                <option value="needs-fix">Needs Fix</option>
-            </select>
-            
-            <button onclick="resetFilters()" class="btn-secondary">Reset</button>
-            
-            <div class="status-indicators">
-                <div class="status-item">
-                    <div class="status-dot status-reviewing"></div>
-                    <span>Reviewing</span>
-                </div>
-                <div class="status-item">
-                    <div class="status-dot status-approved"></div>
-                    <span>Approved</span>
-                </div>
-                <div class="status-item">
-                    <div class="status-dot status-needs-fix"></div>
-                    <span>Needs Fix</span>
-                </div>
-            </div>
-        </div>
+  <div class="filter-controls">
+  <label>Filter by State:</label>
+  <select id="stateFilter">
+  <option value="">All States</option>
+  </select>
 
-        <div class="navigation">
-            <div class="nav-controls">
-                <button onclick="firstPage()" class="btn-secondary" title="Go to first page">« First</button>
-                <button onclick="previousPage()" class="btn-secondary" title="Previous page (←)">‹ Previous</button>
-                <span class="page-info" id="pageInfo">Page 1 of 1</span>
-                <button onclick="nextPage()" class="btn-primary" title="Next page (→)">Next ›</button>
-                <button onclick="lastPage()" class="btn-secondary" title="Go to last page">Last »</button>
-            </div>
-            <div class="nav-controls">
-                <button onclick="markAsApproved()" class="btn-success" title="Mark as approved (A)">✓ Approve</button>
-                <button onclick="markAsNeedsFix()" class="btn-warning" title="Mark as needs fix (F)">⚠ Needs Fix</button>
-                <button onclick="openInNewTab()" class="btn-primary" title="Open in new tab">Open in New Tab</button>
-            </div>
-        </div>
+  <label>Search:</label>
+  <input type="text" id="searchBox" class="search-box" placeholder="Search city names...">
 
-        <iframe id="currentPage" class="current-page" src=""></iframe>
+  <label>Status:</label>
+  <select id="statusFilter">
+  <option value="">All Statuses</option>
+  <option value="reviewing">Reviewing</option>
+  <option value="approved">Approved</option>
+  <option value="needs-fix">Needs Fix</option>
+  </select>
 
-        <div class="page-list" id="pageList">
-            <!-- Page list will be populated by JavaScript -->
-        </div>
-        
-        <div class="keyboard-help">
-            <strong>Keyboard shortcuts:</strong> ← Previous | → Next | Home First | End Last | A Approve | F Needs Fix
-        </div>
-    </div>
+  <button onclick="resetFilters()" class="btn-secondary">Reset</button>
 
-    <script>
+  <div class="status-indicators">
+  <div class="status-item">
+  <div class="status-dot status-reviewing"></div>
+  <span>Reviewing</span>
+  </div>
+  <div class="status-item">
+  <div class="status-dot status-approved"></div>
+  <span>Approved</span>
+  </div>
+  <div class="status-item">
+  <div class="status-dot status-needs-fix"></div>
+  <span>Needs Fix</span>
+  </div>
+  </div>
+  </div>
+
+  <div class="navigation">
+  <div class="nav-controls">
+  <button onclick="firstPage()" class="btn-secondary" title="Go to first page">« First</button>
+  <button onclick="previousPage()" class="btn-secondary" title="Previous page (←)">‹ Previous</button>
+  <span class="page-info" id="pageInfo">Page 1 of 1</span>
+  <button onclick="nextPage()" class="btn-primary" title="Next page (→)">Next ›</button>
+  <button onclick="lastPage()" class="btn-secondary" title="Go to last page">Last »</button>
+  </div>
+  <div class="nav-controls">
+  <button onclick="markAsApproved()" class="btn-success" title="Mark as approved (A)">✓ Approve</button>
+  <button onclick="markAsNeedsFix()" class="btn-warning" title="Mark as needs fix (F)">⚠ Needs Fix</button>
+  <button onclick="openInNewTab()" class="btn-primary" title="Open in new tab">Open in New Tab</button>
+  </div>
+  </div>
+
+  <iframe id="currentPage" class="current-page" src=""></iframe>
+
+  <div class="page-list" id="pageList">
+  <!-- Page list will be populated by JavaScript -->
+  </div>
+
+  <div class="keyboard-help">
+  <strong>Keyboard shortcuts:</strong> ← Previous | → Next | Home First | End Last | A Approve | F Needs Fix
+  </div>
+  </div>
+
+  <script>
         const allPages = [
   {
     "name": "Aberdeen, SD",
@@ -4011,7 +4011,7 @@
     "state": "AZ"
   }
 ];
-        
+
         let filteredPages = [];
         let currentIndex = 0;
         let pageStatuses = {{}}; // Store approval status for each page
@@ -4035,18 +4035,18 @@
             let approved = 0;
             let needsFix = 0;
             let reviewed = 0;
-            
+
             for (const status of Object.values(pageStatuses)) {{
                 if (status === 'approved') approved++;
                 else if (status === 'needs-fix') needsFix++;
                 if (status !== 'reviewing') reviewed++;
             }}
-            
+
             document.getElementById('totalPages').textContent = total;
             document.getElementById('reviewedPages').textContent = reviewed;
             document.getElementById('approvedPages').textContent = approved;
             document.getElementById('needsFixPages').textContent = needsFix;
-            
+
             // Update progress bar
             const progress = total > 0 ? (reviewed / total) * 100 : 0;
             document.getElementById('progressFill').style.width = progress + '%';
@@ -4064,7 +4064,7 @@
         function populateStateFilter() {{
             const states = [...new Set(allPages.map(page => page.state))].sort();
             const stateFilter = document.getElementById('stateFilter');
-            
+
             states.forEach(state => {{
                 const option = document.createElement('option');
                 option.value = state;
@@ -4083,7 +4083,7 @@
                 const matchesSearch = !searchTerm || page.name.toLowerCase().includes(searchTerm);
                 const status = pageStatuses[page.file] || 'reviewing';
                 const matchesStatus = !statusFilter || status === statusFilter;
-                
+
                 return matchesState && matchesSearch && matchesStatus;
             }});
 
@@ -4107,16 +4107,16 @@
             filteredPages.forEach((page, index) => {{
                 const div = document.createElement('div');
                 div.className = `page-item ${{index === currentIndex ? 'active' : ''}}`;
-                
+
                 const status = pageStatuses[page.file] || 'reviewing';
                 const statusDot = `<div class="status-dot status-${{status}}" style="margin-right: 8px;"></div>`;
-                
+
                 div.innerHTML = `
-                    <div style="display: flex; align-items: center;">
+  <div style="display: flex; align-items: center;">
                         ${{statusDot}}
-                        <span>${{page.name}}</span>
-                    </div>
-                    <small style="color: #6c757d;">${{index + 1}} of ${{filteredPages.length}}</small>
+  <span>${{page.name}}</span>
+  </div>
+  <small style="color: #6c757d;">${{index + 1}} of ${{filteredPages.length}}</small>
                 `;
                 div.onclick = () => goToPage(index);
                 pageList.appendChild(div);
@@ -4134,11 +4134,11 @@
 
         function loadPage() {{
             if (filteredPages.length === 0) return;
-            
+
             const currentPage = filteredPages[currentIndex];
             const iframe = document.getElementById('currentPage');
             iframe.src = currentPage.file;
-            
+
             updatePageList();
             updateNavigation();
         }}
@@ -4196,7 +4196,7 @@
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {{
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
-            
+
             switch(e.key) {{
                 case 'ArrowLeft':
                     e.preventDefault();
@@ -4231,6 +4231,6 @@
 
         // Initialize when page loads
         initializePages();
-    </script>
+  </script>
 </body>
 </html>
