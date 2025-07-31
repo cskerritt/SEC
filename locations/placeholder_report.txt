@@ -1,0 +1,9 @@
+Detailed Placeholder Report
+==================================================
+
+
+PLACEHOLDER text (1 occurrences):
+----------------------------------------
+index.html:202
+<input type="text" id="locationSearch" placeholder="Search by state or city name..." class="location-search-input" aria-label="Search for services by state or city name">
+
