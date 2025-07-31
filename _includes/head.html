@@ -5,7 +5,42 @@
 <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- Critical font-display CSS to prevent FOIT -->
+<style>
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeMZhrib2Bg-4.ttf) format('truetype');
+    }
+    
+    /* Fallback font stack while Inter loads */
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+</style>
+
+<!-- Async font loading -->
+<script>
+    (function() {
+        // Create link element
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+        link.media = 'print';
+        link.onload = function() { this.media = 'all'; };
+        
+        // Insert before first script or at end of head
+        var ref = document.querySelector('script');
+        if (ref && ref.parentNode) {
+            ref.parentNode.insertBefore(link, ref);
+        } else {
+            document.head.appendChild(link);
+        }
+    })();
+</script>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 {% seo %}
 

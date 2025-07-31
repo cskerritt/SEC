@@ -172,5 +172,4 @@ ErrorDocument 500 /500.html
     Header add Link "</css/styles.min.css?v=7>; rel=preload; as=style"
     Header add Link "</css/homepage.min.css?v=2>; rel=preload; as=style"
     Header add Link "</js/main.min.js?v=2>; rel=preload; as=script"
-    Header add Link "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap; rel=preload; as=style"
 </IfModule>
