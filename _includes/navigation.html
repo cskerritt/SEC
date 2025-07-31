@@ -1,40 +1,40 @@
 <!-- Navigation -->
 <nav class="main-nav">
-    <div class="container">
-        <div class="nav-wrapper">
-            <a href="{{ '/' | relative_url }}" class="logo">
-                <strong>Skerritt Economics</strong>
-                <span>& Consulting</span>
-            </a>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
-                <li class="has-dropdown">
-                    <a href="{{ '/services/' | relative_url }}">Services</a>
-                    <ul class="dropdown">
-                        <li><a href="{{ '/services/forensic-economics/' | relative_url }}">Forensic Economics</a></li>
-                        <li><a href="{{ '/services/business-valuation/' | relative_url }}">Business Valuation</a></li>
-                    </ul>
-                </li>
-                <li class="has-dropdown">
-                    <a href="{{ '/practice-areas/' | relative_url }}">Practice Areas</a>
-                    <ul class="dropdown">
-                        <li><a href="{{ '/practice-areas/personal-injury/' | relative_url }}">Personal Injury & Wrongful Death</a></li>
-                        <li><a href="{{ '/practice-areas/medical-malpractice/' | relative_url }}">Medical Malpractice</a></li>
-                        <li><a href="{{ '/practice-areas/employment/' | relative_url }}">Employment Litigation</a></li>
-                        <li><a href="{{ '/practice-areas/commercial-disputes/' | relative_url }}">Commercial Disputes</a></li>
-                    </ul>
-                </li>
-                <li><a href="{{ '/case-studies/' | relative_url }}" {% if page.url contains '/case-studies/' %}class="active"{% endif %}>Case Studies</a></li>
-                <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a></li>
-                <li><a href="{{ '/resources/' | relative_url }}" {% if page.url contains '/resources/' %}class="active"{% endif %}>Resources</a></li>
-                <li><a href="{{ '/tools/' | relative_url }}" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a></li>
-                <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+  <div class="container">
+  <div class="nav-wrapper">
+  <a href="{{ '/' | relative_url }}" class="logo">
+  <strong>Skerritt Economics</strong>
+  <span>& Consulting</span>
+  </a>
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+  <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  <ul class="nav-menu">
+  <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+  <li class="has-dropdown">
+  <a href="{{ '/services/' | relative_url }}">Services</a>
+  <ul class="dropdown">
+  <li><a href="{{ '/services/forensic-economics/' | relative_url }}">Forensic Economics</a></li>
+  <li><a href="{{ '/services/business-valuation/' | relative_url }}">Business Valuation</a></li>
+  </ul>
+  </li>
+  <li class="has-dropdown">
+  <a href="{{ '/practice-areas/' | relative_url }}">Practice Areas</a>
+  <ul class="dropdown">
+  <li><a href="{{ '/practice-areas/personal-injury/' | relative_url }}">Personal Injury & Wrongful Death</a></li>
+  <li><a href="{{ '/practice-areas/medical-malpractice/' | relative_url }}">Medical Malpractice</a></li>
+  <li><a href="{{ '/practice-areas/employment/' | relative_url }}">Employment Litigation</a></li>
+  <li><a href="{{ '/practice-areas/commercial-disputes/' | relative_url }}">Commercial Disputes</a></li>
+  </ul>
+  </li>
+  <li><a href="{{ '/case-studies/' | relative_url }}" {% if page.url contains '/case-studies/' %}class="active"{% endif %}>Case Studies</a></li>
+  <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a></li>
+  <li><a href="{{ '/resources/' | relative_url }}" {% if page.url contains '/resources/' %}class="active"{% endif %}>Resources</a></li>
+  <li><a href="{{ '/tools/' | relative_url }}" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a></li>
+  <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta">Contact</a></li>
+  </ul>
+  </div>
+  </div>
 </nav>

@@ -22,8 +22,12 @@
   <meta content="41.5381, -72.8070" name="ICBM"/>
   <link href="../../css/styles.css" rel="stylesheet"/>
   <link href="../../css/locations.css" rel="stylesheet"/>
-    <link href="../../css/city-pages.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="../../css/city-pages.css" rel="stylesheet"/>
+
+  <link href="../../css/city-pages-enhanced.css" rel="stylesheet"/>
+  <link href="../../css/city-footer-sections.css" rel="stylesheet"/>
+  <link href="../../css/mobile-optimized.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <!-- Structured Data for AI Search Engines -->
@@ -52,7 +56,7 @@
         },
         "serviceType": [
             "Forensic Economics",
-            "Economic Damage Analysis", 
+            "Economic Damage Analysis",
             "Business Valuation",
             "Expert Witness Services",
             "Litigation Support"
@@ -66,7 +70,7 @@
             "Vocational Expert Services",
             "Life Care Planning",
             "Personal Injury Economics",
-            "Wrongful Death Analysis", 
+            "Wrongful Death Analysis",
             "Employment Litigation",
             "Medical Malpractice Economics",
             "Commercial Damages"
@@ -107,7 +111,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -118,33 +122,33 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
+
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
-        
+
         .hero-content p {
             font-size: 1.25rem;
             opacity: 0.95;
             max-width: 700px;
             line-height: 1.6;
         }
-        
+
         .location-badges {
             display: flex;
             gap: 15px;
             margin-experienced: 30px;
             flex-wrap: wrap;
         }
-        
+
         .badge {
             background: rgba(255, 255, 255, 0.2);
             padding: 8px 16px;
@@ -153,25 +157,25 @@
             font-weight: 500;
             backdrop-filter: blur(10px);
         }
-        
+
         .content-section {
             padding: 80px 0;
         }
-        
+
         .intro-text {
             font-size: 1.125rem;
             color: #4b5563;
             line-height: 1.8;
             margin-bottom: 40px;
         }
-        
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin: 60px 0;
         }
-        
+
         .feature-card {
             background: white;
             padding: 30px;
@@ -180,35 +184,35 @@
             border-left: 4px solid #1e40af;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .feature-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.25rem;
         }
-        
+
         .feature-card p {
             color: #6b7280;
             line-height: 1.6;
         }
-        
+
         .courts-section {
             background: #f8fafc;
             padding: 60px 0;
         }
-        
+
         .courts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-experienced: 30px;
         }
-        
+
         .court-item {
             background: white;
             padding: 25px;
@@ -216,23 +220,23 @@
             border-left: 3px solid #10b981;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
-        
+
         .court-item h4 {
             color: #1e40af;
             margin-bottom: 8px;
         }
-        
+
         .industries-section {
             padding: 80px 0;
         }
-        
+
         .industry-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-experienced: 30px;
         }
-        
+
         .industry-tag {
             background: #e0f2fe;
             color: #0f172a;
@@ -243,24 +247,24 @@
             border: 1px solid #0ea5e9;
             transition: all 0.3s ease;
         }
-        
+
         .industry-tag:hover {
             background: #0ea5e9;
             color: white;
         }
-        
+
         .tools-showcase {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 80px 0;
         }
-        
+
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .tool-card {
             background: white;
             padding: 25px;
@@ -269,22 +273,22 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        
+
         .tool-card:hover {
             transform: translateY(-3px);
         }
-        
+
         .tool-card h4 {
             color: #1e40af;
             margin-bottom: 10px;
         }
-        
+
         .tool-card p {
             color: #6b7280;
             font-size: 14px;
             margin-bottom: 20px;
         }
-        
+
         .tool-btn {
             background: #1e40af;
             color: white;
@@ -294,31 +298,31 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        
+
         .tool-btn:hover {
             background: #1e3a8a;
             color: white;
             text-decoration: none;
         }
-        
+
         .cta-section {
             background: #1e40af;
             color: white;
             padding: 80px 0;
             text-align: center;
         }
-        
+
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .cta-section p {
             font-size: 1.125rem;
             opacity: 0.9;
             margin-bottom: 30px;
         }
-        
+
         .cta-btn {
             background: #10b981;
             color: white;
@@ -329,19 +333,19 @@
             font-size: 1.125rem;
             transition: all 0.3s ease;
         }
-        
+
         .cta-btn:hover {
             background: #059669;
             color: white;
             text-decoration: none;
             transform: translateY(-2px);
         }
-        
+
         .sidebar {
             position: sticky;
             experienced: 100px;
         }
-        
+
         .contact-card {
             background: white;
             padding: 30px;
@@ -350,44 +354,44 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        
+
         .contact-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
         }
-        
+
         .contact-info {
             margin: 20px 0;
         }
-        
+
         .contact-info p {
             margin: 8px 0;
         }
-        
+
         .credentials-card {
             background: #f8fafc;
             padding: 25px;
             border-radius: 10px;
             border: 1px solid #e2e8f0;
         }
-        
+
         .credentials-card h4 {
             color: #1e40af;
             margin-bottom: 15px;
         }
-        
+
         .credentials-list {
             list-style: none;
             padding: 0;
         }
-        
+
         .credentials-list li {
             padding: 8px 0;
             border-bottom: 1px solid #e2e8f0;
             position: relative;
             padding-left: 20px;
         }
-        
+
         .credentials-list li:before {
             content: "✓";
             position: absolute;
@@ -395,35 +399,35 @@
             color: #10b981;
             font-weight: bold;
         }
-        
+
         .content-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 60px;
             align-items: start;
         }
-        
+
         .seo-content {
             margin: 60px 0;
         }
-        
+
         .seo-content h2 {
             color: #1e40af;
             margin-bottom: 20px;
         }
-        
+
         .seo-content h3 {
             color: #374151;
             margin: 30px 0 15px 0;
         }
-        
+
         .service-areas-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin: 20px 0;
         }
-        
+
         .area-item {
             background: #f1f5f9;
             padding: 10px 15px;
@@ -431,17 +435,17 @@
             border-left: 3px solid #0ea5e9;
             font-size: 14px;
         }
-        
+
         @media (max-width: 968px) {
             .content-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-            
+
             .sidebar {
                 position: relative;
                 experienced: auto;
@@ -453,14 +457,14 @@
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .comprehensive-services h2 {
             text-align: center;
             color: #1e40af;
             margin-bottom: 20px;
             font-size: 2.5rem;
         }
-        
+
         .comprehensive-services > .container > p {
             text-align: center;
             max-width: 800px;
@@ -469,14 +473,14 @@
             font-size: 1.125rem;
             line-height: 1.8;
         }
-        
+
         .comprehensive-services .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .comprehensive-services .service-card {
             background: white;
             padding: 30px;
@@ -485,36 +489,36 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-        
+
         .comprehensive-services .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .comprehensive-services .service-icon {
             font-size: 3rem;
             margin-bottom: 20px;
         }
-        
+
         .comprehensive-services .service-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
-        
+
         .comprehensive-services .service-card p {
             color: #6b7280;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        
+
         .comprehensive-services .service-link {
             color: #1e40af;
             font-weight: 600;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
         }
@@ -523,705 +527,705 @@
  <body>
   <!-- Navigation -->
   <nav class="main-nav">
-   <div class="container">
-    <div class="nav-wrapper">
-     <a class="logo" href="../../index.html">
-      <strong>
+  <div class="container">
+  <div class="nav-wrapper">
+  <a class="logo" href="../../index.html">
+  <strong>
        Skerritt Economics
-      </strong>
-      <span>
+  </strong>
+  <span>
        &amp; Consulting
-      </span>
-     </a>
-     <button aria-label="Toggle menu" class="mobile-menu-toggle">
-      <span>
-      </span>
-      <span>
-      </span>
-      <span>
-      </span>
-     </button>
-     <ul class="nav-menu">
-      <li>
-       <a href="../../index.html">
+  </span>
+  </a>
+  <button aria-label="Toggle menu" class="mobile-menu-toggle">
+  <span>
+  </span>
+  <span>
+  </span>
+  <span>
+  </span>
+  </button>
+  <ul class="nav-menu">
+  <li>
+  <a href="../../index.html">
         Home
-       </a>
-      </li>
-      <li class="has-dropdown">
-       <a href="../../services/">
+  </a>
+  </li>
+  <li class="has-dropdown">
+  <a href="../../services/">
         Services
-       </a>
-       <ul class="dropdown">
-        <li>
-         <a href="../../services/forensic-economics/">
+  </a>
+  <ul class="dropdown">
+  <li>
+  <a href="../../services/forensic-economics/">
           Forensic Economics
-         </a>
-        </li>
-        <li>
-         <a href="../../services/business-valuation/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/business-valuation/">
           Business Valuation
-         </a>
-        </li>
-        <li>
-         <a href="../../services/vocational-expert/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/vocational-expert/">
           Vocational Expert
-         </a>
-        </li>
-        <li>
-         <a href="../../services/life-care-planning/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/life-care-planning/">
           Life Care Planning
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li class="has-dropdown">
-       <a href="../../practice-areas/">
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li class="has-dropdown">
+  <a href="../../practice-areas/">
         Practice Areas
-       </a>
-       <ul class="dropdown">
-        <li>
-         <a href="../../practice-areas/personal-injury/">
+  </a>
+  <ul class="dropdown">
+  <li>
+  <a href="../../practice-areas/personal-injury/">
           Personal Injury &amp; Wrongful Death
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/medical-malpractice/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/medical-malpractice/">
           Medical Malpractice
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/employment/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/employment/">
           Employment Litigation
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/commercial-disputes/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/commercial-disputes/">
           Commercial Disputes
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li>
-       <a href="../../case-studies/">
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li>
+  <a href="../../case-studies/">
         Case Studies
-       </a>
-      </li>
-      <li>
-       <a href="../../about/">
+  </a>
+  </li>
+  <li>
+  <a href="../../about/">
         About
-       </a>
-      </li>
-      <li>
-       <a href="../../resources/">
+  </a>
+  </li>
+  <li>
+  <a href="../../resources/">
         Resources
-       </a>
-      </li>
-      <li>
-       <a href="../../tools/">
+  </a>
+  </li>
+  <li>
+  <a href="../../tools/">
         Tools
-       </a>
-      </li>
-      <li>
-       <a class="nav-cta" href="../../contact/">
+  </a>
+  </li>
+  <li>
+  <a class="nav-cta" href="../../contact/">
         Contact
-       </a>
-      </li>
-     </ul>
-    </div>
-   </div>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
   </nav>
   <!-- Hero Section -->
   <section class="hero-section">
-   <div class="container">
-    <div class="hero-content">
-     <h1>
+  <div class="container">
+  <div class="hero-content">
+  <h1>
       Meriden Forensic Economist | CT Economic Damage Expert
-     </h1>
-     <p>
+  </h1>
+  <p>
       experienced forensic economist serving Meriden's comprehensive law firms with expert economic damage analysis, business valuations, and litigation support. Court-qualified expert witness with extensive experience in federal and state courts throughout Connecticut's federal and state court systems.
-     </p>
-     <div class="location-badges">
-      <span class="badge">
+  </p>
+  <div class="location-badges">
+  <span class="badge">
        Court-Qualified Expert
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Meriden Metro Area
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Federal Court Experience
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Fast Turnaround
-      </span>
-     </div>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Main Content -->
   <section class="content-section">
-   <div class="container">
-    <div class="content-grid">
-     <div class="main-content">
-      <div class="intro-text">
-       <p>
+  <div class="container">
+  <div class="content-grid">
+  <div class="main-content">
+  <div class="intro-text">
+  <p>
         As Meriden's trusted forensic economist, Skerritt Economics provides economic damage analysis and business valuation services specifically designed for the demanding requirements of Connecticut litigation. Our practice serves attorneys throughout the state with meticulous attention to detail, industry-experienced methodologies, and clear, compelling expert reports that help build winning cases.
-       </p>
-       <p>
+  </p>
+  <p>
         With extensive experience in Connecticut's federal and state court systems, we understand the unique economic landscape of Meriden's diverse local economy. From Meriden financial services, Meriden healthcare, Meriden manufacturing, our economic analysis reflects the complexity and opportunity of the Meriden metropolitan economy.
-       </p>
-      </div>
-      <div class="feature-grid">
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-grid">
+  <div class="feature-card">
+  <h3>
          Personal Injury &amp; Wrongful Death Economics
-        </h3>
-        <p>
+  </h3>
+  <p>
          Comprehensive lost earnings analysis, life care planning, and household services valuations specifically calibrated for Meriden's local wage economy. Our calculations incorporate local wage patterns, cost of living adjustments, and career trajectory modeling for accurate damage assessments in Meriden Metro Area, Greater Meriden, Meriden Business District cases.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Medical Malpractice Economic Analysis
-        </h3>
-        <p>
+  </h3>
+  <p>
          Expert life care planning and medical cost projections for catastrophic injury cases involving Meriden's medical institutions. We work closely with local hospitals and healthcare systems to provide detailed, defensible economic analysis for complex malpractice litigation in Connecticut.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Employment Litigation Economics
-        </h3>
-        <p>
+  </h3>
+  <p>
          Precise wage loss calculations, discrimination damage analysis, and career impact assessments covering Meriden's diverse employment landscape. Our expertise spans financial services, healthcare, manufacturing, technology, and other key sectors throughout the Meriden metropolitan area.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Business Valuation for Connecticut Markets
-        </h3>
-        <p>
+  </h3>
+  <p>
          Professional business valuations for commercial disputes, partnership dissolutions, and divorce proceedings. We understand Meriden's dynamic business environment from large corporations to small family businesses, providing valuations that reflect current market realities in the Meriden area.
-        </p>
-       </div>
-      </div>
-      <div class="seo-content">
-       <h2>
+  </p>
+  </div>
+  </div>
+  <div class="seo-content">
+  <h2>
         Why Choose a Forensic Economist for Your Connecticut Case?
-       </h2>
-       <p>
+  </h2>
+  <p>
         In Meriden's complex legal environment, having a qualified forensic economist can make the difference between winning and losing your case. Economic damages often represent the largest component of personal injury, wrongful death, employment discrimination, and commercial litigation awards. Our forensic economic analysis provides the foundation for compelling, damage calculations that stand up to the most rigorous rigorous scrutiny.
-       </p>
-       <h3>
+  </p>
+  <h3>
         Specialized Meriden Economic Damage Analysis
-       </h3>
-       <p>
+  </h3>
+  <p>
         Meriden presents unique challenges for economic damage calculations. Connecticut's diverse economy, complex career trajectories, substantial benefits packages, and significant cost of living variations across the region all require specialized expertise. Our forensic economic analysis accounts for:
-       </p>
-       <ul>
-        <li>
-         <strong>
+  </p>
+  <ul>
+  <li>
+  <strong>
           Manufacturing Hub:
-         </strong>
+  </strong>
          Precision manufacturing, automotive parts, and industrial equipment
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Healthcare Services:
-         </strong>
+  </strong>
          MidState Medical Center and regional healthcare
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Small Business:
-         </strong>
+  </strong>
          Local enterprises and family-owned manufacturing
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Government Services:
-         </strong>
+  </strong>
          Municipal, county, and state government positions
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Professional Services:
-         </strong>
+  </strong>
          Legal, accounting, and business advisory services
-        </li>
-       </ul>
-       <h3>
+  </li>
+  </ul>
+  <h3>
         Court-Qualified Expert Witness Services
-       </h3>
-       <p>
+  </h3>
+  <p>
         Our forensic economist is court-qualified and has provided expert testimony in hundreds of cases throughout Connecticut's federal and state court systems. We understand the evidentiary standards, procedural requirements, and judicial expectations specific to Connecticut litigation. Our expert reports are thorough, clearly written, and designed to withstand rigorous scrutiny.
-       </p>
-       <h3>
+  </p>
+  <h3>
         Comprehensive Forensic Economics Services
-       </h3>
-       <p>
+  </h3>
+  <p>
         Our practice covers the full spectrum of forensic economics applications in Connecticut litigation:
-       </p>
-       <ul>
-        <li>
-         <strong>
+  </p>
+  <ul>
+  <li>
+  <strong>
           Personal Injury Economics:
-         </strong>
+  </strong>
          Lost earnings, benefits, and household services
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Wrongful Death Analysis:
-         </strong>
+  </strong>
          Lifetime earnings projections and dependency calculations
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Medical Malpractice:
-         </strong>
+  </strong>
          Life care plans and future medical cost projections
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Employment Litigation:
-         </strong>
+  </strong>
          Discrimination damages and constructive discharge analysis
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Commercial Damages:
-         </strong>
+  </strong>
          Lost profits, business interruption, and contract disputes
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Intellectual Property:
-         </strong>
+  </strong>
          Patent infringement and trademark damages
-        </li>
-        <li>
-         <strong>
+  </li>
+  <li>
+  <strong>
           Matrimonial Economics:
-         </strong>
+  </strong>
          Income analysis and business valuation for divorce
-        </li>
-       </ul>
-      </div>
-     </div>
-     <div class="sidebar">
-      <div class="contact-card">
-       <h3>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="sidebar">
+  <div class="contact-card">
+  <h3>
         Request Consultation
-       </h3>
-       <p>
+  </h3>
+  <p>
         Get expert economic analysis for your Meriden case. Free initial consultation available for qualifying matters.
-       </p>
-       <div class="contact-info">
-        <p>
-         <strong>
+  </p>
+  <div class="contact-info">
+  <p>
+  <strong>
           Phone:
-         </strong>
-         <a href="tel:203-605-2814">
+  </strong>
+  <a href="tel:203-605-2814">
           (203) 605-2814
-         </a>
-        </p>
-        <p>
-         <strong>
+  </a>
+  </p>
+  <p>
+  <strong>
           Email:
-         </strong>
-         <a href="mailto:chris@skerritteconomics.com">
+  </strong>
+  <a href="mailto:chris@skerritteconomics.com">
           chris@skerritteconomics.com
-         </a>
-        </p>
-       </div>
-       <a class="btn btn-primary" href="../../contact/">
+  </a>
+  </p>
+  </div>
+  <a class="btn btn-primary" href="../../contact/">
         Request Consultation
-       </a>
-      </div>
-      <div class="credentials-card">
-       <h4>
+  </a>
+  </div>
+  <div class="credentials-card">
+  <h4>
         Professional Qualifications
-       </h4>
-       <ul class="credentials-list">
-        <li>
+  </h4>
+  <ul class="credentials-list">
+  <li>
          Court-qualified expert witness
-        </li>
-        <li>
+  </li>
+  <li>
          Extensive economics experience
-        </li>
-        <li>
+  </li>
+  <li>
          Hundreds of cases completed
-        </li>
-        <li>
+  </li>
+  <li>
          Detailed written reports
-        </li>
-        <li>
+  </li>
+  <li>
          Expert trial testimony
-        </li>
-        <li>
+  </li>
+  <li>
          Connecticut federal court experience
-        </li>
-        <li>
+  </li>
+  <li>
          Connecticut state court experience
-        </li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
   </section>
   <section class="comprehensive-services">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Comprehensive Expert Services in Meriden
-    </h2>
-    <p>
+  </h2>
+  <p>
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Meriden and CT. Our integrated approach ensures comprehensive support for all your litigation and business needs.
-    </p>
-    <div class="services-grid">
-     <div class="service-card">
-      <div class="service-icon">
+  </p>
+  <div class="services-grid">
+  <div class="service-card">
+  <div class="service-icon">
        📊
-      </div>
-      <h3>
+  </div>
+  <h3>
        Forensic Economics
-      </h3>
-      <p>
+  </h3>
+  <p>
        Expert economic damage analysis for personal injury, wrongful death, employment litigation, and commercial disputes in Meriden. Court-qualified expert witness with extensive federal and state court experience.
-      </p>
-      <a class="service-link" href="../../services/forensic-economics/">
+  </p>
+  <a class="service-link" href="../../services/forensic-economics/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        💼
-      </div>
-      <h3>
+  </div>
+  <h3>
        Business Valuation
-      </h3>
-      <p>
+  </h3>
+  <p>
        Certified business valuation analyst providing comprehensive valuations for litigation, M&amp;A, divorce, and tax purposes. Expert knowledge of CT's business environment and market conditions.
-      </p>
-      <a class="service-link" href="../../services/business-valuation/">
+  </p>
+  <a class="service-link" href="../../services/business-valuation/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        👔
-      </div>
-      <h3>
+  </div>
+  <h3>
        Vocational Expert Services
-      </h3>
-      <p>
+  </h3>
+  <p>
        Professional vocational assessments, employability analysis, and labor market evaluations for disability and personal injury cases. Understanding of Meriden's employment landscape and opportunities.
-      </p>
-      <a class="service-link" href="../../services/vocational-expert/">
+  </p>
+  <a class="service-link" href="../../services/vocational-expert/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        🏥
-      </div>
-      <h3>
+  </div>
+  <h3>
        Life Care Planning
-      </h3>
-      <p>
+  </h3>
+  <p>
        Comprehensive life care plans and future medical cost projections for catastrophic injury cases. Collaboration with Meriden's medical providers for accurate cost assessments.
-      </p>
-      <a class="service-link" href="../../services/life-care-planning/">
+  </p>
+  <a class="service-link" href="../../services/life-care-planning/">
        Learn More →
-      </a>
-     </div>
-    </div>
-   </div>
+  </a>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Courts Section -->
   <section class="courts-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Meriden Court Experience - Federal and State Systems
-    </h2>
-    <p>
+  </h2>
+  <p>
      Extensive experience providing expert testimony and economic analysis in Connecticut's comprehensive court systems, serving the Meriden area and surrounding regions.
-    </p>
-    <div class="courts-grid">
-     <div class="court-item">
-      <h4>
+  </p>
+  <div class="courts-grid">
+  <div class="court-item">
+  <h4>
        U.S. District Court - District of Connecticut
-      </h4>
-      <p>
+  </h4>
+  <p>
        Hartford federal court
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        State Courts
-      </h4>
-      <p>
+  </h4>
+  <p>
        State court system
-      </p>
-     </div>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Industries Section -->
   <section class="industries-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Meriden Economic Expertise Across All Industries
-    </h2>
-    <p>
+  </h2>
+  <p>
      Our forensic economic analysis covers Meriden's diverse economy, providing comprehensive expertise across all major business sectors in Connecticut.
-    </p>
-    <div class="industry-tags">
-     <span class="industry-tag">
+  </p>
+  <div class="industry-tags">
+  <span class="industry-tag">
       Financial Services
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Healthcare
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Manufacturing
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Technology
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Insurance
-     </span>
-    </div>
-    <div class="service-areas-grid">
-     <div class="area-item">
+  </span>
+  </div>
+  <div class="service-areas-grid">
+  <div class="area-item">
       Meriden Metro Area
-     </div>
-     <div class="area-item">
+  </div>
+  <div class="area-item">
       Greater Meriden
-     </div>
-     <div class="area-item">
+  </div>
+  <div class="area-item">
       Meriden Business District
-     </div>
-     <div class="area-item">
+  </div>
+  <div class="area-item">
       Meriden Suburbs
-     </div>
-     <div class="area-item">
+  </div>
+  <div class="area-item">
       Surrounding CT Counties
-     </div>
-    </div>
-   </div>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Tools Section -->
   <section class="tools-showcase">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Professional Economic Analysis Tools for Meriden Legal Professionals
-    </h2>
-    <p>
+  </h2>
+  <p>
      Access our comprehensive suite of professional forensic economics tools designed specifically for Meriden's demanding legal environment.
-    </p>
-    <div class="tools-grid">
-     <div class="tool-card">
-      <h4>
+  </p>
+  <div class="tools-grid">
+  <div class="tool-card">
+  <h4>
        Life Expectancy Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Professional actuarial calculations for personal injury and wrongful death cases in Meriden courts
-      </p>
-      <a class="tool-btn" href="../../tools/life-expectancy/">
+  </p>
+  <a class="tool-btn" href="../../tools/life-expectancy/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Present Value Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Comprehensive present value analysis for economic damage calculations in Meriden litigation
-      </p>
-      <a class="tool-btn" href="../../tools/present-value/">
+  </p>
+  <a class="tool-btn" href="../../tools/present-value/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Wage Growth Projector
-      </h4>
-      <p>
+  </h4>
+  <p>
        Advanced wage growth modeling for employment litigation in Meriden's economy
-      </p>
-      <a class="tool-btn" href="../../tools/wage-growth/">
+  </p>
+  <a class="tool-btn" href="../../tools/wage-growth/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Business Valuation Tool
-      </h4>
-      <p>
+  </h4>
+  <p>
        Preliminary business valuation for commercial disputes and transactions in Meriden markets
-      </p>
-      <a class="tool-btn" href="../../tools/business-valuation/">
+  </p>
+  <a class="tool-btn" href="../../tools/business-valuation/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Medical Cost Projector
-      </h4>
-      <p>
+  </h4>
+  <p>
        Future medical cost analysis for catastrophic injury cases in Meriden's healthcare system
-      </p>
-      <a class="tool-btn" href="../../tools/medical-cost/">
+  </p>
+  <a class="tool-btn" href="../../tools/medical-cost/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Household Services Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Household services valuation for personal injury and wrongful death cases in Meriden
-      </p>
-      <a class="tool-btn" href="../../tools/household-services/">
+  </p>
+  <a class="tool-btn" href="../../tools/household-services/">
        Access Tool
-      </a>
-     </div>
-    </div>
-   </div>
+  </a>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- CTA Section -->
   <section class="cta-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Ready to Strengthen Your Meriden Case with Expert Economic Analysis?
-    </h2>
-    <p>
+  </h2>
+  <p>
      Partner with Meriden's trusted forensic economist for economic damage analysis and courtroom testimony that wins cases.
-    </p>
-    <a class="cta-btn" href="../../contact/">
+  </p>
+  <a class="cta-btn" href="../../contact/">
      Contact Information
-    </a>
-   </div>
+  </a>
+  </div>
   </section>
   <!-- Footer -->
   <footer class="main-footer">
-   <div class="container">
-    <div class="footer-grid">
-     <div class="footer-col">
-      <h4>
+  <div class="container">
+  <div class="footer-grid">
+  <div class="footer-col">
+  <h4>
        Skerritt Economics &amp; Consulting
-      </h4>
-      <p>
+  </h4>
+  <p>
        Expert forensic economics and business valuation services for legal professionals throughout the United States.
-      </p>
-      <p class="footer-contact">
+  </p>
+  <p class="footer-contact">
        400 Putnam Pike Ste J
-       <br/>
+  <br/>
        Smithfield, RI 02917
-       <br/>
-       <a href="tel:203-605-2814">
+  <br/>
+  <a href="tel:203-605-2814">
         (203) 605-2814
-       </a>
-       <br/>
-       <a href="mailto:chris@skerritteconomics.com">
+  </a>
+  <br/>
+  <a href="mailto:chris@skerritteconomics.com">
         chris@skerritteconomics.com
-       </a>
-      </p>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </p>
+  </div>
+  <div class="footer-col">
+  <h4>
        Services
-      </h4>
-      <ul>
-       <li>
-        <a href="../../services/forensic-economics/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../services/forensic-economics/">
          Forensic Economics
-        </a>
-       </li>
-       <li>
-        <a href="../../services/business-valuation/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/business-valuation/">
          Business Valuation
-        </a>
-       </li>
-       <li>
-        <a href="../../services/vocational-expert/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/vocational-expert/">
          Vocational Expert
-        </a>
-       </li>
-       <li>
-        <a href="../../services/life-care-planning/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/life-care-planning/">
          Life Care Planning
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>
        Practice Areas
-      </h4>
-      <ul>
-       <li>
-        <a href="../../practice-areas/personal-injury/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../practice-areas/personal-injury/">
          Personal Injury
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/medical-malpractice/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/medical-malpractice/">
          Medical Malpractice
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/employment/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/employment/">
          Employment Litigation
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/commercial-disputes/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/commercial-disputes/">
          Commercial Disputes
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>
        Resources
-      </h4>
-      <ul>
-       <li>
-        <a href="../../case-studies/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../case-studies/">
          Case Studies
-        </a>
-       </li>
-       <li>
-        <a href="../../resources/">
+  </a>
+  </li>
+  <li>
+  <a href="../../resources/">
          Articles &amp; Insights
-        </a>
-       </li>
-       <li>
-        <a href="../../tools/">
+  </a>
+  </li>
+  <li>
+  <a href="../../tools/">
          Professional Tools
-        </a>
-       </li>
-       <li>
-        <a href="../../about/">
+  </a>
+  </li>
+  <li>
+  <a href="../../about/">
          About Chris Skerritt
-        </a>
-       </li>
-       <li>
-        <a href="../../contact/">
+  </a>
+  </li>
+  <li>
+  <a href="../../contact/">
          Contact
-        </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer-bottom">
-     <p>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+  <p>
       © 2025 Skerritt Economics &amp; Consulting. All rights reserved.
-     </p>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
   </footer>
   <script src="../../js/main.js">
   </script>

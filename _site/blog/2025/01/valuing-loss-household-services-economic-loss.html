@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-    <title>Valuing Loss of Household Services | Skerritt Economics Blog</title>
-    <meta name="description" content="Expert guide on valuing loss of household services in economic loss calculations. Includes replacement cost methods, ATUS data, and present value estimation techniques.">
-    <link rel="stylesheet" href="../../../css/styles.css">
-    <link rel="stylesheet" href="../../../css/blog.css">
-    <link rel="stylesheet" href="../../../css/mobile-optimizations.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/valuing-loss-household-services-economic-loss.html">
-    
-    <!-- MathJax for LaTeX formula rendering -->
-    <script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Valuing Loss of Household Services | Skerritt Economics Blog</title>
+  <meta name="description" content="Expert guide on valuing loss of household services in economic loss calculations. Includes replacement cost methods, ATUS data, and present value estimation techniques.">
+  <link rel="stylesheet" href="../../../css/styles.css">
+  <link rel="stylesheet" href="../../../css/blog.css">
+  <link rel="stylesheet" href="../../../css/mobile-optimizations.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/valuing-loss-household-services-economic-loss.html">
+
+  <!-- MathJax for LaTeX formula rendering -->
+  <script>
         MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
@@ -24,11 +24,11 @@
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
             }
         };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    
-    <!-- Structured Data for Blog Post -->
-    <script type="application/ld+json">
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+  <!-- Structured Data for Blog Post -->
+  <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -60,22 +60,22 @@
         "articleSection": "Methodology",
         "wordCount": "1800"
     }
-    </script>
-    
-    <style>
+  </script>
+
+  <style>
         /* Blog post specific styles */
         .blog-article {
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+
         .blog-header {
             margin-bottom: 3rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e5e7eb;
         }
-        
+
         .blog-meta {
             display: flex;
             gap: 1rem;
@@ -84,13 +84,13 @@
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
-        
+
         .blog-content {
             font-size: 1.125rem;
             line-height: 1.75;
             color: #374151;
         }
-        
+
         .blog-content h2 {
             margin-top: 3rem;
             margin-bottom: 1.5rem;
@@ -98,7 +98,7 @@
             font-weight: 700;
             color: #111827;
         }
-        
+
         .blog-content h3 {
             margin-top: 2rem;
             margin-bottom: 1rem;
@@ -106,21 +106,21 @@
             font-weight: 600;
             color: #1f2937;
         }
-        
+
         .blog-content p {
             margin-bottom: 1.5rem;
         }
-        
+
         .blog-content ul,
         .blog-content ol {
             margin-bottom: 1.5rem;
             padding-left: 2rem;
         }
-        
+
         .blog-content li {
             margin-bottom: 0.75rem;
         }
-        
+
         .formula-box {
             background-color: #f9fafb;
             border: 1px solid #e5e7eb;
@@ -129,7 +129,7 @@
             margin: 2rem 0;
             overflow-x: auto;
         }
-        
+
         .example-box {
             background-color: #eff6ff;
             border: 1px solid #bfdbfe;
@@ -137,36 +137,36 @@
             padding: 1.5rem;
             margin: 2rem 0;
         }
-        
+
         .example-box h4 {
             margin-top: 0;
             color: #1e40af;
         }
-        
+
         .data-table {
             width: 100%;
             border-collapse: collapse;
             margin: 2rem 0;
             font-size: 0.875rem;
         }
-        
+
         .data-table th,
         .data-table td {
             padding: 0.75rem;
             text-align: left;
             border: 1px solid #e5e7eb;
         }
-        
+
         .data-table th {
             background-color: #f3f4f6;
             font-weight: 600;
             color: #374151;
         }
-        
+
         .data-table tr:nth-child(even) {
             background-color: #f9fafb;
         }
-        
+
         blockquote {
             border-left: 4px solid #ca6c18;
             padding-left: 1.5rem;
@@ -174,7 +174,7 @@
             font-style: italic;
             color: #4b5563;
         }
-        
+
         .author-bio {
             background-color: #f3f4f6;
             border-radius: 8px;
@@ -184,390 +184,390 @@
             gap: 1.5rem;
             align-items: start;
         }
-        
+
         .author-bio h3 {
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
-        
+
         @media (max-width: 768px) {
             .blog-article {
                 padding: 1rem;
             }
-            
+
             .formula-box {
                 padding: 1rem;
                 font-size: 0.875rem;
             }
-            
+
             .author-bio {
                 flex-direction: column;
             }
-            
+
             .data-table {
                 font-size: 0.75rem;
             }
-            
+
             .data-table th,
             .data-table td {
                 padding: 0.5rem;
             }
         }
-    </style>
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="main-nav">
-        <div class="container">
-            <div class="nav-wrapper">
-                
-                    <strong>Skerritt Economics</strong>
-                    <span>& Consulting</span>
-                
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li>Home</li>
-                    <li class="has-dropdown">
+  <!-- Navigation -->
+  <nav class="main-nav">
+  <div class="container">
+  <div class="nav-wrapper">
+
+  <strong>Skerritt Economics</strong>
+  <span>& Consulting</span>
+
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+  <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  <ul class="nav-menu">
+  <li>Home</li>
+  <li class="has-dropdown">
                         Services
-                        <ul class="dropdown">
-                            <li>Forensic Economics</li>
-                            <li>Business Valuation</li>
-                            <li>Vocational Expert</li>
-                            <li>Life Care Planning</li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
+  <ul class="dropdown">
+  <li>Forensic Economics</li>
+  <li>Business Valuation</li>
+  <li>Vocational Expert</li>
+  <li>Life Care Planning</li>
+  </ul>
+  </li>
+  <li class="has-dropdown">
                         Practice Areas
-                        <ul class="dropdown">
-                            <li>Personal Injury & Wrongful Death</li>
-                            <li>Medical Malpractice</li>
-                            <li>Employment Litigation</li>
-                            <li>Commercial Disputes</li>
-                        </ul>
-                    </li>
-                    <li>Case Studies</li>
-                    <li>About</li>
-                    <li>Resources</li>
-                    <li>Blog</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <ul class="dropdown">
+  <li>Personal Injury & Wrongful Death</li>
+  <li>Medical Malpractice</li>
+  <li>Employment Litigation</li>
+  <li>Commercial Disputes</li>
+  </ul>
+  </li>
+  <li>Case Studies</li>
+  <li>About</li>
+  <li>Resources</li>
+  <li>Blog</li>
+  <li>Contact</li>
+  </ul>
+  </div>
+  </div>
+  </nav>
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-        <div class="breadcrumb-container">
-            <ol class="breadcrumb-list">
-                <li class="breadcrumb-item">
+  <!-- Breadcrumb Navigation -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="breadcrumb-container">
+  <ol class="breadcrumb-list">
+  <li class="breadcrumb-item">
                     Home
-                </li>
-                <li class="breadcrumb-item">
+  </li>
+  <li class="breadcrumb-item">
                     Blog
-                </li>
-                <li class="breadcrumb-item">
-                    <span class="breadcrumb-current">Valuing Loss of Household Services</span>
-                </li>
-            </ol>
-        </div>
-    </nav>
+  </li>
+  <li class="breadcrumb-item">
+  <span class="breadcrumb-current">Valuing Loss of Household Services</span>
+  </li>
+  </ol>
+  </div>
+  </nav>
 
-    <!-- Blog Article -->
-    <article class="blog-article">
-        <header class="blog-header">
-            <div class="blog-meta">
-                <span class="blog-category">Methodology</span>
-                <span>•</span>
-                <time datetime="2025-03-07">March 07, 2025</time>
-                <span>•</span>
-                <span>10 min read</span>
-            </div>
-            <h1>Valuing Loss of Household Services in Economic‑Loss Calculations: Methods and Present‑Value Estimation</h1>
-            <p class="lead">A step-by-step framework for estimating lost household services using replacement cost methods, ATUS data, inflation adjustments, and present value techniques in personal injury and wrongful death litigation.</p>
-            <div class="blog-author">
+  <!-- Blog Article -->
+  <article class="blog-article">
+  <header class="blog-header">
+  <div class="blog-meta">
+  <span class="blog-category">Methodology</span>
+  <span>•</span>
+  <time datetime="2025-03-07">March 07, 2025</time>
+  <span>•</span>
+  <span>10 min read</span>
+  </div>
+  <h1>Valuing Loss of Household Services in Economic‑Loss Calculations: Methods and Present‑Value Estimation</h1>
+  <p class="lead">A step-by-step framework for estimating lost household services using replacement cost methods, ATUS data, inflation adjustments, and present value techniques in personal injury and wrongful death litigation.</p>
+  <div class="blog-author">
                 By Christopher T. Skerritt, CRC, MBA
-            </div>
-        </header>
+  </div>
+  </header>
 
-        <div class="blog-content">
-            <h2>Introduction</h2>
-            
-            <p>In personal‑injury and wrongful‑death litigation, plaintiffs often claim compensation not only for lost earnings but also for the <strong>loss of household services</strong>—the unpaid labor required to maintain a home, care for children, and perform routine domestic tasks. Valuing these services is important as courts recognize that household work has economic value and that claimants may be compensated for the cost to replace those services (Deutsch & Sawyer, 2002). This article provides a step‑by‑step framework for estimating lost household services, reviewing data sources, valuation methods, inflation adjustments, discount‑to‑present‑value techniques, and best practices.</p>
+  <div class="blog-content">
+  <h2>Introduction</h2>
 
-            <h2>1. Defining Household Services</h2>
+  <p>In personal‑injury and wrongful‑death litigation, plaintiffs often claim compensation not only for lost earnings but also for the <strong>loss of household services</strong>—the unpaid labor required to maintain a home, care for children, and perform routine domestic tasks. Valuing these services is important as courts recognize that household work has economic value and that claimants may be compensated for the cost to replace those services (Deutsch & Sawyer, 2002). This article provides a step‑by‑step framework for estimating lost household services, reviewing data sources, valuation methods, inflation adjustments, discount‑to‑present‑value techniques, and best practices.</p>
 
-            <p><strong>Household services</strong> encompass activities such as:</p>
+  <h2>1. Defining Household Services</h2>
 
-            <ul>
-                <li>Meal preparation and cleanup</li>
-                <li>Interior cleaning and laundry</li>
-                <li>Home maintenance and repairs</li>
-                <li>Childcare and eldercare tasks</li>
-                <li>Household management (e.g., bill‑paying, shopping)</li>
-            </ul>
+  <p><strong>Household services</strong> encompass activities such as:</p>
 
-            <p>These tasks are typically performed by the claimant or family members, free of charge, yet they free other household members to work and participate in society. Failure to replace these services imposes economic and intangible burdens.</p>
+  <ul>
+  <li>Meal preparation and cleanup</li>
+  <li>Interior cleaning and laundry</li>
+  <li>Home maintenance and repairs</li>
+  <li>Childcare and eldercare tasks</li>
+  <li>Household management (e.g., bill‑paying, shopping)</li>
+  </ul>
 
-            <h2>2. Valuation Approaches</h2>
+  <p>These tasks are typically performed by the claimant or family members, free of charge, yet they free other household members to work and participate in society. Failure to replace these services imposes economic and intangible burdens.</p>
 
-            <p>Two principal methods prevail for valuing lost household services:</p>
+  <h2>2. Valuation Approaches</h2>
 
-            <h3>2.1 Replacement‑Cost Approach</h3>
+  <p>Two principal methods prevail for valuing lost household services:</p>
 
-            <p>Under this approach, analysts estimate the cost of hiring a <strong>qualified provider</strong>—for example, a housekeeper, nanny, or home‑health aide—to perform the same tasks. Replacement‑cost rates are derived from market data on wages plus an overhead markup for employer costs (e.g., taxes, benefits).</p>
+  <h3>2.1 Replacement‑Cost Approach</h3>
 
-            <h3>2.2 Opportunity‑Cost Approach</h3>
+  <p>Under this approach, analysts estimate the cost of hiring a <strong>qualified provider</strong>—for example, a housekeeper, nanny, or home‑health aide—to perform the same tasks. Replacement‑cost rates are derived from market data on wages plus an overhead markup for employer costs (e.g., taxes, benefits).</p>
 
-            <p>This method values household hours at the claimant's own <strong>after‑tax</strong> wage rate, on the theory that time spent on domestic tasks precludes market employment. It is used when claimants could otherwise earn wages by reducing household time.</p>
+  <h3>2.2 Opportunity‑Cost Approach</h3>
 
-            <p>Courts, however, typically favor the <strong>replacement‑cost approach</strong> for its objectivity and direct reflection of market rates (National Association of Forensic Economics, 2021).</p>
+  <p>This method values household hours at the claimant's own <strong>after‑tax</strong> wage rate, on the theory that time spent on domestic tasks precludes market employment. It is used when claimants could otherwise earn wages by reducing household time.</p>
 
-            <h2>3. Data Sources for Replacement Costs</h2>
+  <p>Courts, however, typically favor the <strong>replacement‑cost approach</strong> for its objectivity and direct reflection of market rates (National Association of Forensic Economics, 2021).</p>
 
-            <h3>3.1 American Time Use Survey (ATUS)</h3>
+  <h2>3. Data Sources for Replacement Costs</h2>
 
-            <p>The ATUS provides annual estimates of time spent on household tasks by U.S. residents (Bureau of Labor Statistics, 2025). In 2024, individuals averaged <strong>2.01 hours per day</strong> on household activities—14.07 hours per week (Bureau of Labor Statistics).</p>
+  <h3>3.1 American Time Use Survey (ATUS)</h3>
 
-            <h3>3.2 Occupational Employment and Wage Statistics (OEWS)</h3>
+  <p>The ATUS provides annual estimates of time spent on household tasks by U.S. residents (Bureau of Labor Statistics, 2025). In 2024, individuals averaged <strong>2.01 hours per day</strong> on household activities—14.07 hours per week (Bureau of Labor Statistics).</p>
 
-            <p>The OEWS program reports mean wages for domestic workers. As of May 2023, <strong>maids and housekeeping cleaners</strong> earned an average of <strong>$16.66 per hour</strong> nationally (Bureau of Labor Statistics). Adding a customary <strong>25 percent overhead</strong> for employer costs (e.g., payroll taxes, insurance) yields a replacement‑cost rate of approximately $20.83 per hour.</p>
+  <h3>3.2 Occupational Employment and Wage Statistics (OEWS)</h3>
 
-            <h3>3.3 Consumer Expenditure Survey (CES)</h3>
+  <p>The OEWS program reports mean wages for domestic workers. As of May 2023, <strong>maids and housekeeping cleaners</strong> earned an average of <strong>$16.66 per hour</strong> nationally (Bureau of Labor Statistics). Adding a customary <strong>25 percent overhead</strong> for employer costs (e.g., payroll taxes, insurance) yields a replacement‑cost rate of approximately $20.83 per hour.</p>
 
-            <p>The CES tracks average household spending on services, including childcare and housekeeping. While less granular, it can corroborate wage‑based rates (U.S. Bureau of Labor Statistics, 2025).</p>
+  <h3>3.3 Consumer Expenditure Survey (CES)</h3>
 
-            <h2>4. Estimating Lost Household‑Service Hours</h2>
+  <p>The CES tracks average household spending on services, including childcare and housekeeping. While less granular, it can corroborate wage‑based rates (U.S. Bureau of Labor Statistics, 2025).</p>
 
-            <h3>4.1 Determining the Lost Period</h3>
+  <h2>4. Estimating Lost Household‑Service Hours</h2>
 
-            <p>Identify the period during which the claimant was unable to perform domestic tasks—e.g., <strong>6 months</strong> of recuperation.</p>
+  <h3>4.1 Determining the Lost Period</h3>
 
-            <h3>4.2 Calculating Average Weekly Hours</h3>
+  <p>Identify the period during which the claimant was unable to perform domestic tasks—e.g., <strong>6 months</strong> of recuperation.</p>
 
-            <p>Use ATUS data or the claimant's time‑use diary to determine average weekly hours lost. For a <strong>full‑time homemaker</strong>, 14.07 hours per week is a reasonable baseline (Bureau of Labor Statistics, 2025) (Bureau of Labor Statistics).</p>
+  <h3>4.2 Calculating Average Weekly Hours</h3>
 
-            <h3>4.3 Total Lost Hours</h3>
+  <p>Use ATUS data or the claimant's time‑use diary to determine average weekly hours lost. For a <strong>full‑time homemaker</strong>, 14.07 hours per week is a reasonable baseline (Bureau of Labor Statistics, 2025) (Bureau of Labor Statistics).</p>
 
-            <div class="formula-box">
+  <h3>4.3 Total Lost Hours</h3>
+
+  <div class="formula-box">
                 $$\text{Total Hours Lost} = \text{Weeks Lost} \times \text{Hours per Week}$$
-            </div>
+  </div>
 
-            <p>For 26 weeks at 14.07 hours/week:</p>
+  <p>For 26 weeks at 14.07 hours/week:</p>
 
-            <div class="formula-box">
+  <div class="formula-box">
                 $$26 \times 14.07 \approx 366 \text{ hours}$$
-            </div>
+  </div>
 
-            <h2>5. Projecting Future Household‑Service Loss</h2>
+  <h2>5. Projecting Future Household‑Service Loss</h2>
 
-            <p>In cases of <strong>permanent disability</strong>, estimate the claimant's <strong>remaining life expectancy</strong> and assume a decline in hours over time (e.g., due to aging). Use Social Security Administration life tables for survival probabilities and adjust hours by a participation factor (Saurman & Means, 1989).</p>
+  <p>In cases of <strong>permanent disability</strong>, estimate the claimant's <strong>remaining life expectancy</strong> and assume a decline in hours over time (e.g., due to aging). Use Social Security Administration life tables for survival probabilities and adjust hours by a participation factor (Saurman & Means, 1989).</p>
 
-            <h2>6. Inflation Adjustment of Replacement Costs</h2>
+  <h2>6. Inflation Adjustment of Replacement Costs</h2>
 
-            <h3>6.1 Consumer Price Index (CPI) for Household Furnishings and Operations</h3>
+  <h3>6.1 Consumer Price Index (CPI) for Household Furnishings and Operations</h3>
 
-            <p>The BLS reports a <strong>household furnishings & operations</strong> CPI category, which rose <strong>3.3 percent</strong> year‑over‑year through June 2025 (Bureau of Labor Statistics). Use this rate to inflate replacement‑cost rates.</p>
+  <p>The BLS reports a <strong>household furnishings & operations</strong> CPI category, which rose <strong>3.3 percent</strong> year‑over‑year through June 2025 (Bureau of Labor Statistics). Use this rate to inflate replacement‑cost rates.</p>
 
-            <h3>6.2 Nominal vs. Real Rates</h3>
+  <h3>6.2 Nominal vs. Real Rates</h3>
 
-            <ul>
-                <li><strong>Nominal projections</strong>: Inflate wages by the household CPI and discount using a nominal rate.</li>
-                <li><strong>Real projections</strong>: Use real wage‑growth assumptions and discount with a real rate (Bodie et al., 2014).</li>
-            </ul>
+  <ul>
+  <li><strong>Nominal projections</strong>: Inflate wages by the household CPI and discount using a nominal rate.</li>
+  <li><strong>Real projections</strong>: Use real wage‑growth assumptions and discount with a real rate (Bodie et al., 2014).</li>
+  </ul>
 
-            <h2>7. Discounting to Present Value</h2>
+  <h2>7. Discounting to Present Value</h2>
 
-            <h3>7.1 Choosing the Discount Rate</h3>
+  <h3>7.1 Choosing the Discount Rate</h3>
 
-            <p>Courts typically accept a <strong>risk‑free</strong> rate, such as the <strong>30‑year Treasury yield</strong> (≈ 3.40 percent as of July 2025) (Bureau of Labor Statistics).</p>
+  <p>Courts typically accept a <strong>risk‑free</strong> rate, such as the <strong>30‑year Treasury yield</strong> (≈ 3.40 percent as of July 2025) (Bureau of Labor Statistics).</p>
 
-            <h3>7.2 Present‑Value Formula</h3>
+  <h3>7.2 Present‑Value Formula</h3>
 
-            <p>For a one‑time block of lost hours valued at constant rate $C$:</p>
+  <p>For a one‑time block of lost hours valued at constant rate $C$:</p>
 
-            <div class="formula-box">
+  <div class="formula-box">
                 $$\mathrm{PV} = C \times H \times \frac{1}{(1 + r)^t}$$
-            </div>
+  </div>
 
-            <p>where $H$ is total hours lost, $r$ the discount rate, and $t$ the midpoint of the loss period in years.</p>
+  <p>where $H$ is total hours lost, $r$ the discount rate, and $t$ the midpoint of the loss period in years.</p>
 
-            <p>For <strong>multi‑year</strong> streams $C_t$ and hours $H_t$:</p>
+  <p>For <strong>multi‑year</strong> streams $C_t$ and hours $H_t$:</p>
 
-            <div class="formula-box">
+  <div class="formula-box">
                 $$\mathrm{PV} = \sum_{t=1}^{T} \frac{C_t \, H_t}{(1 + r)^t}$$
-            </div>
+  </div>
 
-            <p>(Saurman & Means, 1989).</p>
+  <p>(Saurman & Means, 1989).</p>
 
-            <h2>8. Case Study</h2>
+  <h2>8. Case Study</h2>
 
-            <p><strong>Scenario:</strong></p>
+  <p><strong>Scenario:</strong></p>
 
-            <ul>
-                <li>Claimant's domestic‑service loss: <strong>26 weeks</strong> (6 months) post‑injury</li>
-                <li>Average hours/week: <strong>14.07</strong> (ATUS, 2025) (Bureau of Labor Statistics)</li>
-                <li>Replacement cost rate Year 1: $20.83/hour (OEWS + 25% overhead) (Bureau of Labor Statistics)</li>
-                <li>Discount rate: <strong>3.40 percent</strong> nominal</li>
-                <li>Midpoint of loss: <strong>0.25</strong> years</li>
-            </ul>
+  <ul>
+  <li>Claimant's domestic‑service loss: <strong>26 weeks</strong> (6 months) post‑injury</li>
+  <li>Average hours/week: <strong>14.07</strong> (ATUS, 2025) (Bureau of Labor Statistics)</li>
+  <li>Replacement cost rate Year 1: $20.83/hour (OEWS + 25% overhead) (Bureau of Labor Statistics)</li>
+  <li>Discount rate: <strong>3.40 percent</strong> nominal</li>
+  <li>Midpoint of loss: <strong>0.25</strong> years</li>
+  </ul>
 
-            <p><strong>Calculation:</strong></p>
+  <p><strong>Calculation:</strong></p>
 
-            <ol>
-                <li><strong>Total hours</strong>: $26 \times 14.07 = 366$ hours.</li>
-                <li><strong>Year 1 cost</strong>: $366 \times \$20.83 = \$7,622$.</li>
-                <li><strong>Present value</strong>:
-                    <div class="formula-box">
+  <ol>
+  <li><strong>Total hours</strong>: $26 \times 14.07 = 366$ hours.</li>
+  <li><strong>Year 1 cost</strong>: $366 \times \$20.83 = \$7,622$.</li>
+  <li><strong>Present value</strong>:
+  <div class="formula-box">
                         $$\mathrm{PV} = 7{,}622 \times \frac{1}{(1.034)^{0.25}} \approx \$7{,}511$$
-                    </div>
-                </li>
-            </ol>
+  </div>
+  </li>
+  </ol>
 
-            <h2>9. Sensitivity and Uncertainty</h2>
+  <h2>9. Sensitivity and Uncertainty</h2>
 
-            <h3>9.1 Scenario Analysis</h3>
+  <h3>9.1 Scenario Analysis</h3>
 
-            <ul>
-                <li><strong>Overhead markup</strong> ± 5 percent (20–30 percent)</li>
-                <li><strong>CPI inflation</strong> ± 0.5 percent (2.8–3.8 percent)</li>
-                <li><strong>Discount rate</strong> at 3.00, 3.40, and 4.00 percent</li>
-            </ul>
+  <ul>
+  <li><strong>Overhead markup</strong> ± 5 percent (20–30 percent)</li>
+  <li><strong>CPI inflation</strong> ± 0.5 percent (2.8–3.8 percent)</li>
+  <li><strong>Discount rate</strong> at 3.00, 3.40, and 4.00 percent</li>
+  </ul>
 
-            <p>Demonstrate how PV varies under each scenario to illustrate reasonable ranges (Anderson & Barbers, 2012).</p>
+  <p>Demonstrate how PV varies under each scenario to illustrate reasonable ranges (Anderson & Barbers, 2012).</p>
 
-            <h3>9.2 Probabilistic Modeling</h3>
+  <h3>9.2 Probabilistic Modeling</h3>
 
-            <p>A <strong>Monte Carlo simulation</strong> can sample from distributions of $H$, $C$, CPI growth, and $r$, producing a PV <strong>distribution</strong> rather than a point estimate—enhancing defensibility in high‑stakes cases (Reynolds & Lee, 2019).</p>
+  <p>A <strong>Monte Carlo simulation</strong> can sample from distributions of $H$, $C$, CPI growth, and $r$, producing a PV <strong>distribution</strong> rather than a point estimate—enhancing defensibility in high‑stakes cases (Reynolds & Lee, 2019).</p>
 
-            <h2>10. Potential Considerations</h2>
+  <h2>10. Potential Considerations</h2>
 
-            <ol>
-                <li><strong>Using All‑Items CPI</strong>: Understating true replacement‑cost inflation; use the <strong>household furnishings & operations</strong> index (Bureau of Labor Statistics, 2025) (Bureau of Labor Statistics).</li>
-                
-                <li><strong>Ignoring Overhead</strong>: Failing to add payroll taxes and insurance inflates compensation estimates.</li>
-                
-                <li><strong>Mixing Nominal/Real</strong>: Discounting nominal projections at a real rate (or vice versa) biases PV (Bodie et al., 2014).</li>
-                
-                <li><strong>Neglecting Declining Hours</strong>: For long‑term losses, hours may decline with age; assume realistic tapering or apply survival/participation weights (Saurman & Means, 1989).</li>
-            </ol>
+  <ol>
+  <li><strong>Using All‑Items CPI</strong>: Understating true replacement‑cost inflation; use the <strong>household furnishings & operations</strong> index (Bureau of Labor Statistics, 2025) (Bureau of Labor Statistics).</li>
 
-            <h2>11. Common Approaches</h2>
+  <li><strong>Ignoring Overhead</strong>: Failing to add payroll taxes and insurance inflates compensation estimates.</li>
 
-            <ul>
-                <li><strong>Document All Assumptions</strong>: Clearly state data sources, overhead percentages, inflation indices, and discount rates.</li>
-                
-                <li><strong>Use Authoritative Data</strong>: Rely on BLS surveys (ATUS, OEWS, CPI) and SSA life tables.</li>
-                
-                <li><strong>Perform Sensitivity Testing</strong>: Show PV under alternative plausible scenarios.</li>
-                
-                <li><strong>Peer Review</strong>: Have a second forensic economist validate time‑use calculations and PV methodology (National Association of Forensic Economics, 2021).</li>
-                
-                <li><strong>Maintain Transparency</strong>: Provide work papers with detailed hour-by-hour and cost‑by‑cost breakdowns.</li>
-            </ul>
+  <li><strong>Mixing Nominal/Real</strong>: Discounting nominal projections at a real rate (or vice versa) biases PV (Bodie et al., 2014).</li>
 
-            <h2>Conclusion</h2>
+  <li><strong>Neglecting Declining Hours</strong>: For long‑term losses, hours may decline with age; assume realistic tapering or apply survival/participation weights (Saurman & Means, 1989).</li>
+  </ol>
 
-            <p>Valuing lost household services requires combining reliable time‑use data with market wage rates, appropriate inflation adjustments, and sound discounting. By following the replacement‑cost approach—with ATUS hours, OEWS wages plus overhead, household CPI inflation, and risk‑free discount rates—economists can produce transparent, defensible present‑value estimates. Sensitivity analyses and probabilistic modeling further strengthen the robustness of valuations, ensuring claimants receive fair compensation for the invaluable domestic labor they can no longer perform.</p>
+  <h2>11. Common Approaches</h2>
 
-            <h2>References</h2>
+  <ul>
+  <li><strong>Document All Assumptions</strong>: Clearly state data sources, overhead percentages, inflation indices, and discount rates.</li>
 
-            <ul class="references">
-                <li>Anderson, T., & Barbers, K. (2012). <em>Taxes and the present value assessment of economic losses in tort litigation</em>. SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2198581</li>
+  <li><strong>Use Authoritative Data</strong>: Rely on BLS surveys (ATUS, OEWS, CPI) and SSA life tables.</li>
 
-                <li>Bodie, Z., Kane, A., & Marcus, A. J. (2014). <em>Investments</em> (10th ed.). McGraw‑Hill Education.</li>
+  <li><strong>Perform Sensitivity Testing</strong>: Show PV under alternative plausible scenarios.</li>
 
-                <li>Bureau of Labor Statistics. (2025). <em>Average hours per day spent in selected household activities, 2024 annual averages</em>. Retrieved July 25, 2025, from https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm (Bureau of Labor Statistics)</li>
+  <li><strong>Peer Review</strong>: Have a second forensic economist validate time‑use calculations and PV methodology (National Association of Forensic Economics, 2021).</li>
 
-                <li>Bureau of Labor Statistics. (2025). <em>Occupational employment and wages—May 2023: Maids and housekeeping cleaners</em>. Retrieved July 25, 2025, from https://www.bls.gov/oes/2023/may/oes372012.htm (Bureau of Labor Statistics)</li>
+  <li><strong>Maintain Transparency</strong>: Provide work papers with detailed hour-by-hour and cost‑by‑cost breakdowns.</li>
+  </ul>
 
-                <li>Bureau of Labor Statistics. (2025). <em>Consumer Price Index for All Urban Consumers: Household furnishings and operations, June 2025</em>. Retrieved July 25, 2025, from https://www.bls.gov/news.release/pdf/cpi.pdf (Bureau of Labor Statistics)</li>
+  <h2>Conclusion</h2>
 
-                <li>Deutsch, A. R., & Sawyer, R. K. (2002). <em>Recommended practices in life care planning</em>. Journal of Forensic Economics, 15(2), 45–62.</li>
+  <p>Valuing lost household services requires combining reliable time‑use data with market wage rates, appropriate inflation adjustments, and sound discounting. By following the replacement‑cost approach—with ATUS hours, OEWS wages plus overhead, household CPI inflation, and risk‑free discount rates—economists can produce transparent, defensible present‑value estimates. Sensitivity analyses and probabilistic modeling further strengthen the robustness of valuations, ensuring claimants receive fair compensation for the invaluable domestic labor they can no longer perform.</p>
 
-                <li>National Association of Forensic Economics. (2021). <em>Recommended practices for economic loss damages</em>. Retrieved July 25, 2025, from https://nafe.net/recommended-practices</li>
+  <h2>References</h2>
 
-                <li>Reynolds, M., & Lee, A. (2019). Methodologies for estimating work‑life expectancy in forensic economics. <em>Journal of Forensic Economics, 32</em>(2), 123–145. https://doi.org/10.5085/jfe.2019.32.2.123</li>
+  <ul class="references">
+  <li>Anderson, T., & Barbers, K. (2012). <em>Taxes and the present value assessment of economic losses in tort litigation</em>. SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2198581</li>
 
-                <li>Saurman, D. S., & Means, T. S. (1989). Estimating earning capacity with constant earnings growth rates. <em>Journal of Forensic Economics, 3</em>(1), 51–60. https://doi.org/10.5085/0898-5510-3.1.51</li>
+  <li>Bodie, Z., Kane, A., & Marcus, A. J. (2014). <em>Investments</em> (10th ed.). McGraw‑Hill Education.</li>
 
-                <li>U.S. Department of the Treasury. (2025). <em>Daily Treasury yield curve rates</em>. Retrieved July 25, 2025, from https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve</li>
-            </ul>
-        </div>
+  <li>Bureau of Labor Statistics. (2025). <em>Average hours per day spent in selected household activities, 2024 annual averages</em>. Retrieved July 25, 2025, from https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm (Bureau of Labor Statistics)</li>
 
-        <!-- Author Bio -->
-        <div class="author-bio">
-            <div class="author-content">
-                <h3>About the Author</h3>
-                <p><strong>Christopher T. Skerritt, CRC, MBA</strong> is a forensic economist and certified rehabilitation counselor with over 20 years of experience in economic damage analysis. He provides expert testimony in personal injury, wrongful death, and employment litigation matters throughout New England.</p>
-                <p>Contact: (203) 605-2814 | chris@skerritteconomics.com</p>
-            </div>
-        </div>
-    </article>
+  <li>Bureau of Labor Statistics. (2025). <em>Occupational employment and wages—May 2023: Maids and housekeeping cleaners</em>. Retrieved July 25, 2025, from https://www.bls.gov/oes/2023/may/oes372012.htm (Bureau of Labor Statistics)</li>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Need Expert Economic Analysis?</h2>
-                <p>Get professional forensic economics support for your case</p>
+  <li>Bureau of Labor Statistics. (2025). <em>Consumer Price Index for All Urban Consumers: Household furnishings and operations, June 2025</em>. Retrieved July 25, 2025, from https://www.bls.gov/news.release/pdf/cpi.pdf (Bureau of Labor Statistics)</li>
+
+  <li>Deutsch, A. R., & Sawyer, R. K. (2002). <em>Recommended practices in life care planning</em>. Journal of Forensic Economics, 15(2), 45–62.</li>
+
+  <li>National Association of Forensic Economics. (2021). <em>Recommended practices for economic loss damages</em>. Retrieved July 25, 2025, from https://nafe.net/recommended-practices</li>
+
+  <li>Reynolds, M., & Lee, A. (2019). Methodologies for estimating work‑life expectancy in forensic economics. <em>Journal of Forensic Economics, 32</em>(2), 123–145. https://doi.org/10.5085/jfe.2019.32.2.123</li>
+
+  <li>Saurman, D. S., & Means, T. S. (1989). Estimating earning capacity with constant earnings growth rates. <em>Journal of Forensic Economics, 3</em>(1), 51–60. https://doi.org/10.5085/0898-5510-3.1.51</li>
+
+  <li>U.S. Department of the Treasury. (2025). <em>Daily Treasury yield curve rates</em>. Retrieved July 25, 2025, from https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve</li>
+  </ul>
+  </div>
+
+  <!-- Author Bio -->
+  <div class="author-bio">
+  <div class="author-content">
+  <h3>About the Author</h3>
+  <p><strong>Christopher T. Skerritt, CRC, MBA</strong> is a forensic economist and certified rehabilitation counselor with over 20 years of experience in economic damage analysis. He provides expert testimony in personal injury, wrongful death, and employment litigation matters throughout New England.</p>
+  <p>Contact: (203) 605-2814 | chris@skerritteconomics.com</p>
+  </div>
+  </div>
+  </article>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+  <div class="container">
+  <div class="cta-content">
+  <h2>Need Expert Economic Analysis?</h2>
+  <p>Get professional forensic economics support for your case</p>
                 Schedule Consultation
-                <p class="cta-phone">Or call directly: (203) 605-2814</p>
-            </div>
-        </div>
-    </section>
+  <p class="cta-phone">Or call directly: (203) 605-2814</p>
+  </div>
+  </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Skerritt Economics & Consulting</p>
-                    <p class="footer-contact">
+  <!-- Footer -->
+  <footer class="main-footer">
+  <div class="container">
+  <div class="footer-grid">
+  <div class="footer-col">
+  <h4>Contact</h4>
+  <p>Skerritt Economics & Consulting</p>
+  <p class="footer-contact">
                         400 Putnam Pike Ste J<br>
                         Smithfield, RI 02917<br>
                         (203) 605-2814<br>
                         chris@skerritteconomics.com
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Forensic Economics</li>
-                        <li>Business Valuation</li>
-                        <li>Vocational Expert</li>
-                        <li>Life Care Planning</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li>Case Studies</li>
-                        <li>Articles & Insights</li>
-                        <li>Blog</li>
-                        <li>About Chris Skerritt</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Practice Areas</h4>
-                    <ul>
-                        <li>Personal Injury</li>
-                        <li>Medical Malpractice</li>
-                        <li>Employment Litigation</li>
-                        <li>Commercial Disputes</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Skerritt Economics & Consulting. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+  </p>
+  </div>
+  <div class="footer-col">
+  <h4>Services</h4>
+  <ul>
+  <li>Forensic Economics</li>
+  <li>Business Valuation</li>
+  <li>Vocational Expert</li>
+  <li>Life Care Planning</li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>Resources</h4>
+  <ul>
+  <li>Case Studies</li>
+  <li>Articles & Insights</li>
+  <li>Blog</li>
+  <li>About Chris Skerritt</li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>Practice Areas</h4>
+  <ul>
+  <li>Personal Injury</li>
+  <li>Medical Malpractice</li>
+  <li>Employment Litigation</li>
+  <li>Commercial Disputes</li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+  <p>© 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+  </div>
+  </div>
+  </footer>
 
-    <script src="../../../js/main.js"></script>
+  <script src="../../../js/main.js"></script>
 </body>
 </html>

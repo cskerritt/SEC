@@ -16,8 +16,12 @@
   <link href="../../favicon.ico" rel="icon" type="image/x-icon"/>
   <link href="../../css/styles.css" rel="stylesheet"/>
   <link href="../../css/locations.css" rel="stylesheet"/>
-    <link href="../../css/city-pages.css" rel="stylesheet"/>
-  <!-- JSON-LD Structured Data -->
+  <link href="../../css/city-pages.css" rel="stylesheet"/>
+
+  <link href="../../css/city-pages-enhanced.css" rel="stylesheet"/>
+  <link href="../../css/city-footer-sections.css" rel="stylesheet"/>
+  <link href="../../css/mobile-optimized.css" rel="stylesheet"/>
+<!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
    {
         "@context": "https://schema.org",
@@ -75,7 +79,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -86,33 +90,33 @@
             background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             opacity: 0.3;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
+
         .hero-content h1 {
             font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
-        
+
         .hero-content p {
             font-size: 1.25rem;
             opacity: 0.95;
             max-width: 600px;
             line-height: 1.6;
         }
-        
+
         .location-badges {
             display: flex;
             gap: 15px;
             margin-experienced: 30px;
             flex-wrap: wrap;
         }
-        
+
         .badge {
             background: rgba(255, 255, 255, 0.2);
             padding: 8px 16px;
@@ -121,25 +125,25 @@
             font-weight: 500;
             backdrop-filter: blur(10px);
         }
-        
+
         .content-section {
             padding: 80px 0;
         }
-        
+
         .intro-text {
             font-size: 1.125rem;
             color: #4b5563;
             line-height: 1.8;
             margin-bottom: 40px;
         }
-        
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
             margin: 60px 0;
         }
-        
+
         .feature-card {
             background: white;
             padding: 30px;
@@ -148,35 +152,35 @@
             border-left: 4px solid #1e40af;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .feature-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.25rem;
         }
-        
+
         .feature-card p {
             color: #6b7280;
             line-height: 1.6;
         }
-        
+
         .specialization-section {
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .specialization-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .specialization-card {
             background: white;
             padding: 35px;
@@ -184,25 +188,25 @@
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
             border-experienced: 4px solid #10b981;
         }
-        
+
         .specialization-card h3 {
             color: #1e40af;
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
-        
+
         .specialization-card ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .specialization-card li {
             padding: 8px 0;
             position: relative;
             padding-left: 25px;
             color: #4b5563;
         }
-        
+
         .specialization-card li:before {
             content: "✓";
             position: absolute;
@@ -210,18 +214,18 @@
             color: #10b981;
             font-weight: bold;
         }
-        
+
         .courts-section {
             padding: 80px 0;
         }
-        
+
         .courts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
             margin-experienced: 40px;
         }
-        
+
         .court-item {
             background: white;
             padding: 25px;
@@ -230,33 +234,33 @@
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
-        
+
         .court-item:hover {
             transform: translateY(-3px);
         }
-        
+
         .court-item h4 {
             color: #1e40af;
             margin-bottom: 10px;
         }
-        
+
         .court-item p {
             color: #6b7280;
             margin: 0;
         }
-        
+
         .services-section {
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .service-card {
             background: white;
             padding: 30px;
@@ -264,29 +268,29 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
         }
-        
+
         .service-card h4 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.2rem;
         }
-        
+
         .service-card p {
             color: #6b7280;
             line-height: 1.6;
         }
-        
+
         .industries-section {
             padding: 80px 0;
         }
-        
+
         .industry-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-experienced: 30px;
         }
-        
+
         .industry-tag {
             background: #e0f2fe;
             color: #0f172a;
@@ -297,24 +301,24 @@
             border: 1px solid #0ea5e9;
             transition: all 0.3s ease;
         }
-        
+
         .industry-tag:hover {
             background: #0ea5e9;
             color: white;
         }
-        
+
         .tools-showcase {
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             padding: 80px 0;
         }
-        
+
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .tool-card {
             background: white;
             padding: 25px;
@@ -323,22 +327,22 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-        
+
         .tool-card:hover {
             transform: translateY(-3px);
         }
-        
+
         .tool-card h4 {
             color: #1e40af;
             margin-bottom: 10px;
         }
-        
+
         .tool-card p {
             color: #6b7280;
             font-size: 14px;
             margin-bottom: 20px;
         }
-        
+
         .tool-btn {
             background: #1e40af;
             color: white;
@@ -348,31 +352,31 @@
             font-weight: 500;
             transition: background 0.3s ease;
         }
-        
+
         .tool-btn:hover {
             background: #1e3a8a;
             color: white;
             text-decoration: none;
         }
-        
+
         .cta-section {
             background: #1e40af;
             color: white;
             padding: 80px 0;
             text-align: center;
         }
-        
+
         .cta-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        
+
         .cta-section p {
             font-size: 1.125rem;
             opacity: 0.9;
             margin-bottom: 30px;
         }
-        
+
         .cta-btn {
             background: #10b981;
             color: white;
@@ -383,19 +387,19 @@
             font-size: 1.125rem;
             transition: all 0.3s ease;
         }
-        
+
         .cta-btn:hover {
             background: #059669;
             color: white;
             text-decoration: none;
             transform: translateY(-2px);
         }
-        
+
         .sidebar {
             position: sticky;
             experienced: 100px;
         }
-        
+
         .contact-card {
             background: white;
             padding: 30px;
@@ -404,44 +408,44 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        
+
         .contact-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
         }
-        
+
         .contact-info {
             margin: 20px 0;
         }
-        
+
         .contact-info p {
             margin: 8px 0;
         }
-        
+
         .credentials-card {
             background: #f8fafc;
             padding: 25px;
             border-radius: 10px;
             border: 1px solid #e2e8f0;
         }
-        
+
         .credentials-card h4 {
             color: #1e40af;
             margin-bottom: 15px;
         }
-        
+
         .credentials-list {
             list-style: none;
             padding: 0;
         }
-        
+
         .credentials-list li {
             padding: 8px 0;
             border-bottom: 1px solid #e2e8f0;
             position: relative;
             padding-left: 20px;
         }
-        
+
         .credentials-list li:before {
             content: "✓";
             position: absolute;
@@ -449,24 +453,24 @@
             color: #10b981;
             font-weight: bold;
         }
-        
+
         .content-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 60px;
             align-items: start;
         }
-        
+
         @media (max-width: 968px) {
             .content-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-            
+
             .sidebar {
                 position: relative;
                 experienced: auto;
@@ -478,14 +482,14 @@
             background: #f8fafc;
             padding: 80px 0;
         }
-        
+
         .comprehensive-services h2 {
             text-align: center;
             color: #1e40af;
             margin-bottom: 20px;
             font-size: 2.5rem;
         }
-        
+
         .comprehensive-services > .container > p {
             text-align: center;
             max-width: 800px;
@@ -494,14 +498,14 @@
             font-size: 1.125rem;
             line-height: 1.8;
         }
-        
+
         .comprehensive-services .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-experienced: 40px;
         }
-        
+
         .comprehensive-services .service-card {
             background: white;
             padding: 30px;
@@ -510,36 +514,36 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
         }
-        
+
         .comprehensive-services .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
-        
+
         .comprehensive-services .service-icon {
             font-size: 3rem;
             margin-bottom: 20px;
         }
-        
+
         .comprehensive-services .service-card h3 {
             color: #1e40af;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
-        
+
         .comprehensive-services .service-card p {
             color: #6b7280;
             line-height: 1.6;
             margin-bottom: 20px;
         }
-        
+
         .comprehensive-services .service-link {
             color: #1e40af;
             font-weight: 600;
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        
+
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
         }
@@ -548,315 +552,315 @@
  <body>
   <!-- Navigation -->
   <nav class="main-nav">
-   <div class="container">
-    <div class="nav-wrapper">
-     <a class="logo" href="../../index.html">
-      <strong>
+  <div class="container">
+  <div class="nav-wrapper">
+  <a class="logo" href="../../index.html">
+  <strong>
        Skerritt Economics
-      </strong>
-      <span>
+  </strong>
+  <span>
        &amp; Consulting
-      </span>
-     </a>
-     <button aria-label="Toggle menu" class="mobile-menu-toggle">
-      <span>
-      </span>
-      <span>
-      </span>
-      <span>
-      </span>
-     </button>
-     <ul class="nav-menu">
-      <li>
-       <a href="../../index.html">
+  </span>
+  </a>
+  <button aria-label="Toggle menu" class="mobile-menu-toggle">
+  <span>
+  </span>
+  <span>
+  </span>
+  <span>
+  </span>
+  </button>
+  <ul class="nav-menu">
+  <li>
+  <a href="../../index.html">
         Home
-       </a>
-      </li>
-      <li class="has-dropdown">
-       <a href="../../services/">
+  </a>
+  </li>
+  <li class="has-dropdown">
+  <a href="../../services/">
         Services
-       </a>
-       <ul class="dropdown">
-        <li>
-         <a href="../../services/forensic-economics/">
+  </a>
+  <ul class="dropdown">
+  <li>
+  <a href="../../services/forensic-economics/">
           Forensic Economics
-         </a>
-        </li>
-        <li>
-         <a href="../../services/business-valuation/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/business-valuation/">
           Business Valuation
-         </a>
-        </li>
-        <li>
-         <a href="../../services/vocational-expert/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/vocational-expert/">
           Vocational Expert
-         </a>
-        </li>
-        <li>
-         <a href="../../services/life-care-planning/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/life-care-planning/">
           Life Care Planning
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li class="has-dropdown">
-       <a href="../../practice-areas/">
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li class="has-dropdown">
+  <a href="../../practice-areas/">
         Practice Areas
-       </a>
-       <ul class="dropdown">
-        <li>
-         <a href="../../practice-areas/personal-injury/">
+  </a>
+  <ul class="dropdown">
+  <li>
+  <a href="../../practice-areas/personal-injury/">
           Personal Injury &amp; Wrongful Death
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/medical-malpractice/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/medical-malpractice/">
           Medical Malpractice
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/employment/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/employment/">
           Employment Litigation
-         </a>
-        </li>
-        <li>
-         <a href="../../practice-areas/commercial-disputes/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/commercial-disputes/">
           Commercial Disputes
-         </a>
-        </li>
-       </ul>
-      </li>
-      <li>
-       <a href="../../case-studies/">
+  </a>
+  </li>
+  </ul>
+  </li>
+  <li>
+  <a href="../../case-studies/">
         Case Studies
-       </a>
-      </li>
-      <li>
-       <a href="../../about/">
+  </a>
+  </li>
+  <li>
+  <a href="../../about/">
         About
-       </a>
-      </li>
-      <li>
-       <a href="../../resources/">
+  </a>
+  </li>
+  <li>
+  <a href="../../resources/">
         Resources
-       </a>
-      </li>
-      <li>
-       <a href="../../tools/">
+  </a>
+  </li>
+  <li>
+  <a href="../../tools/">
         Tools
-       </a>
-      </li>
-      <li>
-       <a class="nav-cta" href="../../contact/">
+  </a>
+  </li>
+  <li>
+  <a class="nav-cta" href="../../contact/">
         Contact
-       </a>
-      </li>
-     </ul>
-    </div>
-   </div>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
   </nav>
   <!-- Hero Section -->
   <section class="hero-section">
-   <div class="container">
-    <div class="hero-content">
-     <h1>
+  <div class="container">
+  <div class="hero-content">
+  <h1>
       Greenville Forensic Economist
-     </h1>
-     <p>
+  </h1>
+  <p>
       Expert economic damage analysis and litigation support for Greenville's comprehensive law firms. Delivering comprehensive forensic economics services with precision and authority in the heart of Upstate South Carolina's manufacturing and business hub.
-     </p>
-     <div class="location-badges">
-      <span class="badge">
+  </p>
+  <div class="location-badges">
+  <span class="badge">
        Court-Qualified Expert
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Upstate SC Specialist
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Manufacturing Focus
-      </span>
-      <span class="badge">
+  </span>
+  <span class="badge">
        Detailed Reports
-      </span>
-     </div>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Main Content -->
   <section class="content-section">
-   <div class="container">
-    <div class="content-grid">
-     <div class="main-content">
-      <div class="intro-text">
-       <p>
+  <div class="container">
+  <div class="content-grid">
+  <div class="main-content">
+  <div class="intro-text">
+  <p>
         Greenville's legal professionals require forensic economic analysis that reflects the sophisticated demands of Upstate South Carolina's dynamic manufacturing and business environment. At Skerritt Economics, we provide comprehensive economic damage calculations, business valuations, and expert testimony services tailored for the complex litigation landscape of one of the Southeast's business centers.
-       </p>
-       <p>
+  </p>
+  <p>
         Our practice serves the Greenville legal community with understanding of the region's unique economic drivers, from advanced manufacturing and automotive to international trade and technology innovation, delivering precise analysis that strengthens your cases and supports successful outcomes in this rapidly evolving market.
-       </p>
-      </div>
-      <!-- Why Choose Section -->
-      <div class="feature-grid">
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <!-- Why Choose Section -->
+  <div class="feature-grid">
+  <div class="feature-card">
+  <h3>
          Manufacturing &amp; Automotive Expertise
-        </h3>
-        <p>
+  </h3>
+  <p>
          Comprehensive understanding of Greenville's position as a major automotive and advanced manufacturing hub. Specialized knowledge of BMW, Michelin, GE, and other major employers, including complex wage structures and industry-specific career progression patterns.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          International Business Acumen
-        </h3>
-        <p>
+  </h3>
+  <p>
          Expert analysis of international trade and foreign investment impacts on the Upstate economy. Understanding of multinational corporate structures, international compensation packages, and cross-border economic considerations.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Regional Economic Intelligence
-        </h3>
-        <p>
+  </h3>
+  <p>
          knowledge of Upstate South Carolina's transformation from textile center to advanced manufacturing and technology hub. Analysis accounts for rapid economic diversification and emerging industry trends specific to the region.
-        </p>
-       </div>
-       <div class="feature-card">
-        <h3>
+  </p>
+  </div>
+  <div class="feature-card">
+  <h3>
          Sophisticated Litigation Support
-        </h3>
-        <p>
+  </h3>
+  <p>
          Extensive experience in complex, high-value cases throughout South Carolina federal and state courts. Our methodologies are proven in demanding litigation environments with rigorous peer review and rigorous scrutiny.
-        </p>
-       </div>
-      </div>
-     </div>
-     <div class="sidebar">
-      <div class="contact-card">
-       <h3>
+  </p>
+  </div>
+  </div>
+  </div>
+  <div class="sidebar">
+  <div class="contact-card">
+  <h3>
         Request Consultation
-       </h3>
-       <p>
+  </h3>
+  <p>
         Get expert economic analysis for your case. Free initial consultation available for qualifying matters.
-       </p>
-       <div class="contact-info">
-        <p>
-         <strong>
+  </p>
+  <div class="contact-info">
+  <p>
+  <strong>
           Phone:
-         </strong>
-         <a href="tel:203-605-2814">
+  </strong>
+  <a href="tel:203-605-2814">
           (203) 605-2814
-         </a>
-        </p>
-        <p>
-         <strong>
+  </a>
+  </p>
+  <p>
+  <strong>
           Email:
-         </strong>
-         <a href="mailto:chris@skerritteconomics.com">
+  </strong>
+  <a href="mailto:chris@skerritteconomics.com">
           chris@skerritteconomics.com
-         </a>
-        </p>
-       </div>
-       <a class="btn btn-primary" href="../../contact/">
+  </a>
+  </p>
+  </div>
+  <a class="btn btn-primary" href="../../contact/">
         Request Consultation
-       </a>
-      </div>
-      <div class="credentials-card">
-       <h4>
+  </a>
+  </div>
+  <div class="credentials-card">
+  <h4>
         Professional Qualifications
-       </h4>
-       <ul class="credentials-list">
-        <li>
+  </h4>
+  <ul class="credentials-list">
+  <li>
          Court-qualified expert witness
-        </li>
-        <li>
+  </li>
+  <li>
          Extensive economics experience
-        </li>
-        <li>
+  </li>
+  <li>
          Hundreds of cases completed
-        </li>
-        <li>
+  </li>
+  <li>
          Detailed written reports
-        </li>
-        <li>
+  </li>
+  <li>
          Expert trial testimony
-        </li>
-        <li>
+  </li>
+  <li>
          South Carolina court experience
-        </li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
   </section>
   <section class="comprehensive-services">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Comprehensive Expert Services in Greenville
-    </h2>
-    <p>
+  </h2>
+  <p>
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Greenville and SC. Our integrated approach ensures comprehensive support for all your litigation and business needs.
-    </p>
-    <div class="services-grid">
-     <div class="service-card">
-      <div class="service-icon">
+  </p>
+  <div class="services-grid">
+  <div class="service-card">
+  <div class="service-icon">
        📊
-      </div>
-      <h3>
+  </div>
+  <h3>
        Forensic Economics
-      </h3>
-      <p>
+  </h3>
+  <p>
        Expert economic damage analysis for personal injury, wrongful death, employment litigation, and commercial disputes in Greenville. Court-qualified expert witness with extensive federal and state court experience.
-      </p>
-      <a class="service-link" href="../../services/forensic-economics/">
+  </p>
+  <a class="service-link" href="../../services/forensic-economics/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        💼
-      </div>
-      <h3>
+  </div>
+  <h3>
        Business Valuation
-      </h3>
-      <p>
+  </h3>
+  <p>
        Certified business valuation analyst providing comprehensive valuations for litigation, M&amp;A, divorce, and tax purposes. Expert knowledge of SC's business environment and market conditions.
-      </p>
-      <a class="service-link" href="../../services/business-valuation/">
+  </p>
+  <a class="service-link" href="../../services/business-valuation/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        👔
-      </div>
-      <h3>
+  </div>
+  <h3>
        Vocational Expert Services
-      </h3>
-      <p>
+  </h3>
+  <p>
        Professional vocational assessments, employability analysis, and labor market evaluations for disability and personal injury cases. Understanding of Greenville's employment landscape and opportunities.
-      </p>
-      <a class="service-link" href="../../services/vocational-expert/">
+  </p>
+  <a class="service-link" href="../../services/vocational-expert/">
        Learn More →
-      </a>
-     </div>
-     <div class="service-card">
-      <div class="service-icon">
+  </a>
+  </div>
+  <div class="service-card">
+  <div class="service-icon">
        🏥
-      </div>
-      <h3>
+  </div>
+  <h3>
        Life Care Planning
-      </h3>
-      <p>
+  </h3>
+  <p>
        Comprehensive life care plans and future medical cost projections for catastrophic injury cases. Collaboration with Greenville's medical providers for accurate cost assessments.
-      </p>
-      <a class="service-link" href="../../services/life-care-planning/">
+  </p>
+  <a class="service-link" href="../../services/life-care-planning/">
        Learn More →
-      </a>
-     </div>
-    </div>
-   </div>
+  </a>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- SEO Content Section -->
   <div class="seo-content" style="display: none;">
@@ -864,573 +868,573 @@
   </div>
   <!-- Specialized Analysis Section -->
   <section class="specialization-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Specialized Economic Analysis for Greenville Cases
-    </h2>
-    <p>
+  </h2>
+  <p>
      Comprehensive forensic economics services designed for the sophisticated litigation environment of Greenville and the broader Upstate South Carolina region.
-    </p>
-    <div class="specialization-cards">
-     <div class="specialization-card">
-      <h3>
+  </p>
+  <div class="specialization-cards">
+  <div class="specialization-card">
+  <h3>
        Manufacturing &amp; Industrial Litigation
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Automotive industry economic analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Advanced manufacturing wage studies
-       </li>
-       <li>
+  </li>
+  <li>
         Industrial accident economic impact
-       </li>
-       <li>
+  </li>
+  <li>
         Supply chain disruption losses
-       </li>
-       <li>
+  </li>
+  <li>
         Technology transfer and licensing disputes
-       </li>
-       <li>
+  </li>
+  <li>
         International trade economic analysis
-       </li>
-      </ul>
-     </div>
-     <div class="specialization-card">
-      <h3>
+  </li>
+  </ul>
+  </div>
+  <div class="specialization-card">
+  <h3>
        Personal Injury &amp; Wrongful Death
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Upstate wage and benefits analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Life care planning for catastrophic injuries
-       </li>
-       <li>
+  </li>
+  <li>
         Household services valuations
-       </li>
-       <li>
+  </li>
+  <li>
         Present value calculations with South Carolina considerations
-       </li>
-       <li>
+  </li>
+  <li>
         Vocational rehabilitation assessments
-       </li>
-       <li>
+  </li>
+  <li>
         Quality of life economic impact analysis
-       </li>
-      </ul>
-     </div>
-     <div class="specialization-card">
-      <h3>
+  </li>
+  </ul>
+  </div>
+  <div class="specialization-card">
+  <h3>
        Employment Litigation
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Executive compensation analysis
-       </li>
-       <li>
+  </li>
+  <li>
         International assignment packages
-       </li>
-       <li>
+  </li>
+  <li>
         Discrimination and harassment damages
-       </li>
-       <li>
+  </li>
+  <li>
         Wrongful termination economic impact
-       </li>
-       <li>
+  </li>
+  <li>
         Non-compete agreement analysis
-       </li>
-       <li>
+  </li>
+  <li>
         Stock option and equity compensation
-       </li>
-      </ul>
-     </div>
-     <div class="specialization-card">
-      <h3>
+  </li>
+  </ul>
+  </div>
+  <div class="specialization-card">
+  <h3>
        Commercial Disputes
-      </h3>
-      <ul>
-       <li>
+  </h3>
+  <ul>
+  <li>
         Business interruption and lost profits
-       </li>
-       <li>
+  </li>
+  <li>
         Manufacturing facility disputes
-       </li>
-       <li>
+  </li>
+  <li>
         International trade contract breaches
-       </li>
-       <li>
+  </li>
+  <li>
         Partnership and shareholder disputes
-       </li>
-       <li>
+  </li>
+  <li>
         Intellectual property valuation
-       </li>
-       <li>
+  </li>
+  <li>
         Technology startup valuations
-       </li>
-      </ul>
-     </div>
-    </div>
-   </div>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Courts Section -->
   <section class="courts-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Greenville Area Court Experience
-    </h2>
-    <p>
+  </h2>
+  <p>
      Extensive experience providing expert testimony and economic analysis in Greenville's federal, state, and local court systems throughout the Upstate South Carolina region.
-    </p>
-    <div class="courts-grid">
-     <div class="court-item">
-      <h4>
+  </p>
+  <div class="courts-grid">
+  <div class="court-item">
+  <h4>
        U.S. District Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        District of South Carolina (Greenville Division)
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Greenville County Court of Common Pleas
-      </h4>
-      <p>
+  </h4>
+  <p>
        Civil and criminal matters
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        South Carolina Court of Appeals
-      </h4>
-      <p>
+  </h4>
+  <p>
        Intermediate appellate court
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        South Carolina Supreme Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Highest state court
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        U.S. Bankruptcy Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        District of South Carolina
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Workers' Compensation Commission
-      </h4>
-      <p>
+  </h4>
+  <p>
        Greenville regional office
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Family Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Thirteenth Judicial Circuit
-      </p>
-     </div>
-     <div class="court-item">
-      <h4>
+  </p>
+  </div>
+  <div class="court-item">
+  <h4>
        Magistrate Court
-      </h4>
-      <p>
+  </h4>
+  <p>
        Greenville County division
-      </p>
-     </div>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Services Section -->
   <section class="services-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Comprehensive Economic Services
-    </h2>
-    <p>
+  </h2>
+  <p>
      Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Greenville's legal community.
-    </p>
-    <div class="services-grid">
-     <div class="service-card">
-      <h4>
+  </p>
+  <div class="services-grid">
+  <div class="service-card">
+  <h4>
        Economic Damage Analysis
-      </h4>
-      <p>
+  </h4>
+  <p>
        Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with South Carolina-specific considerations and methodologies.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Manufacturing Business Valuation
-      </h4>
-      <p>
+  </h4>
+  <p>
        Specialized valuations for manufacturing, automotive, and industrial enterprises using industry-specific methodologies and Upstate market data.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        International Business Analysis
-      </h4>
-      <p>
+  </h4>
+  <p>
        Economic analysis for multinational corporations and international trade disputes with understanding of foreign exchange and cross-border considerations.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Expert Witness Testimony
-      </h4>
-      <p>
+  </h4>
+  <p>
        Clear, courtroom testimony with comprehensive preparation and professional exhibits designed for South Carolina's legal environment.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Technology Valuation
-      </h4>
-      <p>
+  </h4>
+  <p>
        Valuation and economic analysis for technology companies, startups, and intellectual property disputes in Greenville's growing innovation sector.
-      </p>
-     </div>
-     <div class="service-card">
-      <h4>
+  </p>
+  </div>
+  <div class="service-card">
+  <h4>
        Settlement Support
-      </h4>
-      <p>
+  </h4>
+  <p>
        Economic analysis and documentation to support settlement negotiations with detailed present value calculations and risk assessments.
-      </p>
-     </div>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- Industries Section -->
   <section class="industries-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Greenville Economic Expertise
-    </h2>
-    <p>
+  </h2>
+  <p>
      Our forensic economic analysis covers Greenville's diverse and dynamic economy, from advanced manufacturing and automotive to international business and emerging technology sectors.
-    </p>
-    <div class="industry-tags">
-     <span class="industry-tag">
+  </p>
+  <div class="industry-tags">
+  <span class="industry-tag">
       Manufacturing
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Automotive
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Textiles &amp; Advanced Materials
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Healthcare
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       International Trade
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Technology
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Professional Services
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Construction
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Financial Services
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Real Estate
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Transportation &amp; Logistics
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Energy &amp; Utilities
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Agriculture
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Education
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Tourism &amp; Hospitality
-     </span>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
   </section>
   <!-- Service Areas -->
   <section class="content-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Upstate South Carolina Service Area
-    </h2>
-    <p>
+  </h2>
+  <p>
      Serving attorneys and their clients throughout the Greenville area and broader Upstate South Carolina region with comprehensive forensic economics services.
-    </p>
-    <div class="industry-tags">
-     <span class="industry-tag">
+  </p>
+  <div class="industry-tags">
+  <span class="industry-tag">
       Greenville
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Spartanburg
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Anderson
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Easley
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Greer
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Mauldin
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Simpsonville
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Taylors
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Fountain Inn
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Travelers Rest
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Powdersville
-     </span>
-     <span class="industry-tag">
+  </span>
+  <span class="industry-tag">
       Five Forks
-     </span>
-    </div>
-   </div>
+  </span>
+  </div>
+  </div>
   </section>
   <!-- Tools Section -->
   <section class="tools-showcase">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Professional Calculation Tools
-    </h2>
-    <p>
+  </h2>
+  <p>
      Access our suite of professional tools designed specifically for Greenville legal professionals and their economic analysis needs.
-    </p>
-    <div class="tools-grid">
-     <div class="tool-card">
-      <h4>
+  </p>
+  <div class="tools-grid">
+  <div class="tool-card">
+  <h4>
        Life Expectancy Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Professional actuarial calculations for personal injury and wrongful death cases in South Carolina
-      </p>
-      <a class="tool-btn" href="../../tools/life-expectancy/">
+  </p>
+  <a class="tool-btn" href="../../tools/life-expectancy/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Present Value Calculator
-      </h4>
-      <p>
+  </h4>
+  <p>
        Comprehensive present value analysis for economic damage calculations with South Carolina considerations
-      </p>
-      <a class="tool-btn" href="../../tools/present-value/">
+  </p>
+  <a class="tool-btn" href="../../tools/present-value/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Wage Growth Projector
-      </h4>
-      <p>
+  </h4>
+  <p>
        Advanced wage growth modeling for employment litigation reflecting Upstate South Carolina market conditions
-      </p>
-      <a class="tool-btn" href="../../tools/wage-growth/">
+  </p>
+  <a class="tool-btn" href="../../tools/wage-growth/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Manufacturing Cost Analyzer
-      </h4>
-      <p>
+  </h4>
+  <p>
        Specialized analysis tool for manufacturing and industrial economic calculations
-      </p>
-      <a class="tool-btn" href="../../tools/manufacturing-cost/">
+  </p>
+  <a class="tool-btn" href="../../tools/manufacturing-cost/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Business Valuation Tool
-      </h4>
-      <p>
+  </h4>
+  <p>
        Preliminary business valuation for commercial disputes and transactions in the Upstate region
-      </p>
-      <a class="tool-btn" href="../../tools/business-valuation/">
+  </p>
+  <a class="tool-btn" href="../../tools/business-valuation/">
        Access Tool
-      </a>
-     </div>
-     <div class="tool-card">
-      <h4>
+  </a>
+  </div>
+  <div class="tool-card">
+  <h4>
        Executive Compensation Analyzer
-      </h4>
-      <p>
+  </h4>
+  <p>
        Comprehensive executive compensation analysis for employment litigation and international assignment disputes
-      </p>
-      <a class="tool-btn" href="../../tools/executive-compensation/">
+  </p>
+  <a class="tool-btn" href="../../tools/executive-compensation/">
        Access Tool
-      </a>
-     </div>
-    </div>
-   </div>
+  </a>
+  </div>
+  </div>
+  </div>
   </section>
   <!-- CTA Section -->
   <section class="cta-section">
-   <div class="container">
-    <h2>
+  <div class="container">
+  <h2>
      Ready to Strengthen Your Greenville Case?
-    </h2>
-    <p>
+  </h2>
+  <p>
      Partner with Upstate South Carolina's trusted forensic economist for expert analysis and courtroom testimony.
-    </p>
-    <a class="cta-btn" href="../../contact/">
+  </p>
+  <a class="cta-btn" href="../../contact/">
      Contact Information
-    </a>
-   </div>
+  </a>
+  </div>
   </section>
   <!-- Footer -->
   <footer class="main-footer">
-   <div class="container">
-    <div class="footer-grid">
-     <div class="footer-col">
-      <h4>
+  <div class="container">
+  <div class="footer-grid">
+  <div class="footer-col">
+  <h4>
        Skerritt Economics &amp; Consulting
-      </h4>
-      <p>
+  </h4>
+  <p>
        Expert forensic economics and business valuation services for legal professionals throughout the Southeast and beyond.
-      </p>
-      <p class="footer-contact">
+  </p>
+  <p class="footer-contact">
        400 Putnam Pike Ste J
-       <br/>
+  <br/>
        Smithfield, RI 02917
-       <br/>
-       <a href="tel:203-605-2814">
+  <br/>
+  <a href="tel:203-605-2814">
         (203) 605-2814
-       </a>
-       <br/>
-       <a href="mailto:chris@skerritteconomics.com">
+  </a>
+  <br/>
+  <a href="mailto:chris@skerritteconomics.com">
         chris@skerritteconomics.com
-       </a>
-      </p>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </p>
+  </div>
+  <div class="footer-col">
+  <h4>
        Services
-      </h4>
-      <ul>
-       <li>
-        <a href="../../services/forensic-economics/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../services/forensic-economics/">
          Forensic Economics
-        </a>
-       </li>
-       <li>
-        <a href="../../services/business-valuation/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/business-valuation/">
          Business Valuation
-        </a>
-       </li>
-       <li>
-        <a href="../../services/vocational-expert/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/vocational-expert/">
          Vocational Expert
-        </a>
-       </li>
-       <li>
-        <a href="../../services/life-care-planning/">
+  </a>
+  </li>
+  <li>
+  <a href="../../services/life-care-planning/">
          Life Care Planning
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>
        Practice Areas
-      </h4>
-      <ul>
-       <li>
-        <a href="../../practice-areas/personal-injury/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../practice-areas/personal-injury/">
          Personal Injury
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/medical-malpractice/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/medical-malpractice/">
          Medical Malpractice
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/employment/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/employment/">
          Employment Litigation
-        </a>
-       </li>
-       <li>
-        <a href="../../practice-areas/commercial-disputes/">
+  </a>
+  </li>
+  <li>
+  <a href="../../practice-areas/commercial-disputes/">
          Commercial Disputes
-        </a>
-       </li>
-      </ul>
-     </div>
-     <div class="footer-col">
-      <h4>
+  </a>
+  </li>
+  </ul>
+  </div>
+  <div class="footer-col">
+  <h4>
        Resources
-      </h4>
-      <ul>
-       <li>
-        <a href="../../case-studies/">
+  </h4>
+  <ul>
+  <li>
+  <a href="../../case-studies/">
          Case Studies
-        </a>
-       </li>
-       <li>
-        <a href="../../resources/">
+  </a>
+  </li>
+  <li>
+  <a href="../../resources/">
          Articles &amp; Insights
-        </a>
-       </li>
-       <li>
-        <a href="../../tools/">
+  </a>
+  </li>
+  <li>
+  <a href="../../tools/">
          Professional Tools
-        </a>
-       </li>
-       <li>
-        <a href="../../about/">
+  </a>
+  </li>
+  <li>
+  <a href="../../about/">
          About Chris Skerritt
-        </a>
-       </li>
-       <li>
-        <a href="../../contact/">
+  </a>
+  </li>
+  <li>
+  <a href="../../contact/">
          Contact
-        </a>
-       </li>
-      </ul>
-     </div>
-    </div>
-    <div class="footer-bottom">
-     <p>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
+  <div class="footer-bottom">
+  <p>
       © 2025 Skerritt Economics &amp; Consulting. All rights reserved.
-     </p>
-    </div>
-   </div>
+  </p>
+  </div>
+  </div>
   </footer>
   <script src="../../js/main.js">
   </script>

@@ -17,12 +17,12 @@
 {% comment %} Apply optimizations if title is too long {% endcomment %}
 {% if raw_title.size > 60 %}
   {% assign optimized_title = raw_title %}
-  
+
   {% comment %} First try: Remove site.title suffix if present {% endcomment %}
   {% if optimized_title contains site.title and page.title %}
     {% assign optimized_title = page.title %}
   {% endif %}
-  
+
   {% comment %} State abbreviations {% endcomment %}
   {% if optimized_title.size > 60 %}
     {% assign optimized_title = optimized_title | replace: 'Rhode Island', 'RI' %}
@@ -42,7 +42,7 @@
     {% assign optimized_title = optimized_title | replace: 'Texas', 'TX' %}
     {% assign optimized_title = optimized_title | replace: 'Ohio', 'OH' %}
   {% endif %}
-  
+
   {% comment %} Service name abbreviations {% endcomment %}
   {% if optimized_title.size > 60 %}
     {% assign optimized_title = optimized_title | replace: 'Forensic Economics', 'Forensic Econ' %}
@@ -50,12 +50,12 @@
     {% assign optimized_title = optimized_title | replace: 'Life Care Planning', 'Life Care Plan' %}
     {% assign optimized_title = optimized_title | replace: 'Vocational Expert', 'Voc Expert' %}
   {% endif %}
-  
+
   {% comment %} Remove 'Expert' if still too long {% endcomment %}
   {% if optimized_title.size > 60 %}
     {% assign optimized_title = optimized_title | replace: ' Expert', '' %}
   {% endif %}
-  
+
   {% comment %} Add back shortened site name if space allows {% endcomment %}
   {% if page.title and optimized_title == page.title %}
     {% assign test_title = optimized_title | append: ' | Skerritt' %}
@@ -63,7 +63,7 @@
       {% assign optimized_title = test_title %}
     {% endif %}
   {% endif %}
-  
+
   {% assign final_title = optimized_title %}
 {% else %}
   {% assign final_title = raw_title %}
@@ -84,7 +84,7 @@
   {% assign sentences = raw_description | split: '. ' %}
   {% assign optimized_desc = '' %}
   {% assign current_length = 0 %}
-  
+
   {% for sentence in sentences %}
     {% assign test_length = optimized_desc | size | plus: sentence | size | plus: 2 %}
     {% if test_length <= 157 %}
@@ -96,7 +96,7 @@
       {% break %}
     {% endif %}
   {% endfor %}
-  
+
   {% if optimized_desc == '' or optimized_desc.size < 50 %}
     {% assign optimized_desc = truncated_desc %}
   {% else %}
@@ -104,7 +104,7 @@
       {% assign optimized_desc = optimized_desc | append: '.' %}
     {% endunless %}
   {% endif %}
-  
+
   {% assign final_description = optimized_desc %}
 {% else %}
   {% assign final_description = raw_description %}

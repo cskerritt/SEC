@@ -80,10 +80,10 @@
     // Track scroll depth
     let scrollDepths = [25, 50, 75, 90];
     let scrolled = [];
-    
+
     window.addEventListener('scroll', function() {
       let scrollPercent = (window.scrollY + window.innerHeight) / document.body.offsetHeight * 100;
-      
+
       scrollDepths.forEach(function(depth) {
         if (scrollPercent >= depth && !scrolled.includes(depth)) {
           scrolled.push(depth);
