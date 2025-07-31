@@ -32,12 +32,12 @@
 
 <!-- Critical CSS inline -->
 <style>
-:root{--primary-color:#1e3a8a;--secondary-color:#3730a3;--accent-color:#dc2626;--dark-text:#1f2937;--light-text:#6b7280;--background:#ffffff;--light-bg:#f9fafb;--border-color:#e5e7eb;--success:#059669;--max-width:1200px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:var(--dark-text);background:var(--background)}.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}.main-nav{background:var(--background);position:sticky;top:0;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,0.1)}.nav-wrapper{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}.hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:white;padding:4rem 0;text-align:center}
+:root{--primary-color:#1e3a8a;--secondary-color:#3730a3;--accent-color:#dc2626;--dark-text:#1f2937;--light-text:#6b7280;--background:#ffffff;--light-bg:#f9fafb;--border-color:#e5e7eb;--success:#059669;--max-width:1200px}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:var(--dark-text);background:var(--background)}.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}.main-nav{background:var(--background);position:sticky;top:0;z-index:1000;box-shadow:0 2px 4px rgba(0,0,0,0.1)}.nav-wrapper{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}.hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:white;padding:4rem 0;text-align:center;min-height:400px}.hero-content{max-width:800px;margin:0 auto;color:white}.hero h1{font-size:2.5rem;font-weight:700;margin-bottom:1.5rem;line-height:1.2;color:white}.hero-subtitle{font-size:1.25rem;line-height:1.6;margin-bottom:2rem;color:white;opacity:1}.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}.btn{display:inline-block;padding:0.875rem 1.75rem;border-radius:6px;font-weight:600;text-align:center;text-decoration:none;transition:all 0.3s;font-size:1rem;cursor:pointer;border:none}.btn-primary{background:var(--dark-text);color:white;border:2px solid var(--dark-text)}@media(max-width:768px){.main-nav{position:fixed;top:0;left:0;right:0;z-index:9999;height:60px}body{padding-top:60px}.hero{margin-top:60px}}
 </style>
 
 <!-- Main Stylesheets - Preload and async load -->
-<link rel="preload" href="css/styles.min.css?v=7" as="style">
-<link rel="preload" href="css/homepage.min.css?v=2" as="style">
+<link rel="preload" href="css/styles.min.css?v=7" as="style" fetchpriority="high">
+<link rel="preload" href="css/homepage.min.css?v=2" as="style" fetchpriority="high">
 <link href="css/styles.min.css?v=7" rel="stylesheet"/>
 <link href="css/homepage.min.css?v=2" rel="stylesheet"/>
 <link href="css/icons.min.css?v=5" rel="stylesheet" media="print" onload="this.media='all'"/>
@@ -55,9 +55,24 @@
 <!-- Web App Manifest -->
 <link rel="manifest" href="/manifest.json">
 
-<!-- Web Fonts - Load with font-display swap -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/></noscript>
+<!-- Web Fonts - Preload critical font and use font-display swap -->
+<link rel="preload" href="https://fonts.gstatic.com/s/inter/v19/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+/* Prevent FOUT and layout shifts */
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter'), local('Inter-Regular');
+    font-display: swap;
+}
+.practice-chip { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+/* Ensure hero content is immediately visible */
+.hero, .hero-content, .hero h1, .hero-subtitle { 
+    opacity: 1 !important; 
+    visibility: visible !important;
+}
+</style>
 <!-- Organization Schema -->
 <script type="application/ld+json">
 {
@@ -510,7 +525,7 @@
 <div class="container">
 <div class="hero-content">
 <h1>Forensic Economics and Business Valuations</h1>
-<p class="hero-subtitle">Court-qualified expert providing economic damage assessments and business valuations for attorneys throughout Rhode Island and nationwide. Specializing in personal injury, wrongful death, medical malpractice, and employment litigation.</p>
+<p class="hero-subtitle" fetchpriority="high">Court-qualified expert providing economic damage assessments and business valuations for attorneys throughout Rhode Island and nationwide. Specializing in personal injury, wrongful death, medical malpractice, and employment litigation.</p>
 <div class="hero-cta">
 <a class="btn btn-primary btn-with-icon" href="contact/">
 <span>Schedule Free Consultation</span>

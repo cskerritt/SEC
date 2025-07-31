@@ -40,11 +40,11 @@
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/x-icon "access plus 1 year"
     
-    # CSS and JavaScript
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType text/javascript "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
-    ExpiresByType application/x-javascript "access plus 1 month"
+    # CSS and JavaScript - 1 year for versioned files
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
     
     # Web fonts
     ExpiresByType font/ttf "access plus 1 year"
@@ -66,12 +66,12 @@
 <IfModule mod_headers.c>
     # 1 Year for images and fonts
     <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|otf|eot)$">
-        Header set Cache-Control "max-age=31536000, public"
+        Header set Cache-Control "max-age=31536000, public, immutable"
     </FilesMatch>
     
-    # 1 Month for CSS and JS
+    # 1 Year for versioned CSS and JS files (with query strings)
     <FilesMatch "\.(css|js)$">
-        Header set Cache-Control "max-age=2592000, public"
+        Header set Cache-Control "max-age=31536000, public, immutable"
     </FilesMatch>
     
     # Disable caching for dynamic content
@@ -148,4 +148,21 @@ ErrorDocument 500 /500.html
 # Optimize default time to first byte
 <IfModule mod_headers.c>
     Header set Keep-Alive "timeout=5, max=100"
+</IfModule>
+
+# Enable Gzip compression for faster TTFB
+<IfModule mod_deflate.c>
+    SetOutputFilter DEFLATE
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip
+</IfModule>
+
+# Optimize server performance
+<IfModule mod_headers.c>
+    # Remove ETags as they cause issues with proxies
+    Header unset ETag
+    FileETag None
+    
+    # Enable HTTP/2 Server Push for critical resources
+    Header add Link "</css/styles.min.css?v=7>; rel=preload; as=style"
+    Header add Link "</css/homepage.min.css?v=2>; rel=preload; as=style"
 </IfModule>

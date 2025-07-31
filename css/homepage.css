@@ -44,10 +44,13 @@ main {
     background: var(--light-bg);
     padding: 2rem 0;
     border-bottom: 1px solid var(--border-color);
+    min-height: 120px; /* Prevent layout shift */
+    contain: layout style; /* CSS containment */
 }
 
 .practice-areas-chips {
     display: flex;
+    min-height: 56px; /* Reserve space for chips */
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
@@ -65,6 +68,10 @@ main {
     text-decoration: none;
     color: var(--dark-text);
     transition: all var(--transition-normal);
+    min-height: 48px; /* Fixed height to prevent shifts */
+    font-size: 1rem; /* Explicit font size */
+    line-height: 1.2; /* Fixed line height */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .practice-chip:hover {
@@ -879,6 +886,10 @@ section {
     text-decoration: none;
     color: var(--dark-text);
     transition: all var(--transition-normal);
+    min-height: 48px; /* Fixed height to prevent shifts */
+    font-size: 1rem; /* Explicit font size */
+    line-height: 1.2; /* Fixed line height */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .practice-chip:hover {

@@ -29,6 +29,18 @@ select {
 }
 
 /* Mobile-specific fixes (max-width: 768px) */
+/* Prevent layout shifts on practice areas strip */
+.practice-areas-strip {
+    min-height: 80px; /* Reserve space to prevent shift */
+}
+
+.practice-chip {
+    min-height: 44px; /* Fixed height to prevent shifts */
+    line-height: 1.2;
+    display: flex !important;
+    align-items: center !important;
+}
+
 @media (max-width: 768px) {
     /* Fix for sticky nav cutting off content */
     .main-nav {
