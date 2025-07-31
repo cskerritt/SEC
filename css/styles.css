@@ -1426,6 +1426,17 @@ body {
     line-height: 1.6;
     color: var(--dark-text);
     background-color: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.table-of-contents {
+    display: none;
 }
 
 .container {
