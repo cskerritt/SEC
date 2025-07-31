@@ -1,0 +1,180 @@
+/* Mobile Fixes for skerritteconomics.com */
+/* Fix for select element color contrast and mobile improvements */
+
+/* Fix select element color contrast issues */
+select {
+    color: var(--dark-text) !important; /* Force dark text color */
+    background-color: white !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Ensure select dropdown arrow is visible with proper contrast */
+select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f2937' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 3rem;
+}
+
+/* Dark mode support for select elements */
+@media (prefers-color-scheme: dark) {
+    select {
+        color: #1f2937 !important; /* Keep dark text even in dark mode */
+        background-color: #ffffff !important;
+        border-color: #e5e7eb !important;
+    }
+}
+
+/* Mobile-specific fixes (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Fix for Table of Contents select if it exists */
+    .mobile-toc select,
+    .toc-select,
+    select[aria-label*="Table of Contents"],
+    select[name*="toc"],
+    #toc-select {
+        color: #1f2937 !important;
+        background-color: white !important;
+        border: 1px solid #e5e7eb !important;
+        font-size: 16px !important; /* Prevent zoom on iOS */
+        min-height: 44px !important; /* Better touch target */
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Fix button spacing in hero section */
+    .hero-cta {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: stretch !important;
+        padding: 0 1rem;
+    }
+    
+    .hero-cta .btn {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+        min-height: 48px !important; /* WCAG touch target size */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Ensure proper spacing between buttons */
+    .hero-cta .btn + .btn {
+        margin-top: 0.75rem !important;
+    }
+    
+    /* Fix consultation note spacing */
+    .hero-cta .consultation-note {
+        margin-top: 1.5rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 0.875rem !important;
+    }
+    
+    /* Improve overall hero section spacing */
+    .hero {
+        padding: 2rem 0 !important;
+    }
+    
+    .hero-content {
+        padding: 0 1rem !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.875rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Fix any floating action button overlap */
+    .fab {
+        bottom: 1.5rem !important;
+        right: 1.5rem !important;
+        width: 56px !important;
+        height: 56px !important;
+    }
+    
+    /* Ensure proper container padding on mobile */
+    .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* Fix any potential TOC dropdown styling */
+    .mobile-toc-dropdown,
+    .toc-dropdown {
+        position: relative !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Ensure all form elements have proper contrast */
+    input,
+    select,
+    textarea {
+        color: #1f2937 !important;
+        background-color: white !important;
+        border-color: #e5e7eb !important;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        color: #9ca3af !important;
+    }
+    
+    /* Focus states with better visibility */
+    input:focus,
+    select:focus,
+    textarea:focus {
+        outline: 2px solid #1e3a8a !important;
+        outline-offset: 2px !important;
+        border-color: #1e3a8a !important;
+    }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.625rem !important;
+    }
+    
+    .hero-cta .btn {
+        font-size: 0.9375rem !important;
+        padding: 0.875rem 1.25rem !important;
+    }
+    
+    /* Ensure proper spacing in very small screens */
+    .hero {
+        padding: 1.5rem 0 !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    select {
+        border: 2px solid currentColor !important;
+    }
+    
+    select:focus {
+        outline: 3px solid currentColor !important;
+        outline-offset: 2px !important;
+    }
+}
+
+/* Print styles to ensure fixes don't affect print */
+@media print {
+    select {
+        color: black !important;
+        background-color: white !important;
+    }
+}
