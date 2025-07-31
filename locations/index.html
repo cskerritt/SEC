@@ -198,8 +198,9 @@
             <section class="location-search">
                 <h2>Find Services in Your Area</h2>
                 <div class="search-container">
-                    <input type="text" id="locationSearch" placeholder="Search by state or city name..." class="location-search-input">
-                    <button type="button" id="clearSearch" class="clear-search" style="display: none;">Clear</button>
+                    <label for="locationSearch" class="visually-hidden">Search for services by state or city name</label>
+                    <input type="text" id="locationSearch" placeholder="Search by state or city name..." class="location-search-input" aria-label="Search for services by state or city name">
+                    <button type="button" id="clearSearch" class="clear-search" style="display: none;" aria-label="Clear search">Clear</button>
                 </div>
                 <p class="search-hint">Start typing to filter locations below</p>
             </section>
@@ -663,37 +664,37 @@
                     <div class="city-group">
                         <h3>Massachusetts</h3>
                         <ul>
-                            <li><a href="forensic-economics/boston-ma-forensic-economist.html">Boston</a></li>
-                            <li><a href="forensic-economics/worcester-ma-forensic-economist.html">Worcester</a></li>
-                            <li><a href="forensic-economics/springfield-ma-forensic-economist.html">Springfield</a></li>
-                            <li><a href="forensic-economics/cambridge-ma-forensic-economist.html">Cambridge</a></li>
+                            <li><a href="forensic-economics/">Boston</a></li>
+                            <li><a href="forensic-economics/">Worcester</a></li>
+                            <li><a href="forensic-economics/">Springfield</a></li>
+                            <li><a href="forensic-economics/">Cambridge</a></li>
                         </ul>
                     </div>
                     <div class="city-group">
                         <h3>Connecticut</h3>
                         <ul>
-                            <li><a href="forensic-economics/bridgeport-ct-forensic-economist.html">Bridgeport</a></li>
-                            <li><a href="forensic-economics/hartford-ct-forensic-economist.html">Hartford</a></li>
-                            <li><a href="forensic-economics/stamford-ct-forensic-economist.html">Stamford</a></li>
-                            <li><a href="forensic-economics/new-haven-ct-forensic-economist.html">New Haven</a></li>
+                            <li><a href="forensic-economics/">Bridgeport</a></li>
+                            <li><a href="forensic-economics/">Hartford</a></li>
+                            <li><a href="forensic-economics/">Stamford</a></li>
+                            <li><a href="forensic-economics/">New Haven</a></li>
                         </ul>
                     </div>
                     <div class="city-group">
                         <h3>Rhode Island & Maine</h3>
                         <ul>
-                            <li><a href="forensic-economics/providence-ri-forensic-economist.html">Providence, RI</a></li>
-                            <li><a href="forensic-economics/warwick-ri-forensic-economist.html">Warwick, RI</a></li>
-                            <li><a href="forensic-economics/portland-me-forensic-economist.html">Portland, ME</a></li>
-                            <li><a href="forensic-economics/lewiston-me-forensic-economist.html">Lewiston, ME</a></li>
+                            <li><a href="forensic-economics/">Providence, RI</a></li>
+                            <li><a href="forensic-economics/">Warwick, RI</a></li>
+                            <li><a href="forensic-economics/">Portland, ME</a></li>
+                            <li><a href="forensic-economics/">Lewiston, ME</a></li>
                         </ul>
                     </div>
                     <div class="city-group">
                         <h3>NH & Vermont</h3>
                         <ul>
-                            <li><a href="forensic-economics/manchester-nh-forensic-economist.html">Manchester, NH</a></li>
-                            <li><a href="forensic-economics/nashua-nh-forensic-economist.html">Nashua, NH</a></li>
-                            <li><a href="forensic-economics/burlington-vt-forensic-economist.html">Burlington, VT</a></li>
-                            <li><a href="forensic-economics/concord-nh-forensic-economist.html">Concord, NH</a></li>
+                            <li><a href="forensic-economics/">Manchester, NH</a></li>
+                            <li><a href="forensic-economics/">Nashua, NH</a></li>
+                            <li><a href="forensic-economics/">Burlington, VT</a></li>
+                            <li><a href="forensic-economics/">Concord, NH</a></li>
                         </ul>
                     </div>
                 </div>
@@ -873,6 +874,19 @@
 
     <!-- Additional Styles -->
     <style>
+    /* Accessibility */
+    .visually-hidden {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+    }
+    
     /* Region Headers */
     .region-header {
         margin-top: 3rem;
