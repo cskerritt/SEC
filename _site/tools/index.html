@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Professional Economic Analysis Tools | Free Calculators | Skerritt Economics</title>
+    <meta name="description" content="Free forensic economics calculators for New England attorneys. Life expectancy, present value &amp; economic analysis tools. Call 203-605-2814">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <style>
+        .tools-hero {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 60px;
+        }
+        
+        .tools-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tools-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+        }
+        
+        .tool-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1e40af;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .tool-card h3 {
+            color: #1e40af;
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tool-card .tool-description {
+            color: #6c757d;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tool-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .tool-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #495057;
+        }
+        
+        .tool-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .tool-card .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #1e40af;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .tool-card .btn:hover {
+            background: #1e3a8a;
+        }
+        
+        .tool-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #e9ecef;
+            color: #495057;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .tools-intro {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        
+        .tools-intro h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            color: #212529;
+        }
+        
+        .tools-intro p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #6c757d;
+        }
+        
+        .coming-soon {
+            opacity: 0.6;
+            position: relative;
+        }
+        
+        .coming-soon .tool-card {
+            background: #f8f9fa;
+        }
+        
+        .coming-soon-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #ffc107;
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .tools-cta {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .tools-cta h2 {
+            font-size: 2.25rem;
+            margin-bottom: 1.5rem;
+            color: #212529;
+        }
+        
+        .tools-cta p {
+            font-size: 1.125rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://skerritteconomics.com/tools/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../services/business-valuation/">Business Valuation</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../case-studies/">Case Studies</a></li>
+                    <li><a href="../about/">About</a></li>
+                    <li><a href="../resources/">Resources</a></li>
+                    <li><a href="../tools/" class="active">Tools</a></li>
+                    <li><a href="../contact/" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <a class="breadcrumb-link" href="../index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Tools</span>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Tools Hero Section -->
+    <section class="tools-hero">
+        <div class="container">
+            <h1>Professional Economic Analysis Tools</h1>
+            <p>Free, open-access calculators and tools for forensic economics, business valuation, and economic damage analysis. Used by attorneys, economists, and financial professionals.</p>
+        </div>
+    </section>
+
+    <!-- Tools Introduction -->
+    <section class="container">
+        <div class="tools-intro">
+            <h2>Expert Tools for Legal Professionals</h2>
+            <p>Our suite of professional tools provides quick, accurate calculations for common economic analysis needs in litigation support. All tools use current, peer-reviewed methodologies and data sources to ensure reliability for legal proceedings.</p>
+        </div>
+
+        <!-- Tools Grid -->
+        <div class="tools-grid">
+            <!-- Life Expectancy Calculator -->
+            <div class="tool-card">
+                <h3>Life Expectancy Lookup Tool</h3>
+                <div class="tool-tags">
+                    <span class="tool-tag">Forensic Economics</span>
+                    <span class="tool-tag">Personal Injury</span>
+                </div>
+                <p class="tool-description">Professional life expectancy calculator using CDC/NCHS data. Calculate total life expectancy, work-life expectancy, and years in the workforce for economic damage analysis.</p>
+                <ul class="tool-features">
+                    <li>Current CDC/NCHS mortality data</li>
+                    <li>Age, gender, and race-specific calculations</li>
+                    <li>Work-life expectancy (WLE) values</li>
+                    <li>Years to final separation (YFS)</li>
+                    <li>Printable reports for litigation</li>
+                </ul>
+                <a href="life-expectancy/" class="btn">Access Tool →</a>
+            </div>
+
+            <!-- Present Value Calculator -->
+            <div class="tool-card">
+                <h3>Present Value Calculator</h3>
+                <div class="tool-tags">
+                    <span class="tool-tag">Economic Damages</span>
+                    <span class="tool-tag">All Practice Areas</span>
+                </div>
+                <p class="tool-description">Calculate present value of future economic losses using appropriate discount rates. Essential for personal injury, wrongful death, and commercial damages.</p>
+                <ul class="tool-features">
+                    <li>Single and periodic payment calculations</li>
+                    <li>Growing payment modeling</li>
+                    <li>Multiple discount rate scenarios</li>
+                    <li>Professional results display</li>
+                    <li>Detailed calculation breakdowns</li>
+                </ul>
+                <a href="present-value/" class="btn">Access Tool →</a>
+            </div>
+
+            <!-- Wage Growth Projector -->
+            <div class="tool-card">
+                <h3>Wage Growth Projector</h3>
+                <div class="tool-tags">
+                    <span class="tool-tag">Employment</span>
+                    <span class="tool-tag">Lost Earnings</span>
+                </div>
+                <p class="tool-description">Project future earnings using historical wage data, inflation rates, and individual merit increases. Ideal for employment litigation and personal injury cases.</p>
+                <ul class="tool-features">
+                    <li>Industry-specific wage modeling</li>
+                    <li>Merit and promotion calculations</li>
+                    <li>Education level adjustments</li>
+                    <li>Comprehensive fringe benefits</li>
+                    <li>Career progression analysis</li>
+                </ul>
+                <a href="wage-growth/" class="btn">Access Tool →</a>
+            </div>
+
+            <!-- Household Services Valuation -->
+            <div class="tool-card">
+                <h3>Household Services Valuation</h3>
+                <div class="tool-tags">
+                    <span class="tool-tag">Personal Injury</span>
+                    <span class="tool-tag">Wrongful Death</span>
+                </div>
+                <p class="tool-description">Calculate the economic value of household services for injury and wrongful death cases using time-use survey data and replacement cost methods.</p>
+                <ul class="tool-features">
+                    <li>BLS time-use survey data</li>
+                    <li>Age and family-size adjustments</li>
+                    <li>Regional wage rate integration</li>
+                    <li>Employment status considerations</li>
+                    <li>Professional valuation methods</li>
+                </ul>
+                <a href="household-services/" class="btn">Access Tool →</a>
+            </div>
+
+            <!-- Quick Business Valuation -->
+            <div class="tool-card">
+                <h3>Quick Business Valuation</h3>
+                <div class="tool-tags">
+                    <span class="tool-tag">Business Valuation</span>
+                    <span class="tool-tag">Commercial Disputes</span>
+                </div>
+                <p class="tool-description">Preliminary business valuation using income, market, and asset approaches. Useful for initial case assessment and settlement discussions.</p>
+                <ul class="tool-features">
+                    <li>Multiple valuation approaches</li>
+                    <li>Industry-specific multipliers</li>
+                    <li>DCF and market methods</li>
+                    <li>Ownership interest calculations</li>
+                    <li>Comprehensive results analysis</li>
+                </ul>
+                <a href="business-valuation/" class="btn">Access Tool →</a>
+            </div>
+
+            <!-- Medical Cost Projector -->
+            <div class="tool-card">
+                <h3>Medical Cost Projector</h3>
+                <div class="tool-tags">
+                    <span class="tool-tag">Medical Malpractice</span>
+                    <span class="tool-tag">Life Care Plans</span>
+                </div>
+                <p class="tool-description">Project future medical costs using medical-specific inflation rates and life care plan requirements for catastrophic injury cases.</p>
+                <ul class="tool-features">
+                    <li>Medical CPI inflation rates</li>
+                    <li>Category-specific cost modeling</li>
+                    <li>Present value calculations</li>
+                    <li>Life expectancy integration</li>
+                    <li>Professional results reporting</li>
+                </ul>
+                <a href="medical-cost/" class="btn">Access Tool →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools CTA Section -->
+    <section class="tools-cta">
+        <div class="container">
+            <h2>Need Custom Economic Analysis?</h2>
+            <p>While our tools provide quick calculations, complex cases often require detailed, customized analysis.</p>
+            <a href="../contact/" class="btn btn-primary btn-large">Discuss Your Case</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Skerritt Economics & Consulting</h4>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout New England.</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../services/#life-care-planning">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../case-studies/">Case Studies</a></li>
+                        <li><a href="../resources/">Articles & Insights</a></li>
+                        <li><a href="../tools/">Professional Tools</a></li>
+                        <li><a href="../about/">About Chris Skerritt</a></li>
+                        <li><a href="../contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved. | Tools provided for informational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

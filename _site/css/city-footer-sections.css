@@ -1,0 +1,336 @@
+/* Enhanced Footer Sections for City Pages */
+
+/* Local Courts Section - Complete Redesign */
+.local-courts {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f8fafb 100%);
+}
+
+.local-courts h2 {
+    font-size: 2.75rem;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.local-courts h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.courts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.courts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+}
+
+.court-category {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(232, 236, 239, 0.6);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.court-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, var(--primary-color) 100%);
+}
+
+.court-category:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.court-category h3 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.court-icon {
+    width: 48px;
+    height: 48px;
+    background: #f0f7ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.court-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.court-category li {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #f0f4f7;
+    color: #4a5568;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    transition: all 0.2s ease;
+}
+
+.court-category li:hover {
+    color: var(--primary-color);
+    padding-left: 0.5rem;
+}
+
+.court-category li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Neighborhoods Section */
+.neighborhoods-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    margin-top: 3rem;
+}
+
+.neighborhoods-section h3 {
+    font-size: 1.875rem;
+    color: var(--primary-color);
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.neighborhoods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.borough-item {
+    padding: 1.5rem;
+    background: #f8fafb;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.borough-item h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.borough-item p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1.0625rem;
+}
+
+/* Why Choose Section - Enhanced */
+.why-choose {
+    padding: 100px 0;
+    background: #f8fafb;
+}
+
+.why-choose h2 {
+    text-align: center;
+    font-size: 2.75rem;
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.why-choose h2::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.benefit-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 2rem;
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.benefit-item p {
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 1.125rem;
+}
+
+/* Service Links Footer Section */
+.service-links-section {
+    background: white;
+    padding: 80px 0;
+    border-top: 1px solid #e8ecef;
+}
+
+.service-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-link-card {
+    background: #f8fafb;
+    padding: 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+}
+
+.service-link-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-color);
+    background: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.service-link-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.service-link-card h4 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.service-link-card p {
+    color: #4a5568;
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+/* Responsive Improvements */
+@media (max-width: 1024px) {
+    .courts-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .neighborhoods-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .local-courts,
+    .why-choose {
+        padding: 80px 0;
+    }
+    
+    .local-courts h2,
+    .why-choose h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .court-category {
+        padding: 2rem;
+    }
+    
+    .court-category h3 {
+        font-size: 1.5rem;
+    }
+    
+    .benefits-grid {
+        gap: 2rem;
+    }
+    
+    .benefit-item {
+        padding: 2rem;
+    }
+    
+    .benefit-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.25rem;
+    }
+}

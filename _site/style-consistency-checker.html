@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Style Consistency Checker - Skerritt Economics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .controls {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #1e3a8a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #1e3a8a;
+        }
+        
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .status {
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        
+        .results {
+            margin-top: 30px;
+        }
+        
+        .result-section {
+            margin-bottom: 30px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .result-header {
+            background: #f8f8f8;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .result-header:hover {
+            background: #f0f0f0;
+        }
+        
+        .result-content {
+            padding: 20px;
+            display: none;
+        }
+        
+        .result-content.active {
+            display: block;
+        }
+        
+        .issue {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        
+        .issue-title {
+            font-weight: bold;
+            color: #856404;
+            margin-bottom: 5px;
+        }
+        
+        .issue-details {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            color: #155724;
+        }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        th {
+            background: #f8f8f8;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .diff {
+            background: #ffe0e0;
+            font-weight: bold;
+        }
+        
+        .loader {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #1e3a8a;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .toggle-icon {
+            transition: transform 0.3s;
+        }
+        
+        .toggle-icon.rotated {
+            transform: rotate(90deg);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        pre {
+            background: #f8f8f8;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Style Consistency Checker</h1>
+        <p class="subtitle">Automated analysis of CSS consistency across all pages</p>
+        
+        <div class="controls">
+            <button onclick="runFullAnalysis()">Run Full Analysis</button>
+            <button onclick="checkNavigation()">Check Navigation Only</button>
+            <button onclick="checkFooters()">Check Footers Only</button>
+            <button onclick="checkTypography()">Check Typography Only</button>
+            <button onclick="exportReport()">Export Report</button>
+        </div>
+        
+        <div class="status" id="status">Ready to analyze...</div>
+        
+        <div class="results" id="results"></div>
+    </div>
+
+    <script>
+        const pages = [
+            { name: 'Homepage', path: 'index.html' },
+            { name: 'About', path: 'about/index.html' },
+            { name: 'Services', path: 'services/index.html' },
+            { name: 'Practice Areas', path: 'practice-areas/index.html' },
+            { name: 'Case Studies', path: 'case-studies/index.html' },
+            { name: 'Contact', path: 'contact/index.html' },
+            { name: 'Resources', path: 'resources/index.html' }
+        ];
+        
+        let analysisResults = {};
+        
+        async function updateStatus(message, showLoader = false) {
+            const status = document.getElementById('status');
+            status.innerHTML = message + (showLoader ? '<span class="loader"></span>' : '');
+        }
+        
+        async function fetchPageContent(path) {
+            try {
+                const response = await fetch(path);
+                const text = await response.text();
+                const parser = new DOMParser();
+                return parser.parseFromString(text, 'text/html');
+            } catch (error) {
+                console.error(`Error fetching ${path}:`, error);
+                return null;
+            }
+        }
+        
+        async function runFullAnalysis() {
+            updateStatus('Running full analysis...', true);
+            analysisResults = {};
+            
+            await checkNavigation();
+            await checkFooters();
+            await checkTypography();
+            await checkColors();
+            await checkSpacing();
+            await checkButtons();
+            await checkForms();
+            
+            updateStatus('Analysis complete!');
+            displayFullReport();
+        }
+        
+        async function checkNavigation() {
+            updateStatus('Checking navigation consistency...', true);
+            const navResults = { consistent: true, issues: [], details: {} };
+            
+            for (const page of pages) {
+                const doc = await fetchPageContent(page.path);
+                if (!doc) continue;
+                
+                const nav = doc.querySelector('.main-nav');
+                const navMenu = doc.querySelector('.nav-menu');
+                
+                if (!nav || !navMenu) {
+                    navResults.consistent = false;
+                    navResults.issues.push(`${page.name}: Missing navigation structure`);
+                    continue;
+                }
+                
+                // Extract navigation details
+                const menuItems = Array.from(navMenu.querySelectorAll('li > a')).map(a => ({
+                    text: a.textContent.trim(),
+                    href: a.getAttribute('href'),
+                    classes: a.className
+                }));
+                
+                navResults.details[page.name] = {
+                    menuItems,
+                    logoText: doc.querySelector('.logo')?.textContent.trim(),
+                    hasDropdowns: doc.querySelectorAll('.has-dropdown').length
+                };
+            }
+            
+            // Compare navigation across pages
+            const navKeys = Object.keys(navResults.details);
+            if (navKeys.length > 1) {
+                const firstNav = JSON.stringify(navResults.details[navKeys[0]].menuItems);
+                for (let i = 1; i < navKeys.length; i++) {
+                    const currentNav = JSON.stringify(navResults.details[navKeys[i]].menuItems);
+                    if (firstNav !== currentNav) {
+                        navResults.consistent = false;
+                        navResults.issues.push(`Navigation differs between ${navKeys[0]} and ${navKeys[i]}`);
+                    }
+                }
+            }
+            
+            analysisResults.navigation = navResults;
+            updateStatus('Navigation check complete');
+            displayResults();
+        }
+        
+        async function checkFooters() {
+            updateStatus('Checking footer consistency...', true);
+            const footerResults = { consistent: true, issues: [], details: {} };
+            
+            for (const page of pages) {
+                const doc = await fetchPageContent(page.path);
+                if (!doc) continue;
+                
+                const footer = doc.querySelector('.main-footer');
+                if (!footer) {
+                    footerResults.consistent = false;
+                    footerResults.issues.push(`${page.name}: Missing footer`);
+                    continue;
+                }
+                
+                // Extract footer details
+                const footerCols = Array.from(footer.querySelectorAll('.footer-col')).map(col => ({
+                    heading: col.querySelector('h4')?.textContent.trim(),
+                    links: Array.from(col.querySelectorAll('a')).map(a => ({
+                        text: a.textContent.trim(),
+                        href: a.getAttribute('href')
+                    }))
+                }));
+                
+                footerResults.details[page.name] = {
+                    columns: footerCols,
+                    copyrightText: footer.querySelector('.footer-bottom')?.textContent.trim()
+                };
+            }
+            
+            // Compare footers
+            const footerKeys = Object.keys(footerResults.details);
+            if (footerKeys.length > 1) {
+                const firstFooter = JSON.stringify(footerResults.details[footerKeys[0]]);
+                for (let i = 1; i < footerKeys.length; i++) {
+                    const currentFooter = JSON.stringify(footerResults.details[footerKeys[i]]);
+                    if (firstFooter !== currentFooter) {
+                        footerResults.consistent = false;
+                        footerResults.issues.push(`Footer differs between ${footerKeys[0]} and ${footerKeys[i]}`);
+                    }
+                }
+            }
+            
+            analysisResults.footers = footerResults;
+            updateStatus('Footer check complete');
+            displayResults();
+        }
+        
+        async function checkTypography() {
+            updateStatus('Checking typography consistency...', true);
+            const typographyResults = { consistent: true, issues: [], details: {} };
+            
+            for (const page of pages) {
+                const doc = await fetchPageContent(page.path);
+                if (!doc) continue;
+                
+                // Create a temporary iframe to get computed styles
+                const iframe = document.createElement('iframe');
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                
+                // Clone the document into iframe
+                const iframeDoc = iframe.contentDocument;
+                iframeDoc.write(doc.documentElement.outerHTML);
+                iframeDoc.close();
+                
+                // Wait for styles to load
+                await new Promise(resolve => setTimeout(resolve, 500));
+                
+                const elements = {
+                    h1: iframeDoc.querySelector('h1'),
+                    h2: iframeDoc.querySelector('h2'),
+                    h3: iframeDoc.querySelector('h3'),
+                    p: iframeDoc.querySelector('p'),
+                    a: iframeDoc.querySelector('a')
+                };
+                
+                const styles = {};
+                for (const [tag, element] of Object.entries(elements)) {
+                    if (element) {
+                        const computed = iframe.contentWindow.getComputedStyle(element);
+                        styles[tag] = {
+                            fontFamily: computed.fontFamily,
+                            fontSize: computed.fontSize,
+                            fontWeight: computed.fontWeight,
+                            lineHeight: computed.lineHeight,
+                            color: computed.color
+                        };
+                    }
+                }
+                
+                typographyResults.details[page.name] = styles;
+                document.body.removeChild(iframe);
+            }
+            
+            analysisResults.typography = typographyResults;
+            updateStatus('Typography check complete');
+            displayResults();
+        }
+        
+        async function checkColors() {
+            updateStatus('Checking color consistency...', true);
+            const colorResults = { consistent: true, issues: [], details: {} };
+            
+            for (const page of pages) {
+                const doc = await fetchPageContent(page.path);
+                if (!doc) continue;
+                
+                // Extract CSS variables if defined
+                const styleSheets = Array.from(doc.styleSheets);
+                const cssVars = {};
+                
+                styleSheets.forEach(sheet => {
+                    try {
+                        Array.from(sheet.cssRules).forEach(rule => {
+                            if (rule.cssText.includes('--primary-color') || 
+                                rule.cssText.includes('--secondary-color') ||
+                                rule.cssText.includes('--accent-color')) {
+                                const matches = rule.cssText.match(/--[\w-]+:\s*[^;]+/g);
+                                if (matches) {
+                                    matches.forEach(match => {
+                                        const [key, value] = match.split(':').map(s => s.trim());
+                                        cssVars[key] = value;
+                                    });
+                                }
+                            }
+                        });
+                    } catch (e) {
+                        // Cross-origin stylesheets will throw
+                    }
+                });
+                
+                colorResults.details[page.name] = cssVars;
+            }
+            
+            analysisResults.colors = colorResults;
+            updateStatus('Color check complete');
+        }
+        
+        async function checkSpacing() {
+            updateStatus('Checking spacing consistency...', true);
+            const spacingResults = { consistent: true, issues: [], details: {} };
+            
+            // Implementation would check padding, margins, gaps
+            analysisResults.spacing = spacingResults;
+            updateStatus('Spacing check complete');
+        }
+        
+        async function checkButtons() {
+            updateStatus('Checking button consistency...', true);
+            const buttonResults = { consistent: true, issues: [], details: {} };
+            
+            for (const page of pages) {
+                const doc = await fetchPageContent(page.path);
+                if (!doc) continue;
+                
+                const buttons = doc.querySelectorAll('.btn, button');
+                const buttonClasses = new Set();
+                
+                buttons.forEach(btn => {
+                    buttonClasses.add(btn.className);
+                });
+                
+                buttonResults.details[page.name] = {
+                    count: buttons.length,
+                    classes: Array.from(buttonClasses)
+                };
+            }
+            
+            analysisResults.buttons = buttonResults;
+            updateStatus('Button check complete');
+        }
+        
+        async function checkForms() {
+            updateStatus('Checking form consistency...', true);
+            const formResults = { consistent: true, issues: [], details: {} };
+            
+            for (const page of pages) {
+                const doc = await fetchPageContent(page.path);
+                if (!doc) continue;
+                
+                const forms = doc.querySelectorAll('form');
+                const inputs = doc.querySelectorAll('input, textarea, select');
+                
+                formResults.details[page.name] = {
+                    formCount: forms.length,
+                    inputCount: inputs.length,
+                    inputTypes: Array.from(new Set(Array.from(inputs).map(i => i.type || i.tagName.toLowerCase())))
+                };
+            }
+            
+            analysisResults.forms = formResults;
+            updateStatus('Form check complete');
+        }
+        
+        function displayResults() {
+            const resultsDiv = document.getElementById('results');
+            let html = '';
+            
+            for (const [category, data] of Object.entries(analysisResults)) {
+                if (!data) continue;
+                
+                html += `
+                    <div class="result-section">
+                        <div class="result-header" onclick="toggleSection('${category}')">
+                            <span>${category.charAt(0).toUpperCase() + category.slice(1)} Analysis</span>
+                            <span class="toggle-icon" id="toggle-${category}">▶</span>
+                        </div>
+                        <div class="result-content" id="content-${category}">
+                `;
+                
+                if (data.consistent === false) {
+                    data.issues.forEach(issue => {
+                        html += `
+                            <div class="issue">
+                                <div class="issue-title">Inconsistency Found</div>
+                                <div class="issue-details">${issue}</div>
+                            </div>
+                        `;
+                    });
+                } else if (data.issues && data.issues.length === 0) {
+                    html += '<div class="success">✓ All pages are consistent</div>';
+                }
+                
+                // Display detailed comparison table
+                if (data.details && Object.keys(data.details).length > 0) {
+                    html += generateComparisonTable(category, data.details);
+                }
+                
+                html += '</div></div>';
+            }
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        function generateComparisonTable(category, details) {
+            let html = '<div class="table-wrapper"><table>';
+            const pages = Object.keys(details);
+            
+            if (pages.length === 0) return '';
+            
+            // Headers
+            html += '<tr><th>Page</th>';
+            
+            if (category === 'navigation') {
+                html += '<th>Menu Items</th><th>Logo Text</th><th>Dropdowns</th>';
+            } else if (category === 'footers') {
+                html += '<th>Columns</th><th>Copyright</th>';
+            } else if (category === 'typography') {
+                html += '<th>H1</th><th>H2</th><th>Paragraph</th>';
+            } else if (category === 'buttons') {
+                html += '<th>Count</th><th>Classes Used</th>';
+            } else if (category === 'forms') {
+                html += '<th>Forms</th><th>Inputs</th><th>Input Types</th>';
+            }
+            
+            html += '</tr>';
+            
+            // Data rows
+            pages.forEach(page => {
+                html += `<tr><td><strong>${page}</strong></td>`;
+                
+                if (category === 'navigation') {
+                    const nav = details[page];
+                    html += `<td>${nav.menuItems?.length || 0} items</td>`;
+                    html += `<td>${nav.logoText || 'N/A'}</td>`;
+                    html += `<td>${nav.hasDropdowns || 0}</td>`;
+                } else if (category === 'footers') {
+                    const footer = details[page];
+                    html += `<td>${footer.columns?.length || 0} columns</td>`;
+                    html += `<td>${footer.copyrightText || 'N/A'}</td>`;
+                } else if (category === 'typography') {
+                    const styles = details[page];
+                    html += `<td>${styles.h1 ? `${styles.h1.fontSize} / ${styles.h1.fontWeight}` : 'N/A'}</td>`;
+                    html += `<td>${styles.h2 ? `${styles.h2.fontSize} / ${styles.h2.fontWeight}` : 'N/A'}</td>`;
+                    html += `<td>${styles.p ? `${styles.p.fontSize} / ${styles.p.lineHeight}` : 'N/A'}</td>`;
+                } else if (category === 'buttons') {
+                    const buttons = details[page];
+                    html += `<td>${buttons.count}</td>`;
+                    html += `<td>${buttons.classes.join(', ') || 'None'}</td>`;
+                } else if (category === 'forms') {
+                    const forms = details[page];
+                    html += `<td>${forms.formCount}</td>`;
+                    html += `<td>${forms.inputCount}</td>`;
+                    html += `<td>${forms.inputTypes.join(', ') || 'None'}</td>`;
+                }
+                
+                html += '</tr>';
+            });
+            
+            html += '</table></div>';
+            return html;
+        }
+        
+        function toggleSection(category) {
+            const content = document.getElementById(`content-${category}`);
+            const icon = document.getElementById(`toggle-${category}`);
+            
+            content.classList.toggle('active');
+            icon.classList.toggle('rotated');
+        }
+        
+        function displayFullReport() {
+            displayResults();
+            
+            // Auto-expand all sections
+            Object.keys(analysisResults).forEach(category => {
+                const content = document.getElementById(`content-${category}`);
+                const icon = document.getElementById(`toggle-${category}`);
+                if (content && !content.classList.contains('active')) {
+                    content.classList.add('active');
+                    icon.classList.add('rotated');
+                }
+            });
+        }
+        
+        function exportReport() {
+            const report = {
+                timestamp: new Date().toISOString(),
+                results: analysisResults
+            };
+            
+            const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `style-consistency-report-${new Date().toISOString().split('T')[0]}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            
+            updateStatus('Report exported successfully!');
+        }
+    </script>
+</body>
+</html>

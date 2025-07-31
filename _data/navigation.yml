@@ -1,0 +1,14 @@
+# main links
+main:
+  - title: "About"
+    url: /about/
+  - title: "Services"
+    url: /services/
+  - title: "Practice Areas"
+    url: /practice-areas/
+  - title: "Locations"
+    url: /locations/
+  - title: "Resources"
+    url: /resources/
+  - title: "Contact"
+    url: /contact/

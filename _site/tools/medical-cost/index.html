@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Medical Cost Projector - Life Care Planning Support | Skerritt Economics</title>
+    <meta name="description" content="Project future medical costs using medical-specific inflation rates for catastrophic injury cases and life care plan economic analysis.">
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="canonical" href="https://skerritteconomics.com/tools/medical-cost/">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .tool-container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin: 20px 0;
+    }
+    .tool-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #007bff;
+    }
+    .tool-header h1 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    .tool-description {
+        color: #666;
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+    }
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    .form-group select {
+        height: 40px;
+    }
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .three-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    @media (max-width: 768px) {
+        .two-column, .three-column {
+            grid-template-columns: 1fr;
+        }
+    }
+    .calculate-btn {
+        width: 100%;
+        padding: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+    .calculate-btn:hover {
+        background-color: #0056b3;
+    }
+    .calculate-btn:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+    .results {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        border-left: 4px solid #007bff;
+    }
+    .results h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .result-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        justify-content: space-between;
+    }
+    .result-value {
+        font-size: 1.1em;
+        color: #007bff;
+        font-weight: bold;
+    }
+    .large-result {
+        font-size: 1.4em;
+        color: #28a745;
+        font-weight: bold;
+        text-align: center;
+        background: #e8f5e8;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    .info-box {
+        background: #e7f3ff;
+        border: 1px solid #b3d9ff;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 20px 0;
+        color: #0056b3;
+    }
+    .cost-category {
+        background: #f8f9fa;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border-left: 3px solid #007bff;
+    }
+    .projection-table {
+        margin-top: 20px;
+        max-height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .projection-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .projection-table th, .projection-table td {
+        padding: 8px 12px;
+        text-align: right;
+        border-bottom: 1px solid #eee;
+    }
+    .projection-table th {
+        background: #f8f9fa;
+        font-weight: bold;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
+    .page-header {
+        padding: 100px 0 80px;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        margin-bottom: 80px;
+    }
+    .page-header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #212529;
+    }
+    .page-header .lead {
+        font-size: 1.25rem;
+        color: #6c757d;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    .result-section {
+        margin: 30px 0;
+    }
+    .result-section h3 {
+        color: #333;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+    .email-collection {
+        background: #f8f9fa;
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    .email-collection h3 {
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+    .email-form {
+        display: grid;
+        gap: 15px;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    .email-form input {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .email-form input:required {
+        border-left: 3px solid #007bff;
+    }
+    .get-results-btn {
+        background: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .get-results-btn:hover {
+        background: #218838;
+    }
+    .disclaimer-box {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px 0;
+        color: #856404;
+    }
+    .disclaimer-box h4 {
+        color: #856404;
+        margin-bottom: 10px;
+    }
+    .consultation-cta {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 30px 0;
+    }
+    .consultation-cta h3 {
+        margin-bottom: 15px;
+    }
+    .consultation-btn {
+        background: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+    .consultation-btn:hover {
+        background: #218838;
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="../../index.html" class="logo">
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="../../services/">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="../../services/forensic-economics/">Forensic Economics</a></li>
+                            <li><a href="../../services/business-valuation/">Business Valuation</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="../../practice-areas/">Practice Areas</a>
+                        <ul class="dropdown">
+                            <li><a href="../../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
+                            <li><a href="../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                            <li><a href="../../practice-areas/employment/">Employment Litigation</a></li>
+                            <li><a href="../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../case-studies/">Case Studies</a></li>
+                    <li><a href="../../about/">About</a></li>
+                    <li><a href="../../resources/">Resources</a></li>
+                    <li><a href="../" class="active">Tools</a></li>
+                    <li><a href="../../contact/" class="nav-cta">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Medical Cost Projector</h1>
+            <p class="lead">Project future medical costs with medical-specific inflation rates for catastrophic injury cases and life care plans.</p>
+        </div>
+    </section>
+
+    <!-- Tool Content -->
+    <section class="tool-content">
+        <div class="container">
+            <div class="tool-container">
+                <div class="tool-header">
+                    <h1>Medical Cost Projector</h1>
+                    <p>Calculate present value of future medical expenses using medical inflation rates and life expectancy data.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>Professional Tool</h4>
+                    <p>Uses medical CPI data and healthcare-specific inflation patterns for accurate life care plan cost projections.</p>
+                </div>
+                
+                <form id="medicalForm">
+                    <h3>Patient Information</h3>
+                    <div class="three-column">
+                        <div class="form-group">
+                            <label for="patient_age">Current Age:</label>
+                            <input type="number" id="patient_age" min="0" max="100" value="35" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="life_expectancy">Life Expectancy (years):</label>
+                            <input type="number" id="life_expectancy" step="0.1" min="1" value="40" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="discount_rate">Discount Rate (%):</label>
+                            <input type="number" id="discount_rate" step="0.01" value="3.5" min="0" max="10">
+                        </div>
+                    </div>
+
+                    <h3>Medical Cost Categories</h3>
+                    
+                    <div class="cost-category">
+                        <h4>Physician Services</h4>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="physician_annual">Annual Cost ($):</label>
+                                <input type="number" id="physician_annual" step="0.01" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="physician_inflation">Inflation Rate (%):</label>
+                                <input type="number" id="physician_inflation" step="0.01" value="4.2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-category">
+                        <h4>Hospital/Outpatient Services</h4>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="hospital_annual">Annual Cost ($):</label>
+                                <input type="number" id="hospital_annual" step="0.01" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="hospital_inflation">Inflation Rate (%):</label>
+                                <input type="number" id="hospital_inflation" step="0.01" value="3.8">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-category">
+                        <h4>Prescription Drugs</h4>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="drugs_annual">Annual Cost ($):</label>
+                                <input type="number" id="drugs_annual" step="0.01" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="drugs_inflation">Inflation Rate (%):</label>
+                                <input type="number" id="drugs_inflation" step="0.01" value="5.1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-category">
+                        <h4>Durable Medical Equipment</h4>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="equipment_annual">Annual Cost ($):</label>
+                                <input type="number" id="equipment_annual" step="0.01" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="equipment_inflation">Inflation Rate (%):</label>
+                                <input type="number" id="equipment_inflation" step="0.01" value="3.1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-category">
+                        <h4>Nursing/Personal Care</h4>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="nursing_annual">Annual Cost ($):</label>
+                                <input type="number" id="nursing_annual" step="0.01" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="nursing_inflation">Inflation Rate (%):</label>
+                                <input type="number" id="nursing_inflation" step="0.01" value="4.5">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-category">
+                        <h4>Therapies (PT/OT/Speech)</h4>
+                        <div class="two-column">
+                            <div class="form-group">
+                                <label for="therapy_annual">Annual Cost ($):</label>
+                                <input type="number" id="therapy_annual" step="0.01" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="therapy_inflation">Inflation Rate (%):</label>
+                                <input type="number" id="therapy_inflation" step="0.01" value="4.0">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="calculate-btn">Calculate Medical Cost Projections</button>
+                </form>
+
+                <!-- Professional Disclaimer -->
+                <div class="disclaimer-box">
+                    <h4>⚠️ Professional Review Required</h4>
+                    <p><strong>Important:</strong> This information is intended for informational purposes only and should be reviewed by a qualified forensic economist, vocational expert, or life care planner to ensure accuracy and appropriateness of the results for your specific case requirements.</p>
+                    <p>These calculations provide preliminary estimates based on standard medical inflation methodology and should not be used as final expert opinions without professional verification.</p>
+                </div>
+
+                <!-- Email Collection Form -->
+                <div id="emailCollection" class="email-collection" style="display: none;">
+                    <h3>📊 Get Your Professional Results</h3>
+                    <p>Please provide your contact information to receive your detailed medical cost projection analysis. This helps us provide you with relevant updates and resources for your practice.</p>
+                    
+                    <form id="emailForm" class="email-form">
+                        <input type="text" id="fullName" placeholder="Full Name *" required>
+                        <input type="email" id="email" placeholder="Email Address *" required>
+                        <input type="text" id="firm" placeholder="Law Firm / Organization">
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <select id="role" required>
+                            <option value="">Your Role *</option>
+                            <option value="attorney">Attorney</option>
+                            <option value="paralegal">Paralegal</option>
+                            <option value="economist">Forensic Economist</option>
+                            <option value="expert">Expert Witness</option>
+                            <option value="other">Other Professional</option>
+                        </select>
+                        <button type="submit" class="get-results-btn">📋 Get My Results</button>
+                    </form>
+                    
+                    <p style="font-size: 12px; color: #6c757d; margin-top: 15px;">
+                        By providing your information, you agree to receive occasional updates about our services. 
+                        We respect your privacy and will never share your information.
+                    </p>
+                </div>
+
+                <!-- Free Consultation CTA -->
+                <div class="consultation-cta">
+                    <h3>🤝 Need Expert Analysis for Your Case?</h3>
+                    <p>Get professional forensic economic analysis from a qualified expert. Our team provides comprehensive economic damage calculations, expert testimony, and litigation support services.</p>
+                    <a href="../../contact/" class="consultation-btn">Schedule Free Consultation</a>
+                    <p style="font-size: 14px; margin-top: 15px; opacity: 0.9;">
+                        ✓ Court-qualified expert &nbsp;&nbsp; ✓ Extensive experience &nbsp;&nbsp; ✓ Fast turnaround
+                    </p>
+                </div>
+                
+                <div id="results" style="display: none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Skerritt Economics & Consulting</h4>
+                    <p>Expert forensic economics and business valuation services for legal professionals throughout New England.</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                        <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="../../services/forensic-economics/">Forensic Economics</a></li>
+                        <li><a href="../../services/business-valuation/">Business Valuation</a></li>
+                        <li><a href="../../services/#life-care-planning">Life Care Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li><a href="../../practice-areas/personal-injury/">Personal Injury</a></li>
+                        <li><a href="../../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+                        <li><a href="../../practice-areas/employment/">Employment Litigation</a></li>
+                        <li><a href="../../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../../case-studies/">Case Studies</a></li>
+                        <li><a href="../../resources/">Articles & Insights</a></li>
+                        <li><a href="../">Professional Tools</a></li>
+                        <li><a href="../../about/">About Chris Skerritt</a></li>
+                        <li><a href="../../contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved. | Tools provided for informational purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+
+<script>
+// Store for calculation data
+let calculationData = null;
+
+document.getElementById('medicalForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const data = {
+        patientAge: parseInt(document.getElementById('patient_age').value),
+        lifeExpectancy: parseFloat(document.getElementById('life_expectancy').value),
+        discountRate: parseFloat(document.getElementById('discount_rate').value) / 100,
+        categories: {
+            physician: {
+                annual: parseFloat(document.getElementById('physician_annual').value),
+                inflation: parseFloat(document.getElementById('physician_inflation').value) / 100
+            },
+            hospital: {
+                annual: parseFloat(document.getElementById('hospital_annual').value),
+                inflation: parseFloat(document.getElementById('hospital_inflation').value) / 100
+            },
+            drugs: {
+                annual: parseFloat(document.getElementById('drugs_annual').value),
+                inflation: parseFloat(document.getElementById('drugs_inflation').value) / 100
+            },
+            equipment: {
+                annual: parseFloat(document.getElementById('equipment_annual').value),
+                inflation: parseFloat(document.getElementById('equipment_inflation').value) / 100
+            },
+            nursing: {
+                annual: parseFloat(document.getElementById('nursing_annual').value),
+                inflation: parseFloat(document.getElementById('nursing_inflation').value) / 100
+            },
+            therapy: {
+                annual: parseFloat(document.getElementById('therapy_annual').value),
+                inflation: parseFloat(document.getElementById('therapy_inflation').value) / 100
+            }
+        }
+    };
+    
+    // Store data for later display
+    calculationData = data;
+    
+    // Calculate but don't display results yet
+    const results = calculateMedicalCosts(data, false);
+    calculationData.results = results;
+    
+    // Show email collection form
+    document.getElementById('emailCollection').style.display = 'block';
+    document.getElementById('emailCollection').scrollIntoView({ behavior: 'smooth' });
+});
+
+function calculateMedicalCosts(data, shouldDisplay = true) {
+    const years = Math.ceil(data.lifeExpectancy);
+    let totalPresentValue = 0;
+    let totalFutureValue = 0;
+    let categoryResults = {};
+    let yearlyProjections = [];
+    
+    // Calculate for each category
+    Object.keys(data.categories).forEach(category => {
+        const cat = data.categories[category];
+        if (cat.annual > 0) {
+            let categoryPV = 0;
+            let categoryFV = 0;
+            
+            for (let year = 1; year <= years; year++) {
+                const futureValue = cat.annual * Math.pow(1 + cat.inflation, year);
+                const presentValue = futureValue / Math.pow(1 + data.discountRate, year);
+                
+                categoryPV += presentValue;
+                categoryFV += futureValue;
+            }
+            
+            categoryResults[category] = {
+                presentValue: categoryPV,
+                futureValue: categoryFV,
+                annualCost: cat.annual,
+                inflationRate: cat.inflation
+            };
+            
+            totalPresentValue += categoryPV;
+            totalFutureValue += categoryFV;
+        }
+    });
+    
+    // Calculate yearly breakdown for first 10 years
+    for (let year = 1; year <= Math.min(years, 10); year++) {
+        let yearTotal = 0;
+        let yearPV = 0;
+        
+        Object.keys(data.categories).forEach(category => {
+            const cat = data.categories[category];
+            if (cat.annual > 0) {
+                const futureValue = cat.annual * Math.pow(1 + cat.inflation, year);
+                const presentValue = futureValue / Math.pow(1 + data.discountRate, year);
+                yearTotal += futureValue;
+                yearPV += presentValue;
+            }
+        });
+        
+        yearlyProjections.push({
+            year: year,
+            futureValue: yearTotal,
+            presentValue: yearPV
+        });
+    }
+    
+    const results = {
+        ...data,
+        totalPresentValue,
+        totalFutureValue,
+        categoryResults,
+        yearlyProjections,
+        years
+    };
+    
+    if (shouldDisplay) {
+        displayMedicalResults(results);
+    }
+    
+    return results;
+}
+
+function displayMedicalResults(data) {
+    const categoryNames = {
+        physician: 'Physician Services',
+        hospital: 'Hospital/Outpatient',
+        drugs: 'Prescription Drugs',
+        equipment: 'Medical Equipment',
+        nursing: 'Nursing/Personal Care',
+        therapy: 'Therapies'
+    };
+    
+    let categoryBreakdown = '';
+    Object.keys(data.categoryResults).forEach(category => {
+        const result = data.categoryResults[category];
+        categoryBreakdown += `
+            <div class="result-item">
+                <span><strong>${categoryNames[category]}:</strong></span>
+                <span class="result-value">$${formatCurrency(result.presentValue)}</span>
+            </div>
+        `;
+    });
+    
+    let yearlyTable = '';
+    if (data.yearlyProjections.length > 0) {
+        yearlyTable = `
+            <div class="result-section">
+                <h3>Annual Projections (First 10 Years)</h3>
+                <div class="projection-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Future Value</th>
+                                <th>Present Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.yearlyProjections.map(p => `
+                                <tr>
+                                    <td>${p.year}</td>
+                                    <td>$${formatCurrency(p.futureValue)}</td>
+                                    <td>$${formatCurrency(p.presentValue)}</td>
+                                </tr>
+                            `).join('')}
+                            ${data.years > 10 ? '<tr><td colspan="3" style="text-align: center; font-style: italic;">... and ' + (data.years - 10) + ' more years</td></tr>' : ''}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        `;
+    }
+    
+    const html = `
+        <div class="results">
+            <h2>Medical Cost Projection Results</h2>
+            
+            <div class="large-result">
+                Total Present Value: $${formatCurrency(data.totalPresentValue)}
+            </div>
+            
+            <div class="result-section">
+                <h3>Summary</h3>
+                <div class="result-item">
+                    <span><strong>Life Expectancy:</strong></span>
+                    <span>${data.lifeExpectancy} years</span>
+                </div>
+                <div class="result-item">
+                    <span><strong>Total Future Costs:</strong></span>
+                    <span class="result-value">$${formatCurrency(data.totalFutureValue)}</span>
+                </div>
+                <div class="result-item">
+                    <span><strong>Present Value:</strong></span>
+                    <span class="result-value">$${formatCurrency(data.totalPresentValue)}</span>
+                </div>
+                <div class="result-item">
+                    <span><strong>Discount Rate:</strong></span>
+                    <span>${(data.discountRate * 100).toFixed(2)}%</span>
+                </div>
+                <div class="result-item">
+                    <span><strong>Total Discount:</strong></span>
+                    <span class="result-value">$${formatCurrency(data.totalFutureValue - data.totalPresentValue)}</span>
+                </div>
+            </div>
+            
+            <div class="result-section">
+                <h3>Cost Category Breakdown (Present Value)</h3>
+                ${categoryBreakdown}
+            </div>
+            
+            ${yearlyTable}
+            
+            <p style="font-size: 0.9em; color: #666; font-style: italic; margin-top: 15px;">
+                Projections use medical-specific inflation rates and standard present value methodology. 
+                Detailed life care plans may require additional cost categories and case-specific adjustments.
+            </p>
+        </div>
+    `;
+    
+    document.getElementById('results').innerHTML = html;
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function formatCurrency(amount) {
+    return amount.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+}
+
+// Email form submission handler
+document.getElementById('emailForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = e.target.querySelector('.get-results-btn');
+    const originalText = submitBtn.textContent;
+    
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = '📧 Sending...';
+    
+    // Get form data
+    const formData = new FormData(this);
+    const emailData = Object.fromEntries(formData);
+    
+    // Simulate sending data (in production, this would send to your marketing platform)
+    setTimeout(() => {
+        // Hide email collection form
+        document.getElementById('emailCollection').style.display = 'none';
+        
+        // Show results with stored calculation data
+        if (calculationData && calculationData.results) {
+            displayMedicalResults(calculationData.results);
+        }
+        
+        // Add professional disclaimer to results
+        const resultsDiv = document.getElementById('results');
+        if (resultsDiv) {
+            const disclaimerHtml = `
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 15px; margin-top: 20px; color: #856404;">
+                    <p><strong>Thank you, ${emailData.fullName}!</strong> Your detailed analysis is displayed above.</p>
+                    <p><em>Professional Note:</em> These results are for informational purposes and should be reviewed by a qualified forensic economist or life care planner for case-specific accuracy.</p>
+                </div>
+            `;
+            resultsDiv.innerHTML += disclaimerHtml;
+        }
+        
+        // Reset button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        
+        // Optional: Track conversion for analytics
+        console.log('Lead captured:', emailData);
+        
+    }, 1500);
+});
+</script>
+</body>
+</html>

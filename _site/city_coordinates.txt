@@ -1,0 +1,248 @@
+# Major US Cities Coordinate Mapping
+# Format: city-state -> latitude;longitude
+# For use in fixing incorrect Kansas coordinates (39.8283, -98.5795)
+
+# Top 10 Largest US Cities
+new-york-ny -> 40.7128;-74.0060
+los-angeles-ca -> 34.0522;-118.2437
+chicago-il -> 41.8781;-87.6298
+houston-tx -> 29.7604;-95.3698
+phoenix-az -> 33.4484;-112.0740
+philadelphia-pa -> 39.9526;-75.1652
+san-antonio-tx -> 29.4241;-98.4936
+san-diego-ca -> 32.7157;-117.1611
+dallas-tx -> 32.7767;-96.7970
+san-jose-ca -> 37.3382;-121.8863
+
+# Major Texas Cities
+austin-tx -> 30.2672;-97.7431
+fort-worth-tx -> 32.7555;-97.3308
+el-paso-tx -> 31.7619;-106.4850
+arlington-tx -> 32.7357;-97.1081
+corpus-christi-tx -> 27.8006;-97.3964
+plano-tx -> 33.0198;-96.6989
+laredo-tx -> 27.5306;-99.4803
+lubbock-tx -> 33.5779;-101.8552
+garland-tx -> 32.9126;-96.6389
+irving-tx -> 32.8140;-96.9489
+
+# Major California Cities
+san-francisco-ca -> 37.7749;-122.4194
+sacramento-ca -> 38.5816;-121.4944
+fresno-ca -> 36.7378;-119.7871
+long-beach-ca -> 33.7701;-118.1937
+oakland-ca -> 37.8044;-122.2712
+bakersfield-ca -> 35.3733;-119.0187
+anaheim-ca -> 33.8366;-117.9143
+santa-ana-ca -> 33.7455;-117.8677
+riverside-ca -> 33.9533;-117.3962
+stockton-ca -> 37.9577;-121.2908
+irvine-ca -> 33.6846;-117.8265
+chula-vista-ca -> 32.6401;-117.0842
+
+# Major Florida Cities
+miami-fl -> 25.7617;-80.1918
+tampa-fl -> 27.9506;-82.4572
+orlando-fl -> 28.5383;-81.3792
+jacksonville-fl -> 30.3322;-81.6557
+st-petersburg-fl -> 27.7676;-82.6403
+hialeah-fl -> 25.8576;-80.2781
+tallahassee-fl -> 30.4383;-84.2807
+fort-lauderdale-fl -> 26.1224;-80.1373
+cape-coral-fl -> 26.5629;-81.9495
+pembroke-pines-fl -> 26.0031;-80.2241
+hollywood-fl -> 26.0112;-80.1495
+coral-springs-fl -> 26.2712;-80.2706
+miramar-fl -> 25.9873;-80.2323
+gainesville-fl -> 29.6516;-82.3248
+port-st-lucie-fl -> 27.2730;-80.3582
+
+# Major Midwest Cities
+detroit-mi -> 42.3314;-83.0458
+indianapolis-in -> 39.7684;-86.1581
+columbus-oh -> 39.9612;-82.9988
+milwaukee-wi -> 43.0389;-87.9065
+kansas-city-mo -> 39.0997;-94.5786
+cleveland-oh -> 41.4993;-81.6944
+minneapolis-mn -> 44.9778;-93.2650
+st-louis-mo -> 38.6270;-90.1994
+cincinnati-oh -> 39.1031;-84.5120
+pittsburgh-pa -> 40.4406;-79.9959
+madison-wi -> 43.0731;-89.4012
+des-moines-ia -> 41.5868;-93.6250
+omaha-ne -> 41.2565;-95.9345
+toledo-oh -> 41.6528;-83.5379
+akron-oh -> 41.0814;-81.5190
+dayton-oh -> 39.7589;-84.1916
+grand-rapids-mi -> 42.9634;-85.6681
+kansas-city-ks -> 39.1141;-94.6275
+
+# Major Northeast Cities (besides NYC, Philadelphia)
+boston-ma -> 42.3601;-71.0589
+baltimore-md -> 39.2904;-76.6122
+washington-dc -> 38.9072;-77.0369
+newark-nj -> 40.7357;-74.1724
+jersey-city-nj -> 40.7282;-74.0776
+buffalo-ny -> 42.8864;-78.8784
+rochester-ny -> 43.1610;-77.6109
+albany-ny -> 42.6526;-73.7562
+syracuse-ny -> 43.0481;-76.1474
+providence-ri -> 41.8240;-71.4128
+bridgeport-ct -> 41.1865;-73.1952
+new-haven-ct -> 41.3083;-72.9279
+hartford-ct -> 41.7658;-72.6734
+stamford-ct -> 41.0534;-73.5387
+worcester-ma -> 42.2626;-71.8023
+springfield-ma -> 42.1015;-72.5898
+manchester-nh -> 42.9956;-71.4548
+lowell-ma -> 42.6334;-71.3162
+cambridge-ma -> 42.3736;-71.1097
+
+# Major Southeast Cities
+atlanta-ga -> 33.7490;-84.3880
+charlotte-nc -> 35.2271;-80.8431
+raleigh-nc -> 35.7796;-78.6382
+nashville-tn -> 36.1627;-86.7816
+memphis-tn -> 35.1495;-90.0490
+louisville-ky -> 38.2527;-85.7585
+virginia-beach-va -> 36.8529;-75.9780
+new-orleans-la -> 29.9511;-90.0715
+richmond-va -> 37.5407;-77.4360
+birmingham-al -> 33.5186;-86.8104
+norfolk-va -> 36.8508;-76.2859
+chesapeake-va -> 36.7682;-76.2875
+greensboro-nc -> 36.0726;-79.7920
+durham-nc -> 35.9940;-78.8986
+winston-salem-nc -> 36.0999;-80.2442
+columbia-sc -> 34.0007;-81.0348
+charleston-sc -> 32.7765;-79.9311
+baton-rouge-la -> 30.4515;-91.1871
+montgomery-al -> 32.3668;-86.3000
+mobile-al -> 30.6954;-88.0399
+knoxville-tn -> 35.9606;-83.9207
+chattanooga-tn -> 35.0456;-85.3097
+huntsville-al -> 34.7304;-86.5861
+augusta-ga -> 33.4735;-82.0105
+savannah-ga -> 32.0809;-81.0912
+lexington-ky -> 38.0406;-84.5037
+jackson-ms -> 32.2988;-90.1848
+little-rock-ar -> 34.7465;-92.2896
+shreveport-la -> 32.5252;-93.7502
+
+# Major Southwest Cities
+denver-co -> 39.7392;-104.9903
+las-vegas-nv -> 36.1699;-115.1398
+albuquerque-nm -> 35.0844;-106.6504
+tucson-az -> 32.2226;-110.9747
+mesa-az -> 33.4152;-111.8315
+colorado-springs-co -> 38.8339;-104.8214
+aurora-co -> 39.7294;-104.8319
+henderson-nv -> 36.0395;-114.9817
+chandler-az -> 33.3062;-111.8413
+scottsdale-az -> 33.4942;-111.9261
+glendale-az -> 33.5387;-112.1860
+gilbert-az -> 33.3528;-111.7890
+tempe-az -> 33.4255;-111.9400
+peoria-az -> 33.5806;-112.2374
+reno-nv -> 39.5296;-119.8138
+paradise-nv -> 36.0972;-115.1467
+santa-fe-nm -> 35.6870;-105.9378
+
+# Major Northwest Cities
+seattle-wa -> 47.6062;-122.3321
+portland-or -> 45.5152;-122.6784
+spokane-wa -> 47.6588;-117.4260
+tacoma-wa -> 47.2529;-122.4443
+vancouver-wa -> 45.6387;-122.6615
+salem-or -> 44.9429;-123.0351
+eugene-or -> 44.0521;-123.0868
+bellevue-wa -> 47.6101;-122.2015
+kent-wa -> 47.3809;-122.2348
+everett-wa -> 47.9790;-122.2021
+renton-wa -> 47.4829;-122.2171
+federal-way-wa -> 47.3223;-122.3126
+boise-id -> 43.6150;-116.2023
+nampa-id -> 43.5407;-116.5635
+meridian-id -> 43.6121;-116.3915
+idaho-falls-id -> 43.4666;-112.0341
+pocatello-id -> 42.8713;-112.4455
+coeur-dalene-id -> 47.6777;-116.7805
+billings-mt -> 45.7833;-108.5007
+missoula-mt -> 46.8721;-113.9940
+great-falls-mt -> 47.5053;-111.3008
+bozeman-mt -> 45.6770;-111.0429
+butte-mt -> 46.0038;-112.5348
+helena-mt -> 46.5891;-112.0391
+cheyenne-wy -> 41.1400;-104.8202
+casper-wy -> 42.8666;-106.3131
+laramie-wy -> 41.3114;-105.5911
+
+# Major Plains States Cities
+oklahoma-city-ok -> 35.4676;-97.5164
+tulsa-ok -> 36.1540;-95.9928
+wichita-ks -> 37.6872;-97.3301
+lincoln-ne -> 40.8136;-96.7026
+sioux-falls-sd -> 43.5446;-96.7311
+fargo-nd -> 46.8772;-96.7898
+bismarck-nd -> 46.8083;-100.7837
+rapid-city-sd -> 44.0805;-103.2310
+topeka-ks -> 39.0473;-95.6752
+overland-park-ks -> 38.9822;-94.6708
+olathe-ks -> 38.8814;-94.8191
+norman-ok -> 35.2226;-97.4395
+broken-arrow-ok -> 36.0526;-95.7909
+lawton-ok -> 34.6036;-98.3959
+edmond-ok -> 35.6528;-97.4781
+
+# Major Mountain States Cities
+salt-lake-city-ut -> 40.7608;-111.8910
+provo-ut -> 40.2338;-111.6585
+west-valley-city-ut -> 40.6916;-112.0011
+west-jordan-ut -> 40.6097;-111.9391
+orem-ut -> 40.2969;-111.6946
+sandy-ut -> 40.5649;-111.8389
+ogden-ut -> 41.2230;-111.9738
+st-george-ut -> 37.0965;-113.5684
+layton-ut -> 41.0602;-111.9711
+taylorsville-ut -> 40.6677;-111.9388
+south-jordan-ut -> 40.5621;-111.9297
+lehi-ut -> 40.3916;-111.8508
+murray-ut -> 40.6668;-111.8880
+draper-ut -> 40.5247;-111.8638
+riverton-ut -> 40.5218;-111.9391
+
+# Additional Major Cities
+anchorage-ak -> 61.2181;-149.9003
+honolulu-hi -> 21.3099;-157.8581
+charleston-wv -> 38.3498;-81.6326
+des-moines-ia -> 41.5868;-93.6250
+davenport-ia -> 41.5236;-90.5776
+cedar-rapids-ia -> 41.9779;-91.6656
+sioux-city-ia -> 42.4999;-96.4003
+fort-wayne-in -> 41.0793;-85.1394
+evansville-in -> 37.9716;-87.5711
+south-bend-in -> 41.6764;-86.2520
+springfield-il -> 39.7817;-89.6501
+peoria-il -> 40.6936;-89.5890
+rockford-il -> 42.2711;-89.0940
+joliet-il -> 41.5250;-88.0817
+naperville-il -> 41.7508;-88.1535
+aurora-il -> 41.7606;-88.3201
+elgin-il -> 42.0372;-88.2812
+lansing-mi -> 42.7325;-84.5555
+ann-arbor-mi -> 42.2808;-83.7430
+flint-mi -> 43.0125;-83.6875
+sterling-heights-mi -> 42.5803;-83.0302
+warren-mi -> 42.5155;-83.0147
+green-bay-wi -> 44.5133;-88.0133
+kenosha-wi -> 42.5847;-87.8212
+racine-wi -> 42.7261;-87.7829
+appleton-wi -> 44.2619;-88.4154
+st-paul-mn -> 44.9537;-93.0900
+rochester-mn -> 44.0121;-92.4802
+duluth-mn -> 46.7867;-92.1005
+bloomington-mn -> 44.8408;-93.2983
+plymouth-mn -> 45.0105;-93.4555
+minnetonka-mn -> 44.9211;-93.4687
+edina-mn -> 44.8897;-93.3499
+st-cloud-mn -> 45.5579;-94.1636

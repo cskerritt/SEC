@@ -1,0 +1,509 @@
+/* Complete Mobile Fixes for All Sections */
+/* This file provides comprehensive mobile formatting fixes */
+
+/* ========================================
+   GLOBAL MOBILE RESET
+======================================== */
+
+@media (max-width: 768px) {
+    /* Reset box model for all elements */
+    * {
+        box-sizing: border-box;
+    }
+    
+    /* Prevent horizontal overflow */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Fix body padding for fixed nav - INCREASED FOR MORE SPACE */
+    body {
+        padding-top: 80px !important;
+    }
+    
+    /* FORCE REMOVE ALL TABLE OF CONTENTS */
+    .toc,
+    .toc__menu,
+    .toc__title,
+    .toc-wrapper,
+    .sidebar__right,
+    .sidebar,
+    nav.toc,
+    aside.sidebar__right,
+    aside.sidebar,
+    aside.toc,
+    .page__toc,
+    .toc__list,
+    [class*="toc"],
+    [class*="table-of-contents"],
+    [class*="sidebar__right"],
+    [id*="toc"],
+    [id*="table-of-contents"],
+    .mobile-toc,
+    .toc-mobile,
+    .table-of-contents,
+    .table-of-contents-mobile {
+        display: none !important;
+        visibility: hidden !important;
+        position: absolute !important;
+        left: -9999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        z-index: -1 !important;
+    }
+    
+    /* Ensure all containers respect mobile width */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+        margin: 0 auto !important;
+        overflow-x: hidden !important;
+    }
+    
+    /* Reset all sections */
+    section {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        padding: 2rem 0 !important;
+    }
+    
+    /* Typography fixes */
+    h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 1rem !important;
+        text-align: center !important;
+    }
+    
+    h3 {
+        font-size: 1.25rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* List fixes */
+    ul, ol {
+        padding-left: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    li {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* ========================================
+   MAIN CONTENT AREA FIXES
+======================================== */
+
+@media (max-width: 768px) {
+    /* Ensure main content starts below nav */
+    main {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+        width: 100% !important;
+    }
+    
+    /* First child of main gets extra padding */
+    main > *:first-child {
+        margin-top: 0 !important;
+        padding-top: 1rem !important;
+    }
+    
+    /* Ensure page content takes full width */
+    .page__content,
+    .page__inner-wrap,
+    article.page {
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+/* ========================================
+   HERO SECTION MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 0 !important;
+        margin-top: 0 !important;
+        text-align: center !important;
+    }
+    
+    .hero-content {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem !important;
+        padding: 0 0.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+        padding: 0 0.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .hero-cta {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+        padding: 0 1rem !important;
+    }
+    
+    .hero-cta .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* ========================================
+   PRACTICE AREAS MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .practice-areas-strip {
+        padding: 1.5rem 0 !important;
+        background: #f9fafb !important;
+    }
+    
+    .practice-areas-chips {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+        padding: 0 !important;
+    }
+    
+    .practice-chip {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        padding: 0.75rem 1rem !important;
+        background: white !important;
+        border: 1px solid #e5e7eb !important;
+        border-radius: 8px !important;
+        text-decoration: none !important;
+        color: #1f2937 !important;
+        font-size: 0.9rem !important;
+        transition: all 0.2s ease !important;
+    }
+    
+    .practice-chip:active {
+        background: #1e3a8a !important;
+        color: white !important;
+        transform: scale(0.98) !important;
+    }
+    
+    .practice-chip .icon {
+        margin-right: 0.5rem !important;
+        font-size: 1.1rem !important;
+    }
+}
+
+/* ========================================
+   SERVICE CARDS MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .services-overview {
+        padding: 2rem 0 !important;
+    }
+    
+    .services-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    .service-card {
+        padding: 1.5rem !important;
+        border-radius: 8px !important;
+        border: 1px solid #e5e7eb !important;
+        background: #f9fafb !important;
+    }
+    
+    .service-card h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .service-card p {
+        font-size: 0.95rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .service-card ul {
+        margin-bottom: 1rem !important;
+    }
+    
+    .service-card li {
+        font-size: 0.9rem !important;
+    }
+    
+    .learn-more {
+        display: inline-block !important;
+        color: #1e3a8a !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+    }
+}
+
+/* ========================================
+   CREDENTIALS SECTION MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .trust-signals {
+        padding: 2rem 0 !important;
+        background: white !important;
+    }
+    
+    .credentials-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    .credential {
+        padding: 1.5rem !important;
+        background: #f9fafb !important;
+        border-radius: 8px !important;
+        border: 1px solid #e5e7eb !important;
+    }
+    
+    .credential h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 1rem !important;
+        color: #1e3a8a !important;
+    }
+    
+    .credential ul {
+        margin: 0 !important;
+        padding-left: 1.25rem !important;
+    }
+    
+    .credential li {
+        font-size: 0.875rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 0.5rem !important;
+    }
+}
+
+/* ========================================
+   LOCATIONS SECTION MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .geographic-coverage {
+        padding: 2rem 0 !important;
+        background: #f9fafb !important;
+    }
+    
+    .locations-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        margin-top: 1.5rem !important;
+    }
+    
+    .location-card {
+        padding: 1.5rem !important;
+        background: white !important;
+        border-radius: 8px !important;
+        border: 1px solid #e5e7eb !important;
+        text-align: left !important;
+    }
+    
+    .location-card h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+        color: #1e3a8a !important;
+    }
+    
+    .location-card p {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.75rem !important;
+        color: #6b7280 !important;
+    }
+    
+    .location-card a {
+        color: #1e3a8a !important;
+        font-weight: 600 !important;
+        font-size: 0.9rem !important;
+        text-decoration: none !important;
+    }
+}
+
+/* ========================================
+   CTA SECTION MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 2.5rem 0 !important;
+        background: #1e3a8a !important;
+        color: white !important;
+        text-align: center !important;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.5rem !important;
+        color: white !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .cta-content p {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+        opacity: 0.9 !important;
+    }
+    
+    .cta-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+    }
+    
+    .cta-buttons .btn {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 0.875rem 1.5rem !important;
+    }
+}
+
+/* ========================================
+   FOOTER MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 2rem 0 1rem !important;
+    }
+    
+    .footer-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .footer-col h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .footer-col ul {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .footer-col li {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .footer-col a {
+        font-size: 0.9rem !important;
+        color: #9ca3af !important;
+        text-decoration: none !important;
+    }
+    
+    .footer-bottom {
+        margin-top: 2rem !important;
+        padding-top: 1.5rem !important;
+        border-top: 1px solid #374151 !important;
+        text-align: center !important;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.875rem !important;
+        color: #9ca3af !important;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+    /* Hide elements on mobile */
+    .desktop-only {
+        display: none !important;
+    }
+    
+    /* Show elements on mobile */
+    .mobile-only {
+        display: block !important;
+    }
+    
+    /* Text alignment */
+    .text-center-mobile {
+        text-align: center !important;
+    }
+    
+    /* Spacing utilities */
+    .mt-0-mobile { margin-top: 0 !important; }
+    .mb-0-mobile { margin-bottom: 0 !important; }
+    .pt-0-mobile { padding-top: 0 !important; }
+    .pb-0-mobile { padding-bottom: 0 !important; }
+}
+
+/* ========================================
+   VERY SMALL DEVICES (max-width: 480px)
+======================================== */
+
+@media (max-width: 480px) {
+    /* Even smaller typography */
+    h1 { font-size: 1.5rem !important; }
+    h2 { font-size: 1.25rem !important; }
+    h3 { font-size: 1.1rem !important; }
+    p, li { font-size: 0.875rem !important; }
+    
+    /* Smaller buttons */
+    .btn {
+        padding: 0.75rem 1.25rem !important;
+        font-size: 0.875rem !important;
+    }
+    
+    /* Tighter spacing */
+    section {
+        padding: 1.5rem 0 !important;
+    }
+    
+    .container {
+        padding: 0 0.75rem !important;
+    }
+}

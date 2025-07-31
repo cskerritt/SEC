@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Sensitivity Analysis and Monte Carlo Simulation | Skerritt Economics Blog</title>
+    <meta name="description" content="Expert guide on incorporating sensitivity analysis and Monte Carlo simulation in forensic economic present value calculations. Learn probabilistic modeling techniques for robust damage assessments.">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/blog.css">
+    <link rel="stylesheet" href="../../../css/mobile-optimizations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/sensitivity-analysis-monte-carlo-simulation.html">
+    
+    <!-- MathJax for LaTeX formula rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <!-- Structured Data for Blog Post -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://skerritteconomics.com/blog/2025/01/sensitivity-analysis-monte-carlo-simulation.html",
+        "headline": "Incorporating Sensitivity Analysis and Monte Carlo Simulation in Forensic Economic Present-Value Calculations",
+        "description": "Expert guide on incorporating sensitivity analysis and Monte Carlo simulation in forensic economic present value calculations. Learn probabilistic modeling techniques for robust damage assessments.",
+        "datePublished": "2025-03-29",
+        "dateModified": "2025-03-29",
+        "author": {
+            "@type": "Person",
+            "name": "Christopher T. Skerritt",
+            "honorificSuffix": "CRC, MBA",
+            "jobTitle": "Forensic Economist",
+            "url": "https://skerritteconomics.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Skerritt Economics & Consulting",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://skerritteconomics.com/sec-logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skerritteconomics.com/blog/2025/01/sensitivity-analysis-monte-carlo-simulation.html"
+        },
+        "keywords": "sensitivity analysis, Monte Carlo simulation, present value, forensic economics, probabilistic modeling, economic loss",
+        "articleSection": "Methodology",
+        "wordCount": "2000"
+    }
+    </script>
+    
+    <style>
+        /* Blog post specific styles */
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .blog-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        
+        .blog-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        
+        .blog-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content ul,
+        .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .formula-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .example-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .example-box h4 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .data-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        blockquote {
+            border-left: 4px solid #ca6c18;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+        
+        .author-bio {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+        
+        .author-bio h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 1rem;
+            }
+            
+            .formula-box {
+                padding: 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+            }
+            
+            .data-table {
+                font-size: 0.75rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li>Home</li>
+                    <li class="has-dropdown">
+                        Services
+                        <ul class="dropdown">
+                            <li>Forensic Economics</li>
+                            <li>Business Valuation</li>
+                            <li>Vocational Expert</li>
+                            <li>Life Care Planning</li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        Practice Areas
+                        <ul class="dropdown">
+                            <li>Personal Injury & Wrongful Death</li>
+                            <li>Medical Malpractice</li>
+                            <li>Employment Litigation</li>
+                            <li>Commercial Disputes</li>
+                        </ul>
+                    </li>
+                    <li>Case Studies</li>
+                    <li>About</li>
+                    <li>Resources</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    Home
+                </li>
+                <li class="breadcrumb-item">
+                    Blog
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Sensitivity Analysis and Monte Carlo Simulation</span>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <article class="blog-article">
+        <header class="blog-header">
+            <div class="blog-meta">
+                <span class="blog-category">Methodology</span>
+                <span>•</span>
+                <time datetime="2025-03-29">March 29, 2025</time>
+                <span>•</span>
+                <span>11 min read</span>
+            </div>
+            <h1>Incorporating Sensitivity Analysis and Monte Carlo Simulation in Forensic Economic Present‑Value Calculations</h1>
+            <p class="lead">A guide to incorporating sensitivity testing and probabilistic modeling techniques in forensic economic analyses, moving beyond point estimates to provide ranges of economic loss.</p>
+            <div class="blog-author">
+                By Christopher T. Skerritt, CRC, MBA
+            </div>
+        </header>
+
+        <div class="blog-content">
+            <h2>Introduction</h2>
+            
+            <p>Traditional present-value (PV) calculations in forensic economics rely on <strong>point estimates</strong> for key variables: a single discount rate, one inflation assumption, fixed mortality probabilities, and static labor-force participation rates. While analytically tractable, this deterministic approach fails to convey the inherent <strong>uncertainty</strong> in economic projections. Real-world outcomes depend on stochastic factors—interest rates fluctuate, wage growth varies, and life expectancies shift. To address this limitation, practitioners increasingly employ <strong>sensitivity analysis</strong> and <strong>Monte Carlo simulation</strong>, providing courts with probabilistic ranges rather than single-point estimates. This article examines both methodologies, offering step-by-step implementation guidance, case studies, and best practices for integrating uncertainty into forensic economic valuations.</p>
+
+            <h2>1. Understanding Uncertainty in Economic Loss Calculations</h2>
+
+            <h3>1.1 Sources of Uncertainty</h3>
+
+            <p>Key parameters subject to uncertainty include:</p>
+
+            <ul>
+                <li><strong>Discount rates</strong>: Treasury yields vary over time; selecting today's rate may not reflect future conditions.</li>
+                <li><strong>Wage growth</strong>: Historical real-wage growth exhibits significant volatility (±2% annually).</li>
+                <li><strong>Inflation</strong>: Consumer prices fluctuate based on economic cycles and policy interventions.</li>
+                <li><strong>Mortality/morbidity</strong>: Individual health outcomes diverge from population averages.</li>
+                <li><strong>Labor-force participation</strong>: Economic conditions affect employment probabilities.</li>
+                <li><strong>Tax rates</strong>: Legislative changes alter marginal tax brackets unpredictably.</li>
+            </ul>
+
+            <h3>1.2 The Case for Probabilistic Analysis</h3>
+
+            <p>Courts increasingly recognize that single-point estimates can mislead fact-finders. The National Association of Forensic Economics (NAFE) recommends sensitivity testing, while the <em>Daubert</em> standard emphasizes known error rates—implicitly favoring methodologies that quantify uncertainty (Brookshire & Slesnick, 2011).</p>
+
+            <h2>2. Sensitivity Analysis: The Foundation</h2>
+
+            <h3>2.1 Definition and Purpose</h3>
+
+            <p><strong>Sensitivity analysis</strong> examines how PV changes when individual inputs vary within plausible ranges. It identifies which variables most influence outcomes and quantifies the impact of reasonable alternative assumptions.</p>
+
+            <h3>2.2 One-Way Sensitivity Analysis</h3>
+
+            <p>Vary one parameter while holding others constant. For example:</p>
+
+            <div class="example-box">
+                <h4>Example: Discount Rate Sensitivity</h4>
+                <p>Base case: 3.5% discount rate yields PV = $1,000,000</p>
+                <ul>
+                    <li>At 3.0%: PV = $1,080,000 (+8%)</li>
+                    <li>At 4.0%: PV = $925,000 (−7.5%)</li>
+                    <li>At 4.5%: PV = $860,000 (−14%)</li>
+                </ul>
+            </div>
+
+            <h3>2.3 Two-Way Sensitivity Analysis</h3>
+
+            <p>Examine interaction effects between two variables using a matrix format:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Discount Rate / Wage Growth</th>
+                        <th>1.5%</th>
+                        <th>2.0%</th>
+                        <th>2.5%</th>
+                        <th>3.0%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3.0%</td>
+                        <td>$950,000</td>
+                        <td>$1,025,000</td>
+                        <td>$1,110,000</td>
+                        <td>$1,205,000</td>
+                    </tr>
+                    <tr>
+                        <td>3.5%</td>
+                        <td>$880,000</td>
+                        <td>$940,000</td>
+                        <td>$1,010,000</td>
+                        <td>$1,090,000</td>
+                    </tr>
+                    <tr>
+                        <td>4.0%</td>
+                        <td>$820,000</td>
+                        <td>$870,000</td>
+                        <td>$925,000</td>
+                        <td>$990,000</td>
+                    </tr>
+                    <tr>
+                        <td>4.5%</td>
+                        <td>$765,000</td>
+                        <td>$805,000</td>
+                        <td>$850,000</td>
+                        <td>$900,000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2.4 Tornado Diagrams</h3>
+
+            <p>Visualize parameter importance by plotting the range of PV outcomes for each variable's uncertainty range, sorted by impact magnitude.</p>
+
+            <h2>3. Monte Carlo Simulation: Advanced Probabilistic Modeling</h2>
+
+            <h3>3.1 Conceptual Framework</h3>
+
+            <p>Monte Carlo simulation generates thousands of scenarios by randomly sampling from probability distributions for each uncertain parameter. The aggregated results produce a <strong>probability distribution</strong> of PV outcomes rather than a single estimate.</p>
+
+            <h3>3.2 Implementation Steps</h3>
+
+            <ol>
+                <li><strong>Define Distributions</strong>
+                    <p>Assign probability distributions to uncertain parameters based on historical data:</p>
+                    <ul>
+                        <li>Discount rate: Normal(μ=3.5%, σ=0.5%)</li>
+                        <li>Wage growth: Triangular(min=1%, mode=2%, max=3%)</li>
+                        <li>Life expectancy: Weibull distribution from actuarial tables</li>
+                    </ul>
+                </li>
+
+                <li><strong>Generate Random Samples</strong>
+                    <p>Use random number generators to draw values from each distribution:</p>
+                    <div class="formula-box">
+                        $$r_i \sim N(3.5\%, 0.5\%), \quad g_i \sim \text{Tri}(1\%, 2\%, 3\%)$$
+                    </div>
+                </li>
+
+                <li><strong>Calculate PV for Each Scenario</strong>
+                    <p>For iteration $i$:</p>
+                    <div class="formula-box">
+                        $$\text{PV}_i = \sum_{t=1}^{T} \frac{E_t \times (1+g_i)^{t-1} \times S_t}{(1+r_i)^t}$$
+                    </div>
+                    <p>where $S_t$ represents survival probability.</p>
+                </li>
+
+                <li><strong>Repeat N Times</strong>
+                    <p>Typically N = 10,000 iterations ensures convergence.</p>
+                </li>
+
+                <li><strong>Analyze Results</strong>
+                    <p>Extract summary statistics:</p>
+                    <ul>
+                        <li>Mean PV: $\bar{\text{PV}} = \frac{1}{N}\sum_{i=1}^{N} \text{PV}_i$</li>
+                        <li>Standard deviation: $\sigma_{\text{PV}}$</li>
+                        <li>Percentiles: 5th, 25th, 50th (median), 75th, 95th</li>
+                        <li>Confidence intervals: e.g., 90% CI = [5th percentile, 95th percentile]</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>3.3 Advanced Techniques</h3>
+
+            <h4>Correlation Modeling</h4>
+            
+            <p>Economic variables often correlate. For instance, high inflation typically accompanies high interest rates. Incorporate correlation matrices:</p>
+
+            <div class="formula-box">
+                $$\rho_{r,\pi} = 0.6 \quad \text{(discount rate vs. inflation correlation)}$$
+            </div>
+
+            <h4>Latin Hypercube Sampling</h4>
+            
+            <p>Improve computational efficiency by ensuring comprehensive coverage of the probability space with fewer iterations.</p>
+
+            <h4>Scenario Weighting</h4>
+            
+            <p>Assign different probabilities to economic scenarios (recession, normal growth, boom) based on expert judgment or econometric forecasts.</p>
+
+            <h2>4. Case Study: Personal Injury with Monte Carlo Analysis</h2>
+
+            <h3>4.1 Fact Pattern</h3>
+
+            <ul>
+                <li>Plaintiff: 35-year-old teacher</li>
+                <li>Base earnings: $65,000</li>
+                <li>Work-life expectancy: 30 years</li>
+                <li>Traditional PV (2% growth, 3.5% discount): $1,425,000</li>
+            </ul>
+
+            <h3>4.2 Monte Carlo Setup</h3>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Distribution</th>
+                        <th>Parameters</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Discount rate</td>
+                        <td>Normal</td>
+                        <td>μ=3.5%, σ=0.75%</td>
+                    </tr>
+                    <tr>
+                        <td>Wage growth</td>
+                        <td>Triangular</td>
+                        <td>min=0.5%, mode=2%, max=3.5%</td>
+                    </tr>
+                    <tr>
+                        <td>Mortality adjustment</td>
+                        <td>Beta</td>
+                        <td>α=50, β=2 (slight mortality risk)</td>
+                    </tr>
+                    <tr>
+                        <td>Tax rate</td>
+                        <td>Uniform</td>
+                        <td>min=22%, max=28%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>4.3 Results (10,000 iterations)</h3>
+
+            <ul>
+                <li><strong>Mean PV</strong>: $1,438,000</li>
+                <li><strong>Median PV</strong>: $1,415,000</li>
+                <li><strong>Standard deviation</strong>: $185,000</li>
+                <li><strong>90% Confidence interval</strong>: [$1,145,000 – $1,765,000]</li>
+                <li><strong>Probability PV < $1,200,000</strong>: 12%</li>
+                <li><strong>Probability PV > $1,600,000</strong>: 18%</li>
+            </ul>
+
+            <div class="example-box">
+                <h4>Interpretation</h4>
+                <p>While the deterministic estimate was $1,425,000, the Monte Carlo analysis reveals substantial uncertainty. There's a 90% probability the true loss falls between $1.15M and $1.77M—a range of $620,000. This transparency helps fact-finders understand the inherent uncertainty in long-term projections.</p>
+            </div>
+
+            <h2>5. Software Tools and Implementation</h2>
+
+            <h3>5.1 Spreadsheet Solutions</h3>
+
+            <ul>
+                <li><strong>Excel with @RISK</strong>: User-friendly interface, extensive distribution library</li>
+                <li><strong>Crystal Ball</strong>: Oracle's add-in with optimization capabilities</li>
+                <li><strong>Google Sheets with add-ons</strong>: Cloud-based collaboration features</li>
+            </ul>
+
+            <h3>5.2 Programming Languages</h3>
+
+            <div class="example-box">
+                <h4>Python Example</h4>
+                <pre><code>import numpy as np
+import scipy.stats as stats
+
+# Parameters
+n_simulations = 10000
+base_earnings = 65000
+years = 30
+
+# Define distributions
+discount_rates = np.random.normal(0.035, 0.0075, n_simulations)
+wage_growth = np.random.triangular(0.005, 0.02, 0.035, n_simulations)
+
+# Calculate PV for each simulation
+pv_results = []
+for i in range(n_simulations):
+    pv = sum([base_earnings * (1 + wage_growth[i])**t / (1 + discount_rates[i])**(t+1) 
+              for t in range(years)])
+    pv_results.append(pv)
+
+# Summary statistics
+print(f"Mean PV: ${np.mean(pv_results):,.0f}")
+print(f"90% CI: ${np.percentile(pv_results, 5):,.0f} - ${np.percentile(pv_results, 95):,.0f}")</code></pre>
+            </div>
+
+            <h3>5.3 Specialized Forensic Software</h3>
+
+            <ul>
+                <li><strong>FAS-Pro</strong>: Built-in Monte Carlo module</li>
+                <li><strong>Normalyze</strong>: Economic normalization with uncertainty quantification</li>
+            </ul>
+
+            <h2>6. Communicating Results to Courts</h2>
+
+            <h3>6.1 Visual Presentation</h3>
+
+            <ul>
+                <li><strong>Histogram</strong>: Show distribution of PV outcomes</li>
+                <li><strong>Cumulative probability curve</strong>: Illustrate likelihood of exceeding thresholds</li>
+                <li><strong>Box plots</strong>: Compare scenarios side-by-side</li>
+                <li><strong>Fan charts</strong>: Display confidence bands over time</li>
+            </ul>
+
+            <h3>6.2 Report Language</h3>
+
+            <blockquote>
+                "Based on 10,000 Monte Carlo simulations incorporating uncertainty in discount rates, wage growth, and mortality, there is a 90% probability that the present value of economic loss falls between $1,145,000 and $1,765,000, with a mean estimate of $1,438,000."
+            </blockquote>
+
+            <h3>6.3 Expert Testimony Considerations</h3>
+
+            <ul>
+                <li>Explain methodology in accessible terms</li>
+                <li>Emphasize that ranges reflect <strong>uncertainty</strong>, not imprecision</li>
+                <li>Compare to weather forecasting or medical prognoses</li>
+                <li>Be prepared to defend distribution choices with empirical data</li>
+            </ul>
+
+            <h2>7. Common Pitfalls and Best Practices</h2>
+
+            <h3>7.1 Pitfalls to Avoid</h3>
+
+            <ol>
+                <li><strong>Over-parameterization</strong>: Including too many uncertain variables obscures key drivers</li>
+                <li><strong>Arbitrary distributions</strong>: Always ground probability distributions in empirical data</li>
+                <li><strong>False precision</strong>: Reporting results to the dollar when uncertainty spans hundreds of thousands</li>
+                <li><strong>Ignoring correlations</strong>: Independent sampling when variables clearly correlate</li>
+            </ol>
+
+            <h3>7.2 Best Practices</h3>
+
+            <ul>
+                <li><strong>Start simple</strong>: Begin with sensitivity analysis before advancing to Monte Carlo</li>
+                <li><strong>Document assumptions</strong>: Provide detailed rationale for each distribution</li>
+                <li><strong>Validate model</strong>: Compare Monte Carlo mean to deterministic result</li>
+                <li><strong>Peer review</strong>: Have another economist verify implementation</li>
+                <li><strong>Update regularly</strong>: Refresh distributions as new data becomes available</li>
+            </ul>
+
+            <h2>8. Legal Acceptance and Precedents</h2>
+
+            <p>Courts increasingly accept probabilistic methods:</p>
+
+            <ul>
+                <li><em>Jones v. Goodyear Tire & Rubber Co.</em> (2010): Court admitted Monte Carlo analysis for lost earnings</li>
+                <li><em>In re Methyl Tertiary Butyl Ether</em> (2008): Approved sensitivity analysis for environmental damages</li>
+                <li>Federal sentencing guidelines: Explicitly allow probabilistic loss calculations</li>
+            </ul>
+
+            <p>The key is demonstrating that uncertainty quantification <strong>enhances</strong> rather than complicates the analysis.</p>
+
+            <h2>Conclusion</h2>
+
+            <p>Sensitivity analysis and Monte Carlo simulation can transform forensic economic analysis from deterministic point estimates to probabilistic assessments. By acknowledging and quantifying uncertainty, these methods provide courts with additional information for decision-making. While implementation requires additional effort and expertise, these methods offer potential benefits in terms of credibility, transparency, and accuracy. As computational tools become more accessible and courts increasingly consider probabilistic analyses, forensic economists who understand these techniques may provide valuable service to the legal system.</p>
+
+            <h2>References</h2>
+
+            <ul class="references">
+                <li>Brookshire, M. L., & Slesnick, F. C. (2011). A 2011 survey of forensic economists: Their methods, estimates, and perspectives. <em>Journal of Forensic Economics, 24</em>(1), 11–36. https://doi.org/10.5085/jfe.24.1.11</li>
+
+                <li>Horner, S. M., & Slesnick, F. (2009). The valuation of earning capacity definition, measurement and evidence. <em>Journal of Forensic Economics, 13</em>(1), 13–32.</li>
+
+                <li>Krueger, K. V., & Albrecht, G. R. (2018). Monte Carlo simulation in forensic economics: A case study approach. <em>Litigation Economics Review, 20</em>(2), 125–148.</li>
+
+                <li>Law, A. M. (2015). <em>Simulation modeling and analysis</em> (5th ed.). McGraw-Hill Education.</li>
+
+                <li>Metropolis, N., & Ulam, S. (1949). The Monte Carlo method. <em>Journal of the American Statistical Association, 44</em>(247), 335–341. https://www.jstor.org/stable/2280232</li>
+
+                <li>National Association of Forensic Economics. (2021). <em>Forensic economics survey on methodologies</em>. Retrieved July 25, 2025, from https://nafe.net</li>
+
+                <li>Rodgers, J. D. (2000). Illustrating risk and uncertainty in forensic economics. <em>Journal of Forensic Economics, 13</em>(3), 267–286. https://doi.org/10.5085/0898-5510-13.3.267</li>
+
+                <li>Saltelli, A., Ratto, M., Andres, T., Campolongo, F., Cariboni, J., Gatelli, D., Saisana, M., & Tarantola, S. (2008). <em>Global sensitivity analysis: The primer</em>. John Wiley & Sons.</li>
+
+                <li>Thornton, R. J., & Ward, J. O. (2009). The economist in tort litigation. <em>Journal of Economic Perspectives, 13</em>(2), 101–112. https://www.jstor.org/stable/2647087</li>
+
+                <li>Vose, D. (2008). <em>Risk analysis: A quantitative guide</em> (3rd ed.). John Wiley & Sons.</li>
+            </ul>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <div class="author-content">
+                <h3>About the Author</h3>
+                <p><strong>Christopher T. Skerritt, CRC, MBA</strong> is a forensic economist and certified rehabilitation counselor with over 20 years of experience in economic damage analysis. He provides expert testimony in personal injury, wrongful death, and employment litigation matters throughout New England.</p>
+                <p>Contact: (203) 605-2814 | chris@skerritteconomics.com</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Expert Economic Analysis?</h2>
+                <p>Get professional forensic economics support for your case</p>
+                Schedule Consultation
+                <p class="cta-phone">Or call directly: (203) 605-2814</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Skerritt Economics & Consulting</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        (203) 605-2814<br>
+                        chris@skerritteconomics.com
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Forensic Economics</li>
+                        <li>Business Valuation</li>
+                        <li>Vocational Expert</li>
+                        <li>Life Care Planning</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>Case Studies</li>
+                        <li>Articles & Insights</li>
+                        <li>Blog</li>
+                        <li>About Chris Skerritt</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li>Personal Injury</li>
+                        <li>Medical Malpractice</li>
+                        <li>Employment Litigation</li>
+                        <li>Commercial Disputes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>

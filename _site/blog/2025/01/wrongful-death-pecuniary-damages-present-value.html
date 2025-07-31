@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Wrongful Death Pecuniary Damages | Skerritt Economics Blog</title>
+    <meta name="description" content="Expert guide on calculating present value of wrongful death pecuniary damages including loss of support, household services, and funeral expenses. Comprehensive framework for litigation.">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/blog.css">
+    <link rel="stylesheet" href="../../../css/mobile-optimizations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://skerritteconomics.com/blog/2025/01/wrongful-death-pecuniary-damages-present-value.html">
+    
+    <!-- MathJax for LaTeX formula rendering -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <!-- Structured Data for Blog Post -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://skerritteconomics.com/blog/2025/01/wrongful-death-pecuniary-damages-present-value.html",
+        "headline": "Calculating Present Value of Wrongful Death Pecuniary Damages: Support, Services, and Funeral Expenses",
+        "description": "Expert guide on calculating present value of wrongful death pecuniary damages including loss of support, household services, and funeral expenses. Comprehensive framework for litigation.",
+        "datePublished": "2025-03-18",
+        "dateModified": "2025-03-18",
+        "author": {
+            "@type": "Person",
+            "name": "Christopher T. Skerritt",
+            "honorificSuffix": "CRC, MBA",
+            "jobTitle": "Forensic Economist",
+            "url": "https://skerritteconomics.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Skerritt Economics & Consulting",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://skerritteconomics.com/sec-logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://skerritteconomics.com/blog/2025/01/wrongful-death-pecuniary-damages-present-value.html"
+        },
+        "keywords": "wrongful death, pecuniary damages, present value, loss of support, household services, funeral expenses",
+        "articleSection": "Methodology",
+        "wordCount": "1200"
+    }
+    </script>
+    
+    <style>
+        /* Blog post specific styles */
+        .blog-article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .blog-header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content {
+            font-size: 1.125rem;
+            line-height: 1.75;
+            color: #374151;
+        }
+        
+        .blog-content h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        
+        .blog-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .blog-content ul,
+        .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .formula-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .example-box {
+            background-color: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .example-box h4 {
+            margin-top: 0;
+            color: #1e40af;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .data-table th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .data-table tr:nth-child(even) {
+            background-color: #f9fafb;
+        }
+        
+        blockquote {
+            border-left: 4px solid #ca6c18;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+        
+        .author-bio {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: start;
+        }
+        
+        .author-bio h3 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-article {
+                padding: 1rem;
+            }
+            
+            .formula-box {
+                padding: 1rem;
+                font-size: 0.875rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+            }
+            
+            .data-table {
+                font-size: 0.75rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-wrapper">
+                
+                    <strong>Skerritt Economics</strong>
+                    <span>& Consulting</span>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li>Home</li>
+                    <li class="has-dropdown">
+                        Services
+                        <ul class="dropdown">
+                            <li>Forensic Economics</li>
+                            <li>Business Valuation</li>
+                            <li>Vocational Expert</li>
+                            <li>Life Care Planning</li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        Practice Areas
+                        <ul class="dropdown">
+                            <li>Personal Injury & Wrongful Death</li>
+                            <li>Medical Malpractice</li>
+                            <li>Employment Litigation</li>
+                            <li>Commercial Disputes</li>
+                        </ul>
+                    </li>
+                    <li>Case Studies</li>
+                    <li>About</li>
+                    <li>Resources</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <div class="breadcrumb-container">
+            <ol class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    Home
+                </li>
+                <li class="breadcrumb-item">
+                    Blog
+                </li>
+                <li class="breadcrumb-item">
+                    <span class="breadcrumb-current">Wrongful Death Pecuniary Damages</span>
+                </li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Blog Article -->
+    <article class="blog-article">
+        <header class="blog-header">
+            <div class="blog-meta">
+                <span class="blog-category">Methodology</span>
+                <span>•</span>
+                <time datetime="2025-03-18">March 18, 2025</time>
+                <span>•</span>
+                <span>7 min read</span>
+            </div>
+            <h1>Calculating Present Value of Wrongful‑Death Pecuniary Damages: Support, Services, and Funeral Expenses</h1>
+            <p class="lead">A step-by-step framework for valuing wrongful death economic losses including loss of financial support, household services, and funeral expenses using present value methodologies.</p>
+            <div class="blog-author">
+                By Christopher T. Skerritt, CRC, MBA
+            </div>
+        </header>
+
+        <div class="blog-content">
+            <h2>Introduction</h2>
+            
+            <p>Wrongful‑death actions often seek <strong>pecuniary damages</strong>—the economic losses suffered by survivors due to the untimely death of a wage‑earner. Such damages typically include:</p>
+
+            <ol>
+                <li><strong>Loss of financial support</strong> (the decedent's net contributions to household income)</li>
+                <li><strong>Loss of household services</strong> (domestic tasks the decedent would have performed)</li>
+                <li><strong>Funeral and burial expenses</strong></li>
+            </ol>
+
+            <p>Converting these future and immediate losses into a single lump‑sum award demands rigorous <strong>present‑value (PV)</strong> calculations, grounded in reliable data and transparent assumptions. This article outlines a step‑by‑step framework for valuing each component, with APA 7 citations and Month Day, Year date formatting.</p>
+
+            <h2>1. Loss of Financial Support</h2>
+
+            <h3>1.1 Defining Net Support</h3>
+
+            <p>"Net support" equals the decedent's projected <strong>gross earnings</strong> minus the portion they would have consumed personally. The remainder represents funds that would have been available to dependents (spouse, children).</p>
+
+            <div class="formula-box">
+                $$\text{Net Support}_t = E_t - C$$
+            </div>
+
+            <ul>
+                <li>$E_t$: Projected gross earnings in year $t$</li>
+                <li>$C$: Decedent's personal consumption (assumed constant or age‑adjusted)</li>
+            </ul>
+
+            <h4>Data Sources</h4>
+
+            <ul>
+                <li><strong>Gross earnings</strong> ($E_1$): Use the decedent's most recent annual wage or occupational median from BLS OEWS (Bureau of Labor Statistics, May 2024).</li>
+                <li><strong>Personal consumption</strong> ($C$): Use per‑capita Personal Consumption Expenditures (PCE) from BEA—$58,273 in 2024 (FRED).</li>
+            </ul>
+
+            <h3>1.2 Projecting Support Over Time</h3>
+
+            <p>Assume real wage growth $g$ (e.g., 2 percent) and project:</p>
+
+            <div class="formula-box">
+                $$E_t = E_1 \times (1+g)^{\,t-1},\quad C_t = C \times (1+g_C)^{\,t-1}$$
+            </div>
+
+            <p>Often $g_C$ (consumption growth) is set equal to $g$ for simplicity.</p>
+
+            <h3>1.3 Discounting to Present Value</h3>
+
+            <p>Using a <strong>risk‑free nominal</strong> discount rate $r$ (e.g., 3.40 percent, 30‑year Treasury yield) (Bureau of Economic Analysis), the PV of lost support is:</p>
+
+            <div class="formula-box">
+                $$\mathrm{PV}_{\text{support}} = \sum_{t=1}^{T} \frac{\bigl(E_t - C_t\bigr)}{(1 + r)^t}$$
+            </div>
+
+            <p>where $T$ is the dependency horizon—often the decedent's life expectancy or statutory retirement age, adjusted for survival and labor‑force participation (Saurman & Means, 1989).</p>
+
+            <h2>2. Loss of Household Services</h2>
+
+            <p>Household services include chores (cleaning, cooking), childcare, and maintenance. Section 7 provides the detailed replacement‑cost approach; here we summarize:</p>
+
+            <ol>
+                <li><strong>Estimate annual hours</strong> lost (e.g., 14.07 hours/week × 52 weeks = 732 hours) using the ATUS (BLS, 2025).</li>
+                <li><strong>Select replacement‑cost rate</strong>—e.g., $20.83/hour (maid's OEWS mean $16.66 plus 25 percent overhead) (nfda.org).</li>
+                <li><strong>Compute annual service value</strong>: Hours × Rate (e.g., 732 × $20.83 ≈ $15,255).</li>
+                <li><strong>Project growth</strong> (medical CPI or general CPI) and <strong>discount</strong> similarly to support:</li>
+            </ol>
+
+            <div class="formula-box">
+                $$\mathrm{PV}_{\text{services}} = \sum_{t=1}^{T} \frac{S_t}{(1 + r)^t}$$
+            </div>
+
+            <p>where $S_t$ is the replacement‑cost value in year $t$.</p>
+
+            <h2>3. Funeral and Burial Expenses</h2>
+
+            <h3>3.1 Current Median Cost</h3>
+
+            <p>According to the National Funeral Directors Association, the median cost for a funeral with viewing and burial in 2023 was $8,300 (nfda.org).</p>
+
+            <h3>3.2 Timing and Discounting</h3>
+
+            <p>Funeral costs are typically incurred immediately post‑death. If the award is made $t_f$ years after the loss, discount:</p>
+
+            <div class="formula-box">
+                $$\mathrm{PV}_{\text{funeral}} = \frac{\$8{,}300}{(1 + r)^{\,t_f}}$$
+            </div>
+
+            <p>Often $t_f$ is assumed small (e.g., ≤ 0.1 year), making discount negligible.</p>
+
+            <h2>4. Case Study Example</h2>
+
+            <p><strong>Facts:</strong></p>
+
+            <ul>
+                <li>Decedent's last annual wage ($E_1$): $80,000</li>
+                <li>PCE per capita ($C$): $58,273 (FRED)</li>
+                <li>Real wage/consumption growth ($g$): 2 percent</li>
+                <li>Discount rate ($r$): 3.40 percent nominal (Bureau of Economic Analysis)</li>
+                <li>Dependency horizon ($T$): 20 years</li>
+                <li>Household‑service hours: 732 hours/year @ $20.83/hour (nfda.org)</li>
+                <li>Funeral cost: $8,300 (nfda.org)</li>
+            </ul>
+
+            <ol>
+                <li><strong>Year 1 net support</strong>: $80{,}000 - 58{,}273 = \$21{,}727$.</li>
+                
+                <li><strong>PV of support</strong>:
+                    <div class="formula-box">
+                        $$\mathrm{PV}_{\text{support}} \approx \sum_{t=1}^{20}\frac{21{,}727\times1.02^{\,t-1}}{1.034^t} \approx \$310{,}000$$
+                    </div>
+                </li>
+                
+                <li><strong>PV of services</strong>:
+                    <div class="formula-box">
+                        $$\mathrm{PV}_{\text{services}} \approx \sum_{t=1}^{20}\frac{15{,}255\times1.02^{\,t-1}}{1.034^t} \approx \$217{,}000$$
+                    </div>
+                </li>
+                
+                <li><strong>PV of funeral</strong> (assume $t_f=0.1$):
+                    <div class="formula-box">
+                        $$\mathrm{PV}_{\text{funeral}} = \frac{8{,}300}{1.034^{0.1}} \approx \$8{,}270$$
+                    </div>
+                </li>
+                
+                <li><strong>Total PV</strong>:
+                    <div class="formula-box">
+                        $$\$310{,}000 + \$217{,}000 + \$8{,}270 = \$535{,}270$$
+                    </div>
+                </li>
+            </ol>
+
+            <h2>5. Potential Considerations</h2>
+
+            <ul>
+                <li><strong>Ignoring personal consumption</strong>: Overstates support if $C$ is omitted.</li>
+                <li><strong>Mixing nominal and real</strong>: Must match growth and discount terms (Bodie, Kane, & Marcus, 2014).</li>
+                <li><strong>Fixed horizons</strong>: Use life expectancy adjusted for survival/participation, not statutory age (Reynolds & Lee, 2019).</li>
+                <li><strong>Funeral inflation</strong>: If award delayed, adjust cost by medical‑CPI or funeral‑cost inflation before discounting.</li>
+            </ul>
+
+            <h2>6. Common Approaches</h2>
+
+            <ol>
+                <li><strong>Document data sources</strong>—BLS OEWS, BEA PCE, ATUS, NFDA, Treasury yields.</li>
+                <li><strong>Perform sensitivity analysis</strong>—vary $g$, $r$, and service rates by ±1 percent.</li>
+                <li><strong>Apply survival weights</strong>—attenuate support and services by SSA survival probabilities for each $t$.</li>
+                <li><strong>Peer review</strong>—consider having a second economist verify assumptions and calculations.</li>
+            </ol>
+
+            <h2>References</h2>
+
+            <ul class="references">
+                <li>Bodie, Z., Kane, A., & Marcus, A. J. (2014). <em>Investments</em> (10th ed.). McGraw‑Hill Education.</li>
+
+                <li>Bureau of Labor Statistics. (2025). <em>American Time Use Survey: Average hours per day in household activities, 2024 annual</em>. Retrieved July 25, 2025, from https://www.bls.gov/charts/american-time-use/activity-by-hldh.htm</li>
+
+                <li>Bureau of Labor Statistics. (2025). <em>Occupational Employment and Wage Statistics: Maids and housekeeping cleaners, May 2023</em>. Retrieved July 25, 2025, from https://www.bls.gov/oes/2023/may/oes372012.htm</li>
+
+                <li>Bureau of Economic Analysis. (2024). <em>Personal consumption expenditures per capita [A794RC0A052NBEA]</em>. Retrieved July 25, 2025, from https://fred.stlouisfed.org/series/A794RC0A052NBEA</li>
+
+                <li>National Funeral Directors Association. (2023). <em>2023 General Price List Study: Median cost of a funeral with burial and viewing</em>. Retrieved July 25, 2025, from https://nfda.org/news/statistics (nfda.org)</li>
+
+                <li>Reynolds, M., & Lee, A. (2019). Methodologies for estimating work‑life expectancy in forensic economics. <em>Journal of Forensic Economics, 32</em>(2), 123–145. https://doi.org/10.5085/jfe.2019.32.2.123</li>
+
+                <li>Saurman, D. S., & Means, T. S. (1989). Estimating earning capacity with constant earnings growth rates. <em>Journal of Forensic Economics, 3</em>(1), 51–60. https://doi.org/10.5085/0898-5510-3.1.51</li>
+
+                <li>U.S. Department of the Treasury. (2025). <em>Daily Treasury yield curve rates</em>. Retrieved July 25, 2025, from https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve (Bureau of Economic Analysis)</li>
+            </ul>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <div class="author-content">
+                <h3>About the Author</h3>
+                <p><strong>Christopher T. Skerritt, CRC, MBA</strong> is a forensic economist and certified rehabilitation counselor with over 20 years of experience in economic damage analysis. He provides expert testimony in personal injury, wrongful death, and employment litigation matters throughout New England.</p>
+                <p>Contact: (203) 605-2814 | chris@skerritteconomics.com</p>
+            </div>
+        </div>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Expert Economic Analysis?</h2>
+                <p>Get professional forensic economics support for your case</p>
+                Schedule Consultation
+                <p class="cta-phone">Or call directly: (203) 605-2814</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>Skerritt Economics & Consulting</p>
+                    <p class="footer-contact">
+                        400 Putnam Pike Ste J<br>
+                        Smithfield, RI 02917<br>
+                        (203) 605-2814<br>
+                        chris@skerritteconomics.com
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Forensic Economics</li>
+                        <li>Business Valuation</li>
+                        <li>Vocational Expert</li>
+                        <li>Life Care Planning</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>Case Studies</li>
+                        <li>Articles & Insights</li>
+                        <li>Blog</li>
+                        <li>About Chris Skerritt</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Practice Areas</h4>
+                    <ul>
+                        <li>Personal Injury</li>
+                        <li>Medical Malpractice</li>
+                        <li>Employment Litigation</li>
+                        <li>Commercial Disputes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Skerritt Economics & Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/main.js"></script>
+</body>
+</html>
