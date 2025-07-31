@@ -9,45 +9,71 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 {% seo %}
 
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNK2QCYSC7"></script>
+<!-- Google Analytics 4 - Optimized Loading -->
 <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-JNK2QCYSC7', {
-            'custom_map': {'custom_parameter_1': 'consultation_requests'}
-        });
-        
-        // Track phone clicks
-        function trackPhoneClick() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'phone_call', {
-                    'event_category': 'engagement',
-                    'event_label': 'phone_number_click'
-                });
-            }
+    // Minimal GA initialization
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    
+    // Track phone clicks
+    function trackPhoneClick() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'phone_call', {
+                'event_category': 'engagement',
+                'event_label': 'phone_number_click'
+            });
         }
-        
-        // Track email clicks
-        function trackEmailClick() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'email_click', {
-                    'event_category': 'engagement',
-                    'event_label': 'email_address_click'
-                });
-            }
+    }
+    
+    // Track email clicks
+    function trackEmailClick() {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'email_click', {
+                'event_category': 'engagement',
+                'event_label': 'email_address_click'
+            });
         }
-        
-        // Track form submissions
-        function trackFormSubmission(formType) {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submission', {
-                    'event_category': 'conversion',
-                    'event_label': formType
-                });
-            }
+    }
+    
+    // Track form submissions
+    function trackFormSubmission(formType) {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submission', {
+                'event_category': 'conversion',
+                'event_label': formType
+            });
         }
+    }
+    
+    // Delay GA loading until after page load or user interaction
+    let gaLoaded = false;
+    function loadGoogleAnalytics() {
+        if (!gaLoaded) {
+            gaLoaded = true;
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-JNK2QCYSC7';
+            script.onload = function() {
+                gtag('js', new Date());
+                gtag('config', 'G-JNK2QCYSC7', {
+                    'custom_map': {'custom_parameter_1': 'consultation_requests'}
+                });
+            };
+            document.head.appendChild(script);
+        }
+    }
+    
+    // Load GA on user interaction or after 3 seconds
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGoogleAnalytics, { timeout: 3000 });
+    } else {
+        setTimeout(loadGoogleAnalytics, 3000);
+    }
+    
+    // Also load on first user interaction
+    ['click', 'scroll', 'touchstart'].forEach(event => {
+        window.addEventListener(event, loadGoogleAnalytics, { once: true, passive: true });
+    });
 </script>
 
 <!-- Structured Data -->

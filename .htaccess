@@ -74,6 +74,12 @@
         Header set Cache-Control "max-age=31536000, public, immutable"
     </FilesMatch>
     
+    # Specific cache headers for minified files with version parameters
+    <FilesMatch "\.min\.(css|js)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+        Header set Expires "Thu, 31 Dec 2037 23:55:55 GMT"
+    </FilesMatch>
+    
     # Disable caching for dynamic content
     <FilesMatch "\.(html|htm|php)$">
         Header set Cache-Control "no-cache, no-store, must-revalidate"
@@ -165,4 +171,6 @@ ErrorDocument 500 /500.html
     # Enable HTTP/2 Server Push for critical resources
     Header add Link "</css/styles.min.css?v=7>; rel=preload; as=style"
     Header add Link "</css/homepage.min.css?v=2>; rel=preload; as=style"
+    Header add Link "</js/main.min.js?v=2>; rel=preload; as=script"
+    Header add Link "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap; rel=preload; as=style"
 </IfModule>
