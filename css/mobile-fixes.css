@@ -30,6 +30,25 @@ select {
 
 /* Mobile-specific fixes (max-width: 768px) */
 @media (max-width: 768px) {
+    /* Fix for sticky nav cutting off content */
+    .main-nav {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        height: 60px;
+    }
+    
+    /* Add padding to body for fixed nav */
+    body {
+        padding-top: 60px !important;
+    }
+    
+    /* Hide "& Consulting" text on mobile */
+    .logo span {
+        display: none !important;
+    }
     /* Fix for Table of Contents select if it exists */
     .mobile-toc select,
     .toc-select,
@@ -79,7 +98,8 @@ select {
     
     /* Improve overall hero section spacing */
     .hero {
-        padding: 2rem 0 !important;
+        padding: 4rem 0 2rem 0 !important; /* Add more top padding for mobile nav */
+        margin-top: 60px !important; /* Account for sticky nav height */
     }
     
     .hero-content {
