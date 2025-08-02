@@ -73,3 +73,31 @@ sitemap:
 
 # Force GitHub Pages to use correct repository settings
 repository: cskerritt/SEC
+
+# SEO Settings
+logo: "/assets/images/christopher-skerritt.jpg"
+social:
+  name: Christopher C. Skerritt
+  links:
+    - https://www.linkedin.com/in/christopherskerritt
+    - https://twitter.com/SkerrittEcon
+
+# Google Analytics
+google_analytics: G-JNK2QCYSC7
+
+# Social media accounts
+twitter:
+  username: SkerrittEcon
+  card: summary_large_image
+
+# SEO Tag Settings
+author:
+  name: Christopher C. Skerritt
+  twitter: SkerrittEcon
+
+# Default SEO image
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/christopher-skerritt.jpg"

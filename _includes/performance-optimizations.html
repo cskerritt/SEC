@@ -1,0 +1,204 @@
+{% comment %}
+  Performance Optimizations for Better SEO
+  Include this in the head section for optimal page speed
+{% endcomment %}
+
+<!-- Resource Hints for Faster Loading -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+
+<!-- Preload Critical Resources -->
+<link rel="preload" href="{{ '/css/critical.min.css' | relative_url }}" as="style">
+<link rel="preload" href="{{ '/assets/fonts/inter-var.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+
+<!-- Prefetch Next Likely Pages -->
+{% if page.url == '/' %}
+<link rel="prefetch" href="{{ '/services/' | relative_url }}">
+<link rel="prefetch" href="{{ '/practice-areas/' | relative_url }}">
+<link rel="prefetch" href="{{ '/contact/' | relative_url }}">
+{% elsif page.collection == 'services' %}
+<link rel="prefetch" href="{{ '/contact/' | relative_url }}">
+{% elsif page.collection == 'practice-areas' %}
+<link rel="prefetch" href="{{ '/services/' | relative_url }}">
+<link rel="prefetch" href="{{ '/contact/' | relative_url }}">
+{% endif %}
+
+<!-- Service Worker for Offline Support and Caching -->
+<script>
+if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful');
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+</script>
+
+<!-- Lazy Loading Configuration -->
+<script>
+// Native lazy loading with fallback
+if ('loading' in HTMLImageElement.prototype) {
+  // Browser supports native lazy loading
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+      // Ensure images have width and height to prevent layout shift
+      if (!img.hasAttribute('width') && img.naturalWidth) {
+        img.setAttribute('width', img.naturalWidth);
+      }
+      if (!img.hasAttribute('height') && img.naturalHeight) {
+        img.setAttribute('height', img.naturalHeight);
+      }
+    });
+  });
+} else {
+  // Fallback for browsers that don't support native lazy loading
+  const script = document.createElement('script');
+  script.src = '{{ "/js/lazysizes.min.js" | relative_url }}';
+  script.async = true;
+  document.head.appendChild(script);
+}
+</script>
+
+<!-- Optimize Web Fonts Loading -->
+<script>
+// Font Face Observer for optimal font loading
+(function() {
+  // Check if fonts are already cached
+  if (sessionStorage.fontsLoaded) {
+    document.documentElement.classList.add('fonts-loaded');
+    return;
+  }
+  
+  // Load fonts with Font Face API
+  if ('fonts' in document) {
+    Promise.all([
+      document.fonts.load('400 1em Inter'),
+      document.fonts.load('600 1em Inter'),
+      document.fonts.load('700 1em Inter')
+    ]).then(function() {
+      document.documentElement.classList.add('fonts-loaded');
+      sessionStorage.fontsLoaded = true;
+    });
+  }
+})();
+</script>
+
+<!-- Optimize Third-Party Scripts -->
+<script>
+// Delay non-critical third-party scripts
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    // Load Google Analytics
+    if (!window.GA_LOADED) {
+      const ga = document.createElement('script');
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}';
+      ga.async = true;
+      document.head.appendChild(ga);
+      window.GA_LOADED = true;
+    }
+    
+    // Load other third-party scripts
+    // Add any additional third-party scripts here
+  }, 3000);
+});
+</script>
+
+<!-- Critical CSS Inlining -->
+<style>
+/* Critical Above-the-fold CSS */
+:root {
+  --primary: #1e3a8a;
+  --secondary: #3730a3;
+  --text: #1f2937;
+  --bg: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Font loading optimization */
+.fonts-loaded body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+</style>
+
+<!-- Non-Critical CSS Loading -->
+<link rel="preload" href="{{ '/css/styles.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ '/css/styles.min.css' | relative_url }}"></noscript>
+
+<!-- JavaScript Loading Strategy -->
+<script>
+// Load non-critical JavaScript after page load
+window.addEventListener('load', function() {
+  // Main JavaScript
+  const mainScript = document.createElement('script');
+  mainScript.src = '{{ "/js/main.min.js" | relative_url }}';
+  mainScript.async = true;
+  document.body.appendChild(mainScript);
+  
+  // Additional scripts as needed
+});
+</script>
+
+<!-- Core Web Vitals Optimization -->
+<script>
+// Optimize Cumulative Layout Shift (CLS)
+document.addEventListener('DOMContentLoaded', function() {
+  // Reserve space for dynamic content
+  const dynamicElements = document.querySelectorAll('[data-dynamic-height]');
+  dynamicElements.forEach(el => {
+    const height = el.getAttribute('data-dynamic-height');
+    el.style.minHeight = height + 'px';
+  });
+});
+
+// Optimize Largest Contentful Paint (LCP)
+// Preload hero images
+const heroImage = document.querySelector('.hero-image');
+if (heroImage && heroImage.dataset.src) {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'image';
+  link.href = heroImage.dataset.src;
+  document.head.appendChild(link);
+}
+</script>

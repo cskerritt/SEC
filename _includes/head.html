@@ -1,6 +1,10 @@
+{% include seo-defaults.html %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <!-- Title and meta description are handled by Jekyll SEO plugin below -->
+
+<!-- Performance Optimizations -->
+{% include performance-optimizations.html %}
 
 <!-- DNS Prefetch and Preconnect for Performance -->
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -154,6 +158,9 @@ img{max-width:100%;height:auto}
 })();
 </script>
 {% seo %}
+
+<!-- Additional SEO Enhancements -->
+{% include seo-enhancements.html %}
 
 <!-- Deferred Scripts -->
 <script>

@@ -1,0 +1,108 @@
+# SEO Configuration for Skerritt Economics
+# This file centralizes all SEO-related settings
+
+# Default meta descriptions for different page types
+meta_descriptions:
+  home: "Christopher Skerritt provides expert economic assessments for litigation across Rhode Island and New England. Specializing in personal injury, medical malpractice, employment disputes, and business valuation."
+  services: "Expert economic services including forensic economics, business valuation, life care planning, and vocational assessments for legal professionals throughout New England."
+  practice_areas: "Economic expert witness services for personal injury, medical malpractice, employment disputes, and commercial litigation cases in Rhode Island and surrounding states."
+  about: "Christopher C. Skerritt, MBA - Forensic economist with 25+ years experience providing economic assessments and expert testimony for litigation across New England."
+  contact: "Contact Skerritt Economics for expert economic assessment services. Call (203) 605-2814 or schedule a consultation for your litigation support needs."
+  blog: "Economic insights, case studies, and expert analysis on forensic economics, business valuation, and litigation support topics."
+
+# Keywords for different sections
+keywords:
+  default: "forensic economist, economic expert witness, business valuation, litigation support, personal injury economist, medical malpractice damages, employment economist, Rhode Island economist, New England expert witness"
+  services:
+    forensic_economics: "forensic economics, economic damages, lost earnings calculation, future earnings analysis, economic expert testimony"
+    business_valuation: "business valuation expert, business appraisal, litigation valuation, shareholder disputes, partnership dissolution"
+    life_care_planning: "life care planning, future medical costs, catastrophic injury economics, special needs planning, medical cost projections"
+    vocational_expert: "vocational assessment, employability analysis, earning capacity evaluation, disability impact, workforce reentry"
+  practice_areas:
+    personal_injury: "personal injury economist, economic loss calculation, lost wages expert, future earnings loss, disability economics"
+    medical_malpractice: "medical malpractice economist, economic damages expert, lost income calculation, future care costs, wrongful death economics"
+    employment: "employment economist, wrongful termination damages, discrimination economic loss, wage loss analysis, front pay calculation"
+    commercial_disputes: "commercial litigation economist, business interruption loss, contract damages, lost profits calculation, business valuation disputes"
+
+# Location-specific SEO
+location_keywords:
+  rhode_island: "Rhode Island forensic economist, RI economic expert witness, Providence economist, Newport economic consultant"
+  massachusetts: "Massachusetts forensic economist, MA economic expert, Boston area economist, Cape Cod economic consultant"
+  connecticut: "Connecticut forensic economist, CT economic expert witness, Hartford economist, New Haven economic consultant"
+  new_hampshire: "New Hampshire forensic economist, NH economic expert, Manchester economist, Nashua economic consultant"
+  vermont: "Vermont forensic economist, VT economic expert witness, Burlington economist, Montpelier economic consultant"
+  maine: "Maine forensic economist, ME economic expert, Portland economist, Augusta economic consultant"
+
+# Social media profiles
+social_profiles:
+  twitter: "https://twitter.com/SkerrittEcon"
+  linkedin: "https://www.linkedin.com/in/christopherskerritt"
+  facebook: ""
+  youtube: ""
+
+# Schema.org settings
+schema:
+  organization:
+    name: "Skerritt Economics Consulting"
+    alternate_name: "Christopher Skerritt Economics"
+    founding_date: "1998"
+    price_range: "$$$"
+    opening_hours: "Mo-Fr 08:00-18:00"
+    payment_accepted: "Check, Wire Transfer, ACH"
+  
+  # Service area coordinates
+  service_areas:
+    - name: "Providence, RI"
+      latitude: "41.8240"
+      longitude: "-71.4128"
+    - name: "Boston, MA"
+      latitude: "42.3601"
+      longitude: "-71.0589"
+    - name: "Hartford, CT"
+      latitude: "41.7658"
+      longitude: "-72.6734"
+    - name: "Manchester, NH"
+      latitude: "42.9956"
+      longitude: "-71.4548"
+    - name: "Burlington, VT"
+      latitude: "44.4759"
+      longitude: "-73.2121"
+    - name: "Portland, ME"
+      latitude: "43.6591"
+      longitude: "-70.2568"
+
+# Open Graph defaults
+open_graph:
+  default_image: "/assets/images/christopher-skerritt.jpg"
+  fb_app_id: ""
+  fb_admins: ""
+
+# Twitter Card settings
+twitter:
+  username: "@SkerrittEcon"
+  card_type: "summary_large_image"
+
+# Sitemap priorities
+sitemap_priorities:
+  home: 1.0
+  services: 0.9
+  practice_areas: 0.9
+  about: 0.8
+  contact: 0.8
+  blog: 0.7
+  blog_posts: 0.6
+  locations: 0.5
+
+# Robots.txt directives
+robots:
+  sitemap_urls:
+    - "https://skerritteconomics.com/sitemap.xml"
+    - "https://skerritteconomics.com/sitemap-index.xml"
+  disallow:
+    - "/.git/"
+    - "/README.md"
+    - "/Gemfile"
+    - "/_site/"
+    - "/*.sh"
+    - "/wp-admin/"
+    - "/wp-includes/"

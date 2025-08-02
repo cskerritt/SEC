@@ -3,7 +3,7 @@ Allow: /
 
 # Sitemap locations  
 Sitemap: https://skerritteconomics.com/sitemap.xml
-Sitemap: https://skerritteconomics.com/blog/sitemap.xml
+Sitemap: https://skerritteconomics.com/sitemap-index.xml
 
 # Block access to system files
 Disallow: /.git/
