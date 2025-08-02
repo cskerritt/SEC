@@ -97,7 +97,7 @@ sitemap_priorities:
 robots:
   sitemap_urls:
     - "https://skerritteconomics.com/sitemap.xml"
-    - "https://skerritteconomics.com/blog/sitemap.xml"
+    - "https://skerritteconomics.com/sitemap-index.xml"
   disallow:
     - "/.git/"
     - "/README.md"

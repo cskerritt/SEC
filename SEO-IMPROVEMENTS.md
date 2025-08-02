@@ -179,7 +179,9 @@ With these comprehensive SEO improvements, you should see:
 
 ## Next Steps
 
-1. Submit updated sitemaps to Google Search Console
+1. Submit updated sitemaps to Google Search Console:
+   - Main sitemap: https://skerritteconomics.com/sitemap.xml
+   - Sitemap index: https://skerritteconomics.com/sitemap-index.xml
 2. Monitor Core Web Vitals in PageSpeed Insights
 3. Track keyword rankings for target terms
 4. Build high-quality backlinks to improve domain authority
