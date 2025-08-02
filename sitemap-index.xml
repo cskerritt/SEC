@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main website sitemap -->
+  <sitemap>
+    <loc>https://skerritteconomics.com/sitemap.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
+  
+  <!-- Blog sitemap -->
+  <sitemap>
+    <loc>https://skerritteconomics.com/blog-sitemap.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
+  
+  <!-- Services sitemap -->
+  <sitemap>
+    <loc>https://skerritteconomics.com/services-sitemap.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
+  
+  <!-- Practice Areas sitemap -->
+  <sitemap>
+    <loc>https://skerritteconomics.com/practice-areas-sitemap.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
+  
+  <!-- Locations sitemap -->
+  <sitemap>
+    <loc>https://skerritteconomics.com/locations-sitemap.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
+  
+  <!-- Images sitemap -->
+  <sitemap>
+    <loc>https://skerritteconomics.com/images-sitemap.xml</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+  </sitemap>
+</sitemapindex>

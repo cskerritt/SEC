@@ -1,7 +1,11 @@
+{% include seo-defaults.html %}
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<title>{{ seo_title | default: page.title | default: site.title }}</title>
+<meta name="description" content="{{ seo_description | default: page.description | default: site.description }}">
+
+<!-- Performance Optimizations -->
+{% include performance-optimizations.html %}
 
 <!-- DNS Prefetch and Preconnect for Performance -->
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -155,6 +159,9 @@ img{max-width:100%;height:auto}
 })();
 </script>
 {% seo %}
+
+<!-- Additional SEO Enhancements -->
+{% include seo-enhancements.html %}
 
 <!-- Deferred Scripts -->
 <script>
