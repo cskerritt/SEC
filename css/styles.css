@@ -3367,9 +3367,19 @@ textarea.success {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    /* Show mobile table of contents */
-    .mobile-toc {
-        display: block;
+    /* Hide table of contents on mobile to prevent overlap */
+    .toc,
+    .toc__menu,
+    .toc__title,
+    nav.toc,
+    .sidebar__right,
+    .sidebar,
+    .mobile-toc,
+    .table-of-contents,
+    [class*="toc"],
+    [class*="table-of-contents"],
+    [id*="toc"] {
+        display: none !important;
     }
 
     /* Enhanced Mobile Navigation */
