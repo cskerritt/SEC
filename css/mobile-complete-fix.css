@@ -19,8 +19,16 @@
         padding: 0;
     }
     
-    /* Fix body padding for fixed nav - INCREASED FOR MORE SPACE */
+    /* Offset main content for sticky header */
+    .main-nav {
+        position: sticky !important;
+        top: 0;
+        z-index: 1000;
+    }
     body {
+        padding-top: 0 !important;
+    }
+    main {
         padding-top: 80px !important;
     }
     
@@ -121,14 +129,14 @@
     /* Ensure main content starts below nav */
     main {
         margin-top: 0 !important;
-        padding-top: 0 !important;
+        padding-top: 80px !important;
         width: 100% !important;
     }
-    
-    /* First child of main gets extra padding */
+
+    /* First child of main should not add extra padding */
     main > *:first-child {
         margin-top: 0 !important;
-        padding-top: 1rem !important;
+        padding-top: 0 !important;
     }
     
     /* Ensure page content takes full width */
@@ -228,6 +236,12 @@
     .practice-chip .icon {
         margin-right: 0.5rem !important;
         font-size: 1.1rem !important;
+    }
+}
+
+@media print {
+    .main-nav {
+        position: static !important;
     }
 }
 
