@@ -77,6 +77,17 @@ sitemap:
                 </ul>
                 <a href="{{ '/services/business-valuation/' | relative_url }}" class="learn-more">Learn More →</a>
             </article>
+            <article class="service-card">
+                <h3>Business Consulting</h3>
+                <p>Strategic business consulting services leveraging economic expertise to drive growth and operational excellence.</p>
+                <ul>
+                    <li>Strategic planning & development</li>
+                    <li>Mergers & acquisitions advisory</li>
+                    <li>Financial performance optimization</li>
+                    <li>Business restructuring & turnaround</li>
+                </ul>
+                <a href="{{ '/services/business-consulting/' | relative_url }}" class="learn-more">Learn More →</a>
+            </article>
         </div>
     </div>
 </section>
