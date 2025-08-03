@@ -11,6 +11,42 @@
     border: 0 !important;
 }
 
+/* CRITICAL FIX: Navigation Dropdown Z-Index */
+.main-nav {
+    position: sticky !important;
+    top: 0;
+    z-index: 999999 !important;
+    background: white !important;
+}
+
+.nav-wrapper {
+    z-index: 999999 !important;
+}
+
+.has-dropdown {
+    position: relative !important;
+}
+
+.dropdown {
+    position: absolute !important;
+    top: 100% !important;
+    z-index: 999998 !important;
+    background: white !important;
+}
+
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+    z-index: 999998 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure all other content stays below */
+section, .hero-section, .content-section {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
 /* Skip Navigation Links */
 .skip-nav {
     position: absolute;
