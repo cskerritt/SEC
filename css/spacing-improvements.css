@@ -1,0 +1,434 @@
+/* ========================================
+   SECTION SPACING & VERTICAL RHYTHM
+   ======================================== */
+
+/* Base Section Spacing */
+section {
+    padding: 5rem 0 !important; /* Increased from default */
+    position: relative;
+}
+
+/* Hero Sections - More breathing room */
+.hero,
+.hero-section,
+.service-hero,
+.location-hero,
+.city-hero,
+.industry-hero {
+    padding: 6rem 0 !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Main Content Sections */
+.content-section,
+.local-content,
+.services-overview,
+.services-detailed,
+.service-overview {
+    padding: 5rem 0 !important;
+    margin: 0 !important;
+}
+
+/* Specific Section Spacing */
+.practice-areas-strip {
+    padding: 3rem 0 !important;
+    margin: 0 !important;
+}
+
+.trust-signals,
+.credentials-section,
+.geographic-coverage {
+    padding: 5rem 0 !important;
+    margin: 0 !important;
+}
+
+.methodology-overview,
+.methodology-section {
+    padding: 5rem 0 !important;
+    background: var(--light-bg, #f9fafb);
+}
+
+.process-section {
+    padding: 5rem 0 !important;
+    margin: 0 !important;
+}
+
+.case-studies,
+.case-studies-preview {
+    padding: 5rem 0 !important;
+    background: var(--light-bg, #f9fafb);
+}
+
+.testimonials,
+.testimonial-section {
+    padding: 5rem 0 !important;
+    margin: 0 !important;
+}
+
+.faq,
+.faq-section {
+    padding: 5rem 0 !important;
+    background: white;
+}
+
+.cta-section,
+.urgent-cta {
+    padding: 5rem 0 !important;
+    margin-top: 3rem !important;
+}
+
+.footer,
+.main-footer {
+    padding: 4rem 0 2rem !important;
+    margin-top: 5rem !important;
+}
+
+/* Content Element Spacing */
+h1, .h1 {
+    margin-bottom: 1.5rem !important;
+}
+
+h2, .h2 {
+    margin-bottom: 2rem !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+h3, .h3 {
+    margin-bottom: 1.5rem !important;
+    margin-top: 2rem !important;
+}
+
+h4, .h4 {
+    margin-bottom: 1rem !important;
+    margin-top: 1.5rem !important;
+}
+
+p {
+    margin-bottom: 1.25rem !important;
+    line-height: 1.7 !important;
+}
+
+p.lead {
+    margin-bottom: 2rem !important;
+    font-size: 1.125rem !important;
+    line-height: 1.8 !important;
+}
+
+ul, ol {
+    margin-bottom: 2rem !important;
+    margin-top: 1rem !important;
+}
+
+li {
+    margin-bottom: 0.75rem !important;
+}
+
+/* Grid and Card Spacing */
+.services-grid,
+.service-grid,
+.credentials-grid,
+.locations-grid,
+.benefits-grid,
+.methodology-grid,
+.industry-grid,
+.market-grid,
+.district-grid,
+.challenges-grid {
+    gap: 2.5rem !important;
+    margin: 3rem 0 !important;
+}
+
+.service-card,
+.service-card-detailed,
+.credential,
+.location-card,
+.benefit-card,
+.method-card,
+.industry-item,
+.market-item,
+.challenge-item {
+    padding: 2.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Process Steps Spacing */
+.process-steps,
+.process-timeline {
+    margin: 3rem 0 !important;
+}
+
+.process-step,
+.step {
+    margin-bottom: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.process-step:last-child,
+.step:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Button Spacing */
+.btn {
+    margin: 0.5rem !important;
+    padding: 1rem 2rem !important;
+}
+
+.hero-cta,
+.cta-buttons {
+    margin-top: 2rem !important;
+    gap: 1rem !important;
+}
+
+/* List Spacing Improvements */
+.service-features,
+.benefit-list,
+.challenge-list,
+.location-list {
+    margin: 2rem 0 !important;
+}
+
+.service-features li,
+.benefit-list li {
+    padding: 0.75rem 0 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Sidebar Spacing */
+.sidebar {
+    margin-top: 2rem !important;
+}
+
+.contact-card,
+.quick-contact,
+.testimonial-card {
+    padding: 2.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Breadcrumb Spacing */
+.breadcrumb {
+    padding: 1.5rem 0 !important;
+    margin-bottom: 2rem !important;
+}
+
+/* Navigation Spacing Fix */
+.main-nav {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-wrapper {
+    padding: 1.25rem 0 !important;
+}
+
+/* Remove unwanted margins that cause spacing issues */
+section:first-child {
+    margin-top: 0 !important;
+}
+
+section:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Adjacent Section Spacing */
+section + section {
+    margin-top: 0 !important;
+}
+
+/* Specific adjacency rules for better flow */
+.hero + .practice-areas-strip {
+    margin-top: -2rem !important; /* Tighter connection */
+}
+
+.practice-areas-strip + .services-overview {
+    margin-top: 0 !important;
+}
+
+/* Container Padding */
+.container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+/* Mobile Responsive Spacing */
+@media (max-width: 768px) {
+    section {
+        padding: 3.5rem 0 !important;
+    }
+    
+    .hero,
+    .hero-section {
+        padding: 4rem 0 !important;
+    }
+    
+    h2, .h2 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    h3, .h3 {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .services-grid,
+    .credentials-grid,
+    .benefits-grid {
+        gap: 1.5rem !important;
+        margin: 2rem 0 !important;
+    }
+    
+    .service-card,
+    .service-card-detailed,
+    .credential,
+    .benefit-card {
+        padding: 1.75rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .cta-section {
+        padding: 3.5rem 0 !important;
+        margin-top: 2rem !important;
+    }
+    
+    .footer,
+    .main-footer {
+        padding: 3rem 0 1.5rem !important;
+        margin-top: 3rem !important;
+    }
+    
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .process-step,
+    .step {
+        margin-bottom: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 3rem 0 !important;
+    }
+    
+    .hero,
+    .hero-section {
+        padding: 3rem 0 !important;
+    }
+    
+    .services-grid,
+    .credentials-grid {
+        gap: 1rem !important;
+    }
+    
+    .service-card,
+    .credential {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Ensure consistent spacing in business consulting pages */
+.local-content,
+.ma-services,
+.boston-markets,
+.ri-services {
+    padding: 5rem 0 !important;
+}
+
+.content-wrapper {
+    gap: 3rem !important;
+}
+
+.main-content > * {
+    margin-bottom: 2rem !important;
+}
+
+.main-content > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Fix spacing for warning and info boxes */
+.warning-box,
+.urgent-banner,
+.info-box {
+    margin: 2.5rem 0 !important;
+    padding: 2rem !important;
+}
+
+/* Pricing and metric sections */
+.pricing-section,
+.success-metrics {
+    padding: 5rem 0 !important;
+}
+
+.pricing-grid,
+.metric-grid {
+    gap: 2rem !important;
+    margin: 2.5rem 0 !important;
+}
+
+.pricing-card,
+.metric {
+    padding: 2rem !important;
+}
+
+/* Table spacing */
+.fee-table {
+    margin: 2rem 0 !important;
+}
+
+.fee-table th,
+.fee-table td {
+    padding: 1rem 1.5rem !important;
+}
+
+/* Industry and market sections */
+.industry-section,
+.market-section {
+    margin: 3rem 0 !important;
+}
+
+.industry-section h4,
+.market-section h4 {
+    margin-top: 2.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.industry-section:first-child h4,
+.market-section:first-child h4 {
+    margin-top: 0 !important;
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add visual separation with subtle borders where needed */
+.hero-section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+section:nth-child(even) {
+    background-color: var(--light-bg, #f9fafb);
+}
+
+section:nth-child(odd) {
+    background-color: white;
+}
+
+/* Ensure CTA sections stand out */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color, #1e3a8a), var(--secondary-color, #3730a3)) !important;
+    color: white !important;
+}
+
+.cta-section h2,
+.cta-section p {
+    color: white !important;
+}
