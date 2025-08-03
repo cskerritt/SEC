@@ -55,6 +55,60 @@
     <lastmod>2025-07-31</lastmod>
     <priority>0.9</priority>
   </url>
+  <!-- Business Consulting Main Page -->
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <!-- Business Consulting Location Pages -->
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/locations/rhode-island-business-consultant.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/locations/massachusetts-business-consultant.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/locations/connecticut-business-consultant.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/locations/providence-business-consultant.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/locations/boston-business-consultant.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Business Consulting Specialty Pages -->
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/specialties/small-business-consultant-new-england.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/specialties/turnaround-consultant-new-england.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/specialties/merger-acquisition-advisor-new-england.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <!-- Business Consulting Industry Pages -->
+  <url>
+    <loc>https://skerritteconomics.com/services/business-consulting/industries/manufacturing-consultant-new-england.html</loc>
+    <lastmod>2025-08-03</lastmod>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://skerritteconomics.com/contact/</loc>
     <lastmod>2025-07-31</lastmod>
