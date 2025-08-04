@@ -63,8 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (link) {
                 link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 768 && dropdown.querySelector('.dropdown')) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
+                        if (!dropdown.classList.contains('active')) {
+                            e.preventDefault();
+                            dropdown.classList.add('active');
+                        } else {
+                            // Allow navigation on second tap
+                            closeMenu();
+                        }
                     }
                 });
             }

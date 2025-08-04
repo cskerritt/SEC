@@ -25,10 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const link = dropdown.querySelector('a');
         if (link && window.innerWidth <= 768) {
             link.addEventListener('click', function(e) {
-                // Prevent navigation on dropdown parent links
                 if (dropdown.querySelector('.dropdown')) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
+                    if (!dropdown.classList.contains('active')) {
+                        e.preventDefault();
+                        dropdown.classList.add('active');
+                    }
+                    // Allow navigation when already active
                 }
             });
         }
