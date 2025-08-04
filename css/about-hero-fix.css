@@ -1,0 +1,51 @@
+/**
+ * About Hero Text Color Fix
+ * Forces all text in about hero section to be white
+ */
+
+/* About Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+  color: white !important;
+  padding: 4rem 0 !important;
+}
+
+/* Force all child elements to white */
+.about-hero,
+.about-hero *,
+.about-hero .hero-content,
+.about-hero .hero-content *,
+.about-hero .hero-text,
+.about-hero .hero-text * {
+  color: white !important;
+}
+
+/* Specific text elements */
+.about-hero h1,
+.about-hero h2,
+.about-hero h3,
+.about-hero h4,
+.about-hero h5,
+.about-hero h6,
+.about-hero p,
+.about-hero span,
+.about-hero div,
+.about-hero .title,
+.about-hero .lead {
+  color: white !important;
+}
+
+/* Override any inline styles */
+.about-hero [style*="color"] {
+  color: white !important;
+}
+
+/* Ensure links are also white */
+.about-hero a {
+  color: white !important;
+  text-decoration: underline;
+}
+
+.about-hero a:hover {
+  color: rgba(255, 255, 255, 0.9) !important;
+}

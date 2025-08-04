@@ -53,7 +53,10 @@ section:first-of-type {
 .service-hero,
 .location-hero,
 .blog-hero,
-.contact-hero {
+.contact-hero,
+.about-hero,
+.case-studies-header,
+.contact-header {
   background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
   color: white !important;
   padding: 60px 0 !important;
@@ -83,10 +86,21 @@ section:first-of-type {
 .service-hero *,
 .location-hero *,
 .blog-hero *,
-.contact-hero * {
+.contact-hero *,
+.about-hero *,
+.case-studies-header *,
+.contact-header * {
   color: white !important;
   position: relative !important;
   z-index: 1 !important;
+}
+
+/* Specific about hero text fixes */
+.about-hero h1,
+.about-hero .title,
+.about-hero .lead,
+.about-hero p {
+  color: white !important;
 }
 
 .page-header h1,
