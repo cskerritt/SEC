@@ -1,0 +1,91 @@
+# Exclude all Jekyll/old site files
+locations/
+_site/
+_layouts/
+_includes/
+_data/
+*.md
+*.py
+*.sh
+*.rb
+*.html
+!src/**/*.tsx
+!public/*.html
+
+# Development files
+.git/
+.github/
+.bundle/
+vendor/
+.next/
+.cache/
+
+# Test files
+test*.js
+test*.html
+*test.*
+*-report.*
+test-results/
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+*.backup
+*.old
+
+# Documentation
+*.txt
+CLAUDE.md
+DESIGN-SYSTEM.md
+FRONTEND.md
+*.md
+
+# Jekyll files
+Gemfile*
+_config.yml
+.jekyll-cache/
+
+# Scripts
+*.py
+
+# Data files
+*.json
+!package.json
+!tsconfig.json
+!package-lock.json
+sitemap*.xml
+
+# CSS/JS (except Next.js)
+css/
+js/
+!src/**/*.css
+
+# Tools and other directories
+tools/
+blog/
+about/
+case-studies/
+contact/
+practice-areas/
+services/
+resources/
+vocational-expert/
+life-care-planning/
+templates/
+
+# Review and audit files
+*review*
+*audit*
+*report*
+*checker*
+*navigator*
+*consistency*
+*verification*
+
+# Images (keep only essential)
+*.jpg
+*.png
+*.gif
+*.svg
+!public/**/*
