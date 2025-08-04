@@ -1,5 +1,44 @@
 {
+  "name": "skerritt-economics",
+  "version": "1.0.0",
+  "description": "Skerritt Economics & Consulting Website",
+  "scripts": {
+    "dev": "npm run watch:css & bundle exec jekyll serve --livereload",
+    "build": "npm run build:css && bundle exec jekyll build",
+    "build:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind-output.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind-output.css --watch",
+    "preview": "bundle exec jekyll serve",
+    "test": "npm run test:accessibility && npm run test:lighthouse",
+    "test:accessibility": "pa11y-ci --config .pa11yci.json",
+    "test:lighthouse": "lighthouse http://localhost:4000 --output html --output-path ./lighthouse-report.html",
+    "format": "prettier --write '**/*.{html,css,js,json,md}'",
+    "lint:css": "stylelint 'css/**/*.css'",
+    "lint:js": "eslint 'js/**/*.js'",
+    "lint": "npm run lint:css && npm run lint:js"
+  },
   "dependencies": {
-    "playwright": "^1.54.2"
-  }
+    "playwright": "^1.54.2",
+    "alpinejs": "^3.13.3",
+    "focus-visible": "^5.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "lighthouse": "^11.5.0",
+    "pa11y-ci": "^3.1.0",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard": "^36.0.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }

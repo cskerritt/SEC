@@ -1,0 +1,49 @@
+{% comment %}
+Grid Component
+Usage: {% include components/grid.html 
+         type="services" 
+         columns="3" 
+         gap="medium" %}
+Types: services, locations, features, cards
+Columns: 1, 2, 3, 4, auto
+Gap: small, medium, large
+{% endcomment %}
+
+{% assign type = include.type | default: "cards" %}
+{% assign columns = include.columns | default: "auto" %}
+{% assign gap = include.gap | default: "medium" %}
+{% assign class = include.class | default: "" %}
+
+{% if columns == "auto" %}
+  {% if type == "services" %}
+    {% assign grid_class = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" %}
+  {% elsif type == "locations" %}
+    {% assign grid_class = "grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" %}
+  {% elsif type == "features" %}
+    {% assign grid_class = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" %}
+  {% else %}
+    {% assign grid_class = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" %}
+  {% endif %}
+{% elsif columns == "1" %}
+  {% assign grid_class = "grid-cols-1" %}
+{% elsif columns == "2" %}
+  {% assign grid_class = "grid-cols-1 md:grid-cols-2" %}
+{% elsif columns == "3" %}
+  {% assign grid_class = "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" %}
+{% elsif columns == "4" %}
+  {% assign grid_class = "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" %}
+{% else %}
+  {% assign grid_class = columns %}
+{% endif %}
+
+{% if gap == "small" %}
+  {% assign gap_class = "gap-4" %}
+{% elsif gap == "large" %}
+  {% assign gap_class = "gap-8 lg:gap-10" %}
+{% else %}
+  {% assign gap_class = "gap-6 lg:gap-8" %}
+{% endif %}
+
+<div class="grid {{ grid_class }} {{ gap_class }} {{ type }}-grid {{ class }}">
+  {{ include.content }}
+</div>

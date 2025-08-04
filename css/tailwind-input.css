@@ -1,0 +1,313 @@
+/* Tailwind CSS Input File */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Base Styles */
+@layer base {
+  /* CSS Custom Properties from Design System */
+  :root {
+    /* Colors */
+    --color-primary-50: #eff6ff;
+    --color-primary-100: #dbeafe;
+    --color-primary-200: #bfdbfe;
+    --color-primary-300: #93c5fd;
+    --color-primary-400: #60a5fa;
+    --color-primary-500: #3b82f6;
+    --color-primary-600: #2563eb;
+    --color-primary-700: #1d4ed8;
+    --color-primary-800: #1e40af;
+    --color-primary-900: #1e3a8a;
+    --color-primary-950: #172554;
+    
+    --color-secondary-500: #8b5cf6;
+    --color-secondary-600: #7c3aed;
+    --color-secondary-700: #6d28d9;
+    --color-secondary-800: #5b21b6;
+    --color-secondary-900: #4c1d95;
+    
+    --color-gray-50: #f9fafb;
+    --color-gray-100: #f3f4f6;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-400: #9ca3af;
+    --color-gray-500: #6b7280;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-gray-800: #1f2937;
+    --color-gray-900: #111827;
+    --color-gray-950: #030712;
+    
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+    
+    /* Spacing */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+    --spacing-20: 5rem;
+    --spacing-24: 6rem;
+    
+    /* Typography */
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Monaco', 'Courier New', monospace;
+    
+    /* Shadows */
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.15);
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-full: 9999px;
+    
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+  }
+  
+  /* Reset and Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Focus Visible */
+  :focus {
+    outline: none;
+  }
+  
+  :focus-visible {
+    outline: 2px solid var(--color-primary-800);
+    outline-offset: 2px;
+  }
+}
+
+/* Component Classes */
+@layer components {
+  /* Button Component */
+  .btn {
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-semibold rounded-lg transition-all duration-300 min-h-[48px] cursor-pointer no-underline;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-800 text-white hover:bg-primary-700 hover:-translate-y-0.5 hover:shadow-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-primary-800 border-2 border-primary-800 hover:bg-primary-800 hover:text-white;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-gray-600 hover:bg-gray-100;
+  }
+  
+  .btn-large {
+    @apply px-9 py-4.5 text-lg min-h-[56px];
+  }
+  
+  .btn-small {
+    @apply px-5 py-2.5 text-sm min-h-[40px];
+  }
+  
+  /* Card Component */
+  .card {
+    @apply bg-white rounded-xl p-7.5 shadow-md transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:-translate-y-1.5 hover:shadow-xl;
+  }
+  
+  .card-outlined {
+    @apply border border-gray-200 shadow-none;
+  }
+  
+  .card-filled {
+    @apply bg-gray-50;
+  }
+  
+  /* Service Card */
+  .service-card {
+    @apply card card-hover;
+  }
+  
+  .service-card h3 {
+    @apply text-xl font-semibold text-primary-800 mb-4;
+  }
+  
+  .service-card p {
+    @apply text-gray-600 mb-5;
+  }
+  
+  .service-card .learn-more {
+    @apply text-primary-800 font-semibold hover:text-primary-700 transition-colors;
+  }
+  
+  /* Hero Section */
+  .hero {
+    @apply bg-gradient-primary text-white py-20 lg:py-25;
+  }
+  
+  .hero-content {
+    @apply text-center max-w-4xl mx-auto;
+  }
+  
+  .hero h1 {
+    @apply text-4xl lg:text-5xl font-bold mb-5 leading-tight;
+  }
+  
+  .hero-subtitle {
+    @apply text-lg lg:text-xl opacity-95 mb-8 leading-relaxed;
+  }
+  
+  .hero-cta {
+    @apply flex flex-col sm:flex-row gap-4 justify-center items-center;
+  }
+  
+  /* Container */
+  .container {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Section */
+  .section {
+    @apply py-16 lg:py-20;
+  }
+  
+  .section-header {
+    @apply text-center mb-12 lg:mb-16;
+  }
+  
+  .section-header h2 {
+    @apply text-3xl lg:text-4xl font-bold text-gray-800 mb-5;
+  }
+  
+  .section-header p {
+    @apply text-lg text-gray-600 max-w-2xl mx-auto;
+  }
+  
+  /* Grid Layouts */
+  .services-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7.5;
+  }
+  
+  .locations-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6;
+  }
+  
+  .features-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  
+  /* Form Elements */
+  .form-group {
+    @apply mb-6;
+  }
+  
+  .form-label {
+    @apply block mb-2 font-semibold text-gray-700 text-sm;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-primary-800 focus:ring-2 focus:ring-primary-800/10 transition-all;
+  }
+  
+  .form-textarea {
+    @apply form-input min-h-[120px] resize-vertical;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-700 hover:text-primary-800 transition-colors font-medium;
+  }
+  
+  .nav-link-active {
+    @apply text-primary-800 font-semibold;
+  }
+  
+  /* Footer */
+  .footer {
+    @apply bg-gray-800 text-white py-12 lg:py-16;
+  }
+  
+  .footer h3 {
+    @apply text-lg font-semibold mb-4;
+  }
+  
+  .footer a {
+    @apply text-gray-300 hover:text-white transition-colors;
+  }
+}
+
+/* Utility Classes */
+@layer utilities {
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-primary;
+  }
+  
+  /* Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease forwards;
+  }
+  
+  /* Aspect Ratios */
+  .aspect-4-3 {
+    aspect-ratio: 4 / 3;
+  }
+  
+  .aspect-21-9 {
+    aspect-ratio: 21 / 9;
+  }
+  
+  /* Safe Area Insets */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+}
