@@ -1,232 +1,994 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-  <title>Professional Economic Analysis Tools | Free Calculators | Skerritt Economics</title>
-  <meta name="description" content="Free forensic economics calculators for New England attorneys. Life expectancy, present value &amp; economic analysis tools. Call 203-605-2814">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/services.css">
-  <style>
-        .tools-hero {
-            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-            color: white;
-            padding: 80px 0;
-            margin-bottom: 60px;
-        }
+    
 
-        .tools-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-        }
 
-        .tools-hero p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin: 0 auto;
-        }
 
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
-        }
 
-        .tool-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-top: 4px solid #1e40af;
-        }
 
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.12);
-        }
 
-        .tool-card h3 {
-            color: #1e40af;
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-        }
 
-        .tool-card .tool-description {
-            color: #6c757d;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
 
-        .tool-features {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-        }
 
-        .tool-features li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-            color: #495057;
-        }
 
-        .tool-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-        }
 
-        .tool-card .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #1e40af;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            margin-top: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- Title and meta description are handled by Jekyll SEO plugin below -->
 
-        .tool-card .btn:hover {
-            background: #1e3a8a;
-        }
+<!-- Performance Optimizations -->
 
-        .tool-tag {
-            display: inline-block;
-            padding: 5px 15px;
-            background: #e9ecef;
-            color: #495057;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            margin-right: 10px;
-            margin-bottom: 15px;
-        }
 
-        .tools-intro {
-            max-width: 900px;
-            margin: 0 auto 60px;
-            text-align: center;
-        }
+<!-- Resource Hints for Faster Loading -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-        .tools-intro h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1.5rem;
-            color: #212529;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
 
-        .tools-intro p {
-            font-size: 1.125rem;
-            line-height: 1.8;
-            color: #6c757d;
-        }
+<!-- Preload Critical Resources -->
+<link rel="preload" href="/css/critical.min.css" as="style">
+<link rel="preload" href="/assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
 
-        .coming-soon {
-            opacity: 0.6;
-            position: relative;
-        }
+<!-- Prefetch Next Likely Pages -->
 
-        .coming-soon .tool-card {
-            background: #f8f9fa;
-        }
 
-        .coming-soon-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #ffc107;
-            color: #000;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.875rem;
-            font-weight: 600;
-        }
+<!-- Service Worker for Offline Support and Caching -->
+<script>
+if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(registration) {
+        console.log('ServiceWorker registration successful');
+      })
+      .catch(function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  });
+}
+</script>
 
-        .tools-cta {
-            background: #f8f9fa;
-            padding: 80px 0;
-            text-align: center;
-            margin-top: 80px;
-        }
+<!-- Lazy Loading Configuration -->
+<script>
+// Native lazy loading with fallback
+if ('loading' in HTMLImageElement.prototype) {
+  // Browser supports native lazy loading
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+      // Ensure images have width and height to prevent layout shift
+      if (!img.hasAttribute('width') && img.naturalWidth) {
+        img.setAttribute('width', img.naturalWidth);
+      }
+      if (!img.hasAttribute('height') && img.naturalHeight) {
+        img.setAttribute('height', img.naturalHeight);
+      }
+    });
+  });
+} else {
+  // Fallback for browsers that don't support native lazy loading
+  const script = document.createElement('script');
+  script.src = '/js/lazysizes.min.js';
+  script.async = true;
+  document.head.appendChild(script);
+}
+</script>
 
-        .tools-cta h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1.5rem;
-            color: #212529;
-        }
+<!-- Optimize Web Fonts Loading -->
+<script>
+// Font Face Observer for optimal font loading
+(function() {
+  // Check if fonts are already cached
+  if (sessionStorage.fontsLoaded) {
+    document.documentElement.classList.add('fonts-loaded');
+    return;
+  }
+  
+  // Load fonts with Font Face API
+  if ('fonts' in document) {
+    Promise.all([
+      document.fonts.load('400 1em Inter'),
+      document.fonts.load('600 1em Inter'),
+      document.fonts.load('700 1em Inter')
+    ]).then(function() {
+      document.documentElement.classList.add('fonts-loaded');
+      sessionStorage.fontsLoaded = true;
+    });
+  }
+})();
+</script>
 
-        .tools-cta p {
-            font-size: 1.125rem;
-            color: #6c757d;
-            margin-bottom: 2rem;
+<!-- Optimize Third-Party Scripts -->
+<script>
+// Delay non-critical third-party scripts
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    // Load Google Analytics
+    if (!window.GA_LOADED) {
+      const ga = document.createElement('script');
+      ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-JNK2QCYSC7';
+      ga.async = true;
+      document.head.appendChild(ga);
+      window.GA_LOADED = true;
+    }
+    
+    // Load other third-party scripts
+    // Add any additional third-party scripts here
+  }, 3000);
+});
+</script>
+
+<!-- Critical CSS Inlining -->
+<style>
+/* Critical Above-the-fold CSS */
+:root {
+  --primary: #1e3a8a;
+  --secondary: #3730a3;
+  --text: #1f2937;
+  --bg: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Font loading optimization */
+.fonts-loaded body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+</style>
+
+<!-- Non-Critical CSS Loading -->
+<link rel="preload" href="/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/styles.min.css"></noscript>
+
+<link rel="preload" href="/css/mobile-fixes.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/mobile-fixes.min.css"></noscript>
+
+<!-- JavaScript Loading Strategy -->
+<script>
+// Load non-critical JavaScript after page load
+window.addEventListener('load', function() {
+  // Main JavaScript
+  const mainScript = document.createElement('script');
+  mainScript.src = '/js/main.min.js';
+  mainScript.async = true;
+  document.body.appendChild(mainScript);
+  
+  // Additional scripts as needed
+});
+</script>
+
+<!-- Core Web Vitals Optimization -->
+<script>
+// Optimize Cumulative Layout Shift (CLS)
+document.addEventListener('DOMContentLoaded', function() {
+  // Reserve space for dynamic content
+  const dynamicElements = document.querySelectorAll('[data-dynamic-height]');
+  dynamicElements.forEach(el => {
+    const height = el.getAttribute('data-dynamic-height');
+    el.style.minHeight = height + 'px';
+  });
+});
+
+// Optimize Largest Contentful Paint (LCP)
+// Preload hero images
+const heroImage = document.querySelector('.hero-image');
+if (heroImage && heroImage.dataset.src) {
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'image';
+  link.href = heroImage.dataset.src;
+  document.head.appendChild(link);
+}
+</script>
+
+<!-- DNS Prefetch and Preconnect for Performance -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- CSS Files -->
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/spacing-improvements.css">
+<!-- Enhanced Navigation with All Services -->
+<link rel="stylesheet" href="/css/navigation-enhanced.css">
+<!-- Complete Navigation Solution - Replaces all partial fixes -->
+<link rel="stylesheet" href="/css/navigation-complete-fix.css">
+<!-- Navigation Override Fix - MUST load last to override all navigation styles -->
+<link rel="stylesheet" href="/css/navigation-fix-override.css">
+<!-- Mobile Navigation Fix -->
+<link rel="stylesheet" href="/css/mobile-navigation-fix.css">
+<!-- Page Layouts Enhanced -->
+<link rel="stylesheet" href="/css/page-layouts-enhanced.css">
+<!-- Comprehensive Navigation Fix - Must load after other styles -->
+<link rel="stylesheet" href="/css/navigation-comprehensive-fix.css">
+<!-- Hero Text Color Fix -->
+<link rel="stylesheet" href="/css/hero-text-fix.css">
+<!-- Final Navigation Fix - Ensures everything is clickable -->
+<link rel="stylesheet" href="/css/final-navigation-fix.css">
+
+<!-- Enhanced Critical CSS - Mobile First -->
+<style>
+/* Critical CSS - Mobile First Approach */
+:root{--primary-color:#1e3a8a;--secondary-color:#3730a3;--accent-color:#dc2626;--dark-text:#1f2937;--light-text:#6b7280;--background:#ffffff;--light-bg:#f9fafb;--border-color:#e5e7eb;--success:#059669;--max-width:1200px;--transition-fast:0.2s ease;--transition-normal:0.3s ease}
+
+/* Reset and Base */
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;font-size:16px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:var(--dark-text);background:var(--background);-webkit-font-smoothing:antialiased}
+
+/* Mobile First Container */
+.container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+
+
+/* Force hide TOC on mobile */
+@media (max-width: 768px) {
+  .toc,.toc__menu,.toc__title,.sidebar__right,.sidebar,nav.toc,aside.sidebar__right,[class*="toc"],[class*="table-of-contents"],[id*="toc"],.mobile-toc,.table-of-contents{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important}
+}
+
+/* Mobile Hero */
+.hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:white;padding:3rem 0}
+.hero-content{text-align:center}
+.hero h1{font-size:1.75rem;font-weight:700;margin-bottom:1rem;line-height:1.2}
+.hero-subtitle{font-size:1rem;margin-bottom:1.5rem;opacity:0.95;line-height:1.5}
+
+/* Mobile Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:0.875rem 1.5rem;border-radius:6px;font-weight:600;text-align:center;transition:all 0.3s ease;font-size:1rem;cursor:pointer;text-decoration:none;min-height:44px}
+.btn-primary{background:white;color:var(--primary-color)}
+.btn-secondary{background:transparent;color:white;border:2px solid white}
+.hero-cta{display:flex;flex-direction:column;gap:0.75rem;margin-top:1.5rem;padding:0 1rem}
+.hero-cta .btn{width:100%}
+
+/* Mobile Content */
+section{padding:3rem 0}
+h2{font-size:1.5rem;margin-bottom:1rem;line-height:1.2}
+h3{font-size:1.25rem;margin-bottom:0.75rem}
+p{margin-bottom:1rem}
+
+/* Mobile Cards */
+.services-grid,.credentials-grid,.locations-grid,.practice-areas-chips{display:grid;gap:1rem;margin-top:1.5rem}
+.service-card,.credential,.location-card{background:var(--light-bg);padding:1.5rem;border-radius:8px}
+.practice-areas-strip{background:var(--light-bg);padding:1rem 0;min-height:60px}
+.practice-chip{background:white;padding:0.5rem 1rem;border-radius:20px;font-size:0.875rem;white-space:nowrap;min-height:36px;display:inline-flex;align-items:center;text-decoration:none;color:var(--dark-text)}
+
+/* Tablet Styles */
+@media (min-width:768px){
+  .container{padding:0 2rem}
+  .main-nav{position:sticky;top:0;height:auto}
+  main{padding-top:0}
+  body{padding-top:0}
+  .nav-wrapper{padding:1rem 0}
+  .logo{font-size:1.25rem}
+  .logo span{display:inline}
+  .mobile-menu-toggle{display:none}
+  .nav-menu{position:static;left:auto;top:auto;width:auto;height:auto;flex-direction:row;padding:0;gap:2rem;background:transparent;overflow:visible}
+  .nav-menu a{padding:0.5rem 0;border:none;font-size:0.9375rem}
+  .hero{padding:5rem 0}
+  .hero h1{font-size:2.5rem}
+  .hero-subtitle{font-size:1.25rem}
+  .hero-cta{flex-direction:row;justify-content:center;padding:0}
+  .hero-cta .btn{width:auto}
+  .services-grid{grid-template-columns:repeat(2,1fr);gap:2rem}
+  .credentials-grid{grid-template-columns:repeat(2,1fr)}
+  .locations-grid{grid-template-columns:repeat(3,1fr)}
+  .practice-areas-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem}
+  section{padding:4rem 0}
+  h2{font-size:2rem}
+}
+
+/* Desktop Styles */
+@media (min-width:1024px){
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .credentials-grid{grid-template-columns:repeat(3,1fr)}
+  .locations-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Prevent Layout Shift */
+.loading-placeholder{min-height:100vh;background:var(--background)}
+img{max-width:100%;height:auto}
+@media print{.main-nav{position:static!important}}
+</style>
+
+<!-- Load CSS asynchronously with priority -->
+<link rel="preload" href="/css/styles.min.css?v=9" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/styles.min.css?v=9"></noscript>
+
+<!-- Mobile optimizations CSS -->
+<link rel="preload" href="/css/mobile-optimized.css?v=3" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="/css/mobile-optimized.css?v=3"></noscript>
+
+<!-- Mobile Theme Fixes CSS -->
+<link rel="stylesheet" href="/css/mobile-theme-fixes.css?v=3">
+
+<!-- Complete Mobile Fixes CSS -->
+<link rel="stylesheet" href="/css/mobile-complete-fix.css?v=2">
+
+<!-- Navigation Override Fix - Load absolutely last to override everything -->
+<script>
+// Ensure navigation override CSS loads after all other stylesheets
+window.addEventListener('load', function() {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/css/navigation-fix-override.css?v=2';
+  document.head.appendChild(link);
+  
+  // Load ultimate fix after a short delay to ensure it's absolutely last
+  setTimeout(function() {
+    var ultimateLink = document.createElement('link');
+    ultimateLink.rel = 'stylesheet';
+    ultimateLink.href = '/css/navigation-ultimate-fix.css?v=1';
+    document.head.appendChild(ultimateLink);
+  }, 100);
+});
+</script>
+
+<!-- Remove Mobile TOC Script -->
+<script src="/js/remove-mobile-toc.js"></script>
+<!-- Mobile Navigation Enhancement -->
+<script src="/js/mobile-navigation.js" defer></script>
+
+<!-- Optimized Font Loading - Non-blocking -->
+<script>
+// Non-blocking font loading
+(function(){
+  if('fonts' in document){
+    Promise.all([
+      new FontFace('Inter','url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format("woff2")',{weight:'400',display:'swap'}),
+      new FontFace('Inter','url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hiA.woff2) format("woff2")',{weight:'600',display:'swap'}),
+      new FontFace('Inter','url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hiA.woff2) format("woff2")',{weight:'700',display:'swap'})
+    ].map(f=>f.load())).then(fonts=>{
+      fonts.forEach(f=>document.fonts.add(f));
+      document.documentElement.classList.add('fonts-loaded');
+    }).catch(()=>{
+      // Fallback
+      var l=document.createElement('link');
+      l.rel='stylesheet';
+      l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
+      l.media='print';
+      l.onload=function(){this.media='all'};
+      document.head.appendChild(l);
+    });
+  }else{
+    // Legacy browsers
+    var l=document.createElement('link');
+    l.rel='stylesheet';
+    l.href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap';
+    document.head.appendChild(l);
+  }
+})();
+</script>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Professional Economic Analysis Tools Free Calculators Skerritt Economics | Skerritt Economics &amp; Consulting</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Professional Economic Analysis Tools Free Calculators Skerritt Economics" />
+<meta name="author" content="Christopher C. Skerritt" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes." />
+<meta property="og:description" content="Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes." />
+<link rel="canonical" href="http://localhost:4000/tools/" />
+<meta property="og:url" content="http://localhost:4000/tools/" />
+<meta property="og:site_name" content="Skerritt Economics &amp; Consulting" />
+<meta property="og:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg" />
+<meta property="twitter:title" content="Professional Economic Analysis Tools Free Calculators Skerritt Economics" />
+<meta name="twitter:site" content="@SkerrittEcon" />
+<meta name="twitter:creator" content="@SkerrittEcon" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Christopher C. Skerritt"},"description":"Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes.","headline":"Professional Economic Analysis Tools Free Calculators Skerritt Economics","image":"http://localhost:4000/assets/images/christopher-skerritt.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/christopher-skerritt.jpg"},"name":"Christopher C. Skerritt"},"url":"http://localhost:4000/tools/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Additional SEO Enhancements -->
+
+
+
+<meta name="description" content="Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.">
+<meta name="keywords" content="forensic economist, economic expert witness, business valuation, litigation support, personal injury economist, medical malpractice damages, employment economist, Rhode Island economist, New England expert witness">
+<meta name="author" content="Christopher C. Skerritt, MBA">
+
+
+<link rel="canonical" href="http://localhost:4000/tools/">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Professional Economic Analysis Tools | Free Calculators | Skerritt Economics">
+<meta property="og:description" content="Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.">
+<meta property="og:url" content="http://localhost:4000/tools/">
+<meta property="og:site_name" content="Skerritt Economics & Consulting">
+<meta property="og:locale" content="en_US">
+
+<meta property="og:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg">
+
+<meta property="og:image:alt" content="Professional Economic Analysis Tools | Free Calculators | Skerritt Economics">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SkerrittEcon">
+<meta name="twitter:creator" content="@SkerrittEcon">
+<meta name="twitter:title" content="Professional Economic Analysis Tools | Free Calculators | Skerritt Economics">
+<meta name="twitter:description" content="Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.">
+
+<meta name="twitter:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg">
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "headline": "Professional Economic Analysis Tools | Free Calculators | Skerritt Economics",
+  "description": "Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.",
+  "url": "http://localhost:4000/tools/",
+  
+  "image": "http://localhost:4000/assets/images/christopher-skerritt.jpg",
+  
+  
+  
+  "dateModified": "",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Christopher C. Skerritt",
+    "jobTitle": "Forensic Economist",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "MBA Program"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Skerritt Economics & Consulting",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000/assets/images/christopher-skerritt.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:4000/tools/"
+  }
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Skerritt Economics Consulting",
+  "alternateName": "Christopher Skerritt Economics",
+  "description": "Expert economic assessments and business valuation for litigation across Rhode Island and New England",
+  "url": "http://localhost:4000",
+  "logo": "http://localhost:4000/assets/images/christopher-skerritt.jpg",
+  "telephone": "+1-203-605-2814",
+  "email": "chris@skerritteconomics.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "RI",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.8240",
+    "longitude": "-71.4128"
+  },
+  "priceRange": "$$$",
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "founder": {
+    "@type": "Person",
+    "name": "Christopher C. Skerritt",
+    "jobTitle": "Forensic Economist",
+    "alumniOf": "MBA"
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Rhode Island"
+    },
+    {
+      "@type": "State", 
+      "name": "Massachusetts"
+    },
+    {
+      "@type": "State",
+      "name": "Connecticut"
+    },
+    {
+      "@type": "State",
+      "name": "New Hampshire"
+    },
+    {
+      "@type": "State",
+      "name": "Vermont"
+    },
+    {
+      "@type": "State",
+      "name": "Maine"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Economic Expert Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Economic Loss Assessment",
+          "description": "Calculation of economic damages for personal injury and wrongful death cases"
         }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="canonical" href="https://skerritteconomics.com/tools/">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Business Valuation",
+          "description": "Expert business valuation for litigation and disputes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Employment Economics",
+          "description": "Economic analysis for employment disputes and discrimination cases"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Medical Malpractice Economics",
+          "description": "Economic damage assessment for medical malpractice cases"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/christopherskerritt",
+    "https://twitter.com/SkerrittEcon"
+  ]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "http://localhost:4000"
+    }
+    
+    
+    
+      
+    
+      
+        
+        ,{
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tools",
+          "item": "http://localhost:4000/tools"
+        }
+      
+    
+  ]
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Deferred Scripts -->
+<script>
+// Navigation functionality
+document.addEventListener('DOMContentLoaded',function(){
+  const toggle=document.querySelector('.mobile-menu-toggle');
+  const menu=document.querySelector('.nav-menu');
+  if(toggle&&menu){
+    toggle.addEventListener('click',function(){
+      menu.classList.toggle('active');
+      toggle.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+  }
+});
+
+// Lazy load Google Analytics
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+let gaLoaded=false;
+function loadGA(){
+  if(!gaLoaded){
+    gaLoaded=true;
+    const s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-JNK2QCYSC7';
+    s.onload=()=>{
+      gtag('js',new Date());
+      gtag('config','G-JNK2QCYSC7');
+    };
+    document.head.appendChild(s);
+  }
+}
+// Load on interaction or after delay
+if('requestIdleCallback' in window){
+  requestIdleCallback(loadGA,{timeout:3000});
+}else{
+  setTimeout(loadGA,3000);
+}
+['click','scroll','touchstart'].forEach(e=>{
+  window.addEventListener(e,loadGA,{once:true,passive:true});
+});
+
+// Track phone/email clicks
+function trackPhoneClick(){
+  if(typeof gtag!=='undefined'){
+    gtag('event','phone_call',{event_category:'engagement',event_label:'phone_number_click'});
+  }
+}
+function trackEmailClick(){
+  if(typeof gtag!=='undefined'){
+    gtag('event','email_click',{event_category:'engagement',event_label:'email_address_click'});
+  }
+}
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Skerritt Economics & Consulting",
+    "description": "Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.",
+    "url": "http://localhost:4000",
+    "telephone": "(203) 605-2814",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "400 Putnam Pike Ste J, Smithfield, RI 02917",
+        "addressLocality": "Smithfield",
+        "addressRegion": "RI",
+        "addressCountry": "US"
+    },
+    "areaServed": ["Rhode Island", "Massachusetts", "Connecticut", "New Hampshire", "Vermont", "Maine"],
+    "priceRange": "$$$$"
+}
+</script>
+
+<!-- FAQ Schema - Include if page has FAQs -->
+<!-- FAQ Schema Markup -->
+
+
+
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="main-nav">
-  <div class="container">
-  <div class="nav-wrapper">
-  <a href="../index.html" class="logo">
-  <strong>Skerritt Economics</strong>
-  <span>& Consulting</span>
-  </a>
-  <button class="mobile-menu-toggle" aria-label="Toggle menu">
-  <span></span>
-  <span></span>
-  <span></span>
-  </button>
-  <ul class="nav-menu">
-  <li><a href="../index.html">Home</a></li>
-  <li class="has-dropdown">
-  <a href="../services/">Services</a>
-  <ul class="dropdown">
-  <li><a href="../services/forensic-economics/">Forensic Economics</a></li>
-  <li><a href="../services/business-valuation/">Business Valuation</a></li>
-  </ul>
-  </li>
-  <li class="has-dropdown">
-  <a href="../practice-areas/">Practice Areas</a>
-  <ul class="dropdown">
-  <li><a href="../practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
-  <li><a href="../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
-  <li><a href="../practice-areas/employment/">Employment Litigation</a></li>
-  <li><a href="../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
-  </ul>
-  </li>
-  <li><a href="../case-studies/">Case Studies</a></li>
-  <li><a href="../about/">About</a></li>
-  <li><a href="../resources/">Resources</a></li>
-  <li><a href="../tools/" class="active">Tools</a></li>
-  <li><a href="../contact/" class="nav-cta">Contact</a></li>
-  </ul>
-  </div>
-  </div>
-  </nav>
+    <!-- Skip Navigation Links -->
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<a href="#main-navigation" class="skip-nav">Skip to navigation</a>
+<a href="#footer" class="skip-nav">Skip to footer</a>
 
-  <!-- Breadcrumb Navigation -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
+<style>
+.skip-nav {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    z-index: 999999;
+    padding: 12px 20px;
+    background-color: #1e3a5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: none;
+}
+
+.skip-nav:focus {
+    left: 10px;
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.skip-nav:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .skip-nav:focus {
+        outline: 3px solid currentColor;
+        outline-offset: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .skip-nav {
+        transition: none;
+    }
+}
+</style>
+
+    <!-- Enhanced Navigation with All Services -->
+<nav class="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-wrapper">
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="Skerritt Economics & Consulting Home">
+        <strong>Skerritt Economics</strong>
+        <span>& Consulting</span>
+      </a>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu with ALL Services -->
+      <ul class="nav-menu" id="nav-menu">
+        <li>
+          <a href="/" 
+             >
+            Home
+          </a>
+        </li>
+        
+        <!-- Complete Services Dropdown -->
+        <li class="has-dropdown">
+          <a href="/services/"
+             
+             aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown" role="menu">
+            <li role="menuitem">
+              <a href="/services/forensic-economics/">
+                Forensic Economics
+                <span class="service-badge">Popular</span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="/services/business-valuation/">
+                Business Valuation
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="/services/life-care-planning/">
+                Life Care Planning
+                <span class="service-badge new">New</span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="/services/vocational-expert/">
+                Vocational Expert
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="/services/business-consulting/">
+                Business Consulting
+              </a>
+            </li>
+            <li role="menuitem" class="dropdown-divider">
+              <a href="/services/" class="view-all-link">
+                View All Services →
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Practice Areas Dropdown -->
+        <li class="has-dropdown">
+          <a href="/practice-areas/"
+             
+             aria-haspopup="true" aria-expanded="false">
+            Practice Areas
+          </a>
+          <ul class="dropdown" role="menu">
+            <li role="menuitem">
+              <a href="/practice-areas/personal-injury/">Personal Injury & Wrongful Death</a>
+            </li>
+            <li role="menuitem">
+              <a href="/practice-areas/medical-malpractice/">Medical Malpractice</a>
+            </li>
+            <li role="menuitem">
+              <a href="/practice-areas/employment/">Employment Litigation</a>
+            </li>
+            <li role="menuitem">
+              <a href="/practice-areas/commercial-disputes/">Commercial Disputes</a>
+            </li>
+            <li role="menuitem">
+              <a href="/practice-areas/family-law/">Family Law & Divorce</a>
+            </li>
+            <li role="menuitem">
+              <a href="/practice-areas/product-liability/">Product Liability</a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Locations Dropdown -->
+        <li class="has-dropdown">
+          <a href="/locations/"
+             
+             aria-haspopup="true" aria-expanded="false">
+            Locations
+          </a>
+          <ul class="dropdown" role="menu">
+            <li role="menuitem">
+              <a href="/locations/cities/">Browse by City</a>
+            </li>
+            <li role="menuitem">
+              <a href="/locations/states/">Browse by State</a>
+            </li>
+            <li role="menuitem" class="dropdown-divider">
+              <a href="/locations/rhode-island/">Rhode Island</a>
+            </li>
+            <li role="menuitem">
+              <a href="/locations/massachusetts/">Massachusetts</a>
+            </li>
+            <li role="menuitem">
+              <a href="/locations/connecticut/">Connecticut</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="/case-studies/"
+             >
+            Case Studies
+          </a>
+        </li>
+        
+        <li>
+          <a href="/about/"
+             >
+            About
+          </a>
+        </li>
+        
+        <li>
+          <a href="/blog/"
+             >
+            Blog
+          </a>
+        </li>
+        
+        <li>
+          <a href="/contact/" 
+             class="nav-cta"
+             >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav-overlay"></div>
+    <!-- Breadcrumb Navigation -->
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="breadcrumb-container">
   <ol class="breadcrumb-list">
   <li class="breadcrumb-item">
-  <a class="breadcrumb-link" href="../index.html">Home</a>
+  <a class="breadcrumb-link" href="/">Home</a>
   </li>
+
+            
+            
+
+            
+                
+            
+                
+                    
+
+                    
   <li class="breadcrumb-item">
-  <span class="breadcrumb-current">Tools</span>
+  <span class="breadcrumb-current">Professional economic analysis tools | free calculators | skerritt economics</span>
   </li>
+                    
+                
+            
   </ol>
   </div>
-  </nav>
+</nav>
 
-  <!-- Tools Hero Section -->
+<!-- Breadcrumb Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "http://localhost:4000/"
+        }
+        
+        
+        
+
+        
+            
+        
+            
+                
+                ,{
+                    "@type": "ListItem",
+                    "position": 2,
+                    
+                        "name": "Professional economic analysis tools | free calculators | skerritt economics"
+                    
+                }
+                
+            
+        
+    ]
+}
+</script>
+
+
+
+    <!-- Tools Hero Section -->
   <section class="tools-hero">
   <div class="container">
   <h1>Professional Economic Analysis Tools</h1>
@@ -362,54 +1124,59 @@
   </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="main-footer">
+    <!-- Footer -->
+<footer class="main-footer">
   <div class="container">
   <div class="footer-grid">
   <div class="footer-col">
-  <h4>Skerritt Economics & Consulting</h4>
-  <p>Expert forensic economics and business valuation services for legal professionals throughout New England.</p>
+  <h3>Skerritt Economics & Consulting</h3>
+  <p>Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.</p>
   <p class="footer-contact">
-                        400 Putnam Pike Ste J<br>
-                        Smithfield, RI 02917<br>
-  <a href="tel:203-605-2814">(203) 605-2814</a><br>
+                    400 Putnam Pike Ste J, Smithfield, RI 02917<br>
+  <a href="tel:(203) 605-2814">(203) 605-2814</a><br>
   <a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a>
   </p>
   </div>
   <div class="footer-col">
-  <h4>Services</h4>
+  <h3>Services</h3>
   <ul>
-  <li><a href="../services/forensic-economics/">Forensic Economics</a></li>
-  <li><a href="../services/business-valuation/">Business Valuation</a></li>
-  <li><a href="../services/#life-care-planning">Life Care Planning</a></li>
+  <li><a href="/services/forensic-economics/">Forensic Economics</a></li>
+  <li><a href="/services/business-valuation/">Business Valuation</a></li>
+  <li><a href="/services/life-care-planning/">Life Care Planning</a></li>
+  <li><a href="/services/vocational-expert/">Vocational Expert</a></li>
+  <li><a href="/services/business-consulting/">Business Consulting</a></li>
   </ul>
   </div>
   <div class="footer-col">
-  <h4>Practice Areas</h4>
+  <h3>Practice Areas</h3>
   <ul>
-  <li><a href="../practice-areas/personal-injury/">Personal Injury</a></li>
-  <li><a href="../practice-areas/medical-malpractice/">Medical Malpractice</a></li>
-  <li><a href="../practice-areas/employment/">Employment Litigation</a></li>
-  <li><a href="../practice-areas/commercial-disputes/">Commercial Disputes</a></li>
+  <li><a href="/practice-areas/personal-injury/">Personal Injury</a></li>
+  <li><a href="/practice-areas/medical-malpractice/">Medical Malpractice</a></li>
+  <li><a href="/practice-areas/employment/">Employment Litigation</a></li>
+  <li><a href="/practice-areas/commercial-disputes/">Commercial Disputes</a></li>
   </ul>
   </div>
   <div class="footer-col">
-  <h4>Resources</h4>
+  <h3>Resources</h3>
   <ul>
-  <li><a href="../case-studies/">Case Studies</a></li>
-  <li><a href="../resources/">Articles & Insights</a></li>
-  <li><a href="../tools/">Professional Tools</a></li>
-  <li><a href="../about/">About Chris Skerritt</a></li>
-  <li><a href="../contact/">Contact</a></li>
+  <li><a href="/case-studies/">Case Studies</a></li>
+  <li><a href="/resources/">Articles & Insights</a></li>
+  <li><a href="/tools/">Professional Tools</a></li>
+  <li><a href="/about/">About Chris Skerritt</a></li>
+  <li><a href="/contact/">Contact</a></li>
   </ul>
   </div>
   </div>
   <div class="footer-bottom">
-  <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved. | Tools provided for informational purposes.</p>
+  <p>&copy; 2025 Skerritt Economics & Consulting. All rights reserved.</p>
   </div>
   </div>
-  </footer>
+</footer>
 
-  <script src="../js/main.js"></script>
+<script src="/js/performance-init.min.js"></script>
+<!-- Enhanced Navigation System with All Services -->
+<script src="/js/navigation-enhanced.js"></script>
+<script src="/js/mobile-menu-fix.js"></script>
+
 </body>
 </html>
