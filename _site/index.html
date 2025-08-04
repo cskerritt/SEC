@@ -331,6 +331,17 @@ img{max-width:100%;height:auto}
 <!-- Complete Mobile Fixes CSS -->
 <link rel="stylesheet" href="/css/mobile-complete-fix.css?v=2">
 
+<!-- Navigation Override Fix - Load absolutely last to override everything -->
+<script>
+// Ensure navigation override CSS loads after all other stylesheets
+window.addEventListener('load', function() {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/css/navigation-fix-override.css?v=2';
+  document.head.appendChild(link);
+});
+</script>
+
 <!-- Remove Mobile TOC Script -->
 <script src="/js/remove-mobile-toc.js"></script>
 
@@ -372,18 +383,18 @@ img{max-width:100%;height:auto}
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review." />
 <meta property="og:description" content="Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review." />
-<link rel="canonical" href="https://skerritteconomics.com/" />
-<meta property="og:url" content="https://skerritteconomics.com/" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="Skerritt Economics &amp; Consulting" />
-<meta property="og:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg" />
+<meta property="og:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg" />
 <meta property="twitter:title" content="Forensic Economist &amp; Business Valuation Expert" />
 <meta name="twitter:site" content="@SkerrittEcon" />
 <meta name="twitter:creator" content="@SkerrittEcon" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Christopher C. Skerritt"},"description":"Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review.","headline":"Forensic Economist &amp; Business Valuation Expert","image":"https://skerritteconomics.com/assets/images/christopher-skerritt.jpg","name":"Christopher C. Skerritt","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://skerritteconomics.com/assets/images/christopher-skerritt.jpg"},"name":"Christopher C. Skerritt"},"sameAs":["https://www.linkedin.com/in/christopherskerritt","https://twitter.com/SkerrittEcon"],"url":"https://skerritteconomics.com/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Christopher C. Skerritt"},"description":"Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review.","headline":"Forensic Economist &amp; Business Valuation Expert","image":"http://localhost:4000/assets/images/christopher-skerritt.jpg","name":"Christopher C. Skerritt","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/christopher-skerritt.jpg"},"name":"Christopher C. Skerritt"},"sameAs":["https://www.linkedin.com/in/christopherskerritt","https://twitter.com/SkerrittEcon"],"url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -396,17 +407,17 @@ img{max-width:100%;height:auto}
 <meta name="author" content="Christopher C. Skerritt, MBA">
 
 
-<link rel="canonical" href="https://skerritteconomics.com/">
+<link rel="canonical" href="http://localhost:4000/">
 
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Forensic Economist &amp; Business Valuation Expert">
 <meta property="og:description" content="Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review.">
-<meta property="og:url" content="https://skerritteconomics.com/">
+<meta property="og:url" content="http://localhost:4000/">
 <meta property="og:site_name" content="Skerritt Economics & Consulting">
 <meta property="og:locale" content="en_US">
 
-<meta property="og:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg">
 
 <meta property="og:image:alt" content="Forensic Economist &amp; Business Valuation Expert">
 
@@ -417,7 +428,7 @@ img{max-width:100%;height:auto}
 <meta name="twitter:title" content="Forensic Economist &amp; Business Valuation Expert">
 <meta name="twitter:description" content="Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review.">
 
-<meta name="twitter:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg">
 
 
 
@@ -430,9 +441,9 @@ img{max-width:100%;height:auto}
   "@type": "WebPage",
   "headline": "Forensic Economist &amp; Business Valuation Expert",
   "description": "Court-tested economic damage assessments and business valuations for lawyers across Rhode Island, Massachusetts, and New England. Schedule a case review.",
-  "url": "https://skerritteconomics.com/",
+  "url": "http://localhost:4000/",
   
-  "image": "https://skerritteconomics.com/assets/images/christopher-skerritt.jpg",
+  "image": "http://localhost:4000/assets/images/christopher-skerritt.jpg",
   
   
   
@@ -452,12 +463,12 @@ img{max-width:100%;height:auto}
     "name": "Skerritt Economics & Consulting",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://skerritteconomics.com/assets/images/christopher-skerritt.jpg"
+      "url": "http://localhost:4000/assets/images/christopher-skerritt.jpg"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://skerritteconomics.com/"
+    "@id": "http://localhost:4000/"
   }
 }
 </script>
@@ -470,8 +481,8 @@ img{max-width:100%;height:auto}
   "name": "Skerritt Economics Consulting",
   "alternateName": "Christopher Skerritt Economics",
   "description": "Expert economic assessments and business valuation for litigation across Rhode Island and New England",
-  "url": "https://skerritteconomics.com",
-  "logo": "https://skerritteconomics.com/assets/images/christopher-skerritt.jpg",
+  "url": "http://localhost:4000",
+  "logo": "http://localhost:4000/assets/images/christopher-skerritt.jpg",
   "telephone": "+1-203-605-2814",
   "email": "chris@skerritteconomics.com",
   "address": {
@@ -637,7 +648,7 @@ function trackEmailClick(){
     "@type": "ProfessionalService",
     "name": "Skerritt Economics & Consulting",
     "description": "Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.",
-    "url": "https://skerritteconomics.com",
+    "url": "http://localhost:4000",
     "telephone": "(203) 605-2814",
     "address": {
         "@type": "PostalAddress",

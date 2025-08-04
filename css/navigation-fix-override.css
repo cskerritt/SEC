@@ -24,13 +24,19 @@
     z-index: 999999 !important;
 }
 
-/* Make dropdown visible AND clickable on hover */
+/* Make dropdown visible AND clickable on hover - ULTRA HIGH SPECIFICITY */
 .main-nav .has-dropdown:hover .dropdown,
-.main-nav .has-dropdown:focus-within .dropdown {
+.main-nav .has-dropdown:focus-within .dropdown,
+.nav-menu .has-dropdown:hover .dropdown,
+.nav-menu .has-dropdown:focus-within .dropdown,
+body .main-nav .has-dropdown:hover .dropdown,
+body .main-nav .has-dropdown:focus-within .dropdown {
+    display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
     pointer-events: auto !important;
+    z-index: 999999 !important;
 }
 
 /* Ensure the nav itself has high z-index */

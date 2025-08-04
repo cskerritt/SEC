@@ -119,6 +119,17 @@ img{max-width:100%;height:auto}
 <!-- Complete Mobile Fixes CSS -->
 <link rel="stylesheet" href="{{ '/css/mobile-complete-fix.css?v=2' | relative_url }}">
 
+<!-- Navigation Override Fix - Load absolutely last to override everything -->
+<script>
+// Ensure navigation override CSS loads after all other stylesheets
+window.addEventListener('load', function() {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '{{ '/css/navigation-fix-override.css?v=2' | relative_url }}';
+  document.head.appendChild(link);
+});
+</script>
+
 <!-- Remove Mobile TOC Script -->
 <script src="{{ '/js/remove-mobile-toc.js' | relative_url }}"></script>
 

@@ -327,6 +327,17 @@ img{max-width:100%;height:auto}
 <!-- Complete Mobile Fixes CSS -->
 <link rel="stylesheet" href="/css/mobile-complete-fix.css?v=2">
 
+<!-- Navigation Override Fix - Load absolutely last to override everything -->
+<script>
+// Ensure navigation override CSS loads after all other stylesheets
+window.addEventListener('load', function() {
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = '/css/navigation-fix-override.css?v=2';
+  document.head.appendChild(link);
+});
+</script>
+
 <!-- Remove Mobile TOC Script -->
 <script src="/js/remove-mobile-toc.js"></script>
 
@@ -368,18 +379,18 @@ img{max-width:100%;height:auto}
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes." />
 <meta property="og:description" content="Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes." />
-<link rel="canonical" href="https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/" />
-<meta property="og:url" content="https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/" />
+<link rel="canonical" href="http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/" />
+<meta property="og:url" content="http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/" />
 <meta property="og:site_name" content="Skerritt Economics &amp; Consulting" />
-<meta property="og:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg" />
+<meta property="og:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg" />
 <meta property="twitter:title" content="Final Verification Report: Business Valuation Analyst Pages 626-750" />
 <meta name="twitter:site" content="@SkerrittEcon" />
 <meta name="twitter:creator" content="@SkerrittEcon" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Christopher C. Skerritt"},"description":"Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes.","headline":"Final Verification Report: Business Valuation Analyst Pages 626-750","image":"https://skerritteconomics.com/assets/images/christopher-skerritt.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://skerritteconomics.com/assets/images/christopher-skerritt.jpg"},"name":"Christopher C. Skerritt"},"url":"https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Christopher C. Skerritt"},"description":"Expert forensic economics and business valuation services for legal professionals throughout New England. Specializing in personal injury, employment litigation, and commercial disputes.","headline":"Final Verification Report: Business Valuation Analyst Pages 626-750","image":"http://localhost:4000/assets/images/christopher-skerritt.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/christopher-skerritt.jpg"},"name":"Christopher C. Skerritt"},"url":"http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -392,17 +403,17 @@ img{max-width:100%;height:auto}
 <meta name="author" content="Christopher C. Skerritt, MBA">
 
 
-<link rel="canonical" href="https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/">
+<link rel="canonical" href="http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/">
 
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Final Verification Report: Business Valuation Analyst Pages 626-750">
 <meta property="og:description" content="Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.">
-<meta property="og:url" content="https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/">
+<meta property="og:url" content="http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/">
 <meta property="og:site_name" content="Skerritt Economics & Consulting">
 <meta property="og:locale" content="en_US">
 
-<meta property="og:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg">
+<meta property="og:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg">
 
 <meta property="og:image:alt" content="Final Verification Report: Business Valuation Analyst Pages 626-750">
 
@@ -413,7 +424,7 @@ img{max-width:100%;height:auto}
 <meta name="twitter:title" content="Final Verification Report: Business Valuation Analyst Pages 626-750">
 <meta name="twitter:description" content="Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.">
 
-<meta name="twitter:image" content="https://skerritteconomics.com/assets/images/christopher-skerritt.jpg">
+<meta name="twitter:image" content="http://localhost:4000/assets/images/christopher-skerritt.jpg">
 
 
 
@@ -426,9 +437,9 @@ img{max-width:100%;height:auto}
   "@type": "WebPage",
   "headline": "Final Verification Report: Business Valuation Analyst Pages 626-750",
   "description": "Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.",
-  "url": "https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/",
+  "url": "http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/",
   
-  "image": "https://skerritteconomics.com/assets/images/christopher-skerritt.jpg",
+  "image": "http://localhost:4000/assets/images/christopher-skerritt.jpg",
   
   
   
@@ -448,12 +459,12 @@ img{max-width:100%;height:auto}
     "name": "Skerritt Economics & Consulting",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://skerritteconomics.com/assets/images/christopher-skerritt.jpg"
+      "url": "http://localhost:4000/assets/images/christopher-skerritt.jpg"
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/"
+    "@id": "http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/"
   }
 }
 </script>
@@ -466,8 +477,8 @@ img{max-width:100%;height:auto}
   "name": "Skerritt Economics Consulting",
   "alternateName": "Christopher Skerritt Economics",
   "description": "Expert economic assessments and business valuation for litigation across Rhode Island and New England",
-  "url": "https://skerritteconomics.com",
-  "logo": "https://skerritteconomics.com/assets/images/christopher-skerritt.jpg",
+  "url": "http://localhost:4000",
+  "logo": "http://localhost:4000/assets/images/christopher-skerritt.jpg",
   "telephone": "+1-203-605-2814",
   "email": "chris@skerritteconomics.com",
   "address": {
@@ -570,7 +581,7 @@ img{max-width:100%;height:auto}
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://skerritteconomics.com"
+      "item": "http://localhost:4000"
     }
     
     
@@ -583,7 +594,7 @@ img{max-width:100%;height:auto}
           "@type": "ListItem",
           "position": 3,
           "name": "Locations",
-          "item": "https://skerritteconomics.com/locations"
+          "item": "http://localhost:4000/locations"
         }
       
     
@@ -593,7 +604,7 @@ img{max-width:100%;height:auto}
           "@type": "ListItem",
           "position": 4,
           "name": "Cities",
-          "item": "https://skerritteconomics.com/locations/cities"
+          "item": "http://localhost:4000/locations/cities"
         }
       
     
@@ -603,7 +614,7 @@ img{max-width:100%;height:auto}
           "@type": "ListItem",
           "position": 5,
           "name": "Final_verification_report_pages_626 750",
-          "item": "https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750"
+          "item": "http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750"
         }
       
     
@@ -638,7 +649,7 @@ img{max-width:100%;height:auto}
     "latitude": "41.8240",
     "longitude": "-71.4128"
   },
-  "url": "https://skerritteconomics.com/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/",
+  "url": "http://localhost:4000/locations/cities/FINAL_VERIFICATION_REPORT_PAGES_626-750/",
   "priceRange": "$$$",
   "openingHours": "Mo-Fr 08:00-18:00"
 }
@@ -707,7 +718,7 @@ function trackEmailClick(){
     "@type": "ProfessionalService",
     "name": "Skerritt Economics & Consulting",
     "description": "Expert forensic economics and business valuation services for legal professionals  throughout New England. Specializing in personal injury, employment litigation,  and commercial disputes.",
-    "url": "https://skerritteconomics.com",
+    "url": "http://localhost:4000",
     "telephone": "(203) 605-2814",
     "address": {
         "@type": "PostalAddress",
@@ -998,7 +1009,7 @@ function trackEmailClick(){
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://skerritteconomics.com/"
+            "item": "http://localhost:4000/"
         }
         
         
@@ -1016,7 +1027,7 @@ function trackEmailClick(){
                         
                         
                         "name": "Locations",
-                        "item": "https://skerritteconomics.com/locations/"
+                        "item": "http://localhost:4000/locations/"
                     
                 }
                 
@@ -1031,7 +1042,7 @@ function trackEmailClick(){
                         
                         
                         "name": "Cities",
-                        "item": "https://skerritteconomics.com/locations/cities/"
+                        "item": "http://localhost:4000/locations/cities/"
                     
                 }
                 
