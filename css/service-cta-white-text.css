@@ -1,0 +1,139 @@
+/* Service Pages CTA Section - White Text Fix */
+
+/* Ensure service CTA sections have gradient background */
+.service-cta {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+    padding: 60px 40px !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    margin: 60px 0 !important;
+}
+
+/* Force all text in service CTA to be white */
+.service-cta,
+.service-cta * {
+    color: white !important;
+}
+
+.service-cta h2 {
+    color: white !important;
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+.service-cta p {
+    color: white !important;
+    font-size: 1.125rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 30px !important;
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    opacity: 1 !important;
+}
+
+/* Links within the CTA text */
+.service-cta a:not(.btn) {
+    color: white !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.service-cta a:not(.btn):hover {
+    opacity: 0.8 !important;
+    color: white !important;
+}
+
+/* Button styling */
+.service-cta .btn,
+.service-cta .btn-primary {
+    background: white !important;
+    color: #1e3a8a !important;
+    padding: 16px 32px !important;
+    font-size: 1.0625rem !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border: none !important;
+}
+
+.service-cta .btn:hover,
+.service-cta .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+    background: white !important;
+    color: #1e3a8a !important;
+}
+
+/* Large button variant */
+.service-cta .btn-large {
+    padding: 18px 36px !important;
+    font-size: 1.125rem !important;
+}
+
+/* Ensure proper contrast for readability */
+.service-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.05);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.service-cta {
+    position: relative;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .service-cta {
+        padding: 40px 20px !important;
+        margin: 40px 0 !important;
+    }
+    
+    .service-cta h2 {
+        font-size: 1.875rem !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .service-cta p {
+        font-size: 1rem !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .service-cta .btn,
+    .service-cta .btn-primary {
+        padding: 14px 28px !important;
+        font-size: 1rem !important;
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+}
+
+/* Apply to all service pages */
+.service-forensic-economics .service-cta,
+.service-life-care-planning .service-cta,
+.service-vocational-expert .service-cta,
+.service-business-valuation .service-cta {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+}
+
+/* Ensure override of any conflicting styles */
+.service-cta h2,
+.service-cta p,
+.service-cta span,
+.service-cta div,
+.service-cta strong,
+.service-cta em,
+.service-cta a {
+    color: white !important;
+}
