@@ -1,0 +1,359 @@
+/* Ultimate About Page Fix - Overrides all conflicting styles */
+
+/* Reset and fix the main content area */
+.about-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: white !important;
+    padding: 80px 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+}
+
+/* Fix container to be properly centered */
+.about-content .container {
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 30px !important;
+    box-sizing: border-box !important;
+}
+
+/* Professional Summary Section - COMPLETE OVERRIDE */
+.about-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 80px 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+.about-section h2 {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin: 0 0 40px 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    line-height: 1.2 !important;
+}
+
+/* Fix all paragraphs in about section */
+.about-section p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin: 0 auto 24px auto !important;
+    padding: 0 !important;
+    font-size: 1.125rem !important;
+    line-height: 1.8 !important;
+    color: #4b5563 !important;
+    text-align: left !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+.about-section p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Ensure links are styled properly */
+.about-section a {
+    color: #1e3a8a !important;
+    text-decoration: underline !important;
+    display: inline !important;
+}
+
+.about-section a:hover {
+    color: #1e3080 !important;
+}
+
+/* Fix Credentials Section */
+.credentials-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #f9fafb !important;
+    padding: 60px 30px !important;
+    border-radius: 12px !important;
+    margin: 0 0 60px 0 !important;
+    box-sizing: border-box !important;
+}
+
+.credentials-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: center !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
+}
+
+.credentials-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix Timeline Section */
+.timeline-section {
+    width: 100% !important;
+    padding: 60px 0 !important;
+    margin: 0 0 60px 0 !important;
+    background: white !important;
+}
+
+.timeline-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: center !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
+}
+
+.timeline {
+    max-width: 900px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 30px !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix Publications Section */
+.publications-section {
+    width: 100% !important;
+    background: #f9fafb !important;
+    padding: 60px 30px !important;
+    border-radius: 12px !important;
+    margin: 0 0 60px 0 !important;
+    box-sizing: border-box !important;
+}
+
+.publications-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: center !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
+}
+
+.activities-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix Court Section */
+.court-section {
+    width: 100% !important;
+    padding: 60px 0 !important;
+    margin: 0 0 60px 0 !important;
+    background: white !important;
+}
+
+.court-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: center !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
+}
+
+.court-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    margin: 0 0 40px 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix Memberships Section */
+.memberships-section {
+    width: 100% !important;
+    padding: 60px 0 !important;
+    margin: 0 0 60px 0 !important;
+    background: #f9fafb !important;
+}
+
+.memberships-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: center !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
+}
+
+.memberships-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+    gap: 30px !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 30px !important;
+    box-sizing: border-box !important;
+}
+
+/* Fix FAQ Section */
+.faq-section {
+    width: 100% !important;
+    padding: 60px 0 !important;
+    margin: 0 0 60px 0 !important;
+    background: white !important;
+}
+
+.faq-section h2 {
+    font-size: 2.25rem !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-align: center !important;
+    margin: 0 0 50px 0 !important;
+    padding: 0 !important;
+}
+
+.faq-item {
+    max-width: 900px !important;
+    width: 100% !important;
+    margin: 0 auto 30px auto !important;
+    padding: 30px !important;
+    background: #f9fafb !important;
+    border-radius: 8px !important;
+    border-left: 4px solid #1e3a8a !important;
+    box-sizing: border-box !important;
+}
+
+.faq-item h3 {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    color: #1e3a8a !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.faq-item p {
+    font-size: 1.0625rem !important;
+    line-height: 1.7 !important;
+    color: #4b5563 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix CTA Section */
+.about-cta {
+    max-width: 900px !important;
+    width: calc(100% - 60px) !important;
+    margin: 60px auto 0 auto !important;
+    padding: 60px 40px !important;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+    border-radius: 12px !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+.about-cta h2 {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+}
+
+.about-cta p {
+    font-size: 1.125rem !important;
+    line-height: 1.6 !important;
+    color: white !important;
+    opacity: 0.95 !important;
+    max-width: 600px !important;
+    margin: 0 auto 30px auto !important;
+    padding: 0 !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .about-content .container {
+        padding: 0 20px !important;
+    }
+    
+    .about-section {
+        margin-bottom: 60px !important;
+    }
+    
+    .about-section h2 {
+        font-size: 2rem !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .about-section p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .credentials-section,
+    .publications-section {
+        padding: 40px 20px !important;
+    }
+    
+    .credentials-grid,
+    .activities-grid,
+    .court-grid,
+    .memberships-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    
+    .timeline {
+        padding: 0 20px !important;
+    }
+    
+    .faq-item {
+        padding: 20px !important;
+        margin: 0 20px 20px 20px !important;
+    }
+    
+    .about-cta {
+        width: calc(100% - 40px) !important;
+        padding: 40px 30px !important;
+        margin: 40px auto 0 auto !important;
+    }
+}
+
+/* Force proper layout - ABSOLUTE OVERRIDE */
+#main-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure no element causes horizontal scroll */
+* {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Fix any flex or grid issues */
+.about-content > div {
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Remove any absolute positioning that might cause issues */
+.about-content * {
+    position: relative !important;
+}

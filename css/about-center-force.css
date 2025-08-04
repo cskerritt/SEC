@@ -1,0 +1,248 @@
+/* Force Center Alignment for About Page Content */
+
+/* Override any conflicting styles causing left alignment */
+#main-content {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force the about content to be centered */
+.about-content {
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 80px 0 !important;
+    display: block !important;
+    position: relative !important;
+}
+
+/* Ensure container is truly centered */
+.about-content > .container,
+.about-content .container {
+    display: block !important;
+    max-width: 1200px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+/* Force Professional Summary to center */
+.about-section {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto 60px auto !important;
+    padding: 0 !important;
+    text-align: left !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+}
+
+/* Center the heading */
+.about-section h2 {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto 40px auto !important;
+    padding: 0 !important;
+    font-size: 2.5rem !important;
+    color: #1f2937 !important;
+    position: relative !important;
+}
+
+/* Fix paragraph positioning - remove any left offset */
+.about-section p {
+    display: block !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+    text-align: left !important;
+    font-size: 1.125rem !important;
+    line-height: 1.8 !important;
+    color: #4b5563 !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    float: none !important;
+    clear: both !important;
+}
+
+/* Ensure all direct children of container are properly positioned */
+.container > * {
+    position: relative !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    transform: none !important;
+}
+
+/* Fix any grid or flex layouts that might be causing issues */
+.container {
+    display: block !important;
+    flex-direction: unset !important;
+    grid-template-columns: unset !important;
+}
+
+/* Credentials section centering */
+.credentials-section {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important;
+    padding: 60px 40px !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Timeline section centering */
+.timeline-section {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important;
+    padding: 60px 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.timeline {
+    max-width: 900px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Publications section centering */
+.publications-section {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important;
+    padding: 60px 40px !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Court section centering */
+.court-section {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important;
+    padding: 60px 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Memberships section centering */
+.memberships-section {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important;
+    padding: 60px 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* FAQ section centering */
+.faq-section {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 60px auto !important;
+    padding: 60px 0 !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.faq-item {
+    max-width: 900px !important;
+    margin: 0 auto 30px auto !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* CTA section centering */
+.about-cta {
+    display: block !important;
+    max-width: 900px !important;
+    margin: 60px auto 0 auto !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Remove any transforms or translations */
+.about-content *,
+.about-section *,
+.container * {
+    transform: none !important;
+    translate: none !important;
+}
+
+/* Absolute positioning override */
+.about-content section,
+.about-content div {
+    position: relative !important;
+}
+
+/* For large screens, ensure content stays centered */
+@media (min-width: 1400px) {
+    .about-content > .container,
+    .about-content .container {
+        max-width: 1320px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+
+/* For mobile, ensure proper alignment */
+@media (max-width: 768px) {
+    .about-content > .container,
+    .about-content .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    .about-section p {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .credentials-section,
+    .publications-section {
+        padding: 40px 20px !important;
+    }
+    
+    .faq-item {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+
+/* Debug - add subtle border to see actual positioning */
+/* Uncomment to debug
+.container {
+    border: 1px solid red !important;
+}
+.about-section {
+    border: 1px solid blue !important;
+}
+.about-section p {
+    border: 1px solid green !important;
+}
+*/
