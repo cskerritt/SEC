@@ -1,0 +1,650 @@
+/**
+ * Enhanced Page Layouts
+ * Professional, consistent design across all pages
+ */
+
+/* ========================================
+   Base Layout Styles
+   ======================================== */
+
+/* Ensure consistent body padding for fixed header */
+body {
+  padding-top: 80px; /* Account for fixed navigation */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* Container consistency */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+/* ========================================
+   Page Headers / Hero Sections
+   ======================================== */
+
+.page-header,
+.about-hero,
+.case-studies-header,
+.practice-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+  color: white;
+  padding: 80px 0;
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before,
+.about-hero::before,
+.case-studies-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+  opacity: 0.1;
+}
+
+.page-header h1,
+.about-hero h1,
+.case-studies-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-header .lead,
+.about-hero .lead,
+.case-studies-header .lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .page-header h1,
+  .about-hero h1,
+  .case-studies-header h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ========================================
+   Section Spacing & Typography
+   ======================================== */
+
+section {
+  padding: 60px 0;
+}
+
+section:nth-child(even) {
+  background: #f9fafb;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   Cards and Grid Layouts
+   ======================================== */
+
+.services-grid,
+.practice-areas-grid,
+.case-studies-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .practice-areas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .case-studies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Service Cards */
+.service-card-detailed,
+.practice-card,
+.case-study-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card-detailed:hover,
+.practice-card:hover,
+.case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
+}
+
+/* Icons */
+.service-icon,
+.practice-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
+}
+
+/* Features Lists */
+.service-features,
+.practice-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.service-features li,
+.practice-features li {
+  padding: 8px 0;
+  padding-left: 28px;
+  position: relative;
+  color: #4b5563;
+}
+
+.service-features li::before,
+.practice-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+}
+
+/* ========================================
+   Buttons and CTAs
+   ======================================== */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #1e3a8a;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+.btn-secondary {
+  background: #10b981;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #1e3a8a;
+  border: 2px solid #1e3a8a;
+}
+
+.btn-outline:hover {
+  background: #1e3a8a;
+  color: white;
+}
+
+.btn-large {
+  padding: 16px 40px;
+  font-size: 1.125rem;
+}
+
+/* CTA Sections */
+.services-cta,
+.practice-cta,
+.case-studies-cta,
+.about-cta {
+  background: linear-gradient(135deg, #1e3a8a, #3730a3);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta h2,
+.practice-cta h2,
+.case-studies-cta h2,
+.about-cta h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.services-cta p,
+.practice-cta p,
+.case-studies-cta p,
+.about-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   About Page Specific
+   ======================================== */
+
+.about-content {
+  display: grid;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.about-sidebar {
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.about-main {
+  padding: 0 20px;
+}
+
+.credentials-grid {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .credentials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.credential-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   Services Page Specific
+   ======================================== */
+
+.services-overview {
+  padding: 60px 0;
+}
+
+.services-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.methodology-grid {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .methodology-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .methodology-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.method-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.method-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .process-steps {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.step {
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+/* ========================================
+   Practice Areas Page Specific
+   ======================================== */
+
+.practice-areas-overview {
+  padding: 60px 0;
+}
+
+.practice-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.practice-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #3b82f6, #10b981);
+}
+
+.practice-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   Case Studies Page Specific
+   ======================================== */
+
+.case-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 20px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 20px;
+  color: #4b5563;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
+.case-study-card {
+  position: relative;
+}
+
+.case-category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #3b82f6;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   Legal Use Tags
+   ======================================== */
+
+.legal-uses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.use-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #eff6ff;
+  color: #1e40af;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.use-tag:hover {
+  background: #1e40af;
+  color: white;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 768px) {
+  .page-header,
+  .about-hero,
+  .case-studies-header {
+    padding: 60px 0;
+  }
+  
+  .page-header h1,
+  .about-hero h1,
+  .case-studies-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-header .lead,
+  .about-hero .lead,
+  .case-studies-header .lead {
+    font-size: 1.125rem;
+  }
+  
+  section {
+    padding: 40px 0;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .services-grid,
+  .practice-areas-grid,
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card-detailed,
+.practice-card,
+.case-study-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger animation delays */
+.service-card-detailed:nth-child(1),
+.practice-card:nth-child(1),
+.case-study-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card-detailed:nth-child(2),
+.practice-card:nth-child(2),
+.case-study-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card-detailed:nth-child(3),
+.practice-card:nth-child(3),
+.case-study-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
