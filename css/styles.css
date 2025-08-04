@@ -1530,16 +1530,20 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     width: 100%;
+    max-width: 100%;
+    gap: 2rem;
 }
 
 .logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--dark-text);
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
+    line-height: 1.1;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .logo strong {
@@ -1557,7 +1561,7 @@ a:hover {
     list-style: none;
     align-items: center;
     gap: 1.5rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .nav-menu a {
@@ -3816,15 +3820,56 @@ textarea.success {
         width: 50%;
         max-width: 300px;
     }
-}/* Navigation Responsive Adjustments */
-@media (min-width: 769px) and (max-width: 1024px) {
+}/* Navigation Responsive Adjustments - Fixed to prevent cutoff */
+
+/* Critical fix for navigation at medium screen sizes */
+@media (min-width: 769px) and (max-width: 1350px) {
+    .logo {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    
+    .logo span {
+        font-size: 0.9rem; /* Make "& Consulting" smaller instead of hiding */
+    }
+    
     .nav-menu {
-        gap: 1rem;
+        gap: 0.5rem;
     }
     
     .nav-menu a {
-        font-size: 0.875rem;
-        padding: 0.5rem 0.125rem;
+        font-size: 0.825rem;
+        padding: 0.4rem 0.35rem;
+        white-space: nowrap;
+    }
+    
+    .nav-cta {
+        margin-left: 0.35rem;
+        padding: 0.5rem 0.9rem !important;
+        font-size: 0.825rem;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-menu {
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+    }
+    
+    .nav-menu a {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.3rem;
+    }
+    
+    .nav-cta {
+        margin-left: 0.25rem;
+        padding: 0.5rem 0.875rem !important;
+        font-size: 0.8rem;
     }
     
     .container {
@@ -3834,21 +3879,59 @@ textarea.success {
 
 @media (min-width: 1025px) and (max-width: 1200px) {
     .nav-menu {
-        gap: 1.25rem;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
     }
     
     .nav-menu a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        padding: 0.45rem 0.4rem;
+    }
+    
+    .nav-cta {
+        margin-left: 0.35rem;
+        padding: 0.55rem 1rem !important;
+        font-size: 0.85rem;
     }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1351px) and (max-width: 1600px) {
     .container {
-        max-width: 1280px;
+        max-width: 1350px;
     }
     
     .nav-menu {
-        gap: 1.75rem;
+        gap: 0.875rem;
+        flex-wrap: nowrap;
+    }
+    
+    .nav-menu a {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.6rem;
+    }
+    
+    .nav-cta {
+        padding: 0.6rem 1.1rem !important;
+    }
+}
+
+@media (min-width: 1601px) {
+    .container {
+        max-width: 1500px;
+    }
+    
+    .nav-menu {
+        gap: 1.25rem;
+        flex-wrap: nowrap;
+    }
+    
+    .nav-menu a {
+        font-size: 0.925rem;
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .nav-cta {
+        padding: 0.625rem 1.25rem !important;
     }
 }
 
