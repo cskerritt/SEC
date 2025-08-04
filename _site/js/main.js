@@ -2,11 +2,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
+    const nav = document.querySelector('.main-nav');
+
     // Create mobile navigation overlay
     const mobileNavOverlay = document.createElement('div');
     mobileNavOverlay.className = 'mobile-nav-overlay';
     document.body.appendChild(mobileNavOverlay);
+
+    // Ensure content isn't hidden behind the fixed header
+    function setBodyPadding() {
+        if (nav) {
+            document.body.style.paddingTop = nav.offsetHeight + 'px';
+        }
+    }
+    setBodyPadding();
+    window.addEventListener('resize', setBodyPadding);
     
     if (mobileMenuToggle && navMenu) {
         mobileMenuToggle.addEventListener('click', function() {
@@ -88,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add scroll effect to navigation with debouncing
     let lastScrollTop = 0;
-    const nav = document.querySelector('.main-nav');
     let ticking = false;
     
     function updateNavOnScroll() {

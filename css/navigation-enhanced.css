@@ -313,6 +313,23 @@
     transform: rotate(180deg);
 }
 
+/* Contact Button Styling */
+.nav-cta {
+    background: var(--text-primary);
+    color: white !important;
+    padding: 8px 20px !important;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.nav-cta:hover {
+    background: var(--text-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
 /* Focus States */
 .nav-menu a:focus,
 .dropdown a:focus,
