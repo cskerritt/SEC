@@ -3,15 +3,20 @@
 /* Case Studies Header */
 .case-studies-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
+    color: white !important;
     padding: 3rem 0;
     text-align: center;
+}
+
+.case-studies-header * {
+    color: white !important;
 }
 
 .case-studies-header h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-weight: 700;
+    color: white !important;
 }
 
 .case-studies-header .lead {
@@ -20,6 +25,11 @@
     margin: 0 auto;
     opacity: 0.95;
     line-height: 1.5;
+    color: white !important;
+}
+
+.case-studies-header p {
+    color: white !important;
 }
 
 /* Filter Section */

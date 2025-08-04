@@ -2,9 +2,13 @@
 
 /* About Hero */
 .about-hero {
-    background: var(--light-bg);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 4rem 0;
-    border-bottom: 1px solid var(--border-color);
+    color: white !important;
+}
+
+.about-hero * {
+    color: white !important;
 }
 
 .hero-content {
@@ -18,21 +22,27 @@
 .hero-text h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: var(--dark-text);
+    color: white !important;
     line-height: 1.1;
 }
 
 .hero-text .title {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: white !important;
     font-weight: 600;
     margin-bottom: 2rem;
+    opacity: 0.95;
 }
 
 .hero-text .lead {
     font-size: 1.125rem;
-    color: var(--light-text);
+    color: white !important;
     line-height: 1.6;
+    opacity: 0.95;
+}
+
+.about-hero p {
+    color: white !important;
 }
 
 .placeholder-image {

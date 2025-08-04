@@ -102,22 +102,32 @@
 
 /* Blog Hero */
 .blog-hero {
-    background-color: #f9fafb;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: 4rem 0;
     text-align: center;
+    color: white !important;
+}
+
+.blog-hero * {
+    color: white !important;
 }
 
 .blog-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #111827;
+    color: white !important;
 }
 
 .blog-hero .lead {
     font-size: 1.25rem;
-    color: #4b5563;
+    color: white !important;
     max-width: 600px;
     margin: 0 auto;
+    opacity: 0.95;
+}
+
+.blog-hero p {
+    color: white !important;
 }
 
 /* Blog Sidebar */
