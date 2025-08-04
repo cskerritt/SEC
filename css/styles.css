@@ -1492,6 +1492,7 @@ header {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 a {
@@ -1530,6 +1531,7 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    width: 100%;
 }
 
 .logo {
@@ -1554,16 +1556,18 @@ a:hover {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
     color: var(--dark-text);
     font-weight: 500;
     font-size: 0.925rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.25rem;
     position: relative;
     transition: color var(--transition-fast);
+    white-space: nowrap;
 }
 
 .nav-menu a::after {
@@ -1591,6 +1595,8 @@ a:hover {
     padding: 0.625rem 1.25rem !important;
     border-radius: 6px;
     transition: background 0.3s ease;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
 }
 
 .nav-cta:hover {
@@ -3810,7 +3816,43 @@ textarea.success {
         width: 50%;
         max-width: 300px;
     }
-}/* Mobile Navigation Improvements */
+}/* Navigation Responsive Adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.125rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .nav-menu {
+        gap: 1.25rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .container {
+        max-width: 1280px;
+    }
+    
+    .nav-menu {
+        gap: 1.75rem;
+    }
+}
+
+/* Mobile Navigation Improvements */
 
 /* Add this to the end of styles.css */
 
