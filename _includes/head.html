@@ -16,8 +16,8 @@
 <!-- CSS Files -->
 <link rel="stylesheet" href="{{ '/css/styles.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/css/spacing-improvements.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/css/navigation-responsive-fix.css' | relative_url }}">
-<link rel="stylesheet" href="{{ '/css/navigation-alignment-fix.css' | relative_url }}">
+<!-- Complete Navigation Fix - Replaces all partial navigation fixes -->
+<link rel="stylesheet" href="{{ '/css/navigation-complete-fix.css' | relative_url }}">
 
 <!-- Enhanced Critical CSS - Mobile First -->
 <style>
@@ -32,28 +32,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;l
 /* Mobile First Container */
 .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 1rem}
 
-/* Mobile Navigation */
-.main-nav{background:var(--background);box-shadow:0 1px 3px rgba(0,0,0,0.1);position:sticky;top:0;left:0;right:0;z-index:9999;height:60px}
-main{padding-top:80px}
-.nav-wrapper{display:flex;justify-content:space-between;align-items:center;height:100%;padding:0 1rem}
-.logo{font-size:1.125rem;font-weight:700;color:var(--dark-text);text-decoration:none}
-.logo span{display:none}
-
-/* Mobile Menu Toggle */
-.mobile-menu-toggle{display:flex;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:0.5rem;width:44px;height:44px;align-items:center;justify-content:center}
-.mobile-menu-toggle span{display:block;width:24px;height:2px;background:var(--dark-text);transition:0.3s}
-
 /* Force hide TOC on mobile */
 @media (max-width: 768px) {
   .toc,.toc__menu,.toc__title,.sidebar__right,.sidebar,nav.toc,aside.sidebar__right,[class*="toc"],[class*="table-of-contents"],[id*="toc"],.mobile-toc,.table-of-contents{display:none!important;visibility:hidden!important;width:0!important;height:0!important;overflow:hidden!important;position:absolute!important;left:-9999px!important}
-  main{padding-top:80px!important}
-  main>*:first-child{padding-top:20px!important}
 }
-
-/* Mobile Menu */
-.nav-menu{position:fixed;left:-100%;top:60px;width:100%;height:calc(100vh - 60px);background:white;flex-direction:column;padding:2rem 1rem;gap:1rem;transition:left 0.3s ease;overflow-y:auto;list-style:none}
-.nav-menu.active{left:0}
-.nav-menu a{display:block;padding:0.75rem 0;color:var(--dark-text);text-decoration:none;font-size:1rem;border-bottom:1px solid var(--border-color)}
 
 /* Mobile Hero */
 .hero{background:linear-gradient(135deg,var(--primary-color) 0%,var(--secondary-color) 100%);color:white;padding:3rem 0}
