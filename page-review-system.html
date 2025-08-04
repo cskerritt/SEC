@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Review System - Skerritt Economics</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3730a3;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --warning-color: #f59e0b;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        .sidebar {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            height: fit-content;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-section {
+            margin-bottom: 25px;
+        }
+
+        .filter-section h3 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: var(--gray-600);
+            margin-bottom: 10px;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .filter-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .filter-checkbox label {
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 0.875rem;
+        }
+
+        .content-area {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .toolbar {
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bulk-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+        }
+
+        .btn-success {
+            background: var(--success-color);
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--danger-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-300);
+        }
+
+        .page-list {
+            padding: 20px;
+        }
+
+        .page-item {
+            border-bottom: 1px solid var(--gray-200);
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .page-item:last-child {
+            border-bottom: none;
+        }
+
+        .page-checkbox {
+            margin-top: 5px;
+        }
+
+        .page-info {
+            flex: 1;
+        }
+
+        .page-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: 5px;
+        }
+
+        .page-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .page-path {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        .page-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 0.875rem;
+            color: var(--gray-600);
+        }
+
+        .page-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-pending {
+            background: var(--gray-200);
+            color: var(--gray-700);
+        }
+
+        .status-approved {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-declined {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .notes-section {
+            margin-top: 10px;
+        }
+
+        .notes-textarea {
+            width: 100%;
+            min-height: 80px;
+            padding: 8px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            font-size: 0.875rem;
+            resize: vertical;
+        }
+
+        .notes-textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .save-notes-btn {
+            margin-top: 8px;
+        }
+
+        .pagination {
+            padding: 20px;
+            border-top: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pagination-info {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+        }
+
+        .pagination-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .page-number {
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            border: 1px solid var(--gray-300);
+            background: white;
+            color: var(--gray-700);
+        }
+
+        .page-number:hover {
+            background: var(--gray-50);
+        }
+
+        .page-number.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .iframe-preview {
+            width: 100%;
+            height: 600px;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            margin-top: 20px;
+            background: white;
+        }
+
+        .preview-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        .preview-modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-content {
+            background: white;
+            width: 90%;
+            height: 90%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .preview-body {
+            flex: 1;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .preview-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .screenshot-status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            display: none;
+        }
+
+        .screenshot-status.success {
+            display: block;
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .screenshot-status.error {
+            display: block;
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--gray-300);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .export-section {
+            padding: 20px;
+            border-top: 1px solid var(--gray-200);
+            text-align: center;
+        }
+
+        .select-all-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Page Review System</h1>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value" id="totalPages">0</div>
+                    <div class="stat-label">Total Pages</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="approvedPages">0</div>
+                    <div class="stat-label">Approved</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="declinedPages">0</div>
+                    <div class="stat-label">Declined</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="pendingPages">0</div>
+                    <div class="stat-label">Pending</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h3>Search</h3>
+                    <input type="text" class="search-box" placeholder="Search pages..." id="searchInput">
+                </div>
+
+                <div class="filter-section">
+                    <h3>Status</h3>
+                    <div class="filter-group">
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterPending" checked>
+                            <label for="filterPending">Pending Review</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterApproved" checked>
+                            <label for="filterApproved">Approved</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterDeclined" checked>
+                            <label for="filterDeclined">Declined</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Page Type</h3>
+                    <div class="filter-group">
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterServices" checked>
+                            <label for="filterServices">Services</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterLocations" checked>
+                            <label for="filterLocations">Locations</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterBlog" checked>
+                            <label for="filterBlog">Blog Posts</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterPracticeAreas" checked>
+                            <label for="filterPracticeAreas">Practice Areas</label>
+                        </div>
+                        <div class="filter-checkbox">
+                            <input type="checkbox" id="filterOther" checked>
+                            <label for="filterOther">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Items Per Page</h3>
+                    <select id="itemsPerPage" class="search-box">
+                        <option value="10">10 pages</option>
+                        <option value="25" selected>25 pages</option>
+                        <option value="50">50 pages</option>
+                        <option value="100">100 pages</option>
+                    </select>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <div class="toolbar">
+                    <div class="select-all-checkbox">
+                        <input type="checkbox" id="selectAll">
+                        <label for="selectAll">Select All on Page</label>
+                    </div>
+                    <div class="bulk-actions">
+                        <button class="btn btn-success" onclick="bulkApprove()">
+                            <span>✓</span> Bulk Approve
+                        </button>
+                        <button class="btn btn-danger" onclick="bulkDecline()">
+                            <span>✗</span> Bulk Decline
+                        </button>
+                        <button class="btn btn-secondary" onclick="bulkScreenshot()">
+                            <span>📸</span> Bulk Screenshot
+                        </button>
+                    </div>
+                </div>
+
+                <div class="page-list" id="pageList">
+                    <!-- Pages will be dynamically inserted here -->
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- Pagination will be dynamically inserted here -->
+                </div>
+
+                <div class="export-section">
+                    <button class="btn btn-primary" onclick="exportReviewData()">
+                        <span>💾</span> Export Review Data (JSON)
+                    </button>
+                    <button class="btn btn-primary" onclick="exportToCSV()">
+                        <span>📊</span> Export to CSV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-modal" id="previewModal">
+        <div class="preview-content">
+            <div class="preview-header">
+                <h2 id="previewTitle">Page Preview</h2>
+                <button class="btn btn-secondary" onclick="closePreview()">Close</button>
+            </div>
+            <div class="preview-body">
+                <iframe class="preview-iframe" id="previewIframe"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Page data storage
+        let allPages = [];
+        let pageReviews = {};
+        let currentPage = 1;
+        let itemsPerPage = 25;
+        let filteredPages = [];
+
+        // Load saved reviews from localStorage
+        function loadSavedReviews() {
+            const saved = localStorage.getItem('pageReviews');
+            if (saved) {
+                pageReviews = JSON.parse(saved);
+            }
+        }
+
+        // Save reviews to localStorage
+        function saveReviews() {
+            localStorage.setItem('pageReviews', JSON.stringify(pageReviews));
+            updateStats();
+        }
+
+        // Initialize page data
+        async function loadPages() {
+            try {
+                const response = await fetch('all-pages.txt');
+                const text = await response.text();
+                allPages = text.trim().split('\n').map(path => {
+                    const cleanPath = path.replace('_site/', '');
+                    return {
+                        path: cleanPath,
+                        title: extractTitle(cleanPath),
+                        type: categorizePageType(cleanPath),
+                        status: pageReviews[cleanPath]?.status || 'pending',
+                        notes: pageReviews[cleanPath]?.notes || '',
+                        screenshot: pageReviews[cleanPath]?.screenshot || null,
+                        lastReviewed: pageReviews[cleanPath]?.lastReviewed || null
+                    };
+                });
+                applyFilters();
+                updateStats();
+            } catch (error) {
+                console.error('Error loading pages:', error);
+                // Fallback: generate sample data
+                generateSampleData();
+            }
+        }
+
+        // Extract title from path
+        function extractTitle(path) {
+            const parts = path.split('/');
+            const filename = parts[parts.length - 1];
+            let title = filename.replace('.html', '').replace('index', '');
+            
+            if (title === '') {
+                title = parts[parts.length - 2] || 'Home';
+            }
+            
+            return title.split('-').map(word => 
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(' ');
+        }
+
+        // Categorize page type
+        function categorizePageType(path) {
+            if (path.includes('/services/')) return 'services';
+            if (path.includes('/locations/')) return 'locations';
+            if (path.includes('/blog/')) return 'blog';
+            if (path.includes('/practice-areas/')) return 'practice-areas';
+            return 'other';
+        }
+
+        // Apply filters
+        function applyFilters() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const statusFilters = {
+                pending: document.getElementById('filterPending').checked,
+                approved: document.getElementById('filterApproved').checked,
+                declined: document.getElementById('filterDeclined').checked
+            };
+            const typeFilters = {
+                services: document.getElementById('filterServices').checked,
+                locations: document.getElementById('filterLocations').checked,
+                blog: document.getElementById('filterBlog').checked,
+                'practice-areas': document.getElementById('filterPracticeAreas').checked,
+                other: document.getElementById('filterOther').checked
+            };
+
+            filteredPages = allPages.filter(page => {
+                // Search filter
+                if (searchTerm && !page.path.toLowerCase().includes(searchTerm) && 
+                    !page.title.toLowerCase().includes(searchTerm)) {
+                    return false;
+                }
+
+                // Status filter
+                if (!statusFilters[page.status]) {
+                    return false;
+                }
+
+                // Type filter
+                if (!typeFilters[page.type]) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            currentPage = 1;
+            renderPages();
+        }
+
+        // Render pages
+        function renderPages() {
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pagesToShow = filteredPages.slice(start, end);
+
+            const pageList = document.getElementById('pageList');
+            pageList.innerHTML = pagesToShow.map((page, index) => `
+                <div class="page-item" data-path="${page.path}">
+                    <input type="checkbox" class="page-checkbox" id="page-${start + index}">
+                    
+                    <div class="page-info">
+                        <div class="page-title">
+                            <a href="#" onclick="previewPage('${page.path}'); return false;">
+                                ${page.title}
+                            </a>
+                        </div>
+                        <div class="page-path">${page.path}</div>
+                        <div class="page-meta">
+                            <span>Type: ${page.type}</span>
+                            ${page.lastReviewed ? `<span>Last reviewed: ${new Date(page.lastReviewed).toLocaleDateString()}</span>` : ''}
+                        </div>
+                        <div class="notes-section">
+                            <textarea 
+                                class="notes-textarea" 
+                                placeholder="Add notes about this page..."
+                                onchange="updateNotes('${page.path}', this.value)"
+                            >${page.notes}</textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="page-actions">
+                        <span class="status-badge status-${page.status}">
+                            ${page.status}
+                        </span>
+                        <div class="action-buttons">
+                            <button class="btn btn-success" onclick="approvePage('${page.path}')" title="Approve">
+                                ✓
+                            </button>
+                            <button class="btn btn-danger" onclick="declinePage('${page.path}')" title="Decline">
+                                ✗
+                            </button>
+                            <button class="btn btn-secondary" onclick="screenshotPage('${page.path}')" title="Screenshot">
+                                📸
+                            </button>
+                        </div>
+                        <div class="screenshot-status" id="screenshot-${page.path.replace(/[^a-zA-Z0-9]/g, '-')}"></div>
+                    </div>
+                </div>
+            `).join('');
+
+            renderPagination();
+        }
+
+        // Render pagination
+        function renderPagination() {
+            const totalPages = Math.ceil(filteredPages.length / itemsPerPage);
+            const pagination = document.getElementById('pagination');
+            
+            const start = (currentPage - 1) * itemsPerPage + 1;
+            const end = Math.min(currentPage * itemsPerPage, filteredPages.length);
+            
+            let paginationHTML = `
+                <div class="pagination-info">
+                    Showing ${start} to ${end} of ${filteredPages.length} pages
+                </div>
+                <div class="pagination-controls">
+            `;
+
+            // Previous button
+            if (currentPage > 1) {
+                paginationHTML += `<button class="page-number" onclick="goToPage(${currentPage - 1})">Previous</button>`;
+            }
+
+            // Page numbers
+            for (let i = 1; i <= totalPages; i++) {
+                if (i === currentPage) {
+                    paginationHTML += `<button class="page-number active">${i}</button>`;
+                } else if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+                    paginationHTML += `<button class="page-number" onclick="goToPage(${i})">${i}</button>`;
+                } else if (i === currentPage - 3 || i === currentPage + 3) {
+                    paginationHTML += `<span>...</span>`;
+                }
+            }
+
+            // Next button
+            if (currentPage < totalPages) {
+                paginationHTML += `<button class="page-number" onclick="goToPage(${currentPage + 1})">Next</button>`;
+            }
+
+            paginationHTML += `</div>`;
+            pagination.innerHTML = paginationHTML;
+        }
+
+        // Page actions
+        function approvePage(path) {
+            updatePageStatus(path, 'approved');
+        }
+
+        function declinePage(path) {
+            updatePageStatus(path, 'declined');
+        }
+
+        function updatePageStatus(path, status) {
+            if (!pageReviews[path]) {
+                pageReviews[path] = {};
+            }
+            pageReviews[path].status = status;
+            pageReviews[path].lastReviewed = new Date().toISOString();
+            
+            // Update in allPages array
+            const page = allPages.find(p => p.path === path);
+            if (page) {
+                page.status = status;
+                page.lastReviewed = pageReviews[path].lastReviewed;
+            }
+            
+            saveReviews();
+            applyFilters();
+        }
+
+        function updateNotes(path, notes) {
+            if (!pageReviews[path]) {
+                pageReviews[path] = {};
+            }
+            pageReviews[path].notes = notes;
+            
+            // Update in allPages array
+            const page = allPages.find(p => p.path === path);
+            if (page) {
+                page.notes = notes;
+            }
+            
+            saveReviews();
+        }
+
+        // Screenshot functionality
+        async function screenshotPage(path) {
+            const statusDiv = document.getElementById(`screenshot-${path.replace(/[^a-zA-Z0-9]/g, '-')}`);
+            statusDiv.className = 'screenshot-status';
+            statusDiv.innerHTML = '<span class="loading"></span> Taking screenshot...';
+            statusDiv.style.display = 'block';
+
+            try {
+                // In a real implementation, this would call a screenshot API
+                // For now, we'll simulate it
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                const screenshotData = {
+                    url: path,
+                    timestamp: new Date().toISOString(),
+                    filename: `screenshot-${path.replace(/[^a-zA-Z0-9]/g, '-')}-${Date.now()}.png`
+                };
+                
+                if (!pageReviews[path]) {
+                    pageReviews[path] = {};
+                }
+                pageReviews[path].screenshot = screenshotData;
+                
+                statusDiv.className = 'screenshot-status success';
+                statusDiv.innerHTML = '✓ Screenshot saved: ' + screenshotData.filename;
+                
+                saveReviews();
+                
+                setTimeout(() => {
+                    statusDiv.style.display = 'none';
+                }, 3000);
+                
+            } catch (error) {
+                statusDiv.className = 'screenshot-status error';
+                statusDiv.innerHTML = '✗ Screenshot failed: ' + error.message;
+            }
+        }
+
+        // Bulk actions
+        function bulkApprove() {
+            const checkboxes = document.querySelectorAll('.page-checkbox:checked');
+            checkboxes.forEach(checkbox => {
+                const pageItem = checkbox.closest('.page-item');
+                const path = pageItem.dataset.path;
+                approvePage(path);
+            });
+        }
+
+        function bulkDecline() {
+            const checkboxes = document.querySelectorAll('.page-checkbox:checked');
+            checkboxes.forEach(checkbox => {
+                const pageItem = checkbox.closest('.page-item');
+                const path = pageItem.dataset.path;
+                declinePage(path);
+            });
+        }
+
+        async function bulkScreenshot() {
+            const checkboxes = document.querySelectorAll('.page-checkbox:checked');
+            for (const checkbox of checkboxes) {
+                const pageItem = checkbox.closest('.page-item');
+                const path = pageItem.dataset.path;
+                await screenshotPage(path);
+            }
+        }
+
+        // Preview functionality
+        function previewPage(path) {
+            const modal = document.getElementById('previewModal');
+            const iframe = document.getElementById('previewIframe');
+            const title = document.getElementById('previewTitle');
+            
+            title.textContent = `Preview: ${path}`;
+            iframe.src = path;
+            modal.classList.add('active');
+        }
+
+        function closePreview() {
+            const modal = document.getElementById('previewModal');
+            const iframe = document.getElementById('previewIframe');
+            
+            modal.classList.remove('active');
+            iframe.src = '';
+        }
+
+        // Navigation
+        function goToPage(page) {
+            currentPage = page;
+            renderPages();
+        }
+
+        // Update statistics
+        function updateStats() {
+            const stats = {
+                total: allPages.length,
+                approved: allPages.filter(p => p.status === 'approved').length,
+                declined: allPages.filter(p => p.status === 'declined').length,
+                pending: allPages.filter(p => p.status === 'pending').length
+            };
+            
+            document.getElementById('totalPages').textContent = stats.total;
+            document.getElementById('approvedPages').textContent = stats.approved;
+            document.getElementById('declinedPages').textContent = stats.declined;
+            document.getElementById('pendingPages').textContent = stats.pending;
+        }
+
+        // Export functions
+        function exportReviewData() {
+            const dataStr = JSON.stringify(pageReviews, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = `page-reviews-${new Date().toISOString().split('T')[0]}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+
+        function exportToCSV() {
+            const headers = ['Path', 'Title', 'Type', 'Status', 'Notes', 'Last Reviewed', 'Screenshot'];
+            const rows = allPages.map(page => [
+                page.path,
+                page.title,
+                page.type,
+                page.status,
+                page.notes.replace(/"/g, '""'),
+                page.lastReviewed || '',
+                page.screenshot ? page.screenshot.filename : ''
+            ]);
+            
+            const csvContent = [
+                headers.join(','),
+                ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+            ].join('\n');
+            
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `page-reviews-${new Date().toISOString().split('T')[0]}.csv`);
+            link.click();
+        }
+
+        // Event listeners
+        document.getElementById('searchInput').addEventListener('input', applyFilters);
+        document.getElementById('itemsPerPage').addEventListener('change', (e) => {
+            itemsPerPage = parseInt(e.target.value);
+            currentPage = 1;
+            renderPages();
+        });
+
+        document.getElementById('selectAll').addEventListener('change', (e) => {
+            const checkboxes = document.querySelectorAll('.page-checkbox');
+            checkboxes.forEach(checkbox => checkbox.checked = e.target.checked);
+        });
+
+        // Filter checkboxes
+        ['filterPending', 'filterApproved', 'filterDeclined', 'filterServices', 
+         'filterLocations', 'filterBlog', 'filterPracticeAreas', 'filterOther'].forEach(id => {
+            document.getElementById(id).addEventListener('change', applyFilters);
+        });
+
+        // Close preview on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closePreview();
+            }
+        });
+
+        // Generate sample data if file not found
+        function generateSampleData() {
+            allPages = [
+                { path: 'index.html', title: 'Home', type: 'other' },
+                { path: 'about/index.html', title: 'About', type: 'other' },
+                { path: 'services/forensic-economics/index.html', title: 'Forensic Economics', type: 'services' },
+                { path: 'locations/rhode-island/index.html', title: 'Rhode Island', type: 'locations' },
+                { path: 'blog/2025/01/calculating-present-value.html', title: 'Calculating Present Value', type: 'blog' },
+                { path: 'practice-areas/personal-injury/index.html', title: 'Personal Injury', type: 'practice-areas' }
+            ].map(page => ({
+                ...page,
+                status: pageReviews[page.path]?.status || 'pending',
+                notes: pageReviews[page.path]?.notes || '',
+                screenshot: pageReviews[page.path]?.screenshot || null,
+                lastReviewed: pageReviews[page.path]?.lastReviewed || null
+            }));
+            
+            applyFilters();
+            updateStats();
+        }
+
+        // Initialize
+        loadSavedReviews();
+        loadPages();
+    </script>
+</body>
+</html>
