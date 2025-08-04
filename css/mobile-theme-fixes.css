@@ -7,13 +7,17 @@
 
 /* Fix top spacing for all pages on mobile */
 @media (max-width: 768px) {
+    :root {
+        --mobile-nav-height: 60px;
+    }
+
     /* Remove any negative margins and add proper spacing */
     body {
-        padding-top: 70px !important; /* Account for fixed navigation */
+        padding-top: calc(var(--mobile-nav-height) + env(safe-area-inset-top)) !important;
         margin: 0;
         overflow-x: hidden;
     }
-    
+
     /* Fix main navigation */
     .main-nav {
         position: fixed !important;
@@ -21,7 +25,8 @@
         left: 0;
         right: 0;
         z-index: 9999;
-        height: 60px;
+        height: calc(var(--mobile-nav-height) + env(safe-area-inset-top));
+        padding-top: env(safe-area-inset-top);
         background: white;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
