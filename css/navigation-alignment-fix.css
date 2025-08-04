@@ -1,0 +1,480 @@
+/* =============================================
+   NAVIGATION ALIGNMENT AND STYLING FIXES
+   Fixes Services overlap, alignment, spacing issues
+   ============================================= */
+
+/* Reset and baseline alignment for navigation */
+.main-nav * {
+    box-sizing: border-box;
+}
+
+/* Main navigation container */
+.main-nav {
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: auto;
+    min-height: 64px;
+}
+
+/* Desktop Navigation Fixes (769px+) */
+@media (min-width: 769px) {
+    /* Container with proper constraints */
+    .main-nav .container {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    
+    /* Nav wrapper - ensure proper flex alignment */
+    .nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        height: 64px;
+        padding: 0;
+    }
+    
+    /* Logo styling - consistent sizing */
+    .logo {
+        flex-shrink: 0;
+        font-size: 1.125rem;
+        line-height: 1.2;
+        text-decoration: none;
+        color: #1f2937;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+    .logo strong {
+        font-weight: 700;
+        display: block;
+    }
+    
+    .logo span {
+        font-size: 0.875rem;
+        font-weight: 400;
+        opacity: 0.9;
+    }
+    
+    /* Navigation menu - fix alignment and spacing */
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+    
+    /* Menu items - consistent height and alignment */
+    .nav-menu > li {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Menu links - uniform styling */
+    .nav-menu > li > a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 0.875rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #4b5563;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: color 0.2s ease, background-color 0.2s ease;
+        position: relative;
+        line-height: 1;
+    }
+    
+    /* Hover state for all nav items */
+    .nav-menu > li > a:hover {
+        color: #1e40af;
+        background-color: rgba(30, 58, 138, 0.04);
+    }
+    
+    /* Fix dropdown items specifically */
+    .nav-menu .has-dropdown {
+        position: relative;
+    }
+    
+    /* Dropdown link styling - fix arrow positioning */
+    .nav-menu .has-dropdown > a {
+        padding-right: 1.75rem;
+    }
+    
+    /* Dropdown arrow - properly positioned */
+    .nav-menu .has-dropdown > a::after {
+        content: '';
+        position: absolute;
+        right: 0.625rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 5px solid #6b7280;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    
+    .nav-menu .has-dropdown:hover > a::after {
+        transform: translateY(-50%) rotate(180deg);
+        border-top-color: #1e40af;
+    }
+    
+    /* Dropdown menu positioning and styling */
+    .dropdown {
+        position: absolute;
+        top: calc(100% - 1px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-8px);
+        background: white;
+        min-width: 240px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        padding: 0.5rem 0;
+        z-index: 1000;
+    }
+    
+    .has-dropdown:hover .dropdown,
+    .has-dropdown:focus-within .dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+    }
+    
+    /* Dropdown items */
+    .dropdown li {
+        list-style: none;
+        margin: 0;
+    }
+    
+    .dropdown li a {
+        display: block;
+        padding: 0.625rem 1rem;
+        color: #4b5563;
+        font-size: 0.875rem;
+        font-weight: 400;
+        text-decoration: none;
+        transition: all 0.15s ease;
+        white-space: normal;
+        line-height: 1.4;
+    }
+    
+    .dropdown li a:hover {
+        background-color: #f3f4f6;
+        color: #1e40af;
+        padding-left: 1.25rem;
+    }
+    
+    /* Active page styling - subtle and consistent */
+    .nav-menu > li > a.active {
+        color: #1e40af;
+        font-weight: 600;
+    }
+    
+    .nav-menu > li > a.active::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0.875rem;
+        right: 0.875rem;
+        height: 3px;
+        background-color: #1e40af;
+        border-radius: 3px 3px 0 0;
+    }
+    
+    /* Contact CTA button - distinct but aligned */
+    .nav-menu .nav-cta {
+        background-color: #7c3aed;
+        color: white !important;
+        padding: 0.5rem 1.25rem !important;
+        margin: 0 0 0 0.75rem;
+        border-radius: 6px;
+        font-weight: 600;
+        height: auto;
+        align-self: center;
+        transition: all 0.2s ease;
+    }
+    
+    .nav-menu .nav-cta:hover {
+        background-color: #6d28d9;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+    }
+    
+    .nav-menu .nav-cta.active::before {
+        display: none;
+    }
+}
+
+/* Responsive adjustments for tighter screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-wrapper {
+        gap: 1rem;
+    }
+    
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .logo span {
+        font-size: 0.75rem;
+    }
+    
+    .nav-menu > li > a {
+        padding: 0 0.625rem;
+        font-size: 0.825rem;
+    }
+    
+    .nav-menu .has-dropdown > a {
+        padding-right: 1.5rem;
+    }
+    
+    .nav-menu .has-dropdown > a::after {
+        right: 0.5rem;
+    }
+    
+    .nav-menu .nav-cta {
+        padding: 0.425rem 1rem !important;
+        font-size: 0.825rem;
+        margin-left: 0.5rem;
+    }
+    
+    .dropdown {
+        min-width: 200px;
+    }
+    
+    .dropdown li a {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.875rem;
+    }
+}
+
+/* Medium screens (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .nav-menu > li > a {
+        padding: 0 0.75rem;
+        font-size: 0.875rem;
+    }
+    
+    .nav-menu .nav-cta {
+        padding: 0.475rem 1.125rem !important;
+        font-size: 0.875rem;
+    }
+}
+
+/* Large screens (1201px+) */
+@media (min-width: 1201px) {
+    .nav-menu > li > a {
+        padding: 0 1rem;
+        font-size: 0.925rem;
+    }
+    
+    .nav-menu .nav-cta {
+        padding: 0.55rem 1.375rem !important;
+        margin-left: 1rem;
+    }
+}
+
+/* Override any conflicting styles from navigation-responsive-fix.css */
+@media (min-width: 769px) {
+    /* Ensure consistent height and alignment */
+    .nav-menu > li {
+        height: 64px !important;
+    }
+    
+    .nav-menu > li > a {
+        height: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    /* Fix dropdown arrow issues */
+    .nav-menu .has-dropdown > a::after {
+        content: '' !important;
+        font-size: inherit !important;
+        margin-left: 0 !important;
+        border-style: solid !important;
+    }
+    
+    /* Ensure dropdowns don't affect parent alignment */
+    .dropdown {
+        position: absolute !important;
+        top: 100% !important;
+    }
+}
+
+/* Mobile Navigation (≤768px) - Keep existing mobile styles intact */
+@media (max-width: 768px) {
+    /* Fixed header */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        z-index: 1000;
+    }
+    
+    /* Body padding for fixed nav */
+    body {
+        padding-top: 60px;
+    }
+    
+    /* Nav wrapper mobile */
+    .nav-wrapper {
+        height: 60px;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Mobile logo */
+    .logo {
+        font-size: 1.125rem;
+    }
+    
+    .logo span {
+        display: none;
+    }
+    
+    /* Mobile menu toggle */
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        gap: 4px;
+    }
+    
+    .mobile-menu-toggle span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #4b5563;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* Mobile menu panel */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: white;
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+        overflow-y: auto;
+        transition: left 0.3s ease;
+        z-index: 999;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    /* Mobile menu items */
+    .nav-menu > li {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .nav-menu > li > a {
+        display: block;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        color: #1f2937;
+        font-weight: 500;
+        height: auto;
+    }
+    
+    /* Mobile active page */
+    .nav-menu > li > a.active {
+        background-color: #f9fafb;
+        color: #1e40af;
+        border-left: 3px solid #1e40af;
+    }
+    
+    /* Mobile CTA button */
+    .nav-menu .nav-cta {
+        margin: 1rem 1.5rem;
+        display: inline-block;
+        background-color: #7c3aed;
+        color: white;
+        padding: 0.875rem 1.5rem;
+        border-radius: 6px;
+        text-align: center;
+        font-weight: 600;
+        width: calc(100% - 3rem);
+    }
+}
+
+/* Hide mobile toggle on desktop */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* Focus states for accessibility */
+.nav-menu > li > a:focus,
+.dropdown li a:focus,
+.nav-cta:focus,
+.mobile-menu-toggle:focus {
+    outline: 2px solid #1e40af;
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .main-nav,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+}
