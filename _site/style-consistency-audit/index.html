@@ -337,6 +337,14 @@ window.addEventListener('load', function() {
   link.rel = 'stylesheet';
   link.href = '/css/navigation-fix-override.css?v=2';
   document.head.appendChild(link);
+  
+  // Load ultimate fix after a short delay to ensure it's absolutely last
+  setTimeout(function() {
+    var ultimateLink = document.createElement('link');
+    ultimateLink.rel = 'stylesheet';
+    ultimateLink.href = '/css/navigation-ultimate-fix.css?v=1';
+    document.head.appendChild(ultimateLink);
+  }, 100);
 });
 </script>
 
