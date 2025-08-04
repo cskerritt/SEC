@@ -44,7 +44,7 @@
     background: var(--nav-bg);
     border-bottom: 1px solid var(--nav-border);
     box-shadow: var(--nav-shadow);
-    z-index: 9999;
+    z-index: 999999;
     transition: var(--transition);
 }
 
@@ -145,6 +145,7 @@
     transition: var(--transition);
     padding: 8px;
     border: 1px solid var(--nav-border);
+    z-index: 999999;
 }
 
 .has-dropdown:hover .dropdown,
@@ -315,17 +316,21 @@
 
 /* Contact Button Styling */
 .nav-cta {
-    background: var(--text-primary);
+    background: #1e3a8a !important;
+    background-color: #1e3a8a !important;
     color: white !important;
     padding: 8px 20px !important;
     border-radius: 6px;
     font-weight: 600;
     transition: all 0.3s ease;
     margin-left: 10px;
+    border: none !important;
+    display: inline-block;
 }
 
 .nav-cta:hover {
-    background: var(--text-hover);
+    background: #2563eb !important;
+    background-color: #2563eb !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
