@@ -106,6 +106,9 @@ p{margin-bottom:1rem}
 img{max-width:100%;height:auto}
 </style>
 
+<!-- Navigation Compact CSS - Load with high priority -->
+<link rel="stylesheet" href="{{ '/css/navigation-compact.css?v=1' | relative_url }}">
+
 <!-- Load CSS asynchronously with priority -->
 <link rel="preload" href="{{ '/css/styles.min.css?v=9' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ '/css/styles.min.css?v=9' | relative_url }}"></noscript>

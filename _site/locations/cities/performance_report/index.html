@@ -109,6 +109,9 @@ p{margin-bottom:1rem}
 img{max-width:100%;height:auto}
 </style>
 
+<!-- Navigation Compact CSS - Load with high priority -->
+<link rel="stylesheet" href="/css/navigation-compact.css?v=1">
+
 <!-- Load CSS asynchronously with priority -->
 <link rel="preload" href="/css/styles.min.css?v=9" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="/css/styles.min.css?v=9"></noscript>
@@ -256,6 +259,7 @@ function trackEmailClick(){
 <!-- FAQ Schema Markup -->
 
 
+
 </head>
 <body>
     <!-- Skip Navigation Links -->
@@ -329,7 +333,7 @@ function trackEmailClick(){
   </ul>
   </li>
   <li class="has-dropdown">
-  <a href="/practice-areas/">Practice Areas</a>
+  <a href="/practice-areas/">Practice</a>
   <ul class="dropdown">
   <li><a href="/practice-areas/personal-injury/">Personal Injury & Wrongful Death</a></li>
   <li><a href="/practice-areas/medical-malpractice/">Medical Malpractice</a></li>
@@ -339,8 +343,9 @@ function trackEmailClick(){
   </li>
   <li><a href="/case-studies/" >Case Studies</a></li>
   <li><a href="/about/" >About</a></li>
-  <li><a href="/resources/" >Resources</a></li>
-  <li><a href="/tools/" >Tools</a></li>
+  <li class="hide-on-tablet"><a href="/resources/" >Resources</a></li>
+  <li class="hide-on-mobile"><a href="/blog/" >Blog</a></li>
+  <li class="hide-on-tablet"><a href="/tools/" >Tools</a></li>
   <li><a href="/contact/" class="nav-cta">Contact</a></li>
   </ul>
   </div>
@@ -356,26 +361,46 @@ function trackEmailClick(){
   <a class="breadcrumb-link" href="/">Home</a>
   </li>
 
+            
+            
 
+            
+                
+            
+                
+                    
+
+                    
   <li class="breadcrumb-item">
-
-
+                            
+                            
   <a class="breadcrumb-link" href="/locations/">Locations</a>
   </li>
+                    
+                
+            
+                
+                    
 
-
+                    
   <li class="breadcrumb-item">
-
-
+                            
+                            
   <a class="breadcrumb-link" href="/locations/cities/">Cities</a>
   </li>
+                    
+                
+            
+                
+                    
 
-
+                    
   <li class="breadcrumb-item">
   <span class="breadcrumb-current">City pages performance test report</span>
   </li>
-
-
+                    
+                
+            
   </ol>
   </div>
 </nav>
@@ -392,42 +417,59 @@ function trackEmailClick(){
             "name": "Home",
             "item": "https://skerritteconomics.com/"
         }
+        
+        
+        
 
-
+        
+            
+        
+            
+                
                 ,{
                     "@type": "ListItem",
                     "position": 2,
-
-
+                    
+                        
+                        
                         "name": "Locations",
                         "item": "https://skerritteconomics.com/locations/"
-
+                    
                 }
-
-
+                
+            
+        
+            
+                
                 ,{
                     "@type": "ListItem",
                     "position": 3,
-
-
+                    
+                        
+                        
                         "name": "Cities",
                         "item": "https://skerritteconomics.com/locations/cities/"
-
+                    
                 }
-
-
+                
+            
+        
+            
+                
                 ,{
                     "@type": "ListItem",
                     "position": 4,
-
+                    
                         "name": "City pages performance test report"
-
+                    
                 }
-
-
+                
+            
+        
     ]
 }
 </script>
+
 
 
     <h1 id="city-pages-performance-test-report">City Pages Performance Test Report</h1>

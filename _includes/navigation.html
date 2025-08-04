@@ -21,7 +21,7 @@
   </ul>
   </li>
   <li class="has-dropdown">
-  <a href="{{ '/practice-areas/' | relative_url }}">Practice Areas</a>
+  <a href="{{ '/practice-areas/' | relative_url }}">Practice</a>
   <ul class="dropdown">
   <li><a href="{{ '/practice-areas/personal-injury/' | relative_url }}">Personal Injury & Wrongful Death</a></li>
   <li><a href="{{ '/practice-areas/medical-malpractice/' | relative_url }}">Medical Malpractice</a></li>
@@ -31,8 +31,9 @@
   </li>
   <li><a href="{{ '/case-studies/' | relative_url }}" {% if page.url contains '/case-studies/' %}class="active"{% endif %}>Case Studies</a></li>
   <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a></li>
-  <li><a href="{{ '/resources/' | relative_url }}" {% if page.url contains '/resources/' %}class="active"{% endif %}>Resources</a></li>
-  <li><a href="{{ '/tools/' | relative_url }}" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a></li>
+  <li class="hide-on-tablet"><a href="{{ '/resources/' | relative_url }}" {% if page.url contains '/resources/' %}class="active"{% endif %}>Resources</a></li>
+  <li class="hide-on-mobile"><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' %}class="active"{% endif %}>Blog</a></li>
+  <li class="hide-on-tablet"><a href="{{ '/tools/' | relative_url }}" {% if page.url contains '/tools/' %}class="active"{% endif %}>Tools</a></li>
   <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta">Contact</a></li>
   </ul>
   </div>

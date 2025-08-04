@@ -1,0 +1,129 @@
+/* Navigation Compact Improvements - Priority Loading */
+
+/* Hide classes for responsive display */
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+}
+
+/* More compact navigation for all screen sizes */
+.main-nav {
+  padding: 0.5rem 0;
+}
+
+.nav-wrapper {
+  padding: 0.75rem 0;
+}
+
+/* Reduce font sizes and spacing */
+.nav-menu {
+  gap: 1rem !important;
+}
+
+.nav-menu > li > a {
+  font-size: 0.875rem !important;
+  padding: 0.4rem 0.5rem !important;
+  font-weight: 500;
+}
+
+/* Compact logo */
+.logo {
+  font-size: 1.125rem;
+}
+
+.logo span {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+/* Smaller dropdown items */
+.dropdown a {
+  font-size: 0.825rem !important;
+  padding: 0.6rem 1rem !important;
+}
+
+/* Compact CTA button */
+.nav-cta {
+  padding: 0.5rem 1rem !important;
+  font-size: 0.875rem !important;
+}
+
+/* Medium screens - show most items but compact */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .nav-menu {
+    gap: 0.75rem !important;
+  }
+  
+  .nav-menu > li > a {
+    font-size: 0.825rem !important;
+    padding: 0.35rem 0.4rem !important;
+  }
+  
+  .logo {
+    font-size: 1rem;
+  }
+}
+
+/* Large screens - still keep it reasonably compact */
+@media (min-width: 1200px) {
+  .nav-menu {
+    gap: 1.25rem !important;
+  }
+  
+  .nav-menu > li > a {
+    font-size: 0.9rem !important;
+    padding: 0.4rem 0.6rem !important;
+  }
+}
+
+/* Ultra-wide screens - can be a bit more spacious */
+@media (min-width: 1400px) {
+  .nav-menu {
+    gap: 1.5rem !important;
+  }
+  
+  .nav-menu > li > a {
+    font-size: 0.925rem !important;
+    padding: 0.45rem 0.7rem !important;
+  }
+}
+
+/* Ensure dropdowns don't break layout */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown {
+  min-width: 200px;
+  max-width: 250px;
+}
+
+/* Mobile menu improvements */
+@media (max-width: 768px) {
+  .nav-menu {
+    gap: 0 !important;
+  }
+  
+  .nav-menu > li {
+    width: 100%;
+  }
+  
+  .nav-menu > li > a {
+    font-size: 1rem !important;
+    padding: 0.875rem 1.5rem !important;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Hide items not needed on mobile */
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
