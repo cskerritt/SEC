@@ -7,9 +7,15 @@
    FORCE NAVIGATION TO BE FIXED
    ======================================== */
 
-.main-nav,
-nav.main-nav,
-header .main-nav,
+/* Remove any conflicting rules */
+.main-nav {
+  position: static !important;
+}
+
+/* Then force fixed position with maximum specificity */
+html body .main-nav,
+html body nav.main-nav,
+html body header .main-nav,
 body .main-nav {
   position: fixed !important;
   top: 0 !important;
@@ -20,6 +26,7 @@ body .main-nav {
   z-index: 99999 !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
   height: 70px !important;
+  display: block !important;
 }
 
 /* Ensure body has proper padding */
