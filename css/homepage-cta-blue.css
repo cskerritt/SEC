@@ -1,0 +1,85 @@
+/* Homepage CTA Section - Blue Text Styling */
+
+/* Make the heading and description text blue */
+.cta-section h2#cta-heading,
+.cta-section .cta-content h2 {
+    color: #1e3a8a !important;
+    font-weight: 700 !important;
+}
+
+.cta-section p,
+.cta-section .cta-content p {
+    color: #1e3a8a !important;
+    opacity: 0.9 !important;
+}
+
+/* Ensure the section has proper contrast with blue text */
+.cta-section {
+    background: #f8fafc !important;
+    padding: 80px 0 !important;
+}
+
+/* Center the content */
+.cta-section .cta-content {
+    text-align: center !important;
+    max-width: 700px !important;
+    margin: 0 auto !important;
+}
+
+/* Style the heading */
+.cta-section h2 {
+    font-size: 2.5rem !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+/* Style the paragraph */
+.cta-section p {
+    font-size: 1.25rem !important;
+    margin-bottom: 30px !important;
+    line-height: 1.6 !important;
+}
+
+/* Keep the button styled as primary blue */
+.cta-section .btn-primary {
+    background: #1e3a8a !important;
+    color: white !important;
+    padding: 18px 36px !important;
+    font-size: 1.125rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+.cta-section .btn-primary:hover {
+    background: #1e3080 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3) !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 60px 20px !important;
+    }
+    
+    .cta-section h2 {
+        font-size: 2rem !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .cta-section p {
+        font-size: 1.125rem !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .cta-section .btn-primary {
+        padding: 16px 32px !important;
+        font-size: 1.0625rem !important;
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+}
