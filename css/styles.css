@@ -1562,6 +1562,11 @@ a:hover {
     align-items: center;
     gap: 1.5rem;
     flex-wrap: nowrap;
+    flex-grow: 1;
+}
+
+.nav-menu > li:last-child {
+    margin-left: auto;
 }
 
 .nav-menu a {
@@ -3822,36 +3827,19 @@ textarea.success {
     }
 }/* Navigation Responsive Adjustments - Fixed to prevent cutoff */
 
-/* Critical fix for navigation at medium screen sizes */
-@media (min-width: 769px) and (max-width: 1350px) {
-    .logo {
-        font-size: 1.1rem;
-        flex-shrink: 0;
-    }
-    
-    .logo span {
-        font-size: 0.9rem; /* Make "& Consulting" smaller instead of hiding */
-    }
-    
+/* Desktop navigation optimal spacing */
+@media (min-width: 1024px) {
     .nav-menu {
-        gap: 0.5rem;
+        gap: 1.75rem;
     }
     
     .nav-menu a {
-        font-size: 0.825rem;
-        padding: 0.4rem 0.35rem;
-        white-space: nowrap;
+        font-size: 0.95rem;
+        padding: 0.5rem 0.75rem;
     }
     
     .nav-cta {
-        margin-left: 0.35rem;
-        padding: 0.5rem 0.9rem !important;
-        font-size: 0.825rem;
-    }
-    
-    .container {
-        max-width: 100%;
-        padding: 0 20px;
+        padding: 0.625rem 1.25rem !important;
     }
 }
 
