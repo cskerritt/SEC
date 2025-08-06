@@ -102,4 +102,34 @@ defaults:
     values:
       image: "/assets/images/christopher-skerritt.jpg"
 
-exclude: [node_modules, reference-ui, vendor]
+exclude: 
+  - node_modules
+  - vendor
+  - "*.py"
+  - "*.pyc"
+  - "*.sh"
+  - "*.backup"
+  - "*.pre-ui-backup"
+  - ".git"
+  - ".gitignore"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "python-server.log"
+  - "screenshots/"
+  - "contrast-verification/"
+  - "fixed-screenshots/"
+  - "final-screenshots/"
+  - "*-report.md"
+  - "*-guide.md"
+  - "*-plan.md"
+  - "*-summary.md"
+  - "*-checklist.md"
+  - "TROUBLESHOOTING-GUIDE.md"
+  - "ROLLBACK-GUIDE.md"
+  - "UI-*"
+  - "BOOTSTRAP-*"
+  - "DESIGN-*"
+  - "DEVELOPMENT-*"
+  - "LAYOUT-*"
+  - "UPDATE-*"
+  - "FINAL-*"
