@@ -1,0 +1,257 @@
+---
+layout: default
+title: Rhode Island Forensic Economics & Business Valuation Services | All Cities
+meta_description: Expert forensic economics, business valuation, vocational assessment, and life care planning services throughout Rhode Island. Serving Providence, Warwick, Cranston, and all RI communities.
+---
+
+<!-- State Hero -->
+  <section class="state-hero">
+  <div class="container">
+  <h1>Rhode Island Economic Analysis Services</h1>
+  <p class="lead">Expert forensic economics, business valuation, vocational assessment, and life care planning services throughout the Ocean State. Based in Smithfield, we serve attorneys and businesses across all Rhode Island counties.</p>
+  <div class="hero-features">
+  <div class="feature">
+  <span class="feature-icon">📍</span>
+  <span>Based in Smithfield, RI</span>
+  </div>
+  <div class="feature">
+  <span class="feature-icon">⚖️</span>
+  <span>All RI Courts</span>
+  </div>
+  <div class="feature">
+  <span class="feature-icon">🏛️</span>
+  <span>5 Counties Served</span>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview">
+  <div class="container">
+  <h2>Our Rhode Island Services</h2>
+  <div class="services-grid">
+  <div class="service-card">
+  <h3>Forensic Economics</h3>
+  <p>Economic damage calculations for personal injury, wrongful death, and employment cases in Rhode Island courts.</p>
+  <ul>
+  <li>Lost earnings projections</li>
+  <li>Household services valuations</li>
+  <li>Present value calculations</li>
+  <li>Life care cost analysis</li>
+  </ul>
+  <a href="../forensic-economics/" class="service-link">View RI Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Business Valuation</h3>
+  <p>Expert business appraisals for Rhode Island litigation, divorce, and estate planning matters.</p>
+  <ul>
+  <li>Fair market value assessments</li>
+  <li>Shareholder disputes</li>
+  <li>Divorce asset division</li>
+  <li>Economic damages</li>
+  </ul>
+  <a href="../business-valuation/" class="service-link">View RI Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Vocational Expert</h3>
+  <p>Earning capacity and employability assessments for Rhode Island personal injury and disability cases.</p>
+  <ul>
+  <li>Transferable skills analysis</li>
+  <li>Labor market surveys</li>
+  <li>Vocational rehabilitation</li>
+  <li>Work life expectancy</li>
+  </ul>
+  <a href="../vocational-expert/" class="service-link">View RI Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Life Care Planning</h3>
+  <p>Comprehensive future medical cost projections for catastrophic injury cases in Rhode Island.</p>
+  <ul>
+  <li>Medical needs assessment</li>
+  <li>Cost projections</li>
+  <li>Care coordination planning</li>
+  <li>Medicare set-asides</li>
+  </ul>
+  <a href="../life-care-planning/" class="service-link">View RI Locations →</a>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="cities-section">
+  <div class="container">
+  <h2>Rhode Island Cities We Serve</h2>
+  <p class="section-intro">Select your city below to find location-specific information about our services, local courts, and how we serve attorneys in your area.</p>
+
+  <div class="cities-grid">
+  <div class="city-card">
+  <h3><a href="../forensic-economics/providence-ri-forensic-economist.html">Providence</a></h3>
+  <p class="city-info">State Capital • Population: 190,934</p>
+  <p>Rhode Island's capital and largest city, home to quality Court and federal court.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/providence-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/providence-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/providence-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/providence-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/warwick-ri-forensic-economist.html">Warwick</a></h3>
+  <p class="city-info">Kent County • Population: 82,823</p>
+  <p>Rhode Island's second-largest city, major commercial center south of Providence.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/warwick-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/warwick-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/warwick-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/warwick-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/cranston-ri-forensic-economist.html">Cranston</a></h3>
+  <p class="city-info">Providence County • Population: 82,934</p>
+  <p>Third-largest city bordering Providence, diverse economy and legal community.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/cranston-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/cranston-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/cranston-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/cranston-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/pawtucket-ri-forensic-economist.html">Pawtucket</a></h3>
+  <p class="city-info">Providence County • Population: 75,604</p>
+  <p>Historic mill city undergoing revitalization, active legal and business community.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/pawtucket-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/pawtucket-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/pawtucket-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/pawtucket-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/east-providence-ri-forensic-economist.html">East Providence</a></h3>
+  <p class="city-info">Providence County • Population: 47,139</p>
+  <p>Waterfront city with growing business district and proximity to Providence courts.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/east-providence-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/east-providence-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/east-providence-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/east-providence-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/woonsocket-ri-forensic-economist.html">Woonsocket</a></h3>
+  <p class="city-info">Providence County • Population: 43,240</p>
+  <p>Northern Rhode Island city with district court and diverse industrial base.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/woonsocket-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/woonsocket-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/woonsocket-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/woonsocket-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/newport-ri-forensic-economist.html">Newport</a></h3>
+  <p class="city-info">Newport County • Population: 25,163</p>
+  <p>Historic coastal city, tourism center with Newport County quality Court.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/newport-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/newport-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/newport-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/newport-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/westerly-ri-forensic-economist.html">Westerly</a></h3>
+  <p class="city-info">Washington County • Population: 23,359</p>
+  <p>Coastal community serving Washington County quality Court.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/westerly-ri-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/westerly-ri-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/westerly-ri-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/westerly-ri-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Court Information -->
+  <section class="court-section">
+  <div class="container">
+  <h2>Rhode Island Courts We Serve</h2>
+  <div class="courts-grid">
+  <div class="court-card">
+  <h3>quality Courts</h3>
+  <ul>
+  <li>Providence County quality Court</li>
+  <li>Kent County quality Court (Warwick)</li>
+  <li>Washington County quality Court (Wakefield)</li>
+  <li>Newport County quality Court</li>
+  <li>Bristol County quality Court</li>
+  </ul>
+  </div>
+  <div class="court-card">
+  <h3>Federal Court</h3>
+  <ul>
+  <li>U.S. District Court for the District of Rhode Island (Providence)</li>
+  </ul>
+  </div>
+  <div class="court-card">
+  <h3>Other Venues</h3>
+  <ul>
+  <li>Workers' Compensation Court</li>
+  <li>Family Court</li>
+  <li>District Courts</li>
+  <li>Administrative Hearings</li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose-section">
+  <div class="container">
+  <h2>Why Rhode Island Attorneys Choose Skerritt Economics</h2>
+  <div class="benefits-grid">
+  <div class="benefit">
+  <h3>Local Presence</h3>
+  <p>Based in Smithfield, we're centrally located to serve all Rhode Island communities efficiently.</p>
+  </div>
+  <div class="benefit">
+  <h3>Court Experience</h3>
+  <p>Extensive testimony experience in Rhode Island quality Courts and federal court.</p>
+  </div>
+  <div class="benefit">
+  <h3>Quick Response</h3>
+  <p>Same-day response for urgent cases anywhere in Rhode Island.</p>
+  </div>
+  <div class="benefit">
+  <h3>Local Knowledge</h3>
+  <p>Deep understanding of Rhode Island's economy, labor markets, and healthcare systems.</p>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+  <div class="container">
+  <div class="cta-content">
+  <h2>Need Expert Economic Analysis in Rhode Island?</h2>
+  <p>Free consultation for Rhode Island attorneys. Serving all counties and courts throughout the Ocean State.</p>
+  <a href="../../contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+  <p class="cta-phone">Or call directly: <a href="tel:203-605-2814">(203) 605-2814</a></p>
+  </div>
+  </div>
+  </section>

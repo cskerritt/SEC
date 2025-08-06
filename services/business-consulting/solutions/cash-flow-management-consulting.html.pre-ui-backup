@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" name="viewport"/>
+<title>Cash Flow Management Consulting | Working Capital Optimization | Skerritt</title>
+<meta name="description" content="Expert cash flow management consulting to improve liquidity, optimize working capital, and ensure financial stability. Free cash flow analysis. Rhode Island business consultant."/>
+<meta name="keywords" content="cash flow management consultant, working capital optimization, cash flow forecasting, liquidity management, accounts receivable consulting, cash flow problems, financial stability consulting"/>
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Cash Flow Management Consulting | Fix Cash Flow Problems"/>
+<meta property="og:description" content="Solve cash flow problems with expert consulting. Improve collections, optimize working capital, and ensure financial stability."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://skerritteconomics.com/services/business-consulting/solutions/cash-flow-management/"/>
+
+<link href="../../../css/styles.css" rel="stylesheet"/>
+<link href="../../../css/services.css" rel="stylesheet"/>
+<link href="../../../css/business-consulting.css" rel="stylesheet"/>
+<link href="../../../css/spacing-improvements.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://skerritteconomics.com/services/business-consulting/solutions/cash-flow-management/" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<!-- Cash Flow Consulting Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Cash Flow Management Consulting - Skerritt Economics",
+    "description": "Expert cash flow management and working capital optimization consulting for businesses in Rhode Island and New England.",
+    "url": "https://skerritteconomics.com/services/business-consulting/solutions/cash-flow-management/",
+    "telephone": "+1-203-605-2814",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Smithfield",
+        "addressRegion": "RI",
+        "addressCountry": "US"
+    },
+    "areaServed": [
+        {"@type": "State", "name": "Rhode Island"},
+        {"@type": "State", "name": "Massachusetts"},
+        {"@type": "State", "name": "Connecticut"}
+    ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What are the warning signs of cash flow problems?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Key warning signs include: consistently late paying bills, using credit lines for operations, delayed payroll, declining cash reserves, increasing days sales outstanding (DSO), growing inventory levels, frequent cash crunches at month-end, and difficulty meeting loan obligations. If you're experiencing 2+ of these signs, immediate action is needed."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How quickly can cash flow consulting show results?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many improvements show results within 30-60 days. Quick wins include accelerating collections (7-14 days), negotiating payment terms (immediate), and implementing cash forecasting (1-2 weeks). Full working capital optimization typically takes 3-6 months but delivers sustained improvements."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How much does cash flow consulting cost?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cash flow consulting typically ranges from $5,000-$25,000 depending on business size and complexity. Most clients see 10-20x ROI through improved cash position, reduced borrowing costs, and avoided crisis situations. We offer free initial assessments to quantify your opportunity."
+            }
+        }
+    ]
+}
+</script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="main-nav">
+<div class="container">
+<div class="nav-wrapper">
+<a class="logo" href="../../../index.html">
+<strong>Skerritt Economics</strong>
+<span>&amp; Consulting</span>
+</a>
+<button aria-label="Toggle menu" class="mobile-menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul class="nav-menu">
+<li><a href="../../../index.html">Home</a></li>
+<li class="has-dropdown active">
+<a href="../../index.html">Services</a>
+<ul class="dropdown">
+<li><a href="../../forensic-economics/">Forensic Economics</a></li>
+<li><a href="../../business-valuation/">Business Valuation</a></li>
+<li class="active"><a href="../../business-consulting/">Business Consulting</a></li>
+</ul>
+</li>
+<li><a href="../../../practice-areas/">Practice Areas</a></li>
+<li><a href="../../../about/">About</a></li>
+<li><a href="../../../contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section solution-hero cash-flow-hero">
+<div class="container">
+<nav aria-label="breadcrumb" class="breadcrumb">
+<a href="../../../index.html">Home</a> › 
+<a href="../../index.html">Services</a> › 
+<a href="../index.html">Business Consulting</a> › 
+<span>Cash Flow Management</span>
+</nav>
+<h1>Cash Flow Management Consulting</h1>
+<p class="hero-subtitle">Transform Your Cash Position and Never Worry About Making Payroll Again</p>
+<div class="hero-features">
+<div class="feature">
+<span class="feature-number">30-45</span>
+<span>Days Faster Collections</span>
+</div>
+<div class="feature">
+<span class="feature-number">25%</span>
+<span>Working Capital Reduction</span>
+</div>
+<div class="feature">
+<span class="feature-number">60%</span>
+<span>Less Cash Volatility</span>
+</div>
+</div>
+<div class="hero-cta">
+<a href="../../../contact/" class="btn btn-primary">Get Free Cash Flow Analysis</a>
+<a href="tel:203-605-2814" class="btn btn-secondary">Call (203) 605-2814</a>
+</div>
+<p class="urgency-banner">⚠️ Cash flow crisis? We offer emergency consulting with 24-hour response</p>
+</div>
+</section>
+
+<!-- Cash Flow Problems Section -->
+<section class="problems-section">
+<div class="container">
+<h2>Is Poor Cash Flow Strangling Your Business?</h2>
+<p class="section-intro">Cash flow problems can destroy even profitable businesses. We help you identify root causes and implement lasting solutions.</p>
+<div class="problems-grid">
+<div class="problem-card">
+<h3>Common Cash Flow Problems</h3>
+<ul>
+<li>✗ Struggling to make payroll</li>
+<li>✗ Can't pay suppliers on time</li>
+<li>✗ Missing growth opportunities</li>
+<li>✗ Maxed out credit lines</li>
+<li>✗ Constant cash crunches</li>
+<li>✗ Unable to take discounts</li>
+<li>✗ Delayed equipment purchases</li>
+<li>✗ Stress and sleepless nights</li>
+</ul>
+</div>
+<div class="problem-card">
+<h3>Root Causes We Address</h3>
+<ul>
+<li>→ Slow customer collections</li>
+<li>→ Poor invoicing processes</li>
+<li>→ Excessive inventory</li>
+<li>→ Unfavorable payment terms</li>
+<li>→ Lack of cash forecasting</li>
+<li>→ Seasonal fluctuations</li>
+<li>→ Rapid growth strain</li>
+<li>→ Inefficient operations</li>
+</ul>
+</div>
+<div class="problem-card">
+<h3>Our Solutions Deliver</h3>
+<ul>
+<li>✓ Predictable cash flow</li>
+<li>✓ Improved liquidity</li>
+<li>✓ Reduced borrowing needs</li>
+<li>✓ Better vendor relations</li>
+<li>✓ Growth funding available</li>
+<li>✓ Lower stress levels</li>
+<li>✓ Strategic flexibility</li>
+<li>✓ Peace of mind</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Cash Flow Solutions Section -->
+<section class="solutions-detailed">
+<div class="container">
+<h2>Comprehensive Cash Flow Solutions</h2>
+<div class="solution-categories">
+<!-- Receivables Management -->
+<div class="solution-category">
+<h3>Accounts Receivable Optimization</h3>
+<p>Accelerate collections and reduce DSO by 30-50%</p>
+<div class="solution-details">
+<h4>Collection Acceleration</h4>
+<ul>
+<li>Credit policy optimization</li>
+<li>Collection process redesign</li>
+<li>Early payment incentives</li>
+<li>Automated follow-up systems</li>
+<li>Customer credit management</li>
+</ul>
+<h4>Invoicing Excellence</h4>
+<ul>
+<li>Faster invoice generation</li>
+<li>Electronic invoicing setup</li>
+<li>Invoice accuracy improvement</li>
+<li>Dispute resolution processes</li>
+<li>Payment portal implementation</li>
+</ul>
+</div>
+</div>
+<!-- Working Capital -->
+<div class="solution-category">
+<h3>Working Capital Optimization</h3>
+<p>Free up 20-40% of trapped cash in operations</p>
+<div class="solution-details">
+<h4>Inventory Management</h4>
+<ul>
+<li>Optimal inventory levels</li>
+<li>ABC analysis and stratification</li>
+<li>Lead time reduction</li>
+<li>Obsolete inventory liquidation</li>
+<li>Vendor managed inventory</li>
+</ul>
+<h4>Payables Optimization</h4>
+<ul>
+<li>Payment term negotiation</li>
+<li>Early payment discount capture</li>
+<li>Vendor financing programs</li>
+<li>Payment scheduling optimization</li>
+<li>Supply chain financing</li>
+</ul>
+</div>
+</div>
+<!-- Cash Forecasting -->
+<div class="solution-category">
+<h3>Cash Flow Forecasting & Planning</h3>
+<p>Gain visibility and control over future cash position</p>
+<div class="solution-details">
+<h4>Forecasting Systems</h4>
+<ul>
+<li>13-week rolling cash forecast</li>
+<li>Daily cash position reporting</li>
+<li>Scenario planning models</li>
+<li>Seasonal adjustment planning</li>
+<li>Growth impact modeling</li>
+</ul>
+<h4>Cash Management</h4>
+<ul>
+<li>Cash reserve optimization</li>
+<li>Investment policy development</li>
+<li>Banking relationship management</li>
+<li>Credit facility structuring</li>
+<li>Cash concentration strategies</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Industry-Specific Section -->
+<section class="industry-solutions">
+<div class="container">
+<h2>Industry-Specific Cash Flow Solutions</h2>
+<div class="industry-tabs">
+<div class="industry-card">
+<h3>Construction & Contractors</h3>
+<ul>
+<li>Progress billing optimization</li>
+<li>Retainage management</li>
+<li>Job costing cash flow</li>
+<li>Subcontractor payment timing</li>
+<li>Project cash forecasting</li>
+</ul>
+</div>
+<div class="industry-card">
+<h3>Manufacturing</h3>
+<ul>
+<li>Raw material financing</li>
+<li>Production cycle optimization</li>
+<li>Customer deposit programs</li>
+<li>Inventory turnover improvement</li>
+<li>Supplier payment optimization</li>
+</ul>
+</div>
+<div class="industry-card">
+<h3>Healthcare Providers</h3>
+<ul>
+<li>Revenue cycle acceleration</li>
+<li>Insurance claim optimization</li>
+<li>Patient payment programs</li>
+<li>Denial management</li>
+<li>Cash posting efficiency</li>
+</ul>
+</div>
+<div class="industry-card">
+<h3>Professional Services</h3>
+<ul>
+<li>Billing cycle compression</li>
+<li>Retainer management</li>
+<li>WIP optimization</li>
+<li>Collection process improvement</li>
+<li>Project payment milestones</li>
+</ul>
+</div>
+<div class="industry-card">
+<h3>Retail & E-commerce</h3>
+<ul>
+<li>Inventory turnover optimization</li>
+<li>Seasonal planning</li>
+<li>Vendor payment terms</li>
+<li>Customer payment options</li>
+<li>Flash sale cash planning</li>
+</ul>
+</div>
+<div class="industry-card">
+<h3>Distribution/Wholesale</h3>
+<ul>
+<li>Customer credit management</li>
+<li>Inventory optimization</li>
+<li>Drop-ship programs</li>
+<li>Vendor financing</li>
+<li>Factoring evaluation</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Quick Wins Section -->
+<section class="quick-wins">
+<div class="container">
+<h2>Quick Cash Flow Wins We Can Deliver</h2>
+<p class="section-intro">Start seeing improvements in days, not months</p>
+<div class="wins-timeline">
+<div class="win-item">
+<span class="timeline">Week 1</span>
+<h3>Immediate Actions</h3>
+<ul>
+<li>Accelerate current collections</li>
+<li>Identify quick cash sources</li>
+<li>Negotiate critical payments</li>
+<li>Implement daily cash reporting</li>
+</ul>
+</div>
+<div class="win-item">
+<span class="timeline">Week 2-4</span>
+<h3>Process Improvements</h3>
+<ul>
+<li>Streamline invoicing</li>
+<li>Automate collections</li>
+<li>Optimize payment timing</li>
+<li>Launch early payment discounts</li>
+</ul>
+</div>
+<div class="win-item">
+<span class="timeline">Month 2-3</span>
+<h3>Structural Changes</h3>
+<ul>
+<li>Renegotiate terms</li>
+<li>Implement forecasting</li>
+<li>Optimize inventory</li>
+<li>Establish credit policies</li>
+</ul>
+</div>
+<div class="win-item">
+<span class="timeline">Ongoing</span>
+<h3>Sustained Excellence</h3>
+<ul>
+<li>Monitor KPIs</li>
+<li>Continuous optimization</li>
+<li>Scenario planning</li>
+<li>Strategic cash management</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Success Metrics -->
+<section class="success-metrics">
+<div class="container">
+<h2>Typical Cash Flow Improvements</h2>
+<div class="metrics-grid">
+<div class="metric">
+<span class="metric-value">35%</span>
+<span class="metric-label">DSO Reduction</span>
+</div>
+<div class="metric">
+<span class="metric-value">$500K+</span>
+<span class="metric-label">Cash Released</span>
+</div>
+<div class="metric">
+<span class="metric-value">22 Days</span>
+<span class="metric-label">Faster Collections</span>
+</div>
+<div class="metric">
+<span class="metric-value">40%</span>
+<span class="metric-label">Less Borrowing</span>
+</div>
+<div class="metric">
+<span class="metric-value">65%</span>
+<span class="metric-label">Forecast Accuracy</span>
+</div>
+<div class="metric">
+<span class="metric-value">2.5x</span>
+<span class="metric-label">Cash Cushion</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section">
+<div class="container">
+<h2>Our Cash Flow Consulting Process</h2>
+<div class="process-timeline">
+<div class="process-step">
+<div class="step-number">1</div>
+<h3>Cash Flow Diagnosis</h3>
+<p>Comprehensive analysis of cash sources, uses, timing, and cycles to identify improvement opportunities.</p>
+<span class="timeline">Days 1-3</span>
+</div>
+<div class="process-step">
+<div class="step-number">2</div>
+<h3>Quick Win Implementation</h3>
+<p>Immediately actionable improvements to accelerate cash and relieve pressure.</p>
+<span class="timeline">Week 1</span>
+</div>
+<div class="process-step">
+<div class="step-number">3</div>
+<h3>System Development</h3>
+<p>Build forecasting models, optimize processes, and establish cash management systems.</p>
+<span class="timeline">Weeks 2-4</span>
+</div>
+<div class="process-step">
+<div class="step-number">4</div>
+<h3>Optimization</h3>
+<p>Implement working capital improvements, negotiate terms, and optimize operations.</p>
+<span class="timeline">Months 2-3</span>
+</div>
+<div class="process-step">
+<div class="step-number">5</div>
+<h3>Monitoring & Control</h3>
+<p>Establish KPIs, dashboards, and ongoing optimization processes.</p>
+<span class="timeline">Ongoing</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Tools & Technology -->
+<section class="tools-section">
+<div class="container">
+<h2>Cash Flow Management Tools We Implement</h2>
+<div class="tools-grid">
+<div class="tool-card">
+<h3>Forecasting Tools</h3>
+<ul>
+<li>13-week rolling forecasts</li>
+<li>Scenario planning models</li>
+<li>Sensitivity analysis</li>
+<li>Automated reporting</li>
+</ul>
+</div>
+<div class="tool-card">
+<h3>Collection Systems</h3>
+<ul>
+<li>Automated reminders</li>
+<li>Customer portals</li>
+<li>Credit scoring</li>
+<li>Collection workflows</li>
+</ul>
+</div>
+<div class="tool-card">
+<h3>Analytics Dashboards</h3>
+<ul>
+<li>Real-time cash position</li>
+<li>DSO/DPO tracking</li>
+<li>Working capital metrics</li>
+<li>Trend analysis</li>
+</ul>
+</div>
+<div class="tool-card">
+<h3>Banking Integration</h3>
+<ul>
+<li>Cash concentration</li>
+<li>Sweep accounts</li>
+<li>Electronic payments</li>
+<li>Bank reconciliation</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Case Study -->
+<section class="case-study-preview">
+<div class="container">
+<h2>Cash Flow Transformation Success</h2>
+<div class="case-study-card">
+<h3>Distribution Company - Rhode Island</h3>
+<div class="case-details">
+<div class="challenge">
+<h4>Challenge:</h4>
+<p>$25M distributor facing constant cash crunches despite 15% profit margins. 68-day DSO, $3M in excess inventory, maxed $2M credit line, missing supplier discounts.</p>
+</div>
+<div class="solution">
+<h4>Our Solution:</h4>
+<ul>
+<li>Implemented aggressive collection program</li>
+<li>Negotiated extended payment terms</li>
+<li>Reduced inventory by 35%</li>
+<li>Created 13-week cash forecast</li>
+<li>Established customer credit policies</li>
+</ul>
+</div>
+<div class="results">
+<h4>Results (90 days):</h4>
+<div class="result-metrics">
+<span><strong>42 Days</strong> DSO (from 68)</span>
+<span><strong>$1.8M</strong> Cash Released</span>
+<span><strong>$0</strong> Credit Line Usage</span>
+<span><strong>$125K</strong> Annual Discount Capture</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Emergency Services -->
+<section class="emergency-services">
+<div class="container">
+<h2>Cash Flow Crisis? We Offer Emergency Support</h2>
+<div class="emergency-card">
+<h3>24-Hour Crisis Response</h3>
+<p>Facing payroll, can't pay suppliers, or bank calling loans? We provide immediate crisis intervention.</p>
+<div class="emergency-features">
+<div class="feature">✓ Same-day response</div>
+<div class="feature">✓ Crisis stabilization plan</div>
+<div class="feature">✓ Stakeholder communication</div>
+<div class="feature">✓ Immediate cash generation</div>
+</div>
+<a href="tel:203-605-2814" class="btn btn-urgent">Call Now: (203) 605-2814</a>
+</div>
+</div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+<div class="container">
+<h2>Cash Flow Consulting Investment</h2>
+<div class="pricing-options">
+<div class="pricing-card">
+<h3>Cash Flow Assessment</h3>
+<p class="price">$5,000 - $10,000</p>
+<p>Comprehensive diagnosis with action plan</p>
+<ul>
+<li>Cash flow analysis</li>
+<li>Quick win identification</li>
+<li>Improvement roadmap</li>
+<li>ROI projections</li>
+<li>Priority action list</li>
+</ul>
+</div>
+<div class="pricing-card featured">
+<h3>Full Implementation</h3>
+<p class="price">$15,000 - $40,000</p>
+<p>Complete cash flow transformation</p>
+<ul>
+<li>Everything in Assessment</li>
+<li>Process implementation</li>
+<li>System development</li>
+<li>Team training</li>
+<li>90-day support</li>
+</ul>
+</div>
+<div class="pricing-card">
+<h3>Crisis Intervention</h3>
+<p class="price">$10,000 - $25,000</p>
+<p>Emergency cash flow rescue</p>
+<ul>
+<li>Immediate stabilization</li>
+<li>Crisis management</li>
+<li>Stakeholder negotiation</li>
+<li>Recovery planning</li>
+<li>30-day intensive support</li>
+</ul>
+</div>
+</div>
+<p class="pricing-note">Free initial consultation. Most clients see positive cash flow impact within 30 days.</p>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+<div class="container">
+<div class="cta-content">
+<h2>Stop Worrying About Cash Flow</h2>
+<p>Get a free cash flow analysis and discover how much cash you can unlock in your business.</p>
+<div class="cta-features">
+<div class="cta-feature">✓ Free Cash Flow Analysis</div>
+<div class="cta-feature">✓ Quick Win Identification</div>
+<div class="cta-feature">✓ ROI Projections</div>
+</div>
+<div class="cta-buttons">
+<a href="../../../contact/" class="btn btn-primary btn-large">Get Free Analysis</a>
+<a href="tel:203-605-2814" class="btn btn-secondary btn-large">Call (203) 605-2814</a>
+</div>
+<p class="urgency-text">Cash flow problems compound quickly - Act now before it's too late</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>Skerritt Economics &amp; Consulting</h3>
+<p>Expert cash flow and financial consulting throughout Rhode Island and New England.</p>
+<div class="footer-contact">
+<p><i class="icon icon-phone"></i> (203) 605-2814</p>
+<p><i class="icon icon-email"></i> chris@skerritteconomics.com</p>
+</div>
+</div>
+<div class="footer-section">
+<h4>Financial Solutions</h4>
+<ul>
+<li><a href="cash-flow-management-consulting.html">Cash Flow Management</a></li>
+<li><a href="turnaround-consulting.html">Turnaround Consulting</a></li>
+<li><a href="financial-analysis.html">Financial Analysis</a></li>
+<li><a href="cost-reduction.html">Cost Reduction</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Industries</h4>
+<ul>
+<li><a href="../industries/manufacturing-consulting.html">Manufacturing</a></li>
+<li><a href="../industries/healthcare-consulting.html">Healthcare</a></li>
+<li><a href="../industries/construction-consulting.html">Construction</a></li>
+<li><a href="../industries/retail-consulting.html">Retail</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Resources</h4>
+<ul>
+<li><a href="../../resources/cash-flow-guide.html">Cash Flow Guide</a></li>
+<li><a href="../../../case-studies/">Success Stories</a></li>
+<li><a href="../../../about/">About Us</a></li>
+<li><a href="../../../contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Skerritt Economics &amp; Consulting. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script src="../../../js/main.js"></script>
+</body>
+</html>

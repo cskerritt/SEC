@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+  <!-- Skip navigation link for accessibility -->
+  <a href="#main" class="skip-to-content">Skip to main content</a>
+
+    {% include navigation.html %}
+    {% include breadcrumb.html %}
+
+  <main id="main">
+        {{ content }}
+  </main>
+
+    {% include footer.html %}
+
+  <!-- Non-blocking JavaScript -->
+  <script defer src="{{ '/js/mobile-performance.js' | relative_url }}"></script>
+
+  <!-- Load additional scripts only when needed -->
+    {% if page.url contains "contact" %}
+  <script defer src="{{ '/js/contact.min.js' | relative_url }}"></script>
+    {% endif %}
+
+    {% if page.url contains "case-studies" %}
+  <script defer src="{{ '/js/case-studies.min.js' | relative_url }}"></script>
+    {% endif %}
+</body>
+</html>

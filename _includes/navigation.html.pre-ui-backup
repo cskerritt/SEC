@@ -1,0 +1,159 @@
+<!-- Enhanced Navigation with All Services -->
+<nav class="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-wrapper">
+      <!-- Logo -->
+      <a href="{{ '/' | relative_url }}" class="logo" aria-label="Skerritt Economics & Consulting Home">
+        <strong>Skerritt Economics</strong>
+        <span>& Consulting</span>
+      </a>
+      
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu with ALL Services -->
+      <ul class="nav-menu" id="nav-menu">
+        <li>
+          <a href="{{ '/' | relative_url }}" 
+             {% if page.url == '/' %}class="active" aria-current="page"{% endif %}>
+            Home
+          </a>
+        </li>
+        
+        <!-- Complete Services Dropdown -->
+        <li class="has-dropdown">
+          <a href="{{ '/services/' | relative_url }}"
+             {% if page.url contains '/services/' %}class="active" aria-current="page"{% endif %}
+             aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown" role="menu">
+            <li role="menuitem">
+              <a href="{{ '/services/forensic-economics/' | relative_url }}">
+                Forensic Economics
+                <span class="service-badge">Popular</span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/services/business-valuation/' | relative_url }}">
+                Business Valuation
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/services/life-care-planning/' | relative_url }}">
+                Life Care Planning
+                <span class="service-badge new">New</span>
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/services/vocational-expert/' | relative_url }}">
+                Vocational Expert
+              </a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/services/business-consulting/' | relative_url }}">
+                Business Consulting
+              </a>
+            </li>
+            <li role="menuitem" class="dropdown-divider">
+              <a href="{{ '/services/' | relative_url }}" class="view-all-link">
+                View All Services →
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Practice Areas Dropdown -->
+        <li class="has-dropdown">
+          <a href="{{ '/practice-areas/' | relative_url }}"
+             {% if page.url contains '/practice-areas/' %}class="active" aria-current="page"{% endif %}
+             aria-haspopup="true" aria-expanded="false">
+            Practice Areas
+          </a>
+          <ul class="dropdown" role="menu">
+            <li role="menuitem">
+              <a href="{{ '/practice-areas/personal-injury/' | relative_url }}">Personal Injury & Wrongful Death</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/practice-areas/medical-malpractice/' | relative_url }}">Medical Malpractice</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/practice-areas/employment/' | relative_url }}">Employment Litigation</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/practice-areas/commercial-disputes/' | relative_url }}">Commercial Disputes</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/practice-areas/family-law/' | relative_url }}">Family Law & Divorce</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/practice-areas/product-liability/' | relative_url }}">Product Liability</a>
+            </li>
+          </ul>
+        </li>
+        
+        <!-- Locations Dropdown -->
+        <li class="has-dropdown">
+          <a href="{{ '/locations/' | relative_url }}"
+             {% if page.url contains '/locations/' %}class="active" aria-current="page"{% endif %}
+             aria-haspopup="true" aria-expanded="false">
+            Locations
+          </a>
+          <ul class="dropdown" role="menu">
+            <li role="menuitem">
+              <a href="{{ '/locations/cities/' | relative_url }}">Browse by City</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/locations/states/' | relative_url }}">Browse by State</a>
+            </li>
+            <li role="menuitem" class="dropdown-divider">
+              <a href="{{ '/locations/rhode-island/' | relative_url }}">Rhode Island</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/locations/massachusetts/' | relative_url }}">Massachusetts</a>
+            </li>
+            <li role="menuitem">
+              <a href="{{ '/locations/connecticut/' | relative_url }}">Connecticut</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li>
+          <a href="{{ '/case-studies/' | relative_url }}"
+             {% if page.url contains '/case-studies/' %}class="active" aria-current="page"{% endif %}>
+            Case Studies
+          </a>
+        </li>
+        
+        <li>
+          <a href="{{ '/about/' | relative_url }}"
+             {% if page.url contains '/about/' %}class="active" aria-current="page"{% endif %}>
+            About
+          </a>
+        </li>
+        
+        <li>
+          <a href="{{ '/blog/' | relative_url }}"
+             {% if page.url contains '/blog/' %}class="active" aria-current="page"{% endif %}>
+            Blog
+          </a>
+        </li>
+        
+        <li>
+          <a href="{{ '/contact/' | relative_url }}" 
+             class="nav-cta{% if page.url contains '/contact/' %} active{% endif %}"
+             {% if page.url contains '/contact/' %}aria-current="page"{% endif %}>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav-overlay"></div>

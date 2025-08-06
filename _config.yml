@@ -101,3 +101,5 @@ defaults:
       path: ""
     values:
       image: "/assets/images/christopher-skerritt.jpg"
+
+exclude: [node_modules, reference-ui, vendor]

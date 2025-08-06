@@ -1,0 +1,406 @@
+{
+  "timestamp": "2025-08-05T15:07:37.411834",
+  "summary": {
+    "total_tested": 33,
+    "passed": 0,
+    "failed": 33,
+    "warnings": 40
+  },
+  "issues": [
+    {
+      "type": "error",
+      "file": "services/index.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/index.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "warning",
+      "file": "services/index.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "warning",
+      "file": "services/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/index.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/index.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/all-services.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Button missing ARIA label"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Skipped heading level: h2 to h5"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Skipped heading level: h3 to h5"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index-modern.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/forensic-economics/index.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/forensic-economics/index.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/forensic-economics/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/life-care-planning/index.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/life-care-planning/index.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "warning",
+      "file": "services/life-care-planning/index.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "warning",
+      "file": "services/life-care-planning/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/life-care-planning/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/life-care-planning/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/business-valuation/index.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-valuation/index.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-valuation/index.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-valuation/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-valuation/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-valuation/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/vocational-expert/index.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/vocational-expert/index.html",
+      "message": "Missing responsive viewport meta tag"
+    },
+    {
+      "type": "warning",
+      "file": "services/vocational-expert/index.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "warning",
+      "file": "services/vocational-expert/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/vocational-expert/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/vocational-expert/index.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/specialties/turnaround-consultant-new-england.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/specialties/small-business-consultant-new-england.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/specialties/merger-acquisition-advisor-new-england.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/resources/when-to-hire-business-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/retail-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/manufacturing-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/construction-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/financial-services-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/technology-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/healthcare-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/industries/manufacturing-consultant-new-england.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/industries/manufacturing-consultant-new-england.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/solutions/mergers-acquisitions-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/solutions/mergers-acquisitions-consulting.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/solutions/mergers-acquisitions-consulting.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/solutions/turnaround-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/solutions/digital-transformation-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/solutions/cash-flow-management-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/solutions/growth-strategy-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/rhode-island-business-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/boston-business-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/locations/boston-business-consultant.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/providence-business-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/locations/providence-business-consultant.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/boston-healthcare-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/providence-manufacturing-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/massachusetts-business-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/locations/connecticut-business-consultant.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/locations/connecticut-business-consultant.html",
+      "message": "Low Bootstrap usage: 25%"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/for/small-business-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/for/small-business-consulting.html",
+      "message": "Skipped heading level: h2 to h4"
+    },
+    {
+      "type": "error",
+      "file": "services/business-consulting/services/strategic-planning-consulting.html",
+      "message": "Missing Bootstrap CSS link"
+    },
+    {
+      "type": "warning",
+      "file": "services/business-consulting/services/strategic-planning-consulting.html",
+      "message": "Skipped heading level: h2 to h4"
+    }
+  ]
+}

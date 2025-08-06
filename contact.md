@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: modern-default
 title: "Contact Skerritt Economics - Free Case Consultation"
 description: "Contact Chris Skerritt for expert economic analysis and business valuation. Free initial consultation for legal professionals throughout New England."
 sitemap:

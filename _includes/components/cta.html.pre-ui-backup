@@ -1,0 +1,39 @@
+{% comment %}
+CTA (Call-to-Action) Component
+Usage: {% include components/cta.html 
+         heading="Ready to Get Started?" 
+         description="Contact us today" 
+         button_text="Schedule Consultation" 
+         button_link="/contact" 
+         variant="gradient" %}
+{% endcomment %}
+
+{% assign heading = include.heading | default: "Ready to Get Started?" %}
+{% assign description = include.description | default: "" %}
+{% assign button_text = include.button_text | default: "Get Started" %}
+{% assign button_link = include.button_link | default: "/contact/" %}
+{% assign variant = include.variant | default: "gradient" %}
+{% assign class = include.class | default: "" %}
+
+<section class="cta-section {% if variant == 'gradient' %}bg-gradient-primary{% elsif variant == 'blue' %}bg-primary-800{% elsif variant == 'gray' %}bg-gray-50{% else %}bg-white{% endif %} py-16 lg:py-20 {{ class }}" 
+         role="region" 
+         aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-content text-center max-w-3xl mx-auto">
+      <h2 id="cta-heading" class="text-3xl lg:text-4xl font-bold mb-5 {% if variant == 'gradient' or variant == 'blue' %}text-white{% elsif variant == 'gray' %}text-primary-800{% else %}text-gray-800{% endif %}">
+        {{ heading }}
+      </h2>
+      
+      {% if description != "" %}
+      <p class="text-lg lg:text-xl mb-8 {% if variant == 'gradient' or variant == 'blue' %}text-white opacity-95{% elsif variant == 'gray' %}text-primary-800 opacity-90{% else %}text-gray-600{% endif %}">
+        {{ description }}
+      </p>
+      {% endif %}
+      
+      <a href="{{ button_link | relative_url }}" 
+         class="btn btn-large {% if variant == 'gradient' or variant == 'blue' %}bg-white text-primary-800 hover:bg-gray-100{% else %}bg-primary-800 text-white hover:bg-primary-700{% endif %}">
+        {{ button_text }}
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit-cover" name="viewport"/>
+<title>Technology Company Consulting | SaaS Strategy | Software Business Advisor</title>
+<meta name="description" content="Expert technology consulting for software companies, SaaS businesses, and IT services. Product strategy, go-to-market, scaling, funding. Free tech startup consultation."/>
+<meta name="keywords" content="technology consultant, SaaS consultant, software business advisor, tech startup consultant, IT services consulting, product strategy consultant, technology scaling expert"/>
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Technology Company Consulting | SaaS & Software Expert"/>
+<meta property="og:description" content="Strategic consulting for technology companies. Product development, go-to-market, scaling, and funding expertise."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://skerritteconomics.com/services/business-consulting/industries/technology-consulting/"/>
+
+<link href="../../../css/styles.css" rel="stylesheet"/>
+<link href="../../../css/services.css" rel="stylesheet"/>
+<link href="../../../css/business-consulting.css" rel="stylesheet"/>
+<link href="../../../css/spacing-improvements.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://skerritteconomics.com/services/business-consulting/industries/technology-consulting/" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<!-- Technology Company Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Technology Company Consulting - Skerritt Economics",
+    "description": "Specialized consulting for software companies, SaaS businesses, IT services firms, and technology startups in Rhode Island and New England.",
+    "url": "https://skerritteconomics.com/services/business-consulting/industries/technology-consulting/",
+    "telephone": "+1-203-605-2814",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Smithfield",
+        "addressRegion": "RI",
+        "addressCountry": "US"
+    },
+    "areaServed": [
+        {"@type": "State", "name": "Rhode Island"},
+        {"@type": "State", "name": "Massachusetts"},
+        {"@type": "State", "name": "Connecticut"}
+    ]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What technology consulting services do you offer?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide comprehensive technology consulting including product strategy, go-to-market planning, SaaS metrics optimization, scaling strategies, fundraising support, pricing optimization, customer success, technical debt management, and M&A advisory. We work with software companies, SaaS businesses, IT services firms, and tech startups from seed to growth stage."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can consulting help my tech company grow?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Technology consulting helps accelerate growth through optimized product-market fit, improved unit economics, efficient scaling strategies, and strategic positioning. Typical results include 2-3x ARR growth, 40% improvement in CAC/LTV ratios, 50% reduction in churn, and successful funding rounds at higher valuations."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do you work with early-stage tech startups?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! We work with tech companies at all stages, from pre-seed startups to growth-stage companies. For early-stage startups, we offer lean consulting packages starting at $5,000 focusing on product-market fit, MVP development strategy, initial go-to-market, and fundraising preparation."
+            }
+        }
+    ]
+}
+</script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="main-nav">
+<div class="container">
+<div class="nav-wrapper">
+<a class="logo" href="../../../index.html">
+<strong>Skerritt Economics</strong>
+<span>&amp; Consulting</span>
+</a>
+<button aria-label="Toggle menu" class="mobile-menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<ul class="nav-menu">
+<li><a href="../../../index.html">Home</a></li>
+<li class="has-dropdown active">
+<a href="../../index.html">Services</a>
+<ul class="dropdown">
+<li><a href="../../forensic-economics/">Forensic Economics</a></li>
+<li><a href="../../business-valuation/">Business Valuation</a></li>
+<li class="active"><a href="../../business-consulting/">Business Consulting</a></li>
+</ul>
+</li>
+<li><a href="../../../practice-areas/">Practice Areas</a></li>
+<li><a href="../../../about/">About</a></li>
+<li><a href="../../../contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section industry-hero tech-hero">
+<div class="container">
+<nav aria-label="breadcrumb" class="breadcrumb">
+<a href="../../../index.html">Home</a> › 
+<a href="../../index.html">Services</a> › 
+<a href="../index.html">Business Consulting</a> › 
+<span>Technology Companies</span>
+</nav>
+<h1>Technology Company Consulting</h1>
+<p class="hero-subtitle">Strategic Consulting for Software, SaaS, and Tech Services - Scale Faster, Raise Capital, Win Markets</p>
+<div class="hero-features">
+<div class="feature">
+<span class="feature-number">2.5x</span>
+<span>ARR Growth</span>
+</div>
+<div class="feature">
+<span class="feature-number">45%</span>
+<span>Churn Reduction</span>
+</div>
+<div class="feature">
+<span class="feature-number">3.2x</span>
+<span>LTV/CAC Improvement</span>
+</div>
+</div>
+<div class="hero-cta">
+<a href="../../../contact/" class="btn btn-primary">Get Tech Consultation</a>
+<a href="tel:203-605-2814" class="btn btn-secondary">Call (203) 605-2814</a>
+</div>
+</div>
+</section>
+
+<!-- Tech Challenges Section -->
+<section class="challenges-section">
+<div class="container">
+<h2>Technology Company Challenges</h2>
+<p class="section-intro">The tech industry moves fast. We help you move faster while building sustainable growth.</p>
+<div class="challenges-grid">
+<div class="challenge-card">
+<h3>Growth & Scaling</h3>
+<ul>
+<li>Slow revenue growth</li>
+<li>High customer churn</li>
+<li>Poor unit economics</li>
+<li>Scaling bottlenecks</li>
+<li>Market saturation</li>
+<li>Competition pressure</li>
+</ul>
+<p class="solution"><strong>Our Solution:</strong> Growth strategies achieving 2-3x ARR growth and 40% improvement in retention.</p>
+</div>
+<div class="challenge-card">
+<h3>Product & Market Fit</h3>
+<ul>
+<li>Unclear value proposition</li>
+<li>Feature bloat</li>
+<li>Wrong target market</li>
+<li>Pricing challenges</li>
+<li>Low product adoption</li>
+<li>Technical debt</li>
+</ul>
+<p class="solution"><strong>Our Solution:</strong> Product strategy optimization improving NPS by 30+ points and doubling adoption.</p>
+</div>
+<div class="challenge-card">
+<h3>Funding & Finance</h3>
+<ul>
+<li>Runway concerns</li>
+<li>Fundraising struggles</li>
+<li>Valuation issues</li>
+<li>Burn rate too high</li>
+<li>Path to profitability unclear</li>
+<li>Investor relations</li>
+</ul>
+<p class="solution"><strong>Our Solution:</strong> Financial optimization and fundraising support securing funding at 30% higher valuations.</p>
+</div>
+<div class="challenge-card">
+<h3>Go-to-Market</h3>
+<ul>
+<li>Ineffective sales process</li>
+<li>High CAC</li>
+<li>Long sales cycles</li>
+<li>Poor marketing ROI</li>
+<li>Channel conflicts</li>
+<li>International expansion</li>
+</ul>
+<p class="solution"><strong>Our Solution:</strong> GTM optimization reducing CAC by 50% and shortening sales cycles 40%.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Tech Services Section -->
+<section class="tech-services">
+<div class="container">
+<h2>Technology Consulting Services</h2>
+<div class="service-categories">
+<!-- Product & Strategy -->
+<div class="service-category">
+<h3>Product & Technology Strategy</h3>
+<div class="service-details">
+<h4>Product Development</h4>
+<ul>
+<li>Product-market fit validation</li>
+<li>MVP strategy and roadmap</li>
+<li>Feature prioritization</li>
+<li>Technical architecture review</li>
+<li>API and platform strategy</li>
+<li>Technical debt management</li>
+</ul>
+<h4>Innovation & R&D</h4>
+<ul>
+<li>Innovation framework</li>
+<li>Emerging tech evaluation</li>
+<li>AI/ML integration</li>
+<li>Patent strategy</li>
+<li>Partnership opportunities</li>
+<li>Build vs. buy decisions</li>
+</ul>
+</div>
+</div>
+<!-- Growth & Revenue -->
+<div class="service-category">
+<h3>Growth & Revenue Optimization</h3>
+<div class="service-details">
+<h4>SaaS Metrics & Growth</h4>
+<ul>
+<li>MRR/ARR optimization</li>
+<li>Churn reduction strategies</li>
+<li>Expansion revenue</li>
+<li>LTV/CAC optimization</li>
+<li>Pricing strategy</li>
+<li>Upsell/cross-sell programs</li>
+</ul>
+<h4>Customer Success</h4>
+<ul>
+<li>Onboarding optimization</li>
+<li>Adoption programs</li>
+<li>Success metrics</li>
+<li>NPS improvement</li>
+<li>Renewal strategies</li>
+<li>Community building</li>
+</ul>
+</div>
+</div>
+<!-- Go-to-Market -->
+<div class="service-category">
+<h3>Go-to-Market Excellence</h3>
+<div class="service-details">
+<h4>Sales & Marketing</h4>
+<ul>
+<li>Sales process optimization</li>
+<li>Lead generation strategies</li>
+<li>Content marketing</li>
+<li>Product-led growth</li>
+<li>Partner channels</li>
+<li>International expansion</li>
+</ul>
+<h4>Positioning & Messaging</h4>
+<ul>
+<li>Value proposition</li>
+<li>Competitive positioning</li>
+<li>Market segmentation</li>
+<li>Buyer personas</li>
+<li>Brand strategy</li>
+<li>Analyst relations</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Tech Sectors Section -->
+<section class="tech-sectors">
+<div class="container">
+<h2>Technology Sectors We Serve</h2>
+<div class="sectors-grid">
+<div class="sector-card">
+<h3>SaaS & Cloud</h3>
+<ul>
+<li>B2B SaaS</li>
+<li>Vertical SaaS</li>
+<li>Infrastructure (IaaS)</li>
+<li>Platform (PaaS)</li>
+<li>Cloud services</li>
+</ul>
+</div>
+<div class="sector-card">
+<h3>Enterprise Software</h3>
+<ul>
+<li>ERP systems</li>
+<li>CRM platforms</li>
+<li>Analytics & BI</li>
+<li>Security software</li>
+<li>Collaboration tools</li>
+</ul>
+</div>
+<div class="sector-card">
+<h3>IT Services</h3>
+<ul>
+<li>Managed services</li>
+<li>System integration</li>
+<li>Custom development</li>
+<li>IT consulting</li>
+<li>Cloud migration</li>
+</ul>
+</div>
+<div class="sector-card">
+<h3>FinTech</h3>
+<ul>
+<li>Payment processing</li>
+<li>Lending platforms</li>
+<li>Crypto/blockchain</li>
+<li>InsurTech</li>
+<li>WealthTech</li>
+</ul>
+</div>
+<div class="sector-card">
+<h3>HealthTech</h3>
+<ul>
+<li>Telemedicine</li>
+<li>Digital health</li>
+<li>Medical devices</li>
+<li>Health analytics</li>
+<li>Practice management</li>
+</ul>
+</div>
+<div class="sector-card">
+<h3>Emerging Tech</h3>
+<ul>
+<li>AI/ML companies</li>
+<li>IoT platforms</li>
+<li>AR/VR solutions</li>
+<li>Robotics</li>
+<li>Quantum computing</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SaaS Metrics Section -->
+<section class="saas-metrics">
+<div class="container">
+<h2>SaaS Performance Optimization</h2>
+<p class="section-intro">We help optimize the metrics that matter for sustainable SaaS growth</p>
+<div class="metrics-optimization">
+<div class="metric-card">
+<h3>Revenue Metrics</h3>
+<ul>
+<li>MRR/ARR growth acceleration</li>
+<li>ARPU optimization</li>
+<li>Expansion revenue strategies</li>
+<li>Revenue retention improvement</li>
+</ul>
+<div class="typical-improvement">
+<span>Typical: 150% ARR growth</span>
+</div>
+</div>
+<div class="metric-card">
+<h3>Efficiency Metrics</h3>
+<ul>
+<li>CAC payback reduction</li>
+<li>LTV/CAC ratio improvement</li>
+<li>Magic number optimization</li>
+<li>Burn multiple reduction</li>
+</ul>
+<div class="typical-improvement">
+<span>Typical: 3x LTV/CAC improvement</span>
+</div>
+</div>
+<div class="metric-card">
+<h3>Retention Metrics</h3>
+<ul>
+<li>Gross churn reduction</li>
+<li>Net retention expansion</li>
+<li>Logo retention improvement</li>
+<li>Engagement optimization</li>
+</ul>
+<div class="typical-improvement">
+<span>Typical: 120% net retention</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Fundraising Support Section -->
+<section class="fundraising-section">
+<div class="container">
+<h2>Fundraising & Investment Support</h2>
+<p class="section-intro">Expert guidance through every stage of fundraising</p>
+<div class="fundraising-services">
+<div class="funding-stage">
+<h3>Seed & Series A</h3>
+<ul>
+<li>Pitch deck creation</li>
+<li>Financial modeling</li>
+<li>Investor targeting</li>
+<li>Valuation strategy</li>
+<li>Due diligence prep</li>
+<li>Term negotiation</li>
+</ul>
+</div>
+<div class="funding-stage">
+<h3>Growth Rounds</h3>
+<ul>
+<li>Growth story development</li>
+<li>Metrics optimization</li>
+<li>Strategic positioning</li>
+<li>Investor relations</li>
+<li>Board preparation</li>
+<li>Exit planning</li>
+</ul>
+</div>
+<div class="funding-stage">
+<h3>M&A & Exit</h3>
+<ul>
+<li>Exit strategy development</li>
+<li>Company positioning</li>
+<li>Buyer identification</li>
+<li>Valuation maximization</li>
+<li>Deal negotiation</li>
+<li>Integration planning</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Success Metrics -->
+<section class="success-metrics tech-metrics">
+<div class="container">
+<h2>Technology Consulting Results</h2>
+<div class="metrics-grid">
+<div class="metric">
+<span class="metric-value">2.8x</span>
+<span class="metric-label">Average ARR Growth</span>
+</div>
+<div class="metric">
+<span class="metric-value">52%</span>
+<span class="metric-label">CAC Reduction</span>
+</div>
+<div class="metric">
+<span class="metric-value">45%</span>
+<span class="metric-label">Churn Improvement</span>
+</div>
+<div class="metric">
+<span class="metric-value">3.5x</span>
+<span class="metric-label">LTV/CAC Ratio</span>
+</div>
+<div class="metric">
+<span class="metric-value">125%</span>
+<span class="metric-label">Net Revenue Retention</span>
+</div>
+<div class="metric">
+<span class="metric-value">35%</span>
+<span class="metric-label">Valuation Increase</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Case Studies Section -->
+<section class="case-study-preview">
+<div class="container">
+<h2>Technology Success Stories</h2>
+<div class="case-study-grid">
+<div class="case-study-card">
+<h3>B2B SaaS Platform - Boston</h3>
+<div class="case-details">
+<div class="challenge">
+<h4>Challenge:</h4>
+<p>$3M ARR SaaS struggling with 25% monthly churn, 18-month CAC payback, burning $500K/month</p>
+</div>
+<div class="solution">
+<h4>Our Solution:</h4>
+<ul>
+<li>Repositioned product for enterprise</li>
+<li>Implemented customer success program</li>
+<li>Optimized pricing and packaging</li>
+<li>Rebuilt sales process</li>
+</ul>
+</div>
+<div class="results">
+<h4>Results (12 months):</h4>
+<div class="result-metrics">
+<span><strong>$8.5M</strong> ARR</span>
+<span><strong>8%</strong> Monthly Churn</span>
+<span><strong>6 mo</strong> CAC Payback</span>
+<span><strong>$25M</strong> Series A Raised</span>
+</div>
+</div>
+</div>
+</div>
+<div class="case-study-card">
+<h3>IT Services Company - Providence</h3>
+<div class="case-details">
+<div class="challenge">
+<h4>Challenge:</h4>
+<p>$15M managed services provider with declining margins, project-based revenue, no recurring revenue</p>
+</div>
+<div class="solution">
+<h4>Our Solution:</h4>
+<ul>
+<li>Launched managed security services</li>
+<li>Converted to subscription model</li>
+<li>Automated service delivery</li>
+<li>Vertical market focus</li>
+</ul>
+</div>
+<div class="results">
+<h4>Results (18 months):</h4>
+<div class="result-metrics">
+<span><strong>$28M</strong> Revenue</span>
+<span><strong>75%</strong> Recurring</span>
+<span><strong>35%</strong> EBITDA Margins</span>
+<span><strong>Acquired</strong> for 3.5x Revenue</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Startup Programs Section -->
+<section class="startup-programs">
+<div class="container">
+<h2>Tech Startup Programs</h2>
+<p class="section-intro">Special programs designed for early-stage technology companies</p>
+<div class="program-cards">
+<div class="program-card">
+<h3>Startup Sprint</h3>
+<p class="price">$5,000</p>
+<p>30-day intensive program</p>
+<ul>
+<li>Product-market fit assessment</li>
+<li>Go-to-market strategy</li>
+<li>Pricing optimization</li>
+<li>Investor pitch prep</li>
+</ul>
+</div>
+<div class="program-card">
+<h3>Scale-Up Accelerator</h3>
+<p class="price">$15,000</p>
+<p>90-day growth program</p>
+<ul>
+<li>Growth strategy development</li>
+<li>Sales process optimization</li>
+<li>Metrics dashboard</li>
+<li>Fundraising support</li>
+</ul>
+</div>
+<div class="program-card">
+<h3>Fractional Executive</h3>
+<p class="price">$5,000-10,000/mo</p>
+<p>Part-time leadership</p>
+<ul>
+<li>Fractional COO/CRO</li>
+<li>Strategic guidance</li>
+<li>Board reporting</li>
+<li>Team mentoring</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Technology Stack Section -->
+<section class="tech-stack">
+<div class="container">
+<h2>Technology Stack Optimization</h2>
+<div class="stack-categories">
+<div class="stack-card">
+<h3>Development & DevOps</h3>
+<ul>
+<li>Architecture review</li>
+<li>CI/CD pipeline</li>
+<li>Cloud optimization</li>
+<li>Security best practices</li>
+<li>Performance tuning</li>
+</ul>
+</div>
+<div class="stack-card">
+<h3>Sales & Marketing Tech</h3>
+<ul>
+<li>CRM implementation</li>
+<li>Marketing automation</li>
+<li>Analytics setup</li>
+<li>Attribution modeling</li>
+<li>Sales enablement</li>
+</ul>
+</div>
+<div class="stack-card">
+<h3>Operations & Finance</h3>
+<ul>
+<li>Billing systems</li>
+<li>Revenue recognition</li>
+<li>Customer success tools</li>
+<li>Support platforms</li>
+<li>Data warehousing</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+<div class="container">
+<h2>Technology Consulting Investment</h2>
+<div class="pricing-options">
+<div class="pricing-card">
+<h3>Growth Audit</h3>
+<p class="price">$10,000 - $25,000</p>
+<p>Comprehensive tech company assessment</p>
+<ul>
+<li>Product-market fit analysis</li>
+<li>SaaS metrics review</li>
+<li>Go-to-market assessment</li>
+<li>Growth opportunity mapping</li>
+<li>Action plan development</li>
+</ul>
+</div>
+<div class="pricing-card featured">
+<h3>Growth Program</h3>
+<p class="price">$30,000 - $100,000</p>
+<p>Full growth transformation</p>
+<ul>
+<li>Complete assessment</li>
+<li>Strategy development</li>
+<li>Implementation support</li>
+<li>Team coaching</li>
+<li>6-month support</li>
+</ul>
+</div>
+<div class="pricing-card">
+<h3>Advisory Retainer</h3>
+<p class="price">$5,000 - $15,000/mo</p>
+<p>Ongoing strategic advisory</p>
+<ul>
+<li>Monthly strategy sessions</li>
+<li>Metrics monitoring</li>
+<li>Board support</li>
+<li>Fundraising assistance</li>
+<li>M&A guidance</li>
+</ul>
+</div>
+</div>
+<p class="pricing-note">Equity participation available for early-stage companies.</p>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+<div class="container">
+<div class="cta-content">
+<h2>Accelerate Your Tech Company Growth</h2>
+<p>Get expert guidance to scale faster, raise capital, and build sustainable competitive advantage.</p>
+<div class="cta-features">
+<div class="cta-feature">✓ Free Growth Assessment</div>
+<div class="cta-feature">✓ SaaS Expertise</div>
+<div class="cta-feature">✓ Fundraising Support</div>
+</div>
+<div class="cta-buttons">
+<a href="../../../contact/" class="btn btn-primary btn-large">Schedule Tech Consultation</a>
+<a href="tel:203-605-2814" class="btn btn-secondary btn-large">Call (203) 605-2814</a>
+</div>
+<p class="urgency-text">Q1 2025 planning underway - Reserve your strategy session now</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-section">
+<h3>Skerritt Economics &amp; Consulting</h3>
+<p>Expert technology consulting throughout Rhode Island and New England.</p>
+<div class="footer-contact">
+<p><i class="icon icon-phone"></i> (203) 605-2814</p>
+<p><i class="icon icon-email"></i> chris@skerritteconomics.com</p>
+</div>
+</div>
+<div class="footer-section">
+<h4>Tech Solutions</h4>
+<ul>
+<li><a href="saas-consulting.html">SaaS Strategy</a></li>
+<li><a href="product-strategy.html">Product Strategy</a></li>
+<li><a href="go-to-market.html">Go-to-Market</a></li>
+<li><a href="fundraising.html">Fundraising</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Industries</h4>
+<ul>
+<li><a href="technology-consulting.html">Technology</a></li>
+<li><a href="healthcare-consulting.html">Healthcare</a></li>
+<li><a href="financial-services-consulting.html">Financial Services</a></li>
+<li><a href="manufacturing-consulting.html">Manufacturing</a></li>
+</ul>
+</div>
+<div class="footer-section">
+<h4>Resources</h4>
+<ul>
+<li><a href="../../resources/saas-metrics-guide.html">SaaS Metrics Guide</a></li>
+<li><a href="../../../case-studies/">Success Stories</a></li>
+<li><a href="../../../about/">About Us</a></li>
+<li><a href="../../../contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Skerritt Economics &amp; Consulting. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script src="../../../js/main.js"></script>
+</body>
+</html>

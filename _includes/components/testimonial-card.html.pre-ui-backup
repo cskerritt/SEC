@@ -1,0 +1,48 @@
+<!-- Testimonial Card Component -->
+<!-- Usage: {% include components/testimonial-card.html quote="Quote text" author="Author Name" title="Author Title" rating=5 %} -->
+
+<div class="card h-100 shadow-sm hover-lift">
+  <div class="card-body p-4">
+    {% if include.rating %}
+    <div class="mb-3">
+      {% for i in (1..include.rating) %}
+      <i class="fas fa-star text-warning"></i>
+      {% endfor %}
+      {% assign empty_stars = 5 | minus: include.rating %}
+      {% for i in (1..empty_stars) %}
+      <i class="far fa-star text-warning"></i>
+      {% endfor %}
+    </div>
+    {% endif %}
+    
+    <blockquote class="mb-4">
+      <p class="fs-5 text-muted fst-italic">
+        <i class="fas fa-quote-left text-primary me-2"></i>
+        {{ include.quote }}
+        <i class="fas fa-quote-right text-primary ms-2"></i>
+      </p>
+    </blockquote>
+    
+    <div class="d-flex align-items-center">
+      {% if include.image %}
+      <img src="{{ include.image }}" 
+           alt="{{ include.author }}" 
+           class="rounded-circle me-3"
+           width="60" 
+           height="60">
+      {% else %}
+      <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center me-3" 
+           style="width: 60px; height: 60px;">
+        <span class="fs-4 fw-bold">{{ include.author | slice: 0 }}</span>
+      </div>
+      {% endif %}
+      
+      <div>
+        <h5 class="mb-0">{{ include.author }}</h5>
+        {% if include.title %}
+        <small class="text-muted">{{ include.title }}</small>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

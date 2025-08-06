@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+</head>
+<body>
+    {% include skip-nav.html %}
+    {% include navigation.html %}
+    {% include breadcrumb.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+    
+    <!-- Main JavaScript -->
+    <script src="{{ '/js/main-consolidated.js' | relative_url }}"></script>
+</body>
+</html>

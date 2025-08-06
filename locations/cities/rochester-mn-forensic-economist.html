@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -459,6 +461,13 @@
   </style>
  <link href="../../css/ultimate-consistency-fix.css" rel="stylesheet"/>
 <script src="../../js/force-navigation-fixed.js" defer></script>
+<!-- Bootstrap 5 UI Library -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../../css/ui-library-bootstrap.css">
+<link rel="stylesheet" href="../../css/text-contrast-fix-v2.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </head>
  <body>
   <!-- Navigation -->
@@ -481,7 +490,7 @@
   <span>
   </span>
   </button>
-  <ul class="nav-menu">
+  <ul class="navbar-nav">
   <li>
   <a href="../../index.html">
         Home
@@ -573,10 +582,10 @@
   <!-- Hero Section -->
   <section class="hero-section">
   <div class="container">
-  <div class="hero-content">
-  <h1>
+  <div class="hero-content text-center">
+  <h1><span class="animate__animated animate__fadeInDown">
       Rochester Forensic Economist
-  </h1>
+  </span></h1>
   <p>
       Trusted expert economic analysis and litigation support for Rochester's experienced law firms. Providing comprehensive forensic economics services with precision, integrity, and courtroom-tested expertise.
   </p>
@@ -611,7 +620,7 @@
   </p>
   </div>
   <div class="feature-grid">
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Mayo Clinic &amp; Medical Center Expertise
   </h3>
@@ -619,7 +628,7 @@
          Specialized understanding of Rochester's comprehensive medical economy, including Mayo Clinic compensation structures, medical research economics, and healthcare industry analysis. Expert knowledge of physician and specialist career patterns.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Technology &amp; Innovation Hub Analysis
   </h3>
@@ -627,7 +636,7 @@
          Expert analysis of Rochester's emerging technology sector and innovation economy. Understanding of startup valuations, technology transfer, and high-growth company economic modeling for the growing tech landscape.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Regional Economic Intelligence
   </h3>
@@ -635,7 +644,7 @@
          knowledge of southeastern Minnesota's economic patterns, from agricultural economics to manufacturing and service sectors. Analysis accounts for regional wage trends and unique economic characteristics of the Rochester metropolitan area.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Sophisticated Litigation Support
   </h3>
@@ -713,7 +722,7 @@
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Rochester and MN. Our integrated approach ensures comprehensive support for all your litigation and business needs.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        📊
   </div>
@@ -727,7 +736,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        💼
   </div>
@@ -741,7 +750,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        👔
   </div>
@@ -755,7 +764,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        🏥
   </div>
@@ -976,7 +985,7 @@
      Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Rochester's legal community.
   </p>
   <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-experienced: 40px;">
-  <div class="service-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+  <div class="card shadow-sm service-card h-100" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
   <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.2rem;">
        Economic Damage Analysis
   </h4>
@@ -984,7 +993,7 @@
        Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with Minnesota-specific considerations and methodologies.
   </p>
   </div>
-  <div class="service-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+  <div class="card shadow-sm service-card h-100" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
   <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.2rem;">
        Medical Economics Analysis
   </h4>
@@ -992,7 +1001,7 @@
        Specialized analysis for Mayo Clinic and healthcare-related litigation, including physician compensation, medical practice valuations, and healthcare industry disputes.
   </p>
   </div>
-  <div class="service-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+  <div class="card shadow-sm service-card h-100" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
   <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.2rem;">
        Technology Sector Valuation
   </h4>
@@ -1000,7 +1009,7 @@
        Valuation and economic analysis for technology companies, startups, and intellectual property disputes in Rochester's growing innovation sector.
   </p>
   </div>
-  <div class="service-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+  <div class="card shadow-sm service-card h-100" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
   <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.2rem;">
        Expert Witness Testimony
   </h4>
@@ -1008,7 +1017,7 @@
        Clear, courtroom testimony with comprehensive preparation and professional exhibits designed for Minnesota's legal environment.
   </p>
   </div>
-  <div class="service-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+  <div class="card shadow-sm service-card h-100" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
   <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.2rem;">
        Life Care Planning
   </h4>
@@ -1016,7 +1025,7 @@
        Detailed economic analysis of lifetime care costs for catastrophic injury cases, working with Rochester's medical community for accurate projections.
   </p>
   </div>
-  <div class="service-card" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
+  <div class="card shadow-sm service-card h-100" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); text-align: center;">
   <h4 style="color: #1e40af; margin-bottom: 15px; font-size: 1.2rem;">
        Settlement Support
   </h4>
@@ -1348,5 +1357,6 @@
   </footer>
   <script src="../../js/main.js">
   </script>
- </body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

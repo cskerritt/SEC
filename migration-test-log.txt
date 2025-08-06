@@ -1,0 +1,10 @@
+2025-08-05T16:03:13.498825 - 📁 Created backup: locations/cities/aberdeen-sd-business-valuation-analyst.html.pre-ui-backup
+2025-08-05T16:03:13.499696 - ✅ Migrated: locations/cities/aberdeen-sd-business-valuation-analyst.html
+2025-08-05T16:03:13.499896 - 📁 Created backup: locations/cities/aberdeen-sd-forensic-economist.html.pre-ui-backup
+2025-08-05T16:03:13.500554 - ✅ Migrated: locations/cities/aberdeen-sd-forensic-economist.html
+2025-08-05T16:03:13.500720 - 📁 Created backup: locations/cities/aberdeen-sd-sd-life-care-planner.html.pre-ui-backup
+2025-08-05T16:03:13.501125 - ✅ Migrated: locations/cities/aberdeen-sd-sd-life-care-planner.html
+2025-08-05T16:03:13.501290 - 📁 Created backup: locations/cities/aberdeen-sd-sd-vocational-expert.html.pre-ui-backup
+2025-08-05T16:03:13.501758 - ✅ Migrated: locations/cities/aberdeen-sd-sd-vocational-expert.html
+2025-08-05T16:03:13.501915 - 📁 Created backup: locations/cities/aiken-sc-business-valuation-analyst.html.pre-ui-backup
+2025-08-05T16:03:13.502278 - ✅ Migrated: locations/cities/aiken-sc-business-valuation-analyst.html

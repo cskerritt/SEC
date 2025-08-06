@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover" name="viewport"/>
+<title>Massachusetts Business Consultant | Boston Strategic Advisory | MA Management Consulting</title>
+<meta name="description" content="Leading Massachusetts business consultant serving Boston, Worcester, Springfield companies. Strategic planning, M&A advisory, operational excellence. MBA consultant with 20+ years experience."/>
+<meta name="keywords" content="Massachusetts business consultant, Boston business advisor, MA management consulting, Cambridge business strategy, Worcester business consultant, Springfield business advisor, Boston small business consultant"/>
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Massachusetts Business Consultant | Strategic Advisory Services"/>
+<meta property="og:description" content="Expert business consulting for Massachusetts companies. Serving Boston, Worcester, Springfield, and all of MA with strategic planning and growth advisory."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://skerritteconomics.com/services/business-consulting/locations/massachusetts-business-consultant.html"/>
+
+<link href="../../../css/styles.css" rel="stylesheet"/>
+<link href="../../../css/services.css" rel="stylesheet"/>
+<link href="https://skerritteconomics.com/services/business-consulting/locations/massachusetts-business-consultant.html" rel="canonical"/>
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Skerritt Economics - Massachusetts Business Consulting",
+    "description": "Expert business consulting services for Massachusetts companies",
+    "telephone": "+1-203-605-2814",
+    "email": "chris@skerritteconomics.com",
+    "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+    },
+    "areaServed": [
+        {"@type": "City", "name": "Boston"},
+        {"@type": "City", "name": "Worcester"},
+        {"@type": "City", "name": "Springfield"},
+        {"@type": "City", "name": "Cambridge"},
+        {"@type": "City", "name": "Lowell"},
+        {"@type": "City", "name": "Brockton"},
+        {"@type": "City", "name": "Quincy"},
+        {"@type": "City", "name": "Lynn"},
+        {"@type": "City", "name": "New Bedford"},
+        {"@type": "City", "name": "Fall River"},
+        {"@type": "City", "name": "Newton"},
+        {"@type": "City", "name": "Somerville"},
+        {"@type": "City", "name": "Framingham"},
+        {"@type": "City", "name": "Waltham"},
+        {"@type": "City", "name": "Haverhill"}
+    ],
+    "priceRange": "$$$"
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What areas of Massachusetts do you serve as a business consultant?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We serve all of Massachusetts including Greater Boston, MetroWest, North Shore, South Shore, Central Massachusetts (Worcester), Western Massachusetts (Springfield), Cape Cod, and the Berkshires. We offer both on-site and remote consulting throughout the Commonwealth."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What industries do you specialize in for Massachusetts businesses?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We work with Massachusetts businesses across all major sectors including technology, biotechnology, healthcare, financial services, education, manufacturing, professional services, and startups. Our expertise spans from Boston's innovation economy to Worcester's manufacturing base and Springfield's diverse industries."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How do you help Massachusetts startups and tech companies?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We provide strategic planning, funding strategies, scaling operations, market entry planning, and financial optimization for Massachusetts startups and tech companies. Our services help navigate the competitive Boston-Cambridge innovation ecosystem and access Massachusetts growth resources."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What makes your Massachusetts business consulting different?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Our combination of MBA education, 20+ years of business analysis experience, and deep understanding of Massachusetts' diverse economy provides unique value. We bring data-driven insights from forensic economics to deliver measurable results for Bay State companies."
+            }
+        }
+    ]
+}
+</script>
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="main-nav">
+<div class="container">
+<div class="nav-wrapper">
+<a class="logo" href="../../../index.html">
+<strong>Skerritt Economics</strong>
+<span>&amp; Consulting</span>
+</a>
+<ul class="nav-menu">
+<li><a href="../../../index.html">Home</a></li>
+<li class="has-dropdown active">
+<a href="../../index.html">Services</a>
+<ul class="dropdown">
+<li><a href="../../forensic-economics/">Forensic Economics</a></li>
+<li><a href="../../business-valuation/">Business Valuation</a></li>
+<li class="active"><a href="../index.html">Business Consulting</a></li>
+</ul>
+</li>
+<li><a href="../../../contact/">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section location-hero">
+<div class="container">
+<nav aria-label="breadcrumb" class="breadcrumb">
+<a href="../../../index.html">Home</a> › 
+<a href="../index.html">Business Consulting</a> › 
+<span>Massachusetts</span>
+</nav>
+<h1>Massachusetts Business Consultant</h1>
+<p class="hero-subtitle">Strategic Business Advisory from Boston to Springfield</p>
+<div class="hero-features">
+<div class="feature">
+<span class="icon">🏙️</span>
+<span>Greater Boston Area</span>
+</div>
+<div class="feature">
+<span class="icon">💼</span>
+<span>All MA Industries</span>
+</div>
+<div class="feature">
+<span class="icon">📈</span>
+<span>Growth Focused</span>
+</div>
+</div>
+<div class="hero-cta">
+<a href="../../../contact/" class="btn btn-primary">Schedule Boston Consultation</a>
+<a href="tel:203-605-2814" class="btn btn-outline">Call (203) 605-2814</a>
+</div>
+</div>
+</section>
+
+<!-- Local Content Section -->
+<section class="local-content">
+<div class="container">
+<h2>Premier Business Consulting Services for Massachusetts Companies</h2>
+<p class="lead">From Boston's innovation hub to Worcester's industrial center, from Springfield's diverse economy to Cape Cod's tourism sector, we help Massachusetts businesses thrive in the Commonwealth's dynamic market.</p>
+
+<div class="content-grid">
+<div class="main-content">
+<h3>Massachusetts Business Environment Expertise</h3>
+<p>Massachusetts offers unique opportunities and challenges for businesses. As the Bay State's trusted business consultant, we understand the nuances of operating in one of America's most educated and innovative states. Whether you're a Boston tech startup, a Worcester manufacturer, or a Springfield healthcare provider, we deliver strategies tailored to Massachusetts' competitive landscape.</p>
+
+<h3>Key Massachusetts Markets We Serve</h3>
+
+<div class="market-section">
+<h4>Greater Boston & Cambridge</h4>
+<p>Supporting businesses in the innovation economy including technology, biotechnology, financial services, and professional services. We help companies leverage Boston's world-class talent pool and investment ecosystem.</p>
+
+<h4>MetroWest</h4>
+<p>Consulting for Framingham, Natick, Newton, Waltham, and Wellesley businesses across technology, retail, healthcare, and professional services sectors.</p>
+
+<h4>North Shore</h4>
+<p>Strategic advisory for Lynn, Salem, Peabody, Beverly, and Gloucester companies in manufacturing, healthcare, marine industries, and tourism.</p>
+
+<h4>South Shore</h4>
+<p>Business consulting for Quincy, Brockton, Plymouth, and South Shore communities focusing on healthcare, manufacturing, and service industries.</p>
+
+<h4>Central Massachusetts</h4>
+<p>Supporting Worcester area businesses including manufacturing, healthcare, education, and biotechnology sectors throughout Central MA.</p>
+
+<h4>Western Massachusetts</h4>
+<p>Strategic planning for Springfield, Chicopee, Holyoke, and Pittsfield businesses across manufacturing, healthcare, education, and service sectors.</p>
+</div>
+
+<h3>Massachusetts Industry Specializations</h3>
+
+<div class="industry-grid">
+<div class="industry-item">
+<h4>Technology & Software</h4>
+<p>Strategic planning, scaling operations, funding strategies, and M&A advisory for Massachusetts tech companies.</p>
+</div>
+<div class="industry-item">
+<h4>Biotechnology & Life Sciences</h4>
+<p>Business development, strategic partnerships, and operational excellence for biotech and pharma companies.</p>
+</div>
+<div class="industry-item">
+<h4>Healthcare & Medical</h4>
+<p>Performance improvement, strategic planning, and operational efficiency for hospitals and medical practices.</p>
+</div>
+<div class="industry-item">
+<h4>Financial Services</h4>
+<p>Strategic advisory, digital transformation, and operational excellence for financial institutions.</p>
+</div>
+<div class="industry-item">
+<h4>Education & EdTech</h4>
+<p>Growth strategies, operational improvement, and strategic planning for educational institutions and EdTech companies.</p>
+</div>
+<div class="industry-item">
+<h4>Manufacturing</h4>
+<p>Lean manufacturing, supply chain optimization, and growth strategies for Massachusetts manufacturers.</p>
+</div>
+</div>
+
+<h3>Massachusetts Business Challenges We Address</h3>
+<ul class="challenge-list">
+<li><strong>Talent Competition:</strong> Strategies for attracting and retaining top talent in Massachusetts' competitive job market</li>
+<li><strong>High Operating Costs:</strong> Cost optimization strategies for managing Massachusetts' high real estate and labor costs</li>
+<li><strong>Regulatory Compliance:</strong> Navigate Massachusetts business regulations and tax requirements efficiently</li>
+<li><strong>Market Competition:</strong> Differentiation strategies in Massachusetts' sophisticated and competitive markets</li>
+<li><strong>Growth Scaling:</strong> Strategic approaches to scaling operations in the Greater Boston area and beyond</li>
+<li><strong>Innovation Management:</strong> Leveraging Massachusetts' innovation ecosystem for competitive advantage</li>
+</ul>
+</div>
+
+<div class="sidebar">
+<div class="quick-contact">
+<h3>Massachusetts Consultation</h3>
+<p>Get expert business advisory tailored to the Bay State market.</p>
+<a href="../../../contact/" class="btn btn-primary">Free Consultation</a>
+<p class="phone-number">(203) 605-2814</p>
+</div>
+
+<div class="ma-locations">
+<h3>Massachusetts Service Areas</h3>
+<div class="location-columns">
+<ul>
+<li>Boston</li>
+<li>Worcester</li>
+<li>Springfield</li>
+<li>Cambridge</li>
+<li>Lowell</li>
+<li>Brockton</li>
+<li>Quincy</li>
+<li>Lynn</li>
+<li>New Bedford</li>
+<li>Fall River</li>
+<li>Newton</li>
+<li>Somerville</li>
+<li>Lawrence</li>
+<li>Framingham</li>
+<li>Haverhill</li>
+<li>Waltham</li>
+<li>Malden</li>
+<li>Medford</li>
+<li>Taunton</li>
+<li>Chicopee</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services Specific to MA -->
+<section class="ma-services">
+<div class="container">
+<h2>Business Consulting Services Tailored for Massachusetts</h2>
+<div class="service-cards">
+<div class="service-card">
+<h3>Boston Startup Consulting</h3>
+<p>Strategic advisory for startups navigating Boston's innovation ecosystem, including funding strategies, scaling operations, and market entry.</p>
+</div>
+<div class="service-card">
+<h3>MA Manufacturing Excellence</h3>
+<p>Operational improvement and lean manufacturing implementation for Massachusetts manufacturers from Worcester to Springfield.</p>
+</div>
+<div class="service-card">
+<h3>Healthcare Business Advisory</h3>
+<p>Strategic planning and operational excellence for Massachusetts hospitals, medical practices, and healthcare organizations.</p>
+</div>
+<div class="service-card">
+<h3>Tech Company Growth</h3>
+<p>Scaling strategies, M&A advisory, and strategic planning for Massachusetts technology and software companies.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+<div class="container">
+<h2>Transform Your Massachusetts Business Today</h2>
+<p>Join successful Bay State companies that have accelerated growth with our strategic advisory services.</p>
+<a href="../../../contact/" class="btn btn-primary btn-large">Schedule Massachusetts Consultation</a>
+</div>
+</section>
+
+<footer class="main-footer">
+<div class="container">
+<p>&copy; 2025 Skerritt Economics & Consulting - Massachusetts Business Consultant</p>
+</div>
+</footer>
+
+</body>
+</html>

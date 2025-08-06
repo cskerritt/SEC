@@ -1,0 +1,339 @@
+{
+  "timestamp": "2025-08-05T15:39:28.593021",
+  "stats": {
+    "total_html_files": 4177,
+    "migrated_files": 16,
+    "pending_files": 4161,
+    "backup_files": 22,
+    "by_type": {
+      "other": {
+        "total": 420,
+        "migrated": 5,
+        "pending": 415
+      },
+      "practice_area": {
+        "total": 7,
+        "migrated": 0,
+        "pending": 7
+      },
+      "blog_post": {
+        "total": 18,
+        "migrated": 0,
+        "pending": 18
+      },
+      "location_page": {
+        "total": 521,
+        "migrated": 0,
+        "pending": 521
+      },
+      "service_page": {
+        "total": 35,
+        "migrated": 1,
+        "pending": 34
+      },
+      "city_life_care_planner": {
+        "total": 801,
+        "migrated": 2,
+        "pending": 799
+      },
+      "city_vocational_expert": {
+        "total": 801,
+        "migrated": 2,
+        "pending": 799
+      },
+      "city_business_valuation": {
+        "total": 753,
+        "migrated": 3,
+        "pending": 750
+      },
+      "city_forensic_economist": {
+        "total": 768,
+        "migrated": 3,
+        "pending": 765
+      },
+      "city_other": {
+        "total": 53,
+        "migrated": 0,
+        "pending": 53
+      }
+    },
+    "by_state": {
+      "AL": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "RI": {
+        "total": 60,
+        "migrated": 10,
+        "pending": 50
+      },
+      "NC": {
+        "total": 64,
+        "migrated": 0,
+        "pending": 64
+      },
+      "MO": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "NM": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "SC": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "WI": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "KS": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "MT": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "VT": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "VA": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "MI": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "SD": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "NY": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "MD": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "CO": {
+        "total": 61,
+        "migrated": 0,
+        "pending": 61
+      },
+      "MA": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "IL": {
+        "total": 66,
+        "migrated": 0,
+        "pending": 66
+      },
+      "OK": {
+        "total": 64,
+        "migrated": 0,
+        "pending": 64
+      },
+      "CA": {
+        "total": 82,
+        "migrated": 0,
+        "pending": 82
+      },
+      "OH": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "LA": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "FL": {
+        "total": 64,
+        "migrated": 0,
+        "pending": 64
+      },
+      "TN": {
+        "total": 64,
+        "migrated": 0,
+        "pending": 64
+      },
+      "UT": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "IA": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "KY": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "MN": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "ID": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "GA": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "AZ": {
+        "total": 66,
+        "migrated": 0,
+        "pending": 66
+      },
+      "NE": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "NJ": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "CT": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "ND": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "AK": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "NH": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "DE": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "ME": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "AR": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "OR": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "HI": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "WV": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "WA": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "TX": {
+        "total": 74,
+        "migrated": 0,
+        "pending": 74
+      },
+      "PA": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "DC": {
+        "total": 4,
+        "migrated": 0,
+        "pending": 4
+      },
+      "NV": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      },
+      "WY": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "MS": {
+        "total": 60,
+        "migrated": 0,
+        "pending": 60
+      },
+      "IN": {
+        "total": 62,
+        "migrated": 0,
+        "pending": 62
+      }
+    },
+    "migration_timeline": [
+      {
+        "date": "2025-08-05",
+        "count": 22
+      }
+    ],
+    "issues": [
+      {
+        "file": "ui-comparison.html",
+        "issues": [
+          "Old button class still present",
+          "High inline style count: 7"
+        ]
+      },
+      {
+        "file": "_includes/ui-library-setup.html",
+        "issues": [
+          "Missing viewport meta tag"
+        ]
+      }
+    ]
+  }
+}

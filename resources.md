@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: modern-default
 title: "Resources & Insights - Economic Analysis Articles"
 description: "Expert insights on forensic economics, business valuation, and economic damage analysis. Resources for attorneys and legal professionals."
 sitemap:

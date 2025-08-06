@@ -1,0 +1,60 @@
+<!-- Contact Card Component -->
+<!-- Usage: {% include components/contact-card.html %} -->
+
+<div class="contact-card" x-data="{ showPhone: false }">
+  <h3 class="h4 mb-3">Get Expert Analysis</h3>
+  <p class="text-muted mb-4">Connect with our forensic economics team for professional litigation support.</p>
+  
+  <ul class="list-unstyled mb-4">
+    <li class="mb-3 d-flex align-items-center">
+      <i class="fas fa-phone-alt text-primary me-3"></i>
+      <div>
+        <a href="tel:+12036052814" 
+           class="text-primary fw-semibold text-decoration-none"
+           @click="showPhone = true"
+           x-show="!showPhone">
+          Click to Call
+        </a>
+        <span x-show="showPhone" x-transition class="fw-semibold">
+          (203) 605-2814
+        </span>
+      </div>
+    </li>
+    
+    <li class="mb-3 d-flex align-items-center">
+      <i class="fas fa-envelope text-primary me-3"></i>
+      <a href="mailto:chris@skerritteconomics.com" class="text-primary fw-semibold text-decoration-none">
+        Send Email
+      </a>
+    </li>
+    
+    <li class="mb-3 d-flex align-items-center">
+      <i class="fas fa-clock text-primary me-3"></i>
+      <span class="text-muted">Mon-Fri: 8:00 AM - 6:00 PM EST</span>
+    </li>
+    
+    <li class="d-flex align-items-start">
+      <i class="fas fa-map-marker-alt text-primary me-3 mt-1"></i>
+      <div class="text-muted">
+        400 Putnam Pike Ste J<br>
+        Smithfield, RI 02917
+      </div>
+    </li>
+  </ul>
+  
+  <a href="{{ '/contact/' | relative_url }}" 
+     class="btn btn-primary w-100 hover-lift"
+     data-bs-toggle="tooltip" 
+     data-bs-placement="top" 
+     title="Free initial consultation">
+    Schedule Consultation
+    <i class="fas fa-calendar-alt ms-2"></i>
+  </a>
+  
+  <div class="mt-3 text-center">
+    <small class="text-muted">
+      <i class="fas fa-shield-alt me-1"></i>
+      Confidential & Court-Qualified
+    </small>
+  </div>
+</div>
