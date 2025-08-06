@@ -1,0 +1,101 @@
+/* Bootstrap 5 Theme for Skerritt Economics
+   Clean implementation focusing on text contrast and professional design */
+
+/* Color Variables */
+:root {
+  --primary-blue: #032b5b;
+  --secondary-blue: #1e40af;
+  --white: #ffffff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-600: #6c757d;
+  --gray-800: #343a40;
+}
+
+/* Hero Section with Blue Gradient */
+.hero-section,
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%) !important;
+  color: var(--white) !important;
+}
+
+.hero-section *,
+.bg-gradient-primary * {
+  color: var(--white) !important;
+}
+
+/* Button Overrides */
+.btn-primary {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-blue);
+  border-color: var(--secondary-blue);
+}
+
+.btn-light {
+  background-color: var(--white);
+  color: var(--primary-blue) !important;
+}
+
+.btn-outline-light:hover {
+  color: var(--primary-blue) !important;
+}
+
+/* Card Improvements */
+.card {
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Form Styling */
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 0.2rem rgba(3, 43, 91, 0.25);
+}
+
+/* Feature Icons */
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography */
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+/* Utility Classes */
+.hover-shadow {
+  transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  
+  .display-4 {
+    font-size: 2rem;
+  }
+}

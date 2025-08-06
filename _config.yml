@@ -102,4 +102,23 @@ defaults:
     values:
       image: "/assets/images/christopher-skerritt.jpg"
 
-exclude: [node_modules, reference-ui, vendor]
+exclude: 
+  - node_modules
+  - reference-ui
+  - vendor
+  - "*.py"
+  - "*.pyc"
+  - "*.sh"
+  - "*.backup"
+  - "*.pre-ui-backup"
+  - .next
+  - .vercel
+  - netlify-deploy
+  - modern-ui-demo.html
+  - ui-library-demo.html
+  - ui-library-test.html
+  - DESIGN-SYSTEM-V2.md
+  - deploy-to-vercel.sh
+  - UI-LIBRARY-GUIDE.md
+  - "*GUIDE*.md"
+  - "*TEST*.md"
