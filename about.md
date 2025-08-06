@@ -1,5 +1,5 @@
 ---
-layout: modern-default
+layout: bootstrap-default
 title: "About Christopher Skerritt - Forensic Economist & Business Valuation Expert"
 description: "Meet Christopher T. Skerritt, CRC, CLCP - Expert forensic economist and business valuator serving legal professionals throughout New England."
 sitemap:
@@ -8,6 +8,7 @@ sitemap:
 ---
 
 <link rel="stylesheet" href="{{ '/css/about.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/css/about-bootstrap-fix.css' | relative_url }}">
 
 <!-- About Hero -->
 <section class="about-hero">
