@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -20,13 +22,11 @@
   <meta content="39.0169;-94.2816" name="geo.position"/>
   <meta content="39.0169, -94.2816" name="ICBM"/>
   <link href="../../favicon.ico" rel="icon" type="image/x-icon"/>
-  <link href="../../css/styles.css" rel="stylesheet"/>
-  <link href="../../css/locations.css" rel="stylesheet"/>
-
-  <link href="../../css/city-pages-enhanced.css" rel="stylesheet"/>
-  <link href="../../css/city-footer-sections.css" rel="stylesheet"/>
-  <link href="../../css/mobile-optimized.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
+  
+    <!-- Modern UI CSS -->
+  <link rel="stylesheet" href="../../css/modern-ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
   <!-- Structured Data for AI Search Engines -->
@@ -174,122 +174,75 @@
         .comprehensive-services .service-link:hover {
             color: #1e3a8a;
         }
+  
+    /* Ensure header button always has white text */
+    .header-nav .btn-professional,
+    .header-nav .btn-professional:hover,
+    .header-nav .btn-professional:focus,
+    .header-nav .btn-professional:active,
+    .mobile-menu-nav .btn-professional,
+    .mobile-menu-nav .btn-professional:hover,
+    .mobile-menu-nav .btn-professional:focus,
+    .mobile-menu-nav .btn-professional:active {
+        color: white !important;
+    }
+    
   </style>
- <link href="../../css/ultimate-consistency-fix.css" rel="stylesheet"/>
-<script src="../../js/force-navigation-fixed.js" defer></script>
+
+<!-- Bootstrap 5 UI Library -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../../css/ui-library-bootstrap.css">
+<link rel="stylesheet" href="../../css/text-contrast-fix-v2.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </head>
  <body>
-  <!-- Navigation -->
-  <nav class="main-nav">
+<!-- Modern Header -->
+<header class="header-modern">
   <div class="container">
-  <div class="nav-wrapper">
-  <a class="logo" href="../../index.html">
-  <strong>
-       Skerritt Economics
-  </strong>
-  <span>
-       &amp; Consulting
-  </span>
-  </a>
-  <button aria-label="Toggle menu" class="mobile-menu-toggle">
-  <span>
-  </span>
-  <span>
-  </span>
-  <span>
-  </span>
-  </button>
-  <ul class="nav-menu">
-  <li>
-  <a href="../../index.html">
-        Home
-  </a>
-  </li>
-  <li class="has-dropdown">
-  <a href="../../services/">
-        Services
-  </a>
-  <ul class="dropdown">
-  <li>
-  <a href="../../services/forensic-economics/">
-          Forensic Economics
-  </a>
-  </li>
-  <li>
-  <a href="../../services/business-valuation/">
-          Business Valuation
-  </a>
-  </li>
-  <li>
-  <a href="../../services/vocational-expert/">
-          Vocational Expert
-  </a>
-  </li>
-  <li>
-  <a href="../../services/life-care-planning/">
-          Life Care Planning
-  </a>
-  </li>
-  </ul>
-  </li>
-  <li class="has-dropdown">
-  <a href="../../practice-areas/">
-        Practice Areas
-  </a>
-  <ul class="dropdown">
-  <li>
-  <a href="../../practice-areas/personal-injury/">
-          Personal Injury &amp; Wrongful Death
-  </a>
-  </li>
-  <li>
-  <a href="../../practice-areas/medical-malpractice/">
-          Medical Malpractice
-  </a>
-  </li>
-  <li>
-  <a href="../../practice-areas/employment/">
-          Employment Litigation
-  </a>
-  </li>
-  <li>
-  <a href="../../practice-areas/commercial-disputes/">
-          Commercial Disputes
-  </a>
-  </li>
-  </ul>
-  </li>
-  <li>
-  <a href="../../case-studies/">
-        Case Studies
-  </a>
-  </li>
-  <li>
-  <a href="../../about/">
-        About
-  </a>
-  </li>
-  <li>
-  <a href="../../resources/">
-        Resources
-  </a>
-  </li>
-  <li>
-  <a class="nav-cta" href="../../contact/">
-        Contact
-  </a>
-  </li>
-  </ul>
+    <div class="header-container">
+      <a href="/" class="header-logo">
+        Skerritt Economics
+      </a>
+      
+      <nav class="header-nav">
+        <a href="/services/">Services</a>
+        <a href="/about/">About</a>
+        <a href="/locations/">Locations</a>
+        <a href="/contact/">Contact</a>
+        <a href="/contact/" class="btn btn-professional btn-sm">
+          Get Started
+        </a>
+      </nav>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
   </div>
-  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <nav class="mobile-menu-nav">
+    <a href="/services/">Services</a>
+    <a href="/about/">About</a>
+    <a href="/locations/">Locations</a>
+    <a href="/contact/">Contact</a>
+    <a href="/contact/" class="btn btn-professional btn-sm" style="margin-top: 1rem;">
+      Get Started
+    </a>
   </nav>
+</div>
+  
   <!-- Hero Section -->
   <section class="location-hero">
   <div class="container">
-  <div class="hero-content">
-  <h1>
+  <div class="hero-content text-center">
+  <h1><span class="animate__animated animate__fadeInDown">
       Expert Business Valuation Analyst in Blue Springs, Missouri
-  </h1>
+  </span></h1>
   <p class="lead">
       Certified business valuation expert providing comprehensive company valuations, asset evaluations, and expert witness testimony for Blue Springs attorneys, businesses, and financial institutions.
   </p>
@@ -320,10 +273,10 @@
   </div>
   </div>
   <div class="hero-cta">
-  <a class="btn btn-primary" href="../../contact/">
+  <a class="btn btn-accent btn-lg" href="../../contact/">
        Free Consultation
   </a>
-  <a class="btn btn-secondary" href="tel:+12036052814">
+  <a class="btn btn-outline btn-lg" href="tel:+12036052814">
        Call (203) 605-2814
   </a>
   </div>
@@ -340,47 +293,50 @@
      As a certified business valuation analyst serving the Blue Springs market, I provide comprehensive valuation services for various purposes and industries throughout Missouri.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
+        <div class="card-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
   <div class="service-icon">
        📊
   </div>
-  <h3>
+  <h3 class="card-title">
        Company Valuations
   </h3>
-  <p>
+  <p class="card-description">
        Complete business valuations for merger &amp; acquisition, litigation support, tax planning, and strategic decision-making purposes.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        🏭
   </div>
-  <h3>
+  <h3 class="card-title">
        Asset Valuations
   </h3>
-  <p>
+  <p class="card-description">
        Tangible and intangible asset valuations including equipment, intellectual property, real estate, and inventory assessments.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        ⚖️
   </div>
-  <h3>
+  <h3 class="card-title">
        Litigation Support
   </h3>
-  <p>
+  <p class="card-description">
        Expert witness testimony and business valuations for divorce proceedings, shareholder disputes, and commercial litigation.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        📈
   </div>
-  <h3>
+  <h3 class="card-title">
        Financial Analysis
   </h3>
-  <p>
+  <p class="card-description">
        Comprehensive financial modeling, cash flow analysis, and market comparisons to determine accurate business values.
   </p>
   </div>
@@ -638,10 +594,10 @@
       Contact Skerritt Economics &amp; Consulting for professional business valuation services. Free initial consultation for attorneys and qualified businesses.
   </p>
   <div class="cta-buttons">
-  <a class="btn btn-primary" href="../../contact/">
+  <a class="btn btn-accent btn-lg" href="../../contact/">
        Free Consultation
   </a>
-  <a class="btn btn-secondary" href="tel:+12036052814">
+  <a class="btn btn-outline btn-lg" href="tel:+12036052814">
        Call Now
   </a>
   </div>
@@ -649,127 +605,70 @@
   </div>
   </section>
   <!-- Footer -->
-  <footer class="main-footer">
-  <div class="container">
-  <div class="footer-content">
-  <div class="footer-section">
-  <h3>
-       Skerritt Economics &amp; Consulting
-  </h3>
-  <p>
-       Expert business valuation analyst serving Blue Springs and throughout Missouri.
-  </p>
-  <div class="contact-info">
-  <p>
-        📍 400 Putnam Pike Ste J, Smithfield, RI 02917
-  </p>
-  <p>
-        📞
-  <a href="tel:+12036052814">
-         (203) 605-2814
-  </a>
-  </p>
-  <p>
-        ✉️
-  <a href="mailto:chris@skerritteconomics.com">
-         chris@skerritteconomics.com
-  </a>
-  </p>
-  </div>
-  </div>
-  <div class="footer-section">
-  <h4>
-       Services
-  </h4>
-  <ul>
-  <li>
-  <a href="../../services/forensic-economics/">
-         Forensic Economics
-  </a>
-  </li>
-  <li>
-  <a href="../../services/business-valuation/">
-         Business Valuation
-  </a>
-  </li>
-  <li>
-  <a href="../../services/vocational-expert/">
-         Vocational Expert
-  </a>
-  </li>
-  <li>
-  <a href="../../services/life-care-planning/">
-         Life Care Planning
-  </a>
-  </li>
-  </ul>
-  </div>
-  <div class="footer-section">
-  <h4>
-       Practice Areas
-  </h4>
-  <ul>
-  <li>
-  <a href="../../practice-areas/personal-injury/">
-         Personal Injury
-  </a>
-  </li>
-  <li>
-  <a href="../../practice-areas/medical-malpractice/">
-         Medical Malpractice
-  </a>
-  </li>
-  <li>
-  <a href="../../practice-areas/employment/">
-         Employment Law
-  </a>
-  </li>
-  <li>
-  <a href="../../practice-areas/commercial-disputes/">
-         Commercial Litigation
-  </a>
-  </li>
-  </ul>
-  </div>
-  <div class="footer-section">
-  <h4>
-       Company
-  </h4>
-  <ul>
-  <li>
-  <a href="../../about/">
-         About
-  </a>
-  </li>
-  <li>
-  <a href="../../case-studies/">
-         Case Studies
-  </a>
-  </li>
-  <li>
-  <a href="../../resources/">
-         Resources
-  </a>
-  </li>
-  <li>
-  <a href="../../contact/">
-         Contact
-  </a>
-  </li>
-  </ul>
-  </div>
-  </div>
-  <div class="footer-bottom">
-  <p>
-      © 2024 Skerritt Economics &amp; Consulting. All rights reserved.
-  </p>
-  <p>
-      Professional business valuation analyst serving Blue Springs, Missouri
-  </p>
-  </div>
-  </div>
-  </footer>
+  
   <script src="../../js/main.js">
   </script>
- </body>
+ <!-- Modern Footer -->
+<footer class="footer-modern">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Skerritt Economics</h3>
+        <p style="color: var(--muted-foreground); line-height: var(--leading-relaxed);">
+          Leading forensic economics firm providing expert testimony and economic analysis for legal professionals nationwide.
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="/services/forensic-economics/">Forensic Economics</a></li>
+          <li><a href="/services/business-valuation/">Business Valuation</a></li>
+          <li><a href="/services/life-care-planning/">Life Care Planning</a></li>
+          <li><a href="/services/vocational-expert/">Vocational Expert</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/team/">Our Team</a></li>
+          <li><a href="/testimonials/">Testimonials</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="tel:+12036052814">+1 (203) 605-2814</a></li>
+          <li><a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a></li>
+          <li>400 Putnam Pike Ste J<br>Smithfield, RI 02917</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Skerritt Economics & Consulting. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      const isOpen = mobileMenu.classList.contains('active');
+      mobileMenuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+  }
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

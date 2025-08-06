@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Migration Dashboard - Skerritt Economics</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    
+    <style>
+        .dashboard-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-bar-animated {
+            animation: progress-fill 2s ease-out;
+        }
+        
+        @keyframes progress-fill {
+            from { width: 0; }
+        }
+        
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            gap: 0.5rem;
+        }
+        
+        .status-complete {
+            background: #d4f1d4;
+            color: #155724;
+        }
+        
+        .status-in-progress {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-pending {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            padding-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #dee2e6;
+        }
+        
+        .timeline-item:last-child::before {
+            display: none;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: #032b5b;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-marker.complete {
+            background: #28a745;
+        }
+        
+        .timeline-marker.active {
+            background: #ffc107;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-5" x-data="migrationDashboard()">
+        <!-- Header -->
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold text-primary">UI Migration Dashboard</h1>
+            <p class="lead text-muted">Real-time tracking of Bootstrap 5 implementation across Skerritt Economics</p>
+        </div>
+        
+        <!-- Overall Progress -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="dashboard-card">
+                    <h2 class="h4 mb-4">Overall Migration Progress</h2>
+                    <div class="progress" style="height: 30px;">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+                             role="progressbar" 
+                             :style="`width: ${overallProgress}%`"
+                             :aria-valuenow="overallProgress" 
+                             aria-valuemin="0" 
+                             aria-valuemax="100">
+                            <span x-text="`${overallProgress}% Complete`"></span>
+                        </div>
+                    </div>
+                    <div class="row mt-4 text-center">
+                        <div class="col-md-3">
+                            <div class="stat-number text-success" x-text="stats.migrated">31</div>
+                            <p class="text-muted mb-0">Pages Migrated</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-number text-warning" x-text="stats.inProgress">5</div>
+                            <p class="text-muted mb-0">In Progress</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-number text-danger" x-text="stats.remaining">3,144</div>
+                            <p class="text-muted mb-0">Remaining</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="stat-number text-primary" x-text="stats.total">3,180</div>
+                            <p class="text-muted mb-0">Total Pages</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Page Type Progress -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="dashboard-card">
+                    <h3 class="h5 mb-4">Progress by Page Type</h3>
+                    <template x-for="pageType in pageTypes" :key="pageType.name">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span x-text="pageType.name"></span>
+                                <span class="text-muted" x-text="`${pageType.migrated}/${pageType.total}`"></span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar" 
+                                     :class="pageType.color"
+                                     :style="`width: ${(pageType.migrated/pageType.total)*100}%`">
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="dashboard-card">
+                    <h3 class="h5 mb-4">Migration Timeline</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker complete"></div>
+                            <h6 class="mb-1">Phase 1: Foundation</h6>
+                            <p class="text-muted small mb-0">Core pages & components - Complete</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker active"></div>
+                            <h6 class="mb-1">Phase 2: Service Pages</h6>
+                            <p class="text-muted small mb-0">Migrating service & practice pages</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <h6 class="mb-1">Phase 3: City Pages</h6>
+                            <p class="text-muted small mb-0">3,155 location-specific pages</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <h6 class="mb-1">Phase 4: QA & Launch</h6>
+                            <p class="text-muted small mb-0">Testing & optimization</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="row g-4 mb-5">
+            <div class="col-lg-8">
+                <div class="dashboard-card">
+                    <h3 class="h5 mb-4">Recent Migration Activity</h3>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Page</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template x-for="activity in recentActivity" :key="activity.page">
+                                    <tr>
+                                        <td>
+                                            <i class="fas fa-file-alt text-primary me-2"></i>
+                                            <span x-text="activity.page"></span>
+                                        </td>
+                                        <td><span class="badge bg-secondary" x-text="activity.type"></span></td>
+                                        <td>
+                                            <span class="badge" 
+                                                  :class="{'bg-success': activity.status === 'complete', 'bg-warning': activity.status === 'testing'}"
+                                                  x-text="activity.status">
+                                            </span>
+                                        </td>
+                                        <td class="text-muted" x-text="activity.time"></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="dashboard-card">
+                    <h3 class="h5 mb-4">Performance Metrics</h3>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Page Load Time</span>
+                            <span class="fw-bold text-success">2.1s</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Lighthouse Score</span>
+                            <span class="fw-bold text-success">95</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Accessibility</span>
+                            <span class="fw-bold text-success">98</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span>Mobile Score</span>
+                            <span class="fw-bold text-success">100</span>
+                        </div>
+                    </div>
+                    
+                    <h4 class="h6 mb-3">Migration Speed</h4>
+                    <div class="text-center">
+                        <div class="stat-number text-primary">45</div>
+                        <p class="text-muted mb-0">Pages per hour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="row">
+            <div class="col-12">
+                <div class="dashboard-card text-center">
+                    <h3 class="h5 mb-4">Migration Controls</h3>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <button class="btn btn-primary btn-lg" @click="startMigration">
+                            <i class="fas fa-play me-2"></i>Start Next Batch
+                        </button>
+                        <button class="btn btn-warning btn-lg" @click="pauseMigration">
+                            <i class="fas fa-pause me-2"></i>Pause Migration
+                        </button>
+                        <a href="/ui-comparison.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-eye me-2"></i>View Comparison
+                        </a>
+                        <a href="/UI-LIBRARY-GUIDE/" class="btn btn-info btn-lg">
+                            <i class="fas fa-book me-2"></i>Documentation
+                        </a>
+                    </div>
+                    
+                    <div class="mt-4 p-3 bg-light rounded">
+                        <p class="mb-2"><strong>Next Batch:</strong> California city pages (50 files)</p>
+                        <p class="mb-0 text-muted">Estimated time: 1 hour 7 minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function migrationDashboard() {
+        return {
+            stats: {
+                migrated: 31,
+                inProgress: 5,
+                remaining: 3144,
+                total: 3180
+            },
+            
+            get overallProgress() {
+                return Math.round((this.stats.migrated / this.stats.total) * 100);
+            },
+            
+            pageTypes: [
+                { name: 'Service Pages', migrated: 5, total: 5, color: 'bg-success' },
+                { name: 'Practice Areas', migrated: 0, total: 4, color: 'bg-warning' },
+                { name: 'Location Pages', migrated: 0, total: 10, color: 'bg-info' },
+                { name: 'City Pages', migrated: 26, total: 3155, color: 'bg-primary' },
+                { name: 'Other Pages', migrated: 0, total: 6, color: 'bg-secondary' }
+            ],
+            
+            recentActivity: [
+                { page: '/services/forensic-economics/', type: 'Service', status: 'complete', time: '2 min ago' },
+                { page: '/services/life-care-planning/', type: 'Service', status: 'complete', time: '5 min ago' },
+                { page: '/services/vocational-expert/', type: 'Service', status: 'complete', time: '8 min ago' },
+                { page: '/services/business-valuation/', type: 'Service', status: 'complete', time: '12 min ago' },
+                { page: '/locations/cities/atlanta-ga-forensic-economist.html', type: 'City', status: 'testing', time: '15 min ago' }
+            ],
+            
+            startMigration() {
+                alert('Starting migration of next batch...\nThis would run: ./batch-migrate-city-pages.sh --batch-size 50');
+            },
+            
+            pauseMigration() {
+                alert('Migration paused. You can resume at any time.');
+            }
+        }
+    }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

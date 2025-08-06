@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Contrast Fix</title>
+    
+    <!-- Same CSS loading order as city pages -->
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/locations.css" rel="stylesheet"/>
+    <link href="css/city-pages-enhanced.css" rel="stylesheet"/>
+    <link href="css/city-footer-sections.css" rel="stylesheet"/>
+    <link href="css/mobile-optimized.css" rel="stylesheet"/>
+    <link href="css/ultimate-consistency-fix.css" rel="stylesheet"/>
+    
+    <!-- Bootstrap 5 UI Library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/ui-library-bootstrap.css">
+    <link rel="stylesheet" href="css/text-contrast-fix.css">
+    
+    <style>
+        /* Debug styles */
+        .debug-box {
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid red;
+        }
+        .computed-styles {
+            background: #f3f4f6;
+            padding: 20px;
+            margin: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; padding: 20px;">Contrast Fix Test Page</h1>
+    
+    <!-- Test 1: Basic location-hero -->
+    <section class="location-hero">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1>Test 1: Location Hero Section</h1>
+                <p class="lead">This should have blue gradient background with white text</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="debug-box">
+        <h3>Test 1 Expected Result:</h3>
+        <ul>
+            <li>Background: Blue gradient (#032b5b to #1e40af)</li>
+            <li>Text: White (#ffffff)</li>
+        </ul>
+    </div>
+    
+    <!-- Test 2: Hero section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Test 2: Hero Section</h1>
+            <p>This should also have blue gradient with white text</p>
+        </div>
+    </section>
+    
+    <div class="debug-box">
+        <h3>Test 2 Expected Result:</h3>
+        <ul>
+            <li>Background: Blue gradient</li>
+            <li>Text: White</li>
+        </ul>
+    </div>
+    
+    <!-- Test 3: bg-gradient-hero -->
+    <section class="bg-gradient-hero">
+        <div class="container">
+            <h1>Test 3: BG Gradient Hero</h1>
+            <p>Another test with gradient background</p>
+        </div>
+    </section>
+    
+    <div class="debug-box">
+        <h3>Test 3 Expected Result:</h3>
+        <ul>
+            <li>Background: Blue gradient</li>
+            <li>Text: White</li>
+        </ul>
+    </div>
+    
+    <!-- Computed Styles Display -->
+    <div class="computed-styles" id="styles-output">
+        Computing styles...
+    </div>
+    
+    <script>
+        // Check computed styles
+        window.addEventListener('load', function() {
+            const tests = [
+                { selector: '.location-hero', name: 'Location Hero' },
+                { selector: '.hero', name: 'Hero' },
+                { selector: '.bg-gradient-hero', name: 'BG Gradient Hero' }
+            ];
+            
+            let output = 'COMPUTED STYLES:\n\n';
+            
+            tests.forEach(test => {
+                const element = document.querySelector(test.selector);
+                if (element) {
+                    const styles = window.getComputedStyle(element);
+                    const h1 = element.querySelector('h1');
+                    const h1Styles = h1 ? window.getComputedStyle(h1) : null;
+                    
+                    output += `${test.name}:\n`;
+                    output += `  Background: ${styles.background}\n`;
+                    output += `  Background-color: ${styles.backgroundColor}\n`;
+                    output += `  Color: ${styles.color}\n`;
+                    if (h1Styles) {
+                        output += `  H1 Color: ${h1Styles.color}\n`;
+                    }
+                    output += '\n';
+                }
+            });
+            
+            // Check CSS file loading
+            output += '\nLOADED STYLESHEETS:\n';
+            const links = document.querySelectorAll('link[rel="stylesheet"]');
+            links.forEach((link, index) => {
+                output += `${index + 1}. ${link.href}\n`;
+            });
+            
+            document.getElementById('styles-output').textContent = output;
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

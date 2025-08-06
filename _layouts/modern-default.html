@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/favicon-16x16.png' | relative_url }}">
+  
+  <!-- Modern UI CSS -->
+  <link rel="stylesheet" href="{{ '/css/modern-ui.css' | relative_url }}">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Page Specific CSS -->
+  {% if page.custom_css %}
+    {% for css_file in page.custom_css %}
+      <link rel="stylesheet" href="{{ css_file | relative_url }}">
+    {% endfor %}
+  {% endif %}
+
+  <!-- Bootstrap 5 UI Library -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="{{ '/css/ui-library-bootstrap.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/css/text-contrast-fix-v2.css' | relative_url }}">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+  </head>
+<body>
+  <!-- Modern Header -->
+  <header class="header-modern">
+    <div class="container">
+      <div class="header-container">
+        <a href="{{ '/' | relative_url }}" class="header-logo">
+          Skerritt Economics
+        </a>
+        
+        <nav class="header-nav">
+          <a href="{{ '/services/' | relative_url }}">Services</a>
+          <a href="{{ '/about/' | relative_url }}">About</a>
+          <a href="{{ '/locations/' | relative_url }}">Locations</a>
+          <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-professional btn-sm">
+            Get Started
+          </a>
+        </nav>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav class="mobile-menu-nav">
+      <a href="{{ '/services/' | relative_url }}">Services</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/locations/' | relative_url }}">Locations</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-professional btn-sm" style="margin-top: 1rem;">
+        Get Started
+      </a>
+    </nav>
+  </div>
+  
+  <!-- Main Content -->
+  <main>
+    {{ content }}
+  </main>
+  
+  <!-- Modern Footer -->
+  <footer class="footer-modern">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Skerritt Economics</h3>
+          <p style="color: var(--muted-foreground); line-height: var(--leading-relaxed);">
+            Leading forensic economics firm providing expert testimony and economic analysis for legal professionals nationwide.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Services</h3>
+          <ul>
+            <li><a href="{{ '/services/forensic-economics/' | relative_url }}">Forensic Economics</a></li>
+            <li><a href="{{ '/services/business-valuation/' | relative_url }}">Business Valuation</a></li>
+            <li><a href="{{ '/services/life-care-planning/' | relative_url }}">Life Care Planning</a></li>
+            <li><a href="{{ '/services/vocational-expert/' | relative_url }}">Vocational Expert</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="{{ '/about/' | relative_url }}">About Us</a></li>
+            <li><a href="{{ '/team/' | relative_url }}">Our Team</a></li>
+            <li><a href="{{ '/testimonials/' | relative_url }}">Testimonials</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="tel:+12036052814">+1 (203) 605-2814</a></li>
+            <li><a href="mailto:chris@skerritteconomics.com">chris@skerritteconomics.com</a></li>
+            <li>400 Putnam Pike Ste J<br>Smithfield, RI 02917</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; {{ 'now' | date: "%Y" }} Skerritt Economics & Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Mobile Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          const isOpen = mobileMenu.classList.contains('active');
+          mobileMenuToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+      }
+    });
+  </script>
+  
+  <!-- Page Specific Scripts -->
+  {% if page.custom_js %}
+    {% for js_file in page.custom_js %}
+      <script src="{{ js_file | relative_url }}"></script>
+    {% endfor %}
+  {% endif %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

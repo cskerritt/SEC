@@ -1,0 +1,268 @@
+---
+layout: default
+title: Connecticut Forensic Economics & Business Valuation Services | All Cities
+meta_description: Expert forensic economics, business valuation, vocational assessment, and life care planning services throughout Connecticut. Serving Hartford, New Haven, Stamford, and all CT communities.
+---
+
+<!-- State Hero -->
+  <section class="state-hero">
+  <div class="container">
+  <h1>Connecticut Economic Analysis Services</h1>
+  <p class="lead">Expert forensic economics, business valuation, vocational assessment, and life care planning services throughout the Constitution State. From Fairfield County to the Quiet Corner, we serve attorneys and businesses across all 8 counties.</p>
+  <div class="hero-features">
+  <div class="feature">
+  <span class="feature-icon">📍</span>
+  <span>Statewide Coverage</span>
+  </div>
+  <div class="feature">
+  <span class="feature-icon">⚖️</span>
+  <span>All CT Courts</span>
+  </div>
+  <div class="feature">
+  <span class="feature-icon">🏛️</span>
+  <span>8 Counties Served</span>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview">
+  <div class="container">
+  <h2>Our Connecticut Services</h2>
+  <div class="services-grid">
+  <div class="service-card">
+  <h3>Forensic Economics</h3>
+  <p>Economic damage calculations for personal injury, wrongful death, and employment cases in Connecticut courts.</p>
+  <ul>
+  <li>Lost earnings projections</li>
+  <li>Household services valuations</li>
+  <li>Present value calculations</li>
+  <li>Life care cost analysis</li>
+  </ul>
+  <a href="../forensic-economics/" class="service-link">View CT Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Business Valuation</h3>
+  <p>Expert business appraisals for Connecticut litigation, divorce, and estate planning matters.</p>
+  <ul>
+  <li>Fair market value assessments</li>
+  <li>Shareholder disputes</li>
+  <li>Divorce asset division</li>
+  <li>Economic damages</li>
+  </ul>
+  <a href="../business-valuation/" class="service-link">View CT Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Vocational Expert</h3>
+  <p>Earning capacity and employability assessments for Connecticut personal injury and disability cases.</p>
+  <ul>
+  <li>Transferable skills analysis</li>
+  <li>Labor market surveys</li>
+  <li>Vocational rehabilitation</li>
+  <li>Work life expectancy</li>
+  </ul>
+  <a href="../vocational-expert/" class="service-link">View CT Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Life Care Planning</h3>
+  <p>Comprehensive future medical cost projections for catastrophic injury cases in Connecticut.</p>
+  <ul>
+  <li>Medical needs assessment</li>
+  <li>Cost projections</li>
+  <li>Care coordination planning</li>
+  <li>Medicare set-asides</li>
+  </ul>
+  <a href="../life-care-planning/" class="service-link">View CT Locations →</a>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="cities-section">
+  <div class="container">
+  <h2>Connecticut Cities We Serve</h2>
+  <p class="section-intro">Select your city below to find location-specific information about our services, local courts, and how we serve attorneys in your area.</p>
+
+  <div class="cities-grid">
+  <div class="city-card">
+  <h3><a href="../forensic-economics/bridgeport-ct-forensic-economist.html">Bridgeport</a></h3>
+  <p class="city-info">Fairfield County • Population: 148,654</p>
+  <p>Connecticut's largest city, major Fairfield County court venue.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/bridgeport-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/bridgeport-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/bridgeport-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/bridgeport-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/stamford-ct-forensic-economist.html">Stamford</a></h3>
+  <p class="city-info">Fairfield County • Population: 135,470</p>
+  <p>Major corporate center with active business litigation market.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/stamford-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/stamford-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/stamford-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/stamford-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/new-haven-ct-forensic-economist.html">New Haven</a></h3>
+  <p class="city-info">New Haven County • Population: 134,023</p>
+  <p>Home to Yale University and major medical centers.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/new-haven-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/new-haven-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/new-haven-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/new-haven-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/hartford-ct-forensic-economist.html">Hartford</a></h3>
+  <p class="city-info">State Capital • Population: 121,054</p>
+  <p>Connecticut's capital, insurance industry hub with federal and state courts.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/hartford-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/hartford-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/hartford-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/hartford-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/waterbury-ct-forensic-economist.html">Waterbury</a></h3>
+  <p class="city-info">New Haven County • Population: 114,403</p>
+  <p>Historic brass city with major judicial district courthouse.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/waterbury-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/waterbury-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/waterbury-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/waterbury-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/norwalk-ct-forensic-economist.html">Norwalk</a></h3>
+  <p class="city-info">Fairfield County • Population: 91,184</p>
+  <p>Coastal city with strong business community and court presence.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/norwalk-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/norwalk-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/norwalk-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/norwalk-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/danbury-ct-forensic-economist.html">Danbury</a></h3>
+  <p class="city-info">Fairfield County • Population: 86,518</p>
+  <p>Western Connecticut hub with federal correctional facility and courts.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/danbury-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/danbury-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/danbury-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/danbury-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/new-britain-ct-forensic-economist.html">New Britain</a></h3>
+  <p class="city-info">Hartford County • Population: 74,135</p>
+  <p>Hardware City with diverse manufacturing and business base.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/new-britain-ct-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/new-britain-ct-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/new-britain-ct-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/new-britain-ct-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+  </div>
+
+  <!-- Additional Cities Link -->
+  <div class="more-cities-section">
+  <p>We serve all 23 Connecticut cities and major towns. <a href="../forensic-economics/#connecticut-cities">View complete list →</a></p>
+  </div>
+  </div>
+  </section>
+
+  <!-- Court Information -->
+  <section class="court-section">
+  <div class="container">
+  <h2>Connecticut Courts We Serve</h2>
+  <div class="courts-grid">
+  <div class="court-card">
+  <h3>Judicial Districts</h3>
+  <ul>
+  <li>Fairfield Judicial District (Bridgeport)</li>
+  <li>Hartford Judicial District</li>
+  <li>New Haven Judicial District</li>
+  <li>Waterbury Judicial District</li>
+  <li>Stamford/Norwalk Judicial District</li>
+  <li>Danbury Judicial District</li>
+  <li>New Britain Judicial District</li>
+  <li>Litchfield Judicial District</li>
+  </ul>
+  </div>
+  <div class="court-card">
+  <h3>Federal Courts</h3>
+  <ul>
+  <li>U.S. District Court for Connecticut (Hartford)</li>
+  <li>U.S. District Court (Bridgeport)</li>
+  <li>U.S. District Court (New Haven)</li>
+  <li>U.S. Bankruptcy Court</li>
+  </ul>
+  </div>
+  <div class="court-card">
+  <h3>Other Venues</h3>
+  <ul>
+  <li>Workers' Compensation Commission</li>
+  <li>Probate Courts</li>
+  <li>Administrative Appeals</li>
+  <li>Arbitration Forums</li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose-section">
+  <div class="container">
+  <h2>Why Connecticut Attorneys Choose Skerritt Economics</h2>
+  <div class="benefits-grid">
+  <div class="benefit">
+  <h3>Regional Expertise</h3>
+  <p>Deep understanding of Connecticut's diverse economy, from Hartford's insurance sector to Fairfield County's corporate base.</p>
+  </div>
+  <div class="benefit">
+  <h3>Court Experience</h3>
+  <p>Extensive testimony experience in Connecticut quality Courts and federal district courts.</p>
+  </div>
+  <div class="benefit">
+  <h3>Quick Response</h3>
+  <p>Rapid case evaluation and preliminary assessments for Connecticut attorneys.</p>
+  </div>
+  <div class="benefit">
+  <h3>Local Knowledge</h3>
+  <p>Familiar with Connecticut wage patterns, cost of living variations, and regional economic factors.</p>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+  <div class="container">
+  <div class="cta-content">
+  <h2>Need Expert Economic Analysis in Connecticut?</h2>
+  <p>Free consultation for Connecticut attorneys. Serving all judicial districts and courts throughout the Constitution State.</p>
+  <a href="../../contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+  <p class="cta-phone">Or call directly: <a href="tel:203-605-2814">(203) 605-2814</a></p>
+  </div>
+  </div>
+  </section>

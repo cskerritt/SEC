@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -550,6 +552,13 @@
   </style>
  <link href="../../css/ultimate-consistency-fix.css" rel="stylesheet"/>
 <script src="../../js/force-navigation-fixed.js" defer></script>
+<!-- Bootstrap 5 UI Library -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../../css/ui-library-bootstrap.css">
+<link rel="stylesheet" href="../../css/text-contrast-fix-v2.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </head>
  <body>
   <!-- Navigation -->
@@ -572,7 +581,7 @@
   <span>
   </span>
   </button>
-  <ul class="nav-menu">
+  <ul class="navbar-nav">
   <li>
   <a href="../../index.html">
         Home
@@ -664,10 +673,10 @@
   <!-- Hero Section -->
   <section class="hero-section">
   <div class="container">
-  <div class="hero-content">
-  <h1>
+  <div class="hero-content text-center">
+  <h1><span class="animate__animated animate__fadeInDown">
       Greenville Forensic Economist
-  </h1>
+  </span></h1>
   <p>
       Expert economic damage analysis and litigation support for Greenville's comprehensive law firms. Delivering comprehensive forensic economics services with precision and authority in the heart of Upstate South Carolina's manufacturing and business hub.
   </p>
@@ -703,7 +712,7 @@
   </div>
   <!-- Why Choose Section -->
   <div class="feature-grid">
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Manufacturing &amp; Automotive Expertise
   </h3>
@@ -711,7 +720,7 @@
          Comprehensive understanding of Greenville's position as a major automotive and advanced manufacturing hub. Specialized knowledge of BMW, Michelin, GE, and other major employers, including complex wage structures and industry-specific career progression patterns.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          International Business Acumen
   </h3>
@@ -719,7 +728,7 @@
          Expert analysis of international trade and foreign investment impacts on the Upstate economy. Understanding of multinational corporate structures, international compensation packages, and cross-border economic considerations.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Regional Economic Intelligence
   </h3>
@@ -727,7 +736,7 @@
          knowledge of Upstate South Carolina's transformation from textile center to advanced manufacturing and technology hub. Analysis accounts for rapid economic diversification and emerging industry trends specific to the region.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Sophisticated Litigation Support
   </h3>
@@ -805,7 +814,7 @@
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Greenville and SC. Our integrated approach ensures comprehensive support for all your litigation and business needs.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        📊
   </div>
@@ -819,7 +828,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        💼
   </div>
@@ -833,7 +842,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        👔
   </div>
@@ -847,7 +856,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        🏥
   </div>
@@ -1068,7 +1077,7 @@
      Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Greenville's legal community.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Economic Damage Analysis
   </h4>
@@ -1076,7 +1085,7 @@
        Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with South Carolina-specific considerations and methodologies.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Manufacturing Business Valuation
   </h4>
@@ -1084,7 +1093,7 @@
        Specialized valuations for manufacturing, automotive, and industrial enterprises using industry-specific methodologies and Upstate market data.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        International Business Analysis
   </h4>
@@ -1092,7 +1101,7 @@
        Economic analysis for multinational corporations and international trade disputes with understanding of foreign exchange and cross-border considerations.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Expert Witness Testimony
   </h4>
@@ -1100,7 +1109,7 @@
        Clear, courtroom testimony with comprehensive preparation and professional exhibits designed for South Carolina's legal environment.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Technology Valuation
   </h4>
@@ -1108,7 +1117,7 @@
        Valuation and economic analysis for technology companies, startups, and intellectual property disputes in Greenville's growing innovation sector.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Settlement Support
   </h4>
@@ -1440,5 +1449,6 @@
   </footer>
   <script src="../../js/main.js">
   </script>
- </body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

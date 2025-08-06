@@ -1,0 +1,53 @@
+<!-- CTA Section Component -->
+<!-- Usage: {% include components/cta-section.html 
+            title="Ready to Get Started?" 
+            description="Connect with our expert team today" 
+            cta_text="Schedule Consultation" 
+            cta_url="/contact/" 
+            style="gradient" %} -->
+
+{% assign section_style = include.style | default: "primary" %}
+
+<section class="py-5 {% if section_style == 'gradient' %}bg-gradient-primary text-white{% elsif section_style == 'accent' %}bg-accent{% else %}bg-primary text-white{% endif %}">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h2 class="display-4 fw-bold mb-3 {% unless section_style == 'accent' %}text-white{% endunless %}">
+          {{ include.title | default: "Ready to Work Together?" }}
+        </h2>
+        {% if include.description %}
+        <p class="lead {% unless section_style == 'accent' %}text-white-50{% else %}text-dark{% endunless %} mb-4 mb-lg-0">
+          {{ include.description }}
+        </p>
+        {% endif %}
+      </div>
+      
+      <div class="col-lg-4 text-lg-end">
+        <a href="{{ include.cta_url | default: '/contact/' }}" 
+           class="btn {% if section_style == 'accent' %}btn-primary{% else %}btn-accent{% endif %} btn-lg hover-lift">
+          {{ include.cta_text | default: "Get Started" }}
+          <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+        
+        {% if include.secondary_text and include.secondary_url %}
+        <a href="{{ include.secondary_url }}" 
+           class="btn btn-outline-light btn-lg hover-lift ms-2">
+          {{ include.secondary_text }}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% if include.features %}
+    <div class="row mt-4 pt-4 border-top {% unless section_style == 'accent' %}border-white-50{% else %}border-dark{% endunless %}">
+      {% for feature in include.features %}
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <i class="fas {{ feature.icon }} fs-2 mb-2 {% if section_style == 'accent' %}text-primary{% else %}text-accent{% endif %}"></i>
+        <h5 class="{% unless section_style == 'accent' %}text-white{% endunless %}">{{ feature.title }}</h5>
+        <p class="mb-0 {% unless section_style == 'accent' %}text-white-50{% else %}text-dark{% endunless %}">{{ feature.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

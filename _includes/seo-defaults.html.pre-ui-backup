@@ -1,0 +1,101 @@
+{% comment %}
+  SEO Defaults - Title and Description Optimization
+  This file sets optimal page titles and descriptions based on page type
+{% endcomment %}
+
+{% comment %} Optimized Page Titles {% endcomment %}
+{% if page.seo_title %}
+  {% assign seo_title = page.seo_title %}
+{% elsif page.url == '/' %}
+  {% assign seo_title = "Forensic Economist Rhode Island | Expert Witness | Skerritt Economics" %}
+{% elsif page.url contains '/services/' %}
+  {% if page.url contains 'forensic-economics' %}
+    {% assign seo_title = "Forensic Economics Expert | Economic Damage Analysis | Rhode Island" %}
+  {% elsif page.url contains 'business-valuation' %}
+    {% assign seo_title = "Business Valuation Expert | Litigation Support | New England" %}
+  {% elsif page.url contains 'life-care-planning' %}
+    {% assign seo_title = "Life Care Planning Economist | Future Medical Costs Expert" %}
+  {% elsif page.url contains 'vocational-expert' %}
+    {% assign seo_title = "Vocational Expert Services | Earning Capacity Analysis | RI" %}
+  {% else %}
+    {% assign seo_title = page.title | append: " | Expert Services | Skerritt Economics" %}
+  {% endif %}
+{% elsif page.url contains '/practice-areas/' %}
+  {% if page.url contains 'personal-injury' %}
+    {% assign seo_title = "Personal Injury Economist | Economic Loss Expert | Rhode Island" %}
+  {% elsif page.url contains 'medical-malpractice' %}
+    {% assign seo_title = "Medical Malpractice Economist | Damage Calculations | New England" %}
+  {% elsif page.url contains 'employment' %}
+    {% assign seo_title = "Employment Economist | Wrongful Termination Expert | RI & MA" %}
+  {% elsif page.url contains 'commercial-disputes' %}
+    {% assign seo_title = "Commercial Litigation Economist | Business Loss Expert | RI" %}
+  {% else %}
+    {% assign seo_title = page.title | append: " Expert | Skerritt Economics" %}
+  {% endif %}
+{% elsif page.url contains '/locations/' %}
+  {% assign city_state = page.title | split: ', ' %}
+  {% assign seo_title = "Forensic Economist " | append: city_state[0] | append: " " | append: city_state[1] | append: " | Economic Expert Witness" %}
+{% elsif page.url == '/about/' %}
+  {% assign seo_title = "Christopher Skerritt MBA | Forensic Economist | 25+ Years Experience" %}
+{% elsif page.url == '/contact/' %}
+  {% assign seo_title = "Contact Economic Expert | Schedule Consultation | (203) 605-2814" %}
+{% elsif page.url == '/blog/' %}
+  {% assign seo_title = "Economic Expert Blog | Forensic Economics Insights | Case Studies" %}
+{% elsif page.layout == 'post' %}
+  {% assign seo_title = page.title | append: " | Skerritt Economics Blog" %}
+{% else %}
+  {% assign seo_title = page.title | append: " | " | append: site.title %}
+{% endif %}
+
+{% comment %} Optimized Meta Descriptions {% endcomment %}
+{% if page.description %}
+  {% assign seo_description = page.description %}
+{% elsif page.excerpt %}
+  {% assign seo_description = page.excerpt | strip_html | strip_newlines | truncate: 155 %}
+{% elsif page.url == '/' %}
+  {% assign seo_description = "Christopher Skerritt provides expert economic assessments for litigation in RI & New England. 25+ years experience in personal injury, medical malpractice & business valuation. Call (203) 605-2814." | truncate: 155 %}
+{% elsif page.url contains '/services/' %}
+  {% if page.url contains 'forensic-economics' %}
+    {% assign seo_description = "Expert forensic economics services for attorneys. Economic damage calculations, lost earnings analysis, and expert testimony for litigation throughout Rhode Island and New England." | truncate: 155 %}
+  {% elsif page.url contains 'business-valuation' %}
+    {% assign seo_description = "Business valuation expert for litigation support. Partnership disputes, shareholder disagreements, and commercial damage assessments. Court-tested expertise in RI, MA, and CT." | truncate: 155 %}
+  {% elsif page.url contains 'life-care-planning' %}
+    {% assign seo_description = "Life care planning economics for catastrophic injury cases. Future medical cost projections and special needs planning by experienced forensic economist. Serving New England." | truncate: 155 %}
+  {% elsif page.url contains 'vocational-expert' %}
+    {% assign seo_description = "Vocational assessment and earning capacity evaluation services. Employability analysis and disability impact assessments for legal cases throughout Rhode Island and beyond." | truncate: 155 %}
+  {% else %}
+    {% assign seo_description = site.data.seo.meta_descriptions.services | truncate: 155 %}
+  {% endif %}
+{% elsif page.url contains '/practice-areas/' %}
+  {% if page.url contains 'personal-injury' %}
+    {% assign seo_description = "Personal injury economic expert calculating lost wages, future earnings, and household services value. Serving attorneys throughout Rhode Island, Massachusetts, and Connecticut." | truncate: 155 %}
+  {% elsif page.url contains 'medical-malpractice' %}
+    {% assign seo_description = "Medical malpractice economist providing damage calculations for wrongful death and injury cases. Expert testimony on economic losses. Serving New England attorneys since 1998." | truncate: 155 %}
+  {% elsif page.url contains 'employment' %}
+    {% assign seo_description = "Employment economist for wrongful termination and discrimination cases. Front pay, back pay, and lost benefits calculations. Expert witness serving RI, MA, CT legal professionals." | truncate: 155 %}
+  {% elsif page.url contains 'commercial-disputes' %}
+    {% assign seo_description = "Commercial litigation economist calculating business losses, lost profits, and breach of contract damages. Business valuation disputes expert serving New England attorneys." | truncate: 155 %}
+  {% else %}
+    {% assign seo_description = site.data.seo.meta_descriptions.practice_areas | truncate: 155 %}
+  {% endif %}
+{% elsif page.url contains '/locations/' %}
+  {% assign city_state = page.title | split: ', ' %}
+  {% assign seo_description = "Forensic economist serving " | append: city_state[0] | append: ", " | append: city_state[1] | append: " attorneys. Economic damage assessments, business valuation, and expert testimony for litigation. Call (203) 605-2814." | truncate: 155 %}
+{% elsif page.url == '/about/' %}
+  {% assign seo_description = site.data.seo.meta_descriptions.about | truncate: 155 %}
+{% elsif page.url == '/contact/' %}
+  {% assign seo_description = site.data.seo.meta_descriptions.contact | truncate: 155 %}
+{% elsif page.url == '/blog/' %}
+  {% assign seo_description = site.data.seo.meta_descriptions.blog | truncate: 155 %}
+{% else %}
+  {% assign seo_description = site.description | truncate: 155 %}
+{% endif %}
+
+{% comment %} Apply the optimized values {% endcomment %}
+{% unless page.title %}
+  {% assign page.title = seo_title %}
+{% endunless %}
+
+{% unless page.description %}
+  {% assign page.description = seo_description %}
+{% endunless %}

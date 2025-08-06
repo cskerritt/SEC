@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -550,6 +552,13 @@
   </style>
  <link href="../../css/ultimate-consistency-fix.css" rel="stylesheet"/>
 <script src="../../js/force-navigation-fixed.js" defer></script>
+<!-- Bootstrap 5 UI Library -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../../css/ui-library-bootstrap.css">
+<link rel="stylesheet" href="../../css/text-contrast-fix-v2.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </head>
  <body>
   <!-- Navigation -->
@@ -572,7 +581,7 @@
   <span>
   </span>
   </button>
-  <ul class="nav-menu">
+  <ul class="navbar-nav">
   <li>
   <a href="../../index.html">
         Home
@@ -664,10 +673,10 @@
   <!-- Hero Section -->
   <section class="hero-section">
   <div class="container">
-  <div class="hero-content">
-  <h1>
+  <div class="hero-content text-center">
+  <h1><span class="animate__animated animate__fadeInDown">
       Newark Forensic Economist
-  </h1>
+  </span></h1>
   <p>
       Expert economic damage analysis and litigation support for Newark's comprehensive law firms. Delivering comprehensive forensic economics services with precision and authority in the heart of the New York metropolitan area.
   </p>
@@ -703,7 +712,7 @@
   </div>
   <!-- Why Choose Section -->
   <div class="feature-grid">
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Metropolitan Market Expertise
   </h3>
@@ -711,7 +720,7 @@
          Comprehensive understanding of Newark's position in the New York metropolitan economy, including transportation hubs, financial services, and global commerce. Our analysis reflects the unique wage patterns and career opportunities of this major urban center.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          High-Stakes Litigation Experience
   </h3>
@@ -719,7 +728,7 @@
          Extensive experience in complex, high-value cases throughout New Jersey federal and state courts. Our methodologies are proven in the most demanding litigation environments with rigorous peer review and rigorous scrutiny.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          timely response for Urgent Matters
   </h3>
@@ -727,7 +736,7 @@
          Understanding the fast-paced nature of Newark litigation, we provide expedited analysis without compromising quality. Emergency consultations and accelerated reporting available for time-sensitive matters.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Institutional-Quality Analysis
   </h3>
@@ -805,7 +814,7 @@
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Newark and NJ. Our integrated approach ensures comprehensive support for all your litigation and business needs.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        📊
   </div>
@@ -819,7 +828,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        💼
   </div>
@@ -833,7 +842,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        👔
   </div>
@@ -847,7 +856,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        🏥
   </div>
@@ -1064,7 +1073,7 @@
      Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Newark's legal community.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Economic Damage Analysis
   </h4>
@@ -1072,7 +1081,7 @@
        Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with detailed supporting documentation and peer-reviewed methodologies.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Business Valuation
   </h4>
@@ -1080,7 +1089,7 @@
        Professional business appraisals for litigation, divorce, partnership disputes, and commercial transactions using recognized valuation standards and market-based approaches.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Financial Analysis
   </h4>
@@ -1088,7 +1097,7 @@
        Complex financial modeling and analysis for securities litigation, fraud cases, and investment disputes with sophisticated econometric and statistical techniques.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Expert Witness Testimony
   </h4>
@@ -1096,7 +1105,7 @@
        Clear, courtroom testimony with comprehensive preparation and professional exhibits designed to effectively communicate complex economic concepts to judges and juries.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Settlement Support
   </h4>
@@ -1104,7 +1113,7 @@
        Economic analysis and documentation to support settlement negotiations with detailed present value calculations, risk assessments, and alternative scenario modeling.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Litigation Consulting
   </h4>
@@ -1436,5 +1445,6 @@
   </footer>
   <script src="../../js/main.js">
   </script>
- </body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

@@ -1,0 +1,261 @@
+---
+layout: default
+title: New Hampshire Forensic Economics & Business Valuation Services | All Cities
+meta_description: Expert forensic economics, business valuation, vocational assessment, and life care planning services throughout New Hampshire. Serving Manchester, Nashua, Concord, and all NH communities.
+---
+
+<!-- State Hero -->
+  <section class="state-hero">
+  <div class="container">
+  <h1>New Hampshire Economic Analysis Services</h1>
+  <p class="lead">Expert forensic economics, business valuation, vocational assessment, and life care planning services throughout the Granite State. From the Seacoast to the White Mountains, we serve attorneys and businesses across all 10 counties.</p>
+  <div class="hero-features">
+  <div class="feature">
+  <span class="feature-icon">📍</span>
+  <span>Statewide Coverage</span>
+  </div>
+  <div class="feature">
+  <span class="feature-icon">⚖️</span>
+  <span>All NH Courts</span>
+  </div>
+  <div class="feature">
+  <span class="feature-icon">🏛️</span>
+  <span>10 Counties Served</span>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="services-overview">
+  <div class="container">
+  <h2>Our New Hampshire Services</h2>
+  <div class="services-grid">
+  <div class="service-card">
+  <h3>Forensic Economics</h3>
+  <p>Economic damage calculations for personal injury, wrongful death, and employment cases in New Hampshire courts.</p>
+  <ul>
+  <li>Lost earnings projections</li>
+  <li>Household services valuations</li>
+  <li>Present value calculations</li>
+  <li>Life care cost analysis</li>
+  </ul>
+  <a href="../forensic-economics/" class="service-link">View NH Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Business Valuation</h3>
+  <p>Expert business appraisals for New Hampshire litigation, divorce, and estate planning matters.</p>
+  <ul>
+  <li>Fair market value assessments</li>
+  <li>Shareholder disputes</li>
+  <li>Divorce asset division</li>
+  <li>Economic damages</li>
+  </ul>
+  <a href="../business-valuation/" class="service-link">View NH Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Vocational Expert</h3>
+  <p>Earning capacity and employability assessments for New Hampshire personal injury and disability cases.</p>
+  <ul>
+  <li>Transferable skills analysis</li>
+  <li>Labor market surveys</li>
+  <li>Vocational rehabilitation</li>
+  <li>Work life expectancy</li>
+  </ul>
+  <a href="../vocational-expert/" class="service-link">View NH Locations →</a>
+  </div>
+  <div class="service-card">
+  <h3>Life Care Planning</h3>
+  <p>Comprehensive future medical cost projections for catastrophic injury cases in New Hampshire.</p>
+  <ul>
+  <li>Medical needs assessment</li>
+  <li>Cost projections</li>
+  <li>Care coordination planning</li>
+  <li>Medicare set-asides</li>
+  </ul>
+  <a href="../life-care-planning/" class="service-link">View NH Locations →</a>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Cities Section -->
+  <section class="cities-section">
+  <div class="container">
+  <h2>New Hampshire Cities We Serve</h2>
+  <p class="section-intro">Select your city below to find location-specific information about our services, local courts, and how we serve attorneys in your area.</p>
+
+  <div class="cities-grid">
+  <div class="city-card">
+  <h3><a href="../forensic-economics/manchester-nh-forensic-economist.html">Manchester</a></h3>
+  <p class="city-info">Hillsborough County • Population: 115,644</p>
+  <p>New Hampshire's largest city, major commercial and legal center.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/manchester-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/manchester-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/manchester-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/manchester-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/nashua-nh-forensic-economist.html">Nashua</a></h3>
+  <p class="city-info">Hillsborough County • Population: 91,322</p>
+  <p>Second-largest city, technology hub near Massachusetts border.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/nashua-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/nashua-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/nashua-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/nashua-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/concord-nh-forensic-economist.html">Concord</a></h3>
+  <p class="city-info">State Capital • Population: 43,976</p>
+  <p>New Hampshire's capital with federal court and state supreme court.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/concord-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/concord-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/concord-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/concord-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/derry-nh-forensic-economist.html">Derry</a></h3>
+  <p class="city-info">Rockingham County • Population: 34,317</p>
+  <p>Southern New Hampshire town with strong business community.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/derry-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/derry-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/derry-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/derry-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/dover-nh-forensic-economist.html">Dover</a></h3>
+  <p class="city-info">Strafford County • Population: 32,741</p>
+  <p>Historic seacoast city with Strafford County quality Court.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/dover-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/dover-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/dover-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/dover-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/portsmouth-nh-forensic-economist.html">Portsmouth</a></h3>
+  <p class="city-info">Rockingham County • Population: 21,956</p>
+  <p>Historic seaport city with federal court presence and naval shipyard.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/portsmouth-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/portsmouth-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/portsmouth-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/portsmouth-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/rochester-nh-forensic-economist.html">Rochester</a></h3>
+  <p class="city-info">Strafford County • Population: 32,492</p>
+  <p>Strafford County's largest city with diverse manufacturing base.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/rochester-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/rochester-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/rochester-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/rochester-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+
+  <div class="city-card">
+  <h3><a href="../forensic-economics/salem-nh-forensic-economist.html">Salem</a></h3>
+  <p class="city-info">Rockingham County • Population: 30,089</p>
+  <p>Border town with significant retail sector and court activity.</p>
+  <div class="city-services">
+  <a href="../forensic-economics/salem-nh-forensic-economist.html">Forensic Economics</a>
+  <a href="../business-valuation/salem-nh-business-valuation.html">Business Valuation</a>
+  <a href="../vocational-expert/salem-nh-vocational-expert.html">Vocational Expert</a>
+  <a href="../life-care-planning/salem-nh-life-care-planning.html">Life Care Planning</a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Court Information -->
+  <section class="court-section">
+  <div class="container">
+  <h2>New Hampshire Courts We Serve</h2>
+  <div class="courts-grid">
+  <div class="court-card">
+  <h3>quality Courts</h3>
+  <ul>
+  <li>Hillsborough County quality Court (Manchester/Nashua)</li>
+  <li>Rockingham County quality Court (Exeter)</li>
+  <li>Merrimack County quality Court (Concord)</li>
+  <li>Strafford County quality Court (Dover)</li>
+  <li>Belknap County quality Court (Laconia)</li>
+  <li>Carroll County quality Court (Ossipee)</li>
+  <li>Cheshire County quality Court (Keene)</li>
+  <li>Grafton County quality Court (North Haverhill)</li>
+  </ul>
+  </div>
+  <div class="court-card">
+  <h3>Federal Court</h3>
+  <ul>
+  <li>U.S. District Court for New Hampshire (Concord)</li>
+  <li>U.S. Bankruptcy Court (Manchester)</li>
+  </ul>
+  </div>
+  <div class="court-card">
+  <h3>Other Venues</h3>
+  <ul>
+  <li>New Hampshire Supreme Court</li>
+  <li>Workers' Compensation Appeals Board</li>
+  <li>Circuit Courts</li>
+  <li>Administrative Hearings</li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="why-choose-section">
+  <div class="container">
+  <h2>Why New Hampshire Attorneys Choose Skerritt Economics</h2>
+  <div class="benefits-grid">
+  <div class="benefit">
+  <h3>Regional Expertise</h3>
+  <p>Deep understanding of New Hampshire's economy, from Manchester's business sector to the Lakes Region tourism industry.</p>
+  </div>
+  <div class="benefit">
+  <h3>Court Experience</h3>
+  <p>Extensive testimony experience in New Hampshire quality Courts and federal court.</p>
+  </div>
+  <div class="benefit">
+  <h3>Quick Response</h3>
+  <p>Rapid case evaluation and preliminary assessments for New Hampshire attorneys.</p>
+  </div>
+  <div class="benefit">
+  <h3>Local Knowledge</h3>
+  <p>Familiar with New Hampshire's unique economic factors, including no state income tax impact on damages.</p>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+  <div class="container">
+  <div class="cta-content">
+  <h2>Need Expert Economic Analysis in New Hampshire?</h2>
+  <p>Free consultation for New Hampshire attorneys. Serving all counties and courts throughout the Granite State.</p>
+  <a href="../../contact/" class="btn btn-primary btn-large">Schedule Consultation</a>
+  <p class="cta-phone">Or call directly: <a href="tel:203-605-2814">(203) 605-2814</a></p>
+  </div>
+  </div>
+  </section>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
@@ -550,6 +552,13 @@
   </style>
  <link href="../../css/ultimate-consistency-fix.css" rel="stylesheet"/>
 <script src="../../js/force-navigation-fixed.js" defer></script>
+<!-- Bootstrap 5 UI Library -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="../../css/ui-library-bootstrap.css">
+<link rel="stylesheet" href="../../css/text-contrast-fix-v2.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </head>
  <body>
   <!-- Navigation -->
@@ -572,7 +581,7 @@
   <span>
   </span>
   </button>
-  <ul class="nav-menu">
+  <ul class="navbar-nav">
   <li>
   <a href="../../index.html">
         Home
@@ -664,10 +673,10 @@
   <!-- Hero Section -->
   <section class="hero-section">
   <div class="container">
-  <div class="hero-content">
-  <h1>
+  <div class="hero-content text-center">
+  <h1><span class="animate__animated animate__fadeInDown">
       Peoria Forensic Economist
-  </h1>
+  </span></h1>
   <p>
       Expert economic damage analysis and litigation support for Peoria's experienced law firms. Delivering comprehensive forensic economics services with precision and authority in central Illinois's business center and Caterpillar headquarters.
   </p>
@@ -703,7 +712,7 @@
   </div>
   <!-- Why Choose Section -->
   <div class="feature-grid">
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Manufacturing &amp; Heavy Equipment Expertise
   </h3>
@@ -711,7 +720,7 @@
          Comprehensive understanding of Peoria's position as a global manufacturing center, including Caterpillar headquarters and major industrial employers. Specialized knowledge of heavy equipment economics, complex compensation structures, and industrial career progression patterns.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Agricultural Economics Specialization
   </h3>
@@ -719,7 +728,7 @@
          Expert analysis of central Illinois's agricultural economy with understanding of commodity markets, agricultural business structures, and rural economic patterns. Specialized knowledge of farm economics and agribusiness litigation.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Regional Economic Intelligence
   </h3>
@@ -727,7 +736,7 @@
          knowledge of central Illinois's economic diversity, from Fortune 500 corporate headquarters to healthcare systems and transportation networks. Analysis accounts for regional wage patterns and unique economic characteristics.
   </p>
   </div>
-  <div class="feature-card">
+  <div class="card h-100">
   <h3>
          Complex Litigation Experience
   </h3>
@@ -805,7 +814,7 @@
      Skerritt Economics &amp; Consulting provides a full spectrum of expert services to attorneys and businesses throughout Peoria and IL. Our integrated approach ensures comprehensive support for all your litigation and business needs.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        📊
   </div>
@@ -819,7 +828,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        💼
   </div>
@@ -833,7 +842,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        👔
   </div>
@@ -847,7 +856,7 @@
        Learn More →
   </a>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <div class="service-icon">
        🏥
   </div>
@@ -1068,7 +1077,7 @@
      Full-spectrum forensic economics and business valuation services designed to meet the sophisticated needs of Peoria's legal community.
   </p>
   <div class="services-grid">
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Economic Damage Analysis
   </h4>
@@ -1076,7 +1085,7 @@
        Comprehensive calculation of economic losses including lost earnings, benefits, and future economic capacity with Illinois-specific considerations and methodologies.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Manufacturing Business Valuation
   </h4>
@@ -1084,7 +1093,7 @@
        Specialized valuations for manufacturing, agricultural, and industrial enterprises using industry-specific methodologies and central Illinois market data.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Agricultural Economics Analysis
   </h4>
@@ -1092,7 +1101,7 @@
        Expert analysis of agricultural businesses, commodity markets, and rural economic patterns specific to central Illinois farming and agribusiness sectors.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Expert Witness Testimony
   </h4>
@@ -1100,7 +1109,7 @@
        Clear, courtroom testimony with comprehensive preparation and professional exhibits designed for Illinois's legal environment.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Healthcare Economics
   </h4>
@@ -1108,7 +1117,7 @@
        Economic analysis for healthcare litigation, medical practice valuations, and healthcare system disputes in the Peoria medical community.
   </p>
   </div>
-  <div class="service-card">
+  <div class="card shadow-sm service-card h-100">
   <h4>
        Settlement Support
   </h4>
@@ -1440,5 +1449,6 @@
   </footer>
   <script src="../../js/main.js">
   </script>
- </body>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

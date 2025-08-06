@@ -1,0 +1,574 @@
+{
+  "timestamp": "2025-08-05T15:11:57.542074",
+  "summary": {
+    "total_pages": 33,
+    "avg_size": 16180.636363636364,
+    "avg_size_reduction": 43819.36363636364,
+    "total_size_saved": 1446039,
+    "avg_performance_score": 97.57575757575758,
+    "bootstrap_adoption": 3.0303030303030303
+  },
+  "pages": [
+    {
+      "filepath": "services/business-consulting/all-services.html",
+      "file_size": 21193,
+      "compressed_size": 5437,
+      "baseline_size": 60000,
+      "size_reduction": 38807,
+      "reduction_percentage": 64.67833333333334,
+      "resources": {
+        "css_files": 13,
+        "js_files": 2,
+        "images": 0,
+        "total_requests": 15,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/resources/when-to-hire-business-consultant.html",
+      "file_size": 21026,
+      "compressed_size": 6367,
+      "baseline_size": 60000,
+      "size_reduction": 38974,
+      "reduction_percentage": 64.95666666666666,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/industries/retail-consulting.html",
+      "file_size": 20536,
+      "compressed_size": 5642,
+      "baseline_size": 60000,
+      "size_reduction": 39464,
+      "reduction_percentage": 65.77333333333333,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/industries/manufacturing-consulting.html",
+      "file_size": 22267,
+      "compressed_size": 5935,
+      "baseline_size": 60000,
+      "size_reduction": 37733,
+      "reduction_percentage": 62.888333333333335,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/industries/construction-consulting.html",
+      "file_size": 19967,
+      "compressed_size": 5307,
+      "baseline_size": 60000,
+      "size_reduction": 40033,
+      "reduction_percentage": 66.72166666666666,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/industries/financial-services-consulting.html",
+      "file_size": 18904,
+      "compressed_size": 5121,
+      "baseline_size": 60000,
+      "size_reduction": 41096,
+      "reduction_percentage": 68.49333333333333,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/industries/technology-consulting.html",
+      "file_size": 21601,
+      "compressed_size": 5814,
+      "baseline_size": 60000,
+      "size_reduction": 38399,
+      "reduction_percentage": 63.998333333333335,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/industries/healthcare-consulting.html",
+      "file_size": 22969,
+      "compressed_size": 6020,
+      "baseline_size": 60000,
+      "size_reduction": 37031,
+      "reduction_percentage": 61.718333333333334,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/solutions/mergers-acquisitions-consulting.html",
+      "file_size": 21576,
+      "compressed_size": 5647,
+      "baseline_size": 60000,
+      "size_reduction": 38424,
+      "reduction_percentage": 64.03999999999999,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/solutions/digital-transformation-consulting.html",
+      "file_size": 22719,
+      "compressed_size": 6067,
+      "baseline_size": 60000,
+      "size_reduction": 37281,
+      "reduction_percentage": 62.135,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/solutions/cash-flow-management-consulting.html",
+      "file_size": 21460,
+      "compressed_size": 6014,
+      "baseline_size": 60000,
+      "size_reduction": 38540,
+      "reduction_percentage": 64.23333333333333,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/solutions/growth-strategy-consulting.html",
+      "file_size": 19482,
+      "compressed_size": 5281,
+      "baseline_size": 60000,
+      "size_reduction": 40518,
+      "reduction_percentage": 67.53,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/locations/boston-healthcare-consultant.html",
+      "file_size": 13351,
+      "compressed_size": 3921,
+      "baseline_size": 60000,
+      "size_reduction": 46649,
+      "reduction_percentage": 77.74833333333333,
+      "resources": {
+        "css_files": 13,
+        "js_files": 2,
+        "images": 0,
+        "total_requests": 15,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/locations/providence-manufacturing-consultant.html",
+      "file_size": 14475,
+      "compressed_size": 4163,
+      "baseline_size": 60000,
+      "size_reduction": 45525,
+      "reduction_percentage": 75.875,
+      "resources": {
+        "css_files": 13,
+        "js_files": 2,
+        "images": 0,
+        "total_requests": 15,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/for/small-business-consulting.html",
+      "file_size": 19568,
+      "compressed_size": 5688,
+      "baseline_size": 60000,
+      "size_reduction": 40432,
+      "reduction_percentage": 67.38666666666666,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/business-consulting/services/strategic-planning-consulting.html",
+      "file_size": 20753,
+      "compressed_size": 5809,
+      "baseline_size": 60000,
+      "size_reduction": 39247,
+      "reduction_percentage": 65.41166666666666,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 95
+    },
+    {
+      "filepath": "services/index.html",
+      "file_size": 11166,
+      "compressed_size": 3154,
+      "baseline_size": 60000,
+      "size_reduction": 48834,
+      "reduction_percentage": 81.39,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/index.html",
+      "file_size": 10566,
+      "compressed_size": 3248,
+      "baseline_size": 60000,
+      "size_reduction": 49434,
+      "reduction_percentage": 82.39,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/forensic-economics/index-modern.html",
+      "file_size": 23089,
+      "compressed_size": 4775,
+      "baseline_size": 60000,
+      "size_reduction": 36911,
+      "reduction_percentage": 61.51833333333333,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": true,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/forensic-economics/index.html",
+      "file_size": 14872,
+      "compressed_size": 4548,
+      "baseline_size": 60000,
+      "size_reduction": 45128,
+      "reduction_percentage": 75.21333333333334,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/life-care-planning/index.html",
+      "file_size": 17176,
+      "compressed_size": 5271,
+      "baseline_size": 60000,
+      "size_reduction": 42824,
+      "reduction_percentage": 71.37333333333333,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-valuation/index.html",
+      "file_size": 15419,
+      "compressed_size": 4826,
+      "baseline_size": 60000,
+      "size_reduction": 44581,
+      "reduction_percentage": 74.30166666666666,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/vocational-expert/index.html",
+      "file_size": 16765,
+      "compressed_size": 5027,
+      "baseline_size": 60000,
+      "size_reduction": 43235,
+      "reduction_percentage": 72.05833333333334,
+      "resources": {
+        "css_files": 0,
+        "js_files": 0,
+        "images": 0,
+        "total_requests": 0,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/specialties/turnaround-consultant-new-england.html",
+      "file_size": 8600,
+      "compressed_size": 3077,
+      "baseline_size": 60000,
+      "size_reduction": 51400,
+      "reduction_percentage": 85.66666666666667,
+      "resources": {
+        "css_files": 3,
+        "js_files": 1,
+        "images": 0,
+        "total_requests": 4,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/specialties/small-business-consultant-new-england.html",
+      "file_size": 11226,
+      "compressed_size": 3708,
+      "baseline_size": 60000,
+      "size_reduction": 48774,
+      "reduction_percentage": 81.28999999999999,
+      "resources": {
+        "css_files": 3,
+        "js_files": 2,
+        "images": 0,
+        "total_requests": 5,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/specialties/merger-acquisition-advisor-new-england.html",
+      "file_size": 7697,
+      "compressed_size": 2675,
+      "baseline_size": 60000,
+      "size_reduction": 52303,
+      "reduction_percentage": 87.17166666666667,
+      "resources": {
+        "css_files": 3,
+        "js_files": 1,
+        "images": 0,
+        "total_requests": 4,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/industries/manufacturing-consultant-new-england.html",
+      "file_size": 7585,
+      "compressed_size": 2617,
+      "baseline_size": 60000,
+      "size_reduction": 52415,
+      "reduction_percentage": 87.35833333333333,
+      "resources": {
+        "css_files": 5,
+        "js_files": 1,
+        "images": 0,
+        "total_requests": 6,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/solutions/turnaround-consulting.html",
+      "file_size": 20820,
+      "compressed_size": 6093,
+      "baseline_size": 60000,
+      "size_reduction": 39180,
+      "reduction_percentage": 65.3,
+      "resources": {
+        "css_files": 13,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 16,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/locations/rhode-island-business-consultant.html",
+      "file_size": 16479,
+      "compressed_size": 4686,
+      "baseline_size": 60000,
+      "size_reduction": 43521,
+      "reduction_percentage": 72.53500000000001,
+      "resources": {
+        "css_files": 7,
+        "js_files": 3,
+        "images": 0,
+        "total_requests": 10,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/locations/boston-business-consultant.html",
+      "file_size": 5944,
+      "compressed_size": 2110,
+      "baseline_size": 60000,
+      "size_reduction": 54056,
+      "reduction_percentage": 90.09333333333333,
+      "resources": {
+        "css_files": 5,
+        "js_files": 1,
+        "images": 0,
+        "total_requests": 6,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/locations/providence-business-consultant.html",
+      "file_size": 5368,
+      "compressed_size": 1967,
+      "baseline_size": 60000,
+      "size_reduction": 54632,
+      "reduction_percentage": 91.05333333333333,
+      "resources": {
+        "css_files": 5,
+        "js_files": 1,
+        "images": 0,
+        "total_requests": 6,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/locations/massachusetts-business-consultant.html",
+      "file_size": 13164,
+      "compressed_size": 3828,
+      "baseline_size": 60000,
+      "size_reduction": 46836,
+      "reduction_percentage": 78.06,
+      "resources": {
+        "css_files": 5,
+        "js_files": 2,
+        "images": 0,
+        "total_requests": 7,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    },
+    {
+      "filepath": "services/business-consulting/locations/connecticut-business-consultant.html",
+      "file_size": 6178,
+      "compressed_size": 2144,
+      "baseline_size": 60000,
+      "size_reduction": 53822,
+      "reduction_percentage": 89.70333333333333,
+      "resources": {
+        "css_files": 3,
+        "js_files": 1,
+        "images": 0,
+        "total_requests": 4,
+        "cdn_resources": 0
+      },
+      "has_bootstrap": false,
+      "performance_score": 100
+    }
+  ]
+}

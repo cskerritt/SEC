@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Migration - Before & After Comparison</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .comparison-header {
+            background: linear-gradient(135deg, #032b5b 0%, #1e40af 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .comparison-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .comparison-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .screenshot-box {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .screenshot-box.before {
+            border-color: #fca5a5;
+        }
+        .screenshot-box.after {
+            border-color: #86efac;
+        }
+        .screenshot-label {
+            background: #f3f4f6;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .before .screenshot-label {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        .after .screenshot-label {
+            background: #f0fdf4;
+            color: #16a34a;
+        }
+        .screenshot-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .improvements-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .improvement-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+        .improvement-card h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .status-badge.fixed {
+            background: #f0fdf4;
+            color: #16a34a;
+        }
+        .code-comparison {
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+        @media (max-width: 768px) {
+            .before-after-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="comparison-header">
+        <div class="container">
+            <h1 class="display-4 mb-3">UI Migration Text Contrast Fix</h1>
+            <p class="lead">Resolved white text on light background issues</p>
+        </div>
+    </div>
+
+    <div class="comparison-container">
+        <!-- Summary Section -->
+        <div class="comparison-section">
+            <h2>Text Readability Issues Fixed</h2>
+            <span class="status-badge fixed">✅ RESOLVED</span>
+            
+            <p class="lead">
+                The initial migration had text contrast issues where white text appeared on light backgrounds, 
+                making content unreadable. This has been fixed with a dedicated contrast CSS file.
+            </p>
+
+            <div class="improvements-list">
+                <div class="improvement-card">
+                    <h4>Hero Sections</h4>
+                    <p>Fixed white text on gradient backgrounds with proper color inheritance</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>Button Contrast</h4>
+                    <p>Ensured all buttons have sufficient contrast ratios for WCAG compliance</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>Navigation</h4>
+                    <p>Corrected navigation link colors for better visibility</p>
+                </div>
+                <div class="improvement-card">
+                    <h4>Cards & Sections</h4>
+                    <p>Applied proper background and text color combinations</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before/After Comparison -->
+        <div class="comparison-section">
+            <h3>Visual Comparison - Coventry Business Valuation Page</h3>
+            
+            <div class="before-after-grid">
+                <div class="screenshot-box before">
+                    <div class="screenshot-label">❌ BEFORE - Text Not Readable</div>
+                    <img src="migration-screenshots/coventry-business-valuation-city-viewport.png" alt="Before - Text contrast issues">
+                </div>
+                <div class="screenshot-box after">
+                    <div class="screenshot-label">✅ AFTER - Fixed Contrast</div>
+                    <img src="fixed-screenshots/coventry-business-valuation-fixed.png" alt="After - Fixed text contrast">
+                </div>
+            </div>
+
+            <div class="code-comparison">
+                <strong>Fix Applied:</strong><br>
+                &lt;link rel="stylesheet" href="/css/text-contrast-fix.css"&gt;<br><br>
+                /* Key fixes in text-contrast-fix.css */<br>
+                .hero-section { background: linear-gradient(#032b5b, #1e40af) !important; }<br>
+                .hero-section * { color: white !important; }<br>
+                .btn-primary { background-color: #1e40af !important; color: white !important; }
+            </div>
+        </div>
+
+        <!-- Technical Details -->
+        <div class="comparison-section">
+            <h3>Technical Implementation</h3>
+            
+            <h4>The Problem</h4>
+            <p>
+                When migrating to Bootstrap 5, some CSS specificity conflicts caused hero sections to lose their 
+                background gradients while text remained white, creating severe contrast issues.
+            </p>
+
+            <h4>The Solution</h4>
+            <ol>
+                <li>Created <code>css/text-contrast-fix.css</code> with high-specificity rules</li>
+                <li>Applied <code>!important</code> declarations to override Bootstrap defaults</li>
+                <li>Ensured proper color inheritance for all child elements</li>
+                <li>Added the fix to all 10 migrated city pages automatically</li>
+            </ol>
+
+            <h4>Files Updated</h4>
+            <ul>
+                <li>✅ bristol-ri-business-valuation-analyst.html</li>
+                <li>✅ bristol-ri-forensic-economist.html</li>
+                <li>✅ bristol-ri-ri-life-care-planner.html</li>
+                <li>✅ bristol-ri-ri-vocational-expert.html</li>
+                <li>✅ central-falls-ri-business-valuation-analyst.html</li>
+                <li>✅ central-falls-ri-forensic-economist.html</li>
+                <li>✅ central-falls-ri-ri-life-care-planner.html</li>
+                <li>✅ central-falls-ri-ri-vocational-expert.html</li>
+                <li>✅ coventry-ri-business-valuation-analyst.html</li>
+                <li>✅ coventry-ri-forensic-economist.html</li>
+            </ul>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="comparison-section">
+            <h3>Next Steps</h3>
+            
+            <div class="alert alert-info">
+                <h5>Ready for Full Migration</h5>
+                <p>With the text contrast issues resolved, the UI library migration is ready to be applied to all 3,145+ remaining city pages.</p>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5>Automated Migration Process</h5>
+                    <ul>
+                        <li>Batch migration script ready</li>
+                        <li>Automatic backup creation</li>
+                        <li>Progress tracking and reporting</li>
+                        <li>Rollback capability if needed</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Quality Assurance</h5>
+                    <ul>
+                        <li>Automated testing for each page</li>
+                        <li>Contrast ratio validation</li>
+                        <li>Performance monitoring</li>
+                        <li>Visual regression testing available</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="migration-report.html" class="btn btn-primary btn-lg me-3">View Progress Report</a>
+                <a href="migration-showcase.html" class="btn btn-outline-primary btn-lg">View All Features</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+/* Text Contrast Fix for UI Library Migration */
+
+/* Fix white text on light backgrounds */
+.hero-section,
+.hero,
+.location-hero,
+.bg-gradient-hero {
+    background: linear-gradient(135deg, #032b5b 0%, #1e40af 100%) !important;
+    color: white !important;
+}
+
+/* Ensure all text in hero sections is white */
+.hero-section *,
+.hero *,
+.location-hero *,
+.bg-gradient-hero * {
+    color: white !important;
+}
+
+/* Fix button text contrast */
+.btn-primary {
+    background-color: #1e40af !important;
+    color: white !important;
+    border-color: #1e40af !important;
+}
+
+.btn-primary:hover {
+    background-color: #1e3a8a !important;
+    color: white !important;
+    border-color: #1e3a8a !important;
+}
+
+.btn-secondary {
+    background-color: #6b7280 !important;
+    color: white !important;
+    border-color: #6b7280 !important;
+}
+
+.btn-secondary:hover {
+    background-color: #4b5563 !important;
+    color: white !important;
+    border-color: #4b5563 !important;
+}
+
+/* Fix navigation text */
+.main-nav {
+    background-color: white !important;
+}
+
+.main-nav a {
+    color: #1e40af !important;
+}
+
+.main-nav .nav-cta {
+    background-color: #1e40af !important;
+    color: white !important;
+}
+
+/* Fix section backgrounds */
+section:not(.hero-section):not(.hero):not(.location-hero) {
+    background-color: white !important;
+    color: #374151 !important;
+}
+
+/* Fix card text */
+.card,
+.service-card,
+.stat-card,
+.comparison-card {
+    background-color: white !important;
+    color: #374151 !important;
+}
+
+.card h3,
+.service-card h3,
+.stat-card h3 {
+    color: #1e40af !important;
+}
+
+/* Fix footer */
+.main-footer {
+    background-color: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+
+.main-footer a {
+    color: #d4a11e !important;
+}
+
+/* Fix badge text */
+.badge {
+    color: white !important;
+}
+
+.badge.bg-primary {
+    background-color: #1e40af !important;
+}
+
+/* Fix stat numbers */
+.stat-number {
+    color: #1e40af !important;
+}
+
+/* Fix breadcrumb */
+.breadcrumb {
+    background-color: #f3f4f6 !important;
+}
+
+.breadcrumb a {
+    color: #1e40af !important;
+}
+
+/* Fix any remaining contrast issues */
+p, li, span, div {
+    color: inherit;
+}
+
+/* Ensure proper contrast for all text elements */
+body {
+    color: #374151 !important;
+    background-color: white !important;
+}
+
+/* Fix specific problem areas */
+.hero-content h1,
+.hero-content p,
+.location-hero h1,
+.location-hero p {
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

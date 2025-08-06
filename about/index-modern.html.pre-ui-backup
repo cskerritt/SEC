@@ -1,0 +1,280 @@
+---
+layout: modern-default
+title: Chris Skerritt CRC CLCP | Forensic Economist
+meta_description: Chris Skerritt CRC CLCP - Forensic economist with extensive experience. Expert witness trusted by New England attorneys. Free consultation 203-605-2814
+---
+
+<!-- About Hero Section -->
+<section class="hero-modern" style="min-height: auto; padding: var(--spacing-24) 0;">
+  <div class="hero-background">
+    <div style="background: var(--gradient-primary); height: 100%; width: 100%;"></div>
+    <div class="hero-overlay" style="opacity: 0.95;"></div>
+  </div>
+  
+  <div class="hero-content container">
+    <div class="grid grid-cols-1 grid-cols-md-2 gap-8 items-center">
+      <div>
+        <h1 class="hero-title" style="font-size: clamp(2rem, 4vw, 3rem);">
+          Chris Skerritt
+          <span class="accent" style="font-size: var(--text-2xl); display: block; margin-top: var(--spacing-2);">
+            M.Ed., MBA, CRC, CLCP
+          </span>
+        </h1>
+        <p class="hero-subtitle" style="font-size: var(--text-xl); margin-bottom: var(--spacing-4);">
+          Principal Economic Consultant
+        </p>
+        <p class="hero-subtitle" style="font-size: var(--text-lg);">
+          Experienced professional providing expert economic analysis and business valuation services 
+          to attorneys and businesses throughout New England. Court-tested professional expertise.
+        </p>
+        <div class="hero-actions" style="margin-top: var(--spacing-8);">
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-accent btn-lg">
+            Schedule Consultation
+          </a>
+          <a href="tel:+12036052814" class="btn btn-outline btn-lg">
+            <i class="fas fa-phone"></i> (203) 605-2814
+          </a>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <img src="../Christopher-Skerritt-1-636x960-1.jpg" 
+             alt="Christopher Skerritt MBA CRC - Forensic Economist" 
+             style="max-width: 400px; width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Professional Summary Section -->
+<section class="section">
+  <div class="container">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center mb-8" style="font-size: var(--text-4xl);">Professional Summary</h2>
+      
+      <div class="card" style="padding: var(--spacing-10);">
+        <p style="font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--spacing-6);">
+          Chris Skerritt, CRC, CLCP, is a leading forensic economist and expert witness serving 
+          Rhode Island and New England attorneys with comprehensive economic damage analysis. 
+          With court-tested experience since 2020, Chris combines advanced credentials in 
+          rehabilitation counseling, life care planning, and business administration to deliver 
+          thorough, defensible economic assessments that stand up to scrutiny.
+        </p>
+        
+        <p style="font-size: var(--text-lg); line-height: var(--leading-relaxed); margin-bottom: var(--spacing-6);">
+          Based in Smithfield, Rhode Island, Chris serves as a vocational counselor, economist, 
+          and consultant evaluator. His expertise spans:
+        </p>
+        
+        <div class="grid grid-cols-1 grid-cols-md-2 gap-4" style="margin-bottom: var(--spacing-6);">
+          <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle" style="color: var(--accent); font-size: var(--text-xl);"></i>
+            <span>Forensic Economics</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle" style="color: var(--accent); font-size: var(--text-xl);"></i>
+            <span>Business Valuation</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle" style="color: var(--accent); font-size: var(--text-xl);"></i>
+            <span>Life Care Planning</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle" style="color: var(--accent); font-size: var(--text-xl);"></i>
+            <span>Vocational Assessment</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle" style="color: var(--accent); font-size: var(--text-xl);"></i>
+            <span>Economic Loss Analysis</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fas fa-check-circle" style="color: var(--accent); font-size: var(--text-xl);"></i>
+            <span>Expert Witness Testimony</span>
+          </div>
+        </div>
+        
+        <p style="font-size: var(--text-lg); line-height: var(--leading-relaxed);">
+          Chris's multidisciplinary approach combines economic expertise with deep understanding 
+          of rehabilitation needs, making him uniquely qualified to assess the full financial 
+          impact of personal injury, medical malpractice, employment disputes, and commercial litigation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education & Credentials Section -->
+<section class="section bg-gradient-subtle">
+  <div class="container">
+    <h2 class="text-center mb-8" style="font-size: var(--text-4xl);">Education & Professional Credentials</h2>
+    
+    <div class="grid grid-cols-1 grid-cols-md-2 gap-8">
+      <!-- Education -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3 class="card-title">Education</h3>
+        <div class="card-content">
+          <div style="margin-bottom: var(--spacing-4);">
+            <h4 style="color: var(--primary); font-size: var(--text-lg); margin-bottom: var(--spacing-1);">
+              Master of Business Administration (MBA)
+            </h4>
+            <p style="color: var(--muted-foreground);">Bryant University, Smithfield, RI • 2024</p>
+          </div>
+          
+          <div style="margin-bottom: var(--spacing-4);">
+            <h4 style="color: var(--primary); font-size: var(--text-lg); margin-bottom: var(--spacing-1);">
+              Master of Education in Rehabilitation Counseling
+            </h4>
+            <p style="color: var(--muted-foreground);">Springfield College, Springfield, MA • 2016</p>
+          </div>
+          
+          <div>
+            <h4 style="color: var(--primary); font-size: var(--text-lg); margin-bottom: var(--spacing-1);">
+              Bachelor of Science in Communication Disorders
+            </h4>
+            <p style="color: var(--muted-foreground);">Springfield College, Springfield, MA</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Key Certifications -->
+      <div class="card">
+        <div class="card-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <h3 class="card-title">Key Certifications</h3>
+        <div class="card-content">
+          <div class="flex flex-wrap gap-2">
+            <span class="badge badge-accent">CRC - Certified Rehabilitation Counselor</span>
+            <span class="badge badge-accent">CLCP - Certified Life Care Planner</span>
+            <span class="badge badge-accent">CVE - Certified Vocational Evaluator</span>
+            <span class="badge badge-accent">FVE - Forensic Vocational Expert</span>
+            <span class="badge badge-accent">ABVE/F - Fellow of ABVE</span>
+            <span class="badge badge-accent">MSCC - Medicare Set Aside Certified</span>
+            <span class="badge badge-accent">LRC - Licensed Rehabilitation Counselor</span>
+            <span class="badge badge-accent">IPEC - International Psychometric</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Full Credentials List -->
+    <div class="card mt-8">
+      <h3 class="card-title">Complete Professional Certifications</h3>
+      <div class="grid grid-cols-1 grid-cols-md-2 gap-4">
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>CRC</strong> - Certified Rehabilitation Counselor (July 2017)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>LRC</strong> - Licensed Rehabilitation Counselor (Rhode Island)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>FVE</strong> - Forensic Vocational Expert (AREA, 2023)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>IPEC</strong> - International Psychometric Evaluation (2021)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>CVE</strong> - Certified Vocational Evaluator (July 2021)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>ABVE/F</strong> - Fellow of American Board (November 2021)
+          </li>
+        </ul>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>CLCP</strong> - Certified Life Care Planner (December 2022)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>MSCC</strong> - Medicare Set Aside Consultant (January 2023)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>CEAS I</strong> - Certified Ergonomic Specialist (2022)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>REAS</strong> - Remote Ergonomic Specialist (2023)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>CPRW</strong> - Certified Resume Writer (May 2023)
+          </li>
+          <li style="padding: var(--spacing-2) 0;">
+            <strong>PCEP</strong> - Python Programmer (July 2024)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Timeline Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="text-center mb-8" style="font-size: var(--text-4xl);">Career Milestones</h2>
+    
+    <div class="max-w-4xl mx-auto">
+      <div class="timeline" style="position: relative; padding-left: var(--spacing-8);">
+        <!-- Timeline line -->
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent);"></div>
+        
+        <!-- Timeline items -->
+        <div style="position: relative; margin-bottom: var(--spacing-8);">
+          <div style="position: absolute; left: -40px; top: 0; width: 10px; height: 10px; background: var(--accent); border-radius: 50%;"></div>
+          <div class="card">
+            <h3 style="color: var(--accent); font-size: var(--text-sm); margin-bottom: var(--spacing-2);">2024-2025</h3>
+            <h4 class="card-title">AREA President Elect</h4>
+            <p class="card-description">Elected to leadership position in the American Rehabilitation Economics Association.</p>
+          </div>
+        </div>
+        
+        <div style="position: relative; margin-bottom: var(--spacing-8);">
+          <div style="position: absolute; left: -40px; top: 0; width: 10px; height: 10px; background: var(--accent); border-radius: 50%;"></div>
+          <div class="card">
+            <h3 style="color: var(--accent); font-size: var(--text-sm); margin-bottom: var(--spacing-2);">2024</h3>
+            <h4 class="card-title">University of New Haven Adjunct Professor</h4>
+            <p class="card-description">Instructor for COUN 6634-85 Assessment in Counseling during Summer 2024 term.</p>
+          </div>
+        </div>
+        
+        <div style="position: relative; margin-bottom: var(--spacing-8);">
+          <div style="position: absolute; left: -40px; top: 0; width: 10px; height: 10px; background: var(--accent); border-radius: 50%;"></div>
+          <div class="card">
+            <h3 style="color: var(--accent); font-size: var(--text-sm); margin-bottom: var(--spacing-2);">2022-Present</h3>
+            <h4 class="card-title">Kincaid Wolstein Vocational and Rehabilitation Services</h4>
+            <p class="card-description">Vocational Counselor, Economist and Consultant Evaluator specializing in life care planning and business valuation.</p>
+          </div>
+        </div>
+        
+        <div style="position: relative;">
+          <div style="position: absolute; left: -40px; top: 0; width: 10px; height: 10px; background: var(--accent); border-radius: 50%;"></div>
+          <div class="card">
+            <h3 style="color: var(--accent); font-size: var(--text-sm); margin-bottom: var(--spacing-2);">2020-Present</h3>
+            <h4 class="card-title">VRE4VETS Contract Counselor</h4>
+            <p class="card-description">Providing vocational rehabilitation services to veterans, conducting evaluations and assessments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section" style="background: var(--gradient-primary); color: var(--primary-foreground);">
+  <div class="container text-center">
+    <h2 style="font-size: var(--text-4xl); color: var(--primary-foreground); margin-bottom: var(--spacing-4);">
+      Ready to Work with an Experienced Expert?
+    </h2>
+    <p style="font-size: var(--text-xl); margin-bottom: var(--spacing-8); max-width: 600px; margin-left: auto; margin-right: auto;">
+      Schedule a consultation to discuss how my expertise can support your case.
+    </p>
+    <div class="flex gap-4 justify-center">
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-accent btn-lg">
+        Schedule Consultation
+      </a>
+      <a href="{{ '/services/' | relative_url }}" class="btn btn-outline btn-lg">
+        View Services
+      </a>
+    </div>
+  </div>
+</section>

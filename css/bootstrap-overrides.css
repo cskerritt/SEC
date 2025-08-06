@@ -1,0 +1,46 @@
+/* Bootstrap 5 Overrides for Skerritt Economics */
+
+/* Ensure blue gradient background */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #032b5b 0%, #1e40af 100%) !important;
+    color: #ffffff !important;
+}
+
+/* Feature icon styling */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover effects */
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12) !important;
+    transform: translateY(-5px);
+}
+
+/* Min height for hero sections */
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* Ensure white text on all gradient backgrounds */
+.bg-gradient-primary * {
+    color: #ffffff !important;
+}
+
+/* Badge opacity utilities */
+.bg-opacity-10 {
+    background-color: rgba(var(--bs-primary-rgb), 0.1) !important;
+}
+
+/* Transition utility */
+.transition {
+    transition: all 0.3s ease;
+}

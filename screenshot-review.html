@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration Screenshots Review</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .screenshot-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .screenshot-card h3 {
+            margin: 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+        .screenshot-card img:hover {
+            opacity: 0.9;
+        }
+        .issues {
+            padding: 15px;
+            background: #fff3cd;
+            color: #856404;
+            font-size: 14px;
+        }
+        .fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            z-index: 1000;
+        }
+        .fullscreen img {
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .fullscreen.active {
+            display: block;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+
+<!-- Bootstrap 5 UI Library -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/ui-library-bootstrap.css">
+<link rel="stylesheet" href="css/text-contrast-fix-v2.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+</head>
+<body>
+    <h1>UI Migration Screenshots Review</h1>
+    <p style="text-align: center;">Click any screenshot to view full size</p>
+    
+    <div class="screenshot-grid">
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Full Section 0.Png</h3>
+            <img src="migration-screenshots/coventry-business-full-section-0.png" onclick="showFullscreen(this)" alt="Coventry Business Full Section 0.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Full Section 1.Png</h3>
+            <img src="migration-screenshots/coventry-business-full-section-1.png" onclick="showFullscreen(this)" alt="Coventry Business Full Section 1.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Full Section 2.Png</h3>
+            <img src="migration-screenshots/coventry-business-full-section-2.png" onclick="showFullscreen(this)" alt="Coventry Business Full Section 2.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Full Section 3.Png</h3>
+            <img src="migration-screenshots/coventry-business-full-section-3.png" onclick="showFullscreen(this)" alt="Coventry Business Full Section 3.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Full Section 4.Png</h3>
+            <img src="migration-screenshots/coventry-business-full-section-4.png" onclick="showFullscreen(this)" alt="Coventry Business Full Section 4.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Full Section 5.Png</h3>
+            <img src="migration-screenshots/coventry-business-full-section-5.png" onclick="showFullscreen(this)" alt="Coventry Business Full Section 5.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Coventry Business Valuation City</h3>
+            <img src="migration-screenshots/coventry-business-valuation-city-viewport.png" onclick="showFullscreen(this)" alt="Coventry Business Valuation City">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Forensic Economics Full Section 0.Png</h3>
+            <img src="migration-screenshots/forensic-economics-full-section-0.png" onclick="showFullscreen(this)" alt="Forensic Economics Full Section 0.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Forensic Economics Full Section 1.Png</h3>
+            <img src="migration-screenshots/forensic-economics-full-section-1.png" onclick="showFullscreen(this)" alt="Forensic Economics Full Section 1.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Forensic Economics Full Section 2.Png</h3>
+            <img src="migration-screenshots/forensic-economics-full-section-2.png" onclick="showFullscreen(this)" alt="Forensic Economics Full Section 2.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Forensic Economics Full Section 3.Png</h3>
+            <img src="migration-screenshots/forensic-economics-full-section-3.png" onclick="showFullscreen(this)" alt="Forensic Economics Full Section 3.Png">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Migration Report</h3>
+            <img src="migration-screenshots/migration-report-viewport.png" onclick="showFullscreen(this)" alt="Migration Report">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Migration Showcase</h3>
+            <img src="migration-screenshots/migration-showcase-viewport.png" onclick="showFullscreen(this)" alt="Migration Showcase">
+        </div>
+
+        <div class="screenshot-card">
+            <h3>Practice Areas Overview</h3>
+            <img src="migration-screenshots/practice-areas-overview-viewport.png" onclick="showFullscreen(this)" alt="Practice Areas Overview">
+        </div>
+
+    </div>
+    
+    <div class="fullscreen" id="fullscreen" onclick="hideFullscreen()">
+        <span class="close-btn">&times;</span>
+        <img id="fullscreen-img" src="" alt="">
+    </div>
+    
+    <script>
+        function showFullscreen(img) {
+            document.getElementById('fullscreen-img').src = img.src;
+            document.getElementById('fullscreen').classList.add('active');
+        }
+        
+        function hideFullscreen() {
+            document.getElementById('fullscreen').classList.remove('active');
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

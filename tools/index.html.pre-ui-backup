@@ -1,0 +1,141 @@
+---
+layout: default
+title: Professional Economic Analysis Tools | Free Calculators | Skerritt Economics
+meta_description: Free forensic economics calculators for New England attorneys. Life expectancy, present value &amp; economic analysis tools. Call 203-605-2814
+---
+
+<!-- Tools Hero Section -->
+  <section class="tools-hero">
+  <div class="container">
+  <h1>Professional Economic Analysis Tools</h1>
+  <p>Free, open-access calculators and tools for forensic economics, business valuation, and economic damage analysis. Used by attorneys, economists, and financial professionals.</p>
+  </div>
+  </section>
+
+  <!-- Tools Introduction -->
+  <section class="container">
+  <div class="tools-intro">
+  <h2>Expert Tools for Legal Professionals</h2>
+  <p>Our suite of professional tools provides quick, accurate calculations for common economic analysis needs in litigation support. All tools use current, peer-reviewed methodologies and data sources to ensure reliability for legal proceedings.</p>
+  </div>
+
+  <!-- Tools Grid -->
+  <div class="tools-grid">
+  <!-- Life Expectancy Calculator -->
+  <div class="tool-card">
+  <h3>Life Expectancy Lookup Tool</h3>
+  <div class="tool-tags">
+  <span class="tool-tag">Forensic Economics</span>
+  <span class="tool-tag">Personal Injury</span>
+  </div>
+  <p class="tool-description">Professional life expectancy calculator using CDC/NCHS data. Calculate total life expectancy, work-life expectancy, and years in the workforce for economic damage analysis.</p>
+  <ul class="tool-features">
+  <li>Current CDC/NCHS mortality data</li>
+  <li>Age, gender, and race-specific calculations</li>
+  <li>Work-life expectancy (WLE) values</li>
+  <li>Years to final separation (YFS)</li>
+  <li>Printable reports for litigation</li>
+  </ul>
+  <a href="life-expectancy/" class="btn">Access Tool →</a>
+  </div>
+
+  <!-- Present Value Calculator -->
+  <div class="tool-card">
+  <h3>Present Value Calculator</h3>
+  <div class="tool-tags">
+  <span class="tool-tag">Economic Damages</span>
+  <span class="tool-tag">All Practice Areas</span>
+  </div>
+  <p class="tool-description">Calculate present value of future economic losses using appropriate discount rates. Essential for personal injury, wrongful death, and commercial damages.</p>
+  <ul class="tool-features">
+  <li>Single and periodic payment calculations</li>
+  <li>Growing payment modeling</li>
+  <li>Multiple discount rate scenarios</li>
+  <li>Professional results display</li>
+  <li>Detailed calculation breakdowns</li>
+  </ul>
+  <a href="present-value/" class="btn">Access Tool →</a>
+  </div>
+
+  <!-- Wage Growth Projector -->
+  <div class="tool-card">
+  <h3>Wage Growth Projector</h3>
+  <div class="tool-tags">
+  <span class="tool-tag">Employment</span>
+  <span class="tool-tag">Lost Earnings</span>
+  </div>
+  <p class="tool-description">Project future earnings using historical wage data, inflation rates, and individual merit increases. Ideal for employment litigation and personal injury cases.</p>
+  <ul class="tool-features">
+  <li>Industry-specific wage modeling</li>
+  <li>Merit and promotion calculations</li>
+  <li>Education level adjustments</li>
+  <li>Comprehensive fringe benefits</li>
+  <li>Career progression analysis</li>
+  </ul>
+  <a href="wage-growth/" class="btn">Access Tool →</a>
+  </div>
+
+  <!-- Household Services Valuation -->
+  <div class="tool-card">
+  <h3>Household Services Valuation</h3>
+  <div class="tool-tags">
+  <span class="tool-tag">Personal Injury</span>
+  <span class="tool-tag">Wrongful Death</span>
+  </div>
+  <p class="tool-description">Calculate the economic value of household services for injury and wrongful death cases using time-use survey data and replacement cost methods.</p>
+  <ul class="tool-features">
+  <li>BLS time-use survey data</li>
+  <li>Age and family-size adjustments</li>
+  <li>Regional wage rate integration</li>
+  <li>Employment status considerations</li>
+  <li>Professional valuation methods</li>
+  </ul>
+  <a href="household-services/" class="btn">Access Tool →</a>
+  </div>
+
+  <!-- Quick Business Valuation -->
+  <div class="tool-card">
+  <h3>Quick Business Valuation</h3>
+  <div class="tool-tags">
+  <span class="tool-tag">Business Valuation</span>
+  <span class="tool-tag">Commercial Disputes</span>
+  </div>
+  <p class="tool-description">Preliminary business valuation using income, market, and asset approaches. Useful for initial case assessment and settlement discussions.</p>
+  <ul class="tool-features">
+  <li>Multiple valuation approaches</li>
+  <li>Industry-specific multipliers</li>
+  <li>DCF and market methods</li>
+  <li>Ownership interest calculations</li>
+  <li>Comprehensive results analysis</li>
+  </ul>
+  <a href="business-valuation/" class="btn">Access Tool →</a>
+  </div>
+
+  <!-- Medical Cost Projector -->
+  <div class="tool-card">
+  <h3>Medical Cost Projector</h3>
+  <div class="tool-tags">
+  <span class="tool-tag">Medical Malpractice</span>
+  <span class="tool-tag">Life Care Plans</span>
+  </div>
+  <p class="tool-description">Project future medical costs using medical-specific inflation rates and life care plan requirements for catastrophic injury cases.</p>
+  <ul class="tool-features">
+  <li>Medical CPI inflation rates</li>
+  <li>Category-specific cost modeling</li>
+  <li>Present value calculations</li>
+  <li>Life expectancy integration</li>
+  <li>Professional results reporting</li>
+  </ul>
+  <a href="medical-cost/" class="btn">Access Tool →</a>
+  </div>
+  </div>
+  </section>
+
+  <!-- Tools CTA Section -->
+  <section class="tools-cta">
+  <div class="container">
+  <h2>Need Custom Economic Analysis?</h2>
+  <p>While our tools provide quick calculations, complex cases often require detailed, customized analysis.</p>
+  <a href="../contact/" class="btn btn-primary btn-large">Discuss Your Case</a>
+  </div>
+  </section>

@@ -1,0 +1,28 @@
+{% comment %}
+Button Component
+Usage: {% include components/button.html text="Button Text" href="/link" variant="primary" size="medium" %}
+Variants: primary, secondary, ghost
+Sizes: small, medium, large
+{% endcomment %}
+
+{% assign variant = include.variant | default: "primary" %}
+{% assign size = include.size | default: "medium" %}
+{% assign href = include.href | default: "#" %}
+{% assign text = include.text | default: "Button" %}
+{% assign type = include.type | default: "link" %}
+{% assign class = include.class | default: "" %}
+
+{% if type == "button" %}
+  <button class="btn btn-{{ variant }} {% if size != 'medium' %}btn-{{ size }}{% endif %} {{ class }}" 
+          {% if include.onclick %}onclick="{{ include.onclick }}"{% endif %}
+          {% if include.disabled %}disabled{% endif %}>
+    {{ text }}
+  </button>
+{% else %}
+  <a href="{{ href | relative_url }}" 
+     class="btn btn-{{ variant }} {% if size != 'medium' %}btn-{{ size }}{% endif %} {{ class }}"
+     {% if include.target %}target="{{ include.target }}"{% endif %}
+     {% if include.rel %}rel="{{ include.rel }}"{% endif %}>
+    {{ text }}
+  </a>
+{% endif %}
