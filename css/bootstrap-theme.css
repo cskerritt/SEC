@@ -89,6 +89,43 @@
   min-height: 50vh;
 }
 
+/* Navigation Styling */
+.main-nav {
+  background-color: var(--white) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.main-nav .logo strong {
+  color: var(--primary-blue);
+}
+
+.main-nav .nav-menu a {
+  color: var(--gray-800) !important;
+}
+
+.main-nav .nav-menu a:hover {
+  color: var(--primary-blue) !important;
+}
+
+.main-nav .nav-cta {
+  background-color: var(--primary-blue) !important;
+  color: var(--white) !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 0.25rem;
+}
+
+.main-nav .nav-cta:hover {
+  background-color: var(--secondary-blue) !important;
+}
+
+/* Navigation on pages with hero sections */
+.hero-section ~ .main-nav,
+body > .main-nav:first-child {
+  background-color: var(--white) !important;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero-section {
