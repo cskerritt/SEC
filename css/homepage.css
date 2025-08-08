@@ -18,7 +18,9 @@ body * {
     visibility: hidden !important;
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown,
+.has-dropdown.open .dropdown {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
@@ -681,7 +683,9 @@ a:hover {
     position: relative;
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown,
+.has-dropdown.open .dropdown {
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
