@@ -1519,11 +1519,14 @@ a:hover {
     display: none !important;
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown,
+.has-dropdown.open .dropdown {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0);
     display: block !important;
+    pointer-events: auto;
 }
 
 .dropdown li {
@@ -2824,7 +2827,11 @@ ul.dropdown {
 }
 
 .nav-menu .has-dropdown:hover .dropdown,
-.main-nav .has-dropdown:hover .dropdown {
+.nav-menu .has-dropdown:focus-within .dropdown,
+.nav-menu .has-dropdown.open .dropdown,
+.main-nav .has-dropdown:hover .dropdown,
+.main-nav .has-dropdown:focus-within .dropdown,
+.main-nav .has-dropdown.open .dropdown {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0);
